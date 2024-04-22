@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_View Job Details by Category</name>
+   <tag></tag>
+   <elementGuidId>09396dba-e985-46a8-906a-a67b67380a51</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.elementor-button-text</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content']/div/section[3]/div/div/div/div/div/div/a/span/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>ccbf1d42-8c5a-4c95-91e1-2bf4accfd48a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-button-text</value>
+      <webElementGuid>463083b9-91ea-4053-b253-e3ab88108014</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>View Job Details by Category</value>
+      <webElementGuid>62b8674a-75f9-43f7-999f-2cf1023a97f7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-46194 elementor-motion-effects-parent&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-41f28f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-37ed6a5&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-2fca885f elementor-align-center elementor-widget elementor-widget-button&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-button-wrapper&quot;]/a[@class=&quot;elementor-button elementor-button-link elementor-size-sm&quot;]/span[@class=&quot;elementor-button-content-wrapper&quot;]/span[@class=&quot;elementor-button-text&quot;]</value>
+      <webElementGuid>99673a83-fd35-4f1f-96db-ca05e1f7b30e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[3]/div/div/div/div/div/div/a/span/span</value>
+      <webElementGuid>ef00d97c-8ab3-48b0-bb19-f12bafd40fa6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Register'])[1]/following::span[2]</value>
+      <webElementGuid>3633e400-85b5-466c-ada3-816cf598ed3f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Summary of Journey Positions'])[1]/following::span[2]</value>
+      <webElementGuid>e9c03bee-c485-4e0e-8dc7-ad5bd19e2dac</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Category'])[1]/preceding::span[1]</value>
+      <webElementGuid>1b087de7-edbc-41d4-a9a6-ab96b39c9e87</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Title'])[1]/preceding::span[1]</value>
+      <webElementGuid>05e23d33-7390-4593-b41b-b28a3c6c3ae7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='View Job Details by Category']/parent::*</value>
+      <webElementGuid>15d4ce18-0430-4ec3-b7e3-34ba60240f13</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span/span</value>
+      <webElementGuid>583b2eed-90d7-4b5c-a9f3-7b116af9fc37</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'View Job Details by Category' or . = 'View Job Details by Category')]</value>
+      <webElementGuid>fc081481-43ef-4611-b828-95d1ae06dd0c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

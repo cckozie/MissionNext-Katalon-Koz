@@ -19,5 +19,5 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('missionnext.org')
 
-WebUI.acceptAlert()
+WebUI.maximizeWindow()
 
