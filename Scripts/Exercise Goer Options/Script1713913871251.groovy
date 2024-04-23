@@ -23,7 +23,33 @@ import org.openqa.selenium.interactions.Action as Action
 import org.openqa.selenium.interactions.Actions as Actions
 import org.openqa.selenium.By as By
 
+options = ['a_QuickStart', 'a_Start your journey', 'a_Go to Education', 'a_Jobs', 'a_Resources']
+
 WebUI.openBrowser('missionnext.org')
 
 WebUI.maximizeWindow()
+
+WebDriver driver = DriverFactory.getWebDriver()
+
+for (def option : options) {
+    WebElement goer = driver.findElement(By.xpath('//a[contains(text(),\'Goer\')]'))
+
+    Actions actions = new Actions(driver)
+
+    actions.moveToElement(goer).perform()
+
+    WebUI.waitForElementVisible(findTestObject('Page_Serve in Missions - MissionNext.org/Goer_arrow'), 5)
+
+    WebUI.click(findTestObject('Page_Serve in Missions - MissionNext.org/Goer_arrow'))
+
+    WebUI.click(findTestObject('Page_Serve in Missions - MissionNext.org/' + option))
+
+    if (option != options.last()) {
+        WebUI.back()
+
+        WebUI.refresh()
+    }
+}
+
+WebUI.closeBrowser()
 
