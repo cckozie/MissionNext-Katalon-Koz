@@ -16,14 +16,24 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.openqa.selenium.interactions.Action as Action
-import org.openqa.selenium.interactions.Actions as Actions
-import org.openqa.selenium.By as By
 
-WebUI.openBrowser('missionnext.org')
+map = ["key": ["abc","df","ghi"]]
+println(map)
 
-WebUI.maximizeWindow()
+str = map.toMapString()
+println(str)
 
+def maps = str
+    // Take the String value between
+    // the [ and ] brackets.
+    [1..-2]
+        // Split on , to get a List.
+        .split(', ')
+        // Each list item is transformed
+        // to a Map entry with key/value.
+        .collectEntries { entry -> 
+            def pair = entry.split(':')
+            [(pair.first()): pair.last()]
+        }
+		
+println(maps)

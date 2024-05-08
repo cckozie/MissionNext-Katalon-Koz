@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigate to Job Summary Page</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2a053014-1455-43f5-8fee-9ca2bb2f0e67</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c0841c98-c9e9-40fa-b28c-e894fd2f3ecb</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'QuickStart'</defaultValue>
+      <description></description>
+      <id>c0841c98-c9e9-40fa-b28c-e894fd2f3ecb</id>
+      <masked>false</masked>
+      <name>dropDownOption</name>
+   </variable>
+</TestCaseEntity>
