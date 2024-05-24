@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Wordpress_eicon-close</name>
+   <tag></tag>
+   <elementGuidId>184b2e86-3fbc-426a-8365-7bbfae4ff7bc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='elementor-popup-modal-68414']/div/a/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.dialog-close-button.dialog-lightbox-close-button > i.eicon-close</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>2e5db025-360d-40a6-b84e-362b20a31974</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>eicon-close</value>
+      <webElementGuid>739d6e5b-a4db-4650-b287-165d19a13265</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;elementor-popup-modal-68414&quot;)/div[@class=&quot;dialog-widget-content dialog-lightbox-widget-content animated&quot;]/a[@class=&quot;dialog-close-button dialog-lightbox-close-button&quot;]/i[@class=&quot;eicon-close&quot;]</value>
+      <webElementGuid>c6378383-2b7f-4f8c-816d-654fdef664d2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='elementor-popup-modal-68414']/div/a/i</value>
+      <webElementGuid>53ae60e5-d0b6-477c-b3db-e0cd266177e4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/a/i</value>
+      <webElementGuid>7fb677f7-2d3b-4765-b6c9-cd9e84e459d5</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

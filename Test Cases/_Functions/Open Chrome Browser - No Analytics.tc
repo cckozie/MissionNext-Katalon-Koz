@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Open Chrome Browser - No Analytics</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9703b9f2-17a9-46a1-aa25-72a8b0f1c2f1</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1976f176-d7ee-4f6c-9cd8-e176af75b4a3</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'QuickStart'</defaultValue>
+      <description></description>
+      <id>1976f176-d7ee-4f6c-9cd8-e176af75b4a3</id>
+      <masked>false</masked>
+      <name>dropDownOption</name>
+   </variable>
+</TestCaseEntity>

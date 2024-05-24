@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Navigation Timings - Copy (8)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e75d9274-5c83-4567-aa58-b08ac073b951</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2bdf30b0-26c2-442c-8208-e67909ffe27d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'QuickStart'</defaultValue>
+      <description></description>
+      <id>2bdf30b0-26c2-442c-8208-e67909ffe27d</id>
+      <masked>false</masked>
+      <name>dropDownOption</name>
+   </variable>
+</TestCaseEntity>

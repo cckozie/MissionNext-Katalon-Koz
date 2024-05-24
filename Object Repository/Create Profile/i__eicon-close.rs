@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i__eicon-close</name>
+   <tag></tag>
+   <elementGuidId>4400f6f2-e7e8-4871-8424-ee8e3a5aaf38</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='elementor-popup-modal-68414']/div/a/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.dialog-close-button.dialog-lightbox-close-button > i.eicon-close</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>04fb1221-fb3d-4047-9713-e533644db471</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>eicon-close</value>
+      <webElementGuid>fc766dc1-1838-40d7-a0fc-4b8cb483b6f8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;elementor-popup-modal-68414&quot;)/div[@class=&quot;dialog-widget-content dialog-lightbox-widget-content animated&quot;]/a[@class=&quot;dialog-close-button dialog-lightbox-close-button&quot;]/i[@class=&quot;eicon-close&quot;]</value>
+      <webElementGuid>13523ee4-ff26-4d53-8e03-2601acefbaad</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='elementor-popup-modal-68414']/div/a/i</value>
+      <webElementGuid>84b204fb-c4db-417a-ab37-f935ea3aaabd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/a/i</value>
+      <webElementGuid>6e504dc6-1b4a-405d-b61c-87fce0357627</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
