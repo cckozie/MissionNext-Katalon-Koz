@@ -10,6 +10,10 @@
          <value>//input[@id='profile_group-1623987608.435_ministry_preferences']</value>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'profile_group-1623987608.435_ministry_preferences' and @type = 'checkbox' and @name = 'profile[group-1623987608.435][ministry_preferences][]' and @checked = 'checked' and @value = 'Adult Men']</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value></value>
       </entry>
@@ -23,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>1abdbc56-c864-427c-b931-81e900ff2bca</webElementGuid>
+      <webElementGuid>44307645-c2e4-40f4-bded-c040ed8af125</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +35,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1623987608.435_ministry_preferences</value>
-      <webElementGuid>96140487-4ed6-464f-95f1-9079f9bfe47f</webElementGuid>
+      <webElementGuid>25252cf9-6fb0-4102-b69a-dd3de0449b2b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +43,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>9243ae85-4fc7-43bc-9fd7-25f74ede320a</webElementGuid>
+      <webElementGuid>b6f2bbaa-be58-4629-9e08-d5bc1ec67c6c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +51,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1623987608.435][ministry_preferences][]</value>
-      <webElementGuid>bef07764-21a9-4e0f-98bc-95140d9623a2</webElementGuid>
+      <webElementGuid>3e71eb43-bc93-4f8b-8691-874b45c9348d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +59,7 @@
       <name>checked</name>
       <type>Main</type>
       <value>checked</value>
-      <webElementGuid>1dacf309-f132-4393-8259-6118f3c65096</webElementGuid>
+      <webElementGuid>f39ce163-3cf8-4094-a54e-9b20184fa763</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +67,7 @@
       <name>value</name>
       <type>Main</type>
       <value>Adult Men</value>
-      <webElementGuid>0d81f0f1-4d56-4bad-82cb-6abf2b4f86a4</webElementGuid>
+      <webElementGuid>0adb8ed0-4eb3-4133-ab7c-2a42535244cc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +75,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1623987608.435&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/div[@class=&quot;mn-checkbox mn-large-checkbox&quot;]/div[1]/input[@id=&quot;profile_group-1623987608.435_ministry_preferences&quot;]</value>
-      <webElementGuid>485dbda4-866a-429c-abed-3322bb658711</webElementGuid>
+      <webElementGuid>e2a9828e-d748-42f0-b886-9f39bf5dbdb8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +83,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group-1623987608.435_ministry_preferences']</value>
-      <webElementGuid>0a37e8ed-189c-4776-9013-a14b3f48b65c</webElementGuid>
+      <webElementGuid>6649e39b-f9f4-488a-95e8-7cd7f0308008</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +91,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1623987608.435']/div[2]/div[3]/div/div/input</value>
-      <webElementGuid>65109859-112c-4579-8eec-aab7f749ceb0</webElementGuid>
+      <webElementGuid>f7e2c997-1343-4d36-80df-58c79f0f4490</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +99,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[10]/div[2]/div[3]/div/div/input</value>
-      <webElementGuid>ef67ee11-10f3-48e9-a7f7-caf7eec6d7a8</webElementGuid>
+      <webElementGuid>69ce400e-00bb-4244-bfc3-fd147ac659c4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +107,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group-1623987608.435_ministry_preferences' and @type = 'checkbox' and @name = 'profile[group-1623987608.435][ministry_preferences][]' and @checked = 'checked']</value>
-      <webElementGuid>f80c967b-56c2-4c5e-a522-6f4f29280ac7</webElementGuid>
+      <webElementGuid>7d8427fc-a605-4b77-b920-ee5580c7f5ad</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

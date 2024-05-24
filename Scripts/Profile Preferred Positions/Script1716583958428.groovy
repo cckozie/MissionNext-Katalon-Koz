@@ -17,7 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+ministryPreferences = ['Adult Men', 'Adult Women', 'Bible Teaching', 'Worship Leader', 'Church Planter', 'Leadership Development'
+    , 'Marriage & Family', 'Missions Pastor', 'Pastor/Associate Pastor', 'Youth Pastor']
+
+//WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.setViewPortSize(600, 1200)
 
 WebUI.navigateToUrl('https://journey.missionnext.org/journey-home/login-here/')
 
@@ -37,37 +43,14 @@ WebUI.click(findTestObject('Object Repository/temp/a_Your Ministry Prefs'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Adult Men'))
+for (def preference : ministryPreferences) {
+    //    position = preference
+    println(preference)
 
-WebUI.delay(1)
+    //	println(WebUI.getNumberOfSelectedOption(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-parm')))
+    WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-parm', [('position') : preference]), 
+        FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Adult Women'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Bible Teaching'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Leadership Develpment'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Marriage and Family'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Missions Pastor'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Pastor-Associate Pastor'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Youth Pastor'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-Youth Pastor'))
+    WebUI.delay(1)
+}
 
