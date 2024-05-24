@@ -23,9 +23,9 @@ import org.openqa.selenium.interactions.Action as Action
 import org.openqa.selenium.interactions.Actions as Actions
 import org.openqa.selenium.By as By
 
-WebUI.openBrowser('missionnext.org')
+WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.maximizeWindow()
+WebUI.navigateToUrl('missionnext.org')
 
 WebUI.focus(findTestObject('Page_Serve in Missions - MissionNext.org/a_Goer'))
 

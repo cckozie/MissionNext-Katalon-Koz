@@ -23,13 +23,33 @@ import org.openqa.selenium.interactions.Action as Action
 import org.openqa.selenium.interactions.Actions as Actions
 import org.openqa.selenium.By as By
 import groovy.time.*
-import java.io.File
+import java.io.File as File
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.remote.DesiredCapabilities
 
-WebUI.openBrowser('')
+import com.kms.katalon.core.webui.driver.DriverFactory
 
-WebUI.maximizeWindow()
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
-startPage = 'https://missionnext.org/'
+System.setProperty("webdriver.chrome.driver", "/Applications/Katalon Studio Free.app/Contents/Eclipse/configuration/resources/drivers/chromedriver_mac/chromedriver")
+ 
+ChromeOptions options = new ChromeOptions()
 
-WebUI.navigateToUrl(startPage)
+options.addExtensions(new File("/Users/cckozie/Downloads/fllaojicojecljbmefodhfapmkghcbnh-1.1-Crx4Chrome.com.crx"))
+
+DesiredCapabilities caps = new DesiredCapabilities()
+
+caps.setCapability(ChromeOptions.CAPABILITY, options)
+
+WebDriver driver = new ChromeDriver(caps)
+
+DriverFactory.changeWebDriver(driver)
+
+WebUI.navigateToUrl("https://google.com")
+
+WebUI.delay(60)
+
+WebUI.closeBrowser()
 
