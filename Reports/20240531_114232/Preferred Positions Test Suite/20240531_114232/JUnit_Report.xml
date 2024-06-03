@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Preferred Positions Test Suite" time="95.343" tests="2" failures="2" errors="0">
+   <testsuite name="Preferred Positions Test Suite" tests="2" failures="2" errors="0" time="95.343" skipped="0" timestamp="31-05-2024T11:42:44" hostname="cckozie - 192.168.4.24" id="Test Suites/Preferred Positions Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232"/>
+         <property name="logFiles" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232/execution0.log"/>
+         <property name="attachments" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232/1717173815959.png, /Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232/1717173858921.png"/>
+         <property name="hostName" value="cckozie - 192.168.4.24"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.5.0.217"/>
+         <property name="browser" value="Chrome 125.0.0.0"/>
+         <property name="hostAddress" value="192.168.4.24"/>
+         <property name="sessionId" value="46e2ad6cfd1d80e7a9844c47d7c67ea9"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Mac OS X"/>
+      </properties>
+      <testcase name="Test Cases/Test Preferred Positions Checkboxes" time="51.349" classname="Test Cases/Test Preferred Positions Checkboxes" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Test Preferred Positions Checkboxes FAILED.&#xa;Reason:&#xa;com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position &quot; + text, test failed.&#xa;	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)&#xa;	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)&#xa;	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[31-05-2024T11:42:46 - [TEST_CASE][FAILED] - Test Cases/Test Preferred Positions Checkboxes: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+31-05-2024T11:42:46 - [TEST_STEP][PASSED] - Start listener action : sampleBeforeTestCase: null
+
+31-05-2024T11:42:46 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseId()): null
+
+31-05-2024T11:42:46 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseVariables()): null
+
+31-05-2024T11:42:46 - [TEST_STEP][PASSED] - println("Running TestCaseStartup"): null
+
+31-05-2024T11:42:46 - [TEST_STEP][PASSED] - if (!(testSuiteRunning)): null
+
+31-05-2024T11:42:48 - [TEST_STEP][PASSED] - ministryPreferences = ["Adult Men", "Adult Women", "Bible Teaching", "Worship Leader", "Church Planter", "Leadership Development", "Marriage & Family", "Missions Pastor", "Pastor/Associate Pastor", "Youth Pastor"]: null
+
+31-05-2024T11:42:48 - [TEST_STEP][PASSED] - getRuntime().exec("open /Applications/GoogleAnalyticsOptOut.app", "/Applications/GoogleAnalyticsOptOut/"): null
+
+31-05-2024T11:42:48 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+31-05-2024T11:42:49 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+31-05-2024T11:42:49 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+31-05-2024T11:42:57 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+31-05-2024T11:42:57 - [TEST_STEP][PASSED] - navigateToUrl("https://journey.missionnext.org/journey-home/login-here/"): Navigate to 'https://journey.missionnext.org/journey-home/login-here/' successfully
+
+31-05-2024T11:43:01 - [MESSAGE][PASSED] - Navigate to 'https://journey.missionnext.org/journey-home/login-here/' successfully
+
+31-05-2024T11:43:01 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/i_Wordpress_eicon-close")): Object: 'Object Repository/temp/i_Wordpress_eicon-close' is clicked on
+
+31-05-2024T11:43:02 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/i_Wordpress_eicon-close' is clicked on
+
+31-05-2024T11:43:02 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/temp/input_Username_log"), "cktest01@missionnext.org"): Text 'cktest01@missionnext.org' is set on object 'Object Repository/temp/input_Username_log'
+
+31-05-2024T11:43:03 - [MESSAGE][PASSED] - Text 'cktest01@missionnext.org' is set on object 'Object Repository/temp/input_Username_log'
+
+31-05-2024T11:43:03 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/temp/input_Password_pwd"), "5lwQhML0qdMWXTXRrgjfVw=="): Text ****** has been set on object 'Object Repository/temp/input_Password_pwd'
+
+31-05-2024T11:43:04 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/temp/input_Password_pwd'
+
+31-05-2024T11:43:04 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/button_Log In")): Object: 'Object Repository/temp/button_Log In' is clicked on
+
+31-05-2024T11:43:10 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/button_Log In' is clicked on
+
+31-05-2024T11:43:10 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/a_My Profile")): Object: 'Object Repository/temp/a_My Profile' is clicked on
+
+31-05-2024T11:43:16 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/a_My Profile' is clicked on
+
+31-05-2024T11:43:16 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/input_Email_profilegroup-1444754265.711email")): Object: 'Object Repository/temp/input_Email_profilegroup-1444754265.711email' is clicked on
+
+31-05-2024T11:43:16 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/input_Email_profilegroup-1444754265.711email' is clicked on
+
+31-05-2024T11:43:16 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/a_Your Ministry Prefs")): Object: 'Object Repository/temp/a_Your Ministry Prefs' is clicked on
+
+31-05-2024T11:43:17 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/a_Your Ministry Prefs' is clicked on
+
+31-05-2024T11:43:17 - [TEST_STEP][PASSED] - setViewPortSize(600, 1200): Viewport is set to new size with width = 600 and height = 1200
+
+31-05-2024T11:43:17 - [MESSAGE][PASSED] - Viewport is set to new size with width = 600 and height = 1200
+
+31-05-2024T11:43:17 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+31-05-2024T11:43:18 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+31-05-2024T11:43:18 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - categories = driver.findElements(By.xpath("//input[@id='profile_group-1623987608.435_job_categories']")): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - for (def category : categories): Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:19 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:19 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:19 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:19 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:20 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:20 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:21 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:21 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:21 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:21 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:21 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:21 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:22 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:22 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:22 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:22 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:43:22 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - positions = driver.findElements(By.xpath("//input[@id='profile_group-1623987608.435_ministry_preferences']")): null
+
+31-05-2024T11:43:22 - [TEST_STEP][FAILED] - for (def position : positions): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:22 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:43:23 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:43:23 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:43:23 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:43:23 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:43:23 - [TEST_STEP][FAILED] - try: Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53779}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 87a22380b5a92dd8952eb9323c1acc53
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+
+31-05-2024T11:43:23 - [TEST_STEP][FAILED] - click(pos): Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53779}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 87a22380b5a92dd8952eb9323c1acc53
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+
+31-05-2024T11:43:37 - [MESSAGE][FAILED] - Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53779}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 87a22380b5a92dd8952eb9323c1acc53
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+[[ATTACHMENT|/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232/1717173815959.png]]
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println("Unable to click on checkbox for Preferred Position " + text): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - markFailedAndStop("Unable to click on checkbox for Preferred Position " + text, test failed."): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - Start listener action : sampleAfterTestCase: null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseId()): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseStatus()): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println("Running TestCaseShutdown"): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - if (!(testSuiteRunning)): null]]></system-out>
+         <system-err><![CDATA[31-05-2024T11:42:46 - [TEST_CASE][FAILED] - Test Cases/Test Preferred Positions Checkboxes: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Test Preferred Positions Checkboxes" time="42.667" classname="Test Cases/Test Preferred Positions Checkboxes" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Test Preferred Positions Checkboxes FAILED.&#xa;Reason:&#xa;com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position &quot; + text, test failed.&#xa;	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)&#xa;	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)&#xa;	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[31-05-2024T11:43:37 - [TEST_CASE][FAILED] - Test Cases/Test Preferred Positions Checkboxes: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - Start listener action : sampleBeforeTestCase: null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseId()): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseVariables()): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - println("Running TestCaseStartup"): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - if (!(testSuiteRunning)): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - ministryPreferences = ["Adult Men", "Adult Women", "Bible Teaching", "Worship Leader", "Church Planter", "Leadership Development", "Marriage & Family", "Missions Pastor", "Pastor/Associate Pastor", "Youth Pastor"]: null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - getRuntime().exec("open /Applications/GoogleAnalyticsOptOut.app", "/Applications/GoogleAnalyticsOptOut/"): null
+
+31-05-2024T11:43:37 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+31-05-2024T11:43:37 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+31-05-2024T11:43:38 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+31-05-2024T11:43:38 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+31-05-2024T11:43:42 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+31-05-2024T11:43:42 - [TEST_STEP][PASSED] - navigateToUrl("https://journey.missionnext.org/journey-home/login-here/"): Navigate to 'https://journey.missionnext.org/journey-home/login-here/' successfully
+
+31-05-2024T11:43:44 - [MESSAGE][PASSED] - Navigate to 'https://journey.missionnext.org/journey-home/login-here/' successfully
+
+31-05-2024T11:43:44 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/i_Wordpress_eicon-close")): Object: 'Object Repository/temp/i_Wordpress_eicon-close' is clicked on
+
+31-05-2024T11:43:48 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/i_Wordpress_eicon-close' is clicked on
+
+31-05-2024T11:43:48 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/temp/input_Username_log"), "cktest01@missionnext.org"): Text 'cktest01@missionnext.org' is set on object 'Object Repository/temp/input_Username_log'
+
+31-05-2024T11:43:49 - [MESSAGE][PASSED] - Text 'cktest01@missionnext.org' is set on object 'Object Repository/temp/input_Username_log'
+
+31-05-2024T11:43:49 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/temp/input_Password_pwd"), "5lwQhML0qdMWXTXRrgjfVw=="): Text ****** has been set on object 'Object Repository/temp/input_Password_pwd'
+
+31-05-2024T11:43:50 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/temp/input_Password_pwd'
+
+31-05-2024T11:43:50 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/button_Log In")): Object: 'Object Repository/temp/button_Log In' is clicked on
+
+31-05-2024T11:43:54 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/button_Log In' is clicked on
+
+31-05-2024T11:43:54 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/a_My Profile")): Object: 'Object Repository/temp/a_My Profile' is clicked on
+
+31-05-2024T11:43:59 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/a_My Profile' is clicked on
+
+31-05-2024T11:43:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/input_Email_profilegroup-1444754265.711email")): Object: 'Object Repository/temp/input_Email_profilegroup-1444754265.711email' is clicked on
+
+31-05-2024T11:43:59 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/input_Email_profilegroup-1444754265.711email' is clicked on
+
+31-05-2024T11:43:59 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/temp/a_Your Ministry Prefs")): Object: 'Object Repository/temp/a_Your Ministry Prefs' is clicked on
+
+31-05-2024T11:44:00 - [MESSAGE][PASSED] - Object: 'Object Repository/temp/a_Your Ministry Prefs' is clicked on
+
+31-05-2024T11:44:00 - [TEST_STEP][PASSED] - setViewPortSize(600, 1200): Viewport is set to new size with width = 600 and height = 1200
+
+31-05-2024T11:44:01 - [MESSAGE][PASSED] - Viewport is set to new size with width = 600 and height = 1200
+
+31-05-2024T11:44:01 - [TEST_STEP][PASSED] - delay(1): Delayed 1 second(s)
+
+31-05-2024T11:44:02 - [MESSAGE][PASSED] - Delayed 1 second(s)
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - driver = getWebDriver(): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - categories = driver.findElements(By.xpath("//input[@id='profile_group-1623987608.435_job_categories']")): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - for (def category : categories): Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:02 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:02 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:02 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:02 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:03 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:03 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:04 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:04 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:05 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:05 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:05 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - cat = convertWebElementToTestObject(category): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - text = category.getAttribute("value"): null
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:05 - [TEST_STEP][PASSED] - click(cat): Object: '' is clicked on
+
+31-05-2024T11:44:06 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - positions = driver.findElements(By.xpath("//input[@id='profile_group-1623987608.435_ministry_preferences']")): null
+
+31-05-2024T11:44:06 - [TEST_STEP][FAILED] - for (def position : positions): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:44:06 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:44:06 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - try: Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - click(pos): Object: '' is clicked on
+
+31-05-2024T11:44:06 - [MESSAGE][PASSED] - Object: '' is clicked on
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - pos = convertWebElementToTestObject(position): null
+
+31-05-2024T11:44:06 - [TEST_STEP][PASSED] - text = position.getAttribute("value"): null
+
+31-05-2024T11:44:06 - [TEST_STEP][FAILED] - try: Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46e2ad6cfd1d80e7a9844c47d7c67ea9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+
+31-05-2024T11:44:06 - [TEST_STEP][FAILED] - click(pos): Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46e2ad6cfd1d80e7a9844c47d7c67ea9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+
+31-05-2024T11:44:20 - [MESSAGE][FAILED] - Unable to click on object '' (Root cause: com.kms.katalon.core.exception.StepFailedException: Unable to click on object ''
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:64)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:26)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:90)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1623987608.435_ministry_preferences" type="checkbox" name="profile[group-1623987608.435][ministry_preferences][]" value="Church Planter"> is not clickable at point (219, 642). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 after-note">...</div>
+  (Session info: chrome=125.0.6422.113)
+Build info: version: '3.141.59', revision: 'unknown', time: 'unknown'
+System info: host: 'Kozs-MacBook-Air.local', ip: 'fd0a:2b0c:43ba:1:1070:d692:2cb2:409a%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '13.6.1', java.version: '17.0.7'
+Driver info: com.kms.katalon.selenium.driver.CChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 125.0.6422.113, chrome: {chromedriverVersion: 125.0.6422.60 (3ac3319bff9f..., userDataDir: /var/folders/hb/hv2s0v7n1nz...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53827}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 46e2ad6cfd1d80e7a9844c47d7c67ea9
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at com.kms.katalon.selenium.driver.CChromeDriver.execute(CChromeDriver.java:19)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.WebElement$click.call(Unknown Source)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy:81)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.clickUntilSuccessWithTimeout(ClickKeyword.groovy)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.doCall(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword$_click_closure1.call(ClickKeyword.groovy)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:20)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:74)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:40)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:659)
+	at Script1716865643367.run(Script1716865643367.groovy:90)
+	... 15 more
+)
+[[ATTACHMENT|/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240531_114232/Preferred Positions Test Suite/20240531_114232/1717173858921.png]]
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - catch (Exception e): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - println("Unable to click on checkbox for Preferred Position " + text): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - markFailedAndStop("Unable to click on checkbox for Preferred Position " + text, test failed."): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - Start listener action : sampleAfterTestCase: null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseId()): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - println(testCaseContext.getTestCaseStatus()): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - println("Running TestCaseShutdown"): null
+
+31-05-2024T11:44:20 - [TEST_STEP][PASSED] - if (!(testSuiteRunning)): null]]></system-out>
+         <system-err><![CDATA[31-05-2024T11:43:37 - [TEST_CASE][FAILED] - Test Cases/Test Preferred Positions Checkboxes: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[31-05-2024T11:42:44 - [TEST_SUITE][FAILED] - Preferred Positions Test Suite: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+      <system-err><![CDATA[31-05-2024T11:42:44 - [TEST_SUITE][FAILED] - Preferred Positions Test Suite: Test Cases/Test Preferred Positions Checkboxes FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on checkbox for Preferred Position " + text, test failed.
+	at com.kms.katalon.core.util.KeywordUtil.markFailedAndStop(KeywordUtil.java:30)
+	at Test Preferred Positions Checkboxes.run(Test Preferred Positions Checkboxes:97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1717173752151.run(TempTestSuite1717173752151.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+   </testsuite>
+</testsuites>

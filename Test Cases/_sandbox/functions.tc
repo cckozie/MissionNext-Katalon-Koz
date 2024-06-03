@@ -4,5 +4,6 @@
    <name>functions</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>e3986455-1d96-4c5d-a5c0-7aa8b49a7fdd</testCaseGuid>
 </TestCaseEntity>

@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Preferred Positions Test Suite,Firefox 109.0,,,29-05-2024 22:38:03,29-05-2024 22:39:04,1m - 0.897s,FAILED
+,,,,,,,
+Test Cases/Test Preferred Positions Checkboxes,Firefox 109.0,,,29-05-2024 22:38:04,29-05-2024 22:39:04,59.616s,FAILED
+Start listener action : sampleBeforeTestCase,Firefox 109.0,,,29-05-2024 22:38:05,29-05-2024 22:38:05,0.263s,ERROR
+"ministryPreferences = [""Adult Men"", ""Adult Women"", ""Bible Teaching"", ""Worship Leader"", ""Church Planter"", ""Leadership Development"", ""Marriage & Family"", ""Missions Pastor"", ""Pastor/Associate Pastor"", ""Youth Pastor""]",Firefox 109.0,,,29-05-2024 22:38:06,29-05-2024 22:38:06,0.007s,PASSED
+"getRuntime().exec(""open /Applications/GoogleAnalyticsOptOut.app"", ""/Applications/GoogleAnalyticsOptOut/"")",Firefox 109.0,,,29-05-2024 22:38:06,29-05-2024 22:38:07,0.045s,PASSED
+"openBrowser("""")",Firefox 109.0,,,29-05-2024 22:38:07,29-05-2024 22:38:26,19.242s,PASSED
+"navigateToUrl(""https://journey.missionnext.org/journey-home/login-here/"")",Firefox 109.0,,,29-05-2024 22:38:26,29-05-2024 22:38:31,5.404s,PASSED
+"click(findTestObject(""Object Repository/temp/i_Wordpress_eicon-close""))",Firefox 109.0,,,29-05-2024 22:38:31,29-05-2024 22:38:32,0.705s,PASSED
+"setText(findTestObject(""Object Repository/temp/input_Username_log""), ""cktest01@missionnext.org"")",Firefox 109.0,,,29-05-2024 22:38:32,29-05-2024 22:38:32,0.225s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/temp/input_Password_pwd""), ""5lwQhML0qdMWXTXRrgjfVw=="")",Firefox 109.0,,,29-05-2024 22:38:32,29-05-2024 22:38:32,0.278s,PASSED
+"click(findTestObject(""Object Repository/temp/button_Log In""))",Firefox 109.0,,,29-05-2024 22:38:32,29-05-2024 22:38:38,5.429s,PASSED
+"click(findTestObject(""Object Repository/temp/a_My Profile""))",Firefox 109.0,,,29-05-2024 22:38:38,29-05-2024 22:38:44,5.986s,PASSED
+"click(findTestObject(""Object Repository/temp/input_Email_profilegroup-1444754265.711email""))",Firefox 109.0,,,29-05-2024 22:38:44,29-05-2024 22:38:45,0.693s,PASSED
+"click(findTestObject(""Object Repository/temp/a_Your Ministry Prefs""))",Firefox 109.0,,,29-05-2024 22:38:45,29-05-2024 22:38:45,0.730s,PASSED
+"setViewPortSize(600, 1200)",Firefox 109.0,,,29-05-2024 22:38:45,29-05-2024 22:38:46,0.597s,PASSED
+delay(1),Firefox 109.0,,,29-05-2024 22:38:46,29-05-2024 22:38:47,1.062s,PASSED
+driver = getWebDriver(),Firefox 109.0,,,29-05-2024 22:38:47,29-05-2024 22:38:47,0.022s,PASSED
+"categories = driver.findElements(By.xpath(""//input[@id='profile_group-1623987608.435_job_categories']""))",Firefox 109.0,,,29-05-2024 22:38:47,29-05-2024 22:38:47,0.053s,PASSED
+for (def category : categories),Firefox 109.0,,,29-05-2024 22:38:47,29-05-2024 22:38:52,5.208s,PASSED
+"positions = driver.findElements(By.xpath(""//input[@id='profile_group-1623987608.435_ministry_preferences']""))",Firefox 109.0,,,29-05-2024 22:38:52,29-05-2024 22:38:52,0.057s,PASSED
+for (def position : positions),Firefox 109.0,,,29-05-2024 22:38:52,29-05-2024 22:39:04,11.735s,FAILED
+Start listener action : sampleAfterTestCase,Firefox 109.0,,,29-05-2024 22:39:04,29-05-2024 22:39:04,0.058s,PASSED

@@ -1,0 +1,3 @@
+Testing Footer Icons
+=========== Checking for icons on home page ===========
++++++++++++++++ Found icon for facebook +++++++++++++++n+++++++++++++++ Found icon for x +++++++++++++++n+++++++++++++++ Found icon for instagram +++++++++++++++n+++++++++++++++ Found icon for linkedin +++++++++++++++n----------- Unable to find icon for wordpress ----------n

@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Preferred Positions Test Suite,Chrome 125.0.0.0,,,29-05-2024 22:40:03,29-05-2024 22:41:04,1m - 0.920s,FAILED
+,,,,,,,
+Test Cases/Test Preferred Positions Checkboxes,Chrome 125.0.0.0,,,29-05-2024 22:40:04,29-05-2024 22:41:04,59.457s,FAILED
+Start listener action : sampleBeforeTestCase,Chrome 125.0.0.0,,,29-05-2024 22:40:05,29-05-2024 22:40:05,0.394s,ERROR
+"ministryPreferences = [""Adult Men"", ""Adult Women"", ""Bible Teaching"", ""Worship Leader"", ""Church Planter"", ""Leadership Development"", ""Marriage & Family"", ""Missions Pastor"", ""Pastor/Associate Pastor"", ""Youth Pastor""]",Chrome 125.0.0.0,,,29-05-2024 22:40:09,29-05-2024 22:40:09,0.008s,PASSED
+"getRuntime().exec(""open /Applications/GoogleAnalyticsOptOut.app"", ""/Applications/GoogleAnalyticsOptOut/"")",Chrome 125.0.0.0,,,29-05-2024 22:40:09,29-05-2024 22:40:09,0.174s,PASSED
+"openBrowser("""")",Chrome 125.0.0.0,,,29-05-2024 22:40:09,29-05-2024 22:40:23,14.572s,PASSED
+"navigateToUrl(""https://journey.missionnext.org/journey-home/login-here/"")",Chrome 125.0.0.0,,,29-05-2024 22:40:23,29-05-2024 22:40:30,6.220s,PASSED
+"click(findTestObject(""Object Repository/temp/i_Wordpress_eicon-close""))",Chrome 125.0.0.0,,,29-05-2024 22:40:30,29-05-2024 22:40:30,0.429s,PASSED
+"setText(findTestObject(""Object Repository/temp/input_Username_log""), ""cktest01@missionnext.org"")",Chrome 125.0.0.0,,,29-05-2024 22:40:30,29-05-2024 22:40:31,0.888s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/temp/input_Password_pwd""), ""5lwQhML0qdMWXTXRrgjfVw=="")",Chrome 125.0.0.0,,,29-05-2024 22:40:31,29-05-2024 22:40:31,0.397s,PASSED
+"click(findTestObject(""Object Repository/temp/button_Log In""))",Chrome 125.0.0.0,,,29-05-2024 22:40:31,29-05-2024 22:40:37,5.573s,PASSED
+"click(findTestObject(""Object Repository/temp/a_My Profile""))",Chrome 125.0.0.0,,,29-05-2024 22:40:37,29-05-2024 22:40:43,6.539s,PASSED
+"click(findTestObject(""Object Repository/temp/input_Email_profilegroup-1444754265.711email""))",Chrome 125.0.0.0,,,29-05-2024 22:40:43,29-05-2024 22:40:44,0.572s,PASSED
+"click(findTestObject(""Object Repository/temp/a_Your Ministry Prefs""))",Chrome 125.0.0.0,,,29-05-2024 22:40:44,29-05-2024 22:40:45,1.088s,PASSED
+"setViewPortSize(600, 1200)",Chrome 125.0.0.0,,,29-05-2024 22:40:45,29-05-2024 22:40:46,0.705s,PASSED
+delay(1),Chrome 125.0.0.0,,,29-05-2024 22:40:46,29-05-2024 22:40:47,1.060s,PASSED
+driver = getWebDriver(),Chrome 125.0.0.0,,,29-05-2024 22:40:47,29-05-2024 22:40:47,0.038s,PASSED
+"categories = driver.findElements(By.xpath(""//input[@id='profile_group-1623987608.435_job_categories']""))",Chrome 125.0.0.0,,,29-05-2024 22:40:47,29-05-2024 22:40:47,0.086s,PASSED
+for (def category : categories),Chrome 125.0.0.0,,,29-05-2024 22:40:47,29-05-2024 22:40:50,2.933s,PASSED
+"positions = driver.findElements(By.xpath(""//input[@id='profile_group-1623987608.435_ministry_preferences']""))",Chrome 125.0.0.0,,,29-05-2024 22:40:50,29-05-2024 22:40:50,0.102s,PASSED
+for (def position : positions),Chrome 125.0.0.0,,,29-05-2024 22:40:50,29-05-2024 22:41:04,13.490s,FAILED
+Start listener action : sampleAfterTestCase,Chrome 125.0.0.0,,,29-05-2024 22:41:04,29-05-2024 22:41:04,0.090s,PASSED

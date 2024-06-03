@@ -21,6 +21,23 @@ total = add_numbers(2, 7)
 
 println(total)
 
+myString = '0.89'
+
+strVal = Float.valueOf(myString) * 100
+
+println(strVal + '%')
+
+//BigDecimal bdVal = new BigDecimal(myString)
+bdVal = new BigDecimal(myString)
+
+bdVal = (bdVal *100).intValue()
+
+println(bdVal + '%')
+
+myVal = myString.replace('.','').toInteger()
+
+println(myVal + '%')
+
 def add_numbers(def num1, def num2) {
     sum = (num1 + num2)
 

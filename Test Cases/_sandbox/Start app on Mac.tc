@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Start app on Mac</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d16c7178-027f-4a18-9b56-8b4e5f4e7930</testCaseGuid>
+</TestCaseEntity>

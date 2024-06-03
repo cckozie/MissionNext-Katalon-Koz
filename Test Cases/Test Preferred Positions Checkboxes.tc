@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Preferred Positions Checkboxes</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dcebf670-65ff-44fd-a79a-214b1beb2dc9</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>afebab66-12f2-4ef0-aef7-cba2e523e940</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>afebab66-12f2-4ef0-aef7-cba2e523e940</id>
+      <masked>false</masked>
+      <name>testSuiteRunning</name>
+   </variable>
+</TestCaseEntity>
