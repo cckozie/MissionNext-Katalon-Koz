@@ -26,17 +26,21 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import java.io.File
 
+// Write results to text file
 outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Footer Icons.txt')
 
 outFile.write("Testing Footer Icons\n")
 
+// List of icon names for home page
 iconsHome = ['facebook', 'x', 'instagram', 'linkedin', 'wordpress']
 
+// List of icon names for backend (the sizes are different there
 iconsBackend = ['facebookBackend', 'x', 'instagramBackend', 'linkedinBackend', 'wordpress']
 
-//icons = ['facebook']
+// Icons are in the katalon image folder
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/'
 
+// Open the home page and scroll to the bottom
 WebUI.openBrowser('missionnext.org')
 
 WebUI.maximizeWindow()
@@ -57,6 +61,7 @@ WebUI.scrollToElement(findTestObject('Page_Serve in Missions - MissionNext.org/i
 
 WebUI.delay(1)
 
+// Try to find the icons on the home page
 outText = '=========== Checking for icons on home page ==========='
 
 println(outText)
@@ -67,12 +72,14 @@ checkIcons(iconsHome)
 
 WebUI.closeBrowser()
 
+// Close and reopen the browser to the journey login page
 WebUI.callTestCase(findTestCase('_Functions/Candidate Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.scrollToElement(findTestObject('Page_Serve in Missions - MissionNext.org/i_Facebook-f_fab fa-facebook-f'), 0)
 
 WebUI.delay(1)
 
+// Try to find the icons in the backend
 outText = '=========== Checking for icons on backend ==========='
 
 println(outText)
@@ -81,8 +88,7 @@ outFile.append('\n' + outText + '\n')
 
 checkIcons(iconsBackend)
 
-WebUI.closeBrowser()
-
+// Function to look for the icons in the list passed in
 def checkIcons(iconList) {
     Screen s = new Screen()
 

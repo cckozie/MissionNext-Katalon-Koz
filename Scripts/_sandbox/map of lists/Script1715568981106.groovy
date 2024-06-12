@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+/*
 map = [:]
 
 String key = "key1"
@@ -38,3 +39,13 @@ new File("/Users/cckozie/Documents/MissionNext/map.txt").withWriter { out ->
 	  out.println it
 	}
   }
+*/
+
+checkedSkills = [1:'TECHNICAL', 2:'IT ENGINEERING/ANALYST', 7:'DATABASE', 11:'Developer, Applications', 12:'Developer, Architect',
+	13:'Developer, Front End', 21:'Developer, Python', 23:'Developer, Software', 26:'Engineer, Software', 30:'Engineer, Quality Assurance',
+	31:'IT Analyst, Business', 56:'Software Development Manager', 57:'Software Systems Integrator', 69:'Manager, Project',
+	71:'Manager, Quality Assurance', 74:'Manager, Software Development']
+
+List skills = new ArrayList(checkedSkills.values());
+
+println(skills)

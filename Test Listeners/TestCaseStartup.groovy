@@ -34,7 +34,7 @@ class TestCaseStartup {
 		println('Running TestCaseStartup')
 		if(!GlobalVariable.testSuiteRunning) {
 			println('Starting Google Analytics Opt Out in TestCaseStartup')
-			builder = new ProcessBuilder("open","/Applications/Google Analytics Opt Out.app").start()
+//			builder = new ProcessBuilder("open","/Applications/Google Analytics Opt Out.app").start()
 		}
 	}
 }

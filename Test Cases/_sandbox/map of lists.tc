@@ -4,5 +4,6 @@
    <name>map of lists</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>4e95a6cb-a738-4c75-9432-e1bb25d232ef</testCaseGuid>
 </TestCaseEntity>

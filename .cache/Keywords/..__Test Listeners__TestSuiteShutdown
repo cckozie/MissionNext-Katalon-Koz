@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "10CD03081C3B981280200D11E7B569C2",
+  "keywordFileContentHash": "92183E47EF608245E0A2595EB74B480A",
   "keywordClasses": [
     {
       "name": "TestSuiteShutdown",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

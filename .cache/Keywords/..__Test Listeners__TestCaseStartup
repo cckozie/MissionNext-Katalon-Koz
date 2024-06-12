@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "A46F0EC3BCEF2232D76057CB4CB97F27",
+  "keywordFileContentHash": "7F5CF966C93A0CF8F72F2987A3955160",
   "keywordClasses": [
     {
       "name": "TestCaseStartup",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

@@ -34,7 +34,7 @@ class TestCaseShutdown {
 		println('Running TestCaseShutdown')
 		if(!GlobalVariable.testSuiteRunning) {
 			println('Killing Google Analytics Opt Out')
-			Runtime.getRuntime().exec("/usr/bin/pkill -9 Google Analytics Opt Out")
+//			Runtime.getRuntime().exec("/usr/bin/pkill -9 Google Analytics Opt Out")
 		}
 	}
 }
