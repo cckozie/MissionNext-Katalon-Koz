@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Contact Info tab</name>
+   <name>Contact Info tab - Copy (1)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>016b0129-e2e1-46d7-ba1d-e763b3d412af</testCaseGuid>
+   <testCaseGuid>ed805f46-990a-49e2-a478-91f5f655418d</testCaseGuid>
 </TestCaseEntity>

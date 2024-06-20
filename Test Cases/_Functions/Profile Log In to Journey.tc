@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Contact Info tab</name>
+   <name>Profile Log In to Journey</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>016b0129-e2e1-46d7-ba1d-e763b3d412af</testCaseGuid>
+   <testCaseGuid>65a977aa-0852-44d6-ba50-57069e3920d0</testCaseGuid>
 </TestCaseEntity>

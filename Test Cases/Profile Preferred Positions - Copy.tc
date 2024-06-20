@@ -4,5 +4,6 @@
    <name>Profile Preferred Positions - Copy</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>07140e89-d5bb-4437-bc26-aa6221a0ae33</testCaseGuid>
 </TestCaseEntity>

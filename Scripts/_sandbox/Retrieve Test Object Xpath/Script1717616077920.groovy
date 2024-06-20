@@ -20,11 +20,11 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import com.kms.katalon.core.testobject.SelectorMethod
 import groovy.json.JsonOutput
 
-//TestObject tObj = findTestObject('Journey Profile/Contact Info tab/input_First Name')
+//TestObject tObj = findTestObject('Journey Profile/Contact Info Tab/input_First Name')
 
 myObject = 'Journey Profile/Contact Info tab/input_Gender_Male'
 
-//TestObject tObj = findTestObject('Journey Profile/Contact Info tab/input_Gender_Male')
+//TestObject tObj = findTestObject('Journey Profile/Contact Info Tab/input_Gender_Male')
 TestObject tObj = findTestObject(myObject)
 
 /*
@@ -40,7 +40,7 @@ WebUI.comment(tObj.getSelectorCollection().toString())
 
 //start = xpath.indexOf('XPATH:') + 6
 
-TestObject testObjectAttribute = findTestObject('Journey Profile/Contact Info tab/input_Gender_Female')
+TestObject testObjectAttribute = findTestObject('Journey Profile/Contact Info Tab/input_Gender_Female')
 //String selectedLocatorAttribute = testObjectAttribute.getSelectorCollection()[SelectorMethod.BASIC]
 String selectedLocatorAttribute = testObjectAttribute.getSelectorCollection().get(SelectorMethod.BASIC)
 WebUI.comment("selectedLocatorAttribute='${selectedLocatorAttribute}'")

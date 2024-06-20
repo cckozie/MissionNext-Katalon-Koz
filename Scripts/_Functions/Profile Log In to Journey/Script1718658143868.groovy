@@ -16,26 +16,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import javax.swing.JOptionPane as JOptionPane
-//import javax.swing.JFrame as JFrame
-//import javax.swing.JDialog as JDialog
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-//import java.awt.event.*;
-//import java.awt.*;
-//import javax.swing.*;
 
+// Open the Journey login page
+WebUI.callTestCase(findTestCase('_Functions/Open Journey Login Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.openBrowser('')
+WebUI.setText(findTestObject('Journey Profile/Log In To Journey/input_Username_log in'), GlobalVariable.username)
 
-// display msgbox
+WebUI.setEncryptedText(findTestObject('Journey Profile/Log In To Journey/input_Password_log in'), GlobalVariable.password)
 
-JDialog dialog = new JDialog();
-dialog.setAlwaysOnTop(true);
-JOptionPane.showMessageDialog(dialog, "help");
-
-
-
+WebUI.click(findTestObject('Journey Profile/Log In To Journey/button_Log In'))
 

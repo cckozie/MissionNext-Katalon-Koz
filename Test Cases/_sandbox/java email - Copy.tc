@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Contact Info tab</name>
+   <name>java email - Copy</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>016b0129-e2e1-46d7-ba1d-e763b3d412af</testCaseGuid>
+   <testCaseGuid>415e70ba-a814-41d4-b34d-ae5d5d46d698</testCaseGuid>
 </TestCaseEntity>

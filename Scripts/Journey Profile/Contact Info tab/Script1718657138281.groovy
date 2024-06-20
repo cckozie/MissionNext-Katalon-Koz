@@ -29,30 +29,46 @@ inputFields = [('input_First Name') : 'cktest02Firstname', ('img_First Name_fiel
 // Set path to page test objects
 testObjectPath = 'Journey Profile/Contact Info tab/'
 
+WebUI.callTestCase(findTestCase('_Functions/Profile Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
-// Log in to Journey profile and build list of checkbox elements
-WebUI.callTestCase(findTestCase('_Functions/Candidate Log In to Journey - Parm'), [], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Journey Profile/Journey Dashboard/a_My Profile'))
 
 WebUI.click(findTestObject('Journey Profile/tab_Contact_Info'))
 
-for (entry in inputFields) {
-	
-	key = entry.key
-	println(key)
-	
-    testObject = testObjectPath + key
-	println(testObject)
+WebUI.executeJavaScript('window.open();', [])
+
+currentWindow = WebUI.getWindowIndex()
+
+//Go in to new tab
+WebUI.switchToWindowIndex(currentWindow + 1)
+
+WebUI.navigateToUrl('outlook.office.com')
+
+WebUI.delay(5)
+
+//Comming back
+WebUI.switchToWindowIndex(currentWindow)
+
+/*
+for (def entry : inputFields) {
+    key = entry.key
+
+    println(key)
+
+    testObject = (testObjectPath + key)
+
+    println(testObject)
 
     value = entry.value
-	println(value)
+
+    println(value)
 
     if (key.substring(0, 5) == 'input') {
-		
-		WebUI.setText(findTestObject(testObject), value)
-		
+        WebUI.setText(findTestObject(testObject), value)
     }
 }
 
 WebUI.delay(10)
-
+*/
 WebUI.closeBrowser()
+

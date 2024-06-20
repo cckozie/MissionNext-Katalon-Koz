@@ -32,8 +32,8 @@ import org.apache.commons.dbcp2.BasicDataSource as BasicDataSource
 
 JFrame frame = new JFrame('My First JFrame')
 
+frame.setAlwaysOnTop(true);
 frame.requestFocus()
-
 home = JOptionPane.showInputDialog(frame, 'Enter the website where you would like to begin!')
 
 WebUI.openBrowser(home)

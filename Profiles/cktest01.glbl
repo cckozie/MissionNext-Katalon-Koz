@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>cktest02</name>
+   <name>cktest01</name>
    <tag></tag>
-   <defaultProfile>true</defaultProfile>
+   <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'cktest02'</initValue>
+      <initValue>'cktest01'</initValue>
       <name>username</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'cktest02@missionnext.org'</initValue>
+      <initValue>'cktest01@missionnext.org'</initValue>
       <name>email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'J+U8o5fvtGfb5LDZyGLqyg=='</initValue>
+      <initValue>'5lwQhML0qdMWXTXRrgjfVw=='</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'cktest02'</initValue>
+      <initValue>'cktest01'</initValue>
       <name>first_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -41,7 +41,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>prefer_text</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -48,14 +48,12 @@ WebUI.disableSmartWait()
 
 for (def preference : ministryPreferences) {
     //    position = preference
-    println(preference)
+    println('Preference is ' + preference)
 
     try {
 
-//		WebUI.verifyElementClickable(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-parm', [('position') : preference]))
         WebUI.click(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-parm', [('position') : preference]))
-//		WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Create Profile/Ministry Preferences/input_Preferred Position(s)-parm',[('position') : preference]),3)
-//		WebUI.executeJavaScript("arguments[0].click()", Arrays.asList(element))
+
         WebUI.delay(1)
     }
     catch (Exception e) {
