@@ -9,4 +9,9 @@
       <initValue>false</initValue>
       <name>testSuiteRunning</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'explorenext.org'</initValue>
+      <name>domain</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

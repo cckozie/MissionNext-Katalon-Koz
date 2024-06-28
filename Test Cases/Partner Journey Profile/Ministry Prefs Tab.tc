@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Ministry Prefs Tab</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e0142a6e-ba55-4da9-81b2-3de697581d21</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b655b2cd-e2d3-4798-a069-4a100b3794a5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>b655b2cd-e2d3-4798-a069-4a100b3794a5</id>
+      <masked>false</masked>
+      <name>testSuiteRunning</name>
+   </variable>
+</TestCaseEntity>

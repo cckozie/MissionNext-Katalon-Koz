@@ -56,13 +56,21 @@ Store store = emailSession.getStore("pop3s");
 store.connect(host, username, password);
 
 //create the folder object and open it
-Folder emailFolder = store.getFolder("INBOX");
-emailFolder.open(Folder.READ_ONLY);
+Folder emailFolder
+Message[] messages = []
 
-// retrieve the messages from the folder in an array and print it
-Message[] messages = emailFolder.getMessages();
-System.out.println("messages.length---" + messages.length);
+while(messages.length == 0) {
+	emailFolder = store.getFolder("INBOX");
+	emailFolder.open(Folder.READ_ONLY);
+	messages = emailFolder.getMessages()
+	if(messages.length == 0) {
+		emailFolder.close(false);
+		WebUI.delay(5)
+	}
+}
+println("messages.length---" + messages.length);
 
+msgFound = false
 for(Message message in messages) {
 //	 Message message = messages[i];
 	 String from = message.getFrom()[0]
@@ -77,16 +85,25 @@ for(Message message in messages) {
 	 subjectMatch = subject.indexOf(subjectKey)
 	 fromMatch = from.indexOf(fromKey)
 	 if(subjectMatch > 0 && fromMatch > 0) {
+		 msgFound = true
 		 println("     ----- Body:" + body)
 		 sentPos = body.indexOf('Sent:')
 		 toPos = body.indexOf('To:')
+/*
 		 sentTime = body.substring(sentPos + 6, toPos)
 		 sentInstant = convertTime(sentTime)
-		 long diffInMinutes = java.time.Duration.between(scriptInstant, sentInstant).toMinutes();
-		 println(diffInMinutes)
-		 
-		 
+		 msgInstant = sentInstant
+*/
+		 msgBody = body
+		 msgTime = body.substring(sentPos + 6, toPos)
 	 }
+}
+
+if(msgFound) {
+	 msgInstant = convertTime(msgTime)
+	 long diffInMinutes = java.time.Duration.between(scriptInstant, msgInstant).toMinutes();
+	 println('>>>>> The changed email message was sent ' + diffInMinutes + ' minutes after the email address was changed <<<<<')
+	 println(msgBody)
 }
 
 //close the store and folder objects

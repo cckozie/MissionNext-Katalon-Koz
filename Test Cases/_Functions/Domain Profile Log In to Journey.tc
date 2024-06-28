@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Domain Profile Log In to Journey</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2524ccdb-e3c8-4b2b-b23e-3cc304eb64a1</testCaseGuid>
+</TestCaseEntity>

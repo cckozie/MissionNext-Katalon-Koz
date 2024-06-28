@@ -4,5 +4,6 @@
    <name>fileIO</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>91816e3f-4a60-4923-b4e0-6436fa5b8cbb</testCaseGuid>
 </TestCaseEntity>
