@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get All Links on Page</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>72d2d68e-2ec8-4a36-a2d2-b1cf33c2d6dc</testCaseGuid>
+</TestCaseEntity>

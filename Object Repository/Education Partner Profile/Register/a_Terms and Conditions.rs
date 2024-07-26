@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Terms and Conditions</name>
+   <tag></tag>
+   <elementGuidId>a0a960a4-ec1c-4063-8d58-0feafb09b02a</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-sm-12.before-note > a[title=&quot;Opens in a new tab&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='group-1462396686.719']/div[12]/div[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>ec960aca-d725-4a7e-8def-bf3a8a92a85e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/terms/</value>
+      <webElementGuid>68eb997a-7eb7-41e8-898d-338b48ec8f32</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Opens in a new tab</value>
+      <webElementGuid>1111c560-c360-4a81-8d77-87e30401b70f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>38dad071-4a6c-4ff8-8255-c347f991c74c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Terms and Conditions</value>
+      <webElementGuid>fa829766-4dd8-48eb-bf6f-75eb11d97ed5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-12 before-note&quot;]/a[1]</value>
+      <webElementGuid>4b434c81-5194-493b-997b-1808edbd4622</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1462396686.719']/div[12]/div[2]/a</value>
+      <webElementGuid>44e5942a-57d1-418b-8c20-e69be51697bf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Terms and Conditions')]</value>
+      <webElementGuid>df56f649-8cee-4ade-b318-68dabfdc7744</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The terms and conditions field is required.'])[1]/following::a[1]</value>
+      <webElementGuid>a980e6b7-d719-44ee-a58f-7d6704c6df4f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy Policy'])[1]/preceding::a[1]</value>
+      <webElementGuid>4aac32e1-dd8b-4c48-a092-113b95b1da7d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Terms and Conditions*'])[1]/preceding::a[2]</value>
+      <webElementGuid>4a41d2c2-d405-4c7b-8b48-9a29dcb89bd7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Terms and Conditions']/parent::*</value>
+      <webElementGuid>fbfcaefd-7c76-4086-92e3-f6e1356aa42b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/terms/')]</value>
+      <webElementGuid>fa9a0c48-0137-4064-ae4e-0a90f586c5f1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[12]/div[2]/a</value>
+      <webElementGuid>a08bc7b1-5607-45d8-b802-6ccdd5838099</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/terms/' and @title = 'Opens in a new tab' and (text() = 'Terms and Conditions' or . = 'Terms and Conditions')]</value>
+      <webElementGuid>3f8e39e2-f1ae-4fb2-8920-291b3f5be675</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

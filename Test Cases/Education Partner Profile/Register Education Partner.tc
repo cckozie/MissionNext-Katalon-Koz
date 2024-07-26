@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Register Candidate</name>
+   <name>Register Education Partner</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>ad40c502-4ba0-4b8c-9719-314773d5eaab</testCaseGuid>
+   <testCaseGuid>bc9a5850-159a-4a26-91b7-567e6fe95d49</testCaseGuid>
 </TestCaseEntity>

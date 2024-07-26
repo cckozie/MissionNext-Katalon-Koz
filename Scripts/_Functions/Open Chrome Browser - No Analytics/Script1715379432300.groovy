@@ -29,11 +29,17 @@ import org.openqa.selenium.chrome.ChromeOptions as ChromeOptions
 import org.openqa.selenium.remote.DesiredCapabilities as DesiredCapabilities
 import java.util.concurrent.TimeUnit
 
+////////////////////// ADDED CHROME DRIVER OPTION THAT DISABLES JAVASCRIPT \\\\\\\\\\\\\\\\\\\\\\\
+//\\\\\\\\\\\\\\ THEN REMOVED IT BECAUSE IT DIDN'T HELP WITH STALE ELEMENT ERRORS ////////////////
 System.setProperty('webdriver.chrome.driver', '/Applications/Katalon Studio Free.app/Contents/Eclipse/configuration/resources/drivers/chromedriver_mac/chromedriver')
 
 ChromeOptions options = new ChromeOptions()
 
 options.addExtensions(new File('/Users/cckozie/Downloads/fllaojicojecljbmefodhfapmkghcbnh-1.1-Crx4Chrome.com.crx'))
+
+// new stuff
+//options.setCapability("javascript.enabled", false)
+//
 
 DesiredCapabilities caps = new DesiredCapabilities()
 

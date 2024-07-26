@@ -4,6 +4,7 @@
    <name>Open Chrome Browser - No Analytics</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>9703b9f2-17a9-46a1-aa25-72a8b0f1c2f1</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>

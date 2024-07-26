@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>explorenext get links performance</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e381f5e2-0a5a-42ec-b241-315901addd35</testCaseGuid>
+</TestCaseEntity>

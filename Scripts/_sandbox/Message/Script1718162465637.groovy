@@ -15,27 +15,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import javax.swing.JOptionPane as JOptionPane
-//import javax.swing.JFrame as JFrame
-//import javax.swing.JDialog as JDialog
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-//import java.awt.event.*;
-//import java.awt.*;
-//import javax.swing.*;
 
-
-//WebUI.openBrowser('')
-
-// display msgbox
-
-JDialog dialog = new JDialog();
-dialog.setAlwaysOnTop(true);
-JOptionPane.showMessageDialog(dialog, "help");
-
-
-
-
+WebUI.openBrowser('')
+def iCnt = 0
+while (iCnt <= 2) {
+	WebUI.executeJavaScript('alert(\'==> Java Alert Message <==\')', null, FailureHandling.OPTIONAL);
+	Thread.sleep (5000);
+	iCnt++;
+}
+WebUI.closeBrowser()

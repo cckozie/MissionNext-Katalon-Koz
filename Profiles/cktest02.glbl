@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'cktest02'</initValue>
+      <initValue>'cktest02 TEST'</initValue>
       <name>first_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
