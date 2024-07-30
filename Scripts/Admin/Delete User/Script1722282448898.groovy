@@ -20,6 +20,7 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import java.io.File as File
 
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
@@ -27,102 +28,106 @@ if (binding.hasVariable('varUsername')) {
 	username = 'cktest06ep'
 }
 
+println('File is ' + GlobalVariable.outFile)
+
 writeFile = false
 if(GlobalVariable.outFile != '') {
-	outFile = GlobalVariable.outFile
+	myFile = GlobalVariable.outFile
+	outFile	= File(myFile)
 	writeFile = true
 }
+
+println(outFile)
+println(writeFile)
+
+if(writeFile) {
+	outFile.append('can you see this?' + '\n')
+}
+
+
+System.exit(0)
 
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://api.explorenext.org')
+WebUI.navigateToUrl('https://ad.explorenext.org')
 
-WebUI.setText(findTestObject('Admin/API Login/input_username'), 'chriskosieracki')
+WebUI.setText(findTestObject('Admin/Ad Login/input_Username'), 'chriskosieracki')
 
-WebUI.setEncryptedText(findTestObject('Admin/API Login/input_password'), '4Q/2PF7UjxevAl0v0kCS+w==')
+WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_Password'), 'fAJOXt1JExHva3VUYg96Og==')
 
-WebUI.click(findTestObject('Admin/API Login/btn_Sign in'))
+WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
 
-WebUI.click(findTestObject('Admin/API Dashboard/a_Users'))
+WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
 
-WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), username)
+WebUI.setText(findTestObject('Admin/Ad User Viewer Utility/input_Find account by Username'), username)
 
-WebUI.delay(5)
+WebUI.delay(1)
+
+WebUI.click(findTestObject('Admin/Ad User Viewer Utility/input_Find account by Username_beginning'))
+
+WebUI.delay(1)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement Table = driver.findElement(By.xpath('//*[@id="default-rezult"]/table'))
+WebElement Table = driver.findElement(By.xpath('//table[2]'))
 
 List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
 int row_count = Rows.size()
 
-for (row = 1; row < row_count; row++) {
-    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+if(row_count > 0) {
 
-    user = Columns.get(1).getText()
-
-    if (user.indexOf(username) >= 0) {
-        Columns.get(1).click()
-
-        WebUI.delay(5)
-
-        outText = 'Granting access to ' + username
-
-		println('=====> '+ outText)
-		
-		if(writeFile) {
-			outFile.append(outText + '\n')
-		}
-		
-        WebUI.click(findTestObject('Object Repository/Admin/API Dashboard/button_Grant Access'))
-
-        WebUI.delay(1)
-		
-		granted = false
-		
-		loops = 10
-		
-		loop = 0
-		
-		while(!granted && loop < loops) {
-		
-			granted = WebUI.verifyTextPresent('ACCESS GRANTED', false, FailureHandling.OPTIONAL)
+	found = false
+	
+	for (row = 1; row < row_count; row++) {
+	    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+	
+	    user = Columns.get(2).getText()
+	
+	    if (user.indexOf(username) >= 0) {
 			
-			WebUI.delay(2)
+			found = true
 			
-			loop ++
+			outText = 'Deleting user ' + username
 			
-		}
-		
-		if(granted) {
-
-			outText = 'Access granted to ' + username
+	        println('=====> '+ outText)
+			
+			if(writeFile) {
+				outFile.append(outText + '\n')
+			}
+	
+	        link = Columns.get(0).findElement(By.tagName('a'))
+			
+			link.click()
+	
+	        outText = 'User ' + username + ' was deleted.'
 			
 			println('=====> '+ outText)
 			
 			if(writeFile) {
 				outFile.append(outText + '\n')
 			}
-		
-		} else {
-			
-			outText = 'FAILED TO GRANT ACCESS TO ' + username
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-			
-		}
-
-        WebUI.click(findTestObject('Object Repository/Admin/API Dashboard/a_Logout'))
-
-        break
-    }
+	
+	        WebUI.delay(2)
+	
+	        break
+	    }
+	}
 }
+	
+if(!found) {
+	
+	outText = 'Unable to find and delete user ' + username
+
+	println('=====> '+ outText)
+	
+	if(writeFile) {
+		outFile.append(outText + '\n')
+	}
+
+}
+
 
 WebUI.closeBrowser()
 

@@ -26,12 +26,23 @@ import java.time.Duration;
 import java.time.Instant;
 
 
+//username = varUsername
+username = 'cktest06ep'
+
+//define the email subject search string
+//subjectKey = '[Journey] Email Changed'
+subjectKey = 'Approval request'
+//subjectKey = varSubjectKey
+
+println('Email subjectKey is ' + subjectKey + ', and username is ' + username)
+
 scriptStart = new Date()
 scriptInstant = scriptStart.toInstant()
 
 
 //define the email subject search string
-subjectKey = '[Journey] Email Changed'
+//subjectKey = '[Journey] Email Changed'
+//subjectKey = 'Approval request'
 
 //define the email from search string
 fromKey = 'Chris.Kosieracki@missionnext.org'
@@ -59,55 +70,78 @@ store.connect(host, username, password);
 Folder emailFolder
 Message[] messages = []
 
-while(messages.length == 0) {
+loopsMax = 10
+loops = 0
+while(messages.length == 0 && loops <= loopsMax) {
 	emailFolder = store.getFolder("INBOX");
 	emailFolder.open(Folder.READ_ONLY);
 	messages = emailFolder.getMessages()
 	if(messages.length == 0) {
 		emailFolder.close(false);
 		WebUI.delay(5)
+		loops ++
 	}
 }
-println("messages.length---" + messages.length);
 
-msgFound = false
-for(Message message in messages) {
-//	 Message message = messages[i];
-	 String from = message.getFrom()[0]
-	 String subject = message.getSubject()
-	 println("----- Found email from " + from + ", With subject of " + subject);
-	 // Get the full message text - THIS WILL CAUSE THE EMAIL TO NO LONGER BE FOUND
-	 mp = (Multipart)message.getContent();
-//	 cnt = (Multipart)message.getCount()
-//	 println(cnt)
-	 Object p = mp.getBodyPart(0).getContent();
-	 body = p.toString(); //object has the body content
-	 subjectMatch = subject.indexOf(subjectKey)
-	 fromMatch = from.indexOf(fromKey)
-	 if(subjectMatch > 0 && fromMatch > 0) {
-		 msgFound = true
-		 println("     ----- Body:" + body)
-		 sentPos = body.indexOf('Sent:')
-		 toPos = body.indexOf('To:')
-/*
-		 sentTime = body.substring(sentPos + 6, toPos)
-		 sentInstant = convertTime(sentTime)
-		 msgInstant = sentInstant
-*/
-		 msgBody = body
-		 msgTime = body.substring(sentPos + 6, toPos)
-	 }
-}
+if(messages.length > 0) {
+	
+	WebUI.delay(5)	//Wait for full msg to be received
+	
+	println("messages.length---" + messages.length);
+	
+	msgFound = false
+	for(Message message in messages) {
+	//	 Message message = messages[i];
+		 String from = message.getFrom()[0]
+		 String subject = message.getSubject()
+		 println("----- Found email from " + from + ", With subject of " + subject);
+		 // Get the full message text - THIS WILL CAUSE THE EMAIL TO NO LONGER BE FOUND
+		 WebUI.delay(5)	//Wait for full msg to be received
+		 
+		 Object content = message.getContent();
+		 if(content instanceof String) {
+			println('It is a string')
+		 } else if(content instanceof Multipart) {
+			println('It is multipart')
+		 }
+//		 mp = (Multipart)message.getContent();
+		 mp = message.getContent();
+		 println(mp)
 
-if(msgFound) {
-	 msgInstant = convertTime(msgTime)
-	 long diffInMinutes = java.time.Duration.between(scriptInstant, msgInstant).toMinutes();
-	 println('>>>>> The changed email message was sent ' + diffInMinutes + ' minutes after the email address was changed <<<<<')
-	 println(msgBody)
-}
+	//	 cnt = (Multipart)message.getCount()
+	//	 println(cnt)
+		 Object p = mp.getBodyPart(0).getContent();
+		 body = p.toString(); //object has the body content
+		 subjectMatch = subject.indexOf(subjectKey)
+		 fromMatch = from.indexOf(fromKey)
+		 if(subjectMatch > 0 && fromMatch > 0) {
+			 println("     ----- Body:" + body)
+			 sentPos = body.indexOf('Sent:')
+			 toPos = body.indexOf('To:')
+			 msgBody = body
+			 msgTime = body.substring(sentPos + 6, toPos)
+			 if(msgBody.indexOf(username) >= 0) {
+				 msgFound = true
+				 println('>>>>> Username ' + username + ' was found in the email.')
+			 }
+		 }
+		 
+	}
+	
+	if(msgFound) {
+		 msgInstant = convertTime(msgTime)
+		 long diffInMinutes = java.time.Duration.between(scriptInstant, msgInstant).toMinutes();
+		 println('>>>>> The ' + subjectKey + ' message was sent ' + diffInMinutes + ' minutes after the initiating event <<<<<')
+		 println(msgBody)
+	}
 
-//close the store and folder objects
-emailFolder.close(false);
+	//close the folder objects
+	emailFolder.close(false);
+	
+	//update the return code
+	GlobalVariable.returnCode = 'found'
+}	
+
 store.close();
 
 

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Access Granted</name>
+   <name>span_Access Status</name>
    <tag></tag>
    <elementGuidId>42aa4655-31b1-42b4-91ee-865d7b46546e</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>/html[@class=&quot;ng-scope&quot;]/body[1]/div[@class=&quot;container&quot;]/div[@class=&quot;ng-scope&quot;]/table[@class=&quot;table table-bordered ng-scope&quot;]/tbody[1]/tr[7]/td[1]/span[@class=&quot;ng-binding&quot;]</value>
+      </entry>
       <entry>
          <key>CSS</key>
          <value>span.ng-binding</value>
@@ -14,7 +18,7 @@
          <value>(.//*[normalize-space(text()) and normalize-space(.)='Global Status'])[1]/following::span[1]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>8fe3a80d-3756-4daa-bf60-b822804e89a4</webElementGuid>
+      <webElementGuid>2f086650-1a0e-4790-8f0f-58adf9f77311</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,23 +35,23 @@
       <name>class</name>
       <type>Main</type>
       <value>ng-binding</value>
-      <webElementGuid>e5f3e292-85a6-42ae-8bb4-a531e7354776</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>Access Granted</value>
-      <webElementGuid>17dc7f4d-90ee-4c1b-b0c7-f191e9ccb5f7</webElementGuid>
+      <webElementGuid>27c89184-9aea-406c-a9e9-4b588feb4ef9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Access Granted</value>
+      <webElementGuid>bf4dbc59-44e2-48e2-835a-cd8be532279f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;ng-scope&quot;]/body[1]/div[@class=&quot;container&quot;]/div[@class=&quot;ng-scope&quot;]/table[@class=&quot;table table-bordered ng-scope&quot;]/tbody[1]/tr[7]/td[1]/span[@class=&quot;ng-binding&quot;]</value>
-      <webElementGuid>9e290f70-93ae-44b2-becc-269b33c4e56a</webElementGuid>
+      <webElementGuid>4bbc7bb2-8a5a-48f3-b4c7-925ea02c6c6a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +59,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Global Status'])[1]/following::span[1]</value>
-      <webElementGuid>1aa947c2-d42f-4137-b688-8faf1f8801b3</webElementGuid>
+      <webElementGuid>5c01bf28-4342-4abe-a08a-93b4b2d5d8ee</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +67,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Registered'])[1]/following::span[1]</value>
-      <webElementGuid>1b50837d-4232-4e21-a32f-c0d0f3b91d70</webElementGuid>
+      <webElementGuid>d632252e-1642-4901-807a-68dcfabc446a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +75,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Grant Access'])[1]/preceding::span[1]</value>
-      <webElementGuid>41c3a0f7-8e67-4cb8-a35f-c1a42c9eb059</webElementGuid>
+      <webElementGuid>7277bcc7-d6bf-43bb-9cb8-ace50f856f45</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,15 +83,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Deny Access'])[1]/preceding::span[1]</value>
-      <webElementGuid>a383b77f-a0fb-4f9b-b465-c2a49bdd462f</webElementGuid>
+      <webElementGuid>18b715da-7824-46c9-9226-9432bae30076</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Access Granted']/parent::*</value>
-      <webElementGuid>d217445f-8daa-43a1-9588-5960804dbba0</webElementGuid>
+      <value>//*/text()[normalize-space(.)='Access Denied']/parent::*</value>
+      <webElementGuid>41d5cdf1-1bb9-43e5-8483-f409419eea79</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,14 +99,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//td/span</value>
-      <webElementGuid>bef6b4a9-24d7-4f50-b20a-96823bc5f837</webElementGuid>
+      <webElementGuid>dcc96dcc-a36b-4aa5-b531-6aa1b657efe6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//span[(text() = 'Access Granted' or . = 'Access Granted')]</value>
-      <webElementGuid>f34d31b1-5bd9-467a-a344-7406a3f4a53e</webElementGuid>
+      <value>//span[(text() = 'Access Denied' or . = 'Access Denied')]</value>
+      <webElementGuid>b46762c1-4879-4f14-9236-0662cdde5680</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

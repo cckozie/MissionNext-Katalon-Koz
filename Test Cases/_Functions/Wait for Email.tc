@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>java email</name>
+   <name>Wait for Email</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6196cd13-718f-4c91-ab74-d529b0059488</testCaseGuid>
+   <testCaseGuid>4c29d0de-747b-4ac9-9359-124da7f60b3b</testCaseGuid>
 </TestCaseEntity>

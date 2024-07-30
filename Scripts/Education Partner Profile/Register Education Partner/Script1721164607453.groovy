@@ -28,6 +28,8 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 // Write results to text file
 outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner.txt')
 
+GlobalVariable.outFile = outFile
+
 outFile.write('Testing Register Education Partner\n')
 
 // Define path to tooltip text images
@@ -39,11 +41,17 @@ tooltips = [('username') : 'img_Username_field-tooltip', ('password10') : 'img_P
     , ('website_url') : 'img_Website Address_field-tooltip', ('hear_about') : 'img_How did you hear about MissionNext_field-tooltip']
 
 // Define applicant fields ==================================================================================================
-firstName = 'Chris TEST EP'
+firstName = GlobalVariable.first_name //'Chris TEST EP'
 
-lastName = 'Kosieracki'
+lastName = GlobalVariable.last_name //'Kosieracki'
 
-organization = 'The CCK Christian School'
+username = GlobalVariable.username
+
+password = GlobalVariable.password
+
+email = GlobalVariable.email
+
+organization = 'The CCK TEST Christian School'
 
 abbreviation = 'CCK CS'
 
@@ -63,7 +71,15 @@ hearAbout = 'My Church'
 
 referral = 'Brad Benson'
 
-//==================================================================================================
+//================================== Delete the user ===============================================
+
+println(GlobalVariable.outFile)
+
+WebUI.callTestCase(findTestCase('Admin/Delete User'), ['varUsername' : username], FailureHandling.STOP_ON_FAILURE)
+System.exit(1)
+
+//================================== Create the education partner ==================================
+
 WebUI.openBrowser('https://education.explorenext.org/signup/organization')
 
 WebUI.maximizeWindow()
@@ -158,11 +174,11 @@ if ((pswMsg.indexOf('at least 6 characters') >= 0) || pswMsg.indexOf('no special
     println(outText)
 }
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/input_Username'), GlobalVariable.username + 'ep')
+WebUI.setText(findTestObject('Education Partner Profile/Register/input_Username'), username)
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), GlobalVariable.password)
+WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), password)
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Contact Email'), GlobalVariable.email)
+WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Contact Email'), email)
 
 WebUI.click(findTestObject('Education Partner Profile/Register/button_Sign up'))
 
@@ -201,7 +217,7 @@ WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Register/di
 
 WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Register/div_The terms and conditions field is required'))
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), GlobalVariable.password)
+WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), password)
 
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Contact First Name'), firstName)
 
@@ -236,3 +252,34 @@ WebUI.click(findTestObject('Education Partner Profile/Register/checkbox_Partners
 
 WebUI.click(findTestObject('Education Partner Profile/Register/checkbox_Terms and Conditions'))
 
+WebUI.delay(2)
+
+WebUI.click(findTestObject('Object Repository/Education Partner Profile/Register/button_Sign up'))
+
+WebUI.delay(1)
+
+//================================== Wait for the approval pending email for gthe new education partner =========
+
+WebUI.callTestCase(findTestCase('_Functions/Wait for Email'), [('varSubjectKey') : 'Approval request', 'varUsername' : username], FailureHandling.STOP_ON_FAILURE)
+
+if (GlobalVariable.returnCode == 'found') {
+	
+    println('Approval request email for ' + username + ' was found')
+	
+	WebUI.closeBrowser()
+	
+//================================== Grant access for the new education partner ==================================
+
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), ['varUsername' : username], FailureHandling.STOP_ON_FAILURE)
+
+    println('Access was granted to ' + username)
+	
+//================================== Create a subscriptioon for the new education partner ========================
+
+    WebUI.callTestCase(findTestCase('Admin/Create Subscription'), ['varUsername' : username, 'varType' : 'Education', 'varRole' : 'Organization'], FailureHandling.STOP_ON_FAILURE)
+
+    println('A subscription was created for ' + username)
+	
+}
+
+WebUI.closeBrowser()

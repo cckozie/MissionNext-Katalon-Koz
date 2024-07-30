@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>java email</name>
+   <name>Watch for Email - Copy</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6196cd13-718f-4c91-ab74-d529b0059488</testCaseGuid>
+   <testCaseGuid>a13c05f3-2add-4e15-9481-8a4d87466145</testCaseGuid>
 </TestCaseEntity>

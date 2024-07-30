@@ -66,5 +66,5 @@ WebUI.delay(10)
 */
 WebUI.closeBrowser()
 
-WebUI.callTestCase(findTestCase('_sandbox/java email'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_sandbox/java email new'), [:], FailureHandling.STOP_ON_FAILURE)
 

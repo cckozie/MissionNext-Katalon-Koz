@@ -21,11 +21,29 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-username = varUsername
+if (binding.hasVariable('varUsername')) {
+	username = varUsername
+} else {
+	username = 'cktest06ep'
+}
 
-type = varType	//Education or Journey (for now)
+if (binding.hasVariable('varType')) {
+	type = varType	//Education or Journey (for now)
+} else {
+	type = 'Education'
+}
 
-role = varRole	//Candidate, Organization, or Agency
+if (binding.hasVariable('varRole')) {
+	role = varRole	//Candidate, Organization, or Agency
+} else {
+	role = 'Organization'
+}
+
+writeFile = false
+if(GlobalVariable.outFile != '') {
+	outFile = GlobalVariable.outFile
+	writeFile = true
+}
 
 WebUI.openBrowser('')
 
@@ -43,13 +61,13 @@ WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Website'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + varType))
+WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + type))
 
 WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Role'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + varRole))
+WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + role))
 
 WebUI.click(findTestObject('Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
 
@@ -72,12 +90,22 @@ for (row = 1; row < row_count; row++) {
 
     if (user.indexOf(username) >= 0) {
 		
-        println('=====> Creating subscription for ' + username)
+        outText = 'Creating subscription for ' + username
 
+		println('=====> '+ outText)
+		
+		if(writeFile) {
+			outFile.append(outText + '\n')
+		}
+		
         Columns.get(4).click()
+		
+		WebUI.delay(2)
 		
 		WebUI.click(findTestObject('Admin/Ad Subscription Utility/a_Add a subscription record'))
 
+		WebUI.delay(2)
+		
 		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
 
         break

@@ -14,4 +14,9 @@
       <initValue>'explorenext.org'</initValue>
       <name>domain</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>outFile</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

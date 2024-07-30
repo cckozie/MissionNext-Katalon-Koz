@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>java email</name>
+   <name>Delete Emails</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6196cd13-718f-4c91-ab74-d529b0059488</testCaseGuid>
+   <testCaseGuid>5f6970d3-bf40-41c9-b785-15c193191b6a</testCaseGuid>
 </TestCaseEntity>
