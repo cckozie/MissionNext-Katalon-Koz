@@ -25,32 +25,35 @@ import java.io.File as File
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
 } else {
-	username = 'cktest06ep'
+	username = GlobalVariable.username
 }
 
-println('File is ' + GlobalVariable.outFile)
 
+//Check to see if we're writing printed output also to a file
 writeFile = false
 if(GlobalVariable.outFile != '') {
-	myFile = GlobalVariable.outFile
-	outFile	= File(myFile)
+	String myFile = GlobalVariable.outFile
+	println(myFile)
+	outFile = new java.io.File(myFile)
 	writeFile = true
 }
 
-println(outFile)
-println(writeFile)
-
+/*
 if(writeFile) {
 	outFile.append('can you see this?' + '\n')
 }
 
-
 System.exit(0)
+*/
 
+domain = GlobalVariable.domain
+
+url = 'https://ad.' + domain
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://ad.explorenext.org')
+//WebUI.navigateToUrl('https://ad.explorenext.org')
+WebUI.navigateToUrl(url)
 
 WebUI.setText(findTestObject('Admin/Ad Login/input_Username'), 'chriskosieracki')
 
@@ -76,10 +79,10 @@ List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
 int row_count = Rows.size()
 
+found = false
+	
 if(row_count > 0) {
 
-	found = false
-	
 	for (row = 1; row < row_count; row++) {
 	    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 	
@@ -89,7 +92,7 @@ if(row_count > 0) {
 			
 			found = true
 			
-			outText = 'Deleting user ' + username
+	        outText = 'User ' + username + ' was found. Attempting to delete.'
 			
 	        println('=====> '+ outText)
 			
@@ -100,26 +103,45 @@ if(row_count > 0) {
 	        link = Columns.get(0).findElement(By.tagName('a'))
 			
 			link.click()
-	
-	        outText = 'User ' + username + ' was deleted.'
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-	
+		
 	        WebUI.delay(2)
 	
 	        break
-	    }
+			
+		}
 	}
 }
-	
-if(!found) {
-	
-	outText = 'Unable to find and delete user ' + username
 
+if(found) {
+	
+	WebUI.delay(1)
+	
+	WebUI.waitForPageLoad(10)
+	
+	deletedUser = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/p_The missionnext Candidate account username'))	
+	
+	if(deletedUser.indexOf(username) >= 0) {
+		
+		outText = ('User ' + username + ' was successfully deleted.')
+		
+		println(outText)
+	
+		outFile.append(outText + '\n')
+	
+	} else {
+		
+		outText = ('Failed to verify that user ' + username + ' was deleted.')
+		
+		println(outText)
+	
+		outFile.append(outText + '\n')
+	
+	}
+	
+} else {
+	
+	outText = username + ' was not found to be an active user.'
+	
 	println('=====> '+ outText)
 	
 	if(writeFile) {
@@ -127,7 +149,6 @@ if(!found) {
 	}
 
 }
-
 
 WebUI.closeBrowser()
 

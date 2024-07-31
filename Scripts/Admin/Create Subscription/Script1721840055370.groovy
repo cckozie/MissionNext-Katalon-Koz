@@ -24,7 +24,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
 } else {
-	username = 'cktest06ep'
+	username = GlobalVariable.username
 }
 
 if (binding.hasVariable('varType')) {
@@ -39,15 +39,23 @@ if (binding.hasVariable('varRole')) {
 	role = 'Organization'
 }
 
+//Check to see if we're writing printed output also to a file
 writeFile = false
 if(GlobalVariable.outFile != '') {
-	outFile = GlobalVariable.outFile
+	String myFile = GlobalVariable.outFile
+	println(myFile)
+	outFile = new java.io.File(myFile)
 	writeFile = true
 }
 
+domain = GlobalVariable.domain
+
+url = 'https://ad.' + domain
+
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://ad.explorenext.org')
+//WebUI.navigateToUrl('https://ad.explorenext.org')
+WebUI.navigateToUrl(url)
 
 WebUI.setText(findTestObject('Admin/Ad Login/input_Username'), 'chriskosieracki')
 
@@ -107,9 +115,44 @@ for (row = 1; row < row_count; row++) {
 		WebUI.delay(2)
 		
 		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
+		
+		WebUI.delay(2)
+		
+		created = WebUI.verifyElementVisible(findTestObject('Object Repository/Admin/Ad Subscription Utility/li_Record is successfully added'), FailureHandling.STOP_ON_FAILURE)
 
-        break
-    }
+		if(created) {
+			
+			outText = 'Subscription created for ' + username
+			
+			println('=====> '+ outText)
+			
+			if(writeFile) {
+				outFile.append(outText + '\n')
+			}
+			
+		} else {
+			outText = 'Failed to verify that a subscription was created for ' + username
+			
+			println('=====> '+ outText)
+			
+			if(writeFile) {
+				outFile.append(outText + '\n')
+			}
+		}
+					
+		break
+		
+    } else {
+		
+		outText = 'Failed to find user ' + username + ' in the unassigned subscriptions area of the subscriptions page.'
+		
+		println('=====> '+ outText)
+		
+		if(writeFile) {
+			outFile.append(outText + '\n')
+		}
+
+	}
 }
 
 WebUI.closeBrowser()

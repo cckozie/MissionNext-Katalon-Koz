@@ -27,6 +27,7 @@ import java.time.Instant;
 
 //************* Time to wait in minutes ****************
 waitTime = 12		//I've seen it take 10+ minutes
+delay = waitTime * 60 / 5
 
 scriptStart = new Date()
 scriptInstant = scriptStart.toInstant()
@@ -39,7 +40,7 @@ GlobalVariable.returnCode = ''
 if (binding.hasVariable('varUsername')) {
 	user = varUsername
 } else {
-	user = GlobalVariable.username
+	user = 'cktest06ep'
 }
 
 //subjectKey = '[Journey] Email Changed'
@@ -94,22 +95,15 @@ Message[] messages = []
 
 loopsMax = waitTime * 60 / 5	// Number of loops = minutes to wait * 60 seconds/min / 5 (wait time each loop)
 loops = 0
-
-emailFolder = store.getFolder("INBOX");
-emailFolder.open(Folder.READ_ONLY);
-messages = emailFolder.getMessages()
-if(messages.length == 0) {
-	emailFolder.close(false);
-}
-
 while(messages.length == 0 && loops <= loopsMax) {
-	WebUI.delay(5)
+	emailFolder = store.getFolder("INBOX");
 	emailFolder.open(Folder.READ_ONLY);
 	messages = emailFolder.getMessages()
 	if(messages.length == 0) {
 		emailFolder.close(false);
+		WebUI.delay(5)
+		loops ++
 	}
-	loops ++
 }
 
 if(messages.length > 0) {
@@ -217,10 +211,10 @@ def convertTime(dateTime) {
 	colon = time.indexOf(':')
 	hour = time.substring(0,colon)
 	min = time.substring(colon+1)
-	println(arr[2])
-	if(arr[2].indexOf('PM') > 0) {
-		hour = hour.toInteger() + 12
-	}
+//	println(arr[2])
+//	if(arr[2].indexOf('PM') > 0) {
+//		hour = hour.toInteger() + 12
+//	}
 	df = "dd.MM.yyyy HH:mm:ss"
 	dt = new Date().parse(df, date + '.' + numS + '.' + year + ' ' + hour + ':' + min + ':00')
 	println('======== dt is ' + dt)

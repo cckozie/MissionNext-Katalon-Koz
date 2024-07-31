@@ -25,12 +25,20 @@ import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
+///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//	Need to verify off page links on profile page
+//
+//
+///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 // Write results to text file
 outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write('Testing Register Education Partner\n')
+domain = GlobalVariable.domain
+
+outFile.write('Testing Register Education Partner in ' + domain + '\n')
 
 // Define path to tooltip text images
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey partner/journey partner application/'
@@ -73,14 +81,18 @@ referral = 'Brad Benson'
 
 //================================== Delete the user ===============================================
 
-println(GlobalVariable.outFile)
-
 WebUI.callTestCase(findTestCase('Admin/Delete User'), ['varUsername' : username], FailureHandling.STOP_ON_FAILURE)
-System.exit(1)
+
+//================================== Delete any existing emails ===============================================
+
+WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //================================== Create the education partner ==================================
 
-WebUI.openBrowser('https://education.explorenext.org/signup/organization')
+url = 'https://education.' + domain + '/signup/organization'
+
+//WebUI.openBrowser('https://education.explorenext.org/signup/organization')
+WebUI.openBrowser(url)
 
 WebUI.maximizeWindow()
 
@@ -258,6 +270,28 @@ WebUI.click(findTestObject('Object Repository/Education Partner Profile/Register
 
 WebUI.delay(1)
 
+WebUI.waitForPageLoad(10)
+
+pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
+
+if(pending) {
+	
+	outText = ('Approval Pending page was found.')
+	
+	println(outText)
+
+	outFile.append(outText + '\n')
+
+} else {
+	
+	outText = ('Failed to find the Approval Pending page.')
+	
+	println(outText)
+
+	outFile.append(outText + '\n')
+
+}
+
 //================================== Wait for the approval pending email for gthe new education partner =========
 
 WebUI.callTestCase(findTestCase('_Functions/Wait for Email'), [('varSubjectKey') : 'Approval request', 'varUsername' : username], FailureHandling.STOP_ON_FAILURE)
@@ -272,14 +306,8 @@ if (GlobalVariable.returnCode == 'found') {
 
 	WebUI.callTestCase(findTestCase('Admin/Grant Access'), ['varUsername' : username], FailureHandling.STOP_ON_FAILURE)
 
-    println('Access was granted to ' + username)
-	
 //================================== Create a subscriptioon for the new education partner ========================
 
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), ['varUsername' : username, 'varType' : 'Education', 'varRole' : 'Organization'], FailureHandling.STOP_ON_FAILURE)
-
-    println('A subscription was created for ' + username)
 	
 }
-
-WebUI.closeBrowser()

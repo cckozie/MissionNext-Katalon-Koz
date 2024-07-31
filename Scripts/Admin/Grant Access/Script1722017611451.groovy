@@ -24,19 +24,26 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
 } else {
-	username = 'cktest06ep'
+	username = GlobalVariable.username
 }
 
+//Check to see if we're writing printed output also to a file
 writeFile = false
 if(GlobalVariable.outFile != '') {
-	outFile = GlobalVariable.outFile
+	String myFile = GlobalVariable.outFile
+	println(myFile)
+	outFile = new java.io.File(myFile)
 	writeFile = true
 }
 
+domain = GlobalVariable.domain
+
+url = 'https://api.' + domain
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://api.explorenext.org')
+//WebUI.navigateToUrl('https://api.explorenext.org')
+WebUI.navigateToUrl(url)
 
 WebUI.setText(findTestObject('Admin/API Login/input_username'), 'chriskosieracki')
 

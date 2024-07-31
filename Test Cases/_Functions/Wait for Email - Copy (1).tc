@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Wait for Email - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ffeb1d9f-8cad-4075-b6a9-85a822aab810</testCaseGuid>
+</TestCaseEntity>
