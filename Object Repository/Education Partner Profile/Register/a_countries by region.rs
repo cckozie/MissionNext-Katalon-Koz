@@ -13,25 +13,29 @@
          <key>XPATH</key>
          <value>//div[@id='group-1462396686.719']/div[3]/div[3]/a</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'countries by region' or . = 'countries by region')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>c3bd5340-62f9-42b8-bff4-81e50807ca2c</webElementGuid>
+      <webElementGuid>e0550a33-96d7-487b-9d2f-245e9186d7ff</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
       <value>https://info.missionnext.org/countries_list.php</value>
-      <webElementGuid>bb5702eb-d199-47b0-ac2c-8f385183146b</webElementGuid>
+      <webElementGuid>9356db11-94f0-40c6-b77f-ff31ea2e9f53</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +43,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>2d0a64d8-19b3-4bc2-bb92-94004bf9695a</webElementGuid>
+      <webElementGuid>531bffcd-071d-4aac-b6ee-c40aa3349f3e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +51,7 @@
       <name>text</name>
       <type>Main</type>
       <value>countries by region</value>
-      <webElementGuid>2708dd29-351c-4101-9ff7-9065dd88cfae</webElementGuid>
+      <webElementGuid>3501cc52-1067-4ee8-ad02-808e78dac69f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +59,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
-      <webElementGuid>5fcf0bb0-6a40-4b07-9737-840436c7d48d</webElementGuid>
+      <webElementGuid>b529b2b1-806b-4a10-b396-9509dc43c730</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +67,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1462396686.719']/div[3]/div[3]/a</value>
-      <webElementGuid>a2c79575-c806-4c38-9df2-ceb5fdc05738</webElementGuid>
+      <webElementGuid>4229403f-7d43-4b89-8285-f0baeb5ff00d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +75,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'countries by region')]</value>
-      <webElementGuid>4b45d258-8ad1-407e-9734-94e9b1d38637</webElementGuid>
+      <webElementGuid>3ded9826-d13c-46ae-a558-81e0fff48359</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +83,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='World Region'])[1]/following::a[1]</value>
-      <webElementGuid>0ce1e859-f4b8-4482-b297-eb59e3a7e153</webElementGuid>
+      <webElementGuid>649a0bb1-28f8-49a7-869e-da008d14c09a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +91,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Country*'])[1]/preceding::a[1]</value>
-      <webElementGuid>7126465d-d5f3-4662-a971-a23670ac2d97</webElementGuid>
+      <webElementGuid>e3925bcd-3ef7-440c-be22-28c96e0c6069</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +99,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The description field is required.'])[1]/preceding::a[1]</value>
-      <webElementGuid>fae6cea6-ad5d-473a-87f9-4d99b8512636</webElementGuid>
+      <webElementGuid>cf5c7c22-92d6-4f71-b251-f4a75b4a4508</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +107,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='countries by region']/parent::*</value>
-      <webElementGuid>32cbe48e-ae39-4b12-8040-fd665af16e6c</webElementGuid>
+      <webElementGuid>58f4d9cf-69b6-469d-b347-813032f244f5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +115,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://info.missionnext.org/countries_list.php')]</value>
-      <webElementGuid>bd7e4b55-e2a8-4fb7-a009-425d1e26b63e</webElementGuid>
+      <webElementGuid>f4fc0a27-d67f-439c-8200-48fa4bfadad3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +123,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/a</value>
-      <webElementGuid>9fe02052-adcf-4d00-b5c6-26009f22fdd1</webElementGuid>
+      <webElementGuid>1ccc385b-c5ba-453d-884b-98ec918b42fe</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +131,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://info.missionnext.org/countries_list.php' and (text() = 'countries by region' or . = 'countries by region')]</value>
-      <webElementGuid>10ee73de-eea6-4597-af86-d6760f390467</webElementGuid>
+      <webElementGuid>4884da1c-764d-41a9-82ac-1d9694f75588</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -11,27 +11,31 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='group-1462396686.719']/div[11]/div[2]/a</value>
+         <value>//div[@id='group-1462396686.719']/div[11]/div/a</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Partnership Agreement' or . = 'Partnership Agreement')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>fad65067-7525-4f34-8d20-b09ea50b1944</webElementGuid>
+      <webElementGuid>ec3d92bc-ae7a-4e70-87a7-880888c80d5d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
-      <value>https://missionnext.org/request-partnership/?_ga=2.249965062.1464903608.1721248934-1533898546.1721248934#partnership-commitment</value>
-      <webElementGuid>ccc4ed86-7020-4980-af89-aa6106a2bb67</webElementGuid>
+      <value>https://missionnext.org/request-partnership/#partnership-commitment</value>
+      <webElementGuid>8d663558-19c4-45cd-bdf7-51805f69317c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +43,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>c5abe647-dd45-4b41-8bbf-217ca164b9c5</webElementGuid>
+      <webElementGuid>e2d3358c-a9a7-4047-9795-735628015578</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +51,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Partnership Agreement</value>
-      <webElementGuid>6057485d-a0b6-402b-8f26-f43172f8c013</webElementGuid>
+      <webElementGuid>ec6d6763-8b60-4cbe-930f-763d22b0125b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,15 +59,15 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-12 before-note&quot;]/a[1]</value>
-      <webElementGuid>a0140291-cc54-4ce3-9f4e-2f9d33bcf65c</webElementGuid>
+      <webElementGuid>dfb65a35-1aed-49c7-bbcf-fb14af8f2481</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1462396686.719']/div[11]/div[2]/a</value>
-      <webElementGuid>531ab07f-7fea-4a4b-8969-1e61d8a68628</webElementGuid>
+      <value>//div[@id='group-1462396686.719']/div[11]/div/a</value>
+      <webElementGuid>451ca4f4-7dd9-4d29-94a4-31e9982635c2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,15 +75,15 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Partnership Agreement')]</value>
-      <webElementGuid>1739c3e1-f35e-4915-bce4-834e640cd21b</webElementGuid>
+      <webElementGuid>dc22cce8-8cc0-4694-94e5-4c0a80509ac6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The partner agreement field is required.'])[1]/following::a[1]</value>
-      <webElementGuid>ba95c99c-b1a0-4e49-9644-c29f6755fe3b</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Referral or Other Comment'])[1]/following::a[1]</value>
+      <webElementGuid>5de50a26-3f18-4737-92e7-63d7ab02e5e4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,15 +91,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Partnership Agreement*'])[1]/preceding::a[1]</value>
-      <webElementGuid>04261618-5fdb-4aa8-bd76-66f477d42e35</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The terms and conditions field is required.'])[1]/preceding::a[1]</value>
-      <webElementGuid>ff6826ae-f418-417d-8686-42f355d2a95a</webElementGuid>
+      <webElementGuid>33b2f102-a9c3-4bcb-93c0-0b4e6970e0ef</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,30 +99,30 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Partnership Agreement']/parent::*</value>
-      <webElementGuid>85f5aee7-378e-4d59-96f1-66e4be8f6f08</webElementGuid>
+      <webElementGuid>ee05b166-56b7-44fb-b635-24a07922aeef</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>//a[contains(@href, 'https://missionnext.org/request-partnership/?_ga=2.249965062.1464903608.1721248934-1533898546.1721248934#partnership-commitment')]</value>
-      <webElementGuid>f6650699-de26-4ec8-bf25-968fdb2132db</webElementGuid>
+      <value>//a[contains(@href, 'https://missionnext.org/request-partnership/#partnership-commitment')]</value>
+      <webElementGuid>0a380905-688f-42df-aa50-c889459fba7f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/a</value>
-      <webElementGuid>fb4acb32-e92c-4a50-a0b8-d5986a90ad2d</webElementGuid>
+      <value>//div[11]/div/a</value>
+      <webElementGuid>e29faf62-c64c-4b59-89e5-79191dbca8c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//a[@href = 'https://missionnext.org/request-partnership/?_ga=2.249965062.1464903608.1721248934-1533898546.1721248934#partnership-commitment' and (text() = 'Partnership Agreement' or . = 'Partnership Agreement')]</value>
-      <webElementGuid>c7f9fbfb-9d2d-4112-a3ad-c5da7e02df2c</webElementGuid>
+      <value>//a[@href = 'https://missionnext.org/request-partnership/#partnership-commitment' and (text() = 'Partnership Agreement' or . = 'Partnership Agreement')]</value>
+      <webElementGuid>cc5db8df-7542-4b34-a16d-df637e3a1899</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -98,6 +98,8 @@ for (row = 1; row < row_count; row++) {
 
     if (user.indexOf(username) >= 0) {
 		
+		found = True
+		
         outText = 'Creating subscription for ' + username
 
 		println('=====> '+ outText)
@@ -142,17 +144,21 @@ for (row = 1; row < row_count; row++) {
 					
 		break
 		
-    } else {
-		
-		outText = 'Failed to find user ' + username + ' in the unassigned subscriptions area of the subscriptions page.'
-		
-		println('=====> '+ outText)
-		
-		if(writeFile) {
-			outFile.append(outText + '\n')
-		}
-
-	}
+    }
+	
 }
+
+if(!found) {
+	
+	outText = 'Failed to find user ' + username + ' in the unassigned subscriptions area of the subscriptions page.'
+	
+	println('=====> '+ outText)
+	
+	if(writeFile) {
+		outFile.append(outText + '\n')
+	}
+
+}
+
 
 WebUI.closeBrowser()

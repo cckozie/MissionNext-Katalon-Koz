@@ -11,27 +11,31 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='group-1462396686.719']/div[8]/div[5]/a</value>
+         <value>//div[@id='group-1462396686.719']/div[8]/div[4]/a</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@title = 'Opens in a new tab' and (text() = 'School Qualifications.' or . = 'School Qualifications.')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>6278824c-a1bc-4e11-8fa7-377e67651f62</webElementGuid>
+      <webElementGuid>503a54a3-573a-462f-aebc-6e4e52f12aa0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
       <value>https://missionnext.org/homepage/sender/partner-benefits#schoolqualifications</value>
-      <webElementGuid>5d8b0b47-46c2-44e5-8ea7-4fbe1af0f307</webElementGuid>
+      <webElementGuid>ac752fa4-ddbe-4d69-8533-862b4543c78d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +43,7 @@
       <name>title</name>
       <type>Main</type>
       <value>Opens in a new tab</value>
-      <webElementGuid>b329001b-fd51-4362-814d-73c861dd7080</webElementGuid>
+      <webElementGuid>599a4b23-d29b-46db-a9b9-567873322232</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +51,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>9ceb840d-35cb-4352-a522-5cc6c2efd41d</webElementGuid>
+      <webElementGuid>5a2396da-b026-41d6-9e49-db4f89c20c41</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +59,7 @@
       <name>text</name>
       <type>Main</type>
       <value>School Qualifications.</value>
-      <webElementGuid>72f8a5ef-a762-457b-a3d4-a36fbbcd8b60</webElementGuid>
+      <webElementGuid>45e0cba4-e552-4a4b-8a6b-6fef96323390</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,15 +67,15 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
-      <webElementGuid>c0969f1b-69a8-4da8-a6a2-868474a4e697</webElementGuid>
+      <webElementGuid>154293f3-3a61-4785-88a5-e074bda29e92</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1462396686.719']/div[8]/div[5]/a</value>
-      <webElementGuid>301e0bbc-284b-48c6-a736-6854b2d15302</webElementGuid>
+      <value>//div[@id='group-1462396686.719']/div[8]/div[4]/a</value>
+      <webElementGuid>26d2dfa5-8d2c-483f-a8be-e57acbe044cf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +83,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'School Qualifications.')]</value>
-      <webElementGuid>b488169a-df75-473e-9603-3ab3a337c3ff</webElementGuid>
+      <webElementGuid>7b073c35-2980-40b2-b390-bcb9ead657fa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +91,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Meet Christian School Qualifications?*'])[1]/following::a[1]</value>
-      <webElementGuid>48e59cd8-a9cd-4a72-9c67-e699d3ca49da</webElementGuid>
+      <webElementGuid>cfe13ee5-73b3-4165-b20e-81d69ff45fc5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +99,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='How did you hear about MissionNext?'])[1]/preceding::a[2]</value>
-      <webElementGuid>6def6d8b-4672-4938-be0b-22d07dfdb2f7</webElementGuid>
+      <webElementGuid>7b3a2ff9-f740-4a9d-983a-5aaf6cdb03e7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +107,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='School Qualifications.']/parent::*</value>
-      <webElementGuid>ab5f6244-ae02-4a68-8e29-5279d3748bfe</webElementGuid>
+      <webElementGuid>7e02ae25-3153-402d-b37a-701de10cb905</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,15 +115,15 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionnext.org/homepage/sender/partner-benefits#schoolqualifications')]</value>
-      <webElementGuid>27bfd58f-aa59-4426-86ef-0fda0019e858</webElementGuid>
+      <webElementGuid>4d74f834-5dca-40f1-b3a4-76e90252782f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[5]/a</value>
-      <webElementGuid>b2fcbcc9-16e8-4b10-a633-3de0e204ea81</webElementGuid>
+      <value>//div[4]/a</value>
+      <webElementGuid>60088d54-2edd-4b7d-b3f8-fc3c576a72e0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +131,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionnext.org/homepage/sender/partner-benefits#schoolqualifications' and @title = 'Opens in a new tab' and (text() = 'School Qualifications.' or . = 'School Qualifications.')]</value>
-      <webElementGuid>4a3a6fba-af98-4f3e-af30-3842fa7a23fa</webElementGuid>
+      <webElementGuid>ba43cd8c-92e2-4132-a425-7dfd71df9441</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
