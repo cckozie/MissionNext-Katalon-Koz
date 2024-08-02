@@ -98,7 +98,7 @@ for (row = 1; row < row_count; row++) {
 
     if (user.indexOf(username) >= 0) {
 		
-		found = True
+		found = true
 		
         outText = 'Creating subscription for ' + username
 

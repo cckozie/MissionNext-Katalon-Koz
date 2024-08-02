@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Log Page Load Times - Missionnext Errors</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>04f782a4-9391-40ce-bcfa-0ef45d024d07</testCaseGuid>
+</TestCaseEntity>

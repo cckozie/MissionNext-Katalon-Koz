@@ -31,16 +31,21 @@ import java.io.*
 import org.apache.commons.lang.WordUtils as WordUtils
 
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//	Need to verify off page links on profile page
+//	Need to verify off page links on profile page - Completed 07/31/24
 //
 //
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-// Write results to text file
+
+//================================== Initialize ===============================================
+// Get the domain and set the url
+domain = GlobalVariable.domain
+
+url = (('https://education.' + domain) + '/signup/organization')
+
+// Specify file to contain test case results, update the global variable, and write the first line of text
 outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner.txt')
 
 GlobalVariable.outFile = outFile
-
-domain = GlobalVariable.domain
 
 outFile.write(('Testing Register Education Partner in ' + domain) + '\n')
 
@@ -52,12 +57,12 @@ tooltips = [('username') : 'img_Username_field-tooltip', ('password10') : 'img_P
     , ('organization') : 'img_Organization_field-tooltip', ('abbreviation') : 'img_Abbreviation_field-tooltip', ('description') : 'img_Description_field-tooltip'
     , ('website_url') : 'img_Website Address_field-tooltip', ('hear_about') : 'img_How did you hear about MissionNext_field-tooltip']
 
-// Define the page's links and the search text
+// Define the page's links and the text to search for on the linked page
 pageLinks = ['Affiliated Organizations' : 'Affiliated Organizations', 'countries by region' : 'Countries by Region',
 	'Partnership Agreement' : 'Partnership Agreement', 'Privacy Policy' : 'Privacy Policy',
 	'School Qualifications' : 'SCHOOL QUALIFICATIONS', 'Terms and Conditions' : 'Terms and Conditions']
 
-// Define applicant fields ==================================================================================================
+// Define applicant fields 
 firstName = GlobalVariable.first_name //'Chris TEST EP'
 
 lastName = GlobalVariable.last_name //'Kosieracki'
@@ -102,12 +107,9 @@ File file = new File('/System/Applications/Mail.app')
 Desktop.getDesktop().open(file)
 
 //================================== Create the education partner ==================================
-url = (('https://education.' + domain) + '/signup/organization')
-
 WebUI.openBrowser(url)
 
 WebUI.maximizeWindow()
-
 
 WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Register/input_Username'), '=====> WAITING FOR SIKULI TO LOAD <=====')
 
@@ -201,63 +203,90 @@ if (f.exists()) {
 
     println(found)
 
-    // Close the email window and app
-    Robot robot = new Robot()
-
-    robot.keyPress(KeyEvent.VK_META //This method will press the Ctrl key of the Keyboard
-        )
-
-    robot.keyPress(KeyEvent.VK_W //This method will press the N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_W //This method will release N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_META //This method will release ctrl key of the Keyboard
-        )
-
-    WebUI.delay(1)
-
-    robot.keyPress(KeyEvent.VK_META //This method will press the Ctrl key of the Keyboard
-        )
-
-    robot.keyPress(KeyEvent.VK_D //This method will press the N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_D //This method will release N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_META //This method will release ctrl key of the Keyboard
-        )
-
-    WebUI.delay(1)
-
-    robot.keyPress(KeyEvent.VK_META //This method will press the Ctrl key of the Keyboard
-        )
-
-    robot.keyPress(KeyEvent.VK_Q //This method will press the N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_Q //This method will release N key of the Keyboard
-        )
-
-    robot.keyRelease(KeyEvent.VK_META //This method will release ctrl key of the Keyboard
-        )
-
     if (found != null) {
-    
-        outText = '+++++ Found email to customer support'
-        
+		
+	    foundStr = found.toString()
+	
+	    matchP = foundStr.indexOf('S:')
+	
+	    println(matchP)
+	
+	    pct = foundStr.substring(matchP + 2, matchP + 5)
+	
+	    outText = ('+++++++++++++++ Found email address image')
+	
+	    println(outText)
+	
+	    pctVal = new BigDecimal(pct)
+	
+	    pctVal = (pctVal * 100).intValue()
+	
+	    outFile.append(((outText + ' : ') + pctVal) + '%\n')
+		
     } else {
-    
-        outText = '----- Failed to find email to customer support'
-        
+        outText = ('----------- Unable to find email address image')
+
+        println(outText)
+
+        outFile.append(outText + '\n')
     }
-    
-    println(outText)
-    
+} else {
+	
+    outText = ('Unable to find image file ' + myImage)
+
     outFile.append(outText + '\n')
+
+    println(outText)
 }
+                
+// Close the email window and app
+Robot robot = new Robot()
+
+//Close the email window
+robot.keyPress(KeyEvent.VK_META) //META is the Mac Command key
+
+robot.keyPress(KeyEvent.VK_W)
+
+robot.keyRelease(KeyEvent.VK_W )
+
+robot.keyRelease(KeyEvent.VK_META)
+
+WebUI.delay(1)
+
+//Take the Don't Save option
+robot.keyPress(KeyEvent.VK_META)
+
+robot.keyPress(KeyEvent.VK_D)
+
+robot.keyRelease(KeyEvent.VK_D )
+
+robot.keyRelease(KeyEvent.VK_META)
+
+WebUI.delay(1)
+
+//Quit the app
+robot.keyPress(KeyEvent.VK_META)
+
+robot.keyPress(KeyEvent.VK_Q)
+
+robot.keyRelease(KeyEvent.VK_Q)
+
+robot.keyRelease(KeyEvent.VK_META)
+
+if (found != null) {
+
+    outText = '+++++ Found email to customer support'
+    
+} else {
+
+    outText = '----- Failed to find email to customer support'
+    
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
+
 
 // Click the other hyperlinks and verify pages opened
 pageLinks.each ({
@@ -322,6 +351,7 @@ if ((pswMsg.indexOf('at least 6 characters') >= 0) || pswMsg.indexOf('no special
     println(outText)
 }
 
+// Set username, password, and email and then test for the other missing data error messages
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Username'), username)
 
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), password)
@@ -332,7 +362,6 @@ WebUI.click(findTestObject('Education Partner Profile/Register/button_Sign up'))
 
 WebUI.waitForPageLoad(10)
 
-// Test for first name, last name, and phone number required messages
 WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Register/div_The Fiirst Name field is required'))
 
 firstNameMsg = WebUI.getText(findTestObject('Education Partner Profile/Register/div_The Fiirst Name field is required'))
@@ -365,6 +394,7 @@ WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Register/di
 
 WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Register/div_The terms and conditions field is required'))
 
+// Fill in the other fields and submit
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Password'), password)
 
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Contact First Name'), firstName)
@@ -406,6 +436,7 @@ WebUI.click(findTestObject('Object Repository/Education Partner Profile/Register
 
 WebUI.delay(1)
 
+// Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
 
 pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
@@ -424,7 +455,7 @@ if (pending) {
     outFile.append(outText + '\n')
 }
 
-//================================== Wait for the approval pending email for gthe new education partner =========
+//================================== Wait for the approval pending email for the new education partner =========
 WebUI.callTestCase(findTestCase('_Functions/Wait for Email'), [('varSubjectKey') : 'Approval request', ('varUsername') : username], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -434,11 +465,11 @@ if (GlobalVariable.returnCode == 'found') {
 
     WebUI.closeBrowser()
 
-    //================================== Grant access for the new education partner ==================================
+//================================== Grant access for the new education partner ==================================
     WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
-    //================================== Create a subscriptioon for the new education partner ========================
+//================================== Create a subscriptioon for the new education partner ========================
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 }
-
+// We're done!
