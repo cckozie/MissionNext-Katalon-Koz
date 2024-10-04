@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Take the missionary profile test</name>
+   <tag></tag>
+   <elementGuidId>6405c272-c35a-4f15-92ab-5b294242b815</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>a.kt-button.button.kt-btn-0-action.kt-btn-size-large.kt-btn-style-basic.kt-btn-svg-show-always.kt-btn-has-text-true.kt-btn-has-svg-true</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//article[@id='post-905']/div/section/div[2]/div[3]/div/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>eb927cf5-6876-4a4e-8b7c-c50d83af5a8e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>kt-button button kt-btn-0-action kt-btn-size-large kt-btn-style-basic kt-btn-svg-show-always kt-btn-has-text-true kt-btn-has-svg-true</value>
+      <webElementGuid>6d3eaad8-bb1c-426d-8adf-2b6b27b5714c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://themissionapp.com/missionary-profile-test/</value>
+      <webElementGuid>1eb7c6f8-8f45-4729-925d-87883cd42f66</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Take the missionary profile test</value>
+      <webElementGuid>f90d4c0c-dea3-4b83-9381-ddb2bdb82157</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-905&quot;)/div[@class=&quot;entry-content clear&quot;]/section[@class=&quot;wp-block-uagb-section uagb-section__wrap uagb-section__background-image uagb-block-4a30d23e-2fee-4cac-8157-b52c9ab5bcb9&quot;]/div[@class=&quot;uagb-section__inner-wrap&quot;]/div[@class=&quot;wp-block-kadence-advancedbtn kt-btn-align-center kt-btn-tablet-align-inherit kt-btn-mobile-align-inherit kt-btns-wrap kt-btns_c918e4-60&quot;]/div[@class=&quot;kt-btn-wrap kt-btn-wrap-0&quot;]/a[@class=&quot;kt-button button kt-btn-0-action kt-btn-size-large kt-btn-style-basic kt-btn-svg-show-always kt-btn-has-text-true kt-btn-has-svg-true&quot;]</value>
+      <webElementGuid>45fdc8bf-6ec8-473c-9bec-a840f49a4600</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-905']/div/section/div[2]/div[3]/div/a</value>
+      <webElementGuid>5272fe28-2e0d-4ec7-aad8-eed62b67adae</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Interested in a life of missions?'])[1]/following::a[1]</value>
+      <webElementGuid>b4b2c34a-56b0-4d35-9da9-c1b8ab2b6050</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[2]/following::a[1]</value>
+      <webElementGuid>3162c735-01c1-49a3-9eec-b7f700e69156</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Missionary Profile Test'])[1]/preceding::a[1]</value>
+      <webElementGuid>432e1182-f390-4d3b-bf15-7bc986bafe65</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://themissionapp.com/missionary-profile-test/')]</value>
+      <webElementGuid>6b5adc9b-d33f-45e2-a4af-6541f37314d7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/a</value>
+      <webElementGuid>bb3d9d86-3add-4201-b8dc-b37ef0df6617</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://themissionapp.com/missionary-profile-test/' and (text() = 'Take the missionary profile test' or . = 'Take the missionary profile test')]</value>
+      <webElementGuid>6f065c9d-0aa5-4e9d-b55f-9b4a16a2d2e9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Affiliated Christian Organizations</name>
+   <tag></tag>
+   <elementGuidId>3f0cf71a-abb6-4483-b51c-aa96c55487a8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='group-1446560994.446']/div[9]/div[3]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-sm-offset-3.col-sm-9.after-note > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>64d79a42-c2c4-4656-af33-a7790f88d76f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>http://missionnext.org/approved-christian-organizations/</value>
+      <webElementGuid>354baeed-7caa-43b8-8317-2a5c48547dc9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>9184208a-3d09-4580-aff4-b9deefef1fe9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Affiliated Christian Organizations</value>
+      <webElementGuid>f0e61e64-45d9-4ec2-8757-6f10cb089c45</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
+      <webElementGuid>2b3ba406-57fc-4887-81f1-da7b401d0022</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1446560994.446']/div[9]/div[3]/a</value>
+      <webElementGuid>10c6ad2d-560a-4cd3-a4d5-625642b0c1cd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Affiliated Christian Organizations')]</value>
+      <webElementGuid>49e6307e-6e69-4438-9a46-0b04e5912e72</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='None of the above'])[1]/following::a[1]</value>
+      <webElementGuid>e243a36d-7e62-4fca-a611-e5b313f730f4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mission Statement*'])[1]/preceding::a[1]</value>
+      <webElementGuid>7ef85c78-aed0-47a0-a86d-b27121439d55</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Board of Directors*'])[1]/preceding::a[1]</value>
+      <webElementGuid>3ec455ad-74c7-48b6-be02-26caba32b9f3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Affiliated Christian Organizations']/parent::*</value>
+      <webElementGuid>d9d4da93-1bb4-4baf-9f75-6346f73b56de</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[@href='http://missionnext.org/approved-christian-organizations/']</value>
+      <webElementGuid>431881a8-e6d1-4734-a2f9-4b9e7c581a9f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/a</value>
+      <webElementGuid>dfb56e4c-7d00-40c0-908a-73a9f1bbdc71</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'http://missionnext.org/approved-christian-organizations/' and (text() = 'Affiliated Christian Organizations' or . = 'Affiliated Christian Organizations')]</value>
+      <webElementGuid>8d373848-f667-4643-94ae-816235623563</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

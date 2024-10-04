@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_The Arts</name>
+   <tag></tag>
+   <elementGuidId>fd43dc72-293f-4c86-879f-2207867fa3b4</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_ministries-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries-options-hidden&quot;]/div[@class=&quot;drts-form-field-radio-options drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;][count(. | //*[(text() = 'The Arts' or . = 'The Arts')]) = count(//*[(text() = 'The Arts' or . = 'The Arts')])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/div[2]/form/div/div/div[3]/div/div/div[2]/div/div/div[1]/div/div/div[11]/div/div[12]/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>2f240304-c9de-496e-9377-1539b1732f85</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1</value>
+      <webElementGuid>fc1604ff-feca-4894-a7a9-ce9481e47b0b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-depth</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>a7252a44-4a8e-4b63-a2ba-299658a26218</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-value</name>
+      <type>Main</type>
+      <value>The Arts</value>
+      <webElementGuid>ca9ec67d-5ae3-44c1-97b4-d2b306704f15</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>The Arts</value>
+      <webElementGuid>5d0bad5d-6274-4566-ab21-cb1f72408310</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_ministries-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries-options-hidden&quot;]/div[@class=&quot;drts-form-field-radio-options drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;]</value>
+      <webElementGuid>8e41cb50-d301-4f2b-a262-10d7eb052c11</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-ministries-options-hidden']/div/div[12]</value>
+      <webElementGuid>83c7d009-a7c6-4025-badf-b2ca27fd4405</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Theological Education'])[1]/following::div[1]</value>
+      <webElementGuid>7f95a4ca-daaa-4339-9e80-b86f20deab59</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Student Ministries'])[1]/following::div[2]</value>
+      <webElementGuid>7df2eb42-139c-4c58-8bce-80a11cea4d97</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Translation'])[1]/preceding::div[1]</value>
+      <webElementGuid>239f4913-56fb-4386-bfd3-cb6154e30836</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[12]</value>
+      <webElementGuid>2c201e67-d723-4553-98f4-1c00d8362aa7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'The Arts' or . = 'The Arts')]</value>
+      <webElementGuid>38a9084e-d074-4b35-8344-83f2e6057c61</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

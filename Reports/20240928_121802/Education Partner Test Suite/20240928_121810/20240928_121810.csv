@@ -1,0 +1,21 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Education Partner Test Suite,Firefox 129.0,,,28-09-2024 12:20:11,28-09-2024 12:22:11,1m - 59.047s,PASSED
+,,,,,,,
+Test Cases/Education Partners/Test Profile Forwarding,Firefox 129.0,,Issue #52,28-09-2024 12:20:12,28-09-2024 12:22:11,1m - 58.770s,PASSED
+outFile = new java.io.File(/Users/cckozie/Documents/MissionNext/Test Reports/Test Forward Candidate Profile: Issue 52.txt),Firefox 129.0,,,28-09-2024 12:20:13,28-09-2024 12:20:13,0.008s,PASSED
+outFile = outFile,Firefox 129.0,,,28-09-2024 12:20:13,28-09-2024 12:20:13,0.346s,PASSED
+"outFile.write(""Testing the forwwarding of a candidate profile."" + ""
+"")",Firefox 129.0,,,28-09-2024 12:20:13,28-09-2024 12:20:13,0.017s,PASSED
+"callTestCase(findTestCase(""_Functions/Delete Emails""), [:], STOP_ON_FAILURE)",Firefox 129.0,,,28-09-2024 12:20:13,28-09-2024 12:20:16,2.889s,PASSED
+"callTestCase(findTestCase(""_Functions/Education Partner Login""), [:], STOP_ON_FAILURE)",Firefox 129.0,,,28-09-2024 12:20:16,28-09-2024 12:20:53,37.548s,PASSED
+"navigateToUrl(""https://education.missionnext.org/candidate/14992"")",Firefox 129.0,,,28-09-2024 12:20:53,28-09-2024 12:20:57,3.366s,PASSED
+"click(findTestObject(""Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile""))",Firefox 129.0,,,28-09-2024 12:20:57,28-09-2024 12:20:58,1.037s,PASSED
+delay(3),Firefox 129.0,,,28-09-2024 12:20:58,28-09-2024 12:21:01,3.037s,PASSED
+switchToWindowIndex(1),Firefox 129.0,,,28-09-2024 12:21:01,28-09-2024 12:21:01,0.048s,PASSED
+"setText(findTestObject(""Object Repository/Education Partner Profile/Candidate Profile/input_Mail to""), ""cktest01mn@gmail.com"")",Firefox 129.0,,,28-09-2024 12:21:01,28-09-2024 12:21:01,0.511s,PASSED
+"setText(findTestObject(""Object Repository/Education Partner Profile/Candidate Profile/textarea_Note""), ""Testing issue #52."")",Firefox 129.0,,,28-09-2024 12:21:01,28-09-2024 12:21:02,0.278s,PASSED
+"click(findTestObject(""Object Repository/Education Partner Profile/Candidate Profile/btn_Send""))",Firefox 129.0,,,28-09-2024 12:21:02,28-09-2024 12:21:03,0.764s,PASSED
+"msgFound = verifyTextPresent(""An email with a link to this profile was sent."", false, OPTIONAL)",Firefox 129.0,,,28-09-2024 12:21:03,28-09-2024 12:21:04,1.103s,PASSED
+if (msgFound),Firefox 129.0,,,28-09-2024 12:21:04,28-09-2024 12:22:09,1m - 5.092s,PASSED
+closeBrowser(),Firefox 129.0,,,28-09-2024 12:22:09,28-09-2024 12:22:11,1.817s,PASSED
+closeBrowser(),Firefox 129.0,,,28-09-2024 12:22:11,28-09-2024 12:22:11,0.012s,PASSED

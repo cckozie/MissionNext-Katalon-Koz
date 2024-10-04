@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Southern Asia</name>
+   <tag></tag>
+   <elementGuidId>d9f95d8d-fa91-489e-83af-73839c12c580</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/div[2]/form/div/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[11]/div/div[4]/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>4938354a-9806-4bb9-acdc-16bfe5545d58</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1</value>
+      <webElementGuid>4c65735c-46fe-493a-a532-84d434add18e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-depth</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>98d961fc-1a0a-4402-b5c8-37122d601ec6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-value</name>
+      <type>Main</type>
+      <value>Southern Asia</value>
+      <webElementGuid>8ccab2b0-72ec-4a87-a56a-bd8b2e54dffe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Southern Asia</value>
+      <webElementGuid>8e85a822-1e3d-4844-8281-09056c2f0035</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options-hidden&quot;]/div[@class=&quot;drts-form-field-radio-options drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;]</value>
+      <webElementGuid>472aed60-c2d2-4b95-8176-25d2d5ad1948</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options-hidden']/div/div[4]</value>
+      <webElementGuid>94af6a53-0117-4c11-bde9-04122972faef</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Central Asia'])[1]/following::div[1]</value>
+      <webElementGuid>1936477d-9c0a-4cff-a1a2-035328f1f477</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Western Asia'])[1]/following::div[2]</value>
+      <webElementGuid>3214ac99-978e-4dc4-a2c3-6aaad7c6d6be</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Northern Asia'])[1]/preceding::div[1]</value>
+      <webElementGuid>299e4682-e2a3-4e35-978d-c08d8aa05b87</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[11]/div/div[4]</value>
+      <webElementGuid>21d6a25c-6327-47d9-bf2b-031c46d1e4c7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'Southern Asia' or . = 'Southern Asia')]</value>
+      <webElementGuid>807f2096-72c3-4c9f-9882-2c725bc04e83</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

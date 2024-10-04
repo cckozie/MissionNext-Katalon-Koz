@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_RudimentaryElementaryIntermediatePro_102d7d</name>
+   <tag></tag>
+   <elementGuidId>ed9bad84-6f92-45db-8d93-547649c50ced</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1449793011.346_english_skill']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>3ac6bbba-4cdd-44d0-b058-46a8d1d4e4d4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>english_skill</value>
+      <webElementGuid>6f96a6f5-edeb-4deb-9016-3d38797513e0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>128</value>
+      <webElementGuid>69dfeb12-273c-49e0-9037-ae2146881f56</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1449793011.346][english_skill]</value>
+      <webElementGuid>084fb770-fb23-4a5a-8d87-8448d5275608</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1449793011.346_english_skill</value>
+      <webElementGuid>7a299e5a-d872-4d02-805b-71d4ba25a284</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+</value>
+      <webElementGuid>2aecf1db-7524-451b-9628-dea4a799b3e9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1449793011.346_english_skill&quot;)</value>
+      <webElementGuid>b453aabf-fb3c-4148-89c6-0d2ce4ee0d77</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1449793011.346_english_skill']</value>
+      <webElementGuid>febc64a7-c228-4b26-aa52-0bb249ea399c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1449793011.346']/div[6]/div[3]/select</value>
+      <webElementGuid>bc11de7d-857f-4126-baa3-1d69b6318e91</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='English Proficiency*'])[1]/following::select[1]</value>
+      <webElementGuid>aacd3242-9f9a-4d75-8b8f-7c87ac2bdfe1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Please rate your language proficiency in English:'])[1]/following::select[1]</value>
+      <webElementGuid>c045ba23-db5a-4ef9-b473-e943c4b388d0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The english skill field is required.'])[1]/preceding::select[1]</value>
+      <webElementGuid>ef769a07-67e8-470e-a286-7ab09b91206d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Additional Language(s)'])[1]/preceding::select[1]</value>
+      <webElementGuid>ec013e61-2bf7-4428-abdb-acd5a9a4d573</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[6]/div[3]/select</value>
+      <webElementGuid>9ac93993-409b-449d-8d30-4b6e31622fb6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1449793011.346][english_skill]' and @id = 'profile_group-1449793011.346_english_skill' and (text() = '
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+' or . = '
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+')]</value>
+      <webElementGuid>1be2f4e6-d881-484b-a492-142a58d8d7e7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

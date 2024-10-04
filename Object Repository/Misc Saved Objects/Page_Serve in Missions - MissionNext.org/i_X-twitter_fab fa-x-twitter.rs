@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_X-twitter_fab fa-x-twitter</name>
+   <tag></tag>
+   <elementGuidId>8050d060-cb2b-49bd-bc46-d1298dbcbe53</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[2]/a/i</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;home page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit&quot;]/div[@class=&quot;site-footer&quot;]/div[@class=&quot;elementor elementor-51298 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-047f7bc elementor-section-full_width elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-04317f9&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-90feba4 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cc51b09&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-71cedbd elementor-shape-square elementor-grid-tablet-0 e-grid-align-tablet-center e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-social-icons-wrapper elementor-grid&quot;]/span[@class=&quot;elementor-grid-item&quot;]/a[@class=&quot;elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-animation-pulse elementor-repeater-item-ddad642&quot;]/i[@class=&quot;fab fa-x-twitter&quot;]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>i.fab.fa-x-twitter</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>88084ce2-cadd-4cd0-a30d-43eccad72b90</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fab fa-x-twitter</value>
+      <webElementGuid>7d7a1ab2-ec21-48b2-bb2d-aefb0d94eebf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>1f7dbf5d-34d7-409c-a99c-931132a99aa7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;home page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit&quot;]/div[@class=&quot;site-footer&quot;]/div[@class=&quot;elementor elementor-51298 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-047f7bc elementor-section-full_width elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-04317f9&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-90feba4 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cc51b09&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-71cedbd elementor-shape-square elementor-grid-tablet-0 e-grid-align-tablet-center e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-social-icons-wrapper elementor-grid&quot;]/span[@class=&quot;elementor-grid-item&quot;]/a[@class=&quot;elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-animation-pulse elementor-repeater-item-ddad642&quot;]/i[@class=&quot;fab fa-x-twitter&quot;]</value>
+      <webElementGuid>9037e277-17ae-43bf-b9ea-21b1d689d32a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[2]/a/i</value>
+      <webElementGuid>35284d63-5ee5-4cf5-a3a6-1c0503be617d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

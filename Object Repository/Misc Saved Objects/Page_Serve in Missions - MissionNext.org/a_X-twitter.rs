@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_X-twitter</name>
+   <tag></tag>
+   <elementGuidId>2dfe73d3-5217-4b72-b3fa-fce0144903ea</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[1]/following::a[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.elementor-icon.elementor-social-icon.elementor-social-icon-x-twitter.elementor-animation-pulse.elementor-repeater-item-ddad642</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>1cf076d7-108d-4586-872f-e013fe02941f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-animation-pulse elementor-repeater-item-ddad642</value>
+      <webElementGuid>e108714a-967a-4f92-a779-eda8c32586f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://twitter.com/MissionNext</value>
+      <webElementGuid>af563565-748c-4e1d-86a3-c76cab8ee6cc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>df45b678-37a4-473f-b883-5f096ac68e21</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+						X-twitter
+											</value>
+      <webElementGuid>34fce3be-e28b-4936-97c6-273a484dadcf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;home page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit&quot;]/div[@class=&quot;site-footer&quot;]/div[@class=&quot;elementor elementor-51298 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-047f7bc elementor-section-full_width elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-04317f9&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-90feba4 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cc51b09&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-71cedbd elementor-shape-square elementor-grid-tablet-0 e-grid-align-tablet-center e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-social-icons-wrapper elementor-grid&quot;]/span[@class=&quot;elementor-grid-item&quot;]/a[@class=&quot;elementor-icon elementor-social-icon elementor-social-icon-x-twitter elementor-animation-pulse elementor-repeater-item-ddad642&quot;]</value>
+      <webElementGuid>a09cc3f9-5fa7-479f-86e9-efe1e691cded</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[1]/following::a[1]</value>
+      <webElementGuid>d9031b57-af2b-4f94-a344-cbab6414038c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Suggested Browsers'])[1]/following::a[2]</value>
+      <webElementGuid>f88e5f72-798f-4f9a-9f62-e580a5ffc258</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[1]/preceding::a[1]</value>
+      <webElementGuid>a6e7404b-36b4-47e4-98d8-b6b6cba81855</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://twitter.com/MissionNext')]</value>
+      <webElementGuid>59f1dc53-7ea0-46b5-bcd8-e34571fbcc78</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[2]/a</value>
+      <webElementGuid>20d1c877-745f-45f6-b122-b909f2ea584e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://twitter.com/MissionNext' and (text() = '
+						X-twitter
+											' or . = '
+						X-twitter
+											')]</value>
+      <webElementGuid>936f90dd-8da0-44bb-9363-237596b6dda6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

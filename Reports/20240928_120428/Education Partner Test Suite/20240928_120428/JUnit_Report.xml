@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Education Partner Test Suite" time="116.399" tests="1" failures="0" errors="0">
+   <testsuite name="Education Partner Test Suite" tests="1" failures="0" errors="0" time="116.399" skipped="0" timestamp="28-09-2024T12:04:38" hostname="cckozie - 192.168.4.24" id="Test Suites/Education Partner Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240928_120428/Education Partner Test Suite/20240928_120428"/>
+         <property name="logFiles" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20240928_120428/Education Partner Test Suite/20240928_120428/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="cckozie - 192.168.4.24"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.5.0.217"/>
+         <property name="browser" value="Chrome 129.0.0.0"/>
+         <property name="hostAddress" value="192.168.4.24"/>
+         <property name="sessionId" value="3d8aecc5a6ed037ca4648805cc87ae3b"/>
+         <property name="seleniumVersion" value="3.141.59"/>
+         <property name="proxyInformation" value="ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList=&quot;&quot;, isApplyToDesiredCapabilities=true }"/>
+         <property name="platform" value="Mac OS X"/>
+      </properties>
+      <testcase name="Test Cases/Education Partners/Test Profile Forwarding" time="115.973" classname="Test Cases/Education Partners/Test Profile Forwarding" status="PASSED">
+         <system-out><![CDATA[28-09-2024T12:04:38 - [TEST_CASE][PASSED] - Test Cases/Education Partners/Test Profile Forwarding: Test Cases/Education Partners/Test Profile Forwarding
+
+28-09-2024T12:04:39 - [TEST_STEP][PASSED] - outFile = new java.io.File(/Users/cckozie/Documents/MissionNext/Test Reports/Test Forward Candidate Profile: Issue 52.txt): null
+
+28-09-2024T12:04:39 - [TEST_STEP][PASSED] - outFile = outFile: null
+
+28-09-2024T12:04:40 - [TEST_STEP][PASSED] - outFile.write("Testing the forwwarding of a candidate profile." + "
+"): null
+
+28-09-2024T12:04:40 - [TEST_STEP][PASSED] - callTestCase(findTestCase("_Functions/Delete Emails"), [:], STOP_ON_FAILURE): Call Test Case 'Test Cases/_Functions/Delete Emails' successfully
+
+28-09-2024T12:04:41 - [TEST_CASE][PASSED] - Test Cases/_Functions/Delete Emails: Test Cases/_Functions/Delete Emails
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - writeFile = false: null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - if (outFile != ""): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - myFile = outFile: null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - println(myFile): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - outFile = new java.io.File(myFile): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - writeFile = true: null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - outText = "Deleting all emails in the inbox": null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - if (writeFile): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - host = "pop.gmail.com": null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - mailStoreType = "pop3": null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - username = "cktest01mn@gmail.com": null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - password = "sfesezftmpqxbbbd": null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - properties = new java.util.Properties(): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - properties.put("mail.pop3.host", host): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - properties.put("mail.pop3.port", "995"): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - properties.put("mail.pop3.starttls.enable", "true"): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - emailSession = Session.getDefaultInstance(properties): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - store = emailSession.getStore("pop3s"): null
+
+28-09-2024T12:04:43 - [TEST_STEP][PASSED] - store.connect(host, username, password): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - emailFolder = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - messages = []: null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - emailFolder = store.getFolder("INBOX"): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - if (length > 0): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - else: null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - outText = "No emails were found in the inbox": null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - if (writeFile): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:04:45 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:04:46 - [TEST_STEP][PASSED] - store.close(): null
+
+28-09-2024T12:04:46 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/_Functions/Delete Emails' successfully
+
+28-09-2024T12:04:46 - [TEST_STEP][PASSED] - callTestCase(findTestCase("_Functions/Education Partner Login"), [:], STOP_ON_FAILURE): Call Test Case 'Test Cases/_Functions/Education Partner Login' successfully
+
+28-09-2024T12:04:46 - [TEST_CASE][PASSED] - Test Cases/_Functions/Education Partner Login: Test Cases/_Functions/Education Partner Login
+
+28-09-2024T12:04:46 - [TEST_STEP][PASSED] - username = username: null
+
+28-09-2024T12:04:46 - [TEST_STEP][PASSED] - if (username != "cktest06ep"): null
+
+28-09-2024T12:04:46 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+28-09-2024T12:04:47 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+28-09-2024T12:04:47 - [MESSAGE][INFO] - Action delay is set to 0 milliseconds
+
+28-09-2024T12:04:57 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+28-09-2024T12:04:57 - [TEST_STEP][PASSED] - maximizeWindow(): Current window maximized
+
+28-09-2024T12:04:58 - [MESSAGE][PASSED] - Current window maximized
+
+28-09-2024T12:04:58 - [TEST_STEP][PASSED] - navigateToUrl("https://education.missionnext.org/education-home/login-here/"): Navigate to 'https://education.missionnext.org/education-home/login-here/' successfully
+
+28-09-2024T12:05:06 - [MESSAGE][PASSED] - Navigate to 'https://education.missionnext.org/education-home/login-here/' successfully
+
+28-09-2024T12:05:06 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Education Partner Profile/Login/input_Username"), username): Text 'cktest06ep' is set on object 'Object Repository/Education Partner Profile/Login/input_Username'
+
+28-09-2024T12:05:12 - [MESSAGE][PASSED] - Text 'cktest06ep' is set on object 'Object Repository/Education Partner Profile/Login/input_Username'
+
+28-09-2024T12:05:12 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Education Partner Profile/Login/input_Password"), password): Text ****** has been set on object 'Object Repository/Education Partner Profile/Login/input_Password'
+
+28-09-2024T12:05:12 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Education Partner Profile/Login/input_Password'
+
+28-09-2024T12:05:12 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Education Partner Profile/Login/button_Log In")): Object: 'Object Repository/Education Partner Profile/Login/button_Log In' is clicked on
+
+28-09-2024T12:05:17 - [MESSAGE][PASSED] - Object: 'Object Repository/Education Partner Profile/Login/button_Log In' is clicked on
+
+28-09-2024T12:05:17 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/_Functions/Education Partner Login' successfully
+
+28-09-2024T12:05:17 - [TEST_STEP][PASSED] - navigateToUrl("https://education.missionnext.org/candidate/14992"): Navigate to 'https://education.missionnext.org/candidate/14992' successfully
+
+28-09-2024T12:05:20 - [MESSAGE][PASSED] - Navigate to 'https://education.missionnext.org/candidate/14992' successfully
+
+28-09-2024T12:05:20 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile")): Object: 'Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile' is clicked on
+
+28-09-2024T12:05:21 - [MESSAGE][PASSED] - Object: 'Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile' is clicked on
+
+28-09-2024T12:05:21 - [TEST_STEP][PASSED] - delay(3): Delayed 3 second(s)
+
+28-09-2024T12:05:24 - [MESSAGE][PASSED] - Delayed 3 second(s)
+
+28-09-2024T12:05:24 - [TEST_STEP][PASSED] - switchToWindowIndex(1): Switched to window with index: '1'
+
+28-09-2024T12:05:24 - [MESSAGE][PASSED] - Switched to window with index: '1'
+
+28-09-2024T12:05:24 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Education Partner Profile/Candidate Profile/input_Mail to"), "cktest01mn@gmail.com"): Text 'cktest01mn@gmail.com' is set on object 'Object Repository/Education Partner Profile/Candidate Profile/input_Mail to'
+
+28-09-2024T12:05:24 - [MESSAGE][PASSED] - Text 'cktest01mn@gmail.com' is set on object 'Object Repository/Education Partner Profile/Candidate Profile/input_Mail to'
+
+28-09-2024T12:05:24 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Education Partner Profile/Candidate Profile/textarea_Note"), "Testing issue #52."): Text 'Testing issue #52.' is set on object 'Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'
+
+28-09-2024T12:05:25 - [MESSAGE][PASSED] - Text 'Testing issue #52.' is set on object 'Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'
+
+28-09-2024T12:05:25 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Education Partner Profile/Candidate Profile/btn_Send")): Object: 'Object Repository/Education Partner Profile/Candidate Profile/btn_Send' is clicked on
+
+28-09-2024T12:05:25 - [MESSAGE][PASSED] - Object: 'Object Repository/Education Partner Profile/Candidate Profile/btn_Send' is clicked on
+
+28-09-2024T12:05:25 - [TEST_STEP][PASSED] - msgFound = verifyTextPresent("An email with a link to this profile was sent.", false, OPTIONAL): Text 'An email with a link to this profile was sent.' is present on page 
+
+28-09-2024T12:05:26 - [MESSAGE][PASSED] - Text 'An email with a link to this profile was sent.' is present on page 
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - if (msgFound): null
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - timeStart = new java.util.Date(): null
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - outText = "The email sent message was found.": null
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:05:26 - [TEST_STEP][PASSED] - callTestCase(findTestCase("_Functions/Generic Wait for Email"), ["varFromKey":"do_not_reply@info.missionnext.org", "varSubjectKey":"Candidate Profile for Taiwo Adejinmi from MissionNext"], STOP_ON_FAILURE): Call Test Case 'Test Cases/_Functions/Generic Wait for Email' successfully
+
+28-09-2024T12:05:26 - [TEST_CASE][PASSED] - Test Cases/_Functions/Generic Wait for Email: Test Cases/_Functions/Generic Wait for Email
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - waitTime = 12: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - scriptStart = new java.util.Date(): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - scriptInstant = scriptStart.toInstant(): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - println(scriptStart): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - println(scriptInstant): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - returnCode = "": null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (binding.hasVariable("varSearchKey")): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - else: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - searchKey = "NA": null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (binding.hasVariable("varSubjectKey")): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - subjectKey = varSubjectKey: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (binding.hasVariable("varFromKey")): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - fromKey = varFromKey: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - writeFile = false: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (outFile != ""): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - myFile = outFile: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - println(myFile): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - outFile = new java.io.File(myFile): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - writeFile = true: null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (searchKey == "NA"): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - outText = "Watching for email from " + fromKey + " with the subject of " + subjectKey + ".": null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - if (writeFile): null
+
+28-09-2024T12:05:28 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - host = "pop.gmail.com": null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - mailStoreType = "pop3": null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - username = "cktest01mn@gmail.com": null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - password = "sfesezftmpqxbbbd": null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - properties = new java.util.Properties(): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - properties.put("mail.pop3.host", host): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - properties.put("mail.pop3.port", "995"): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - properties.put("mail.pop3.starttls.enable", "true"): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - emailSession = Session.getDefaultInstance(properties): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - store = emailSession.getStore("pop3s"): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - store.connect(host, username, password): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - emailFolder = <not implemented yet for class: org.codehaus.groovy.ast.expr.EmptyExpression>: null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - messages = []: null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - loopsMax = waitTime * 60 / 5: null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - loops = 0: null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - emailFolder = store.getFolder("INBOX"): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - while (length == 0 && loops <= loopsMax): null
+
+28-09-2024T12:05:29 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:05:34 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:05:34 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:35 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:35 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:35 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:35 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:05:35 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:05:40 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:05:40 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:40 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:40 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:41 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:41 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:05:41 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:05:46 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:05:46 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:05:51 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:05:51 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:52 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:52 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:52 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:52 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:05:52 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:05:57 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:05:57 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:05:57 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:05:58 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:05:58 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:05:58 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:05:58 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:03 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:03 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:08 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:08 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:09 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:09 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:09 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:09 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:09 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:14 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:14 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:19 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:19 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:20 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:20 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:20 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:20 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:20 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:25 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:25 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:26 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:26 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:26 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:26 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:26 - [TEST_STEP][PASSED] - delay(5): Delayed 5 second(s)
+
+28-09-2024T12:06:31 - [MESSAGE][PASSED] - Delayed 5 second(s)
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - emailFolder.open(READ_ONLY): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - messages = emailFolder.getMessages(): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - if (length == 0): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - (loops++): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - if (length > 0): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - println("messages.length---" + length): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - msgFound = false: null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - for (javax.mail.Message message : messages): null
+
+28-09-2024T12:06:31 - [TEST_STEP][PASSED] - from = message.getFrom()[0]: null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - subject = message.getSubject(): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (searchKey == "NA"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - outText = "Found an email from " + from + " with the subject of " + subject + ".": null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (writeFile): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - content = message.getContent(): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (content instanceof java.lang.String): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println("It is a string"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - body = message.getContent(): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - subjectMatch = subject.indexOf(subjectKey): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println(subjectMatch): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - fromMatch = from.indexOf(fromKey): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println(fromMatch): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (subjectMatch >= 0 && fromMatch >= 0): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println("     ----- Body:" + body): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - sentPos = body.indexOf("Sent:"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - toPos = body.indexOf("To:"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - msgBody = body: null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (searchKey != "NA"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - else: null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - msgFound = true: null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (msgFound): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - returnCode = "found": null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - emailFolder.close(false): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - store.close(): null
+
+28-09-2024T12:06:32 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/_Functions/Generic Wait for Email' successfully
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - if (returnCode == "found"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - timeStop = new java.util.Date(): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - duration = timeStop.getTime() - timeStart.getTime() / 1000: null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - outText = "An email with the candidate profile was found. Wait time was " + duration.toString() + " seconds.": null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - println(outText): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - outFile.append(outText + "
+"): null
+
+28-09-2024T12:06:32 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+28-09-2024T12:06:34 - [MESSAGE][PASSED] - Browser is closed
+
+28-09-2024T12:06:34 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+28-09-2024T12:06:34 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[28-09-2024T12:04:38 - [TEST_SUITE][PASSED] - Education Partner Test Suite: Test Cases/Education Partners/Test Profile Forwarding]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

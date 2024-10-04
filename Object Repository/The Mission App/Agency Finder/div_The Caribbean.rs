@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_The Caribbean</name>
+   <tag></tag>
+   <elementGuidId>fd019e5f-dd3d-4f8b-a4e4-d412174ed198</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/div[2]/form/div/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[11]/div/div[7]/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>646bc980-2d4f-4326-8c0b-bcecde79d60c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1</value>
+      <webElementGuid>52189925-c930-4e84-a582-654d204bd5ba</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-depth</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>7da810ea-c758-49c3-8b15-d4329e91e04b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-value</name>
+      <type>Main</type>
+      <value>The Caribbean</value>
+      <webElementGuid>73321a9e-362a-448b-80ad-438a8a438bbd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>The Caribbean</value>
+      <webElementGuid>532aa2b5-f7da-49e4-b362-0d6bedd7f431</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options-hidden&quot;]/div[@class=&quot;drts-form-field-radio-options drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;]</value>
+      <webElementGuid>0b617122-589c-4077-8d47-bf8ddbfedc67</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options-hidden']/div/div[7]</value>
+      <webElementGuid>16ff150e-eaeb-4e66-8de7-158af7326fb5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Oceania'])[1]/following::div[1]</value>
+      <webElementGuid>58360407-4798-4def-bf8b-99f7cb0b2c7b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Northern Asia'])[1]/following::div[2]</value>
+      <webElementGuid>3d91b8c0-668c-46a3-92b1-3a34c48e349a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='more'])[1]/preceding::div[1]</value>
+      <webElementGuid>3e3eb4bc-ce6d-403b-bd90-bccb67fb1bca</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[11]/div/div[7]</value>
+      <webElementGuid>313e1123-cae4-4f4b-a90e-4903080a999f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'The Caribbean' or . = 'The Caribbean')]</value>
+      <webElementGuid>756214e2-b519-4b1b-8378-38d0b43e2ed7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

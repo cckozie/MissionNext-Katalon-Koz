@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_West Africa</name>
+   <tag></tag>
+   <elementGuidId>6ac2c15e-e06a-4c08-9d71-b0c651c14adc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;][count(. | //*[(text() = 'West Africa' or . = 'West Africa')]) = count(//*[(text() = 'West Africa' or . = 'West Africa')])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/div[2]/form/div/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[7]/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>e34cc8dd-2af6-4cca-bc5e-d6c8a32a8bfd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1</value>
+      <webElementGuid>ce8aeef1-aae9-42b6-9b4d-3c0c2af07596</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-depth</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>097a4d27-e129-47a8-a68e-e869f9f59bd8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-value</name>
+      <type>Main</type>
+      <value>West Africa</value>
+      <webElementGuid>01cb0482-bdb2-4767-a322-1c05edbbe3f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>West Africa</value>
+      <webElementGuid>9ab59228-8e7e-441d-b89e-6e52f057a6da</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;]</value>
+      <webElementGuid>0510d185-e1d7-459f-9e01-c637a50942b0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options']/div/div/div[7]</value>
+      <webElementGuid>a901cee9-b640-4b55-8df6-efb2edb44c3d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='North Africa'])[1]/following::div[1]</value>
+      <webElementGuid>eee18b47-f7a1-4bda-a35c-c3c6026bbdb6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eastern Europe'])[1]/following::div[2]</value>
+      <webElementGuid>c9768b50-329f-4df2-9b2b-803342bfcb8d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sub Saharan Africa'])[1]/preceding::div[1]</value>
+      <webElementGuid>080dfb02-1a8f-44a9-9b05-99fa940dc3d0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[7]</value>
+      <webElementGuid>2f423b91-7502-4af7-b9dc-5abe0292796f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'West Africa' or . = 'West Africa')]</value>
+      <webElementGuid>1ee8d8d1-4463-4b0e-9e38-f9b2875bfe75</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

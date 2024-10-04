@@ -42,13 +42,13 @@ WebUI.delay(1)
 //	println(object)
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebUI.scrollToElement(findTestObject('Page_Serve in Missions - MissionNext.org/i_Facebook-f_fab fa-facebook-f'), 0)
+WebUI.scrollToElement(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/i_Facebook-f_fab fa-facebook-f'), 0)
 
 WebUI.delay(2)
 
 println(2)
 
-WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/Page_Serve in Missions - MissionNext.org/i_Facebook-f_fab fa-facebook-f'), 
+WebElement element = WebUiCommonHelper.findWebElement(findTestObject('Object Repository/Misc Saved Objects/Page_Serve in Missions - MissionNext.org/i_Facebook-f_fab fa-facebook-f'), 
     10)
 
 println(3)

@@ -58,7 +58,7 @@ checkedSkills = [1:'TECHNICAL', 2:'IT ENGINEERING/ANALYST', 7:'DATABASE', 11:'De
 // Log in to Journey profile and build list of checkbox elements
 WebUI.callTestCase(findTestCase('_Functions/Candidate Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('IT Skills and Interest Tab/a_IT Skills and Interest TAB'))
+WebUI.click(findTestObject('Journey Candidate Profile/Tab-IT Skills and Interest/a_IT Skills and Interest TAB'))
 
 WebDriver driver = DriverFactory.getWebDriver()
 

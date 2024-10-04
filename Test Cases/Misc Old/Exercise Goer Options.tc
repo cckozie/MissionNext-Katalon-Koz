@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Exercise Goer Options</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>92660d59-a5ea-4c14-9cb2-816a7b6b8aa5</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ce35c420-253f-4cb0-8ea6-ecb534e35432</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'QuickStart'</defaultValue>
+      <description></description>
+      <id>ce35c420-253f-4cb0-8ea6-ecb534e35432</id>
+      <masked>false</masked>
+      <name>dropDownOption</name>
+   </variable>
+</TestCaseEntity>

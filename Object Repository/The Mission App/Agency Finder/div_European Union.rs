@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_European Union</name>
+   <tag></tag>
+   <elementGuidId>947c7ca3-8ce0-4704-ad16-f325606056c8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;][count(. | //*[(text() = 'European Union' or . = 'European Union')]) = count(//*[(text() = 'European Union' or . = 'European Union')])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/div[2]/form/div/div/div[2]/div/div/div[2]/div/div/div[1]/div/div/div[4]/label</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>3f9d078a-f28d-4f9d-a61e-f4e7d515edff</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1</value>
+      <webElementGuid>6ef0878c-dac1-4a10-b8da-35603822a849</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-depth</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>f756de2c-77cc-475b-ade7-c1eeab7ccb25</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-value</name>
+      <type>Main</type>
+      <value>European Union</value>
+      <webElementGuid>6a307d21-3a90-4e04-92c2-cc5aa8ef482f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>European Union</value>
+      <webElementGuid>4a07ca9c-359e-4d0f-9a05-df3f3b3c3c1c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;drts-modal&quot;)/div[@class=&quot;drts-bs-modal-dialog drts-bs-modal-xl&quot;]/div[@class=&quot;drts-bs-modal-content&quot;]/div[@class=&quot;drts-bs-modal-body&quot;]/form[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747&quot;]/div[@class=&quot;drts-display drts-display-name-filters-default drts-display-default-default&quot;]/div[@class=&quot;drts-bs-card-group&quot;]/div[@class=&quot;drts-bs-card&quot;]/div[@class=&quot;drts-bs-card-body&quot;]/div[@class=&quot;drts-display-element drts-display-element-view_filter_field_regions-1&quot;]/div[@class=&quot;drts-view-filter-field&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions&quot;]/div[@class=&quot;drts-form-field-main&quot;]/div[@id=&quot;drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options&quot;]/div[@class=&quot;drts-bs-col-sm-12&quot;]/div[@class=&quot;drts-form-field-radio-options drts-form-field-radio-options-column drts-bs-custom-controls-stacked&quot;]/div[@class=&quot;drts-form-field-radio-option drts-bs-custom-control drts-bs-custom-checkbox drts-bs-my-1&quot;]</value>
+      <webElementGuid>85d9807d-6c84-4ef2-a676-c9a34d934829</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='drts-form-6edc4045e7a59708eb2f7c400a739747-filter-field-regions-options']/div/div/div[4]</value>
+      <webElementGuid>12a4e6f4-3818-4470-b1ee-3c4bcbcd3f24</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Central America'])[1]/following::div[1]</value>
+      <webElementGuid>1be3a369-d402-40bf-a1c9-6e99118e508b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='South America'])[1]/following::div[2]</value>
+      <webElementGuid>7a419fcc-69b8-4b29-a35c-51ee1d98a2ff</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Eastern Europe'])[1]/preceding::div[1]</value>
+      <webElementGuid>7f8cf0c3-728b-42c7-828d-16c5caf0231a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div[2]/div/div/div/div/div/div[4]</value>
+      <webElementGuid>6d863553-b2de-445e-bab0-024231962f1b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//div[(text() = 'European Union' or . = 'European Union')]</value>
+      <webElementGuid>83b5e1cf-4975-4fa4-a304-466a8a77782d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

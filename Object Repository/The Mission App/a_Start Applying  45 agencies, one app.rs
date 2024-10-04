@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Start Applying  45 agencies, one app</name>
+   <tag></tag>
+   <elementGuidId>8ef64abc-53da-431b-bb03-4617e798d92d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//article[@id='post-1562']/div/section/div[2]/section/div[2]/div/div[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.uagb-marketing-btn__link.wp-block-button__link</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>3bf1ef17-9875-410b-8196-d82c8eccae5f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://themissionapp.com/missionary-application/</value>
+      <webElementGuid>dbbb805d-a753-4dc6-9474-68c00e3997d9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>uagb-marketing-btn__link wp-block-button__link</value>
+      <webElementGuid>86ba7872-eefb-435e-b188-574888c451e1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>rel</name>
+      <type>Main</type>
+      <value>noopener noreferrer</value>
+      <webElementGuid>f1ac024e-74bc-4786-82b0-b11bd946e06f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Start Applying → 45 agencies, one app </value>
+      <webElementGuid>48885200-c057-40fc-bb4c-370186e23032</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-1562&quot;)/div[@class=&quot;entry-content clear&quot;]/section[@class=&quot;wp-block-uagb-section uagb-section__wrap uagb-section__background-image uagb-block-e40bb6df&quot;]/div[@class=&quot;uagb-section__inner-wrap&quot;]/section[@class=&quot;wp-block-uagb-columns uagb-columns__wrap uagb-columns__background-none uagb-columns__stack-mobile uagb-columns__valign- uagb-columns__gap-10 align uagb-block-81e3b29d uagb-columns__columns-2 uagb-columns__max_width-theme&quot;]/div[@class=&quot;uagb-columns__inner-wrap uagb-columns__columns-2&quot;]/div[@class=&quot;wp-block-uagb-column uagb-column__wrap uagb-column__background-undefined uagb-block-222a2d1f&quot;]/div[@class=&quot;wp-block-uagb-marketing-button uagb-marketing-btn__align-right uagb-marketing-btn__align-text-center uagb-marketing-btn__icon-after uagb-block-9506f676 wp-block-button uagb-marketing-btn__outer-wrap uagb-marketing-btn__icon-before&quot;]/a[@class=&quot;uagb-marketing-btn__link wp-block-button__link&quot;]</value>
+      <webElementGuid>a8be33cc-88f5-4396-89b7-3428e9d87929</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-1562']/div/section/div[2]/section/div[2]/div/div[2]/a</value>
+      <webElementGuid>8c692e45-4393-4acb-9e78-888467c6ed73</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Find your idealmissionary agency!'])[1]/following::a[1]</value>
+      <webElementGuid>cff32da3-11ce-4043-91c4-168b185368f5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[2]/following::a[1]</value>
+      <webElementGuid>bb8fd654-6f29-4f76-930b-8a56470dde80</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Agency Finder →'])[1]/preceding::a[1]</value>
+      <webElementGuid>5690521a-bbba-489a-a504-4d926298326b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://themissionapp.com/missionary-application/')]</value>
+      <webElementGuid>14c388ce-f342-4766-ad59-aa3c22064d83</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/a</value>
+      <webElementGuid>745132f8-5259-4383-8345-41d36cabb4f5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://themissionapp.com/missionary-application/' and (text() = 'Start Applying → 45 agencies, one app ' or . = 'Start Applying → 45 agencies, one app ')]</value>
+      <webElementGuid>b9728155-0a91-4a2e-98e8-3ce0667ede92</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

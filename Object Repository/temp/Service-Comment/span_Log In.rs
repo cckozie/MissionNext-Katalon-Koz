@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Log In</name>
+   <tag></tag>
+   <elementGuidId>dbf5b771-cc94-4c73-a301-49ed5f0df7f2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content']/div/section[2]/div/div/div/section/div/div[2]/div/div/div/form/div/div[4]/button/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.elementor-button-text</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>2829397b-b295-426d-9c85-440eb28aeaba</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-button-text</value>
+      <webElementGuid>2e4dc966-739e-4c58-bde6-cab2591ea3fd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Log In</value>
+      <webElementGuid>2919e63c-5d6e-4b3a-8e00-8f8d628e55cc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-31130 elementor-motion-effects-parent&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-551be2fc elementor-reverse-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5f9b6702&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-6728243 elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-f6925dd&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-020f398 elementor-button-align-center elementor-widget elementor-widget-login&quot;]/div[@class=&quot;elementor-widget-container&quot;]/form[@class=&quot;elementor-login elementor-form&quot;]/div[@class=&quot;elementor-form-fields-wrapper&quot;]/div[@class=&quot;elementor-field-group elementor-column elementor-field-type-submit elementor-col-100&quot;]/button[@class=&quot;elementor-size-md elementor-button&quot;]/span[@class=&quot;elementor-button-text&quot;]</value>
+      <webElementGuid>7d9cddd4-a1ba-4190-9b89-836c3f00b6b0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[2]/div/div/div/section/div/div[2]/div/div/div/form/div/div[4]/button/span</value>
+      <webElementGuid>da9e538e-1538-44d8-bf0f-021b6200f7a4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::span[1]</value>
+      <webElementGuid>64061143-ad6b-4ae9-9f70-85a06af7b0f5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Lost your password?'])[1]/preceding::span[1]</value>
+      <webElementGuid>035ff40f-1132-4467-b332-f7bc1865061e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Already logged into Journey?'])[1]/preceding::span[1]</value>
+      <webElementGuid>f9e90cbe-875d-4d00-ba79-4a25042fbf8f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Log In']/parent::*</value>
+      <webElementGuid>50eb5852-cbff-42fb-90fd-04dc8925083c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//button/span</value>
+      <webElementGuid>4f1a96aa-9827-420d-95d3-b1d7d39171c2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Log In' or . = 'Log In')]</value>
+      <webElementGuid>39e07435-1a6e-4be5-8715-624c43205c1c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

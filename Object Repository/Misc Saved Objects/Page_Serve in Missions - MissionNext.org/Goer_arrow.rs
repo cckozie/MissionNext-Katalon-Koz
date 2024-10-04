@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Goer_arrow</name>
+   <tag></tag>
+   <elementGuidId>fbd3106a-6928-4915-b61f-fcc20d131a55</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/section/div[2]/div/div/div/div/nav[1]/ul/li[3]/a/span</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>/html/body/div[1]/section/div[2]/div/div/div/div/nav[1]/ul/li[3]/a/span</value>
+      <webElementGuid>ea61e594-31ea-463c-858a-5f4eb384c9f7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//*[@id=&quot;sm-1713896701174723-5&quot;]/span</value>
+      <webElementGuid>5d58e241-6d0f-48ab-afb7-6f3188760945</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>/html/body/div[1]/section/div[2]/div/div/div/div/nav[1]/ul/li[3]/a/span/i</value>
+      <webElementGuid>657a4f1d-11cf-45ed-8f5e-098ece5e7992</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <type>Main</type>
+      <value>//*[@id=&quot;sm-1713896701174723-5&quot;]/span/i</value>
+      <webElementGuid>36fd279b-a67f-4a9b-bbcb-077a26da56c9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

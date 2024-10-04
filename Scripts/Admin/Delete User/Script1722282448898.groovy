@@ -31,11 +31,14 @@ if (binding.hasVariable('varUsername')) {
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
+println('outFile is ' + GlobalVariable.outFile)
 if(GlobalVariable.outFile != '') {
 	String myFile = GlobalVariable.outFile
 	println(myFile)
 	outFile = new java.io.File(myFile)
 	writeFile = true
+} else {
+	println('outFile not defined')
 }
 
 /*
@@ -144,9 +147,9 @@ if(found) {
 	
 	println('=====> '+ outText)
 	
-	if(writeFile) {
+//	if(writeFile) {
 		outFile.append(outText + '\n')
-	}
+//	}
 
 }
 

@@ -24,27 +24,27 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://journey.missionnext.org/journey-home/login-here/')
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Login - Journey/i_Wordpress_eicon-close'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Login - Journey/i_Wordpress_eicon-close'))
 
-WebUI.setText(findTestObject('Object Repository/Create Profile/Page_Login - Journey/input_Username_log'), 'cktest01@missionnext.org')
+WebUI.setText(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Login - Journey/input_Username_log'), 'cktest01@missionnext.org')
 
-WebUI.setText(findTestObject('Object Repository/Create Profile/Page_Log In  Journey  WordPress/input_Password_pwd'), 'cktest01')
+WebUI.setText(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Log In  Journey  WordPress/input_Password_pwd'), 'cktest01')
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Log In  Journey  WordPress/input_Remember Me_wp-submit'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Log In  Journey  WordPress/input_Remember Me_wp-submit'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/a_My Profile'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/a_My Profile'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/a_Your Ministry Prefs'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/a_Your Ministry Prefs'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 
-WebUI.click(findTestObject('Object Repository/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
+WebUI.click(findTestObject('Object Repository/Misc Saved Objects/Create Profile/Page_Journey/input_Bible Teaching_profilegroup-162398760_42c909'))
 

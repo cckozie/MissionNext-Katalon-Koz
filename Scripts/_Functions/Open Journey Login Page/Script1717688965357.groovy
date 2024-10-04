@@ -21,10 +21,12 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-WebUI.navigateToUrl('https://journey.missionnext.org/journey-home/login-here/')
+url =  'journey.' + GlobalVariable.domain + '/journey-home/login-here/'
+
+WebUI.navigateToUrl(url)
 
 // Handle the MissionApp popup
-popup = WebUI.verifyElementPresent(findTestObject('Object Repository/temp/i_Wordpress_eicon-close'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+popup = WebUI.verifyElementPresent(findTestObject('Object Repository/temp/i_Wordpress_eicon-close'), 3, FailureHandling.OPTIONAL)
 
 if (popup) {
     WebUI.click(findTestObject('Object Repository/temp/i_Wordpress_eicon-close'))

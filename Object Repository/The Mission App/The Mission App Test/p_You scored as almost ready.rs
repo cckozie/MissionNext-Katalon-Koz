@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_You scored as almost ready</name>
+   <tag></tag>
+   <elementGuidId>e5346826-fb06-4f8d-890e-47d64f7c85c6</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>p.uagb-desc-text</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='uagb-adv-heading-fadfefca-071f-4bdf-8be8-6a756f622ddf']/p</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>d83b93ba-a050-4dda-a12e-7ae7670b5c62</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>uagb-desc-text</value>
+      <webElementGuid>8065655e-5311-4cac-870e-a0b5f6ecd4e5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>You scored as “almost ready”</value>
+      <webElementGuid>a94a0772-dd25-466d-9d87-c1bfd72bd875</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;uagb-adv-heading-fadfefca-071f-4bdf-8be8-6a756f622ddf&quot;)/p[@class=&quot;uagb-desc-text&quot;]</value>
+      <webElementGuid>1ae301c0-d184-4c53-ac96-748eec209657</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='uagb-adv-heading-fadfefca-071f-4bdf-8be8-6a756f622ddf']/p</value>
+      <webElementGuid>ccd17df6-8666-4d32-9d98-f462f4d42930</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Thanks for taking the missionary profile test!'])[1]/following::p[1]</value>
+      <webElementGuid>6508bd2d-fd83-4532-bedf-12c2c0705b93</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[2]/following::p[1]</value>
+      <webElementGuid>76e5579f-85e9-456d-be11-6d7a2a51c7c8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Check your email (maybe spam folder) for your results'])[1]/preceding::p[1]</value>
+      <webElementGuid>35fdc81d-2f83-4a3e-be9b-9daa69b49176</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='What does this score really mean?'])[1]/preceding::p[1]</value>
+      <webElementGuid>e5310d74-7e5c-428d-bd06-a43baf9b21ad</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='You scored as “almost ready”']/parent::*</value>
+      <webElementGuid>d823a79f-c2a4-49b1-9708-27d5ac0357a3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/p</value>
+      <webElementGuid>63511ffd-0961-41ff-a307-af3e2835f3d7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[(text() = 'You scored as “almost ready”' or . = 'You scored as “almost ready”')]</value>
+      <webElementGuid>6997e29b-7909-409a-81d1-2e2daf72b62e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

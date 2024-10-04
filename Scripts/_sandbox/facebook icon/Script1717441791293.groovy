@@ -38,14 +38,14 @@ WebUI.click(findTestObject('Object Repository/temp/input_Email_profilegroup-1444
 WebUI.click(findTestObject('Object Repository/temp/a_Your Ministry Prefs'))
 
 //WebUI.delay(1)
-WebUI.scrollToElement(findTestObject('Page_Serve in Missions - MissionNext.org/a_Facebook-f'), 10)
+WebUI.scrollToElement(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/a_Facebook-f'), 10)
 
 //WebUI.delay(1)
-WebUI.verifyElementVisible(findTestObject('Page_Serve in Missions - MissionNext.org/a_X-twitter'))
+WebUI.verifyElementVisible(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/a_X-twitter'))
 
-WebUI.verifyElementPresent(findTestObject('Page_Serve in Missions - MissionNext.org/i_X-twitter_fab fa-x-twitter'), 10)
+WebUI.verifyElementPresent(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/i_X-twitter_fab fa-x-twitter'), 10)
 
-WebUI.verifyElementVisible(findTestObject('Page_Serve in Missions - MissionNext.org/i_X-twitter_fab fa-x-twitter'))
+WebUI.verifyElementVisible(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/i_X-twitter_fab fa-x-twitter'))
 
 WebUI.delay(10)
 

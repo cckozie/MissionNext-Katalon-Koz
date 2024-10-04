@@ -59,4 +59,19 @@
       <initValue>true</initValue>
       <name>terms_conditions</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Male'</initValue>
+      <name>gender</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Minnesota'</initValue>
+      <name>state</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'1949'</initValue>
+      <name>birth_year</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

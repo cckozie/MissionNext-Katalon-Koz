@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Start Applying</name>
+   <tag></tag>
+   <elementGuidId>cff12705-260f-4211-a2de-6354fcd904b0</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//article[@id='post-1562']/div/div/div/a/span</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Start Applying →' or . = 'Start Applying →')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.kt-btn-inner-text</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>3c33afc7-6de7-4753-bef1-f60796aad1a5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>kt-btn-inner-text</value>
+      <webElementGuid>40a2af3d-724a-4057-ba8a-1a3383b6bb6f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Start Applying</value>
+      <webElementGuid>47109222-9e7e-47e2-a9d1-476fcb0dac0c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-1562&quot;)/div[@class=&quot;entry-content clear&quot;]/div[@class=&quot;wp-block-kadence-advancedbtn kt-btn-align-center kt-btn-tablet-align-inherit kt-btn-mobile-align-inherit kt-btns-wrap kt-btns_d870d9-b8&quot;]/div[@class=&quot;kt-btn-wrap kt-btn-wrap-0&quot;]/a[@class=&quot;kt-button button kt-btn-0-action kt-btn-size-large kt-btn-style-basic kt-btn-svg-show-always kt-btn-has-text-true kt-btn-has-svg-true&quot;]/span[@class=&quot;kt-btn-inner-text&quot;]</value>
+      <webElementGuid>5e7dafb7-95f7-46ef-b2e5-46d59b8334ba</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-1562']/div/div/div/a/span</value>
+      <webElementGuid>8cf45394-7a49-4c33-91d3-c6cea538cee9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='We can help simplify this for you.'])[1]/following::span[1]</value>
+      <webElementGuid>49701441-b994-46c1-8a5f-0d30f260c528</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='There is NOT one agency that fits every calling.'])[1]/following::span[1]</value>
+      <webElementGuid>be099fd8-1088-46d7-8eb5-ff4b6902a6c4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='We’re here to help you fulfill your call'])[1]/preceding::span[1]</value>
+      <webElementGuid>d19343ff-1bfd-4ddf-80ec-56eb0c6d88e9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Our simple 4-step process'])[1]/preceding::span[1]</value>
+      <webElementGuid>95eae018-4561-4d99-9e1f-3916893445ec</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Start Applying']/parent::*</value>
+      <webElementGuid>e7449e96-0a6f-41cb-82cb-ba652e8afc99</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/div/a/span</value>
+      <webElementGuid>a2a27cc9-5105-4be3-9c8b-1a6d9ab9018e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Start Applying' or . = 'Start Applying')]</value>
+      <webElementGuid>a3cb6059-aa57-4de5-9db6-69620404c2e9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

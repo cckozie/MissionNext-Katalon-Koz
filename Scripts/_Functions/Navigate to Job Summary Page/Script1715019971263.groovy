@@ -27,11 +27,11 @@ WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics')
 
 WebUI.navigateToUrl('missionnext.org')
 
-WebUI.focus(findTestObject('Page_Serve in Missions - MissionNext.org/a_Goer'))
+WebUI.focus(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/a_Goer'))
 
-WebUI.click(findTestObject('Page_Serve in Missions - MissionNext.org/Goer_arrow'))
+WebUI.click(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/Goer_arrow'))
 
-WebUI.click(findTestObject('Page_Serve in Missions - MissionNext.org/a_Jobs'))
+WebUI.click(findTestObject('Misc Saved Objects/Page_Serve in Missions - MissionNext.org/a_Jobs'))
 
-WebUI.click(findTestObject('Page_Positions - MissionNext.org/span_Click Here'))
+WebUI.click(findTestObject('Misc Saved Objects/Page_Positions - MissionNext.org/span_Click Here'))
 

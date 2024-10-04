@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_QuickStart</name>
+   <tag></tag>
+   <elementGuidId>16de50e4-7f7b-42ca-b433-97d39df93709</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//ul[@id='sm-1713911585510408-6']/li/a</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@href = 'https://quickstart.missionnext.org' and (text() = 'QuickStart' or . = 'QuickStart')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-53670 > a.elementor-sub-item</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>24676e1d-64bd-43e3-a852-fc27cdc20112</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://quickstart.missionnext.org</value>
+      <webElementGuid>340a5858-234a-41cd-a315-ace29e389bd2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-sub-item</value>
+      <webElementGuid>4fd079d4-d4a2-4f73-86d2-f566a5ce5764</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>QuickStart</value>
+      <webElementGuid>b8a659fe-0ccc-4bc0-9927-8b5d79ad9675</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-1713911585510408-6&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-53670&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
+      <webElementGuid>820623f0-02ba-432c-8e61-2fb1a9c0715a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='sm-1713911585510408-6']/li/a</value>
+      <webElementGuid>1ad4eb2d-0955-4c4c-9bd4-7284910b5666</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>(//a[contains(text(),'QuickStart')])[2]</value>
+      <webElementGuid>5bdbd18c-708d-42e6-b06b-8c297fd184c4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[1]/following::a[1]</value>
+      <webElementGuid>141a803a-4f57-4428-90c1-f41fcceca315</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Strategic Partners'])[1]/following::a[2]</value>
+      <webElementGuid>bcfd2c16-3746-4481-b7d7-6f74d42e8082</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Start your Journey!'])[1]/preceding::a[1]</value>
+      <webElementGuid>5a9feadf-526d-44f7-97a3-eac07ad99fdf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go to Education!'])[1]/preceding::a[2]</value>
+      <webElementGuid>49bbb355-538d-426a-9c8a-b6f6d5c9ecfe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://quickstart.missionnext.org')])[2]</value>
+      <webElementGuid>41f93546-b1f3-4628-a77d-b7a3e23265cc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[3]/ul/li/a</value>
+      <webElementGuid>75d5efa2-bded-4575-89da-106970462019</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://quickstart.missionnext.org' and (text() = 'QuickStart' or . = 'QuickStart')]</value>
+      <webElementGuid>5766d3e7-5c39-4810-b828-5c8b04d594f9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Compare Job Lists from Files</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9f927ac1-04b0-4823-a514-bd98a5e0e160</testCaseGuid>
+</TestCaseEntity>
