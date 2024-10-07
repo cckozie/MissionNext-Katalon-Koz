@@ -24,6 +24,7 @@ import org.openqa.selenium.interactions.Actions as Actions
 import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -37,18 +38,17 @@ if (username != 'cktest07jp' && username != 'cktest01jp') {
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //	Need to verify off page links on profile page 	- 10/2/24
 //  Set the website field to reflect the domain		- 10/2/24
-//  Need to test for the wrong text on the tooltip for password
-//	Need to test the text of the error messages, not just that they are visible
-// 	Modify to use Generic Wait for Email
+// 	Modify to use Generic Wait for Email			-Completed 10/04/24
+//  Need to test for the wrong text on the tooltip for password													-Completed 10/07/24
+//	Need to test the text of the error messages, not just that they are visible. Rewwork like for education.	-Completed 10/07/24
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
 
 // Write results to text file
 outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Partner.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write('Testing Register Journey Partner\n')
+outFile.write('Testing Register Journey Partner on ' + GlobalVariable.domain + '.\n')
 
 // Define path to tooltip text images
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey partner/journey partner application/'
@@ -65,6 +65,30 @@ tooltips = [('username') : 'img_Username_field-tooltip', ('password') : 'img_Pas
 pageLinks = ['Affiliated Christian Organizations' : 'Affiliated Organizations', 'Partnership Agreement' : 'Partnership Agreement', 
 	'Privacy Policy' : 'Privacy Policy', 'Terms and Conditions' : 'Terms and Conditions']
 
+// Define the field messages
+fieldMessages = [
+	"div_Username message" : "Username must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters.",
+	"div_Password message" : "Password must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters.",
+	"div_Email message" : "Please enter a valid email address.",
+	"div_Organization name message" : "The organization name field is required.",
+	"div_First name message" : "The First Name field is required.",
+	"div_Last name message" : "The last name field is required.",
+	"div_Phone message" : "The key contact phone field is required.",
+	"div_Address message" : "The mailing address field is required.",
+	"div_City message" : "The city field is required.",
+	"div_State message" : "The state field is required.",
+	"div_Postal code message" : "The post code field is required.",
+	"div_Description message" : "The description field is required.",
+	"div_Url message" : "The website address field is required.",
+	"div_Memberships message" : "The memberships field is required.",
+	"div_Mission statement message" : "The mission statement field is required.",
+	"div_BOD message" : "The board of directors field is required.",
+	"div_SoF message" : "The statement of faith field is required.",
+	"div_References message" : "The references field is required.",
+	"div_Partner agreement message" : "The partner agreement field is required.",
+	"div_Terms message" : "The terms and conditions field is required."
+	]
+
 //================================== Delete the user ===============================================
 
 WebUI.callTestCase(findTestCase('Admin/Delete User'), ['varUsername' : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
@@ -79,7 +103,6 @@ WebUI.openBrowser(('https://journey.' + GlobalVariable.domain) + '/signup/organi
 
 WebUI.maximizeWindow()
 
-
 WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Register/input_Username'), '=====> WAITING FOR SIKULI TO LOAD <=====')
 
 Screen s = new Screen()
@@ -87,6 +110,7 @@ Screen s = new Screen()
 WebUI.clearText(findTestObject('Object Repository/Journey Partner Profile/Register/input_Username'))
 
 // Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
+tooltipError = false
 tooltips.each({ 
         myKey = it.key
 
@@ -145,11 +169,17 @@ tooltips.each({
                 outFile.append(outText + '\n')
             }
         } else {
+			
+			tooltipError = true
+			
             outText = ('Unable to find image file ' + myImage)
 
             outFile.append(outText + '\n')
 
             println(outText)
+			
+			KeywordUtil.markError('\n' + outText)
+			
         }
     })
 
@@ -184,6 +214,8 @@ pageLinks.each ({
 		
 		outFile.append(outText + '\n')
 		
+		KeywordUtil.markError('\n' + outText)
+		
 	}
 
 	WebUI.closeWindowIndex(1)
@@ -196,91 +228,52 @@ pageLinks.each ({
 	
 })
 
-
 // Submit the form with all of the fields empty
 WebUI.click(findTestObject('Journey Partner Profile/Register/button_Sign up'))
 
-// Test for username, password, and email required messages
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Username must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters'))
+// Test all of the required fields missing messages
+fieldMessages.each({
+	
+	myObj = it.key
 
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Password must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters'))
+	myMsg = it.value
+	
+	println('Testing for ' + myObj + ' of "' + myMsg + '".')
+	
+	WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/' + myObj))
+	
+	msg = WebUI.getText(findTestObject('Journey Partner Profile/Register/' + myObj))
 
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Please enter a valid email address'))
+	if(msg != myMsg) {
+		
+		outText = '----- ' + myObj + ' is:\n"' + msg + '"\n     but it should be \n"' + myMsg + '"'
+		
+		println(outText + '\n')
+		
+		outFile.append(outText + '\n')
+		
+		KeywordUtil.markError('\n' + outText)
+		
+	}
+	
+	if(myObj == 'div_Email message') {
+		
+		// Set username, password, and email and then test for the other missing data error messages
+		WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Username'), GlobalVariable.username)
+		
+		WebUI.setEncryptedText(findTestObject('Journey Partner Profile/Register/input_Password'), GlobalVariable.password)
+		
+		WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Key Contact Email'), GlobalVariable.email)
+		
+		WebUI.click(findTestObject('Journey Partner Profile/Register/button_Sign up'))
+		
+		WebUI.waitForPageLoad(10)
+		
+	}
+	
+})
 
-WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Username'), GlobalVariable.username)
-
-WebUI.setEncryptedText(findTestObject('Journey Partner Profile/Register/input_Password'), GlobalVariable.password)
-
-WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Key Contact Email'), GlobalVariable.email)
-
-WebUI.click(findTestObject('Journey Partner Profile/Register/button_Sign up'))
-
-WebUI.waitForPageLoad(10)
-
-// Test for first name, last name, and phone number required messages
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_The Fiirst Name field is required'))
-
-firstNameMsg = WebUI.getText(findTestObject('Journey Partner Profile/Register/div_The Fiirst Name field is required'))
-
-println(firstNameMsg)
-
-pos = firstNameMsg.indexOf('Fiirst')
-
-if (pos >= 0) {
-    outText = 'ERROR: "First" is misspelled as "Fiirst" in the first name required error message'
-
-    outFile.append(outText + '\n')
-
-    println(outText)
-}
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The organization name field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The Fiirst Name field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_The last name field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The key contact phone field is required'))
-
-//Define the fields that incorrectly referred to 'school' instead of 'organization'
-fields = ['mailing address', 'city', 'post code']
-
-for (def field : fields) {
-    print('the field is ' + field)
-
-    WebUI.verifyElementVisible(findTestObject(('Object Repository/Journey Partner Profile/Register/div_The ' + field) + 
-            ' field is required'))
-
-    addressMessage = WebUI.getText(findTestObject(('Object Repository/Journey Partner Profile/Register/div_The ' + field) + 
-            ' field is required'))
-
-    if (addressMessage.indexOf('school') >= 0) {
-        outText = (('ERROR: The ' + field) + ' required error message references a school instead of an organization.')
-
-        outFile.append(outText + '\n')
-
-        println(outText)
-    }
-}
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The state field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The description field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The website address field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The memberships field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The board of directors field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The statement of faith field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The references field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The partner agreement field is required'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The terms and conditions field is required'))
-
+// Enter the remaining fields and submit the form
 WebUI.setEncryptedText(findTestObject('Journey Partner Profile/Register/input_Password'), GlobalVariable.password)
 
 WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Register/input_Organization'), GlobalVariable.organization)
@@ -357,16 +350,16 @@ if (pending) {
 	outFile.append(outText + '\n')
 } else {
 	outText = 'Failed to find the Approval Pending page.'
-
 	
 	println(outText)
 
 	outFile.append(outText + '\n')
+		
+	KeywordUtil.markError('\n' + outText)
+		
 }
 
 //================================== Wait for the approval pending email for the new journey partner =========
-//WebUI.callTestCase(findTestCase('_Functions/Wait for Email'), [('varSubjectKey') : 'Approval request', ('varUsername') : GlobalVariable.username],
-//	FailureHandling.STOP_ON_FAILURE)
 WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'Chris.Kosieracki@missionnext.org',
 	('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 

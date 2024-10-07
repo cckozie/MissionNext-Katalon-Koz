@@ -61,7 +61,7 @@ for(email in emails) {
 
 	}
 	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/btn_Send'))
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/radio_Journey app'))
 	
 	//Test for the email sent message
 	msgFound = WebUI.verifyTextPresent('An email with a link to this profile was sent.', false, FailureHandling.OPTIONAL)

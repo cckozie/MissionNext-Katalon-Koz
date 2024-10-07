@@ -180,11 +180,11 @@ tooltips.each({
 WebUI.click(findTestObject('Journey Partner Profile/Register/button_Sign up'))
 
 // Test for username, password, and email required messages
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Username must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters'))
+WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Username message'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Password must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters'))
+WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Password message'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Please enter a valid email address'))
+WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Email message'))
 
 WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Username'), GlobalVariable.username)
 
@@ -197,9 +197,9 @@ WebUI.click(findTestObject('Journey Partner Profile/Register/button_Sign up'))
 WebUI.waitForPageLoad(10)
 
 // Test for first name, last name, and phone number required messages
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_The Fiirst Name field is required'))
+WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_First name message'))
 
-firstNameMsg = WebUI.getText(findTestObject('Journey Partner Profile/Register/div_The Fiirst Name field is required'))
+firstNameMsg = WebUI.getText(findTestObject('Journey Partner Profile/Register/div_First name message'))
 
 println(firstNameMsg)
 
@@ -213,13 +213,13 @@ if (pos >= 0) {
     println(outText)
 }
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The organization name field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Organization name message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The Fiirst Name field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_First name message'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_The last name field is required'))
+WebUI.verifyElementVisible(findTestObject('Journey Partner Profile/Register/div_Last name message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The key contact phone field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Phone message'))
 
 //Define the fields that incorrectly referred to 'school' instead of 'organization'
 fields = ['mailing address', 'city', 'post code']
@@ -242,23 +242,23 @@ for (def field : fields) {
     }
 }
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The state field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_State message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The description field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Description message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The website address field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Url message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The memberships field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Memberships message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The board of directors field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_BOD message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The statement of faith field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_SoF message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The references field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_References message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The partner agreement field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Partner agreement message'))
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_The terms and conditions field is required'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Journey Partner Profile/Register/div_Terms message'))
 
 WebUI.setEncryptedText(findTestObject('Journey Partner Profile/Register/input_Password'), GlobalVariable.password)
 

@@ -47,7 +47,7 @@ if (username != 'cktest06ep') {
 //  Need to test for the wrong text on the tooltip for password							-Completed 10/04/24
 //	Need to test the text of the error messages, not just that they are visible			-Completed 10/04/24
 // 	Modify to use Generic Wait for Email												-Completed 10/04/24
-//  Create and use image folder for education, not journey
+//  Create and use image folder for education, not journey								-Completed 10/04/24
 //
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -62,7 +62,7 @@ outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Regis
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing Register Education Partner in ' + domain) + '\n')
+outFile.write(('Testing Register Education Partner on ' + domain) + '\n')
 
 // Define path to tooltip text images
 ttPath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
@@ -181,6 +181,9 @@ tooltips.each({
             outFile.append(outText + '\n')
 
             println(outText)
+			
+			KeywordUtil.markError('\n' + outText)
+			
         }
     })
 
@@ -232,6 +235,9 @@ if (f.exists()) {
         println(outText)
 
         outFile.append(outText + '\n')
+		
+		KeywordUtil.markError('\n' + outText)
+		
     }
 } else {
 	
@@ -240,6 +246,9 @@ if (f.exists()) {
     outFile.append(outText + '\n')
 
     println(outText)
+		
+	KeywordUtil.markError('\n' + outText)
+		
 }
                 
 // Close the email window and app
@@ -283,7 +292,9 @@ if (found != null) {
 } else {
 
     outText = '----- Failed to find email to customer support'
-    
+		
+	KeywordUtil.markError('\n' + outText)
+		
 }
 
 println(outText)
@@ -321,6 +332,8 @@ pageLinks.each ({
 		println(outText)
 		
 		outFile.append(outText + '\n')
+			
+		KeywordUtil.markError('\n' + outText)
 		
 	}
 
@@ -437,12 +450,16 @@ if (pending) {
     println(outText)
 
     outFile.append(outText + '\n')
+	
 } else {
     outText = 'Failed to find the Approval Pending page.'
 
     println(outText)
 
     outFile.append(outText + '\n')
+		
+	KeywordUtil.markError('\n' + outText)
+		
 }
 
 //================================== Wait for the approval pending email for the new education partner =========
@@ -464,5 +481,5 @@ if (GlobalVariable.returnCode == 'found') {
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 }
-// We're done!
 
+// We're done!

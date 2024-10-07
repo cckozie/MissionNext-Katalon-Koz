@@ -116,6 +116,20 @@ for (row = 1; row < row_count; row++) {
 
 		WebUI.delay(2)
 		
+		if(type == 'Education') {
+			
+			WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/Subscription Edit/radio_Education app'))
+			
+		} else {
+			
+			if(type == 'Journey') {
+			
+			WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/Subscription Edit/radio_Journey app'))
+			
+			}
+			
+		}
+		
 		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
 		
 		WebUI.delay(2)
