@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The website address field is required</name>
+   <name>div_Url message</name>
    <tag></tag>
    <elementGuidId>f37db0a0-03a4-4f6c-ad9b-0bc28c00f332</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>

@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The board of directors field is required</name>
+   <name>div_BOD message</name>
    <tag></tag>
    <elementGuidId>ede82209-fd35-42ac-b666-cd3f1117831a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The partner agreement field is required</name>
+   <name>div_City message</name>
    <tag></tag>
-   <elementGuidId>7fa59023-1ef9-490a-b14f-dc5f1999134b</elementGuidId>
+   <elementGuidId>153870f8-e2df-49f8-b2b6-b360897c94a7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[2]/div[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[16]/div[1]</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>296cbde6-30bc-4402-8bfb-a448b930a4cb</webElementGuid>
+      <webElementGuid>78435ebd-b567-4120-a5e4-1a1e0ab542c0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>ceaaa431-1d27-4f6a-90cd-ad5bf4f6bfb9</webElementGuid>
+      <webElementGuid>7063b710-bd7b-453b-a078-f30bb16bdd86</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,8 +38,8 @@
       <name>text</name>
       <type>Main</type>
       <value>
-                    The partner agreement field is required.                </value>
-      <webElementGuid>3fc8f46e-0b68-44f4-917b-ab0e5244e396</webElementGuid>
+                    The school city field is required.                </value>
+      <webElementGuid>5ce7eed8-e5ec-42c7-bac0-730158c10724</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -48,55 +47,63 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>ee4f50f6-562c-4c5a-92bb-c181a3f42c83</webElementGuid>
+      <webElementGuid>4a1e55c1-b545-4948-bf64-8ad8530ba0e9</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1446560994.446']/div[16]/div</value>
-      <webElementGuid>ddd18bdd-a319-439c-83aa-792c7a7a2947</webElementGuid>
+      <value>//div[@id='group-1446560994.446']/div[2]/div</value>
+      <webElementGuid>d7f43324-29ec-4b43-b400-4559cfaa0de1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Referral or Other Comment'])[1]/following::div[3]</value>
-      <webElementGuid>5456f25e-a6be-482c-84e2-6800fcec036b</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mailing Address*'])[1]/following::div[3]</value>
+      <webElementGuid>93c75337-1a06-409a-92c5-060b95d8958a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='How did you hear about MissionNext?'])[1]/following::div[7]</value>
-      <webElementGuid>28030be4-4a05-4a77-94c1-937c2df2e42c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The school mailing address field is required.'])[1]/following::div[4]</value>
+      <webElementGuid>f7f43945-244b-4066-a61a-f6f50f18e696</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Partnership Agreement'])[1]/preceding::div[1]</value>
-      <webElementGuid>9f1ea940-69e8-437d-8ac9-51e969fe0006</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='City*'])[1]/preceding::div[1]</value>
+      <webElementGuid>8882ef16-ecb4-49b1-9725-758d3528219e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='The partner agreement field is required.']/parent::*</value>
-      <webElementGuid>979052ab-55b4-49cd-95b7-7a015e005244</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The state field is required.'])[1]/preceding::div[3]</value>
+      <webElementGuid>6861371f-2725-423b-b32e-2a766d0a303d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='The school city field is required.']/parent::*</value>
+      <webElementGuid>e9b6e4bf-e687-4688-b5d7-7f4491462f45</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[16]/div</value>
-      <webElementGuid>652780a8-92bb-483f-889b-c73b95fe5b82</webElementGuid>
+      <value>//div[5]/div[2]/div</value>
+      <webElementGuid>fb385f99-dd51-4df6-8df4-6f8fe4a7145b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -104,8 +111,8 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = '
-                    The partner agreement field is required.                ' or . = '
-                    The partner agreement field is required.                ')]</value>
-      <webElementGuid>0ba6bfd0-99fc-4d27-b9ff-d91679fab030</webElementGuid>
+                    The school city field is required.                ' or . = '
+                    The school city field is required.                ')]</value>
+      <webElementGuid>56afb61c-6055-43ba-872a-402cc096f564</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

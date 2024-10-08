@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The statement of faith field is required</name>
+   <name>div_Phone message</name>
    <tag></tag>
-   <elementGuidId>6a098730-b6d9-43d0-8bc3-6531589f576b</elementGuidId>
+   <elementGuidId>0113afe5-f4cc-45e2-b1ef-9546a3c15c86</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[12]/div[1]</value>
+         <value>//*[@id=&quot;group1&quot;]/div[7]/div[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>a0a4fa6a-a46d-48b6-86f5-6075994681e4</webElementGuid>
+      <webElementGuid>3a7344c0-4879-400d-944c-4b75733d4c53</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>0d9d644b-40e2-4368-ab9a-28eb5ec0c274</webElementGuid>
+      <webElementGuid>a5d4327a-823c-46f5-95eb-2e5b3f46ea33</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,72 +38,72 @@
       <name>text</name>
       <type>Main</type>
       <value>
-                    The statement of faith field is required.                </value>
-      <webElementGuid>a4cc6af2-195e-4a7b-bd8c-a9831786c5b7</webElementGuid>
+                    The key contact phone field is required.                </value>
+      <webElementGuid>e3a55f79-eb93-4177-aa1c-93a850e2578e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>ad6daeba-0233-4db4-bd28-c9d7ae4aebbb</webElementGuid>
+      <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
+      <webElementGuid>afcd8a6d-5be4-43b0-8ef9-d54de2808f83</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1446560994.446']/div[12]/div</value>
-      <webElementGuid>61d9f65d-8ab9-47b5-a1f8-00a4c252651a</webElementGuid>
+      <value>//div[@id='group1']/div[7]/div</value>
+      <webElementGuid>ba33ac6c-7d91-45a8-b9b7-895f10cf5f73</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Board of Directors*'])[1]/following::div[3]</value>
-      <webElementGuid>3a3e24ae-7def-4908-ab35-df948c494c48</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Email*'])[1]/following::div[3]</value>
+      <webElementGuid>8722a58b-0271-4ee6-8a09-7d25a37f3d5f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The board of directors field is required.'])[1]/following::div[4]</value>
-      <webElementGuid>6e224214-26cc-49f1-b6c7-1f355f430c3f</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Last Name*'])[1]/following::div[6]</value>
+      <webElementGuid>36b990b1-00c7-4c9c-8569-4b2f290e6578</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith*'])[1]/preceding::div[1]</value>
-      <webElementGuid>0b91e8c4-c93b-4cfd-b21d-b1c10cabd59a</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Phone*'])[1]/preceding::div[1]</value>
+      <webElementGuid>ed0fec44-96cf-4149-a373-ea4d3003c4c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The references field is required.'])[1]/preceding::div[3]</value>
-      <webElementGuid>a46e5c29-1ab7-4e9a-92a7-e7228ebddc8a</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='PRICING INFORMATION'])[1]/preceding::div[3]</value>
+      <webElementGuid>715d4059-1729-41fe-825b-a23f4d8dc634</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='The statement of faith field is required.']/parent::*</value>
-      <webElementGuid>c2106082-8e4b-4579-99cf-900fc45a69fd</webElementGuid>
+      <value>//*/text()[normalize-space(.)='The key contact phone field is required.']/parent::*</value>
+      <webElementGuid>592bdc3a-2ddb-480a-9db8-ca218c237812</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[12]/div</value>
-      <webElementGuid>50f79ed4-7f86-4d27-8c8d-421e880fd887</webElementGuid>
+      <value>//div[3]/div[7]/div</value>
+      <webElementGuid>977c8eba-dabe-4d9d-a91b-98697f894a03</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -112,8 +111,8 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = '
-                    The statement of faith field is required.                ' or . = '
-                    The statement of faith field is required.                ')]</value>
-      <webElementGuid>8cd875b8-da76-4a41-987b-3169837bf2d2</webElementGuid>
+                    The key contact phone field is required.                ' or . = '
+                    The key contact phone field is required.                ')]</value>
+      <webElementGuid>c93b991a-30a4-4816-9f82-4d129d6fe533</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

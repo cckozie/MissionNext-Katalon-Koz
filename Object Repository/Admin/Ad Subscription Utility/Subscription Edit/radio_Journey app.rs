@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>btn_Send</name>
+   <name>radio_Journey app</name>
    <tag></tag>
-   <elementGuidId>7ba70873-d522-4afa-9ffd-1d128cff8d89</elementGuidId>
+   <elementGuidId>7d8e9377-1556-4d0e-aaf5-994616cba897</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>input[name=&quot;submit&quot;]</value>
+         <value>input[name=&quot;app_id&quot;]</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@name='submit']</value>
+         <value>//input[@name='app_id']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -23,62 +23,62 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>67f80260-774f-428d-b45d-4459c6444c2b</webElementGuid>
+      <webElementGuid>8a7a4505-c32e-4f98-8ab5-e2e4a4784ba3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>submit</value>
-      <webElementGuid>62141bdf-6c0b-437d-8c64-b8647e6f9a7e</webElementGuid>
+      <value>radio</value>
+      <webElementGuid>9bdbbeeb-1c9f-4f83-9594-24cf42aee68d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>submit</value>
-      <webElementGuid>b6a88d9c-90ce-4164-be39-02e0300a79ce</webElementGuid>
+      <value>app_id</value>
+      <webElementGuid>72168080-84a2-40d8-95b7-b53faca25522</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Send</value>
-      <webElementGuid>32ff13b6-d1fc-4c8e-b35c-96a015d9ae6d</webElementGuid>
+      <value>3</value>
+      <webElementGuid>15bfbb8a-9503-41f4-a64e-38287f3b255b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class=&quot;body&quot;]/form[1]/p[1]/table[1]/tbody[1]/tr[6]/td[2]/input[1]</value>
-      <webElementGuid>a1b8c53a-9313-4397-95a9-f83630448db3</webElementGuid>
+      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]</value>
+      <webElementGuid>3a195c4d-a145-4541-a5aa-335e04f325af</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@name='submit']</value>
-      <webElementGuid>7db42ab6-439b-4009-bae1-0e05c82ec47d</webElementGuid>
+      <value>//input[@name='app_id']</value>
+      <webElementGuid>529501de-2ae3-4aa3-a094-f6b1387c396d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[6]/td[2]/input</value>
-      <webElementGuid>5e71f4b7-259f-4aef-9538-0874d341bbe4</webElementGuid>
+      <value>//td[3]/input</value>
+      <webElementGuid>f7ef82ab-9047-4c75-a46d-ef9619a7f85f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@type = 'submit' and @name = 'submit']</value>
-      <webElementGuid>69c597de-beaf-4600-9333-17ae30ed69ab</webElementGuid>
+      <value>//input[@type = 'radio' and @name = 'app_id']</value>
+      <webElementGuid>82504913-1289-41ae-978f-f6f94d00f5fd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

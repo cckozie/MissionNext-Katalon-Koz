@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The description field is required</name>
+   <name>div_Description message</name>
    <tag></tag>
    <elementGuidId>3fbf2110-da64-40b4-a6de-ea9aaa4e8333</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_The mailing address field is required</name>
+   <name>div_SoF message</name>
    <tag></tag>
-   <elementGuidId>e2234f6f-2801-4708-a3d0-1b6d733c261f</elementGuidId>
+   <elementGuidId>6a098730-b6d9-43d0-8bc3-6531589f576b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[1]/div[1]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[12]/div[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>41cfbb2a-cc80-4db4-b0b2-107ea7172bbe</webElementGuid>
+      <webElementGuid>a0a4fa6a-a46d-48b6-86f5-6075994681e4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>cce9a5b1-8c88-4c74-ab47-56efdb7ff69c</webElementGuid>
+      <webElementGuid>0d9d644b-40e2-4368-ab9a-28eb5ec0c274</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -38,8 +38,8 @@
       <name>text</name>
       <type>Main</type>
       <value>
-                    The school mailing address field is required.                </value>
-      <webElementGuid>cdc3f8e7-f433-49c3-a05d-0e41747f6743</webElementGuid>
+                    The statement of faith field is required.                </value>
+      <webElementGuid>a4cc6af2-195e-4a7b-bd8c-a9831786c5b7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,63 +47,63 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>f40737ab-87af-4e71-8862-02852b1468f4</webElementGuid>
+      <webElementGuid>ad6daeba-0233-4db4-bd28-c9d7ae4aebbb</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1446560994.446']/div/div</value>
-      <webElementGuid>488774b4-57e5-4a93-b252-0a09f3f1768a</webElementGuid>
+      <value>//div[@id='group-1446560994.446']/div[12]/div</value>
+      <webElementGuid>61d9f65d-8ab9-47b5-a1f8-00a4c252651a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='ABOUT YOUR ORGANIZATION'])[1]/following::div[2]</value>
-      <webElementGuid>88478e24-07e2-4ebd-9355-647be6795bed</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Board of Directors*'])[1]/following::div[3]</value>
+      <webElementGuid>3a3e24ae-7def-4908-ab35-df948c494c48</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Applies to Journey Only'])[1]/following::div[3]</value>
-      <webElementGuid>88bf4b4f-fad9-4963-80e4-6033ffc75185</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The board of directors field is required.'])[1]/following::div[4]</value>
+      <webElementGuid>6e224214-26cc-49f1-b6c7-1f355f430c3f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mailing Address*'])[1]/preceding::div[1]</value>
-      <webElementGuid>4ceb2dc5-1677-4b6b-b56f-548aa657e647</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith*'])[1]/preceding::div[1]</value>
+      <webElementGuid>0b91e8c4-c93b-4cfd-b21d-b1c10cabd59a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The school city field is required.'])[1]/preceding::div[3]</value>
-      <webElementGuid>d4e96532-1bbd-4271-98a6-827450e00127</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The references field is required.'])[1]/preceding::div[3]</value>
+      <webElementGuid>a46e5c29-1ab7-4e9a-92a7-e7228ebddc8a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='The school mailing address field is required.']/parent::*</value>
-      <webElementGuid>3961d0a8-7209-4905-a577-d002f1803815</webElementGuid>
+      <value>//*/text()[normalize-space(.)='The statement of faith field is required.']/parent::*</value>
+      <webElementGuid>c2106082-8e4b-4579-99cf-900fc45a69fd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[5]/div/div</value>
-      <webElementGuid>7429a6c1-bcf6-4089-bb78-b3babdcc5c41</webElementGuid>
+      <value>//div[12]/div</value>
+      <webElementGuid>50f79ed4-7f86-4d27-8c8d-421e880fd887</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,8 +111,8 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = '
-                    The school mailing address field is required.                ' or . = '
-                    The school mailing address field is required.                ')]</value>
-      <webElementGuid>f333dfbc-19df-4749-afd7-c7de3d73d2db</webElementGuid>
+                    The statement of faith field is required.                ' or . = '
+                    The statement of faith field is required.                ')]</value>
+      <webElementGuid>8cd875b8-da76-4a41-987b-3169837bf2d2</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

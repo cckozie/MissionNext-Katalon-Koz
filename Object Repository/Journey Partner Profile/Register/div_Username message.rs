@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_Username must be at least 6 characters long, no spaces, lowercase letters and numbers only, no special or unique characters</name>
+   <name>div_Username message</name>
    <tag></tag>
    <elementGuidId>fce7658e-4153-4568-8eff-6677d2dd0b76</elementGuidId>
    <selectorCollection>
