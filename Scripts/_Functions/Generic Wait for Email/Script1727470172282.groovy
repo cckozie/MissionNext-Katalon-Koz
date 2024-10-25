@@ -25,6 +25,10 @@ import groovy.time.*
 import java.time.Duration as Duration
 import java.time.Instant as Instant
 
+/////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//	Modified to allow fromKey and subjectKey to be lists
+/////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 //************* Time to wait in minutes ****************
 waitTime = 4 //I've seen it take 10+ minutes
 
@@ -58,6 +62,23 @@ if (binding.hasVariable('varFromKey')) {
     fromKey = 'Chris.Kosieracki@missionnext.org'
 }
 
+isList = false
+if(fromKey instanceof List) {
+	isList = true
+} else {
+	fromKey = [fromKey]
+	subjectKey = [subjectKey]
+	searchKey = [searchKey]
+	isList = false
+}
+
+msgCount = fromKey.size()
+
+println(msgCount)
+println(fromKey)
+println(subjectKey)
+println(searchKey)
+
 //Check to see if we're writing printed output also to a file
 writeFile = false
 
@@ -69,19 +90,6 @@ if (GlobalVariable.outFile != '') {
     outFile = new File(myFile)
 
     writeFile = true
-}
-
-if (searchKey == 'NA') {
-    outText = (((('Watching for email from ' + fromKey) + ' with the subject of ') + subjectKey) + '.')
-} else {
-    outText = (((((('Watching for email from ' + fromKey) + ' with the subject of ') + subjectKey) + ', and containing the text ') + 
-    searchKey) + '.')
-}
-
-println(outText)
-
-if (writeFile) {
-    outFile.append(outText + '\n')
 }
 
 //mail server and credentials (Password is App password)
@@ -116,8 +124,6 @@ Message[] messages = []
 
 loopsMax = ((waitTime * 60) / 5) // Number of loops = minutes to wait * 60 seconds/min / 5 (wait time each loop)
 
-loops = 0
-
 emailFolder = store.getFolder('INBOX')
 
 emailFolder.open(Folder.READ_ONLY)
@@ -128,37 +134,53 @@ if (messages.length == 0) {
     emailFolder.close(false)
 }
 
-while ((messages.length == 0) && (loops <= loopsMax)) {
+msgFound = false
+
+msgFoundCount = 0
+
+loops = 0
+
+while ((messages.length < msgCount) && (loops <= loopsMax)) {
+	
     WebUI.delay(5)
 
     emailFolder.open(Folder.READ_ONLY)
 
     messages = emailFolder.getMessages()
 
-    if (messages.length == 0) {
+    if (messages.length < msgCount) {
+		
         emailFolder.close(false)
-    }
+		
+    } 
     
     loops++
 }
 
-if (messages.length > 0) {
-    println('messages.length---' + messages.length)
+outText = 'messages.length---' + messages.length
 
-    msgFound = false
+println(outText)
 
+if (writeFile) {
+	outFile.append(outText + '\n')
+}
+
+emailNumber = 0
+
+if (messages.length >= msgCount) { 
+			
     for (Message message : messages) {
+		
+		emailNumber ++
+		
+		println('\n********* Processing email number ' + emailNumber)
+		
         String from = message.getFrom()[0]
 
         String subject = message.getSubject()
 
-        if (searchKey == 'NA') {
-            outText = (((('Found an email from ' + from) + ' with the subject of ') + subject) + '.')
-        } else {
-            outText = (((((('Found an email from ' + from) + ' with the subject of ') + subject) + ' and containing the text ') + 
-            searchKey) + '.')
-        }
-        
+        outText = (((('Found an email from ' + from) + ' with the subject of ') + subject) + '.')
+       
         println(outText)
 
         if (writeFile) {
@@ -182,70 +204,110 @@ if (messages.length > 0) {
             body = p.toString()
         }
         
-        subjectMatch = subject.indexOf(subjectKey)
+		println('----- Subject is:' + subject)
+		
+		for(i = 0; i < msgCount; i++) {
+			
+			println('********* Processing search number ' + i)
+				
+			println('==== subjectKey is:' + subjectKey[i])
+			
+	        subjectMatch = subject.indexOf(subjectKey[i])
+	
+	        println(subjectMatch)
+			
+			if(subjectMatch >= 0) {
 
-        println(subjectMatch)
-
-        fromMatch = from.indexOf(fromKey)
-
-        println(fromMatch)
-
-        if ((subjectMatch >= 0) && (fromMatch >= 0)) {
-            println('     ----- Body:' + body)
-
-            sentPos = body.indexOf('Sent:')
-
-            toPos = body.indexOf('To:')
-
-            msgBody = body
-
-            if (searchKey != 'NA') {
-                //			 msgTime = body.substring(sentPos + 6, toPos)
-                if (msgBody.indexOf(searchKey) >= 0) {
-                    msgFound = true
-
-                    outText = (('>>>>> SearchKey ' + searchKey) + ' was found in the email.')
-
-                    println(outText)
-
-                    if (writeFile) {
-                        outFile.append(outText + '\n')
-                    }
-                }
-            } else {
-                msgFound = true
-            }
+				println('----- From is:' + from)
+				
+				println('==== fromKey is:' + fromKey[i])
+				
+		        fromMatch = from.indexOf(fromKey[i])
+		
+		        println(fromMatch)
+		
+		        if ((subjectMatch >= 0) && (fromMatch >= 0)) {
+		            println('     ----- Body:' + body)
+		
+		            sentPos = body.indexOf('Sent:')
+		
+		            toPos = body.indexOf('To:')
+		
+		            msgBody = body
+		
+		            if (searchKey[i] != 'NA') {
+		                //			 msgTime = body.substring(sentPos + 6, toPos)
+		                if (msgBody.indexOf(searchKey[i]) >= 0) {
+							
+		                    msgFound = true
+		
+		                    outText = (('>>>>> SearchKey ' + searchKey[i]) + ' was found in the email.')
+		
+		                    println(outText)
+		
+		                    if (writeFile) {
+		                        outFile.append(outText + '\n')
+		                    }
+							
+							break
+		                }
+		            } else {
+						
+		                msgFound = true
+						
+						break
+						
+		            }
+		        }
+			}
         }
-    }
     
-    if (msgFound) {
-
-		//update the return code
-        GlobalVariable.returnCode = 'found'
-    }
-    
-    //close the folder objects
-    emailFolder.close(false)
+	    if (msgFound) {
+			
+			msgFoundCount ++
+			
+	    } else {
+			
+			if (searchKey[i] != 'NA') {
+				
+				outText = (((((('Failed to receive email from ' + fromKey[i]) + ' with the subject of ') + subjectKey[i]) + ' and a search string of ') +
+				searchKey[i]) + '.')
+			
+			} else {
+				
+				outText = ('Failed to receive email from ' + fromKey[i] + ' with the subject of ' + subjectKey[i] + '.')
+				
+			}
+	
+			println(outText)
+		
+			if (writeFile) {
+				outFile.append(outText + '\n')
+			}
+	    }
+	}
+}
+//close the folder objects
+emailFolder.close(false)
+			
+if(msgFoundCount == fromKey.size()) {
+	
+	GlobalVariable.returnCode = 'found'
 	
 } else {
 	
-	if (searchKey != 'NA') {
-			
-	    outText = (((((('Failed to receive email from ' + fromKey) + ' with the subject of ') + subjectKey) + ' and a search string of ') + 
-	    searchKey) + '.')
+	if(msgFoundCount == 0) {
+
+		outText = '#### ' + msgFoundCount + ' emails were received.'
 		
-	} else {
-		
-		outText = ('Failed to receive email from ' + fromKey + ' with the subject of ' + subjectKey + '.')
-		
+		println(outText)
+	
+		if (writeFile) {
+			outFile.append(outText + '\n')
+		}
 	}
-
-    println(outText)
-
-    if (writeFile) {
-        outFile.append(outText + '\n')
-    }
+	
 }
-
+	
 store.close()
 

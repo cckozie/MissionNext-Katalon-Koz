@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'explorenext.org'</initValue>
+      <initValue>'missionnext.org'</initValue>
       <name>domain</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

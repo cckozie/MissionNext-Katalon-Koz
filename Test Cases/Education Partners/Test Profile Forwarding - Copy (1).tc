@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Profile Forwarding - Copy (1)</name>
+   <tag>Issue #52</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>371c5c22-3dc0-4219-b2a5-b234dd41a305</testCaseGuid>
+</TestCaseEntity>

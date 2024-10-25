@@ -41,6 +41,10 @@ if (username != 'cktest07jp' && username != 'cktest01jp') {
 // 	Modify to use Generic Wait for Email			-Completed 10/04/24
 //  Need to test for the wrong text on the tooltip for password													-Completed 10/07/24
 //	Need to test the text of the error messages, not just that they are visible. Rewwork like for education.	-Completed 10/07/24
+//  Need to modify for new password tooltip text 
+//	Need to call other test cases for the Contact Information, Organization Info, Service Options, Readiness, Ministry Prefs, Match Filters, 
+//		and Recruiting Countries tabs
+//
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Write results to text file

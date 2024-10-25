@@ -42,7 +42,7 @@ WebUI.delay(3)
 WebUI.switchToWindowIndex(1)
 
 //Enter the email details and send
-WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/input_Mail to'), 'cktest01mn@gmail.com')
+WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/btn_Submit'), 'cktest01mn@gmail.com')
 
 WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'), 'Testing issue #52.')
 

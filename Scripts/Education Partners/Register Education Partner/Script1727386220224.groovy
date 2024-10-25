@@ -482,4 +482,11 @@ if (GlobalVariable.returnCode == 'found') {
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 }
 
-// We're done!
+//Complete the Positions Needed tab
+positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
+
+experiences = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science']
+
+WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Positions Needed'), [('varPositions') : positions, ('varExperiences') : experiences], 
+    FailureHandling.STOP_ON_FAILURE)
+

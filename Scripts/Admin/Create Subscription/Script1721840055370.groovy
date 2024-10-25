@@ -39,6 +39,11 @@ if (binding.hasVariable('varRole')) {
 	role = 'Organization'
 }
 
+println('username is ' + username)
+println('type is ' + type)
+println('role is ' + role)
+
+
 //Check to see if we're writing printed output also to a file
 writeFile = false
 if(GlobalVariable.outFile != '') {
@@ -54,7 +59,6 @@ url = 'https://ad.' + domain
 
 WebUI.openBrowser('')
 
-//WebUI.navigateToUrl('https://ad.explorenext.org')
 WebUI.navigateToUrl(url)
 
 WebUI.setText(findTestObject('Admin/Ad Login/input_Username'), 'chriskosieracki')
@@ -69,9 +73,9 @@ WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Website'))
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + type))
+WebUI.selectOptionByLabel(findTestObject('Object Repository/Admin/Ad Subscription Utility/select_Website'), type, false)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Role'))
+WebUI.selectOptionByLabel(findTestObject('Object Repository/Admin/Ad Subscription Utility/select_Role'), role, false)
 
 WebUI.delay(1)
 
