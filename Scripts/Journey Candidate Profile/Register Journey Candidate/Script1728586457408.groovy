@@ -257,10 +257,10 @@ WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey 
 WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey Register/button_Sign up'))
 
 // Complete the required entries on the Contact Info tab
-WebUI.callTestCase(findTestCase('Journey Candidate Profile/Situation tab'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Situation tab'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Complete the required entries on the Situation tab
-WebUI.callTestCase(findTestCase('Journey Candidate Profile/Contact Info tab'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Contact Info tab'), [:], FailureHandling.STOP_ON_FAILURE)
 
 System.exit(1)
 

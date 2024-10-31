@@ -46,6 +46,9 @@ url = WebUI.getUrl(FailureHandling.OPTIONAL)
 if(url.indexOf('dashboard') >= 0) {
 	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
 }
+/*
+//Complete the Contact Info tab
+WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Contact Info'), [:], FailureHandling.OPTIONAL)
 
 //Complete the Positions Needed tab
 positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
@@ -54,13 +57,39 @@ experiences = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer 
 
 WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Positions Needed'), [('varPositions') : positions, ('varExperiences') : experiences], 
     FailureHandling.OPTIONAL)
-/*
-//Complete the Contact Info tab
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Contact Info'), [:], FailureHandling.OPTIONAL)
 
 //Complete the Service Options tab
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Service Options'), [:], FailureHandling.OPTIONAL)
+time_commitments = ['One year', 'One year to two years']
 
+start_options = ['Within 12 months']
+
+school_terms = ['Open']
+
+WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Service Options'), 
+	[('varTime_commitments') : time_commitments, ('varStart_options') : start_options,
+		('varSchool_terms') : school_terms], FailureHandling.OPTIONAL)
+
+//Complete the Readiness tab
+process_stage = ['I am actively investigating missions', 'I am ready to select a ministry']
+	
+cross_cultural = ['Not served in a culture other than my own', 'Occasionally served in cultures other than my own',
+	 'Extensive experience serving in cultures other than my own']
+
+bible_training = ['Some Bible school classes', 'Bible school degree or equivalent']
+
+perspectives = ['I have not taken the Perspectives Course', 'I am planning to take the Perspectives Course',
+	'I have taken or am taking the Perspectives Course']
+
+missions_experience = ['I have attended a missions event', 'I have taken a short-term missions trip',
+	'I have served in ministry or missions full-time', 'None of the above']
+
+relocation = ['I am willing to relocate within North America', 'I am willing to relocate overseas']
+
+WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
+	('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
+	('varPerspectives') : perspectives,	('varMissions_experience') : missions_experience, 
+	('varRelocation') : relocation], FailureHandling.OPTIONAL)
+*/
 //Complete the Match Filters tab
 degree = ['No']
 
@@ -79,25 +108,3 @@ WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Match Filters'), [(
 	('varExperience') : experience, ('varCredentials') : credentials, ('varEnglish') : english,
 	('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.OPTIONAL)
 
-//Complete the Readiness tab
-process_stage = ['I am actively investigating missions', 'I am ready to select a ministry']
-	
-cross_cultural = ['Not served in a culture other than my own', 'Occasionally served in cultures other than my own',
-	 'Extensive experience serving in cultures other than my own']
-
-bible_training = ['Some Bible school classes', 'Bible school degree or equivalent']
-
-perspectives = ['I have not taken the Perspectives Course', 'I am planning to take the Perspectives Course',
-	'I have taken or am taking the Perspectives Course']
-
-missions_experience = ['I have attended a missions event', 'I have taken a short-term missions trip',
-	'I have served in ministry or missions full-time', 'None of the above']
-
-relocation = ['I am willing to relocate within North America', 'I am willing to relocate overseas']
-
-//println(cross_cultural)
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
-	('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
-	('varPerspectives') : perspectives,	('varMissions_experience') : missions_experience, 
-	('varRelocation') : relocation], FailureHandling.OPTIONAL)
-*/

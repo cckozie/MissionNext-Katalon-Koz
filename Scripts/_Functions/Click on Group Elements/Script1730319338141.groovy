@@ -21,6 +21,8 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 
+debug = false
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 // For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label 
@@ -28,6 +30,8 @@ WebDriver driver = DriverFactory.getWebDriver()
 //
 // We have to do this by group in case of identicle labels in multiple groups
 for(i = 0; i < varXpaths.size(); i++) {
+	
+	if(debug) {println('Desired label is "' + varParms[i] + '"')}
 	
 	elements = driver.findElements(By.xpath(varXpaths[i]))
 	
@@ -49,6 +53,8 @@ for(i = 0; i < varXpaths.size(); i++) {
 				
 			}
 		}
+		
+		if(debug) {println('Element label is "' + myValue + '"')}
 		
 		myObj = WebUI.convertWebElementToTestObject(element) //Convert the element to a test object
 		

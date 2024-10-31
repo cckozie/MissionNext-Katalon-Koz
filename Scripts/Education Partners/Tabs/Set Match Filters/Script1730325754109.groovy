@@ -56,42 +56,11 @@ paid_volunteer = '//input[@id=\'profile_group-1456436956.575_financial_support\'
 
 xpaths = [degree, experience, credentials, english, travel, paid_volunteer]
 
-url = WebUI.getUrl(FailureHandling.OPTIONAL)
-
-//Log in as education partner if not on dashboard page
-if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?requestUri=/dashboard')) {
-    WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
-}
-
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Match Filters'))
+
+WebUI.callTestCase(findTestCase('_Functions/Click on ALL Group Elements'), [('varXpaths') : xpaths],
+	FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-/*
-for (i = 0; i < xpaths.size(); i++) {
-    elements = driver.findElements(By.xpath(xpaths[i]))
-
-    element_count = elements.size()
-
-    println('count is ' + element_count)
-
-    for (def element : elements) {
-        myValue = element.getAttribute('value')
-
-        //This processing is necessary because '(!) ' is getting prepended to the value attribute 
-        //	if it starts with 'No'
-        if (myValue.length() >= 4) {
-            if (myValue.substring(0, 4) == '(!) ') {
-                myValue = myValue.substring(4)
-            }
-        }
-        
-        if (myValue in (lists[i])) {
-            myObj = WebUI.convertWebElementToTestObject(element)
-
-            WebUI.click(myObj)
-        }
-    }
-}
-*/

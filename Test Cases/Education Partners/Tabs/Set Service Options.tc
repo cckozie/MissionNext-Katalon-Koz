@@ -6,4 +6,43 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>0f771845-5c7e-41ef-aea1-8300f172ec8f</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c9e89f16-aa9e-416c-a3a3-2b5b200a0bb2</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>fe1e4ee7-a908-4689-b22e-6d4a29d34bbb</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ee60a1ca-691e-47ef-9d4e-9cf731f124f5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>c9e89f16-aa9e-416c-a3a3-2b5b200a0bb2</id>
+      <masked>false</masked>
+      <name>varTime_commitments</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>fe1e4ee7-a908-4689-b22e-6d4a29d34bbb</id>
+      <masked>false</masked>
+      <name>varStart_options</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>ee60a1ca-691e-47ef-9d4e-9cf731f124f5</id>
+      <masked>false</masked>
+      <name>varSchool_terms</name>
+   </variable>
 </TestCaseEntity>

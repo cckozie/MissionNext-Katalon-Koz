@@ -45,9 +45,6 @@ bible_training = '//input[@name=\'profile[group-1449794128.145][bible_training]\
 //xpath of the Church Affiliated group
 church_affiliated = '//input[@name=\'profile[group-1449794128.145][affiliated_with_church]\']'
 
-//xpath of the Church Affiliated group
-church_affiliated = '//input[@name=\'profile[group-1449794128.145][affiliated_with_church]\']'
-
 //xpath of the Journey Guide group
 journey_guide = '//input[@name=\'profile[group-1449794128.145][journey_guide_option]\']'
 
@@ -83,43 +80,10 @@ if (varChurch_involvement != null) {
         varChurch_involvement, false)
 }
 
-//WebDriver driver = DriverFactory.getWebDriver()
+WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-//xpaths = [process_stage, bible_training, church_affiliated, journey_guide]
-/*
-// For each radio button group, click the radio button that corresponds to the input parameter
-// We have to do this by group in case of identicle labels in different groups
-for (i = 0; i < xpaths.size(); i++) {
-    elements = driver.findElements(By.xpath(xpaths[i]) //Find all of the radio buttons in the group
-        )
-
-    element_count = elements.size()
-
-    println('count is ' + element_count)
-
-    for (def element : elements) {
-        myValue = element.getAttribute('value' //Get the radio button's label (value attribute)
-            )
-
-        //This processing is necessary because '(!) ' is getting prepended to the value attribute
-        //	if it starts with 'No'
-        if (myValue.length() >= 4) {
-            if (myValue.substring(0, 4) == '(!) ') {
-                myValue = myValue.substring(4)
-            }
-        }
-        
-        if (myValue in (parms[i])) {
-            //Click on the radio button if it's label matches input parameter
-            myObj = WebUI.convertWebElementToTestObject(element)
-
-            WebUI.click(myObj, FailureHandling.OPTIONAL)
-        }
-    }
-}
-*/
 WebUI.click(findTestObject('Education Candidate Profile/Tab-Situation/btn_Complete Submit'))
 

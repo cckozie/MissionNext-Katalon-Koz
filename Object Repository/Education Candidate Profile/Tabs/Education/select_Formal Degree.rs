@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Formal Degree</name>
+   <tag></tag>
+   <elementGuidId>5160d725-340e-4582-bb24-458e5cf34ac8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1449793011.346_formal_education_degree']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>03b8a217-3a1d-4c93-a2a0-7bc9d4fff14a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>formal_education_degree</value>
+      <webElementGuid>958d941e-826f-48ac-98d0-b48caeda9b8c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>233</value>
+      <webElementGuid>d30ea8d4-b90a-42ae-9380-23e9883b14fe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1449793011.346][formal_education_degree]</value>
+      <webElementGuid>3e311bd2-910d-4199-8a23-ead08ff84e12</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1449793011.346_formal_education_degree</value>
+      <webElementGuid>3a221020-c186-47c2-bd08-c039dfaee0a6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+No
+Yes
+Pending
+</value>
+      <webElementGuid>a991ebe2-f8fa-49ed-a19d-9646498cf2c5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1449793011.346_formal_education_degree&quot;)</value>
+      <webElementGuid>e64c20bb-b091-4a4e-b2c0-99ffae838975</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1449793011.346_formal_education_degree']</value>
+      <webElementGuid>e0e9486f-5a0a-4891-b065-9d8f216122b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1449793011.346']/div/div[2]/select</value>
+      <webElementGuid>dc554306-b16f-4259-ba3b-d60b3b8c4f9e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Formal Education Degree'])[1]/following::select[1]</value>
+      <webElementGuid>18e4b392-cb43-475d-a69d-129666e94078</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='More Help ...'])[1]/following::select[1]</value>
+      <webElementGuid>b9412bc7-83cb-4c97-9d79-179a41948c2f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Formal Teaching Credentials'])[1]/preceding::select[1]</value>
+      <webElementGuid>60cc8dea-5a18-42b4-8abb-fee4d59ecfbe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Credential Authority'])[1]/preceding::select[2]</value>
+      <webElementGuid>cec979fa-9632-4202-9217-535d13a55899</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div/div[2]/select</value>
+      <webElementGuid>1ef95008-54c8-4c9e-9d64-7a97742148b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1449793011.346][formal_education_degree]' and @id = 'profile_group-1449793011.346_formal_education_degree' and (text() = '
+No
+Yes
+Pending
+' or . = '
+No
+Yes
+Pending
+')]</value>
+      <webElementGuid>838e2fed-d705-419f-b4dd-7e477aee19b4</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

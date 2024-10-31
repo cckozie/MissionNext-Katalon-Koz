@@ -251,10 +251,10 @@ WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Educat
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/button_Sign up'))
 
 // Complete the required entries on the Contact Info tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Complete the required entries on the Situation tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Set Situation'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'), [:], FailureHandling.STOP_ON_FAILURE)
 
 System.exit(1)
 

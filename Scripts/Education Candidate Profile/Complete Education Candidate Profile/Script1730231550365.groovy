@@ -40,10 +40,53 @@ url = WebUI.getUrl(FailureHandling.OPTIONAL)
 if (url == null) {
     WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
-
+/*
 // Complete the required entries on the Contact Info tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
 
+// Complete the Experience tab
+highest_degree = 'Bachelor of Science (BS)'
+
+degree_field = 'Physical Science'
+
+classroom_experience = 'Yes'
+
+occupation = 'Middle School Teacher'
+
+cross_cultural = 'Occasionally served in cultures other than my own'
+
+missions_experience = 'I have taken a short-term missions trip'
+
+life_experience = "I've been a believer for 23 years. I went on a mission trip to train Vietnamese in Bible translation"
+
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Experience'), [('varHighest_degree') : highest_degree,
+	('varDegree_field') : degree_field, ('varClassroom_experience') : classroom_experience, ('varOccupation') : occupation,
+	('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, 
+	('varLife_experience') : life_experience], FailureHandling.STOP_ON_FAILURE)
+*/
+
+// Complete the Education tab
+formal_degree = 'Yes'
+
+teaching_credentials = 'Pending'
+
+credential_authority = 'TBD'
+
+previous_experience = ['Business Education', ' Computer Science', ' ESL', 'Industrial Arts', 'Physical Education', 'Technology',
+	'Sciences - Physical Science/Physics', 'Substitute Teacher']
+
+other_experience = 'Middle school football coach'
+
+english_proficiency = 'Advanced'
+
+additional_languages = "Rudimentary French"
+
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Education'), [('varFormal_degree') : formal_degree,
+	('varTeaching_credentials') : teaching_credentials, ('varCredential_authority') : credential_authority, 
+	('varPrevious_experience') : previous_experience, ('varOther_experience') : other_experience, 
+	('varEnglish_proficiency') : english_proficiency, ('varAdditional_languages') : additional_languages], FailureHandling.STOP_ON_FAILURE)
+
+/*
 // Complete the Situation tab
 process_stage = 'I am actively investigating missions'
 
@@ -61,12 +104,12 @@ church_name = 'Parkside Church of the C&MA'
 
 church_involvement = 'I am serving in my local church'
 
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Set Situation'), [('varProcess_stage') : process_stage,
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'), [('varProcess_stage') : process_stage,
 	('varBible_training') : bible_training, ('varChurch_affiliated') : church_affiliated, ('varJourney_guide') : journey_guide,
 	('varPerspectives') : perspectives, ('varDescribe_training') : describe_training, 
 	('varChurch_name') : church_name,('varChurch_involvement') : church_involvement], FailureHandling.STOP_ON_FAILURE)
 
-/*
+
 //Complete the Positions Needed tab
 positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
 

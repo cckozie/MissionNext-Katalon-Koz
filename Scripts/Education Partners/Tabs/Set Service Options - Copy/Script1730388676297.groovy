@@ -25,36 +25,21 @@ if (username != 'cktest06ep') {
 
     System.exit(0)
 }
-//START OPTIONS APPEAR NOT TO WORK. TEST BY SETTING ALL.
-// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-// !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varTime_commitments, varStart_options, varSchool_terms]
 
-/*
-for(parm in parms) {
-	println(parm)
+url = WebUI.getUrl(FailureHandling.OPTIONAL)
+
+//Log in as education partner if not on dashboard page
+if(!url == 'https://education.' + GlobalVariable.domain + '/profile?requestUri=/dashboard') {
+	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
-*/
-
-//Xpath for Time Commitments
-time_commitments = '//input[@id=\'profile_group-1456436314.404_time_commitments\']'
-
-//Xpath for Available Start Options
-start_options = '//input[@id=\'profile_group-1456436314.404_available_start_options\']'
-
-//Xpath for School Term(s) Available
-school_terms = '//input[@id=\'profile_group-1456436314.404_school_term_available\']'
-
-xpaths = [time_commitments, start_options, school_terms]
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Service Options'))
 
-//WebUI.callTestCase(findTestCase('_Functions/Click on ALL Group Elements'), [('varXpaths') : xpaths],
-//	 FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Education Partner Profile/Tabs/Service Options/input_One year'))
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms],
-	 FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Education Partner Profile/Tabs/Service Options/input_Within 12 months'))
+
+WebUI.click(findTestObject('Education Partner Profile/Tabs/Service Options/input_Open'))
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/Service Options/btn_Complete Submit'))
 

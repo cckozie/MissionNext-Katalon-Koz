@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Set Situation - Copy</name>
+   <name>Click on ALL Group Elements</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>0029ebfd-9cd9-482c-8e86-0c1695851c9c</testCaseGuid>
+   <testCaseGuid>a56b6901-a454-4128-8168-07821c7b88bd</testCaseGuid>
 </TestCaseEntity>

@@ -1,87 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Set Readiness</name>
+   <name>Set Education</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>1c80adfc-3de0-44de-bb1f-90f7725a8a6d</testCaseGuid>
+   <testCaseGuid>2fde1cc6-45e4-491f-b6dc-8643064103e3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>aac0df97-e636-4273-a229-cbc885c2b53a</variableId>
+      <variableId>5494e325-65ce-437d-ad19-a0a8a20332a3</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>c960a659-236a-4c57-86e8-341d146e69fd</variableId>
+      <variableId>2b672efa-e11c-4bb9-8555-523f0fcdf43c</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>1372ccf1-31cd-476d-ab57-7dc004ef9550</variableId>
+      <variableId>ce44d5e7-5f07-4de3-82bf-dac2e7e7ff7f</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>b980e8f3-0456-4c5a-820d-450018615cd8</variableId>
+      <variableId>1ffe5c34-49fe-4b8d-94ae-28fac7f404ae</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>5f64703a-50e8-4569-849a-291c571ac29f</variableId>
+      <variableId>f228c4ae-9de2-4d8a-890b-7e5dff29c6ce</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>ad35640c-b4a3-481d-a76a-7352ffecbb73</variableId>
+      <variableId>e72ed975-7152-4652-ad8c-a7125d4cb0c4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>11f9f395-c9f0-4017-9b16-b48de2b6a284</variableId>
    </variableLinks>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>aac0df97-e636-4273-a229-cbc885c2b53a</id>
+      <id>5494e325-65ce-437d-ad19-a0a8a20332a3</id>
       <masked>false</masked>
-      <name>varProcess_stage</name>
+      <name>varFormal_degree</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>c960a659-236a-4c57-86e8-341d146e69fd</id>
+      <id>2b672efa-e11c-4bb9-8555-523f0fcdf43c</id>
       <masked>false</masked>
-      <name>varCross_cultural</name>
+      <name>varTeaching_credentials</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>1372ccf1-31cd-476d-ab57-7dc004ef9550</id>
+      <id>ce44d5e7-5f07-4de3-82bf-dac2e7e7ff7f</id>
       <masked>false</masked>
-      <name>varBible_training</name>
+      <name>varCredential_authority</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>b980e8f3-0456-4c5a-820d-450018615cd8</id>
+      <id>1ffe5c34-49fe-4b8d-94ae-28fac7f404ae</id>
       <masked>false</masked>
-      <name>varPerspectives</name>
+      <name>varPrevious_experience</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>5f64703a-50e8-4569-849a-291c571ac29f</id>
+      <id>f228c4ae-9de2-4d8a-890b-7e5dff29c6ce</id>
       <masked>false</masked>
-      <name>varMissions_experience</name>
+      <name>varOther_experience</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>ad35640c-b4a3-481d-a76a-7352ffecbb73</id>
+      <id>e72ed975-7152-4652-ad8c-a7125d4cb0c4</id>
       <masked>false</masked>
-      <name>varRelocation</name>
+      <name>varEnglish_proficiency</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>11f9f395-c9f0-4017-9b16-b48de2b6a284</id>
+      <masked>false</masked>
+      <name>varAdditional_languages</name>
    </variable>
 </TestCaseEntity>
