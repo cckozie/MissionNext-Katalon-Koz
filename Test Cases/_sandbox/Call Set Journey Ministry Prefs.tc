@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Call Set Journey Ministry Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>da8003fd-2a35-4120-9813-20691c331065</testCaseGuid>
+</TestCaseEntity>

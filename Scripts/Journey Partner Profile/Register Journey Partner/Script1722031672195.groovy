@@ -380,6 +380,16 @@ if (GlobalVariable.returnCode == 'found') {
 	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : GlobalVariable.username, ('varType') : 'Journey'
 			, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 }
-// We're done!
+// Set the ministry preference
+ministries = ['Adult Men', 'Marriage & Family', 'Public Relations', 'Writers', 'Construction/Trade', 'Urban Gardening', 'Electrician'
+	, 'Project Manager', 'Mentoring', 'Student (College)', 'Informal Education', 'TESL (English)', 'Training ESL Teachers'
+	, 'Electrical', 'Radio', 'JESUS Film Showings/Dist', 'Personal/Group Evangelism', 'Bible Translation', 'People Group Research'
+	, 'Career Counseling', 'Nurse', 'Primary Care', 'IT Business Analyst', 'IT Systems Analyst', 'Quality Assurance Engineer'
+	, 'Human Trafficking/Prostitution', 'Muslim', 'Jewish', 'Distribution', 'Logistics', 'Tour/Museum Guide', 'Auto Mechanic/Body'
+	, 'A&P Mechanic', 'Pilot - Single Engine', 'Project Management', 'Business', 'Engineering', 'Project Managers', 'Agriculture/Horticulture'
+	, 'Micro-Enterprise']
+
+WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Journey Ministry Prefs'), [('varMinistries') : ministries], FailureHandling.STOP_ON_FAILURE)
+
 
 

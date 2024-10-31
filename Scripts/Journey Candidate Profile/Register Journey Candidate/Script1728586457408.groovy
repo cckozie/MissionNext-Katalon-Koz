@@ -37,17 +37,18 @@ if (username != 'cktest05jc') {
 //  Need to modify for new password tooltip text
 //	Need to call other test cases for the Experience, Availability, Service/Comment, and Your Ministry Prefs tabs
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+domain = GlobalVariable.domain
 
 // Write results to text file
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Journey Register.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) + 
+'.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write('Testing Register Journey Candidate\n')
+outFile.write(('Testing Register Journey Candidate on ' + domain) + '\n')
 
 //================================== Delete the user ===============================================
-WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
 // Define path to tooltip icons and text images
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey candidate/journey contact registration/'
@@ -67,16 +68,27 @@ requiredFieldMsgs = [('div_Password must be at least 6 characters long-Msg') : '
     , ('div_The terms and conditions field is required-Msg') : ' ', ('div_Username must be at least 6 characters long-Msg') : ' ']
 
 // Open the Journey login page
-WebUI.callTestCase(findTestCase('_Functions/Open Journey Login Page'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Open Journey Login Page'), [:], FailureHandling.OPTIONAL)
+
+// The login page has been changing, so provide an alternative path to the register page
+WebUI.click(findTestObject('Journey Candidate Profile/Journey Login/span_Apply Now - Journey'), FailureHandling.OPTIONAL)
+	
+WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'), FailureHandling.OPTIONAL)
+
+myURL = 'https://journey.' + GlobalVariable.domain + '/signup/candidate'
+
+url = WebUI.getUrl()
+
+if(url != myURL) {
+	WebUI.navigateToUrl('https://journey.' + GlobalVariable.domain + '/signup/candidate')
+}
+
+WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
 
 // Prep for selenium and sikulix funtions
 WebDriver driver = DriverFactory.getWebDriver()
 
 Actions action = new Actions(driver)
-
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Login/span_Apply Now - Journey'))
-
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
 
 WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Username'), '=====> WAITING FOR SIKULIX <=====')
 
@@ -249,7 +261,6 @@ WebUI.callTestCase(findTestCase('Journey Candidate Profile/Situation tab'), [:],
 
 // Complete the required entries on the Situation tab
 WebUI.callTestCase(findTestCase('Journey Candidate Profile/Contact Info tab'), [:], FailureHandling.STOP_ON_FAILURE)
-
 
 System.exit(1)
 

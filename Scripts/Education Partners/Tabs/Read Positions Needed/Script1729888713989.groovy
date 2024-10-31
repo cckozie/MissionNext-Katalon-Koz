@@ -182,8 +182,12 @@ experiencePreferred = [
 "ESL" : null,
 "Language Teacher" : null]
 
-//Log in as education partner
-WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+url = WebUI.getUrl(FailureHandling.OPTIONAL)
+
+//Log in as education partner if not on dashboard page
+if(!url == 'https://education.' + GlobalVariable.domain + '/profile?requestUri=/dashboard') {
+	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+}
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
 

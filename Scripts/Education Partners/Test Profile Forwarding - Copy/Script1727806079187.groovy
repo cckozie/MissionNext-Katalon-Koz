@@ -35,18 +35,18 @@ WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], Fail
 WebUI.navigateToUrl('https://education.' + GlobalVariable.domain + '/candidate/14992')
 
 //Click the print/forward button and switch to the new tab
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile'))
+WebUI.click(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/button_PrintForward Profile'))
 
 WebUI.delay(3)
 
 WebUI.switchToWindowIndex(1)
 
 //Enter the email details and send
-WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/btn_Submit'), 'cktest01mn@gmail.com')
+WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/btn_Submit'), 'cktest01mn@gmail.com')
 
-WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'), 'Testing issue #52.')
+WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/textarea_Note'), 'Testing issue #52.')
 
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/radio_Journey app'))
+WebUI.click(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/radio_Journey app'))
 
 //Test for the email sent message
 msgFound = WebUI.verifyTextPresent('An email with a link to this profile was sent.', false, FailureHandling.OPTIONAL)

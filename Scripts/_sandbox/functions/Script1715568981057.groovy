@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+/*
 total = add_numbers(2, 7)
 
 println(total)
@@ -43,4 +44,4 @@ def add_numbers(def num1, def num2) {
 
     return sum
 }
-
+*/

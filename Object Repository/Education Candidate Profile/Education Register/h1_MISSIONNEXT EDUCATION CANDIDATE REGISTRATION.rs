@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h1_MISSIONNEXT EDUCATION CANDIDATE REGISTRATION</name>
+   <tag></tag>
+   <elementGuidId>383fdd9a-3599-44e8-aa88-f9653585f207</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/h1</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>h1</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION' or . = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h1</value>
+      <webElementGuid>8c105150-87a0-48f7-8e93-6f4de0e91646</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>MISSIONNEXT EDUCATION CANDIDATE REGISTRATION</value>
+      <webElementGuid>baaa6084-6ffc-46dd-a2a2-ce644a131ba8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-header&quot;]/h1[1]</value>
+      <webElementGuid>20f6c7c3-b9ac-481d-b274-bfef37fa59c7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/h1</value>
+      <webElementGuid>f404f534-52e3-4058-999b-2b8520101081</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Partners'])[2]/following::h1[1]</value>
+      <webElementGuid>cbb3f430-d1dd-4638-8d55-4fbb3d5ee67d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[2]/following::h1[1]</value>
+      <webElementGuid>46d86c6e-0bc6-4c55-8a69-5d27eadfea83</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='You must be at least 18 years old to participate.'])[1]/preceding::h1[1]</value>
+      <webElementGuid>f4d8ec2a-081f-49b6-8913-f098277e2636</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='LOGIN INFORMATION'])[1]/preceding::h1[1]</value>
+      <webElementGuid>7f9a862c-99e4-45e9-9cea-d76c531847f3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='MISSIONNEXT EDUCATION CANDIDATE REGISTRATION']/parent::*</value>
+      <webElementGuid>ffdf762d-4c8f-41f7-a7d0-afe45103ed2b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//h1</value>
+      <webElementGuid>c4117806-67ba-45c3-a9ed-33d99757af81</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//h1[(text() = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION' or . = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION')]</value>
+      <webElementGuid>7e96978a-4ca9-4e68-b983-edde0ef5f9f7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

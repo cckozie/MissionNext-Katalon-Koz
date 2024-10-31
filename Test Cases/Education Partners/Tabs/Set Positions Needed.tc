@@ -6,4 +6,30 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>d41f0bf9-cb40-482f-9c23-8e06014ebf37</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2ef27f0a-ece9-456f-9d6d-8f9ba835781d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2c6c1fdd-f7de-4937-8459-51bc52556fbf</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>2ef27f0a-ece9-456f-9d6d-8f9ba835781d</id>
+      <masked>false</masked>
+      <name>varPositions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>2c6c1fdd-f7de-4937-8459-51bc52556fbf</id>
+      <masked>false</masked>
+      <name>varExperiences</name>
+   </variable>
 </TestCaseEntity>

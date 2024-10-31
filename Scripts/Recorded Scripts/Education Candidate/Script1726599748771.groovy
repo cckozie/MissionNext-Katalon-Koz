@@ -21,51 +21,51 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://education.explorenext.org/signup/candidate')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_Username_registrationmain_fieldsusername'), 'cktest09ep')
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Username_registrationmain_fieldsusername'), 'cktest09ep')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_Email_registrationmain_fieldsemail'), 'cktest09@missionnext.org')
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Email_registrationmain_fieldsemail'), 'cktest09@missionnext.org')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Education Candidate/input_Password_registrationmain_fieldspassword'), 
+WebUI.setEncryptedText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Password_registrationmain_fieldspassword'), 
     'WY2oVvvWQqMllnWN6n70nA==')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_First Name_registrationgroup1first_name'), 'cktest09ep TEST')
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_First Name_registrationgroup1first_name'), 'cktest09ep TEST')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_Last Name_registrationgroup1last_name'), 'Kosieracki')
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Last Name_registrationgroup1last_name'), 'Kosieracki')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_Best Phone Number_registrationgroup1c_caa017'), 
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Best Phone Number_registrationgroup1c_caa017'), 
     '952-442-1703')
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/input_Terms and Conditions_registrationgrou_47df81'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Terms and Conditions_registrationgrou_47df81'))
 
-WebUI.doubleClick(findTestObject('Object Repository/Education Candidate/button_Sign up'))
+WebUI.doubleClick(findTestObject('Object Repository/temp/Recorded Education Candidate/button_Sign up'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/input_Female_profilegroup-1443546232.861gender'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/radio_Female'))
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate/input_Birth Year_profilegroup-1443546232.86_435965'), 
+WebUI.setText(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Birth Year_profilegroup-1443546232.86_435965'), 
     '1949')
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/div_Check to Agree with Terms and Condition_15a9a0'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/div_Check to Agree with Terms and Condition_15a9a0'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/btn_Complete Submit'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/btn_Complete Submit'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/a_Experience'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/a_Experience'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/input_I have attended a missions event_prof_989a21'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/input_I have attended a missions event_prof_989a21'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/btn_Complete Submit'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/btn_Complete Submit'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/a_Education'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/a_Education'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/input_Bible_profilegroup-1449793011.346teac_b7479f'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Bible_profilegroup-1449793011.346teac_b7479f'))
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate/select_RudimentaryElementaryIntermediatePro_102d7d'), 
+WebUI.selectOptionByValue(findTestObject('Object Repository/temp/Recorded Education Candidate/select_RudimentaryElementaryIntermediatePro_102d7d'), 
     'Proficient', true)
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/btn_Complete Submit'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/btn_Complete Submit'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/a_Preferences'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/a_Preferences'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/input_Bible Teacher_profilegroup-1449972047_4e64a3'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/input_Bible Teacher_profilegroup-1449972047_4e64a3'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate/btn_Complete Submit'))
+WebUI.click(findTestObject('Object Repository/temp/Recorded Education Candidate/btn_Complete Submit'))
 

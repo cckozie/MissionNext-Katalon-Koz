@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Suggested Browsers</name>
+   <tag></tag>
+   <elementGuidId>95f4851c-5d22-4a1c-8988-c28474057946</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div[2]/form/div/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a[title=&quot;Opens in a new window&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>d88c82a1-ccd0-4b87-b6a1-b1a08883b480</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>http://info.missionnext.org/browsers.php</value>
+      <webElementGuid>12afc894-f7c8-4c65-8702-484f9b881d7b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Opens in a new window</value>
+      <webElementGuid>4f807c9b-23b6-439b-88d3-0e2962192102</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>cf272339-e19c-461d-852b-dd027e1dcfd3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Suggested Browsers</value>
+      <webElementGuid>37564b82-4a8f-4f49-8b31-c35ec5e42c0c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/form[@class=&quot;form-horizontal&quot;]/div[1]/a[1]</value>
+      <webElementGuid>e13f8ff8-6bfa-41b5-962a-45b2738bd118</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div[2]/form/div/a</value>
+      <webElementGuid>509ed388-5647-4bef-83a3-08b7463db69d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Suggested Browsers')]</value>
+      <webElementGuid>cd3c8aa3-d130-47d6-92f3-de68fa2da56e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='JOURNEY CANDIDATE REGISTRATION'])[1]/following::a[1]</value>
+      <webElementGuid>fefbad27-bf47-49ef-b62a-b2f189fe8df3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Partners'])[1]/following::a[1]</value>
+      <webElementGuid>f2c78d6b-bb34-4d62-af58-e9dcef8f4d2d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='LOGIN INFORMATION'])[1]/preceding::a[1]</value>
+      <webElementGuid>c6c7cd84-674d-4196-b809-7cc92690cb77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Username'])[1]/preceding::a[1]</value>
+      <webElementGuid>9cda1250-bde8-43ee-8a5c-a03888a1f778</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Suggested Browsers']/parent::*</value>
+      <webElementGuid>02684865-f85f-4e9c-b78d-734ffefa2140</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[@href='http://info.missionnext.org/browsers.php']</value>
+      <webElementGuid>a3bb88b6-ca00-4abb-b1ba-7b174b10ecfe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//form/div/a</value>
+      <webElementGuid>bd8c821f-f80e-48b0-990f-315536780324</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'http://info.missionnext.org/browsers.php' and @title = 'Opens in a new window' and (text() = 'Suggested Browsers' or . = 'Suggested Browsers')]</value>
+      <webElementGuid>25c7a6aa-92b3-4bf0-9427-4b9581948de8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

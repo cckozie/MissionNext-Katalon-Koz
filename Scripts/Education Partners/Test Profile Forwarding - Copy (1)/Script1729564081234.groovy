@@ -48,26 +48,26 @@ for(email in emails) {
 	WebUI.navigateToUrl('https://education.' + GlobalVariable.domain + '/candidate/14992')
 	
 	//Click the print/forward button and switch to the new tab
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/button_PrintForward Profile'))
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/button_PrintForward Profile'))
 	
 	WebUI.delay(3)
 	
 	WebUI.switchToWindowIndex(1)
 	
 	//Enter the email details and send
-	WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/input_Mail to'), email)
+	WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/input_Mail to'), email)
 	
 	if(email == 'cktest01mn@gmail.com') {
 	
-		WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'), 'Testing issue #52 on ' + GlobalVariable.domain + '.')
+		WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/textarea_Note'), 'Testing issue #52 on ' + GlobalVariable.domain + '.')
 		
 	} else {
 		
-		WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/textarea_Note'), 'Testing issue #91 on ' + GlobalVariable.domain + '.')
+		WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/textarea_Note'), 'Testing issue #91 on ' + GlobalVariable.domain + '.')
 
 	}
 	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Candidate Profile/btn_Send'))
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/btn_Send'))
 	
 	
 	//Test for the email sent message

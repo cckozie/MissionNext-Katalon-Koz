@@ -149,4 +149,9 @@
       <initValue>''</initValue>
       <name>returnCode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[]</initValue>
+      <name>ministriesList</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
