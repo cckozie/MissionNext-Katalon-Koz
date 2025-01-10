@@ -6,11 +6,11 @@
    <elementGuidId>b68c4e54-0cc6-4521-a4bc-69d402c0ace3</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[4]/div[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;group-1446560994.446&quot;]/div[3]/div[1]</value>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>a73aac2b-5be7-4fa5-8513-2be1a4062cd3</webElementGuid>
+      <webElementGuid>a4def1a1-036c-4630-8548-2251c3cce639</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>5bf5f374-9307-4a03-b3cb-12122e691796</webElementGuid>
+      <webElementGuid>941b4a59-1cbf-47e3-a1a4-4702337495f6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -38,8 +38,8 @@
       <name>text</name>
       <type>Main</type>
       <value>
-                    The state field is required.                </value>
-      <webElementGuid>493c2e35-4c46-44d2-9e3d-9d0eb7d944ac</webElementGuid>
+                    The school mailing address field is required.                </value>
+      <webElementGuid>c688fe69-f4ec-43a2-a3f5-30a420aa760d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,63 +47,63 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>fd7b9a1e-441d-48fc-910a-b12bb6d53b5b</webElementGuid>
+      <webElementGuid>d9d08ef1-5452-4983-b88f-f997374d3786</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1446560994.446']/div[3]/div</value>
-      <webElementGuid>ccf8042a-ef21-4976-b7be-86e724931d52</webElementGuid>
+      <value>//div[@id='group-1446560994.446']/div/div</value>
+      <webElementGuid>1ed108e2-fafd-4f91-846c-019bd2611b00</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='City*'])[1]/following::div[3]</value>
-      <webElementGuid>6e3cb732-12dc-4a47-b23e-2f418acc4f51</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='ABOUT YOUR ORGANIZATION'])[1]/following::div[2]</value>
+      <webElementGuid>b8254316-d653-4205-abfe-8a7947bafa5b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The school city field is required.'])[1]/following::div[4]</value>
-      <webElementGuid>5b2d5efb-3fc0-4b99-b437-625801fb3e16</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Applies to Journey Only'])[1]/following::div[3]</value>
+      <webElementGuid>c3e4cd58-f844-4302-bda6-38b1407be0fa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='State*'])[1]/preceding::div[1]</value>
-      <webElementGuid>d9b1d71d-8ced-4241-b975-7b3c9b55a3ae</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mailing Address*'])[1]/preceding::div[1]</value>
+      <webElementGuid>8e4a3c30-71d2-46a8-b339-dadac2db1f0f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Province/State/Region'])[1]/preceding::div[3]</value>
-      <webElementGuid>1a8a0e6f-e683-4470-a94c-6d9f6ebaf69c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The school city field is required.'])[1]/preceding::div[3]</value>
+      <webElementGuid>1d550a88-9596-4166-a194-c98c954ca0de</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='The state field is required.']/parent::*</value>
-      <webElementGuid>399e7091-84ec-4479-b461-0e94d733ce80</webElementGuid>
+      <value>//*/text()[normalize-space(.)='The school mailing address field is required.']/parent::*</value>
+      <webElementGuid>092a362f-82be-4aab-a769-3c2f93e6a4a7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[5]/div[3]/div</value>
-      <webElementGuid>8dedc6f2-fcf9-4cd8-925c-f89619f07842</webElementGuid>
+      <value>//div[5]/div/div</value>
+      <webElementGuid>4f0d1f99-ee29-44a1-ac27-d26639f365ff</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,8 +111,8 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//div[(text() = '
-                    The state field is required.                ' or . = '
-                    The state field is required.                ')]</value>
-      <webElementGuid>78421073-4f19-44f0-bc5e-3e3be6e3971b</webElementGuid>
+                    The school mailing address field is required.                ' or . = '
+                    The school mailing address field is required.                ')]</value>
+      <webElementGuid>39149029-9304-47f9-b287-d73e6d6bb80a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

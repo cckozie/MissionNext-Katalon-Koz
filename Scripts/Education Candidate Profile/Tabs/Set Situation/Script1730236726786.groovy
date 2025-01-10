@@ -60,23 +60,25 @@ xpaths = [process_stage, bible_training, church_affiliated, journey_guide]
 //Go to the Situation tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Situation'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
+
 // Set the text boxes and dropdown lists
 if (varPerspectives != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tab-Situation/select_Perspectives'), 
+    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/select_Perspectives'), 
         varPerspectives, false)
 }
 
 if (varDescribe_training != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tab-Situation/textarea_Describe Bible Training'), 
+    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/textarea_Describe Bible Training'), 
         varDescribe_training)
 }
 
 if (varChurch_name != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tab-Situation/input_Church Name'), varChurch_name)
+    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/input_Church Name'), varChurch_name)
 }
 
 if (varChurch_involvement != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tab-Situation/select_Church Involvement'), 
+    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/select_Church Involvement'), 
         varChurch_involvement, false)
 }
 
@@ -85,5 +87,5 @@ WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('va
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tab-Situation/btn_Complete Submit'))
+WebUI.click(findTestObject('Education Candidate Profile/Tabs/Situation/btn_Complete Submit'))
 

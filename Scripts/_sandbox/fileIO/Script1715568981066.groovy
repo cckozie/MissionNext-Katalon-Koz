@@ -22,6 +22,7 @@ import groovy.io.FileType
 
 import java.io.*;
 
+
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey candidate/journey contact registration/'
 
 tooltips = ['username', 'email', 'password', 'first_name', 'last_name', 'learn_about_us', 'terms_and_conditions']

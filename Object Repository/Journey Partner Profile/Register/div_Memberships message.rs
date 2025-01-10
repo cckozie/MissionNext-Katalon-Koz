@@ -6,11 +6,11 @@
    <elementGuidId>90944cf0-96d5-4648-a783-511c572755de</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group-1446560994.446&quot;]/div[9]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>8b50a607-33d9-4bda-ac03-73f3f08366e0</webElementGuid>
+      <webElementGuid>8874227f-eaec-41c3-8adc-c836b0c21f69</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>a5107cd5-eda2-4e34-827c-cbd8dcc27285</webElementGuid>
+      <webElementGuid>8fc9b528-682b-48e2-b9ce-113727efb9a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <type>Main</type>
       <value>
                     The memberships field is required.                </value>
-      <webElementGuid>3f1106a7-e75e-44a3-acca-24c838cd419b</webElementGuid>
+      <webElementGuid>6bd38e09-4727-4386-a803-5c3d7753a240</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>a9aa6dad-bd01-4abb-ace0-33138691c884</webElementGuid>
+      <webElementGuid>13f61832-e3e1-404c-af6f-381074b75343</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446560994.446']/div[9]/div</value>
-      <webElementGuid>6f824dcb-6472-4a89-ae39-cf19e13bfbb1</webElementGuid>
+      <webElementGuid>e173306d-0cd2-4bc2-90dd-0554d5814dd5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Website Address*'])[1]/following::div[3]</value>
-      <webElementGuid>524df0b1-df41-4e7f-98a0-afc306cdae07</webElementGuid>
+      <webElementGuid>b8d5ec95-7ddf-4b50-8fec-95d8cce62f07</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The website address field is required.'])[1]/following::div[4]</value>
-      <webElementGuid>73611c38-c64e-41d2-8ed7-18aec42a6f70</webElementGuid>
+      <webElementGuid>6eb45c8d-cb7e-4189-8e10-5cc10c73ea9b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Affiliated Organizations*'])[1]/preceding::div[1]</value>
-      <webElementGuid>a8eb01e6-e4ca-46b4-9433-cfb4f2e8c8cd</webElementGuid>
+      <webElementGuid>b484f8cc-cea8-4bf6-94d0-c7d04e9db9e7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='ECFA'])[1]/preceding::div[2]</value>
-      <webElementGuid>2345f47b-524c-42ac-a65f-bcddee0969a6</webElementGuid>
+      <webElementGuid>f282a442-350f-44ad-a9a4-b41b3aceff90</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The memberships field is required.']/parent::*</value>
-      <webElementGuid>0454531d-f85a-41cd-98a3-db5768511ba7</webElementGuid>
+      <webElementGuid>daec9ed5-b414-4d04-b6da-9817804f1dab</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[9]/div</value>
-      <webElementGuid>cd8cbbe2-e2b4-4643-b78d-43a3d992680a</webElementGuid>
+      <webElementGuid>7589f06a-0fd1-4564-a337-0f0fed95bbc9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -113,6 +113,6 @@
       <value>//div[(text() = '
                     The memberships field is required.                ' or . = '
                     The memberships field is required.                ')]</value>
-      <webElementGuid>086177a6-f363-496f-98fc-8887a19af1e1</webElementGuid>
+      <webElementGuid>344b2dbd-6c2d-429a-b886-57cc349646a0</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

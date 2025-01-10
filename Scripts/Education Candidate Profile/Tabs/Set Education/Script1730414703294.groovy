@@ -44,6 +44,8 @@ xpaths = [previous_experience]
 //Go to the Education tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Education'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
+
 // Set the text boxes and dropdown lists
 if (varFormal_degree != null) {
     WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree'),
@@ -80,5 +82,5 @@ WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('va
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tab-Situation/btn_Complete Submit'))
+WebUI.click(findTestObject('Education Candidate Profile/Tabs/Situation/btn_Complete Submit'))
 

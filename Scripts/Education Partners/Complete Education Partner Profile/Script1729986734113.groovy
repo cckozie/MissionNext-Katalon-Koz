@@ -41,12 +41,25 @@ if (url == null) {
     WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [:], FailureHandling.STOP_ON_FAILURE)
+/*
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
 if(url.indexOf('dashboard') >= 0) {
 	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
 }
-/*
+*/
+//Make the screen tall if headless
+headless = WebUI.callTestCase(findTestCase('_Functions/Test for Headless Browser'), [:], FailureHandling.STOP_ON_FAILURE)
+
+dashboard = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'), FailureHandling.OPTIONAL)
+
+if(dashboard) {
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [:], FailureHandling.STOP_ON_FAILURE)
+
 //Complete the Contact Info tab
 WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Contact Info'), [:], FailureHandling.OPTIONAL)
 
@@ -89,7 +102,7 @@ WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Readiness'), [('var
 	('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
 	('varPerspectives') : perspectives,	('varMissions_experience') : missions_experience, 
 	('varRelocation') : relocation], FailureHandling.OPTIONAL)
-*/
+
 //Complete the Match Filters tab
 degree = ['No']
 

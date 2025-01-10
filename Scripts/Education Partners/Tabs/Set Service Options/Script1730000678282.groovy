@@ -50,8 +50,7 @@ xpaths = [time_commitments, start_options, school_terms]
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Service Options'))
 
-//WebUI.callTestCase(findTestCase('_Functions/Click on ALL Group Elements'), [('varXpaths') : xpaths],
-//	 FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Service Options Tab'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms],
 	 FailureHandling.STOP_ON_FAILURE)

@@ -17,13 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-myValue = '(!) No'
-println(myValue + ':' + myValue.length())
-if(myValue.length() >= 4) {
-	println(myValue.substring(0,3))
-	println(myValue.substring(0,4))
-	if(myValue.substring(0,4) == '(!) ') {
-		myValue = myValue.substring(4)
-		println(myValue)
-	}
+//myValue = 'Administrator'
+myValue = 'Administrator'
+for(chr in myValue) {
+	println((int) chr)
 }

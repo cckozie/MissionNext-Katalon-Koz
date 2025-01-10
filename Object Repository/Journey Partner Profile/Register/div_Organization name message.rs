@@ -6,12 +6,12 @@
    <elementGuidId>9d0c857c-517e-4fcb-b50b-2541dfc1ba0f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.col-sm-offset-3.col-sm-9.text-danger</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group1&quot;]/div[1]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-sm-offset-3.col-sm-9.text-danger</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>ac412923-6087-4df8-9dc4-c04c0d61218e</webElementGuid>
+      <webElementGuid>073708e6-7bc1-42c2-b813-10ff2621cfef</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>2f836936-33d1-4b39-8548-e0b55a8ea45f</webElementGuid>
+      <webElementGuid>f8fc1365-28c1-4620-849d-dd111ea00f3a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -40,7 +40,7 @@
       <type>Main</type>
       <value>
                     The organization name field is required.                </value>
-      <webElementGuid>121e059e-f93a-41a4-8a2a-97331a6c54b9</webElementGuid>
+      <webElementGuid>d1a51b34-921e-4695-8b83-d7a30b7b423c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -48,7 +48,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>91be6f36-24ea-4ac7-bbee-907e64862155</webElementGuid>
+      <webElementGuid>24d4cc66-0397-42ce-9a1a-e84464128200</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -56,7 +56,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div/div</value>
-      <webElementGuid>ca937876-78fc-4cea-8198-8b7e88a4b3a6</webElementGuid>
+      <webElementGuid>abc68a75-a743-472e-853f-a1bdffc6035f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -64,7 +64,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT INFORMATION'])[1]/following::div[2]</value>
-      <webElementGuid>915b4b73-10e8-483c-bf3d-65f9b272d265</webElementGuid>
+      <webElementGuid>49c39cbc-476f-433a-b88b-ddd6d14ca5eb</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -72,7 +72,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::div[4]</value>
-      <webElementGuid>62f4cfe4-71fd-41f2-b583-36506d9d4462</webElementGuid>
+      <webElementGuid>c9b03e84-41d4-4264-92ee-a663317aa0cd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -80,7 +80,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Organization*'])[1]/preceding::div[1]</value>
-      <webElementGuid>8c27444e-4a71-4a95-ae9d-88acc18da5f5</webElementGuid>
+      <webElementGuid>7a80567f-36a1-4bd7-ac47-eb1fb837f257</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -88,7 +88,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Abbreviation'])[1]/preceding::div[3]</value>
-      <webElementGuid>888f900e-67ca-4286-99ed-4fed124f415f</webElementGuid>
+      <webElementGuid>1a0b410a-7af1-4101-89af-d8a558485b15</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -96,7 +96,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The organization name field is required.']/parent::*</value>
-      <webElementGuid>19f371f6-e537-4d99-9bd1-b4cb2c90d156</webElementGuid>
+      <webElementGuid>e9e31739-5f4a-44fa-8830-c54d962bc700</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -104,7 +104,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div/div</value>
-      <webElementGuid>5b2f7283-699f-4f45-83c9-19f4fdd62b15</webElementGuid>
+      <webElementGuid>4ec018a2-2749-4c2c-820e-fd428e4843b2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -114,6 +114,6 @@
       <value>//div[(text() = '
                     The organization name field is required.                ' or . = '
                     The organization name field is required.                ')]</value>
-      <webElementGuid>e2895d1b-acb1-49b0-809a-d85898942676</webElementGuid>
+      <webElementGuid>1b0caff2-b5c1-45cc-b416-45116a30344e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

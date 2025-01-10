@@ -56,13 +56,12 @@ xpaths = [process_stage, cross_cultural, bible_training, perspectives, missions_
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Readiness'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Readiness Tab'], FailureHandling.STOP_ON_FAILURE)
+
 xpaths = [process_stage, cross_cultural, bible_training, perspectives, missions_experience, relocation]
 
 parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives, 
 	varMissions_experience, varRelocation]
-
-//WebUI.callTestCase(findTestCase('_Functions/Click on ALL Group Elements'), [('varXpaths') : xpaths],
-//	 FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms],
 	FailureHandling.STOP_ON_FAILURE)

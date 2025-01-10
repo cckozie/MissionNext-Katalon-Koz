@@ -58,9 +58,9 @@ xpaths = [degree, experience, credentials, english, travel, paid_volunteer]
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Match Filters'))
 
-WebUI.callTestCase(findTestCase('_Functions/Click on ALL Group Elements'), [('varXpaths') : xpaths],
-	FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Match Filters Tab'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Match Filters/btn_Complete Submit'))

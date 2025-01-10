@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -117,7 +118,7 @@ ministries = [ //CHURCH DEVELOPMENT
 
 WebUI.callTestCase(findTestCase('_Functions/Profile Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Ministry Prefs Tab/a_Ministry Prefs'))
+click('Object Repository/Journey Partner Profile/Ministry Prefs Tab/a_Ministry Prefs')
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -137,25 +138,37 @@ println('count is ' + element_count)
 //and uncheck any checked elements
 for (def element : allCheckboxes) {
     myValue = element.getAttribute('value')
+	println(myValue)
 
     (ministries[myValue]) = element
 
     if (element.isSelected()) {
-        myObj = WebUI.convertWebElementToTestObject(myElement)
+        myObj = WebUI.convertWebElementToTestObject(element)
 
-        WebUI.click(myObj)
+        click(myObj)
     }
 }
 
-//Click the checkbox for each Ministry from the input paramenter
-for (def ministry : ministriesList) {
-    myElement = ministries.get(ministry)
-
-    myObj = WebUI.convertWebElementToTestObject(myElement)
-
-    WebUI.click(myObj)
+ministries.each {
+	println(it.key + ':' + it.value)
 }
 
+
+/*
+//Click the checkbox for each Ministry from the input paramenter
+for (def ministry : ministriesList) {
+	
+	println(ministry)
+	
+	println(ministries.get(ministry))
+	
+    myElement = ministries.get(ministry)
+	println(myElement)
+    myObj = WebUI.convertWebElementToTestObject(myElement)
+	println(myObj)
+    WebUI.click(findTestObject(myObj))
+}
+System.exit(0)
 checked = []
 
 for (def element : allCheckboxes) {
@@ -184,5 +197,36 @@ checked.each({
 
 println(('There were ' + errorCount) + ' selection error(s) found.')
 
-WebUI.click(findTestObject('Journey Partner Profile/Ministry Prefs Tab/input_Complete Submit'))
+click('Journey Partner Profile/Ministry Prefs Tab/input_Complete Submit')
+*/
+
+def scrollToObject(def object) {
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+
+	loc = element.getLocation()
+
+	y = loc.getY()
+
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		WebUI.scrollToPosition(0, y - 150)
+
+		WebUI.delay(1)
+	}
+}
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(findTestObject(object))
+}
 

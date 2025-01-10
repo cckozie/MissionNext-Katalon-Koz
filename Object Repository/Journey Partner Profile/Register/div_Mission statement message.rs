@@ -6,11 +6,11 @@
    <elementGuidId>afb55362-4767-410c-82bb-1ee0a73eaa56</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group-1446560994.446&quot;]/div[10]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>fdbe6db1-b0ec-4dab-a1de-1edd167eceb8</webElementGuid>
+      <webElementGuid>79e92588-456f-43eb-a438-88809227035b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>47745f29-fa60-43cf-a964-09ebfb303234</webElementGuid>
+      <webElementGuid>1f250a97-6ade-4954-853b-25929e2abee5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <type>Main</type>
       <value>
                     The mission statement field is required.                </value>
-      <webElementGuid>cf50ce9b-dd9e-4a6b-845d-d35acb914dba</webElementGuid>
+      <webElementGuid>cb9d9a66-957c-4bde-a62f-4636c58d11c7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>48f159d8-441e-46f5-8ab0-6af803b32db1</webElementGuid>
+      <webElementGuid>87b2a39b-0fbb-4486-96e3-16f356c396af</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446560994.446']/div[10]/div</value>
-      <webElementGuid>b82c2caa-3266-43e1-b003-1dcd75594dc4</webElementGuid>
+      <webElementGuid>033222de-02a5-48ba-ae8a-429f68330431</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Affiliated Christian Organizations'])[1]/following::div[2]</value>
-      <webElementGuid>bf962849-06e7-4a07-b138-2f696586fad5</webElementGuid>
+      <webElementGuid>47380004-6e18-4016-b826-ab8ea07f48df</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Mission Statement*'])[1]/preceding::div[1]</value>
-      <webElementGuid>1a9588c2-bf98-492c-bc8e-275ee9a97baa</webElementGuid>
+      <webElementGuid>31fc93b1-8b16-4be5-9d84-bcaf5ccfa533</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The board of directors field is required.'])[1]/preceding::div[3]</value>
-      <webElementGuid>a24ca372-311f-4e60-b2b8-5ff615c46be8</webElementGuid>
+      <webElementGuid>b79bfccc-9fac-471a-b91a-5ee2dd2df76e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The mission statement field is required.']/parent::*</value>
-      <webElementGuid>7321d90c-dbed-468b-a4c6-79c54b05d479</webElementGuid>
+      <webElementGuid>c4d66d19-bcdc-4c98-8ffc-1fb63eac894b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[10]/div</value>
-      <webElementGuid>24ae2c2e-7550-457e-aea7-2bc04ee54ace</webElementGuid>
+      <webElementGuid>1db1236c-679b-4a8c-ba65-418b9d7aa023</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -105,6 +105,6 @@
       <value>//div[(text() = '
                     The mission statement field is required.                ' or . = '
                     The mission statement field is required.                ')]</value>
-      <webElementGuid>a6b5c191-6e1d-49ac-9702-d66ef31515b3</webElementGuid>
+      <webElementGuid>a00ce4ef-9389-457d-b943-a026416b1b1b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

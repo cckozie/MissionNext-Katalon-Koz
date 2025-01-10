@@ -6,11 +6,11 @@
    <elementGuidId>6a098730-b6d9-43d0-8bc3-6531589f576b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group-1446560994.446&quot;]/div[12]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>a0a4fa6a-a46d-48b6-86f5-6075994681e4</webElementGuid>
+      <webElementGuid>a5099da7-dc0d-4e08-9618-e8cf4324adfb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>0d9d644b-40e2-4368-ab9a-28eb5ec0c274</webElementGuid>
+      <webElementGuid>276d60b7-0c9e-4ab3-b8ab-4e8eecd0bfec</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <type>Main</type>
       <value>
                     The statement of faith field is required.                </value>
-      <webElementGuid>a4cc6af2-195e-4a7b-bd8c-a9831786c5b7</webElementGuid>
+      <webElementGuid>f620fab0-696f-4fad-9738-04ea6434134b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>ad6daeba-0233-4db4-bd28-c9d7ae4aebbb</webElementGuid>
+      <webElementGuid>8f1590bf-53f3-48db-bb99-06bf8ef4f7fc</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446560994.446']/div[12]/div</value>
-      <webElementGuid>61d9f65d-8ab9-47b5-a1f8-00a4c252651a</webElementGuid>
+      <webElementGuid>56690b3e-0123-495a-b8dd-26a0ce3f6ace</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Board of Directors*'])[1]/following::div[3]</value>
-      <webElementGuid>3a3e24ae-7def-4908-ab35-df948c494c48</webElementGuid>
+      <webElementGuid>c780b376-ebea-4974-940b-8e4f89339955</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The board of directors field is required.'])[1]/following::div[4]</value>
-      <webElementGuid>6e224214-26cc-49f1-b6c7-1f355f430c3f</webElementGuid>
+      <webElementGuid>ed62e1e5-b68f-4585-9f57-368637ca9626</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith*'])[1]/preceding::div[1]</value>
-      <webElementGuid>0b91e8c4-c93b-4cfd-b21d-b1c10cabd59a</webElementGuid>
+      <webElementGuid>a4143bac-9821-46ea-b2a2-aab84dcaf14a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The references field is required.'])[1]/preceding::div[3]</value>
-      <webElementGuid>a46e5c29-1ab7-4e9a-92a7-e7228ebddc8a</webElementGuid>
+      <webElementGuid>8bec6c85-91ea-4a46-9f40-08a435e8b9ae</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The statement of faith field is required.']/parent::*</value>
-      <webElementGuid>c2106082-8e4b-4579-99cf-900fc45a69fd</webElementGuid>
+      <webElementGuid>df53dc69-3ca1-42fc-9bdb-7ce1f567b60f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[12]/div</value>
-      <webElementGuid>50f79ed4-7f86-4d27-8c8d-421e880fd887</webElementGuid>
+      <webElementGuid>28a56aa5-1d65-46e5-a79e-b877ea985635</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -113,6 +113,6 @@
       <value>//div[(text() = '
                     The statement of faith field is required.                ' or . = '
                     The statement of faith field is required.                ')]</value>
-      <webElementGuid>8cd875b8-da76-4a41-987b-3169837bf2d2</webElementGuid>
+      <webElementGuid>059340f0-6f9d-4631-9185-34179bf4f94b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

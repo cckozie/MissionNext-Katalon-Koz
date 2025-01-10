@@ -47,7 +47,7 @@ if (username != 'cktest06ep') {
 //	Need to test the text of the error messages, not just that they are visible			-Completed 10/04/24
 // 	Modify to use Generic Wait for Email												-Completed 10/04/24
 //  Create and use image folder for education, not journey								-Completed 10/04/24
-//
+//	Added test for headless browser 													-Completed 11/12/24
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //================================== Initialize ===============================================
 // Get the domain and set the url
@@ -99,183 +99,200 @@ WebUI.openBrowser(url)
 
 WebUI.maximizeWindow()
 
-WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Register/input_Username'), '=====> WAITING FOR SIKULI TO LOAD <=====')
+headless = WebUI.callTestCase(findTestCase('_Functions/Test for Headless Browser'), [:], FailureHandling.STOP_ON_FAILURE)
 
-Screen s = new Screen()
+if(!headless) {	
+	//Post message about starting Sikulix
+	WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Register/input_Username'), '=====> WAITING FOR SIKULI TO LOAD <=====')
+	
+	Screen s = new Screen()
+	
+	WebUI.clearText(findTestObject('Object Repository/Education Partner Profile/Register/input_Username'))
 
-WebUI.clearText(findTestObject('Object Repository/Education Partner Profile/Register/input_Username'))
+	// Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
+//	tooltips.each({ 
+	for(it in tooltips) {
+	        myKey = it.key
+	
+	        myValue = it.value
+	
+	        println(myKey)
+	
+	        println(myValue)
+	
+	        tObj = ('Education Partner Profile/Register/' + myValue)
+	
+	//        WebUI.scrollToElement(findTestObject(tObj),2)
+	
+	//        WebUI.delay(1)
+	
+	        WebUI.click(findTestObject(tObj))
+			
+	        WebUI.delay(1)
+	
+	        myImage = ((ttPath + myKey) + '.png')
+	
+	        f = new File(myImage)
+	
+	        if (f.exists()) {
+	            println('Looking for ' + myImage)
+	
+	            Pattern icn = new Pattern(myImage).similar(0.70)
+	
+	            found = s.exists(icn)
+	
+	            println(found)
+	
+	            if (found != null) {
+	                foundStr = found.toString()
+	
+	                matchP = foundStr.indexOf('S:')
+	
+	                println(matchP)
+	
+	                pct = foundStr.substring(matchP + 2, matchP + 5)
+	
+	                outText = ('+++++++++++++++ Found tooltip text for ' + myKey)
+	
+	                println(outText)
+	
+					outText = 'Match value is ' + pct + '%'
+					
+					println(outText)
+					
+					outFile.append(outText + '\n')
+					
+	            } else {
+	                outText = ('----------- Unable to find tooltip text for ' + myKey)
+	
+	                println(outText)
+	
+	                outFile.append(outText + '\n')
+	            }
+	        } else {
+	            outText = ('Unable to find image file ' + myImage)
+	
+	            outFile.append(outText + '\n')
+	
+	            println(outText)
+	
+	            KeywordUtil.markError('\n' + outText)
+	        }
+	    }
+	// Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Register/a_Customer Support'))
+	
+	WebUI.delay(2)
 
-// Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
-tooltips.each({ 
-        myKey = it.key
+	csPath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/email/'
+	
+	myImage = (csPath + 'emailAddress.png')
+	
+	f = new File(myImage)
+	
+	println(f)
+	
+	if (f.exists()) {
+	    println('Looking for ' + myImage)
+	
+	    Pattern icn = new Pattern(myImage).similar(0.70)
+	
+	    found = s.exists(icn)
+	
+	    println(found)
+	
+	    if (found != null) {
+	        foundStr = found.toString()
+	
+	        matchP = foundStr.indexOf('S:')
+	
+	        println(matchP)
+	
+	        pct = foundStr.substring(matchP + 2, matchP + 5)
+	
+	        outText = '+++++++++++++++ Found email address image'
+	
+	        println(outText)
+	
+	        pctVal = new BigDecimal(pct)
+	
+	        pctVal = (pctVal * 100).intValue()
+	
+	        outFile.append(((outText + ' : ') + pctVal) + '%\n')
+	    } else {
+	        outText = '----------- Unable to find email address image'
+	
+	        println(outText)
+	
+	        outFile.append(outText + '\n')
+	
+	        KeywordUtil.markError('\n' + outText)
+	    }
+	} else {
+	    outText = ('Unable to find image file ' + myImage)
+	
+	    outFile.append(outText + '\n')
+	
+	    println(outText)
+	
+	    KeywordUtil.markError('\n' + outText)
+	}
+	
+	// Close the email window and app
+	Robot robot = new Robot()
+	
+	//Close the email window
+	robot.keyPress(KeyEvent.VK_META) //META is the Mac Command key
+	
+	robot.keyPress(KeyEvent.VK_W)
+	
+	robot.keyRelease(KeyEvent.VK_W)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Take the Don't Save option
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_D)
+	
+	robot.keyRelease(KeyEvent.VK_D)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Quit the app
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_Q)
+	
+	robot.keyRelease(KeyEvent.VK_Q)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	if (found != null) {
+	    outText = '+++++ Found email to customer support'
+	} else {
+	    outText = '----- Failed to find email to customer support'
+	
+	    KeywordUtil.markError('\n' + outText)
+	}
+	
+	println(outText)
+	
+	outFile.append(outText + '\n')
 
-        myValue = it.value
-
-        println(myKey)
-
-        println(myValue)
-
-        tObj = ('Education Partner Profile/Register/' + myValue)
-
-        WebUI.click(findTestObject(tObj))
-
-        WebUI.delay(1)
-
-        myImage = ((ttPath + myKey) + '.png')
-
-        f = new File(myImage)
-
-        if (f.exists()) {
-            println('Looking for ' + myImage)
-
-            Pattern icn = new Pattern(myImage).similar(0.70)
-
-            found = s.exists(icn)
-
-            println(found)
-
-            if (found != null) {
-                foundStr = found.toString()
-
-                matchP = foundStr.indexOf('S:')
-
-                println(matchP)
-
-                pct = foundStr.substring(matchP + 2, matchP + 5)
-
-                outText = ('+++++++++++++++ Found tooltip text for ' + myKey)
-
-                println(outText)
-
-                pctVal = new BigDecimal(pct)
-
-                pctVal = (pctVal * 100).intValue()
-
-                outFile.append(((outText + ' : ') + pctVal) + '%\n')
-            } else {
-                outText = ('----------- Unable to find tooltip text for ' + myKey)
-
-                println(outText)
-
-                outFile.append(outText + '\n')
-            }
-        } else {
-            outText = ('Unable to find image file ' + myImage)
-
-            outFile.append(outText + '\n')
-
-            println(outText)
-
-            KeywordUtil.markError('\n' + outText)
-        }
-    })
-
-// Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Register/a_Customer Support'))
-
-WebUI.delay(2)
-
-csPath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/email/'
-
-myImage = (csPath + 'emailAddress.png')
-
-f = new File(myImage)
-
-println(f)
-
-if (f.exists()) {
-    println('Looking for ' + myImage)
-
-    Pattern icn = new Pattern(myImage).similar(0.70)
-
-    found = s.exists(icn)
-
-    println(found)
-
-    if (found != null) {
-        foundStr = found.toString()
-
-        matchP = foundStr.indexOf('S:')
-
-        println(matchP)
-
-        pct = foundStr.substring(matchP + 2, matchP + 5)
-
-        outText = '+++++++++++++++ Found email address image'
-
-        println(outText)
-
-        pctVal = new BigDecimal(pct)
-
-        pctVal = (pctVal * 100).intValue()
-
-        outFile.append(((outText + ' : ') + pctVal) + '%\n')
-    } else {
-        outText = '----------- Unable to find email address image'
-
-        println(outText)
-
-        outFile.append(outText + '\n')
-
-        KeywordUtil.markError('\n' + outText)
-    }
 } else {
-    outText = ('Unable to find image file ' + myImage)
+	
+	outText = 'Bypassed tooltip and email testing because browser is headless'
 
-    outFile.append(outText + '\n')
+	println(outText)
+	
+	outFile.append(outText + '\n')
 
-    println(outText)
-
-    KeywordUtil.markError('\n' + outText)
 }
-
-// Close the email window and app
-Robot robot = new Robot()
-
-//Close the email window
-robot.keyPress(KeyEvent.VK_META //META is the Mac Command key
-    )
-
-robot.keyPress(KeyEvent.VK_W)
-
-robot.keyRelease(KeyEvent.VK_W)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-WebUI.delay(1)
-
-//Take the Don't Save option
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_D)
-
-robot.keyRelease(KeyEvent.VK_D)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-WebUI.delay(1)
-
-//Quit the app
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_Q)
-
-robot.keyRelease(KeyEvent.VK_Q)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-if (found != null) {
-    outText = '+++++ Found email to customer support'
-} else {
-    outText = '----- Failed to find email to customer support'
-
-    KeywordUtil.markError('\n' + outText)
-}
-
-println(outText)
-
-outFile.append(outText + '\n')
-
 // Click the other hyperlinks and verify pages opened
 pageLinks.each({ 
         myElement = ('a_' + it.key)
@@ -315,10 +332,12 @@ pageLinks.each({
         WebUI.delay(1)
     })
 
-// Submit the form with all of the fields empty
-WebUI.click(findTestObject('Education Partner Profile/Register/button_Sign up'))
 
-fieldMessages.each({ 
+	//WebUI.scrollToElement(findTestObject('Education Partner Profile/Register/button_Sign up'), 0)
+	// Submit the form with all of the fields empty
+	WebUI.click(findTestObject('Education Partner Profile/Register/button_Sign up'))
+	
+	fieldMessages.each({ 
         myObj = it.key
 
         myMsg = it.value
@@ -352,6 +371,7 @@ fieldMessages.each({
             WebUI.waitForPageLoad(10)
         }
     })
+
 
 // Fill in the other fields and submit
 WebUI.setEncryptedText(findTestObject('Education Partner Profile/Register/input_Password'), GlobalVariable.password)
@@ -424,9 +444,7 @@ if (pending) {
 }
 
 //================================== Wait for the approval pending email for the new education partner =========
-//WebUI.callTestCase(findTestCase('_Functions/Wait for Email'), [('varSubjectKey') : 'Approval request', ('varUsername') : username], 
-//    FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'Chris.Kosieracki@missionnext.org'
+WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
         , ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
 if (GlobalVariable.returnCode == 'found') {
@@ -440,15 +458,9 @@ if (GlobalVariable.returnCode == 'found') {
     //================================== Create a subscriptioon for the new education partner ========================
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
+	
+    //================================== Complete the Education Partner tabs ========================
+	WebUI.callTestCase(findTestCase('Education Partners/Complete Education Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	
 }
-
-//Complete the Positions Needed tab
-positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
-
-experiences = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science']
-
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Positions Needed'), [('varPositions') : positions, ('varExperiences') : experiences], 
-    FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
-

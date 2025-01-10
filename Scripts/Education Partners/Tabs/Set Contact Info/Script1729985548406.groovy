@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+//import com.kms.katalon.core.webui.common.WebUiCommonHelper
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -29,12 +30,13 @@ if (username != 'cktest06ep') {
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
 //Log in as education partner if not on dashboard page
-if(!url == 'https://education.' + GlobalVariable.domain + '/profile?requestUri=/dashboard') {
-	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?requestUri=/dashboard')) {
+    WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Contact Info'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Education Partner Profile/Tabs/Contact Info/input_Key Contact Phone-R'), '952-442-1703')
 

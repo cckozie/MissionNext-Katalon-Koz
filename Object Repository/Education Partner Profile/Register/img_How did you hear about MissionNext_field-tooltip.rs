@@ -6,12 +6,11 @@
    <elementGuidId>91c7c248-55c8-46b5-9722-f79616a62818</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='group-1462396686.719']/div[9]/div/img</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//img[@alt='tooltip'])[8]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>ecd8d968-43a5-4546-8c47-6775b90ce128</webElementGuid>
+      <webElementGuid>15bcedeb-5c15-4a21-bd0c-b5d7f32e350a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>ffb421a7-e890-42ff-ae88-91bb96057beb</webElementGuid>
+      <webElementGuid>d474271b-1e41-422a-a2ae-32c0dd17ca91</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>86d3b31b-b6a8-45c5-8869-c9245c3b4ca8</webElementGuid>
+      <webElementGuid>58365ddd-5b7d-4e1e-ab1d-849dfd2e5544</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>9adfd7cc-48ef-439e-bc1d-5167c79e1f92</webElementGuid>
+      <webElementGuid>59a2f29e-46d7-459f-ba62-40963553edcf</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Please complete this field.  It helps us to know where we should focus our efforts.</value>
-      <webElementGuid>2e8e0eb1-ae5b-4fe7-86bf-0a6b56990a20</webElementGuid>
+      <webElementGuid>af07cc53-02c9-4a6d-ab49-17a0bcc7a115</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>eba69810-df66-4919-bf02-767e6d3c46dc</webElementGuid>
+      <webElementGuid>09555023-d8e0-44a3-9f0c-f01fcef311ee</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1462396686.719']/div[9]/div/img</value>
-      <webElementGuid>d7fa4faa-3216-4160-b49e-49680d007f7b</webElementGuid>
+      <webElementGuid>48e2e2af-43cd-4b83-8329-542e4c2a3e99</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[8]</value>
-      <webElementGuid>90530209-2748-4150-b316-35a073ebf757</webElementGuid>
+      <webElementGuid>d97cfd5f-e892-4d44-bf28-e368717743c2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[9]/div/img</value>
-      <webElementGuid>dda90dda-4d73-4d64-9a42-de309f544ce3</webElementGuid>
+      <webElementGuid>19510fdc-5ab8-4e6c-9ac5-5427b8130f3d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +94,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>226f8f81-4ba9-4482-988e-16888c2af6b3</webElementGuid>
+      <webElementGuid>4df1a173-ba16-4d85-b709-8ed0fb5b4498</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -6,11 +6,11 @@
    <elementGuidId>0113afe5-f4cc-45e2-b1ef-9546a3c15c86</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group1&quot;]/div[7]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>3a7344c0-4879-400d-944c-4b75733d4c53</webElementGuid>
+      <webElementGuid>5897fc0d-c264-41a6-8cc7-2f0ff17a83ce</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>a5d4327a-823c-46f5-95eb-2e5b3f46ea33</webElementGuid>
+      <webElementGuid>ac0cf7a9-050e-4aa1-938d-c5adf89e8a83</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <type>Main</type>
       <value>
                     The key contact phone field is required.                </value>
-      <webElementGuid>e3a55f79-eb93-4177-aa1c-93a850e2578e</webElementGuid>
+      <webElementGuid>4e111c79-8335-481f-9999-357977da138e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>afcd8a6d-5be4-43b0-8ef9-d54de2808f83</webElementGuid>
+      <webElementGuid>a7d6f061-189d-4f1f-a7ed-f1efd9b78995</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[7]/div</value>
-      <webElementGuid>ba33ac6c-7d91-45a8-b9b7-895f10cf5f73</webElementGuid>
+      <webElementGuid>ee457a92-8ef5-4c63-b761-a7079daef7ef</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Email*'])[1]/following::div[3]</value>
-      <webElementGuid>8722a58b-0271-4ee6-8a09-7d25a37f3d5f</webElementGuid>
+      <webElementGuid>2bd44679-ef0a-43ce-83d2-07fe57b97fb4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Last Name*'])[1]/following::div[6]</value>
-      <webElementGuid>36b990b1-00c7-4c9c-8569-4b2f290e6578</webElementGuid>
+      <webElementGuid>dd154fd5-5dee-4a48-a029-e9c90f096ff7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Phone*'])[1]/preceding::div[1]</value>
-      <webElementGuid>ed0fec44-96cf-4149-a373-ea4d3003c4c3</webElementGuid>
+      <webElementGuid>f63a5035-c9ea-425e-a9f4-e12de81da16f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='PRICING INFORMATION'])[1]/preceding::div[3]</value>
-      <webElementGuid>715d4059-1729-41fe-825b-a23f4d8dc634</webElementGuid>
+      <webElementGuid>2dbce78a-c18f-4314-ae1e-d6319035c230</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The key contact phone field is required.']/parent::*</value>
-      <webElementGuid>592bdc3a-2ddb-480a-9db8-ca218c237812</webElementGuid>
+      <webElementGuid>070c723f-a393-40fa-a259-48d2673a2cfc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div[7]/div</value>
-      <webElementGuid>977c8eba-dabe-4d9d-a91b-98697f894a03</webElementGuid>
+      <webElementGuid>1732275e-c539-46eb-9789-257f400d0e5d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -113,6 +113,6 @@
       <value>//div[(text() = '
                     The key contact phone field is required.                ' or . = '
                     The key contact phone field is required.                ')]</value>
-      <webElementGuid>c93b991a-30a4-4816-9f82-4d129d6fe533</webElementGuid>
+      <webElementGuid>9eefea75-cde8-48f6-bf2b-0abd8e65db9d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

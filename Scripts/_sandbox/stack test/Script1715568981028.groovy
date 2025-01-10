@@ -16,6 +16,25 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import javax.swing.JFrame
+import javax.swing.JOptionPane
+
+JFrame frame = new JFrame("User Input Frame")
+frame.requestFocus()
+String number = JOptionPane.showInputDialog("frame, Enter user input value!")
+int days = Integer.valueOf(number)
+
+a = 'https://education.missionnext.org/education-home/im-a-school'
+b = 'https://education.missionnext.org/education-home/im-a-school/'
+println(a.substring(a.length()-1,a.length()))
+println(b.substring(b.length()-1,b.length()))
+if(a.endsWith('/')) {
+	println('a-slash')
+}
+if(b.endsWith('/')) {
+	println('b-slash')
+}
+System.exit(0)
 
 myStack = []
 myStack.push("A")

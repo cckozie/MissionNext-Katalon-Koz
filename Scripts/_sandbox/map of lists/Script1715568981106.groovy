@@ -17,6 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+titleMap = [
+	"education.missionnext.org|http://missionnext.org/contact-us/" : "Contact Us - MissionNext.org",
+	"education.missionnext.org|http://missionnext.org/events" : "Events - MissionNext.org",
+	"education.missionnext.org|http://missionnext.org/homepage/goer/education-partner-schools/" : "Education Partner Schools - MissionNext.org"]
+
+titleMap.each {
+	println(it.key)
+	println(it.value + '\n')
+}
+key = 'education.missionnext.org|http://missionnext.org/homepage/goer/education-partner-schools/'
+title = titleMap.get(key)
+println(title)
 /*
 map = [:]
 

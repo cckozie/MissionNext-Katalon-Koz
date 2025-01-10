@@ -20,17 +20,20 @@ import org.openqa.selenium.Keys as Keys
 // THESE ARE THE MINIMUM REQUIRED FIELD ENTRIES
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Contact Info'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
+
 if (GlobalVariable.gender == 'Male') {
-	WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tab-Contact Info/radio_Male'))
+    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male'))
 } else {
-	WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tab-Contact Info/radio_Female'))
+    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female'))
 }
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tab-Contact Info/select_State'), 
-	GlobalVariable.state, false)
+WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_State'), 
+    GlobalVariable.state, false)
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tab-Contact Info/input_Birth Year'), 
-	GlobalVariable.birth_year)
+WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year'), GlobalVariable.birth_year)
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tab-Contact Info/btn_Submit'))
+WebUI.scrollToElement(findTestObject('Education Candidate Profile/Tabs/Contact Info/btn_Submit'), 5)
+
+WebUI.click(findTestObject('Education Candidate Profile/Tabs/Contact Info/btn_Submit'))
 

@@ -6,12 +6,12 @@
    <elementGuidId>b9b8be9e-8ee6-4381-a559-f036ff916d1f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>#group1 > div.form-group > div.col-sm-offset-3.col-sm-9.text-danger</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group1&quot;]/div[6]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#group1 > div.form-group > div.col-sm-offset-3.col-sm-9.text-danger</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>5617c015-6af6-4cea-981d-3679b1838bbe</webElementGuid>
+      <webElementGuid>be537dd1-7fb9-477f-b3dd-1cb7d5f0f5e1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>e43bf03f-9a65-4603-a900-7f1bff22dbd4</webElementGuid>
+      <webElementGuid>d9281585-3870-452c-ae38-5dbe89b5f7ba</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -40,7 +40,7 @@
       <type>Main</type>
       <value>
                     Please enter a valid email address.                </value>
-      <webElementGuid>2b467c20-a024-4854-870d-141bc0ce7546</webElementGuid>
+      <webElementGuid>b5f4314a-3f39-4ee3-87ce-af4d2225b7ea</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -48,7 +48,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>9f33835c-6421-4ca2-a1ce-f5ea40f9db09</webElementGuid>
+      <webElementGuid>35844835-23c3-41cc-bf76-31bd716167de</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -56,7 +56,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[6]/div</value>
-      <webElementGuid>f07249bb-e101-4edc-8041-37891dba2083</webElementGuid>
+      <webElementGuid>c4bd547d-cfe7-4f4c-a125-cb5485b05cd4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -64,7 +64,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Last Name*'])[1]/following::div[3]</value>
-      <webElementGuid>151c78fe-dd18-4b31-966a-438c95aad6ee</webElementGuid>
+      <webElementGuid>0221ae48-f197-4513-a97a-0323576b021b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -72,7 +72,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact First Name*'])[1]/following::div[6]</value>
-      <webElementGuid>bea9e47e-9970-498d-865b-98a083f7a7b4</webElementGuid>
+      <webElementGuid>04e87c57-3d1a-40e4-9589-334769ce7d3a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -80,7 +80,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Email*'])[1]/preceding::div[1]</value>
-      <webElementGuid>89a0bce0-123f-4ab1-8cd6-d7686bc44f19</webElementGuid>
+      <webElementGuid>dc6c60b1-b103-41da-b0e0-a755dd68f067</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -88,7 +88,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Key Contact Phone*'])[1]/preceding::div[3]</value>
-      <webElementGuid>4e459c9f-65c0-40ae-8c7c-1e02c544c89a</webElementGuid>
+      <webElementGuid>6f3379e9-780d-4c2b-9c9b-3e5aac7d60cd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -96,7 +96,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Please enter a valid email address.']/parent::*</value>
-      <webElementGuid>db80d6e6-b6b9-485d-b9a8-715c09522878</webElementGuid>
+      <webElementGuid>1c3c7eee-10aa-4cf3-9ee3-fbabccb28840</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -104,7 +104,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[6]/div</value>
-      <webElementGuid>ccfa7a58-68d2-4a70-976b-2bcce4f01328</webElementGuid>
+      <webElementGuid>7eeca45b-0640-4e6a-bda4-f37d560e4196</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -114,6 +114,6 @@
       <value>//div[(text() = '
                     Please enter a valid email address.                ' or . = '
                     Please enter a valid email address.                ')]</value>
-      <webElementGuid>86f7bff3-cf11-4c74-8e9a-b8ef54b0bd05</webElementGuid>
+      <webElementGuid>7d547791-8b8a-4557-9405-65128ffdd90f</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

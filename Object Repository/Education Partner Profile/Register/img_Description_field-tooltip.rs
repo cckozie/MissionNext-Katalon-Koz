@@ -6,12 +6,11 @@
    <elementGuidId>b77944d4-70ac-41f1-b1a7-3dd0615e24c7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='group-1462396686.719']/div[5]/div/img</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//img[@alt='tooltip'])[6]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>41004eef-b02b-4870-85b3-e4b01146e4d4</webElementGuid>
+      <webElementGuid>77c5cdcb-06eb-4ba7-a123-3e765065db52</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>9bbb8bb2-5ad2-47b1-a9a1-7ae3810d8f99</webElementGuid>
+      <webElementGuid>bd61eb18-9b61-42d4-96d3-eae5909bf36d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>24f89e37-346d-4b71-8db0-c985acd32143</webElementGuid>
+      <webElementGuid>b37352a6-b0f7-427f-8f46-f2521054ab18</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>e6701392-3dd4-4dc5-8a77-e63ff3983d03</webElementGuid>
+      <webElementGuid>ef6be731-752c-465a-8ccf-11869e407ea8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Hint: Take a paragraph or two from your website. If copying &amp; pasting, you must manually type in any special characters, i.e, quotation marks, apostrophe, ampersand, etc.</value>
-      <webElementGuid>e8b07713-401c-428c-84ff-74e4c2cee405</webElementGuid>
+      <webElementGuid>6976837b-6d1c-4223-aea4-4951f061f8a8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1462396686.719&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>41b632ba-1882-4dea-bb96-879a55255810</webElementGuid>
+      <webElementGuid>4942fceb-3e25-42ac-8121-3b418c03a4dd</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1462396686.719']/div[5]/div/img</value>
-      <webElementGuid>d34450f3-6a4c-4601-aa91-24fdb93369fd</webElementGuid>
+      <webElementGuid>d4672376-1d8f-4c2a-b412-430d888a2b3e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[6]</value>
-      <webElementGuid>45aeeab9-a99a-4e81-a1b5-cb7a432f2012</webElementGuid>
+      <webElementGuid>9852a863-343d-4d12-b333-949041a90c74</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[5]/div/img</value>
-      <webElementGuid>b5c8a317-2de9-479b-972d-638ad9865d96</webElementGuid>
+      <webElementGuid>a79b107c-391f-4353-8137-32cb81f1178e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +94,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>63e4fd7b-8c3d-4fb0-82b8-570ff065e501</webElementGuid>
+      <webElementGuid>fb45493f-7c14-41e6-b05e-451c50607e0c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

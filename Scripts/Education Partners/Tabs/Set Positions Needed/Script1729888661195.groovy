@@ -53,6 +53,8 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Positions Needed Tab'], FailureHandling.STOP_ON_FAILURE)
+
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Positions Needed/button_Complete Submit'))

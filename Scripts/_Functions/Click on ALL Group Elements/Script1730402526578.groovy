@@ -23,8 +23,8 @@ import org.openqa.selenium.By as By
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-// For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label in that group.
-//
+// For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label is in that group.
+
 for(i = 0; i < varXpaths.size(); i++) {
 	
 	elements = driver.findElements(By.xpath(varXpaths[i]))

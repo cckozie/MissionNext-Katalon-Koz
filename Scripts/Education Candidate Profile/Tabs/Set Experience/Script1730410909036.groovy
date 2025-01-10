@@ -28,26 +28,32 @@ if (username != 'cktest04ec') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)
+
 }
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 parms = [varMissions_experience]
 
 //xpath of the Missions Experience group
-missions_experience = "//input[@id='profile_group-1443650427.743_missions_exposure']"
+missions_experience = '//input[@id=\'profile_group-1443650427.743_missions_exposure\']'
 
 xpaths = [missions_experience]
 
 //Go to the Experience tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
 
+WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Experience Tab'], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_sandbox/Get dropdown list options'), [:], FailureHandling.STOP_ON_FAILURE)
+
+System.exit(0)
+
 // Set the text boxes and dropdown lists
 if (varHighest_degree != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/select_High Earned Degree'),
-		varHighest_degree, false)
+    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/select_High Earned Degree'), 
+        varHighest_degree, false)
 }
 
 if (varDegree_field != null) {
@@ -55,8 +61,8 @@ if (varDegree_field != null) {
 }
 
 if (varClassroom_experience != null) {
-	WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/select_Classroom Experience'),
-		varClassroom_experience, false)
+    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/select_Classroom Experience'), 
+        varClassroom_experience, false)
 }
 
 if (varOccupation != null) {
@@ -69,13 +75,13 @@ if (varCross_cultural != null) {
 }
 
 if (varLife_experience != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Life Experience'), varLife_experience)
+    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Life Experience'), 
+        varLife_experience)
 }
 
 WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
-	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tab-Situation/btn_Complete Submit'))
+WebUI.click(findTestObject('Education Candidate Profile/Tabs/Experience/btn_Submit'))
 

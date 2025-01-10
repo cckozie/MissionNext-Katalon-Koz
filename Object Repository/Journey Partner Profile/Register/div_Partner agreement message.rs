@@ -6,11 +6,11 @@
    <elementGuidId>7fa59023-1ef9-490a-b14f-dc5f1999134b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;group-1446560994.446&quot;]/div[16]/div[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>296cbde6-30bc-4402-8bfb-a448b930a4cb</webElementGuid>
+      <webElementGuid>5f599d5c-918c-47c6-b266-11e1566b63c9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>col-sm-offset-3 col-sm-9 text-danger</value>
-      <webElementGuid>ceaaa431-1d27-4f6a-90cd-ad5bf4f6bfb9</webElementGuid>
+      <webElementGuid>6ea784e0-3bf0-44f0-9c16-2820a707c62b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <type>Main</type>
       <value>
                     The partner agreement field is required.                </value>
-      <webElementGuid>3fc8f46e-0b68-44f4-917b-ab0e5244e396</webElementGuid>
+      <webElementGuid>b0e472d7-b80b-43f4-86ac-b6f552531781</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446560994.446&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 text-danger&quot;]</value>
-      <webElementGuid>ee4f50f6-562c-4c5a-92bb-c181a3f42c83</webElementGuid>
+      <webElementGuid>a0fc4716-13e3-4d9d-9136-563ceb9c38f2</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446560994.446']/div[16]/div</value>
-      <webElementGuid>ddd18bdd-a319-439c-83aa-792c7a7a2947</webElementGuid>
+      <webElementGuid>c2359f3b-b66b-4527-916c-3d2641ffb2d3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Referral or Other Comment'])[1]/following::div[3]</value>
-      <webElementGuid>5456f25e-a6be-482c-84e2-6800fcec036b</webElementGuid>
+      <webElementGuid>e65fb351-7e31-477d-bc1c-b86dedb51abc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='How did you hear about MissionNext?'])[1]/following::div[7]</value>
-      <webElementGuid>28030be4-4a05-4a77-94c1-937c2df2e42c</webElementGuid>
+      <webElementGuid>1e68446c-e920-4e32-9316-e352191f8fc5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Partnership Agreement'])[1]/preceding::div[1]</value>
-      <webElementGuid>9f1ea940-69e8-437d-8ac9-51e969fe0006</webElementGuid>
+      <webElementGuid>ea83b0e8-f789-4082-ae11-59586eb52a6f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='The partner agreement field is required.']/parent::*</value>
-      <webElementGuid>979052ab-55b4-49cd-95b7-7a015e005244</webElementGuid>
+      <webElementGuid>83071a01-7a24-4954-8684-d044b0cd7567</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[16]/div</value>
-      <webElementGuid>652780a8-92bb-483f-889b-c73b95fe5b82</webElementGuid>
+      <webElementGuid>06593582-282c-4dfe-b908-79760612f05a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -105,6 +105,6 @@
       <value>//div[(text() = '
                     The partner agreement field is required.                ' or . = '
                     The partner agreement field is required.                ')]</value>
-      <webElementGuid>0ba6bfd0-99fc-4d27-b9ff-d91679fab030</webElementGuid>
+      <webElementGuid>60a207e5-de21-452f-b180-0cc915aa6192</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

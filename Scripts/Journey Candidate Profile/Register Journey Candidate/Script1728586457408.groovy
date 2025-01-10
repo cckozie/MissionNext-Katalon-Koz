@@ -40,8 +40,7 @@ if (username != 'cktest05jc') {
 domain = GlobalVariable.domain
 
 // Write results to text file
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) + 
-'.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) + '.txt')
 
 GlobalVariable.outFile = outFile
 

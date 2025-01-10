@@ -20,10 +20,14 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
-debug = false
+debug = true	//Print debug info
+
+toggle = true	//Toggle selected checkboxes if already checked
 
 WebDriver driver = DriverFactory.getWebDriver()
+println(varParms)
 
 // For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label 
 // corresponds to one that is in the input parameter (varParms) for that group.
@@ -32,16 +36,19 @@ WebDriver driver = DriverFactory.getWebDriver()
 for(i = 0; i < varXpaths.size(); i++) {
 	
 	if(debug) {println('Desired label is "' + varParms[i] + '"')}
+	if(varParms[i].indexOf('Europe') >= 0) {
+		println('#############   Europe : ' + varParms[i])
+	}
 	
 	elements = driver.findElements(By.xpath(varXpaths[i]))
 	
 	element_count = elements.size()
 	
-//	println('count is ' + element_count)
-	
 	for(element in elements) {
 		
 		myValue = element.getAttribute("value")
+		
+		if(debug) {println('Element label is "' + myValue + '"')}
 		
 		//This processing is necessary because '(!) ' is getting prepended to the value attribute
 		//	if it starts with 'No'
@@ -51,11 +58,10 @@ for(i = 0; i < varXpaths.size(); i++) {
 				
 				myValue = myValue.substring(4)
 				
+				if(debug) {println('Modified element label is "' + myValue + '"')}
+				
 			}
 		}
-		
-		if(debug) {println('Element label is "' + myValue + '"')}
-		
 		myObj = WebUI.convertWebElementToTestObject(element) //Convert the element to a test object
 		
 		myType = element.getAttribute("type")	//We need to know if it's checkbox or radio button
@@ -67,51 +73,62 @@ for(i = 0; i < varXpaths.size(); i++) {
 		}
 		
 		//If it's a checkbox, then either clear it or check it depending on the input parm
+		//If toggle is true and checking an already checked box, toggle it off first
 		if(myType == 'checkbox') {
 			myStatus = element.isSelected()
+			if(debug) {
+				println('Label ' + myValue + ' checked status is ' + myStatus + ' and in list status is '
+					+ inList)
+				}
+			if(toggle && myStatus && inList) {
+				println('Toggling off ' + myValue)
+				click(myObj)
+//				WebUI.delay(1)
+				myStatus = false
+			}
 			if(!myStatus && inList || myStatus && !inList) {
-					WebUI.click(myObj)
+				if(debug) {println('Clicking ' + myValue)}
+					println('Clicking ' + myValue)
+					click(myObj)
 			}
 			
 		//If it's a radio button, then just click it if it's the one
 		} else { 		//Must be radio button
 			if(inList) {
-				WebUI.click(myObj)
+				click(myObj)
 			}
 		}
 	}
 }
 
-/*
-for(i = 0; i < varXpaths.size(); i++) {
+
+def scrollToObject(def object) {
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(object, 1)
 	
-	elements = driver.findElements(By.xpath(varXpaths[i])) //Find all of the elements in the group
-	
-	element_count = elements.size()
-	
-	println('count is ' + element_count)
-	
-	for(element in elements) {
-		
-		myValue = element.getAttribute("value") //Get the element's label (value attribute)
-		
-		//This processing is necessary because '(!) ' is getting prepended to the value attribute
-		//	if it starts with 'No'
-		if(myValue.length() >= 4) {
-			
-			if(myValue.substring(0,4) == '(!) ') {
-				
-				myValue = myValue.substring(4)
-				
-			}
-		}
-		if(myValue in varParms[i]) {	//Click on the element if it's label matches the input parameter
-			
-			myObj = WebUI.convertWebElementToTestObject(element) //convert element to test object
-			
-			WebUI.click(myObj, FailureHandling.OPTIONAL)
-		
-		}
+	loc = element.getLocation()
+
+	y = loc.getY()
+
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		WebUI.scrollToPosition(0, y - 150)
+
+		WebUI.delay(1)
 	}
 }
-*/
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(object)
+}
+
