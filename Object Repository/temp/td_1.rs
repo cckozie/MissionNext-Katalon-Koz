@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>td_1</name>
+   <tag></tag>
+   <elementGuidId>a71c8e46-ffd1-4109-b110-07f73fb5ce2d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//td[(text() = '1 ' or . = '1 ')]
+</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>p > table > tbody > tr:nth-of-type(4) > td</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class=&quot;body&quot;]/form[1]/p[1]/table[1]/tbody[1]/tr[4]/td[1][count(. | //*[(text() = '1 ' or . = '1 ')]) = count(//*[(text() = '1 ' or . = '1 ')])]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>td</value>
+      <webElementGuid>d53b9ad0-6ca0-4f97-9595-83617393fb90</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>bgcolor</name>
+      <type>Main</type>
+      <value>#ffffff</value>
+      <webElementGuid>c478b295-2142-49b2-9b83-d2fc4815e539</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>align</name>
+      <type>Main</type>
+      <value>right</value>
+      <webElementGuid>b9d71aea-5484-4d30-b194-58d00c6f8ccd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1 </value>
+      <webElementGuid>f399f670-3c40-4500-8525-17f5da528250</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class=&quot;body&quot;]/form[1]/p[1]/table[1]/tbody[1]/tr[4]/td[1]</value>
+      <webElementGuid>05d27660-a457-4605-968e-04deb0da1f9a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='cktest06ep TEST Kosieracki'])[2]/following::td[1]</value>
+      <webElementGuid>d6ef723a-ca0d-4080-8ade-cceefb86dcd5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='New Listing'])[1]/following::td[11]</value>
+      <webElementGuid>49ab29f0-f71c-4810-a6d4-ad627f7e2399</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Merla'])[1]/preceding::td[1]</value>
+      <webElementGuid>5af420a8-3481-40a7-a2d3-252981f6ee3c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='ALBA'])[1]/preceding::td[2]</value>
+      <webElementGuid>c22b7089-d773-4ce6-afae-36a9dfec5cfd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//p/table/tbody/tr[4]/td</value>
+      <webElementGuid>8a8abafc-65a4-4af3-ad8b-0adf0ac89864</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//td[(text() = '1 ' or . = '1 ')]</value>
+      <webElementGuid>096256b4-e444-4a85-a6fa-230753b579b0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Read More</name>
+   <tag></tag>
+   <elementGuidId>64a8fe2b-86d3-4b91-9c3f-62f22aa5a67e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>article.elementor-post.elementor-grid-item.post-31370.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-following-jesus-2 > div.elementor-post__card > div.elementor-post__text > a.elementor-post__read-more</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[100]/div/div[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>c2adc363-d2d8-4642-8af5-0dc47702fdb1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-post__read-more</value>
+      <webElementGuid>e3a6cf72-5a6d-4540-b1d7-a1088b81cc55</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/overcoming-ourselves/</value>
+      <webElementGuid>fd5b7f1c-56ba-4281-8263-2f6405d4ada5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-label</name>
+      <type>Main</type>
+      <value>Read more about Overcoming Ourselves – Attention to Accountability</value>
+      <webElementGuid>45c5a943-741f-468e-926a-93f9e5d788e6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tabindex</name>
+      <type>Main</type>
+      <value>-1</value>
+      <webElementGuid>c4fa81ce-513b-4281-98f0-0c63b1503000</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>7b64015a-4e9e-484c-ad29-37c1721e2d1d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+			Read More		</value>
+      <webElementGuid>fcc27e76-ce8e-4360-9712-31c62d1451aa</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-55117&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-768a31e4 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-section-content-space-evenly elementor-section-boxed elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-no&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c8f337c&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-7ceeebea elementor-posts--align-left elementor-grid-tablet-3 elementor-grid-3 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-card-shadow-yes elementor-posts__hover-gradient elementor-widget elementor-widget-posts&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid elementor-has-item-ratio&quot;]/article[@class=&quot;elementor-post elementor-grid-item post-31370 post type-post status-publish format-standard has-post-thumbnail hentry category-following-jesus-2&quot;]/div[@class=&quot;elementor-post__card&quot;]/div[@class=&quot;elementor-post__text&quot;]/a[@class=&quot;elementor-post__read-more&quot;]</value>
+      <webElementGuid>a8d7ee27-f682-418e-bcb6-96d7ed974ec2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[100]/div/div[2]/a</value>
+      <webElementGuid>bbac2086-37ae-4ca1-85aa-a3c37e64168d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>(//a[contains(text(),'Read More')])[100]</value>
+      <webElementGuid>ba0d2803-97fd-4edf-9401-ddb19b4af9f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Overcoming Ourselves – Attention to Accountability'])[1]/following::a[1]</value>
+      <webElementGuid>d6e1b96e-d13f-49f1-98a7-ef9d7abf184d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Following Jesus'])[34]/following::a[2]</value>
+      <webElementGuid>dcb39202-f7cf-4dd0-9309-3452a6778137</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='July 22, 2019'])[1]/preceding::a[1]</value>
+      <webElementGuid>b7c331b7-d4bc-452c-b800-fce4ad1c850e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='« Previous'])[1]/preceding::a[1]</value>
+      <webElementGuid>865eb6ee-fefa-4a50-9012-17228448c7b8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://missionnext.org/overcoming-ourselves/')])[3]</value>
+      <webElementGuid>2c0462d5-00c1-465a-8e31-39cef5f1ce34</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//article[100]/div/div[2]/a</value>
+      <webElementGuid>01d4d848-8608-4975-9b05-db2cb1bc1e62</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/overcoming-ourselves/' and (text() = '
+			Read More		' or . = '
+			Read More		')]</value>
+      <webElementGuid>105d7cc5-4e2b-4a5e-9b0c-71e4f2f90efd</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

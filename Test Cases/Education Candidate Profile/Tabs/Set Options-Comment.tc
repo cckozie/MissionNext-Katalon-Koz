@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Options-Comment</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3265524d-0a74-460e-97e6-a44b6fcb2866</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>cdeb2222-c38b-4858-9af2-0a2b337a8143</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>90c95abf-8b86-4be6-a02f-540d1606ee0d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>cdeb2222-c38b-4858-9af2-0a2b337a8143</id>
+      <masked>false</masked>
+      <name>varPaid_volunteer</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>90c95abf-8b86-4be6-a02f-540d1606ee0d</id>
+      <masked>false</masked>
+      <name>varTravel_options</name>
+   </variable>
+</TestCaseEntity>
