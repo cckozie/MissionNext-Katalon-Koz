@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -48,39 +49,116 @@ WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension')
 
 // Set the text boxes and dropdown lists
 if (varFormal_degree != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree'),
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree',
 		varFormal_degree, false)
 }
 
 if (varTeaching_credentials != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/select_Teaching Credentials'),
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Teaching Credentials',
 		varTeaching_credentials, false)
 }
 
-
-
-if (varCredential_authority != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Credential Authority'), varCredential_authority)
-}
-
-if (varOther_experience != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'), varOther_experience)
-}
-
-if (varEnglish_proficiency != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/select_English Proficiency'), 
-        varEnglish_proficiency, false)
-}
-
-if (varAdditional_languages != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/input_Additional Language(s)'), 
-		varAdditional_languages)
-}
-
-WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/Situation/btn_Complete Submit'))
+if (varCredential_authority != null) {
+    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Credential Authority', varCredential_authority)
+}
+
+if (varOther_experience != null) {
+    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience', varOther_experience)
+}
+
+if (varEnglish_proficiency != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_English Proficiency', 
+        varEnglish_proficiency, false)
+}
+
+if (varAdditional_languages != null) {
+    setText('Object Repository/Education Candidate Profile/Tabs/Education/input_Additional Language(s)', 
+		varAdditional_languages)
+	WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'))
+}
+
+if (varAdditional_languages != null && varProficiency != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Additional Language Proficiency', 
+		varProficiency, false )
+}
+
+click('Object Repository/Education Candidate Profile/Tabs/Education/btn_Submit')
+
+def scrollToObject(def object) {
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+
+	loc = element.getLocation()
+
+	y = loc.getY()
+
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		WebUI.scrollToPosition(0, y - 150)
+
+		WebUI.delay(1)
+	}
+}
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(findTestObject(object))
+}
+
+def getText(def object) {
+	scrollToObject(object)
+
+	value = WebUI.getText(findTestObject(object))
+
+	return value
+}
+
+def setText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setText(findTestObject(object), value)
+}
+
+def setEncryptedText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setEncryptedText(findTestObject(object), value)
+}
+
+def selectOptionByValue(def object, def value, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), value, flag)
+}
+
+def selectOptionByLabel(def object, def label, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), label, flag)
+}
+
+def clearText(object) {
+	scrollToObject(object)
+
+	WebUI.clearText(findTestObject(object))
+}
+
+def scrollToOnly(object) {
+	scrollToObject(object)
+}
+
 

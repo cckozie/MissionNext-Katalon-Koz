@@ -48,9 +48,21 @@ if (url.indexOf('dashboard') < 0) {
     WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
 }
 
-/*
-// Complete the required entries on the Contact Info tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Complete the Contact Info tab
+gender = 'Male'
+
+country = 'United States'
+
+country_of_citizenship = 'United States'
+
+birth_year = '1949'
+
+marital_status = 'Widowed'
+
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
+        , ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year
+        , ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
 
 
 // Complete the Experience tab
@@ -69,9 +81,9 @@ missions_experience = 'I have taken a short-term missions trip'
 life_experience = "I've been a believer for 23 years. I went on a mission trip to train Vietnamese in Bible translation"
 
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Experience'), [('varHighest_degree') : highest_degree
-        , ('varDegree_field') : degree_field, ('varClassroom_experience') : classroom_experience, ('varOccupation') : occupation
-        , ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience], 
-    FailureHandling.STOP_ON_FAILURE)
+		, ('varDegree_field') : degree_field, ('varClassroom_experience') : classroom_experience, ('varOccupation') : occupation
+		, ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience],
+	FailureHandling.STOP_ON_FAILURE)
 
 
 // Complete the Education tab
@@ -88,13 +100,15 @@ other_experience = 'Middle school football coach'
 
 english_proficiency = 'Advanced'
 
-additional_languages = 'Rudimentary French'
+additional_languages = 'French'
+
+proficiency = 'Rudimentary'
 
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Education'), [('varFormal_degree') : formal_degree
         , ('varTeaching_credentials') : teaching_credentials, ('varCredential_authority') : credential_authority, ('varPrevious_experience') : previous_experience
-        , ('varOther_experience') : other_experience, ('varEnglish_proficiency') : english_proficiency, ('varAdditional_languages') : additional_languages], 
+        , ('varOther_experience') : other_experience, ('varEnglish_proficiency') : english_proficiency, ('varAdditional_languages') : additional_languages 
+		, ('varProficiency') : proficiency],
     FailureHandling.STOP_ON_FAILURE)
-System.exit(1)
 
 
 // Complete the Situation tab
@@ -119,24 +133,22 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'
         , ('varPerspectives') : perspectives, ('varDescribe_training') : describe_training, ('varChurch_name') : church_name
         , ('varChurch_involvement') : church_involvement], FailureHandling.STOP_ON_FAILURE)
 
+
 // Complete the Availability tab
 when_available = 'In one to two years'
 
 term_available = ['Spring Semester', 'Fall Semester']
 
-time_commitments = ['One year to two years', 'Long term']
+time_commitments = ['One year to two years', 'Long Term']
 
 relocation_options = '(!) Not sure'
 
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Availability'), [('varWhen_available') : when_available
         , ('varTerm_available') : term_available, ('varTime_commitments') : time_commitments, ('varRelocation_options') : relocation_options], 
     FailureHandling.STOP_ON_FAILURE)
-*/
-/*
-// Complete the Preference tab
-positions = [ 'Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business', 'Tutor', 'Substitute Teacher'
-    , 'Athletic Coach', 'Health Teacher']
-*/
+
+
+// Complete the Preferences tab
 positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), 
 [('varFileName') : 'Education Candidate Forms/preferred positions.csv', ('varSelections') : 'positions'], FailureHandling.STOP_ON_FAILURE)
 
@@ -148,7 +160,6 @@ println(regions)
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Preferences'), [('varPositions') : positions, ('varRegions') : regions], 
     FailureHandling.STOP_ON_FAILURE)
 
-System.exit(1)
 
 // Complete the Options/Comment tab
 paid_volunteer = ['Position requires raising some support', 'A salary provided; enough to live locally']
@@ -159,8 +170,4 @@ comments = 'I really hope I can get a partially paid position'
 
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Options-Comment'), [('varPaid_volunteer') : paid_volunteer
         , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.acceptAlert()
-
-WebUI.callTestCase(findTestCase('_sandbox/read from file'), [:], FailureHandling.STOP_ON_FAILURE)
 

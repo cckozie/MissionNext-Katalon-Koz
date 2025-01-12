@@ -6,11 +6,12 @@
    <elementGuidId>7fc1d5f3-5a3b-4491-80d9-34d97ba4a941</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>696f0f0c-36a5-4f33-a19e-7bf2cf39e83a</webElementGuid>
+      <webElementGuid>9bf50b8e-c67a-49af-841f-7f8086666f35</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>birth_year</value>
-      <webElementGuid>5620f752-59fb-4f66-97b9-f2d5790134a0</webElementGuid>
+      <webElementGuid>3f3bb1af-c0f9-42ff-86e6-57b588a77b85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>168</value>
-      <webElementGuid>2a10a18a-3fe2-4677-be0b-b62bcb147bd4</webElementGuid>
+      <webElementGuid>e0d248cf-de82-4b50-b2ef-bf488073a024</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -46,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-small-field</value>
-      <webElementGuid>399c22cc-9d1e-45c4-81dc-b6db35e4cc74</webElementGuid>
+      <webElementGuid>bd1a2279-0a65-4e01-9ab2-8eab26a393c5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -54,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1443546232.861_birth_year</value>
-      <webElementGuid>86c34929-07dc-4b31-91cd-42f2741a5ba8</webElementGuid>
+      <webElementGuid>d92b2f22-1f13-404d-9304-3c1d515b1137</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -62,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1443546232.861][birth_year]</value>
-      <webElementGuid>90d47cb1-5a30-4832-828e-dc199a332089</webElementGuid>
+      <webElementGuid>7c19c6ac-7e05-405e-be26-2331d23bb876</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -70,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>e75f06e0-dbb9-45cb-96b3-cd95fc378ca0</webElementGuid>
+      <webElementGuid>6b756e0c-b55d-42ca-84ed-4f47a97f9d64</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -78,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>587d4873-9c8a-4cd2-9a8d-a87fc7b4cadf</webElementGuid>
+      <webElementGuid>e39a506a-de32-41ef-8547-e419d0df4daf</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -86,7 +87,7 @@
       <name>placeholder</name>
       <type>Main</type>
       <value>YYYY</value>
-      <webElementGuid>33a16490-ffed-48f1-a071-9f07e5e216d5</webElementGuid>
+      <webElementGuid>97c6d2ca-feb6-469c-bb18-24d3ab776189</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -94,7 +95,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group-1443546232.861_birth_year&quot;)</value>
-      <webElementGuid>6f32b026-6841-485e-8677-8df9d52ded38</webElementGuid>
+      <webElementGuid>a7663825-7f3a-44ca-98fe-422393bfd73e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -102,7 +103,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
-      <webElementGuid>1f3e8c81-08d3-4da7-91ea-bc11451a0700</webElementGuid>
+      <webElementGuid>7e43c4db-078b-4150-904e-c65a573cd4bb</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -110,7 +111,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1443546232.861']/div[14]/div[2]/input</value>
-      <webElementGuid>b5a2c8f1-a7c1-436f-86b2-86d67e0b2b4c</webElementGuid>
+      <webElementGuid>bec6c5df-6ba2-4bb5-860e-47a263a50dde</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -118,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[14]/div[2]/input</value>
-      <webElementGuid>ba47162c-6cf5-4eed-a546-e6bb475a98e6</webElementGuid>
+      <webElementGuid>7fd2fac4-a20c-412d-807e-4cdca47cb847</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -126,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group-1443546232.861_birth_year' and @name = 'profile[group-1443546232.861][birth_year]' and @type = 'input' and @placeholder = 'YYYY']</value>
-      <webElementGuid>1e000023-602a-4880-930f-9a48beb43952</webElementGuid>
+      <webElementGuid>34780e0d-51e5-4519-a636-f352b1b8864e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

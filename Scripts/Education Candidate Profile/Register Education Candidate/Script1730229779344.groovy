@@ -43,11 +43,12 @@ domain = GlobalVariable.domain
 username = GlobalVariable.username
 
 // Write results to text file
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain) + 
+'.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write('Testing Register Education Candidate on ' + domain + '.\n')
+outFile.write(('Testing Register Education Candidate on ' + domain) + '.\n')
 
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
@@ -65,15 +66,10 @@ tooltipXpaths = [('username') : '//div[@id=\'main_fields\']/div[1]/div/img', ('e
 tooltips = ['username', 'email', 'password', 'first_name', 'last_name', 'learn_about_us', 'terms_and_conditions']
 
 // Define the required field missing error message test objects (Currently not used. Awaiting decisions on desired behavior)
-requiredFieldMsgs = [
-	('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
-	, ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
-	, ('Email') : 'Please enter a valid email address.'
-    , ('First Name') : 'The First Name field is required.'
-	, ('Last Name') : 'The last name field is required.'
-	, ('Country') : 'The country field is required.'
-	, ('Phone Number') : 'The phone number field is required.'
-    , ('Terms and Conditions') : 'The terms and conditions field is required.']
+requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
+    , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
+    , ('Email') : 'Please enter a valid email address.', ('First Name') : 'The First Name field is required.', ('Last Name') : 'The last name field is required.'
+    , ('Country') : 'The country field is required.', ('Phone Number') : 'The phone number field is required.', ('Terms and Conditions') : 'The terms and conditions field is required.']
 
 // Open the Education login page
 WebUI.callTestCase(findTestCase('_Functions/Open Education Candidate Login Page'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -128,7 +124,8 @@ if (GlobalVariable.prefer_text) {
     click('Education Candidate Profile/Education Register/checkbox_Prefer Text Message')
 }
 
-selectOptionByLabel('Education Candidate Profile/Education Register/select_Learn About Us', GlobalVariable.learn_about, false)
+selectOptionByLabel('Education Candidate Profile/Education Register/select_Learn About Us', GlobalVariable.learn_about, 
+    false)
 
 setText('Education Candidate Profile/Education Register/textarea_Other Comment', GlobalVariable.other_comment)
 
@@ -250,105 +247,97 @@ setEncryptedText('Education Candidate Profile/Education Register/input_Password'
 click('Object Repository/Education Candidate Profile/Education Register/checkbox_Terms and Conditions')
 
 click('Object Repository/Education Candidate Profile/Education Register/button_Sign up')
-System.exit(0)
-// Complete the required entries on the Contact Info tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)
 
-// Complete the required entries on the Situation tab
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'), [:], FailureHandling.STOP_ON_FAILURE)
-
-System.exit(1)
-
-WebUI.callTestCase(findTestCase('Recorded Scripts/Education Candidate Additional Tabs'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
 
-def testFieldMessages(fieldList) {
-	
-	for(field in fieldList) {
-		
-		errorMsg = requiredFieldMsgs.get(field)
-		
-		msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
-		
-		println(field + ':' + msg)
-		
-		if(!msg) {
-			
-			outText = 'The expected error message "' + errorMsg + '" for field ' + field + ' was not found.'
-			
-			println(outText)
-			
-			outFile.append(outText + '\n')
-		}
-	}
+WebUI.closeBrowser()
+
+
+def testFieldMessages(def fieldList) {
+    for (def field : fieldList) {
+        errorMsg = requiredFieldMsgs.get(field)
+
+        msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
+
+        println((field + ':') + msg)
+
+        if (!(msg)) {
+            outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
+
+            println(outText)
+
+            outFile.append(outText + '\n')
+        }
+    }
 }
 
 def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
+    println(('Converting ' + object) + ' to web element')
 
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
 
-	loc = element.getLocation()
+    loc = element.getLocation()
 
-	y = loc.getY()
+    y = loc.getY()
 
-	println('Y location is ' + y)
+    println('Y location is ' + y)
 
-	top = WebUI.getViewportTopPosition()
+    top = WebUI.getViewportTopPosition()
 
-	println('Viewport top is ' + top)
+    println('Viewport top is ' + top)
 
-	bottom = (top + 600)
+    bottom = (top + 600)
 
-	if (((y - top) < 150) || ((bottom - y) < 10)) {
-		WebUI.scrollToPosition(0, y - 150)
+    if (((y - top) < 150) || ((bottom - y) < 10)) {
+        WebUI.scrollToPosition(0, y - 150)
 
-		WebUI.delay(1)
-	}
+        WebUI.delay(1)
+    }
 }
 
 def click(def object) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	WebUI.click(findTestObject(object))
+    WebUI.click(findTestObject(object))
 }
 
 def getText(def object) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	value = WebUI.getText(findTestObject(object))
+    value = WebUI.getText(findTestObject(object))
 
-	return value
+    return value
 }
 
 def setText(def object, def value) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	WebUI.setText(findTestObject(object), value)
+    WebUI.setText(findTestObject(object), value)
 }
 
 def setEncryptedText(def object, def value) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	WebUI.setEncryptedText(findTestObject(object), value)
+    WebUI.setEncryptedText(findTestObject(object), value)
 }
 
 def selectOptionByValue(def object, def value, def flag) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	WebUI.selectOptionByValue(findTestObject(object), value, flag)
+    WebUI.selectOptionByValue(findTestObject(object), value, flag)
 }
 
 def selectOptionByLabel(def object, def label, def flag) {
-	scrollToObject(object)
+    scrollToObject(object)
 
-	WebUI.selectOptionByValue(findTestObject(object), label, flag)
+    WebUI.selectOptionByValue(findTestObject(object), label, flag)
 }
 
-def clearText(object) {
-	scrollToObject(object)
+def clearText(def object) {
+    scrollToObject(object)
 
-	WebUI.clearText(findTestObject(object))
+    WebUI.clearText(findTestObject(object))
 }
 

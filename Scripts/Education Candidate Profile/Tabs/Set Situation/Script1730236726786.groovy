@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -58,34 +59,105 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 xpaths = [process_stage, bible_training, church_affiliated, journey_guide]
 
 //Go to the Situation tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Situation'))
+click('Object Repository/Education Candidate Profile/Tabs/a_Situation')
 
 WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varPerspectives != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/select_Perspectives'), 
-        varPerspectives, false)
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Situation/select_Perspectives', varPerspectives, false)
 }
 
 if (varDescribe_training != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/textarea_Describe Bible Training'), 
-        varDescribe_training)
+    setText('Object Repository/Education Candidate Profile/Tabs/Situation/textarea_Describe Bible Training', varDescribe_training)
 }
 
 if (varChurch_name != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/input_Church Name'), varChurch_name)
+    setText('Object Repository/Education Candidate Profile/Tabs/Situation/input_Church Name', varChurch_name)
 }
 
 if (varChurch_involvement != null) {
-    WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Situation/select_Church Involvement'), 
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Situation/select_Church Involvement', 
         varChurch_involvement, false)
 }
 
-WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/Situation/btn_Complete Submit'))
+click('Education Candidate Profile/Tabs/Situation/btn_Complete Submit')
+
+
+def scrollToObject(def object) {
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+
+	loc = element.getLocation()
+
+	y = loc.getY()
+
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		WebUI.scrollToPosition(0, y - 150)
+
+		WebUI.delay(1)
+	}
+}
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(findTestObject(object))
+}
+
+def getText(def object) {
+	scrollToObject(object)
+
+	value = WebUI.getText(findTestObject(object))
+
+	return value
+}
+
+def setText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setText(findTestObject(object), value)
+}
+
+def setEncryptedText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setEncryptedText(findTestObject(object), value)
+}
+
+def selectOptionByValue(def object, def value, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), value, flag)
+}
+
+def selectOptionByLabel(def object, def label, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), label, flag)
+}
+
+def clearText(object) {
+	scrollToObject(object)
+
+	WebUI.clearText(findTestObject(object))
+}
+
+
+
+
 

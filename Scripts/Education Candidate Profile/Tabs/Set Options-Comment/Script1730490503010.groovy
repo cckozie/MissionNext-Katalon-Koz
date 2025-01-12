@@ -20,6 +20,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -50,13 +51,82 @@ WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension')
 
 // Set the comments text
 if (varComments != null) {
-    WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Options-Comment/textarea_Educator Comments'), 
-        varComments)
+    setText('Object Repository/Education Candidate Profile/Tabs/Options-Comment/textarea_Educator Comments', varComments)
 }
 
-WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/Options-Comment/btn_Submit'))
+click('Education Candidate Profile/Tabs/Options-Comment/btn_Submit')
+
+
+
+def scrollToObject(def object) {
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+
+	loc = element.getLocation()
+
+	y = loc.getY()
+
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		WebUI.scrollToPosition(0, y - 150)
+
+		WebUI.delay(1)
+	}
+}
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(findTestObject(object))
+}
+
+def getText(def object) {
+	scrollToObject(object)
+
+	value = WebUI.getText(findTestObject(object))
+
+	return value
+}
+
+def setText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setText(findTestObject(object), value)
+}
+
+def setEncryptedText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setEncryptedText(findTestObject(object), value)
+}
+
+def selectOptionByValue(def object, def value, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), value, flag)
+}
+
+def selectOptionByLabel(def object, def label, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), label, flag)
+}
+
+def clearText(object) {
+	scrollToObject(object)
+
+	WebUI.clearText(findTestObject(object))
+}
 
