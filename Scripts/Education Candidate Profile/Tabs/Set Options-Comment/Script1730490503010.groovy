@@ -47,7 +47,7 @@ xpaths = [paid_volunteer, travel_option]
 //Go to the Availability tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Options-Comment'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Options/Comment Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Options/Comment Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the comments text
 if (varComments != null) {

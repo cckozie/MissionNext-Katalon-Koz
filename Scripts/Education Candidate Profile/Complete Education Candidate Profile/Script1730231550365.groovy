@@ -17,6 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//	Need to add tests for the tooltips and error messages on all tabs
+//  Consider using a called script to test all tooltips.
+//  Write all failures to the output file
+///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -27,6 +33,12 @@ if (username != 'cktest04ec') {
 }
 
 domain = GlobalVariable.domain
+
+called = false
+if (binding.hasVariable('varCalled')) {
+	called = varCalled
+}
+
 
 // Specify file to contain test case results, update the global variable, and write the first line of text
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
@@ -42,10 +54,11 @@ if (url == null) {
     WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-url = WebUI.getUrl(FailureHandling.OPTIONAL)
+dashboard = WebUI.verifyElementPresent(findTestObject('Education Candidate Profile/Dashboard/a_My Profile'), 2, 
+    FailureHandling.OPTIONAL)
 
-if (url.indexOf('dashboard') < 0) {
-    WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
+if(dashboard) { 
+        WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_My Profile'))
 }
 
 
@@ -149,17 +162,17 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Availabili
 
 
 // Complete the Preferences tab
+// Get the positions and regions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/preferred positions.csv
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+
 positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), 
 [('varFileName') : 'Education Candidate Forms/preferred positions.csv', ('varSelections') : 'positions'], FailureHandling.STOP_ON_FAILURE)
 
-//regions = ['South America', 'Caribbean', 'Central America']
 regions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
 	[('varFileName') : 'Education Candidate Forms/preferred positions.csv', ('varSelections') : 'regions'], FailureHandling.STOP_ON_FAILURE)
 	
-println(regions)
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Preferences'), [('varPositions') : positions, ('varRegions') : regions], 
     FailureHandling.STOP_ON_FAILURE)
-
 
 // Complete the Options/Comment tab
 paid_volunteer = ['Position requires raising some support', 'A salary provided; enough to live locally']
@@ -171,3 +184,6 @@ comments = 'I really hope I can get a partially paid position'
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Options-Comment'), [('varPaid_volunteer') : paid_volunteer
         , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.STOP_ON_FAILURE)
 
+if(!called) { 	//Leave the browser open if this script was called from another script
+	WebUI.closeBrowser()
+}

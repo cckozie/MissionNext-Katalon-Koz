@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>h1_MISSIONNEXT EDUCATION CANDIDATE REGISTRATION</name>
+   <name>h1_Header</name>
    <tag></tag>
    <elementGuidId>383fdd9a-3599-44e8-aa88-f9653585f207</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION' or . = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION')]</value>
+      </entry>
       <entry>
          <key>XPATH</key>
          <value>//div[@id='main']/div/div/div/h1</value>
@@ -13,12 +17,8 @@
          <key>CSS</key>
          <value>h1</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[(text() = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION' or . = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION')]</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -27,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>h1</value>
-      <webElementGuid>8c105150-87a0-48f7-8e93-6f4de0e91646</webElementGuid>
+      <webElementGuid>ce81425c-2244-4a49-8c6a-1bfa8fe06742</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -35,7 +35,7 @@
       <name>text</name>
       <type>Main</type>
       <value>MISSIONNEXT EDUCATION CANDIDATE REGISTRATION</value>
-      <webElementGuid>baaa6084-6ffc-46dd-a2a2-ce644a131ba8</webElementGuid>
+      <webElementGuid>969314e8-55fb-4290-937b-d3182a6fd447</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -43,7 +43,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-header&quot;]/h1[1]</value>
-      <webElementGuid>20f6c7c3-b9ac-481d-b274-bfef37fa59c7</webElementGuid>
+      <webElementGuid>0cc1860f-7126-4f22-9119-e30bd329d8f9</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -51,23 +51,23 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/h1</value>
-      <webElementGuid>f404f534-52e3-4058-999b-2b8520101081</webElementGuid>
+      <webElementGuid>b0432ee6-5146-404b-a395-666e73aacfc9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Partners'])[2]/following::h1[1]</value>
-      <webElementGuid>cbb3f430-d1dd-4638-8d55-4fbb3d5ee67d</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[1]/following::h1[1]</value>
+      <webElementGuid>2cf7b455-22b5-4353-9975-8f6ffae730fa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[2]/following::h1[1]</value>
-      <webElementGuid>46d86c6e-0bc6-4c55-8a69-5d27eadfea83</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Founder’s Blog'])[1]/following::h1[1]</value>
+      <webElementGuid>b2810da3-24b5-42d6-97af-03efd605e541</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -75,7 +75,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='You must be at least 18 years old to participate.'])[1]/preceding::h1[1]</value>
-      <webElementGuid>f4d8ec2a-081f-49b6-8913-f098277e2636</webElementGuid>
+      <webElementGuid>6ee8435e-b929-41c5-8d8e-44ed9c4ddaa1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -83,7 +83,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='LOGIN INFORMATION'])[1]/preceding::h1[1]</value>
-      <webElementGuid>7f9a862c-99e4-45e9-9cea-d76c531847f3</webElementGuid>
+      <webElementGuid>a37f9328-50e8-43ad-8e33-1a865054c8b1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -91,7 +91,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='MISSIONNEXT EDUCATION CANDIDATE REGISTRATION']/parent::*</value>
-      <webElementGuid>ffdf762d-4c8f-41f7-a7d0-afe45103ed2b</webElementGuid>
+      <webElementGuid>e9909f3e-b3e4-4ea3-b7f6-927128126804</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -99,7 +99,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//h1</value>
-      <webElementGuid>c4117806-67ba-45c3-a9ed-33d99757af81</webElementGuid>
+      <webElementGuid>9fa73bbc-b6e7-4aa4-b18a-c15d4d2b913e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -107,6 +107,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//h1[(text() = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION' or . = 'MISSIONNEXT EDUCATION CANDIDATE REGISTRATION')]</value>
-      <webElementGuid>7e96978a-4ca9-4e68-b983-edde0ef5f9f7</webElementGuid>
+      <webElementGuid>511aafeb-8eb5-4b0c-b4ea-adec39664636</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

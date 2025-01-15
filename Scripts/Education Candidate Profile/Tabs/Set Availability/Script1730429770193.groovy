@@ -47,7 +47,7 @@ xpaths = [term_available, time_commitments]
 //Go to the Availability tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Availability'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the dropdown lists
 if (varWhen_available != null) {

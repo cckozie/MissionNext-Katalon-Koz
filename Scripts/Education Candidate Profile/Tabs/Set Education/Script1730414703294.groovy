@@ -45,7 +45,7 @@ xpaths = [previous_experience]
 //Go to the Education tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Education'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varFormal_degree != null) {

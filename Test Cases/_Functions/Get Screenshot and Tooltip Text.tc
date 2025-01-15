@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Screenshot and Tooltip Text</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fa8e9967-4f8c-496d-b8be-4d3972aed9ae</testCaseGuid>
+</TestCaseEntity>

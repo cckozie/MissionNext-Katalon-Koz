@@ -39,7 +39,7 @@ println(varGender)
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
 
-//WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the input fields provided
 if (varGender == 'Male') {

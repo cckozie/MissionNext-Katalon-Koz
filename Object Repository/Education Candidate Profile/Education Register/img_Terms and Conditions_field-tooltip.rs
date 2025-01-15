@@ -6,11 +6,11 @@
    <elementGuidId>ba42a210-bd2c-432e-82a2-212f10bf4200</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;group1&quot;]/div[8]/div[2]/img</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//div[@id='group1']/div[8]/div[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,15 +22,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>5fa01814-328c-457d-8f90-308b95977a7b</webElementGuid>
+      <webElementGuid>f765171d-9316-4384-9fcd-a80ee6a7111b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>4f5adba6-a109-4fd9-a9d0-62c11098ecc7</webElementGuid>
+      <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
+      <webElementGuid>550d4a26-8f4a-4ad5-bd0c-dcfc731c5aa4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>5a30e520-6c2c-4f14-a589-56a36ed4fd74</webElementGuid>
+      <webElementGuid>70f028bf-ae65-4d05-843b-3a8774d7783a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>8785a8d7-23b8-42da-8137-f50c221fa4ba</webElementGuid>
+      <webElementGuid>8096c686-fc32-4559-9f54-b17484125b80</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -54,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Please read and agree with MissionNext Terms and Conditions to continue</value>
-      <webElementGuid>71f1754e-2c27-41a4-ba1a-391e647eb8b6</webElementGuid>
+      <webElementGuid>335104eb-ecaa-4089-837b-815b7cffa1a7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -62,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>283da07a-b8b7-4d7b-b76f-fc0489a39227</webElementGuid>
+      <webElementGuid>9c7add68-2d53-40ca-9097-fedff7f6aee3</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -70,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[8]/div[2]/img</value>
-      <webElementGuid>44c32c78-a9c8-49f2-ab87-80ad95e64072</webElementGuid>
+      <webElementGuid>0049f908-7680-481c-ac5c-d260a386f651</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -78,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[7]</value>
-      <webElementGuid>a8b45a1b-1ca7-4019-a672-8b7c3fb7cc04</webElementGuid>
+      <webElementGuid>0b2fd5cb-5261-4584-a6a4-e95217e58e82</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -86,14 +86,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div[2]/img</value>
-      <webElementGuid>098c5740-a51e-4f40-ac36-7e55c297daef</webElementGuid>
+      <webElementGuid>dacabf33-8e5f-4085-9ea1-9412f6abb14f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//img[@src = 'https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>83332cb3-9ace-458f-b09e-2182de228110</webElementGuid>
+      <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
+      <webElementGuid>189fadc9-26b7-4a47-8098-61f69dd1d5d4</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

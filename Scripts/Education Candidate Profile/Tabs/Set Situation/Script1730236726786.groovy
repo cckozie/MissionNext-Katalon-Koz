@@ -61,7 +61,7 @@ xpaths = [process_stage, bible_training, church_affiliated, journey_guide]
 //Go to the Situation tab
 click('Object Repository/Education Candidate Profile/Tabs/a_Situation')
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varPerspectives != null) {

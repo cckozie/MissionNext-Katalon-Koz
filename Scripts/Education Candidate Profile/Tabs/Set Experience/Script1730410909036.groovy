@@ -46,9 +46,7 @@ xpaths = [missions_experience]
 //Go to the Experience tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Experience Tab'], FailureHandling.STOP_ON_FAILURE)
-
-//WebUI.callTestCase(findTestCase('_sandbox/Get dropdown list options'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Experience Tab'], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varHighest_degree != null) {

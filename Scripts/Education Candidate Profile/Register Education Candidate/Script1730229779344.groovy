@@ -14,6 +14,7 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import groovy.console.ui.SystemOutputInterceptor as SystemOutputInterceptor
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebDriver as WebDriver
@@ -24,6 +25,7 @@ import org.openqa.selenium.interactions.Actions as Actions
 import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -34,13 +36,20 @@ if (username != 'cktest04ec') {
     System.exit(0)
 }
 
+//######################################################################################################
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
+fieldTestDelay = 2
+//######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//  Need to modify for new password tooltip text
-//	Need to call other test cases for the Experience, Availability, Service/Comment, and Your Ministry Prefs tabs
+//	Need to add tests for the tooltips on all of the tabs. 
+//  Consider using a called script to test all tooltips.
+//  Write all failures to the output file
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 domain = GlobalVariable.domain
 
 username = GlobalVariable.username
+
+url = (('https://education.' + domain) + '/signup/candidate')
 
 // Write results to text file
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain) + 
@@ -53,43 +62,84 @@ outFile.write(('Testing Register Education Candidate on ' + domain) + '.\n')
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
-// Define path to tooltip icons and text images
-path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey candidate/journey contact registration/'
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
-// Define the Xpath for each of the tooltip test objects
-tooltipXpaths = [('username') : '//div[@id=\'main_fields\']/div[1]/div/img', ('email') : '//div[@id=\'main_fields\']/div[2]/div/img'
-    , ('password') : '//div[@id=\'main_fields\']/div[3]/div/img', ('first_name') : '//*[@id=\'group1\']/div[1]/div[1]/img'
-    , ('last_name') : '//*[@id=\'group1\']/div[2]/div[1]/img', ('learn_about_us') : '//*[@id=\'group1\']/div[6]/div[1]/img'
-    , ('terms_and_conditions') : '//*[@id="group1"]/div[8]/div[3]/img']
+// Define the folder with the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Education Register/')
 
-// Define the names of the tooltip fields
-tooltips = ['username', 'email', 'password', 'first_name', 'last_name', 'learn_about_us', 'terms_and_conditions']
+// Define the names of the tooltip fields and the unique part of the related test object
+// (header is a dummy because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [('header') : 'h1_Header', ('username') : 'img_Username_field-tooltip', ('email') : 'img_Email_field-tooltip'
+    , ('password') : 'img_Password_field-tooltip', ('first_name') : 'img_First Name_field-tooltip', ('last_name') : 'img_Last Name_field-tooltip'
+    , ('learn_about') : 'img_Learn About Us_field-tooltip', ('terms_conditions') : 'img_Terms and Conditions_field-tooltip']
 
-// Define the required field missing error message test objects (Currently not used. Awaiting decisions on desired behavior)
+// Define the expected tooltip texts
+tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
+    , ('Email') : 'Your primary email address and must be unique in our database.', ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
+    , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us?') : 'It is helpful to know how people are learning about us.'
+    , ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
+
+// Define the required field missing error message test objects
 requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
     , ('Email') : 'Please enter a valid email address.', ('First Name') : 'The First Name field is required.', ('Last Name') : 'The last name field is required.'
     , ('Country') : 'The country field is required.', ('Phone Number') : 'The phone number field is required.', ('Terms and Conditions') : 'The terms and conditions field is required.']
 
-// Open the Education login page
-WebUI.callTestCase(findTestCase('_Functions/Open Education Candidate Login Page'), [:], FailureHandling.STOP_ON_FAILURE)
+//================================== Create the education partner ==================================
+WebUI.openBrowser('')
 
-// Prep for selenium and sikulix funtions
+WebUI.maximizeWindow()
+
+WebUI.navigateToUrl(url)
+
+WebUI.waitForPageLoad(10)
+
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Register'], 
+    FailureHandling.STOP_ON_FAILURE)
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 Actions action = new Actions(driver)
 
-click('Education Candidate Profile/Education Login/btn_Apply for Education')
+// Call the tooltip testing script
+outText = 'Verifying the tooltips can be displayed.\n'
 
-click('Object Repository/Education Candidate Profile/Education Login/a_Register Now')
+outFile.append(outText)
 
-setText('Education Candidate Profile/Education Register/input_Username', '=====> WAITING FOR SIKULIX <=====')
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder], FailureHandling.STOP_ON_FAILURE)
+System.exit(0)
+// Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
+outText = 'Verifying the tooltip text.\n'
 
-Screen s = new Screen()
+outFile.append(outText)
 
-clearText('Education Candidate Profile/Education Register/input_Username')
+for (def it : tooltipText) {
+	myKey = it.key
 
-click('Object Repository/Education Candidate Profile/Education Register/button_Sign up')
+	myText = it.value
+
+	actualText = tooltipTextMap.get(myKey)
+
+	println((myKey + ':') + actualText)
+
+	if (actualText != myText) {
+		outText = (((((('####### ERROR: The tooltip text for ' + myKey) + ' should be ') + myText) + ' but instead is ') +
+		actualText) + '.')
+
+		println(outText)
+
+		outFile.append(outText + '\n')
+	}
+}
+
+outText = 'Verifying the required field message.\n'
+
+outFile.append(outText)
+
+// Submit the empty page
+click('Education Candidate Profile/Education Register/button_Sign up')
 
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Email', 'Password']
@@ -136,6 +186,11 @@ fieldList = ['Terms and Conditions']
 
 testFieldMessages(fieldList)
 
+outText = 'Verifying the links to other pages.\n'
+
+outFile.append(outText)
+
+
 //Test links to Privacy Policy and Terms and Conditions pages
 click('Object Repository/Education Candidate Profile/Education Register/a_Privacy Policy')
 
@@ -175,72 +230,11 @@ WebUI.switchToWindowIndex(0)
 
 WebUI.delay(1)
 
-/*
-WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/h1_MISSIONNEXT EDUCATION CANDIDATE REGISTRATION'), 2)
+outText = 'Submitting the finished page.\n'
 
-// Test for privacy policy page
-// Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
-for (def tooltip : tooltips) {
-    if (tooltip == 'learn_about_us') {
-        WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/img_Learn About Us_field-tooltip'),0)
-    }
-    
-    xpath = tooltipXpaths.get(tooltip)
+outFile.append(outText)
 
-    WebElement element = driver.findElement(By.xpath(xpath))
 
-    action.moveToElement(element).perform()
-
-    WebUI.delay(1)
-
-    myImage = (((path + tooltip) + '_tooltip') + '.png')
-
-    f = new File(myImage)
-
-    if (f.exists()) {
-        println('Looking for ' + myImage)
-
-        Pattern icn = new Pattern(myImage).similar(0.70)
-
-        found = s.exists(icn)
-
-        println(found)
-
-        if (found != null) {
-            foundStr = found.toString()
-
-            matchP = foundStr.indexOf('S:')
-
-            println(matchP)
-
-            pct = foundStr.substring(matchP + 2, matchP + 5)
-
-            outText = ('+++++++++++++++ Found tooltip text for ' + tooltip)
-
-            println(outText)
-
-            pctVal = new BigDecimal(pct)
-
-            pctVal = (pctVal * 100).intValue()
-
-            //			pctVal = pct.replace('.','').toInteger() *10
-            outFile.append(((outText + ' : ') + pctVal) + '%\n')
-        } else {
-            outText = ('----------- Unable to find tooltip text for ' + tooltip)
-
-            println(outText)
-
-            outFile.append(outText + '\n')
-        }
-    } else {
-        outText = ('Unable to find image file ' + myImage)
-
-        outFile.append(outText + '\n')
-
-        println(outText)
-    }
-}
-*/
 //Complete and submit the registration
 setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
 
@@ -248,12 +242,16 @@ click('Object Repository/Education Candidate Profile/Education Register/checkbox
 
 click('Object Repository/Education Candidate Profile/Education Register/button_Sign up')
 
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [:], FailureHandling.STOP_ON_FAILURE)
+if (!(registerOnly)) {
+    WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
+        FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
+    WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
+}
 
 WebUI.closeBrowser()
 
+WebUI.acceptAlert()
 
 def testFieldMessages(def fieldList) {
     for (def field : fieldList) {
@@ -271,6 +269,8 @@ def testFieldMessages(def fieldList) {
             outFile.append(outText + '\n')
         }
     }
+	
+	WebUI.delay(fieldTestDelay)
 }
 
 def scrollToObject(def object) {

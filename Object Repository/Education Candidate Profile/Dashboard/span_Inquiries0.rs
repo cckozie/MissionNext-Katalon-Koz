@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Inquiries0</name>
+   <tag></tag>
+   <elementGuidId>2364fa98-ac1b-4b4c-9408-2c2d247edd53</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main&quot;]/div/div/div/div[2]/div[3]/ul/li[1]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.icon-title.inquiries-icon</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>d33a21e9-9ccd-4dac-9854-e4b8c32bcc1d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>icon-title inquiries-icon</value>
+      <webElementGuid>d0df6ed5-a513-4ec7-8fa9-eb2355e54ccf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Inquiries0</value>
+      <webElementGuid>3aae6e83-88ed-485d-b192-bdeb8325e494</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;info-icons&quot;]/ul[1]/li[1]/a[1]/span[@class=&quot;icon-title inquiries-icon&quot;]</value>
+      <webElementGuid>0641f14c-a30a-4407-8490-b80a53a5fc64</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div[2]/div[3]/ul/li/a/span</value>
+      <webElementGuid>9b136ec9-e869-42d3-884f-fb110b4fd2f8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='More Opportunities'])[1]/following::span[1]</value>
+      <webElementGuid>99b81835-7468-4dbd-882e-190eed333916</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Journey'])[2]/following::span[1]</value>
+      <webElementGuid>11ed31f4-b483-4d3e-8dd3-b7fe9da3480e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Favorites0'])[1]/preceding::span[1]</value>
+      <webElementGuid>d2cfa99a-7887-4de7-a549-6fb332b89fd0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Terms of Use'])[1]/preceding::span[2]</value>
+      <webElementGuid>87fa71dd-27c4-422d-9589-a9f32c19f63f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Inquiries']/parent::*</value>
+      <webElementGuid>e64b6d0f-8edc-477c-b6e2-27476f8c4c1e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/ul/li/a/span</value>
+      <webElementGuid>1f6726e9-c8b3-4a1e-845b-18e0cdfcaaee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Inquiries0' or . = 'Inquiries0')]</value>
+      <webElementGuid>dd8fbcd8-fbd4-4c90-b33f-90f5fb93b4ed</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

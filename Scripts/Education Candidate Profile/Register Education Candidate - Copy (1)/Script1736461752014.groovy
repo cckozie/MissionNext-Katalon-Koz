@@ -180,7 +180,7 @@ WebUI.switchToWindowIndex(0)
 WebUI.delay(1)
 
 /*
-WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/h1_MISSIONNEXT EDUCATION CANDIDATE REGISTRATION'), 2)
+WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/h1_Header'), 2)
 
 // Test for privacy policy page
 // Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file

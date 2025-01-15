@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>p_Copyright info</name>
+   <tag></tag>
+   <elementGuidId>8bde0d31-432b-4083-b82e-8c13e2b6eedb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//p[@id='footer-info']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#footer-info</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>9b5d4647-e1b7-4a03-9454-57a07c4fd9cd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>footer-info</value>
+      <webElementGuid>7619af1e-7892-472f-a191-4b1e40e66434</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Copyright ©2002-2025 MissionNext – All rights reserved | Terms of Use | Privacy Policy | Legal | Site Map | Contact | Suggested Browsers | Logout</value>
+      <webElementGuid>e49a3b21-380c-484d-b5f8-7302fee1743f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;footer-info&quot;)</value>
+      <webElementGuid>7dde8626-946c-48b4-bbfb-69ec656930da</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//p[@id='footer-info']</value>
+      <webElementGuid>eb56ac64-d0ec-4ace-8562-cdb48f005514</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign up'])[1]/following::p[1]</value>
+      <webElementGuid>b0809a71-7424-4305-b742-57f5a540b5dd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All fields are required'])[1]/following::p[1]</value>
+      <webElementGuid>62fd4cf7-64e4-4b73-b3ae-26ad22635b2e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Copyright ©2002-2025 MissionNext – All rights reserved |']/parent::*</value>
+      <webElementGuid>2f58d36b-ecaa-4604-9be5-3ca8875e8109</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/p</value>
+      <webElementGuid>c6af11cc-3d2e-4e80-bc22-8ebe182d9f9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//p[@id = 'footer-info' and (text() = 'Copyright ©2002-2025 MissionNext – All rights reserved | Terms of Use | Privacy Policy | Legal | Site Map | Contact | Suggested Browsers | Logout' or . = 'Copyright ©2002-2025 MissionNext – All rights reserved | Terms of Use | Privacy Policy | Legal | Site Map | Contact | Suggested Browsers | Logout')]</value>
+      <webElementGuid>393d1027-8d04-4d1f-b9a5-e565a42eae19</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -34,8 +34,6 @@ if (username != 'cktest04ec') {
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 parms = [varPositions, varRegions]
-println(varPositions)
-println(varRegions)
 
 //xpath of the Positions group
 positions = '//input[@id=\'profile_group-1449972047.293_preferred_education_positions\']'
@@ -46,9 +44,9 @@ regions = '//input[@id=\'profile_group-1449972047.293_world_region_preferences\'
 xpaths = [positions, regions]
 
 //Go to the Preferences tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+//WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
 
-//WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Preferences Tab'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Preferences Tab'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
