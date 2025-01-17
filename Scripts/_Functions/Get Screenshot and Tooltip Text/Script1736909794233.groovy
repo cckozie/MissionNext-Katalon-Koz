@@ -108,6 +108,8 @@ if (tooltipMap.size() > 0) {
 	}
 
 	outFile = new File(file)
+	
+	println(outText)
 
 	outFile.write(outText)
 }

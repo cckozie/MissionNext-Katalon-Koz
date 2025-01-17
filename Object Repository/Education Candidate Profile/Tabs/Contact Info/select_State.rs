@@ -7,6 +7,7 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -22,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>f25c0c60-17d5-4086-b312-4638df0ec149</webElementGuid>
+      <webElementGuid>689bf589-6df2-4032-8d73-be5cc031dc18</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -30,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>state</value>
-      <webElementGuid>54de56bc-34d5-414a-af70-381c028d402e</webElementGuid>
+      <webElementGuid>bcadead3-c151-4d18-a7b3-b6e9ecebbe42</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>188</value>
-      <webElementGuid>cc7e1164-642f-4b76-a859-342d9d326daa</webElementGuid>
+      <webElementGuid>f81a1e8a-5151-454a-9f27-3f8ae4ba2ede</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1443546232.861][state]</value>
-      <webElementGuid>8bd2620f-6dd8-43a7-b89e-fb49c2f183b9</webElementGuid>
+      <webElementGuid>64d9c2f0-e5c8-4b0a-b66c-7c87802a92e9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -54,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1443546232.861_state</value>
-      <webElementGuid>01926fbe-7b37-43b9-bc83-e9e1b08ebbbf</webElementGuid>
+      <webElementGuid>3b976781-06ef-4c39-ba09-13fe63580698</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -2309,7 +2310,7 @@
 
 
 AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyomingAAAEAP</value>
-      <webElementGuid>6cdf12e1-9fb2-4106-a64f-3b1cf9b13f53</webElementGuid>
+      <webElementGuid>345ad80d-5ca7-4843-b668-a5289075dc8d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -2317,7 +2318,7 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group-1443546232.861_state&quot;)</value>
-      <webElementGuid>0b2c12ea-5212-4eca-88fc-fe8749c16c8e</webElementGuid>
+      <webElementGuid>a8fa3f67-4996-49bd-bd0f-88adf44939ee</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -2325,7 +2326,7 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@id='profile_group-1443546232.861_state']</value>
-      <webElementGuid>6bbf15aa-6070-4d1b-9a1e-0d988ecba9f9</webElementGuid>
+      <webElementGuid>18dfb0ec-4537-43c6-965b-58ad844b9222</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -2333,23 +2334,15 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1443546232.861']/div[7]/div[2]/select</value>
-      <webElementGuid>15954948-5ac1-4474-81a2-70081f337dbe</webElementGuid>
+      <webElementGuid>5cb0c561-e36b-40cf-a9c2-487cda047959</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='State'])[1]/following::select[1]</value>
-      <webElementGuid>ed4c4e38-4d38-43af-9534-2655d3552901</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='City'])[1]/following::select[1]</value>
-      <webElementGuid>d5b8c143-69b1-43f5-851b-ff486b8500d7</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Your City'])[1]/following::select[1]</value>
+      <webElementGuid>334303f3-5ea6-408c-baa7-b9d3486f6750</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -2357,7 +2350,7 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='State/Province/Region'])[1]/preceding::select[1]</value>
-      <webElementGuid>4382ab19-8d7d-4810-9454-6c9bffc18a10</webElementGuid>
+      <webElementGuid>85954b5f-e91a-4ff9-b99e-bf89a0df5c5d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -2365,7 +2358,7 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Enter state/province/region only if requested above.'])[1]/preceding::select[1]</value>
-      <webElementGuid>f60b33d2-d5a1-4ac2-bbbf-2cfa496b04d5</webElementGuid>
+      <webElementGuid>bb8f6ebb-f8b4-4adb-b7e9-ae4fc8620820</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -2373,7 +2366,7 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
       <name>xpath:position</name>
       <type>Main</type>
       <value>//select</value>
-      <webElementGuid>427faa7e-3cc0-4577-9656-3d50fb685d8d</webElementGuid>
+      <webElementGuid>d0c61102-1776-4069-b23d-f07489486661</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -6875,6 +6868,6 @@ AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of Col
 
 
 AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyomingAAAEAP')]</value>
-      <webElementGuid>ac4dbc88-5398-4cab-9611-8bdc94c806e4</webElementGuid>
+      <webElementGuid>0dc50e87-c2ba-4f33-9628-71e261cbf1c1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

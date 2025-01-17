@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Birth Year</name>
+   <name>input_Your Email</name>
    <tag></tag>
-   <elementGuidId>7fc1d5f3-5a3b-4491-80d9-34d97ba4a941</elementGuidId>
+   <elementGuidId>dbef6ea3-82b6-4cce-8eb3-fe6a1701b1ae</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
+         <value>//input[@id='profile_group-1443546232.861_email']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,47 +23,47 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>69439a62-659c-42c3-bac5-2452862aadc2</webElementGuid>
+      <webElementGuid>d96375b8-60b2-4440-9703-967614008d8e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>birth_year</value>
-      <webElementGuid>4435f735-086a-4c23-bee2-86017534a0d6</webElementGuid>
+      <value>email</value>
+      <webElementGuid>ea841b9e-41b2-4fa8-9b18-5d5a5a1dcbea</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>168</value>
-      <webElementGuid>10f845fa-4f13-4512-9556-d44f7a7758de</webElementGuid>
+      <value>24</value>
+      <webElementGuid>e2445e83-18a4-44f9-a33d-7a275d72827f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-small-field</value>
-      <webElementGuid>aa3ec345-5aa9-40a9-b8a0-a4939e9bcaf9</webElementGuid>
+      <value>mn-large-field</value>
+      <webElementGuid>8af48caa-1f36-48aa-a147-b4e277a61b32</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>profile_group-1443546232.861_birth_year</value>
-      <webElementGuid>bb294d10-7e53-4b42-b75a-3d6a990e0c38</webElementGuid>
+      <value>profile_group-1443546232.861_email</value>
+      <webElementGuid>6c6917cb-470b-467e-8861-41855b05640e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>profile[group-1443546232.861][birth_year]</value>
-      <webElementGuid>5eb619ca-d747-41dd-b3c3-5f78881faa67</webElementGuid>
+      <value>profile[group-1443546232.861][email]</value>
+      <webElementGuid>059a87a9-6964-4d93-bbd6-5d87d197460b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>37ccbf2d-5ca5-46ec-b5fc-d616f7409055</webElementGuid>
+      <webElementGuid>8e158d98-b8a8-4cd8-889e-9caeb2e71d77</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,54 +79,62 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>88c5c958-d296-4b2e-8bc5-e0bb0f876ce7</webElementGuid>
+      <webElementGuid>e6db2f21-2920-4960-aead-ec539f5aacaa</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>value</name>
+      <type>Main</type>
+      <value>cktest04@missionnext.org</value>
+      <webElementGuid>1025d385-32d0-4016-af29-9a278e8adc1a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>YYYY</value>
-      <webElementGuid>1c791225-6aa7-4cdd-96a6-459b065f4d3f</webElementGuid>
+      <value>Primary Email Address</value>
+      <webElementGuid>76f859b9-928b-471e-9f89-268585c0441b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;profile_group-1443546232.861_birth_year&quot;)</value>
-      <webElementGuid>883c8f93-3d05-4d00-88fc-d1f3bdf2cf6b</webElementGuid>
+      <value>id(&quot;profile_group-1443546232.861_email&quot;)</value>
+      <webElementGuid>ab3fd4e6-fdac-44c5-a25f-3d923322da8b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
-      <webElementGuid>2e5fa7a4-7ef2-4aff-86f0-6bf3f9a22cfb</webElementGuid>
+      <value>//input[@id='profile_group-1443546232.861_email']</value>
+      <webElementGuid>523cfa6b-f6a4-4cc0-9ce6-59ad6b69a46e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1443546232.861']/div[14]/div[2]/input</value>
-      <webElementGuid>b85bb517-5349-470e-ad6e-6209d4b9bd8b</webElementGuid>
+      <value>//div[@id='group-1443546232.861']/div[4]/div[2]/input</value>
+      <webElementGuid>5ae6e200-1aa5-404e-8284-8434894fbfea</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[14]/div[2]/input</value>
-      <webElementGuid>1ab71e89-52a6-476b-859f-4f3725800f75</webElementGuid>
+      <value>//div[4]/div[2]/input</value>
+      <webElementGuid>908dc679-48b6-42dd-b202-d05230dee391</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'profile_group-1443546232.861_birth_year' and @name = 'profile[group-1443546232.861][birth_year]' and @type = 'input' and @placeholder = 'YYYY']</value>
-      <webElementGuid>281ead7c-1f6e-40e4-abd3-31c140d05081</webElementGuid>
+      <value>//input[@id = 'profile_group-1443546232.861_email' and @name = 'profile[group-1443546232.861][email]' and @type = 'input' and @placeholder = 'Primary Email Address']</value>
+      <webElementGuid>b1d39740-ad5e-444b-8ab7-085f5829553d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -67,19 +67,25 @@ for (def it : tooltips) {
 
     myValue = it.value
 
-    println(myKey)
+    println('myKey is ' + myKey)
 
-    println(myValue)
-
-    tObj = (testObjectFolder + myValue)
-
-    click(tObj)
-    
-    WebUI.delay(1)
-
-    myImage = ((tooltipImagePath + myKey) + '.png')
-
-    f = new File(myImage)
+    println('myValue is ' + myValue)
+	
+	if(myKey != 'dummy') {	//A dummy first element is necessary because Sikulix is not correctly matching on the first element tested
+	
+	    tObj = (testObjectFolder + myValue)
+	
+	    click(tObj)
+	    
+	    WebUI.delay(1)
+		
+	    myImage = ((tooltipImagePath + myKey) + '.png')
+		
+	} else {
+		myImage = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/dummy.png'
+	}
+	
+	f = new File(myImage)
 
     if (f.exists()) {
         println('Looking for ' + myImage)
@@ -101,7 +107,7 @@ for (def it : tooltips) {
 
             outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pct) + '%')
 
-            if (myKey != 'header') {
+            if (myKey != 'dummy') {
                 //The new sikulix gets the wrong match results for the first element, so this is a dummy match
                 println(outText)
 

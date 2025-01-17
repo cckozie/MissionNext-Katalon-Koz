@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Marital Status</name>
+   <tag></tag>
+   <elementGuidId>3c9dc116-a7c9-4e21-9255-3c3a82ed9969</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1443546232.861_marital_status']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>ef8ce936-92a0-48bb-99be-a603570da322</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-dependant</name>
+      <type>Main</type>
+      <value>1</value>
+      <webElementGuid>6d877694-c6b8-47c1-b1a7-805b9b673278</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>marital_status</value>
+      <webElementGuid>0036f682-7ea3-4902-9fb6-e5a689654af9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>221</value>
+      <webElementGuid>b9288394-e45e-4109-82e6-b509d13b8d8f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1443546232.861][marital_status]</value>
+      <webElementGuid>8f6faa63-869e-4845-9688-d4f8e8ec5940</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1443546232.861_marital_status</value>
+      <webElementGuid>ee4445c9-ef73-4f17-a45e-bc67798f6986</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>custom-field</name>
+      <type>Main</type>
+      <value>2</value>
+      <webElementGuid>1669b5f1-3ff0-4f39-ab9a-d48edcb48fa7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+Single
+Married
+Separated
+Divorced
+Widowed
+</value>
+      <webElementGuid>50b85b2b-c456-4ca5-8f2d-e406af20c9dd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1443546232.861_marital_status&quot;)</value>
+      <webElementGuid>bb8f254a-9889-47eb-9402-5cbfe130fa90</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1443546232.861_marital_status']</value>
+      <webElementGuid>105f42ba-ab6c-4db0-a03f-36830b674554</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1443546232.861']/div[15]/div[2]/select</value>
+      <webElementGuid>2f3b495c-9e10-481d-a0c2-a648157a913d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Marital status'])[1]/following::select[1]</value>
+      <webElementGuid>f8c1b226-b3b6-48ca-b000-0f96ad17bc0e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The birth year field is required.'])[1]/following::select[1]</value>
+      <webElementGuid>c8e2c2d1-c6fc-48cc-a83c-66146298151a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Dependent Children'])[1]/preceding::select[1]</value>
+      <webElementGuid>c1af7454-51bf-45ef-a837-f2eb681ef037</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Check to Agree with Terms and Conditions to continue'])[1]/preceding::select[2]</value>
+      <webElementGuid>39a12d86-d7c9-4104-940e-d9bf2f4df707</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[15]/div[2]/select</value>
+      <webElementGuid>16bd93eb-2713-4149-a1b7-8ce0268d9f2e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1443546232.861][marital_status]' and @id = 'profile_group-1443546232.861_marital_status' and (text() = '
+Single
+Married
+Separated
+Divorced
+Widowed
+' or . = '
+Single
+Married
+Separated
+Divorced
+Widowed
+')]</value>
+      <webElementGuid>1978b9d6-39b9-4d7e-a581-6f2511955c02</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

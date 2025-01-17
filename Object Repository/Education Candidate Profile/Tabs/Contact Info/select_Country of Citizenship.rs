@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>select_Country</name>
+   <name>select_Country of Citizenship</name>
    <tag></tag>
-   <elementGuidId>ae7ca64a-c80b-47b1-954c-40ccd614552b</elementGuidId>
+   <elementGuidId>5a14fe2d-6305-4f6c-bb08-98ecec7f6bb9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//select[@id='profile_group-1443546232.861_country']</value>
+         <value>//select[@id='profile_group-1443546232.861_citizenship_country']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,39 +23,39 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>a40ac3d1-77ea-4107-83b5-321b41e543e3</webElementGuid>
+      <webElementGuid>9ee6ac3f-ac77-48ad-ae4e-69a597b13e17</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>country</value>
-      <webElementGuid>5ffa3484-ff31-4d57-a1ea-8f37a6355f2e</webElementGuid>
+      <value>citizenship_country</value>
+      <webElementGuid>fe976f6c-e0d6-433f-ab57-ab936dc9eb51</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>30</value>
-      <webElementGuid>c164893b-f5c4-4c38-964b-5d64a541c2ac</webElementGuid>
+      <value>191</value>
+      <webElementGuid>f383583c-749a-41bf-b3d3-974eb96c8884</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>profile[group-1443546232.861][country]</value>
-      <webElementGuid>a96fce4c-ea2e-4c2c-9ce5-ed716d956038</webElementGuid>
+      <value>profile[group-1443546232.861][citizenship_country]</value>
+      <webElementGuid>d38d703c-f1e1-4955-8870-990a210a1140</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>profile_group-1443546232.861_country</value>
-      <webElementGuid>79ca5cf3-450b-43a4-a525-37bb126af819</webElementGuid>
+      <value>profile_group-1443546232.861_citizenship_country</value>
+      <webElementGuid>5944c479-36f1-48ab-9d7f-9a2d17787b8d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -258,6 +258,7 @@ Spain
 Sri Lanka
 Sudan
 Suriname
+Swaziland
 Sweden
 Switzerland
 Syrian Arab Republic
@@ -293,78 +294,78 @@ Yemen
 Zambia
 Zimbabwe
 </value>
-      <webElementGuid>fc5c1ee7-cd88-4257-a6a9-633331ffc38b</webElementGuid>
+      <webElementGuid>00f41b29-9950-4ced-920f-320e2f24e57c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;profile_group-1443546232.861_country&quot;)</value>
-      <webElementGuid>a1f49985-8a77-476e-bb96-6ba1ab24202d</webElementGuid>
+      <value>id(&quot;profile_group-1443546232.861_citizenship_country&quot;)</value>
+      <webElementGuid>1b570b63-a01c-443f-a757-591d3987782c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//select[@id='profile_group-1443546232.861_country']</value>
-      <webElementGuid>c4bef1e7-e405-4424-8d62-ceb02340e057</webElementGuid>
+      <value>//select[@id='profile_group-1443546232.861_citizenship_country']</value>
+      <webElementGuid>51b2d6fd-eb8b-40f4-8ddf-8007732cb013</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1443546232.861']/div[10]/div[2]/select</value>
-      <webElementGuid>b8f3977f-98fd-4803-a603-39eb5a49e8fe</webElementGuid>
+      <value>//div[@id='group-1443546232.861']/div[11]/div[2]/select</value>
+      <webElementGuid>bed6dd41-6059-4224-b804-960c0d3606b1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country*'])[1]/following::select[1]</value>
-      <webElementGuid>db3f660f-b77f-40ba-8563-59745248efac</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Your Country of Citizenship*'])[1]/following::select[1]</value>
+      <webElementGuid>b83bff95-92ae-451c-bb89-fb348e4b52b1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Post/Zip Code'])[1]/following::select[1]</value>
-      <webElementGuid>d8d8cf81-7c23-41d1-b71a-6e9e05bb0760</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country*'])[1]/following::select[2]</value>
+      <webElementGuid>6d8d7402-8a6e-4873-b34b-ecddda8132df</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Your Country of Citizenship*'])[1]/preceding::select[1]</value>
-      <webElementGuid>ffc674e9-42dd-41e2-b2d1-7fa1d7b2305e</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='The citizenship country field is required.'])[1]/preceding::select[1]</value>
+      <webElementGuid>e3555d08-7f9e-46ff-9acf-e92851d0820d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='The citizenship country field is required.'])[1]/preceding::select[2]</value>
-      <webElementGuid>c5ff8583-1ed4-45b8-be3b-0b5867fc0420</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Ethnicity'])[1]/preceding::select[1]</value>
+      <webElementGuid>ea503f3c-96d3-4155-ba35-d7dd9ed7ab03</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[10]/div[2]/select</value>
-      <webElementGuid>c72fde7d-1404-4594-8235-5616fad1afda</webElementGuid>
+      <value>//div[11]/div[2]/select</value>
+      <webElementGuid>07256f6f-9756-4019-ab7d-f815ec11b324</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//select[@name = 'profile[group-1443546232.861][country]' and @id = 'profile_group-1443546232.861_country' and (text() = '
+      <value>//select[@name = 'profile[group-1443546232.861][citizenship_country]' and @id = 'profile_group-1443546232.861_citizenship_country' and (text() = '
 
 United States
 Afghanistan
@@ -560,6 +561,7 @@ Spain
 Sri Lanka
 Sudan
 Suriname
+Swaziland
 Sweden
 Switzerland
 Syrian Arab Republic
@@ -790,6 +792,7 @@ Spain
 Sri Lanka
 Sudan
 Suriname
+Swaziland
 Sweden
 Switzerland
 Syrian Arab Republic
@@ -825,6 +828,6 @@ Yemen
 Zambia
 Zimbabwe
 ')]</value>
-      <webElementGuid>fea99f90-1333-4333-99fc-e58997da8e90</webElementGuid>
+      <webElementGuid>8100c7c3-4c74-4e38-970f-73afce433ffe</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

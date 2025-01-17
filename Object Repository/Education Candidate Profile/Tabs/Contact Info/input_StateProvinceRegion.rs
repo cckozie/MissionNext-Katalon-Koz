@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Birth Year</name>
+   <name>input_StateProvinceRegion</name>
    <tag></tag>
-   <elementGuidId>7fc1d5f3-5a3b-4491-80d9-34d97ba4a941</elementGuidId>
+   <elementGuidId>d266f359-9119-4902-8f51-2cab62dd86fc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
+         <value>//input[@id='profile_group-1443546232.861_state/province']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,47 +23,47 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>69439a62-659c-42c3-bac5-2452862aadc2</webElementGuid>
+      <webElementGuid>940f66b3-6869-4b32-afdf-dd2cda22aa5a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>birth_year</value>
-      <webElementGuid>4435f735-086a-4c23-bee2-86017534a0d6</webElementGuid>
+      <value>state/province</value>
+      <webElementGuid>4ad1532e-1b03-4988-8b82-3d9edf29ccff</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>168</value>
-      <webElementGuid>10f845fa-4f13-4512-9556-d44f7a7758de</webElementGuid>
+      <value>28</value>
+      <webElementGuid>542c706b-33de-4395-a4dd-cfd2353a6314</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-small-field</value>
-      <webElementGuid>aa3ec345-5aa9-40a9-b8a0-a4939e9bcaf9</webElementGuid>
+      <value>mn-medium-field</value>
+      <webElementGuid>1c85deb0-ef8a-48e3-9b91-9f50d8ea863e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>profile_group-1443546232.861_birth_year</value>
-      <webElementGuid>bb294d10-7e53-4b42-b75a-3d6a990e0c38</webElementGuid>
+      <value>profile_group-1443546232.861_state/province</value>
+      <webElementGuid>38214561-df52-408c-92ca-88dac13f825f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>profile[group-1443546232.861][birth_year]</value>
-      <webElementGuid>5eb619ca-d747-41dd-b3c3-5f78881faa67</webElementGuid>
+      <value>profile[group-1443546232.861][state/province]</value>
+      <webElementGuid>19a191fc-e5e6-449e-9511-02a0390ea2c0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>37ccbf2d-5ca5-46ec-b5fc-d616f7409055</webElementGuid>
+      <webElementGuid>80812476-7c3f-47cf-addc-c596ff8e250a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,54 +79,46 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>88c5c958-d296-4b2e-8bc5-e0bb0f876ce7</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>placeholder</name>
-      <type>Main</type>
-      <value>YYYY</value>
-      <webElementGuid>1c791225-6aa7-4cdd-96a6-459b065f4d3f</webElementGuid>
+      <webElementGuid>e0006f5e-5c0b-4a29-b788-be59f8d640c5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;profile_group-1443546232.861_birth_year&quot;)</value>
-      <webElementGuid>883c8f93-3d05-4d00-88fc-d1f3bdf2cf6b</webElementGuid>
+      <value>id(&quot;profile_group-1443546232.861_state/province&quot;)</value>
+      <webElementGuid>13de773d-55ba-47e7-a913-0cbc6874f9f5</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='profile_group-1443546232.861_birth_year']</value>
-      <webElementGuid>2e5fa7a4-7ef2-4aff-86f0-6bf3f9a22cfb</webElementGuid>
+      <value>//input[@id='profile_group-1443546232.861_state/province']</value>
+      <webElementGuid>acb9cce9-1124-4695-ac76-75abddb8053a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1443546232.861']/div[14]/div[2]/input</value>
-      <webElementGuid>b85bb517-5349-470e-ad6e-6209d4b9bd8b</webElementGuid>
+      <value>//div[@id='group-1443546232.861']/div[8]/div[2]/input</value>
+      <webElementGuid>60aa4d01-0236-40e2-82a1-4a303c2e47cc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[14]/div[2]/input</value>
-      <webElementGuid>1ab71e89-52a6-476b-859f-4f3725800f75</webElementGuid>
+      <value>//div[8]/div[2]/input</value>
+      <webElementGuid>d72d9c6e-b550-41a6-8e16-24bb322be2b5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'profile_group-1443546232.861_birth_year' and @name = 'profile[group-1443546232.861][birth_year]' and @type = 'input' and @placeholder = 'YYYY']</value>
-      <webElementGuid>281ead7c-1f6e-40e4-abd3-31c140d05081</webElementGuid>
+      <value>//input[@id = 'profile_group-1443546232.861_state/province' and @name = 'profile[group-1443546232.861][state/province]' and @type = 'input']</value>
+      <webElementGuid>549a6a49-df63-4b5d-9433-7f145968ff31</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -39,14 +39,30 @@ if (binding.hasVariable('varCalled')) {
 	called = varCalled
 }
 
+//Check to see if we're writing printed output to a file
+writeFile = false
 
-// Specify file to contain test case results, update the global variable, and write the first line of text
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
-domain) + '.txt')
+if (GlobalVariable.outFile != '') {
+	String myFile = GlobalVariable.outFile
 
-GlobalVariable.outFile = outFile
+	println(myFile)
 
-outFile.write(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
+	outFile = new File(myFile)
+
+	writeFile = true
+}
+
+if(!writeFile) {
+	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
+	domain) + '.txt')
+	
+	GlobalVariable.outFile = outFile
+	
+	outFile.write(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
+} else {
+	outFile.append(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
+	
+}
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -77,7 +93,7 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact In
         , ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year
         , ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
 
-
+System.exit(0)
 // Complete the Experience tab
 highest_degree = 'Bachelor of Science (BS)'
 
@@ -98,7 +114,7 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Experience
 		, ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience],
 	FailureHandling.STOP_ON_FAILURE)
 
-
+System.exit(1)
 // Complete the Education tab
 formal_degree = 'Yes'
 

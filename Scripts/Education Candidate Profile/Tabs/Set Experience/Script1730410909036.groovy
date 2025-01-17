@@ -30,7 +30,32 @@ if (username != 'cktest04ec') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)
+}
 
+//Check to see if we're writing printed output to a file
+domain = GlobalVariable.domain
+
+writeFile = false
+
+if (GlobalVariable.outFile != '') {
+	String myFile = GlobalVariable.outFile
+
+	println(myFile)
+
+	outFile = new File(myFile)
+
+	writeFile = true
+}
+
+if(!writeFile) {
+	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Education Candidate Experience Tab on ' + domain) +
+		'.txt')
+	
+	GlobalVariable.outFile = outFile
+	
+	outFile.write(('Testing Education Candidate Experience Tab on on ' + domain) + '.\n')
+} else {
+	outFile.append(('Testing Education Candidate Experience Tab on ' + domain) + '.\n')
 }
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -43,10 +68,37 @@ missions_experience = '//input[@id=\'profile_group-1443650427.743_missions_expos
 
 xpaths = [missions_experience]
 
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Life Experience') : 'img_Life Experience_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [('Life Experience') : 'May include your testimony or other experience you wish to share.']
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [('Life Experience') : 'The missions exposure field is required.']
+	
 //Go to the Experience tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
 
 WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Experience Tab'], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+testFieldMessages(fieldList)
+
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varHighest_degree != null) {
@@ -77,11 +129,31 @@ if (varLife_experience != null) {
         varLife_experience)
 }
 
-//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
 click('Education Candidate Profile/Tabs/Experience/btn_Submit')
+
+
+def testFieldMessages(def fieldList) {
+	for (def field : fieldList) {
+		errorMsg = requiredFieldMsgs.get(field)
+
+		msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
+
+		println((field + ':') + msg)
+
+		if (!(msg)) {
+			outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
+
+			println(outText)
+
+			outFile.append(outText + '\n')
+		}
+	}
+	
+	WebUI.delay(GlobalVariable.fieldTestDelay)
+}
+
 
 def scrollToObject(def object) {
 	println(('Converting ' + object) + ' to web element')

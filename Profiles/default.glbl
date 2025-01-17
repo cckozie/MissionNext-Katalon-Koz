@@ -19,4 +19,9 @@
       <initValue>''</initValue>
       <name>outFile</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>0</initValue>
+      <name>fieldTestDelay</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

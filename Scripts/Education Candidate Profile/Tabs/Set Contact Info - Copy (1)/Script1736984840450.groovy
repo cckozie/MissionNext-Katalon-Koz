@@ -22,6 +22,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -30,92 +31,42 @@ if (username != 'cktest04ec') {
 
     System.exit(0)
 }
-
-
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
-
-writeFile = false
-
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-
-if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Education Candidate Education Tab on ' + domain) +
-		'.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Education Candidate Education Tab on on ' + domain) + '.\n')
-} else {
-	outFile.append(('Testing Education Candidate Education Tab on ' + domain) + '.\n')
-}
-
-
+println(varGender)
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-parms = [varPrevious_experience]
+//Go to the Contact Info tab
+WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
 
-//xpath of the Previous Experience group
-previous_experience = "//input[@id='profile_group-1449793011.346_teaching_experience']"
+WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
 
-xpaths = [previous_experience]
-
-//Go to the Education tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Education'))
-
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
-
-// Set the text boxes and dropdown lists
-if (varFormal_degree != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree',
-		varFormal_degree, false)
+// Set the input fields provided
+if (varGender == 'Male') {
+    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male')
+} else if (varGender == 'Female') {
+    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female')
 }
 
-if (varTeaching_credentials != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Teaching Credentials',
-		varTeaching_credentials, false)
+if (varCountry != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country', 
+        varCountry, false)
 }
 
-//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
-	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
-
-if (varCredential_authority != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Credential Authority', varCredential_authority)
+if (varCountry_of_Citizenship != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country_of_Citizenship', 
+        varCountry_of_Citizenship, false)
 }
 
-if (varOther_experience != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience', varOther_experience)
+if (varBirth_year != null) {
+    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
 }
 
-if (varEnglish_proficiency != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_English Proficiency', 
-        varEnglish_proficiency, false)
+if (varMarital_status != null) {
+    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
 }
 
-if (varAdditional_languages != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/input_Additional Language(s)', 
-		varAdditional_languages)
-	WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'))
-}
-
-if (varAdditional_languages != null && varProficiency != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Additional Language Proficiency', 
-		varProficiency, false )
-}
-
-click('Object Repository/Education Candidate Profile/Tabs/Education/btn_Submit')
+click('Education Candidate Profile/Tabs/Contact Info/btn_Submit')
 
 def scrollToObject(def object) {
 	println(('Converting ' + object) + ' to web element')
@@ -183,10 +134,6 @@ def clearText(object) {
 	scrollToObject(object)
 
 	WebUI.clearText(findTestObject(object))
-}
-
-def scrollToOnly(object) {
-	scrollToObject(object)
 }
 
 
