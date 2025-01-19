@@ -21,7 +21,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
-
+import javax.swing.*;
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -31,42 +31,97 @@ if (username != 'cktest04ec') {
 
     System.exit(0)
 }
-println(varGender)
+
+// Set output file
+testName = 'Education Candidate Preferences Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parms = [varPositions, varRegions]
 
-//Go to the Contact Info tab
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
+//xpath of the Positions group
+positions = '//input[@id=\'profile_group-1449972047.293_preferred_education_positions\']'
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
+//xpath of the Regions group
+regions = '//input[@id=\'profile_group-1449972047.293_world_region_preferences\']'
 
-// Set the input fields provided
-if (varGender == 'Male') {
-    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male')
-} else if (varGender == 'Female') {
-    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female')
+xpaths = [positions, regions]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Preferences/')
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy']
+
+// Define the expected tooltip texts
+tooltipText = []
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Preferred School Positions') : 'The preferred education positions field is required.',
+('Preferred Region(s)') : 'The world region preferences field is required.']
+
+//Go to the Preferences tab
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
 }
 
-if (varCountry != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country', 
-        varCountry, false)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+
+click('Education Candidate Profile/Tabs/Preferences/input_Submit')
+      
+
+def testFieldMessages(def fieldList) {
+	for (def field : fieldList) {
+		errorMsg = requiredFieldMsgs.get(field)
+
+		msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
+
+		println((field + ':') + msg)
+
+		if (!(msg)) {
+			outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
+
+			println(outText)
+
+			outFile.append(outText + '\n')
+		}
+	}
+	
+	WebUI.delay(GlobalVariable.fieldTestDelay)
 }
 
-if (varCountry_of_Citizenship != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country_of_Citizenship', 
-        varCountry_of_Citizenship, false)
-}
-
-if (varBirth_year != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
-}
-
-if (varMarital_status != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
-}
-
-click('Education Candidate Profile/Tabs/Contact Info/btn_Submit')
 
 def scrollToObject(def object) {
 	println(('Converting ' + object) + ' to web element')
@@ -135,5 +190,3 @@ def clearText(object) {
 
 	WebUI.clearText(findTestObject(object))
 }
-
-

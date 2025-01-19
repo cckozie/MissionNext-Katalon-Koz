@@ -31,162 +31,122 @@ if (username != 'cktest04ec') {
     System.exit(0)
 }
 
+// Set output file
+testName = 'Education Candidate Education Tab'
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
-
-writeFile = false
-
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-
-if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Education Candidate Education Tab on ' + domain) +
-		'.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Education Candidate Education Tab on on ' + domain) + '.\n')
-} else {
-	outFile.append(('Testing Education Candidate Education Tab on ' + domain) + '.\n')
-}
-
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 parms = [varPrevious_experience]
 
 //xpath of the Previous Experience group
-previous_experience = "//input[@id='profile_group-1449793011.346_teaching_experience']"
+previous_experience = '//input[@id=\'profile_group-1449793011.346_teaching_experience\']'
 
 xpaths = [previous_experience]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/Education Tab/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Education/')
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Credential Authority') : 'img_Credential Authority_field-tooltip',
+('Additional Language(s)') : 'img_Additional Language(s)_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Credential Authority') : 'Enter the organization where you received your credentials',
+('Additional Language(s)') : 'Other language in which you have some level of fluency:']
+
+// Define the required field messages
+requiredFieldMsgs = [
+	('Previous Experience') : 'The teaching experience field is required.',
+	('English Proficiency') : 'The english skill field is required.']
+	
 
 //Go to the Education tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Education'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Education Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varFormal_degree != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree',
-		varFormal_degree, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/select_Formal Degree'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varFormal_degree], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varTeaching_credentials != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Teaching Credentials',
-		varTeaching_credentials, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/select_Teaching Credentials'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varTeaching_credentials], FailureHandling.STOP_ON_FAILURE)
 }
 
 //WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
-	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
 if (varCredential_authority != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Credential Authority', varCredential_authority)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/textarea_Credential Authority'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varCredential_authority], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varOther_experience != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience', varOther_experience)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varOther_experience], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varEnglish_proficiency != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_English Proficiency', 
-        varEnglish_proficiency, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/select_English Proficiency'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varEnglish_proficiency], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varAdditional_languages != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Education/input_Additional Language(s)', 
-		varAdditional_languages)
-	WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'))
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/input_Additional Language(s)'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varAdditional_languages], FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Education/textarea_Other Experience'))
 }
 
-if (varAdditional_languages != null && varProficiency != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Education/select_Additional Language Proficiency', 
-		varProficiency, false )
+if ((varAdditional_languages != null) && (varProficiency != null)) {
+    object = 'Object Repository/Education Candidate Profile/Tabs/Education/select_Additional Language Proficiency'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varProficiency], FailureHandling.STOP_ON_FAILURE)
 }
 
-click('Object Repository/Education Candidate Profile/Tabs/Education/btn_Submit')
-
-def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
-
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-	loc = element.getLocation()
-
-	y = loc.getY()
-
-	println('Y location is ' + y)
-
-	top = WebUI.getViewportTopPosition()
-
-	println('Viewport top is ' + top)
-
-	bottom = (top + 600)
-
-	if (((y - top) < 150) || ((bottom - y) < 10)) {
-		WebUI.scrollToPosition(0, y - 150)
-
-		WebUI.delay(1)
-	}
-}
-
-def click(def object) {
-	scrollToObject(object)
-
-	WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-	scrollToObject(object)
-
-	value = WebUI.getText(findTestObject(object))
-
-	return value
-}
-
-def setText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(object) {
-	scrollToObject(object)
-
-	WebUI.clearText(findTestObject(object))
-}
-
-def scrollToOnly(object) {
-	scrollToObject(object)
-}
+object = 'Education Candidate Profile/Tabs/Experience/btn_Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 

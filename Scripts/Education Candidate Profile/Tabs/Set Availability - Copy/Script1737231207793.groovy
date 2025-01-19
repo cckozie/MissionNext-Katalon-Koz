@@ -1,0 +1,190 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+
+// Ensure that we are using the correct execution profile
+username = GlobalVariable.username
+
+if (username != 'cktest04ec') {
+    println('The Execution Profile must be set to "Education Partner"')
+
+    System.exit(0)
+}
+
+// Set output file
+testName = 'Education Candidate Availability Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+lastY = -100
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parms = [varTerm_available, varTime_commitments]
+
+//xpath of the Term Available group
+term_available = "//input[@id=\'profile_group-1449971279.254_school_term_available\']"
+
+//xpath of the Time Commitments group
+time_commitments = "//input[@id='profile_group-1449971279.254_time_commitment']"
+xpaths = [term_available, time_commitments]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Availability/')
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Time Commitment(s)') : 'img_Time Commitment(s)_field-tooltip',
+('Relocation Option(s)') : 'img_Relocation Option(s)_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Time Commitment(s)') : 'Check commitments you would consider.',
+('Relocation Option(s)') : 'This choice indicates to mission agencies your availability and flexibility.']
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+//('I/We can be Available') : 'The approximate availability field is required.',  ##### NEVER DISPLAYED
+('Time Commitment(s)') : 'The time commitment field is required.']
+//('Relocation Option(s)') : 'The relocation possibilities field is required.']   ##### NEVER DISPLAYED
+
+
+//Go to the Availability tab
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Availability'))
+
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+
+// Set the dropdown lists
+if (varWhen_available != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Availability/select_When Available', varWhen_available, false)
+}
+
+if (varRelocation_options != null) {
+    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Availability/select_Relocation Option(s)', varRelocation_options, false)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+
+click('Education Candidate Profile/Tabs/Availability/btn_Submit')
+
+
+
+
+def scrollToObject(def object) {
+	
+	println(('Converting ' + object) + ' to web element')
+
+	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+
+	loc = element.getLocation()
+
+	y = loc.getY()
+	
+	println('Y location is ' + y)
+
+	top = WebUI.getViewportTopPosition()
+
+	println('Viewport top is ' + top)
+
+	bottom = (top + 600)
+
+	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		
+			WebUI.scrollToPosition(0, y - 150)
+	
+			WebUI.delay(5)
+	}
+	
+}
+	
+
+def click(def object) {
+	scrollToObject(object)
+
+	WebUI.click(findTestObject(object))
+}
+
+def getText(def object) {
+	scrollToObject(object)
+
+	value = WebUI.getText(findTestObject(object))
+
+	return value
+}
+
+def setText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setText(findTestObject(object), value)
+}
+
+def setEncryptedText(def object, def value) {
+	scrollToObject(object)
+
+	WebUI.setEncryptedText(findTestObject(object), value)
+}
+
+def selectOptionByValue(def object, def value, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), value, flag)
+}
+
+def selectOptionByLabel(def object, def label, def flag) {
+	scrollToObject(object)
+
+	WebUI.selectOptionByValue(findTestObject(object), label, flag)
+}
+
+def clearText(object) {
+	scrollToObject(object)
+
+	WebUI.clearText(findTestObject(object))
+}

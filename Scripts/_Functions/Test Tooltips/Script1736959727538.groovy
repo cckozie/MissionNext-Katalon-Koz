@@ -39,6 +39,9 @@ tooltipText = varTooltipText
 // Define the tooltip test object folder for the calling page
 testObjectFolder = varTestObjectFolder
 
+// Define the the actual tooltip text on the page
+tooltipTextMap = varTooltipTextMap
+
 //Check to see if we're writing printed output to a file
 writeFile = false
 
@@ -57,6 +60,10 @@ WebDriver driver = DriverFactory.getWebDriver()
 Actions action = new Actions(driver)
 
 Screen s = new Screen()
+
+outText = 'Verifying the tooltips can be displayed.\n'
+
+outFile.append(outText)
 
 // Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
 //	tooltips.each({
@@ -106,6 +113,14 @@ for (def it : tooltips) {
             pct = foundStr.substring(matchP + 1, matchP + 6)
 
             outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pct) + '%')
+			
+			pctF = pct.toFloat()
+			
+			min = 80
+			
+			if(pct.toFloat() < min.toFloat()) {
+				outText = outText + ' <<<<'
+			}
 
             if (myKey != 'dummy') {
                 //The new sikulix gets the wrong match results for the first element, so this is a dummy match
@@ -114,14 +129,16 @@ for (def it : tooltips) {
                 outFile.append(outText + '\n')
             }
         } else {
-            outText = ('----------- Unable to find tooltip text for ' + myKey)
-
-            println(outText)
-
-            outFile.append(outText + '\n')
+			if(myKey != 'dummy') {
+	            outText = ('--- Unable to find tooltip text for ' + myKey)
+	
+	            println(outText)
+	
+	            outFile.append(outText + '\n')
+			}
         }
     } else {
-        outText = ('Unable to find image file ' + myImage)
+        outText = ('--- Unable to find image file ' + myImage)
 
         outFile.append(outText + '\n')
 
@@ -129,6 +146,50 @@ for (def it : tooltips) {
 
         KeywordUtil.markError('\n' + outText)
     }
+}
+
+// Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
+outText = 'Verifying the tooltip text on the page is what was expected.\n'
+
+outFile.append(outText)
+
+for (def it : tooltipText) {
+	myKey = it.key
+
+	myText = it.value.replace('"','')
+	
+	myText = myText.trim()
+
+	actualText = tooltipTextMap.get(myKey).replace('"','')
+	
+	actualText = actualText.trim()
+	
+
+	println((myKey + ':') + actualText)
+
+	if (actualText != myText) {
+		outText = (((((('####### ERROR: The tooltip text for ' + myKey) + ' should be:\n') + myText) + '\n but instead is:\n') +
+		actualText))
+
+		println(outText)
+
+		outFile.append(outText + '\n')
+		
+/* FOR DEBUGGING
+		println('Expected length is ' + myText.length())
+		println('Found length is ' + actualText.length())
+		str = ''
+		for(chr in myText) {
+			str = str + (int)chr + ' '
+		}
+		println(str)
+		str = ''
+		for(chr in actualText) {
+			str = str + (int)chr + ' '
+		}
+		println(str)
+*/
+	}
 }
 
 def scrollToObject(def object) {
@@ -149,7 +210,7 @@ def scrollToObject(def object) {
     bottom = (top + 600)
 
     if (((y - top) < 150) || ((bottom - y) < 10)) {
-        WebUI.scrollToPosition(0, y - 150)
+        WebUI.scrollToPosition(0, y - 170)  //// THIS NUMBER (170) IS FOR TOOLTIP SCROLLING ONLY. OTHERS USE 150.
 
         WebUI.delay(1)
     }

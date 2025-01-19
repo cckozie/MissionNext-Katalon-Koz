@@ -17,23 +17,33 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-// THESE ARE THE MINIMUM REQUIRED FIELD ENTRIES
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Contact Info'))
+//Determine and initialize output file
+testName = varTestName
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Contact Info Tab'], FailureHandling.STOP_ON_FAILURE)
+//Check to see if we're writing printed output to a file
+domain = GlobalVariable.domain
 
-if (GlobalVariable.gender == 'Male') {
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male'))
-} else {
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female'))
+writeFile = false
+
+if (GlobalVariable.outFile != '') {
+	String myFile = GlobalVariable.outFile
+
+	println(myFile)
+
+	outFile = new File(myFile)
+
+	writeFile = true
 }
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_State'), 
-    GlobalVariable.state, false)
+if(!writeFile) {
+	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test ' + testName + ' on ' + domain) +
+		'.txt')
+	
+	GlobalVariable.outFile = outFile
+	
+	outFile.write(('\nTesting ' + testName + ' on ' + domain) + '.\n')
+} else {
+	outFile.append(('\nTesting ' + testName + ' on ' + domain) + '.\n')
+}
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year'), GlobalVariable.birth_year)
-
-WebUI.scrollToElement(findTestObject('Education Candidate Profile/Tabs/Contact Info/btn_Submit'), 5)
-
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/Contact Info/btn_Submit'))
-
+return outFile

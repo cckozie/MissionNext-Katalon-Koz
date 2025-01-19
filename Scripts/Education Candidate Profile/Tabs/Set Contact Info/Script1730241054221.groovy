@@ -36,26 +36,10 @@ domain = GlobalVariable.domain
 
 writeFile = false
 
-if (GlobalVariable.outFile != '') {
-    String myFile = GlobalVariable.outFile
+// Set output file
+testName = 'Education Candidate Contact Info Tab'
 
-    println(myFile)
-
-    outFile = new File(myFile)
-
-    writeFile = true
-}
-
-if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Education Candidate Contact Info Tab on ' + domain) +
-		'.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Education Candidate Contact Info Tab on on ' + domain) + '.\n')
-} else {
-	outFile.append(('Testing Education Candidate Contact Info Tab on ' + domain) + '.\n')
-}
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -89,53 +73,33 @@ tooltipText = [
 ('Birth Year') : 'Four Digit Year',
 ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
+/*
 // Define the required field error messages
 requiredFieldMsgs = [
 	('Gender') : 'The gender field is required.',
 	('Country of Citizenship') : 'The citizenship country field is required.',
 	('Birth Year') : 'The birth year field is required.']
+*/
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Gender') : 'The gender field is required.',
+('Country of Citizenship') : 'The citizenship country field is required.',
+('Birth Year') : 'The birth year field is required.']
 
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], 
-    FailureHandling.STOP_ON_FAILURE)
-
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Register'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'],
 	FailureHandling.STOP_ON_FAILURE)
 
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
 // Call the tooltip testing script
-outText = 'Verifying the tooltips can be displayed.\n'
-
-outFile.append(outText)
-
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
-	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder], FailureHandling.STOP_ON_FAILURE)
-
-// Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
-outText = 'Verifying the tooltip text.\n'
-
-outFile.append(outText)
-
-for (def it : tooltipText) {
-	myKey = it.key
-
-	myText = it.value
-
-	actualText = tooltipTextMap.get(myKey)
-
-	println((myKey + ':') + actualText)
-
-	if (actualText != myText) {
-		outText = (((((('####### ERROR: The tooltip text for ' + myKey) + ' should be ') + myText) + ' but instead is ') +
-		actualText) + '.')
-
-		println(outText)
-
-		outFile.append(outText + '\n')
-	}
-}
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
 
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
@@ -148,121 +112,66 @@ requiredFieldMsgs.each {
 	fieldList.add(it.key)
 }
 
-testFieldMessages(fieldList)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Set the input fields provided
 if (varGender == 'Male') {
-    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male')
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male'
 } else if (varGender == 'Female') {
-    click('Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female')
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Female'
 }
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (varCountry != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country', varCountry, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varCountry], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varCountry_of_Citizenship != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country_of_Citizenship', 
-        varCountry_of_Citizenship, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Country_of_Citizenship'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varCountry_of_Citizenship], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varBirth_year != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varBirth_year], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varMarital_status != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Contact Info/input_Birth Year', varBirth_year)
+//	WebUI.selectOptionByValue(findTestObject('Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Marital Status'), varMarital_status, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/select_Marital Status'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varMarital_status], FailureHandling.STOP_ON_FAILURE)
 }
 
-click('Education Candidate Profile/Tabs/Contact Info/btn_Submit')
+//Test terms and conditions link
+object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/a_Terms and Conditions'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-def testFieldMessages(def fieldList) {
-	for (def field : fieldList) {
-		errorMsg = requiredFieldMsgs.get(field)
+WebUI.switchToWindowIndex(1)
 
-		msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
+WebUI.delay(1)
 
-		println((field + ':') + msg)
+newUrl = WebUI.getUrl()
 
-		if (!(msg)) {
-			outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
-
-			println(outText)
-
-			outFile.append(outText + '\n')
-		}
-	}
-	
-	WebUI.delay(GlobalVariable.fieldTestDelay)
+if (newUrl.indexOf('org/terms') < 0) {
+	println('######## Failed to find Terms and Conditions page')
 }
 
-def scrollToObject(def object) {
-    println(('Converting ' + object) + ' to web element')
+WebUI.delay(1)
 
-    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+WebUI.closeWindowIndex(1)
 
-    loc = element.getLocation()
+WebUI.switchToWindowIndex(0)
 
-    y = loc.getY()
+WebUI.delay(1)
 
-    println('Y location is ' + y)
-
-    top = WebUI.getViewportTopPosition()
-
-    println('Viewport top is ' + top)
-
-    bottom = (top + 600)
-
-    if (((y - top) < 150) || ((bottom - y) < 10)) {
-        WebUI.scrollToPosition(0, y - 150)
-
-        WebUI.delay(1)
-    }
-}
-
-def click(def object) {
-    scrollToObject(object)
-
-    WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-    scrollToObject(object)
-
-    value = WebUI.getText(findTestObject(object))
-
-    return value
-}
-
-def setText(def object, def value) {
-    scrollToObject(object)
-
-    WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-    scrollToObject(object)
-
-    WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-    scrollToObject(object)
-
-    WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-    scrollToObject(object)
-
-    WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(def object) {
-    scrollToObject(object)
-
-    WebUI.clearText(findTestObject(object))
-}
+object = 'Education Candidate Profile/Tabs/Contact Info/btn_Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

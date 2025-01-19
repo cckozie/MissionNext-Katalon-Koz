@@ -26,6 +26,8 @@ import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import javax.swing.*;
+
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -37,7 +39,8 @@ if (username != 'cktest04ec') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
+
 //######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //	Need to add tests for the tooltips on all of the tabs. 
@@ -65,28 +68,20 @@ WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : usernam
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
 // Define the folder with the tooltip test objects live
-testObjectFolder = ('Education Candidate Profile/Education Register/')
+testObjectFolder = 'Education Candidate Profile/Education Register/'
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
-tooltips = [
-('dummy') : 'dummy',
-('Username') : 'img_Username_field-tooltip',
-('Email') : 'img_Email_field-tooltip',
-('Password') : 'img_Password_field-tooltip',
-('First Name') : 'img_First Name_field-tooltip',
-('Last Name') : 'img_Last Name_field-tooltip',
-('Learn About Us') : 'img_Learn About Us_field-tooltip',
-('Terms and Conditions') : 'img_Terms and Conditions_field-tooltip']
+tooltips = [('dummy') : 'dummy', ('Username') : 'img_Username_field-tooltip', ('Email') : 'img_Email_field-tooltip', ('Password') : 'img_Password_field-tooltip'
+    , ('First Name') : 'img_First Name_field-tooltip', ('Last Name') : 'img_Last Name_field-tooltip', ('Learn About Us') : 'img_Learn About Us_field-tooltip'
+    , ('Terms and Conditions') : 'img_Terms and Conditions_field-tooltip']
 
-tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.',
-	('Email') : 'Your primary email address and must be unique in our database.',
-	('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.',
-	('First Name') : 'May include your middle initial; enter last name below.',
-	('Last Name') : 'Family Name',
-	('How did you learn about us?') : 'It is helpful to know how people are learning about us.',
-	('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
-	
+// Define the expected tooltip texts
+tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
+    , ('Email') : 'Your primary email address and must be unique in our database.', ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
+    , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us?') : 'It is helpful to know how people are learning about us.'
+    , ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
+
 // Define the required field missing error message test objects
 requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
@@ -110,38 +105,13 @@ WebDriver driver = DriverFactory.getWebDriver()
 Actions action = new Actions(driver)
 
 // Call the tooltip testing script
-outText = 'Verifying the tooltips can be displayed.\n'
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
+        , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
+    FailureHandling.STOP_ON_FAILURE)
 
-outFile.append(outText)
-
-WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
-	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder], FailureHandling.STOP_ON_FAILURE)
-
-// Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
-outText = 'Verifying the tooltip text.\n'
-
-outFile.append(outText)
-
-for (def it : tooltipText) {
-	myKey = it.key
-
-	myText = it.value
-
-	actualText = tooltipTextMap.get(myKey)
-
-	println((myKey + ':') + actualText)
-
-	if (actualText != myText) {
-		outText = (((((('####### ERROR: The tooltip text for ' + myKey) + ' should be ') + myText) + ' but instead is ') +
-		actualText) + '.')
-
-		println(outText)
-
-		outFile.append(outText + '\n')
-	}
-}
-
-outText = 'Verifying the required field message.\n'
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+outText = 'Verifying the required field messages.\n'
 
 outFile.append(outText)
 
@@ -151,7 +121,8 @@ click('Education Candidate Profile/Education Register/button_Sign up')
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Email', 'Password']
 
-testFieldMessages(fieldList)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 setText('Education Candidate Profile/Education Register/input_Username', GlobalVariable.username)
 
@@ -164,7 +135,8 @@ click('Education Candidate Profile/Education Register/button_Sign up')
 // Test for first name, last name, and phone number required messages
 fieldList = ['First Name', 'Last Name', 'Country', 'Phone Number', 'Terms and Conditions']
 
-testFieldMessages(fieldList)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
 setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
@@ -191,12 +163,12 @@ click('Education Candidate Profile/Education Register/button_Sign up')
 // Test for terms and conditions required messages
 fieldList = ['Terms and Conditions']
 
-testFieldMessages(fieldList)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 outText = 'Verifying the links to other pages.\n'
 
 outFile.append(outText)
-
 
 //Test links to Privacy Policy and Terms and Conditions pages
 click('Object Repository/Education Candidate Profile/Education Register/a_Privacy Policy')
@@ -241,7 +213,6 @@ outText = 'Submitting the finished page.\n'
 
 outFile.append(outText)
 
-
 //Complete and submit the registration
 setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
 
@@ -256,9 +227,11 @@ if (!(registerOnly)) {
     WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
 }
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 
 def testFieldMessages(def fieldList) {
+    WebUI.delay(2)
+
     for (def field : fieldList) {
         errorMsg = requiredFieldMsgs.get(field)
 
@@ -267,15 +240,15 @@ def testFieldMessages(def fieldList) {
         println((field + ':') + msg)
 
         if (!(msg)) {
-            outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
+            outText = (((('--- The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
 
             println(outText)
 
             outFile.append(outText + '\n')
         }
     }
-	
-	WebUI.delay(GlobalVariable.fieldTestDelay)
+    
+    WebUI.delay(GlobalVariable.fieldTestDelay)
 }
 
 def scrollToObject(def object) {

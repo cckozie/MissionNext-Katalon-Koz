@@ -38,15 +38,18 @@ messages = []
 for(e in elements) {
 	if(e.isDisplayed()) {
 		divText = e.getAttribute('outerHTML')
+		println(divText)
 		chevron1 = divText.indexOf('>')
-		chevron2 = divText.indexOf('</')
+		chevron2 = divText.indexOf('<', chevron1 + 2)
 		message =  divText.substring(chevron1 + 1, chevron2)
+		println(message)
 		message = message.trim()
+		println(message)
 		messages.add(message)
 	}
 }
 map = '// Define the required field missing error message test objects\n'
-map = 'requiredFieldMsgs = [\n'
+map = map + 'requiredFieldMsgs = [\n'
 messages.each {
 	println(it)
 	tuple = "('') : '" + it + "',\n"

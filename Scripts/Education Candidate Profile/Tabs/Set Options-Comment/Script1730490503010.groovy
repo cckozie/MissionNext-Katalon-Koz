@@ -31,6 +31,11 @@ if (username != 'cktest04ec') {
     System.exit(0)
 }
 
+// Set output file
+testName = 'Education Candidate Options-Comment Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -43,90 +48,65 @@ paid_volunteer = '//input[@id=\'profile_group-1450049204.702_financial_support\'
 travel_option = '//input[@id=\'profile_group-1450049204.702_travel_support\']'
 
 xpaths = [paid_volunteer, travel_option]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Options-Comment/')
+
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Paid & Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Paid & Volunteer Positions') : 'Check all situations you are willing to consider. (The self-support categories will display the most options.)']
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Paid & Volunteer Positions') : 'The financial support field is required.',
+('Travel Options') : 'The travel support field is required.']
 
 //Go to the Availability tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Options-Comment'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Options/Comment Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 // Set the comments text
 if (varComments != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Options-Comment/textarea_Educator Comments', varComments)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Options-Comment/textarea_Educator Comments'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varComments], FailureHandling.STOP_ON_FAILURE)
 }
-
-//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-click('Education Candidate Profile/Tabs/Options-Comment/btn_Submit')
-
-
-
-def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
-
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-	loc = element.getLocation()
-
-	y = loc.getY()
-
-	println('Y location is ' + y)
-
-	top = WebUI.getViewportTopPosition()
-
-	println('Viewport top is ' + top)
-
-	bottom = (top + 600)
-
-	if (((y - top) < 150) || ((bottom - y) < 10)) {
-		WebUI.scrollToPosition(0, y - 150)
-
-		WebUI.delay(1)
-	}
-}
-
-def click(def object) {
-	scrollToObject(object)
-
-	WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-	scrollToObject(object)
-
-	value = WebUI.getText(findTestObject(object))
-
-	return value
-}
-
-def setText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(object) {
-	scrollToObject(object)
-
-	WebUI.clearText(findTestObject(object))
-}
-
+object = 'Education Candidate Profile/Tabs/Options-Comment/btn_Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

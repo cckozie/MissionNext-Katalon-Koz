@@ -16,12 +16,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import javax.swing.*;
 
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //	Need to add tests for the tooltips and error messages on all tabs
 //  Consider using a called script to test all tooltips.
 //  Write all failures to the output file
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Set to page(s) to run, or empty or 'All' to run all pages
+pages = ['Situation']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -77,7 +81,7 @@ if(dashboard) {
         WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_My Profile'))
 }
 
-
+if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 // Complete the Contact Info tab
 gender = 'Male'
 
@@ -92,8 +96,9 @@ marital_status = 'Widowed'
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
         , ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year
         , ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
+}
 
-System.exit(0)
+if(pages.size() == 0 || 'All' in pages || 'Experience' in pages) {
 // Complete the Experience tab
 highest_degree = 'Bachelor of Science (BS)'
 
@@ -113,8 +118,9 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Experience
 		, ('varDegree_field') : degree_field, ('varClassroom_experience') : classroom_experience, ('varOccupation') : occupation
 		, ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience],
 	FailureHandling.STOP_ON_FAILURE)
+}
 
-System.exit(1)
+if(pages.size() == 0 || 'All' in pages || 'Education' in pages) {
 // Complete the Education tab
 formal_degree = 'Yes'
 
@@ -138,8 +144,9 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Education'
         , ('varOther_experience') : other_experience, ('varEnglish_proficiency') : english_proficiency, ('varAdditional_languages') : additional_languages 
 		, ('varProficiency') : proficiency],
     FailureHandling.STOP_ON_FAILURE)
+}
 
-
+if(pages.size() == 0 || 'All' in pages || 'Situation' in pages) {
 // Complete the Situation tab
 process_stage = 'I am actively investigating missions'
 
@@ -161,8 +168,9 @@ WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'
         , ('varBible_training') : bible_training, ('varChurch_affiliated') : church_affiliated, ('varJourney_guide') : journey_guide
         , ('varPerspectives') : perspectives, ('varDescribe_training') : describe_training, ('varChurch_name') : church_name
         , ('varChurch_involvement') : church_involvement], FailureHandling.STOP_ON_FAILURE)
+}
 
-
+if(pages.size() == 0 || 'All' in pages || 'Availability' in pages) {
 // Complete the Availability tab
 when_available = 'In one to two years'
 
@@ -175,8 +183,19 @@ relocation_options = '(!) Not sure'
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Availability'), [('varWhen_available') : when_available
         , ('varTerm_available') : term_available, ('varTime_commitments') : time_commitments, ('varRelocation_options') : relocation_options], 
     FailureHandling.STOP_ON_FAILURE)
+}
 
-
+if(pages.size() == 0 || 'All' in pages || 'Preferences' in pages) {
+	
+frame = new JFrame("");
+JPanel p = new JPanel();
+JLabel l = new JLabel("LOADING ...", SwingConstants.CENTER);
+frame.add(l);
+frame.setSize(300, 100);
+frame.setLocation(600, 0);
+frame.setAlwaysOnTop (true)
+frame.show();
+	
 // Complete the Preferences tab
 // Get the positions and regions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/preferred positions.csv
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
@@ -186,10 +205,14 @@ positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV 
 
 regions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
 	[('varFileName') : 'Education Candidate Forms/preferred positions.csv', ('varSelections') : 'regions'], FailureHandling.STOP_ON_FAILURE)
-	
+
+frame.hide();
+
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Preferences'), [('varPositions') : positions, ('varRegions') : regions], 
     FailureHandling.STOP_ON_FAILURE)
+}
 
+if(pages.size() == 0 || 'All' in pages || 'Options/Comment' in pages) {
 // Complete the Options/Comment tab
 paid_volunteer = ['Position requires raising some support', 'A salary provided; enough to live locally']
 
@@ -199,7 +222,8 @@ comments = 'I really hope I can get a partially paid position'
 
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Options-Comment'), [('varPaid_volunteer') : paid_volunteer
         , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.STOP_ON_FAILURE)
+}
 
 if(!called) { 	//Leave the browser open if this script was called from another script
-	WebUI.closeBrowser()
+//	WebUI.closeBrowser()
 }

@@ -13,6 +13,10 @@
          <key>CSS</key>
          <value>input[name=&quot;submit&quot;]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'submit' and @name = 'submit' and @title = 'Allows Program to Continue. All required fields must be completed.']</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -23,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>1c3e4a92-3439-4a9c-81bc-bc3986ba615b</webElementGuid>
+      <webElementGuid>473bc686-5364-4f57-aedf-a8ffe7662d99</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +35,7 @@
       <name>type</name>
       <type>Main</type>
       <value>submit</value>
-      <webElementGuid>c12615bb-2dd3-44d8-b102-daa062b559a6</webElementGuid>
+      <webElementGuid>7fe2795d-b3c9-4dc7-bdab-09f81b31bd0b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +43,7 @@
       <name>name</name>
       <type>Main</type>
       <value>submit</value>
-      <webElementGuid>79598bbf-34de-4baf-8271-9e74d7384021</webElementGuid>
+      <webElementGuid>649e3c05-829c-4300-8b36-7c8acbe419f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +51,7 @@
       <name>class</name>
       <type>Main</type>
       <value>btn btn-success</value>
-      <webElementGuid>9f56300b-8aae-42ac-878e-a4d7ef80fd0b</webElementGuid>
+      <webElementGuid>4e183247-4f4b-4640-99c6-ac20e4689993</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +59,7 @@
       <name>title</name>
       <type>Main</type>
       <value>Allows Program to Continue. All required fields must be completed.</value>
-      <webElementGuid>07561ed2-ee2e-481e-997c-723ac57871ac</webElementGuid>
+      <webElementGuid>16bffc3a-00a8-4352-b58a-8107a3191da1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +67,7 @@
       <name>value</name>
       <type>Main</type>
       <value>Complete? Submit</value>
-      <webElementGuid>bd37edfd-a3b5-4c1a-aa11-e5dbf5186143</webElementGuid>
+      <webElementGuid>f78125cb-b56b-4291-a932-d00ce9737b86</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +75,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content candidate-form&quot;]/form[@class=&quot;form-horizontal&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-12&quot;]/input[@class=&quot;btn btn-success&quot;]</value>
-      <webElementGuid>aeac8210-27c6-4097-88dc-aee6b7f0f24d</webElementGuid>
+      <webElementGuid>2b68c7e2-f6ec-47dc-9245-4821a2bc65f2</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +83,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@name='submit']</value>
-      <webElementGuid>1a3f25d9-66bb-4407-99ee-f12c3e711b87</webElementGuid>
+      <webElementGuid>eb79e814-d2cb-4ca8-8c08-da4a6f985d2a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +91,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div[2]/form/div[4]/div/input</value>
-      <webElementGuid>683f730a-4ff7-42e7-ad08-85a561fb33bc</webElementGuid>
+      <webElementGuid>f75942e0-5475-4f50-849f-ecc6ca78963e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +99,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/div/input</value>
-      <webElementGuid>99a644a8-2dc8-40a7-a6cb-671fd37383ce</webElementGuid>
+      <webElementGuid>b020dab1-cb17-43cf-a709-e4ee759ae0e9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +107,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'submit' and @name = 'submit' and @title = 'Allows Program to Continue. All required fields must be completed.']</value>
-      <webElementGuid>b9b0c29a-c38c-455f-8e6e-058400b04777</webElementGuid>
+      <webElementGuid>4f74f489-ceea-4580-a02f-4aafa8813a0c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

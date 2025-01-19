@@ -31,6 +31,11 @@ if (username != 'cktest04ec') {
     System.exit(0)
 }
 
+// Set output file
+testName = 'Education Candidate Situation Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,28 +62,82 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 }
 
 xpaths = [process_stage, bible_training, church_affiliated, journey_guide]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Situation/')
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Bible Training') : 'img_Bible Training_field-tooltip',
+('Affiliated with a church?') : 'img_Affiliated with a church_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Bible Training') : 'If you have attended Sunday School classes for years, select Informal Training. If you have attended or taught Bible classes, select Some Bible School Classes.If your preferred assignments do not require Bible training, you can select Not Applicable.',
+('Affiliated with a church?') : 'This would be a church with a staff member that can provide a reference, if requested.']
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = []	/*	//THE SUBMIT KEY ON ANY TAB WILL CAUSE THESE MESSAGES TO DISAPPEAR
+('Process Stage') : 'The process stage field is required.',
+('Attended Perspectives?') : 'The attended perspectives field is required.',
+('Affiliated with a church?') : 'The affiliated with church field is required.'] */
 
 //Go to the Situation tab
-click('Object Repository/Education Candidate Profile/Tabs/a_Situation')
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Situation'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varPerspectives != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Situation/select_Perspectives', varPerspectives, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Situation/select_Perspectives'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varPerspectives], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varDescribe_training != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Situation/textarea_Describe Bible Training', varDescribe_training)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Situation/textarea_Describe Bible Training'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varDescribe_training], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varChurch_name != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Situation/input_Church Name', varChurch_name)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Situation/input_Church Name'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varChurch_name], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varChurch_involvement != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Situation/select_Church Involvement', 
-        varChurch_involvement, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Situation/select_Church Involvement'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varChurch_involvement], FailureHandling.STOP_ON_FAILURE)
 }
 
 //WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
@@ -86,78 +145,6 @@ if (varChurch_involvement != null) {
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-click('Education Candidate Profile/Tabs/Situation/btn_Complete Submit')
-
-
-def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
-
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-	loc = element.getLocation()
-
-	y = loc.getY()
-
-	println('Y location is ' + y)
-
-	top = WebUI.getViewportTopPosition()
-
-	println('Viewport top is ' + top)
-
-	bottom = (top + 600)
-
-	if (((y - top) < 150) || ((bottom - y) < 10)) {
-		WebUI.scrollToPosition(0, y - 150)
-
-		WebUI.delay(1)
-	}
-}
-
-def click(def object) {
-	scrollToObject(object)
-
-	WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-	scrollToObject(object)
-
-	value = WebUI.getText(findTestObject(object))
-
-	return value
-}
-
-def setText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(object) {
-	scrollToObject(object)
-
-	WebUI.clearText(findTestObject(object))
-}
-
-
-
-
+object = 'Education Candidate Profile/Tabs/Situation/btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

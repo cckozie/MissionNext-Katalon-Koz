@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Perform Action</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7a6340fe-b2c4-43f0-a361-36bdf1ba5aa7</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>d99bd5de-d1a2-48af-a058-0bda21534504</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>d99bd5de-d1a2-48af-a058-0bda21534504</id>
+      <masked>false</masked>
+      <name>varParm1</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>section_Footer</name>
+   <tag></tag>
+   <elementGuidId>9f3e8f31-66cf-45ad-b2a3-4d7f1a964049</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>section.elementor-section.elementor-top-section.elementor-element.elementor-element-6d51d13.elementor-section-boxed.elementor-section-height-default.elementor-section-height-default</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Linkedin'])[1]/following::section[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>section</value>
+      <webElementGuid>59e56a0d-3821-4c63-aa3a-0d79dab24eef</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-section elementor-top-section elementor-element elementor-element-6d51d13 elementor-section-boxed elementor-section-height-default elementor-section-height-default</value>
+      <webElementGuid>e3f88d54-beb3-4843-9557-eccc95c3acc0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>6d51d13</value>
+      <webElementGuid>48ac7a45-92c5-4904-a2cd-6b1061b6c82f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-element_type</name>
+      <type>Main</type>
+      <value>section</value>
+      <webElementGuid>43cc629f-50c7-4711-b2e0-6c683da5bcaf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-settings</name>
+      <type>Main</type>
+      <value>{&quot;background_background&quot;:&quot;classic&quot;}</value>
+      <webElementGuid>1ec63192-ac62-4ecd-8987-2fb761c4c020</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;logged-in wp-custom-logo wp-embed-responsive no-sidebar nav-float-right one-container header-aligned-center dropdown-hover&quot;]/div[@class=&quot;site-footer&quot;]/div[@class=&quot;elementor elementor-33 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-6d51d13 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]</value>
+      <webElementGuid>b1442a88-39db-40db-aff6-45604f0c93c1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Linkedin'])[1]/following::section[1]</value>
+      <webElementGuid>961f106d-fbcf-4e23-9bb4-cbdf64a3f67d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[1]/following::section[1]</value>
+      <webElementGuid>6d80c64f-78d3-407a-b598-8b801aca2e5f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//section[2]</value>
+      <webElementGuid>ee637bbe-069a-4c64-b429-a14231a5ce87</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

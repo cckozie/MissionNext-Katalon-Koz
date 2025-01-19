@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Preferences - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>9099fb9d-05f8-46f7-9462-0dbe74b2fd4a</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>dc453eed-8264-4935-91bc-f2467766fed4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>80b54c67-3cc1-4582-b42b-728511445389</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>dc453eed-8264-4935-91bc-f2467766fed4</id>
+      <masked>false</masked>
+      <name>varPositions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>80b54c67-3cc1-4582-b42b-728511445389</id>
+      <masked>false</masked>
+      <name>varRegions</name>
+   </variable>
+</TestCaseEntity>

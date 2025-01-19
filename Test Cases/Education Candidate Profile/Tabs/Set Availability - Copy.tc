@@ -1,74 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Set Contact Info - Copy (1)</name>
+   <name>Set Availability - Copy</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>1f2f50ed-c969-4682-8e65-3b52e04a0b95</testCaseGuid>
+   <testCaseGuid>ba6f9936-f44c-45f5-bb04-81e79d436ee3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>3171599d-d199-44d7-ad93-810b79ae6b51</variableId>
+      <variableId>003c7ca8-c0f4-4b80-ac8e-84fe8dde0afc</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>4b8e9914-8be1-4ca7-b739-e3e5eaf38e0d</variableId>
+      <variableId>0f019d0b-26e3-472e-a22f-57eee30a9ad8</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>e413ae52-5097-4fd7-aec1-fc83a36444fc</variableId>
+      <variableId>26235718-df4c-45f2-ace5-38cb40feb68b</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>2ddd1801-e42a-4f73-8466-72cdb7691378</variableId>
-   </variableLinks>
-   <variableLinks>
-      <testDataLinkId></testDataLinkId>
-      <type>DEFAULT</type>
-      <value></value>
-      <variableId>70d19b87-4940-48f1-80e4-5487baa89cb1</variableId>
+      <variableId>358e16ff-7d15-4a02-9bcf-1cde8fc0cee9</variableId>
    </variableLinks>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>3171599d-d199-44d7-ad93-810b79ae6b51</id>
+      <id>003c7ca8-c0f4-4b80-ac8e-84fe8dde0afc</id>
       <masked>false</masked>
-      <name>varGender</name>
+      <name>varWhen_available</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>4b8e9914-8be1-4ca7-b739-e3e5eaf38e0d</id>
+      <id>0f019d0b-26e3-472e-a22f-57eee30a9ad8</id>
       <masked>false</masked>
-      <name>varCountry</name>
+      <name>varTerm_available</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>e413ae52-5097-4fd7-aec1-fc83a36444fc</id>
+      <id>26235718-df4c-45f2-ace5-38cb40feb68b</id>
       <masked>false</masked>
-      <name>varCountry_of_Citizenship</name>
+      <name>varTime_commitments</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>2ddd1801-e42a-4f73-8466-72cdb7691378</id>
+      <id>358e16ff-7d15-4a02-9bcf-1cde8fc0cee9</id>
       <masked>false</masked>
-      <name>varBirth_year</name>
-   </variable>
-   <variable>
-      <defaultValue>null</defaultValue>
-      <description></description>
-      <id>70d19b87-4940-48f1-80e4-5487baa89cb1</id>
-      <masked>false</masked>
-      <name>varMarital_status</name>
+      <name>varRelocation_options</name>
    </variable>
 </TestCaseEntity>

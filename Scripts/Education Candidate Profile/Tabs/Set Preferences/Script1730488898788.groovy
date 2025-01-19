@@ -20,6 +20,8 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import javax.swing.*;
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -29,6 +31,11 @@ if (username != 'cktest04ec') {
 
     System.exit(0)
 }
+
+// Set output file
+testName = 'Education Candidate Preferences Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -42,15 +49,79 @@ positions = '//input[@id=\'profile_group-1449972047.293_preferred_education_posi
 regions = '//input[@id=\'profile_group-1449972047.293_world_region_preferences\']'
 
 xpaths = [positions, regions]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Preferences/')
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy']
+
+// Define the expected tooltip texts
+tooltipText = []
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Preferred School Positions') : 'The preferred education positions field is required.',
+('Preferred Region(s)') : 'The world region preferences field is required.']
 
 //Go to the Preferences tab
-//WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Preferences Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.scrollToElement(findTestObject('Object Repository/Education Candidate Profile/Tabs/Preferences/input_Submit'), 0)
+object = 'Object Repository/Education Candidate Profile/Tabs/Preferences/div_Link to list of countries by region'
+//object = 'Object Repository/Education Candidate Profile/Tabs/Preferences/a_countries by region'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/Preferences/input_Submit'))
+WebUI.switchToWindowIndex(1)
+
+WebUI.delay(1)
+
+newUrl = WebUI.getUrl()
+
+if (newUrl.indexOf('countries_list.php') < 0) {
+	println('######## Failed to find Countries by Region page')
+}
+
+WebUI.delay(1)
+
+WebUI.closeWindowIndex(1)
+
+WebUI.switchToWindowIndex(0)
+
+WebUI.delay(1)
+
+object = 'Education Candidate Profile/Tabs/Preferences/input_Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
 

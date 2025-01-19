@@ -32,35 +32,21 @@ if (username != 'cktest04ec') {
     System.exit(0)
 }
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
+// Set output file
+testName = 'Education Candidate Experience Tab'
 
-writeFile = false
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-
-if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Education Candidate Experience Tab on ' + domain) +
-		'.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Education Candidate Experience Tab on on ' + domain) + '.\n')
-} else {
-	outFile.append(('Testing Education Candidate Experience Tab on ' + domain) + '.\n')
-}
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/Experience Tab/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Candidate Profile/Tabs/Experience/')
+
 parms = [varMissions_experience]
 
 //xpath of the Missions Experience group
@@ -83,7 +69,14 @@ requiredFieldMsgs = [('Life Experience') : 'The missions exposure field is requi
 //Go to the Experience tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
 
-WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Experience Tab'], FailureHandling.STOP_ON_FAILURE)
+//Get the actual tooltip text
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Experience Tab'],
+	FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
 
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
@@ -96,133 +89,52 @@ requiredFieldMsgs.each {
 	fieldList.add(it.key)
 }
 
-testFieldMessages(fieldList)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
+//For setup only
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varHighest_degree != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Experience/select_High Earned Degree', 
-        varHighest_degree, false)
+	object = 'Object Repository/Education Candidate Profile/Tabs/Experience/select_High Earned Degree'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varHighest_degree], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varDegree_field != null) {
-   setText('Object Repository/Education Candidate Profile/Tabs/Experience/input_Degree Field', varDegree_field)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Experience/input_Degree Field'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varDegree_field], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varClassroom_experience != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Experience/select_Classroom Experience', 
-        varClassroom_experience, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Experience/select_Classroom Experience'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varClassroom_experience], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varOccupation != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Occupation', varOccupation)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Occupation'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varOccupation], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varCross_cultural != null) {
-    selectOptionByValue('Object Repository/Education Candidate Profile/Tabs/Experience/select_Cross-Cultural Experience', 
-        varCross_cultural, false)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Experience/select_Cross-Cultural Experience'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varCross_cultural], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (varLife_experience != null) {
-    setText('Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Life Experience', 
-        varLife_experience)
+    object = 'Object Repository/Education Candidate Profile/Tabs/Experience/textarea_Life Experience'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+		('varObject') : object, ('varParm1') : varLife_experience], FailureHandling.STOP_ON_FAILURE)
 }
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-click('Education Candidate Profile/Tabs/Experience/btn_Submit')
-
-
-def testFieldMessages(def fieldList) {
-	for (def field : fieldList) {
-		errorMsg = requiredFieldMsgs.get(field)
-
-		msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
-
-		println((field + ':') + msg)
-
-		if (!(msg)) {
-			outText = (((('The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
-
-			println(outText)
-
-			outFile.append(outText + '\n')
-		}
-	}
-	
-	WebUI.delay(GlobalVariable.fieldTestDelay)
-}
-
-
-def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
-
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-	loc = element.getLocation()
-
-	y = loc.getY()
-
-	println('Y location is ' + y)
-
-	top = WebUI.getViewportTopPosition()
-
-	println('Viewport top is ' + top)
-
-	bottom = (top + 600)
-
-	if (((y - top) < 150) || ((bottom - y) < 10)) {
-		WebUI.scrollToPosition(0, y - 150)
-
-		WebUI.delay(1)
-	}
-}
-
-def click(def object) {
-	scrollToObject(object)
-
-	WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-	scrollToObject(object)
-
-	value = WebUI.getText(findTestObject(object))
-
-	return value
-}
-
-def setText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-	scrollToObject(object)
-
-	WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-	scrollToObject(object)
-
-	WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(object) {
-	scrollToObject(object)
-
-	WebUI.clearText(findTestObject(object))
-}
-
-
+object = 'Education Candidate Profile/Tabs/Experience/btn_Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 
