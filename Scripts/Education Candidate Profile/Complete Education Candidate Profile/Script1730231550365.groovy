@@ -25,7 +25,7 @@ import javax.swing.*;
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Situation']
+pages = []
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -64,7 +64,7 @@ if(!writeFile) {
 	
 	outFile.write(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
 } else {
-	outFile.append(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
+	outFile.append(('\nTesting Complete Education Candidate Profile on ' + domain) + '\n')
 	
 }
 

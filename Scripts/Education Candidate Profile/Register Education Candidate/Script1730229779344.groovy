@@ -39,7 +39,7 @@ if (username != 'cktest04ec') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 
 //######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
