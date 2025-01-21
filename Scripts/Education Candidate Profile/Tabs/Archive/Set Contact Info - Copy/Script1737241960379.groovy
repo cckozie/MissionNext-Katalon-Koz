@@ -46,7 +46,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/Contact Info Tab/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
 // Define the folder where the tooltip test objects live
 testObjectFolder = ('Education Candidate Profile/Tabs/Contact Info/')

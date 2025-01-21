@@ -21,8 +21,11 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 action = varAction
 
 testObject = varObject
+
 println(testObject)
+
 parm1 = varParm1
+
 println(parm1)
 
 println(('Converting ' + testObject) + ' to web element')
@@ -42,17 +45,26 @@ println('Viewport top is ' + top)
 bottom = (top + 600)
 
 if (((y - top) < 150) || ((bottom - y) < 10)) {
-	WebUI.scrollToPosition(0, y - 150)
+    WebUI.scrollToPosition(0, y - 150)
 
-	WebUI.delay(1)
+    WebUI.delay(1)
 }
 
-if(action == 'click') {
-	println('clicking')
-	WebUI.click(findTestObject(testObject))
-} else if(action == 'selectOptionByValue'){
-	println('Selecting ' + parm1)
-	WebUI.selectOptionByValue(findTestObject(testObject), parm1, false)
-} else if(action == 'setText') {
-	WebUI.setText(findTestObject(testObject), parm1)
+if (action == 'click') {
+    println('clicking')
+    WebUI.click(findTestObject(testObject))
+} else if (action == 'selectOptionByValue') {
+//    println('Selecting ' + parm1)
+    WebUI.selectOptionByValue(findTestObject(testObject), parm1, false)
+} else if (action == 'setText') {
+    WebUI.setText(findTestObject(testObject), parm1)
+} else if (action == 'setEncrytedText') {
+    WebUI.setEncryptedText(findTestObject(testObject), parm1)
+} else if (action == 'getText') {
+    return WebUI.getText(findTestObject(testObject))
+} else if (action == 'verifyElementVisible') {
+    return WebUI.verifyElementVisible(findTestObject(testObject), FailureHandling.OPTIONAL)
 }
+
+
+

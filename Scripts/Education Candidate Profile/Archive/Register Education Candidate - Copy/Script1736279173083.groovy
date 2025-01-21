@@ -76,71 +76,71 @@ WebDriver driver = DriverFactory.getWebDriver()
 
 Actions action = new Actions(driver)
 
-WebUI.click(findTestObject('Education Candidate Profile/Education Login/btn_Apply for Education'))
+WebUI.click(findTestObject('Education Candidate Profile/Login/btn_Apply for Education'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Login/a_Register Now'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Login/a_Register Now'))
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_Username'), '=====> WAITING FOR SIKULIX <=====')
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Username'), '=====> WAITING FOR SIKULIX <=====')
 
 Screen s = new Screen()
 
-WebUI.clearText(findTestObject('Education Candidate Profile/Education Register/input_Username'))
+WebUI.clearText(findTestObject('Education Candidate Profile/Register/input_Username'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/button_Sign up'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/button_Sign up'))
 // Test for username, email, and password required messages
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_Username must be at least 6 characters long-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_Username must be at least 6 characters long-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_Please enter a valid email address-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_Please enter a valid email address-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_Password must be at least 6 characters long-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_Password must be at least 6 characters long-Msg'))
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_Username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Username'), GlobalVariable.username)
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_Email'), GlobalVariable.email)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Email'), GlobalVariable.email)
 
-WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Education Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Education Candidate Profile/Education Register/button_Sign up'))
+WebUI.click(findTestObject('Education Candidate Profile/Register/button_Sign up'))
 
 // Test for first name, last name, and phone number required messages
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_The Fiirst Name field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_The Fiirst Name field is required-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_The last name field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_The last name field is required-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_The cell phone field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_The cell phone field is required-Msg'))
 
-WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Education Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_First Name'), GlobalVariable.username)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_First Name'), GlobalVariable.username)
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_Last Name'), GlobalVariable.last_name)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Last Name'), GlobalVariable.last_name)
 
-WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Education Register/select_Country'), GlobalVariable.country, 
+WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Register/select_Country'), GlobalVariable.country, 
     false)
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/input_Best Phone Number'), GlobalVariable.phone_number)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Best Phone Number'), GlobalVariable.phone_number)
 
-WebUI.click(findTestObject('Education Candidate Profile/Education Register/button_Sign up'))
+WebUI.click(findTestObject('Education Candidate Profile/Register/button_Sign up'))
 
-WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Education Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
 if (GlobalVariable.prefer_text) {
-    WebUI.click(findTestObject('Education Candidate Profile/Education Register/checkbox_Prefer Text Message'))
+    WebUI.click(findTestObject('Education Candidate Profile/Register/checkbox_Prefer Text Message'))
 }
 
-WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Education Register/select_Learn About Us'), GlobalVariable.learn_about, 
+WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Register/select_Learn About Us'), GlobalVariable.learn_about, 
     false)
 
-WebUI.setText(findTestObject('Education Candidate Profile/Education Register/textarea_Other Comment'), GlobalVariable.other_comment)
+WebUI.setText(findTestObject('Education Candidate Profile/Register/textarea_Other Comment'), GlobalVariable.other_comment)
 
-WebUI.click(findTestObject('Education Candidate Profile/Education Register/button_Sign up'))
+WebUI.click(findTestObject('Education Candidate Profile/Register/button_Sign up'))
 
 // Test for terms and conditions required messages
-WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Education Register/div_The terms and conditions field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Register/div_The terms and conditions field is required-Msg'))
 
-WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/a_Privacy Policy'), 3)
+WebUI.scrollToElement(findTestObject('Education Candidate Profile/Register/a_Privacy Policy'), 3)
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/a_Privacy Policy'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/a_Privacy Policy'))
 
 WebUI.switchToWindowIndex(1)
 
@@ -158,8 +158,8 @@ WebUI.closeWindowIndex(1)
 
 WebUI.switchToWindowIndex(0)
 
-//WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/a_Terms and Conditions'))
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/a_Terms and Conditions'))
+//WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/a_Terms and Conditions'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/a_Terms and Conditions'))
 
 WebUI.switchToWindowIndex(1)
 
@@ -185,7 +185,7 @@ WebUI.scrollToElement(findTestObject('null'), 2)
 // Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
 for (def tooltip : tooltips) {
     if (tooltip == 'learn_about_us') {
-        WebUI.scrollToElement(findTestObject('Education Candidate Profile/Education Register/img_Learn About Us_field-tooltip'),0)
+        WebUI.scrollToElement(findTestObject('Education Candidate Profile/Register/img_Learn About Us_field-tooltip'),0)
     }
     
     xpath = tooltipXpaths.get(tooltip)
@@ -244,11 +244,11 @@ for (def tooltip : tooltips) {
     }
 }
 
-WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Education Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Education Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/checkbox_Terms and Conditions'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/checkbox_Terms and Conditions'))
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Register/button_Sign up'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Register/button_Sign up'))
 
 // Complete the required entries on the Contact Info tab
 WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [:], FailureHandling.STOP_ON_FAILURE)

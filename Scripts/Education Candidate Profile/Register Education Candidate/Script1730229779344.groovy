@@ -39,7 +39,7 @@ if (username != 'cktest04ec') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 
 //######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -68,7 +68,7 @@ WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : usernam
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
 // Define the folder with the tooltip test objects live
-testObjectFolder = 'Education Candidate Profile/Education Register/'
+testObjectFolder = 'Education Candidate Profile/Register/'
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
@@ -79,7 +79,7 @@ tooltips = [('dummy') : 'dummy', ('Username') : 'img_Username_field-tooltip', ('
 // Define the expected tooltip texts
 tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Email') : 'Your primary email address and must be unique in our database.', ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
-    , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us?') : 'It is helpful to know how people are learning about us.'
+    , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
     , ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
 // Define the required field missing error message test objects
@@ -111,12 +111,14 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Submit the empty page
+object = 'Education Candidate Profile/Register/button_Sign up'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
 outText = 'Verifying the required field messages.\n'
 
 outFile.append(outText)
-
-// Submit the empty page
-click('Education Candidate Profile/Education Register/button_Sign up')
 
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Email', 'Password']
@@ -124,13 +126,20 @@ fieldList = ['Username', 'Email', 'Password']
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/input_Username', GlobalVariable.username)
+object = 'Education Candidate Profile/Register/input_Username'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/input_Email', GlobalVariable.email)
+object = 'Education Candidate Profile/Register/input_Email'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.email], FailureHandling.STOP_ON_FAILURE)
 
-setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
+object = 'Education Candidate Profile/Register/input_Password'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
-click('Education Candidate Profile/Education Register/button_Sign up')
+object = 'Education Candidate Profile/Register/button_Sign up'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for first name, last name, and phone number required messages
 fieldList = ['First Name', 'Last Name', 'Country', 'Phone Number', 'Terms and Conditions']
@@ -139,26 +148,41 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
-setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
+object = 'Education Candidate Profile/Register/input_Password'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/input_First Name', GlobalVariable.username)
+object = 'Education Candidate Profile/Register/input_First Name'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/input_Last Name', GlobalVariable.last_name)
+object = 'Education Candidate Profile/Register/input_Last Name'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.last_name], FailureHandling.STOP_ON_FAILURE)
 
-selectOptionByLabel('Education Candidate Profile/Education Register/select_Country', GlobalVariable.country, false)
+object = 'Education Candidate Profile/Register/select_Country'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+	('varObject') : object, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/input_Best Phone Number', GlobalVariable.phone_number)
+object = 'Education Candidate Profile/Register/input_Best Phone Number'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.phone_number], FailureHandling.STOP_ON_FAILURE)
 
 if (GlobalVariable.prefer_text) {
-    click('Education Candidate Profile/Education Register/checkbox_Prefer Text Message')
+	object = 'Education Candidate Profile/Register/checkbox_Prefer Text Message'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 }
 
-selectOptionByLabel('Education Candidate Profile/Education Register/select_Learn About Us', GlobalVariable.learn_about, 
-    false)
+object = 'Education Candidate Profile/Register/select_Learn About Us' 
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+	('varObject') : object, ('varParm1') : GlobalVariable.learn_about], FailureHandling.STOP_ON_FAILURE)
 
-setText('Education Candidate Profile/Education Register/textarea_Other Comment', GlobalVariable.other_comment)
+object = 'Education Candidate Profile/Register/textarea_Other Comment'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.other_comment], FailureHandling.STOP_ON_FAILURE)
 
-click('Education Candidate Profile/Education Register/button_Sign up')
+object = 'Education Candidate Profile/Register/button_Sign up'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for terms and conditions required messages
 fieldList = ['Terms and Conditions']
@@ -171,7 +195,8 @@ outText = 'Verifying the links to other pages.\n'
 outFile.append(outText)
 
 //Test links to Privacy Policy and Terms and Conditions pages
-click('Object Repository/Education Candidate Profile/Education Register/a_Privacy Policy')
+object = 'Object Repository/Education Candidate Profile/Register/a_Privacy Policy'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.switchToWindowIndex(1)
 
@@ -189,7 +214,8 @@ WebUI.closeWindowIndex(1)
 
 WebUI.switchToWindowIndex(0)
 
-click('Object Repository/Education Candidate Profile/Education Register/a_Terms and Conditions')
+object = 'Object Repository/Education Candidate Profile/Register/a_Terms and Conditions'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.switchToWindowIndex(1)
 
@@ -214,11 +240,15 @@ outText = 'Submitting the finished page.\n'
 outFile.append(outText)
 
 //Complete and submit the registration
-setEncryptedText('Education Candidate Profile/Education Register/input_Password', GlobalVariable.password)
+object = 'Education Candidate Profile/Register/input_Password'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
-click('Object Repository/Education Candidate Profile/Education Register/checkbox_Terms and Conditions')
+object = 'Object Repository/Education Candidate Profile/Register/checkbox_Terms and Conditions'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-click('Object Repository/Education Candidate Profile/Education Register/button_Sign up')
+object = 'Object Repository/Education Candidate Profile/Register/button_Sign up'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
@@ -228,94 +258,4 @@ if (!(registerOnly)) {
 }
 
 //WebUI.closeBrowser()
-
-def testFieldMessages(def fieldList) {
-    WebUI.delay(2)
-
-    for (def field : fieldList) {
-        errorMsg = requiredFieldMsgs.get(field)
-
-        msg = WebUI.verifyTextPresent(errorMsg, false, FailureHandling.OPTIONAL)
-
-        println((field + ':') + msg)
-
-        if (!(msg)) {
-            outText = (((('--- The expected error message "' + errorMsg) + '" for field ') + field) + ' was not found.')
-
-            println(outText)
-
-            outFile.append(outText + '\n')
-        }
-    }
-    
-    WebUI.delay(GlobalVariable.fieldTestDelay)
-}
-
-def scrollToObject(def object) {
-    println(('Converting ' + object) + ' to web element')
-
-    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-    loc = element.getLocation()
-
-    y = loc.getY()
-
-    println('Y location is ' + y)
-
-    top = WebUI.getViewportTopPosition()
-
-    println('Viewport top is ' + top)
-
-    bottom = (top + 600)
-
-    if (((y - top) < 150) || ((bottom - y) < 10)) {
-        WebUI.scrollToPosition(0, y - 150)
-
-        WebUI.delay(1)
-    }
-}
-
-def click(def object) {
-    scrollToObject(object)
-
-    WebUI.click(findTestObject(object))
-}
-
-def getText(def object) {
-    scrollToObject(object)
-
-    value = WebUI.getText(findTestObject(object))
-
-    return value
-}
-
-def setText(def object, def value) {
-    scrollToObject(object)
-
-    WebUI.setText(findTestObject(object), value)
-}
-
-def setEncryptedText(def object, def value) {
-    scrollToObject(object)
-
-    WebUI.setEncryptedText(findTestObject(object), value)
-}
-
-def selectOptionByValue(def object, def value, def flag) {
-    scrollToObject(object)
-
-    WebUI.selectOptionByValue(findTestObject(object), value, flag)
-}
-
-def selectOptionByLabel(def object, def label, def flag) {
-    scrollToObject(object)
-
-    WebUI.selectOptionByValue(findTestObject(object), label, flag)
-}
-
-def clearText(def object) {
-    scrollToObject(object)
-
-    WebUI.clearText(findTestObject(object))
-}
 

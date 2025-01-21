@@ -50,6 +50,8 @@ frame.show();
 
 if (WebUI.verifyTextPresent('Partner Level', false, FailureHandling.OPTIONAL)) {
     user = 'Partner'
+} else if (WebUI.verifyTextPresent('Partnership', false, FailureHandling.OPTIONAL)) {
+    user = 'Partner'
 } else {
     user = 'Candidate'
 }
@@ -114,7 +116,7 @@ if (tooltipMap.size() > 0) {
 //		it.value = it.value.replace(",", "','") //Encapsulate commas in quotes for CSV
 		
 		it.value = '"' + it.value + '"'
-		outText = outText + it.key + ',' + it.value
+		outText = outText + name + ',' + it.value
 		outText = outText + '\n'
 		println(outText)
 	}

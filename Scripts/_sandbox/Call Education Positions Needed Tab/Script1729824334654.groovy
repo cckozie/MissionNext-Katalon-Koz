@@ -21,5 +21,5 @@ positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English 
 
 experiences = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science']
 
-WebUI.callTestCase(findTestCase('Education Partners/Tabs/Set Positions Needed'), [('varPositions') : positions, ('varExperiences') : experiences], 
+WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Positions Needed'), [('varPositions') : positions, ('varExperiences') : experiences], 
     FailureHandling.STOP_ON_FAILURE)

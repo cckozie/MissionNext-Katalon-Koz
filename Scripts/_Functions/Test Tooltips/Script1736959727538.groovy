@@ -154,6 +154,8 @@ outText = 'Verifying the tooltip text on the page is what was expected.\n'
 outFile.append(outText)
 
 for (def it : tooltipText) {
+	println(it)
+	
 	myKey = it.key
 
 	myText = it.value.replace('"','')

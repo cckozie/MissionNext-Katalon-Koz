@@ -48,7 +48,7 @@ xpaths = [previous_experience]
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/Education Tab/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
 // Define the folder where the tooltip test objects live
 testObjectFolder = ('Education Candidate Profile/Tabs/Education/')

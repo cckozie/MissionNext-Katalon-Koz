@@ -32,8 +32,8 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://education.' + GlobalVariable.domain + '/education-home/login-here/')
 
-WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Education Login/input_Username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Object Repository/Education Candidate Profile/Login/input_Username'), GlobalVariable.username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Education Candidate Profile/Education Login/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Object Repository/Education Candidate Profile/Login/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Education Login/button_Log In'))
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Login/button_Log In'))

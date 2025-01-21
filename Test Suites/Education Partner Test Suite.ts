@@ -15,14 +15,14 @@
       <guid>587cb412-43b8-4156-a7fc-c105eb57e070</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Education Partners/Test Profile Forwarding</testCaseId>
+      <testCaseId>Test Cases/Education Partner Profile/Test Profile Forwarding</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0f2f0fee-09ac-4908-a8cb-9d6e3b53108a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Education Partners/Register Education Partner</testCaseId>
+      <testCaseId>Test Cases/Education Partner Profile/Register Education Partner</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
