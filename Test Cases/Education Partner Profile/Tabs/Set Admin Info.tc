@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Admin Info</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>065be954-f2bc-401f-b1bc-53a8cddbd1bd</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3f5010d3-0f42-490d-9555-7161e4d21623</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e01273f5-130b-4203-b15d-548746fdeca6</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>46b7a47f-e631-4d27-ba70-96f880530d08</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>3f5010d3-0f42-490d-9555-7161e4d21623</id>
+      <masked>false</masked>
+      <name>varMission_statement</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>e01273f5-130b-4203-b15d-548746fdeca6</id>
+      <masked>false</masked>
+      <name>varMeet_christian_school_qualifications</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>46b7a47f-e631-4d27-ba70-96f880530d08</id>
+      <masked>false</masked>
+      <name>varPartnership_agreement</name>
+   </variable>
+</TestCaseEntity>
