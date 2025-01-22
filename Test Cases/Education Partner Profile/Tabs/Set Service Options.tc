@@ -43,6 +43,6 @@
       <description></description>
       <id>ee60a1ca-691e-47ef-9d4e-9cf731f124f5</id>
       <masked>false</masked>
-      <name>varSchool_terms</name>
+      <name>varSchool_terms_available</name>
    </variable>
 </TestCaseEntity>

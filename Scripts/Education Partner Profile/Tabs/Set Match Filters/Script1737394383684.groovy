@@ -32,6 +32,19 @@ if (username != 'cktest06ep') {
     System.exit(0)
 }
 
+//Check to see if we're writing printed output to a file
+domain = GlobalVariable.domain
+
+writeFile = false
+
+// Set output file
+testName = 'Education Partner Filters Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 parms = [varDegree, varExperience, varCredentials, varEnglish, varTravel, varPaid_volunteer]
 
 println(parms)
@@ -55,12 +68,73 @@ travel = '//input[@id=\'profile_group-1456436956.575_travel_support\']'
 paid_volunteer = '//input[@id=\'profile_group-1456436956.575_financial_support\']'
 
 xpaths = [degree, experience, credentials, english, travel, paid_volunteer]
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/match filters/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Partner Profile/Tabs/Match Filters/')
+
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Formal Education Degree') : 'img_Formal Education Degree_field-tooltip',
+('Classroom Experience') : 'img_Classroom Experience_field-tooltip',
+('Formal Teaching Credentials') : 'img_Formal Teaching Credentials_field-tooltip',
+('English Proficiency') : 'img_English Proficiency_field-tooltip',
+('Affiliated with a Church') : 'img_Affiliated with a Church_field-tooltip',
+('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Formal Education Degree') : 'No will match all candidates',
+('Classroom Experience') : 'No will match all candidates.',
+('Formal Teaching Credentials') : 'No will match all candidates. ',
+('English Proficiency') : 'Select all options that best fit job requirements',
+('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference. ",
+('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Formal Education Degree') : 'The school formal education degree field is required.',
+('Classroom Experience') : 'The school classroom experience field is required.',
+('Formal Teaching Credentials') : 'The has teaching credentials field is required.',
+('English Proficiency') : 'The english skills field is required.',
+('Travel Options') : 'The travel support field is required.',
+('Paid & Volunteer Positions') : 'The financial support field is required.']
+
+//Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Match Filters'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Match Filters Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Match Filters Tab'], FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Match Filters/btn_Complete Submit'))
+object = 'Object Repository/Education Partner Profile/Tabs/Match Filters/btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

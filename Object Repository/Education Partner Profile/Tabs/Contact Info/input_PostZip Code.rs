@@ -6,12 +6,12 @@
    <elementGuidId>75352138-7b22-4fd2-96c9-6796ae28d07c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='profile_group1_school_post_code']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_school_post_code</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='profile_group1_school_post_code']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>62512f3f-bab4-4668-bee2-844af67829e6</webElementGuid>
+      <webElementGuid>1d157f08-26d5-4e68-a6f9-a8e5b4b6cbc2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>school_post_code</value>
-      <webElementGuid>f763a2a7-15ba-43bb-88f1-11c6976270e2</webElementGuid>
+      <webElementGuid>b9ce2c40-1d45-432b-be7b-e62940a60fc9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>30</value>
-      <webElementGuid>7bdbf9f9-124e-4186-bd84-7dbfd0a8f644</webElementGuid>
+      <webElementGuid>d7b4c8bc-bd29-46f0-9757-18f6c38bc3e7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-small-field</value>
-      <webElementGuid>1744dd43-294f-46a1-8a51-7fbd18fd08ac</webElementGuid>
+      <webElementGuid>46f35794-39ea-41de-916e-f075001a9e5d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_school_post_code</value>
-      <webElementGuid>d43fe8e5-a6a4-442b-a074-27084bb8f474</webElementGuid>
+      <webElementGuid>61ed4708-4399-4dd1-9285-4e64332228f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][school_post_code]</value>
-      <webElementGuid>848e1ad6-6049-46e8-8aa7-fafe2338ce29</webElementGuid>
+      <webElementGuid>effff21d-afe3-4eb7-a117-6776d060e122</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>5ca5dcc7-f05d-4a01-a0a7-683b51baabeb</webElementGuid>
+      <webElementGuid>c3401a75-3148-4e1f-8406-1632c681ae86</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>a1777090-9082-4290-b452-aec8b3614524</webElementGuid>
+      <webElementGuid>1f9b0020-327d-40ba-84f0-b65803066061</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_school_post_code&quot;)</value>
-      <webElementGuid>0a354556-e86b-4906-8e42-9b03ae1900d0</webElementGuid>
+      <webElementGuid>a4ed3d11-d91c-44e0-9421-12ca4875cbc3</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group1_school_post_code']</value>
-      <webElementGuid>d38a071a-6e32-43dc-bb2e-b1d23897961d</webElementGuid>
+      <webElementGuid>204e0e66-7c34-48e2-b6e6-9af4d772efd0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[15]/div[2]/input</value>
-      <webElementGuid>cf9b6d8a-2411-4043-86e1-12c87c1170f7</webElementGuid>
+      <webElementGuid>99a5b89f-72bb-4afb-a0c4-ed1b748ba844</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[15]/div[2]/input</value>
-      <webElementGuid>055579fc-d840-42ed-b222-7ac5e4ba3302</webElementGuid>
+      <webElementGuid>ffe7a342-eded-46ea-8e71-c3fe2c758fe6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +119,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group1_school_post_code' and @name = 'profile[group1][school_post_code]' and @type = 'input']</value>
-      <webElementGuid>17b3a5c1-30a4-4a03-ab46-8e8702be0697</webElementGuid>
+      <webElementGuid>9445c87c-e5f8-4230-93c2-e65b18017534</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

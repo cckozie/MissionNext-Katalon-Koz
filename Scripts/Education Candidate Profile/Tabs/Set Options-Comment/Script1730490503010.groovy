@@ -26,7 +26,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 username = GlobalVariable.username
 
 if (username != 'cktest04ec') {
-    println('The Execution Profile must be set to "Education Partner"')
+    println('The Execution Profile must be set to "Education Candidate"')
 
     System.exit(0)
 }

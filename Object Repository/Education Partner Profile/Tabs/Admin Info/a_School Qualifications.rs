@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_School Qualifications</name>
+   <tag></tag>
+   <elementGuidId>b3eac2f3-29a2-44b8-9911-30e0ece64156</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='group-1456435706.801']/div[2]/div[4]/a[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>4cb84122-07eb-491d-9068-0d70f68357dc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/homepage/sender/partner-benefits/#school-qualifications</value>
+      <webElementGuid>20d2f5d1-9b54-4c02-b9c0-b6d4658c0b95</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>School Qualifications.</value>
+      <webElementGuid>8b62bd2c-59d5-4adf-8ea4-d627bc0dd41a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;group-1456435706.801&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
+      <webElementGuid>b404e083-707f-421b-8413-430fa38099fc</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1456435706.801']/div[2]/div[4]/a</value>
+      <webElementGuid>d56a0083-6eee-4104-bb2a-6702bf4e1c9b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'School Qualifications.')]</value>
+      <webElementGuid>265fd695-3ed7-4caf-8555-0fbca39bfb0a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Meet Christian School Qualifications?*'])[1]/following::a[1]</value>
+      <webElementGuid>39f2a06e-8800-47cc-9999-93134d0c7905</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact MissionNext'])[1]/preceding::a[1]</value>
+      <webElementGuid>b61a511e-aa5b-4eb1-a2ea-232707f506ad</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Check to Agree with Partnership Agreement to continue'])[1]/preceding::a[2]</value>
+      <webElementGuid>a3894ae6-accc-4220-b2aa-3c21d5f42584</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='School Qualifications.']/parent::*</value>
+      <webElementGuid>0ec4e666-8b87-4b5e-a7cb-ea579bd3b0a2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/homepage/sender/partner-benefits/#school-qualifications')]</value>
+      <webElementGuid>9562b863-99ca-4f9c-8758-aa3426c2a078</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[4]/a</value>
+      <webElementGuid>bee9b742-0c1e-4291-9f43-5c12e3fdb2ce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/homepage/sender/partner-benefits/#school-qualifications' and (text() = 'School Qualifications.' or . = 'School Qualifications.')]</value>
+      <webElementGuid>54beb0b9-5afe-4776-aa00-d3f26e132990</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

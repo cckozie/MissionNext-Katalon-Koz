@@ -6,12 +6,12 @@
    <elementGuidId>18f8f437-f404-4f32-af17-26c1a96e8ddb</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='profile_group1_last_name']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_last_name</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='profile_group1_last_name']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>7fa6da65-5690-4044-abd8-c28d94535e99</webElementGuid>
+      <webElementGuid>2877af50-1f80-4a25-a122-ea6ea866af15</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>last_name</value>
-      <webElementGuid>b675831c-d02e-45b3-87d0-2a2b88ca080c</webElementGuid>
+      <webElementGuid>458a944f-dad7-481a-8424-3158f88507a2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>7</value>
-      <webElementGuid>c3e3eb76-f3bd-4365-8a7e-73a5e2215bed</webElementGuid>
+      <webElementGuid>0a03252a-9c7c-4b65-887c-c6da56383bcd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-medium-field</value>
-      <webElementGuid>433c6f24-4eba-4b5e-ae74-12142a7aeca3</webElementGuid>
+      <webElementGuid>b082963d-82f2-4e94-894d-343dfc7d649a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_last_name</value>
-      <webElementGuid>c0d05435-2866-43a6-97ea-93da4125b532</webElementGuid>
+      <webElementGuid>20d069d5-96d4-46cb-99d5-eb099b78ef39</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][last_name]</value>
-      <webElementGuid>eef05c89-03df-4453-8052-cc8ddeb69fae</webElementGuid>
+      <webElementGuid>93d234d5-4e57-4604-8c5c-81974804082b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>d38578e4-feb4-49e2-8fe2-2d24b9650ea3</webElementGuid>
+      <webElementGuid>fbafceab-2038-4742-8b0c-f4986f6e2508</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>e15cc184-da7f-40f3-a831-7ecb9cac55ac</webElementGuid>
+      <webElementGuid>9ee84d12-054d-4e86-a925-90dfccaf97da</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>value</name>
       <type>Main</type>
       <value>Kosieracki</value>
-      <webElementGuid>da8c6022-f490-4701-a29c-39584f443781</webElementGuid>
+      <webElementGuid>c33eea23-dffc-4ad7-bd20-d5073ab99f0d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_last_name&quot;)</value>
-      <webElementGuid>3ba64644-482d-4ccb-82ac-856421c402c7</webElementGuid>
+      <webElementGuid>3b515c42-0fb9-4bd0-88d7-3b7f99fd58e7</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group1_last_name']</value>
-      <webElementGuid>619f04e5-3a19-4e38-b693-1ede83788dc0</webElementGuid>
+      <webElementGuid>b4610772-bb37-43c0-bcab-39ee51e3d839</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[4]/div[2]/input</value>
-      <webElementGuid>5949fc20-ced1-411b-a7f6-b4652a59185f</webElementGuid>
+      <webElementGuid>df68b658-a5ce-4ecb-bb7f-73770b53e4c9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/div[2]/input</value>
-      <webElementGuid>66afc90a-9bf0-4f7d-bdd0-aeb8470e1bea</webElementGuid>
+      <webElementGuid>c2a50383-3788-488c-8429-503263193481</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group1_last_name' and @name = 'profile[group1][last_name]' and @type = 'input']</value>
-      <webElementGuid>6ee6c5f6-4200-43dd-a331-8e2ab37583fc</webElementGuid>
+      <webElementGuid>55bcaf69-4171-45e7-bae3-3ba07c6d8267</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

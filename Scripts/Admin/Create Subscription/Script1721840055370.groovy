@@ -20,6 +20,7 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import java.text.SimpleDateFormat
 
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
@@ -133,6 +134,28 @@ for (row = 1; row < row_count; row++) {
 			}
 			
 		}
+		//Calculate and set start and end dates
+		date = new Date()
+		
+		start = date.format("yyyy-MM-dd")
+		
+		year = start.substring(0,4)
+		
+		month = start.substring(5,7)
+		
+		day = start.substring(8,)
+		
+		if(role == 'Candidate') {
+			endYear = year.toInteger() + 5
+			end = endYear + '-12-31'
+		} else {
+			endYear = year.toInteger() + 1
+			end = endYear + '-' + month + '-' + day
+		}
+		
+		WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_YYYY-MM-DD_start_date'),start)
+		
+		WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_YYYY-MM-DD_end_date'), end)
 		
 		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
 		

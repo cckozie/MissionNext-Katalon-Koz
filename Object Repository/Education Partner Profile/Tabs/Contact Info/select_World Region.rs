@@ -6,12 +6,12 @@
    <elementGuidId>93f8b9a5-db0b-491a-b693-7a81d38dec1b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//select[@id='profile_group1_world_region']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_world_region</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group1_world_region']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>3bbeb1aa-1eab-473a-9b06-ead36e901be1</webElementGuid>
+      <webElementGuid>d9cd19fe-88bf-4932-bd6f-3c19b6f2c94b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>world_region</value>
-      <webElementGuid>f1a2a667-c77d-4c9b-a267-930ddfcf5089</webElementGuid>
+      <webElementGuid>879dbec1-247c-4716-8f7c-a413dceb7287</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>151</value>
-      <webElementGuid>e7b239f8-6851-4793-899e-099f3d9180c4</webElementGuid>
+      <webElementGuid>18c8478b-3038-4ade-8217-4ce6bac88e14</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][world_region]</value>
-      <webElementGuid>6e303bcc-926d-43c8-a9f9-6927d57a7a81</webElementGuid>
+      <webElementGuid>f5cd9969-2354-49ed-9aac-c3e0b598680c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_world_region</value>
-      <webElementGuid>d3578371-f107-4735-bb5d-d66099ad2e91</webElementGuid>
+      <webElementGuid>9630cca7-5e67-4bc6-be3d-8127ecb2ea43</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -80,7 +80,7 @@ Oceania
 South America
 Various
 </value>
-      <webElementGuid>72b3bf04-84bf-4b10-8fdf-992d41cb9bb5</webElementGuid>
+      <webElementGuid>35a2e87b-90c0-4bac-aa1a-318a8bcb334e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -88,7 +88,7 @@ Various
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_world_region&quot;)</value>
-      <webElementGuid>eedee36e-99a8-40d9-8d8a-1fcb02a35037</webElementGuid>
+      <webElementGuid>1b444d94-1dcd-4cb2-87a2-dbc2d47bade0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -96,7 +96,7 @@ Various
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@id='profile_group1_world_region']</value>
-      <webElementGuid>5ebe7edf-1826-44d6-ad53-f15901d7f1cb</webElementGuid>
+      <webElementGuid>015fb305-4f39-45c3-8487-fc8074e7578a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -104,7 +104,7 @@ Various
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[16]/div[3]/select</value>
-      <webElementGuid>44221dbb-8a43-40ac-918d-72f401060987</webElementGuid>
+      <webElementGuid>bbc7572a-20e0-42f8-9279-aeb57c025adc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -112,7 +112,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='World Region'])[1]/following::select[1]</value>
-      <webElementGuid>aaecee65-8fe1-4758-bd1c-700c7a4555f0</webElementGuid>
+      <webElementGuid>a2349753-a1fc-4324-a11d-4d7e43a078cf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -120,7 +120,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='In what region is your school/ Organization located?'])[1]/following::select[1]</value>
-      <webElementGuid>f5e7eb69-ca8e-419d-9286-bfd2fad5fcfe</webElementGuid>
+      <webElementGuid>61420854-e36d-4a68-9f98-07818bb7d83c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -128,7 +128,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='countries by region'])[1]/preceding::select[1]</value>
-      <webElementGuid>13593e83-39d9-4bf2-ae8a-7e474c5f0d32</webElementGuid>
+      <webElementGuid>da835994-e855-4a0d-8c07-8bb8b169ec69</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -136,7 +136,7 @@ Various
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/select</value>
-      <webElementGuid>54cb2d71-18a4-4907-8546-7ff95c6d331c</webElementGuid>
+      <webElementGuid>bc873ee4-9ef2-4504-974d-95a0e1e0d120</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -178,6 +178,6 @@ Oceania
 South America
 Various
 ')]</value>
-      <webElementGuid>1e83fbc8-6e7a-49a1-a83d-0e59f8bc551a</webElementGuid>
+      <webElementGuid>e6eb9873-e8f7-4622-9840-992d3fe70900</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -73,14 +73,7 @@ tooltipText = [
 ('Birth Year') : 'Four Digit Year',
 ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
-/*
-// Define the required field error messages
-requiredFieldMsgs = [
-	('Gender') : 'The gender field is required.',
-	('Country of Citizenship') : 'The citizenship country field is required.',
-	('Birth Year') : 'The birth year field is required.']
-*/
-// Define the required field missing error message test objects
+// Define the required field missing error message
 requiredFieldMsgs = [
 ('Gender') : 'The gender field is required.',
 ('Country of Citizenship') : 'The citizenship country field is required.',

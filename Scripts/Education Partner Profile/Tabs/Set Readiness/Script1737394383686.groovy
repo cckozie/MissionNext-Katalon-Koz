@@ -34,6 +34,22 @@ if (username != 'cktest06ep') {
 	System.exit(0)
 }
 
+//Check to see if we're writing printed output to a file
+domain = GlobalVariable.domain
+
+writeFile = false
+
+// Set output file
+testName = 'Education Partner Readiness Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
+// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives,
+	varMissions_experience, varRelocation]
+
 //xpath of the Process Stage group 
 process_stage = "//input[@id='profile_group-1456436491.551_candidate_process_stages']"
 
@@ -54,16 +70,72 @@ relocation = "//input[@id='profile_group-1456436491.551_relocation_question']"
 
 xpaths = [process_stage, cross_cultural, bible_training, perspectives, missions_experience, relocation]
 
+///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Define path to tooltip text images
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/readiness/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = ('Education Partner Profile/Tabs/Readiness/')
+
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy',
+('Process Stage') : 'img_Process Stage_field-tooltip',
+('Cross-cultural Experience') : 'img_Cross-cultural Experience_field-tooltip',
+('Bible Training') : 'img_Bible Training_field-tooltip',
+('Attended Perspectives') : 'img_Attended Perspectives_field-tooltip',
+('Missions Experience') : 'img_Missions Experience_field-tooltip',
+('Relocation Option(s)') : 'img_Relocation Option(s)_field-tooltip']
+
+// Define the expected tooltip texts
+tooltipText = [
+('Process Stage') : 'Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates. ',
+('Cross-cultural Experience') : 'Select those that would be acceptable for most positions. The first choice will match all candidates.',
+('Bible Training') : "Select all options that best fit the typical requirements for your positions. 'Not Applicable' will not filter out profiles based on a candidate's Bible Training.",
+('Attended Perspectives') : 'The first selection, Not taken Perspectives, will match all candidates. ',
+('Missions Experience') : "Indicates a candidate's level of exposure to mission work.",
+('Relocation Option(s)') : "Check all candidate selections you could consider based on your available positions. If  selecting 'Not a match criteria', there's no need to check the others."]
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Process Stage') : 'The candidate process stages field is required.',
+('Bible Training') : 'The bible school training field is required.',
+('Attended Perspectives') : 'The attended perspectives? field is required.',
+('Relocation Option(s)') : 'The relocation question field is required.']
+
+//Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Readiness'))
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Readiness Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Readiness Tab'], FailureHandling.STOP_ON_FAILURE)
 
-xpaths = [process_stage, cross_cultural, bible_training, perspectives, missions_experience, relocation]
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
-parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives, 
-	varMissions_experience, varRelocation]
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each {
+	fieldList.add(it.key)
+}
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Readiness/btn_Complete Submit'))
+object = 'Object Repository/Education Partner Profile/Tabs/Readiness/btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+

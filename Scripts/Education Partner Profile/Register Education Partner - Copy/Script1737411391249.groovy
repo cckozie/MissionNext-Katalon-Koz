@@ -442,7 +442,7 @@ if (GlobalVariable.returnCode == 'found') {
 
     //================================== Grant access for the new education partner ==================================
     WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-
+	System.exit(0)
     //================================== Create a subscriptioon for the new education partner ========================
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)

@@ -32,15 +32,10 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://education.' + GlobalVariable.domain + '/education-home/login-here/')
 
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [:], FailureHandling.STOP_ON_FAILURE)
-
 WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Login/input_Username'), GlobalVariable.username)
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Education Partner Profile/Login/input_Password'), GlobalVariable.password)
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Login/button_Log In'))
 
-//WebUI.click(findTestObject('Object Repository/temp/a_My Profile'))
-
-//WebUI.click(findTestObject('Object Repository/temp/input_Email_profilegroup-1444754265.711email'))
 

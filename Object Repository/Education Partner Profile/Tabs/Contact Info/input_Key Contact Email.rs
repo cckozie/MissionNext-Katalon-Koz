@@ -6,12 +6,12 @@
    <elementGuidId>d8341c1f-b2bf-481f-9c71-48536dfb5b88</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='profile_group1_email']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_email</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='profile_group1_email']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>97093ab5-08f3-4e21-b9f3-988d6b44731a</webElementGuid>
+      <webElementGuid>1a2fbc07-a87f-495c-9e1f-54e7c8481e9b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>email</value>
-      <webElementGuid>ba4986b1-8d95-495a-825e-4cb011ad56f4</webElementGuid>
+      <webElementGuid>42a1733e-2977-43de-8d98-619f43983c09</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>12</value>
-      <webElementGuid>84836c24-9522-4838-a2a3-8ab09599335f</webElementGuid>
+      <webElementGuid>280ec5cf-7d27-465b-983f-9e7c7c4a4ff3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-large-field</value>
-      <webElementGuid>69dea1b2-3087-4002-a086-9d8c49b574d3</webElementGuid>
+      <webElementGuid>90e63921-cc7a-45bf-ae44-b73054800592</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_email</value>
-      <webElementGuid>bc82ad00-5c6c-44f5-a7ff-de84278b84d2</webElementGuid>
+      <webElementGuid>51904428-8f88-4899-b6e5-19093d80f0ec</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][email]</value>
-      <webElementGuid>8729078c-577b-4472-a3df-e12d6e419f71</webElementGuid>
+      <webElementGuid>bb7318be-479c-48a0-a5ae-4956ccdcc2b4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>8fe514b0-6275-436a-a3e3-5cc8f03c8489</webElementGuid>
+      <webElementGuid>2f8042ba-072d-46b1-9632-34301bb72771</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>7af86d5e-86c8-4c54-ac8f-c53e31e33f2e</webElementGuid>
+      <webElementGuid>5dfd7c77-08bd-4cdc-9dda-e88f60aad0f3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>value</name>
       <type>Main</type>
       <value>cktest06@missionnext.org</value>
-      <webElementGuid>624d3288-6bc5-4b3c-adbb-690480d88875</webElementGuid>
+      <webElementGuid>ecbd6164-b6c5-4a2d-ba59-460b2e83c3ed</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_email&quot;)</value>
-      <webElementGuid>7f8e9d33-c58e-4683-a735-b16453ba40ac</webElementGuid>
+      <webElementGuid>bada38fe-9b45-4e1e-a3f7-46b8db73731d</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group1_email']</value>
-      <webElementGuid>470e7571-40fe-4422-a3cc-2bb83d54f18c</webElementGuid>
+      <webElementGuid>d37c5676-e7a7-40d7-94f7-1654a1b2e0f7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[6]/div[2]/input</value>
-      <webElementGuid>fab0791a-eddf-41f4-94ca-bdaaaf2a63dd</webElementGuid>
+      <webElementGuid>00e61bca-452b-4aaf-8429-24b7a1b76714</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[6]/div[2]/input</value>
-      <webElementGuid>f827ba52-8b12-42ff-9178-1871be52ada4</webElementGuid>
+      <webElementGuid>f6fb3c3e-1acf-4e5e-8069-382db35c24e5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group1_email' and @name = 'profile[group1][email]' and @type = 'input']</value>
-      <webElementGuid>791276f6-71a5-4303-b223-07c42a80b4de</webElementGuid>
+      <webElementGuid>7e9b9c33-b4e6-4c04-a872-7e24f0b6af12</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

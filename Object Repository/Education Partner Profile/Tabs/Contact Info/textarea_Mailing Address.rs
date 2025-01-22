@@ -6,12 +6,12 @@
    <elementGuidId>a3febaaa-7f4a-4e8b-a9b1-67561efaae81</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//textarea[@id='profile_group1_school_mailing_address']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_school_mailing_address</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//textarea[@id='profile_group1_school_mailing_address']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>textarea</value>
-      <webElementGuid>f54d767b-8540-4bb3-8f9a-dc5b78a6ee98</webElementGuid>
+      <webElementGuid>21910c30-6c7b-4891-a6c2-f597a23a60c3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>school_mailing_address</value>
-      <webElementGuid>2c814c94-8ffe-449c-bfb2-993782267943</webElementGuid>
+      <webElementGuid>a1238f79-9ed8-4b28-922e-d95540838c0f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>26</value>
-      <webElementGuid>21b17931-5a78-430e-9260-61b212e15d5c</webElementGuid>
+      <webElementGuid>e725bebf-22d8-4243-9aaf-e5e89c248051</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-small-field</value>
-      <webElementGuid>3214aea1-d1dc-422a-9440-898753fe3f1e</webElementGuid>
+      <webElementGuid>e6024e2d-4f15-48f9-857c-006ee65a61df</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][school_mailing_address]</value>
-      <webElementGuid>863aa4df-80b1-4b22-bee1-7232b88ab0a2</webElementGuid>
+      <webElementGuid>b3745cc7-3129-4de9-8e3b-ada0ac1ddf22</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_school_mailing_address</value>
-      <webElementGuid>43e6538b-82b1-483d-a4da-7e760222e9bc</webElementGuid>
+      <webElementGuid>c703b5f0-080f-4e5f-b5b2-857889371c10</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_school_mailing_address&quot;)</value>
-      <webElementGuid>86babac5-2051-432b-9cc0-d71090a8e5a0</webElementGuid>
+      <webElementGuid>b62dfd00-7ed9-42f9-9444-6999548f6091</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//textarea[@id='profile_group1_school_mailing_address']</value>
-      <webElementGuid>1a5e33cb-a9d1-46f5-8215-3eef75621bb3</webElementGuid>
+      <webElementGuid>73ac9e61-1aa8-4e52-8d0d-efe40b30b3f8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[10]/div[2]/textarea</value>
-      <webElementGuid>1ae5ae9a-0d75-4dc0-90b4-e65052483d3d</webElementGuid>
+      <webElementGuid>5ddc9722-6e18-4e58-9081-b918526d6fb8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//textarea</value>
-      <webElementGuid>49e4b08f-8912-4751-a569-d7a40e3bfb48</webElementGuid>
+      <webElementGuid>c9610a20-efb2-4088-8795-050e6c666eca</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//textarea[@name = 'profile[group1][school_mailing_address]' and @id = 'profile_group1_school_mailing_address']</value>
-      <webElementGuid>967f7899-27ba-4bae-a250-211f6730e3e3</webElementGuid>
+      <webElementGuid>9fcb49de-8d4a-409c-ac1e-0351fc13c446</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

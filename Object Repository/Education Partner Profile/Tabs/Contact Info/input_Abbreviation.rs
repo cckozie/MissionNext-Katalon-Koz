@@ -6,12 +6,12 @@
    <elementGuidId>9730248d-543e-4df6-98b3-2a5db3616f61</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='profile_group1_abbreviation']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_abbreviation</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='profile_group1_abbreviation']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>0da3aa79-f15d-47a1-819a-d170e0947970</webElementGuid>
+      <webElementGuid>cc92f101-8030-40a1-8b97-198b17390ef6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>abbreviation</value>
-      <webElementGuid>7c01ea29-dc9b-4287-8093-6b3fbb16c889</webElementGuid>
+      <webElementGuid>680767a5-7550-426a-9253-538396cc92ec</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>20</value>
-      <webElementGuid>3297afb6-a85f-4fed-b79b-4ccdc56486c2</webElementGuid>
+      <webElementGuid>5c61584a-5dd5-46f0-950d-bb1e62129ed9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-small-field</value>
-      <webElementGuid>c0d50f26-cb67-4117-854a-99cf13637881</webElementGuid>
+      <webElementGuid>6fd79909-6ae7-4061-aa2a-4f4bab7eb51f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_abbreviation</value>
-      <webElementGuid>a6b95956-cc1a-493d-9dfb-ed8cb02bd25b</webElementGuid>
+      <webElementGuid>9e17d4b8-28ae-4674-9214-d9de4460fcc8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][abbreviation]</value>
-      <webElementGuid>2917f880-59b2-4323-8b80-1bab44d9c2a1</webElementGuid>
+      <webElementGuid>7b90e690-5129-4010-bd14-2e4f42ec1291</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>24e9c0c7-8cd2-4740-aa1e-4a06dd0559e9</webElementGuid>
+      <webElementGuid>87e0bc18-17df-4417-bd35-55e8aead6e67</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>f2e7683a-8415-4b32-8698-c97f569e7bd9</webElementGuid>
+      <webElementGuid>9eba3dec-ec74-41fd-8b83-5a7e4c6cc717</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>value</name>
       <type>Main</type>
       <value>CCK EP</value>
-      <webElementGuid>0a2f2eba-14f0-42ef-b37a-d58d71946b4f</webElementGuid>
+      <webElementGuid>a9b33aaa-08e6-434b-95b5-73978344e594</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_abbreviation&quot;)</value>
-      <webElementGuid>133241df-192e-4eec-9a94-fd0f5cead563</webElementGuid>
+      <webElementGuid>72b9e380-18a8-405e-af1f-b1953d703c8f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group1_abbreviation']</value>
-      <webElementGuid>72c2270c-891f-4e86-8de6-75525fcaf5d9</webElementGuid>
+      <webElementGuid>63ce4500-e0b0-4668-899b-9f976c629cf3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[2]/div[2]/input</value>
-      <webElementGuid>5afa1a98-87d1-40fe-94d4-c3b32a247be9</webElementGuid>
+      <webElementGuid>f50ce5b6-0067-46d9-a0a1-acfe47bd19b0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[2]/input</value>
-      <webElementGuid>eb877bc3-cf66-43ea-9fe4-25f65df58e31</webElementGuid>
+      <webElementGuid>9f13391c-d170-4b82-a33a-94839be5b619</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group1_abbreviation' and @name = 'profile[group1][abbreviation]' and @type = 'input']</value>
-      <webElementGuid>97be33fb-c224-42a5-95c9-ec18cadfe07d</webElementGuid>
+      <webElementGuid>6095cd2e-c7d0-46cc-8bb2-8ac62f58909e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

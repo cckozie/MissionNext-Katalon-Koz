@@ -6,12 +6,12 @@
    <elementGuidId>cbe48962-7ba3-4bda-9085-0afcb84be714</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='profile_group1_key_contact_skype_address']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_key_contact_skype_address</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='profile_group1_key_contact_skype_address']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>a3da75b4-b46f-4916-af8e-dd2fa5308671</webElementGuid>
+      <webElementGuid>56fdae5d-f643-4fc4-b74b-1c34931f1aeb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>key_contact_skype_address</value>
-      <webElementGuid>ebd36ae1-faa3-49e3-ae19-299ff3b5acdb</webElementGuid>
+      <webElementGuid>b30da0e1-d098-4009-837f-6ec51039f12a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>114</value>
-      <webElementGuid>1e99a49b-9fad-4b26-a9db-064755adb31a</webElementGuid>
+      <webElementGuid>5b91c244-b3e0-45bf-b133-fc83350ef9d0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-medium-field</value>
-      <webElementGuid>a299bf64-5f7c-461a-b278-3f2719139738</webElementGuid>
+      <webElementGuid>430148ec-d823-40c3-a9c0-d0fc479ef164</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_key_contact_skype_address</value>
-      <webElementGuid>7ba6973f-4678-406c-8840-ccb967b73261</webElementGuid>
+      <webElementGuid>9541b7ea-6e68-4796-ba28-3719eda8463b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][key_contact_skype_address]</value>
-      <webElementGuid>226e51ec-abf0-465b-946b-4c3161adfe9a</webElementGuid>
+      <webElementGuid>89fba234-9af4-47e4-9851-ea755e983e50</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>cb700192-faae-4e14-8124-50c1998daffb</webElementGuid>
+      <webElementGuid>1fa90d98-9102-4cdc-82a1-d25a96886bdd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>3b1e85a7-f210-47a4-befc-1e07d4d074a7</webElementGuid>
+      <webElementGuid>41405412-45a7-442d-a0b5-cb931d369927</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_key_contact_skype_address&quot;)</value>
-      <webElementGuid>afe7d734-27b4-461c-b57f-2169efb487f9</webElementGuid>
+      <webElementGuid>6beb4450-1a8f-40de-b712-bd64aca2acd3</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group1_key_contact_skype_address']</value>
-      <webElementGuid>b6e320a1-a590-4bcb-869c-1baa76d91056</webElementGuid>
+      <webElementGuid>ac2a56dd-765a-44c1-a3e3-81c91cb686c7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[8]/div[2]/input</value>
-      <webElementGuid>baf4d069-cd9a-460d-ae87-b03b7dea50ce</webElementGuid>
+      <webElementGuid>fcbf2fc6-1fc2-4bf5-b529-f6e9cfe6c11d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div[2]/input</value>
-      <webElementGuid>bcdeb21d-dd57-43ed-99dc-5f410d234358</webElementGuid>
+      <webElementGuid>f30e5233-523d-4f73-8924-705592858903</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +119,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group1_key_contact_skype_address' and @name = 'profile[group1][key_contact_skype_address]' and @type = 'input']</value>
-      <webElementGuid>bc696010-afc0-42a1-b12c-59f23e2f2106</webElementGuid>
+      <webElementGuid>b4893f04-e1ab-443f-9b52-720611ebf802</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

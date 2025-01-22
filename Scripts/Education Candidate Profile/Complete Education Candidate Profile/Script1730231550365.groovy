@@ -18,11 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import javax.swing.*;
 
-///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//	Need to add tests for the tooltips and error messages on all tabs
-//  Consider using a called script to test all tooltips.
-//  Write all failures to the output file
-///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 pages = []
@@ -82,20 +77,20 @@ if(dashboard) {
 }
 
 if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
-// Complete the Contact Info tab
-gender = 'Male'
-
-country = 'United States'
-
-country_of_citizenship = 'United States'
-
-birth_year = '1949'
-
-marital_status = 'Widowed'
-
-WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
-        , ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year
-        , ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
+	// Complete the Contact Info tab
+	gender = 'Male'
+	
+	country = 'United States'
+	
+	country_of_citizenship = 'United States'
+	
+	birth_year = '1949'
+	
+	marital_status = 'Widowed'
+	
+	WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
+	        , ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year
+	        , ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
 }
 
 if(pages.size() == 0 || 'All' in pages || 'Experience' in pages) {

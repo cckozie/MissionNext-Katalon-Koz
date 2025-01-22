@@ -48,13 +48,14 @@ frame.setLocation(600, 0);
 frame.setAlwaysOnTop (true)
 frame.show();
 
-if (WebUI.verifyTextPresent('Partner Level', false, FailureHandling.OPTIONAL)) {
+if (WebUI.verifyTextPresent('Partnership Application', false, FailureHandling.OPTIONAL)) {
     user = 'Partner'
-} else if (WebUI.verifyTextPresent('Partnership', false, FailureHandling.OPTIONAL)) {
-    user = 'Partner'
+} else if(WebUI.verifyTextPresent('Positions Needed', false, FailureHandling.OPTIONAL)) {
+   user = 'Partner'
 } else {
     user = 'Candidate'
 }
+println('User type is ' + user)
 
 path = '/Users/cckozie/Documents/MissionNext/Screenshots and Tooltip Text/'
 

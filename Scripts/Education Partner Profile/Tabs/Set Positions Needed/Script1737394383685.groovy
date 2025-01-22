@@ -31,6 +31,16 @@ if (username != 'cktest06ep') {
     System.exit(0)
 }
 
+//Check to see if we're writing printed output to a file
+domain = GlobalVariable.domain
+
+writeFile = false
+
+// Set output file
+testName = 'Education Partner Positions Needed Tab'
+
+outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -44,6 +54,43 @@ experiences = '//input[@id=\'profile_group-1456436124.683_teacher_experience_pre
 
 xpaths = [positions, experiences]
 
+// Define path to tooltip text images
+//tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/positions needed/'
+
+// Define the folder where the tooltip test objects live
+testObjectFolder = 'Education partner Profile/Tabs/Positions Needed/'
+
+// Define the names of the tooltip fields and the unique part of the related test object
+// ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
+tooltips = [
+('dummy') : 'dummy']
+
+// Define the expected tooltip texts
+tooltipText = []
+
+// Define the required field missing error message test objects
+requiredFieldMsgs = [
+('Available Positions') : 'The educational positions field is required.',
+('Experience Preferred') : 'The teacher experience preferred field is required.']
+
+//Go to the Admin Info tab
+WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Positions Needed'))
+
+//Get the actual tooltip text
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Admin Info Tab'],
+	FailureHandling.STOP_ON_FAILURE)
+
+//For script setup only - finds the required field error messages
+//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script (THERE ARE NONE)
+/*
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
+		, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
+	FailureHandling.OPTIONAL)
+*/
+
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
 //Log in as education partner if not on dashboard page
@@ -52,8 +99,6 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 }
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
-
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [('varExtension') : 'Positions Needed Tab'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 

@@ -6,12 +6,12 @@
    <elementGuidId>b935445b-e9ff-46a8-993c-a8d6a975a900</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//select[@id='profile_group1_country']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#profile_group1_country</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group1_country']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>078afea0-ee70-4dfe-97bb-875bd6d5b45b</webElementGuid>
+      <webElementGuid>1518aeb2-5f49-4e39-91f6-f4fe788ccc8a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>country</value>
-      <webElementGuid>5419d2f9-fc9f-4a65-b607-ba63428093b7</webElementGuid>
+      <webElementGuid>4fae4cb3-32e7-415b-b15b-d2cbd7834cb2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>10</value>
-      <webElementGuid>488a3651-a48b-4b3a-befe-bee425508bc6</webElementGuid>
+      <webElementGuid>1417a59c-e915-4acf-bbef-0ab8f3faaa1a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group1][country]</value>
-      <webElementGuid>7d05e771-ceab-4e68-abc3-be2a9286a60d</webElementGuid>
+      <webElementGuid>54f55762-2025-4582-b843-e214538e0ed5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group1_country</value>
-      <webElementGuid>3fde033b-5132-4135-8854-ac38f05e3738</webElementGuid>
+      <webElementGuid>fa7500e5-d731-4cb6-ab1c-e984a9bf85fe</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -294,7 +294,7 @@ Zambia
 Zimbabwe
 Various
 </value>
-      <webElementGuid>64eed970-cae1-4241-8d7c-6fa492172c82</webElementGuid>
+      <webElementGuid>5e94212c-8590-4c94-82fd-ddd3b80b5f91</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -302,7 +302,7 @@ Various
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group1_country&quot;)</value>
-      <webElementGuid>c385d4e9-14c4-48b6-affe-1195ef20b00d</webElementGuid>
+      <webElementGuid>8764b44a-523a-4fff-8b4a-1d1d8d117fd0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -310,7 +310,7 @@ Various
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@id='profile_group1_country']</value>
-      <webElementGuid>4d748f3f-0e05-4b09-9e50-2631fcdb544e</webElementGuid>
+      <webElementGuid>17ec76a1-c989-4783-83d8-b8bdd94b6d7c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -318,7 +318,7 @@ Various
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[11]/div[2]/select</value>
-      <webElementGuid>19c0e5ec-8eef-46d8-981c-ec27b6643cf0</webElementGuid>
+      <webElementGuid>bedc2236-6d62-4fe7-901d-60e63b4e3e4c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -326,7 +326,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Country*'])[1]/following::select[1]</value>
-      <webElementGuid>2235db20-f81d-483b-a37d-3e9d136d4920</webElementGuid>
+      <webElementGuid>a6446797-f735-48db-a2ac-e34f83419f83</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -334,7 +334,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Mailing Address'])[1]/following::select[1]</value>
-      <webElementGuid>89b96077-976d-4c27-8749-05d99fb96b56</webElementGuid>
+      <webElementGuid>ec615400-08e1-4c98-9586-611795c36230</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -342,15 +342,7 @@ Various
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='For schools with Non-Traditional Programs enter Various.'])[1]/preceding::select[1]</value>
-      <webElementGuid>fda5956d-4307-42f5-8c13-25ddba0fe647</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='City*'])[1]/preceding::select[1]</value>
-      <webElementGuid>21b58da6-197e-4715-8311-61489890c9c3</webElementGuid>
+      <webElementGuid>0b39db08-ee94-4ddd-a286-70686d455e0c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -358,7 +350,7 @@ Various
       <name>xpath:position</name>
       <type>Main</type>
       <value>//select</value>
-      <webElementGuid>73a45751-5c65-4fce-9813-f3b9d91d0dc2</webElementGuid>
+      <webElementGuid>2453982d-25e8-457e-a783-efe2733a8451</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -828,6 +820,6 @@ Zambia
 Zimbabwe
 Various
 ')]</value>
-      <webElementGuid>f1d5800b-f193-4ac8-9e09-cc7681a523eb</webElementGuid>
+      <webElementGuid>56a47dcb-dacc-4d06-af25-28302b819fa5</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -41,7 +41,7 @@ if (username != 'cktest06ep') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 //######################################################################################################
 
 //================================== Initialize ===============================================
@@ -133,12 +133,12 @@ tooltipTextMap.each {
 WebDriver driver = DriverFactory.getWebDriver()
 
 Actions action = new Actions(driver)
-/*
+
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
 		, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
 	FailureHandling.STOP_ON_FAILURE)
-*/
+
 // Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
 Screen s = new Screen()
 
@@ -442,8 +442,8 @@ if (GlobalVariable.returnCode == 'found') {
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
             , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 	
+	if(!registerOnly) {
     //================================== Complete the Education Partner tabs ========================
-	WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	
+		WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
+	}
 }
