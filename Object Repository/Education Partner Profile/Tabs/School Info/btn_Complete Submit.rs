@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Complete Submit</name>
+   <name>btn_Complete Submit</name>
    <tag></tag>
    <elementGuidId>51a5e70d-1334-4f7b-a2d7-c5d852396ab7</elementGuidId>
    <selectorCollection>

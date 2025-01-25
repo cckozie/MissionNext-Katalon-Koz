@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -61,6 +62,9 @@ tooltipText = [('Organization') : 'Name of your Organization.(Shorten, if too lo
 requiredFieldMsgs = [('Key Contact Phone') : 'The key contact phone field is required.', ('Organization') : 'The school phone field is required.'
     , ('Organization City') : 'The school city field is required.', ('Province/State/Region') : 'The province state region field is required.']
 
+// Define the page's links and the text to search for on the linked page
+pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
+
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
 
@@ -68,11 +72,10 @@ WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], 
     FailureHandling.STOP_ON_FAILURE)
 
-//object = 'Education Partner Profile/Tabs/Contact Info/btn_Complete Submit'
-//WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 // Call the tooltip testing script
+
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
     FailureHandling.OPTIONAL)
@@ -132,6 +135,10 @@ if (varWorld_region != null) {
     WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
             , ('varParm1') : varWorld_region], FailureHandling.STOP_ON_FAILURE)
 }
+
+// Test the external page links
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
+	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/Contact Info/btn_Complete Submit'))
 

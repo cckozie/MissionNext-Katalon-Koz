@@ -38,7 +38,7 @@ domain = GlobalVariable.domain
 writeFile = false
 
 // Set output file
-testName = 'Education Partner Filters Tab'
+testName = 'Education Partner Match Filters Tab'
 
 outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 

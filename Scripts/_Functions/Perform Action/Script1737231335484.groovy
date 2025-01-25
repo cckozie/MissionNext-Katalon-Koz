@@ -19,13 +19,12 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 action = varAction
+println(action)
 
 testObject = varObject
-
 println(testObject)
 
 parm1 = varParm1
-
 println(parm1)
 
 println(('Converting ' + testObject) + ' to web element')
@@ -55,19 +54,23 @@ if (action == 'click') {
     WebUI.click(findTestObject(testObject))
 	
 } else if (action == 'selectOptionByValue') {
-//    println('Selecting ' + parm1)
+    println('Selecting ' + parm1)
     WebUI.selectOptionByValue(findTestObject(testObject), parm1, false)
 	
 } else if (action == 'setText') {
+	println('Setting text ' + parm1)
     WebUI.setText(findTestObject(testObject), parm1)
 	
-} else if (action == 'setEncrytedText') {
+} else if (action == 'setEncryptedText') {
+	println('Setting encrypted text ' + parm1)
     WebUI.setEncryptedText(findTestObject(testObject), parm1)
 	
 } else if (action == 'getText') {
+	println('Getting text from ' + testObject)
     return WebUI.getText(findTestObject(testObject))
 	
 } else if (action == 'verifyElementVisible') {
+	println('Varifying ' + testObject + ' is visible.')
     return WebUI.verifyElementVisible(findTestObject(testObject), FailureHandling.OPTIONAL)
 }
 

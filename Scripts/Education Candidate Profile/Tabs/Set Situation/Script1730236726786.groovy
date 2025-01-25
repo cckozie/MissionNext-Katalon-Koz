@@ -80,7 +80,7 @@ tooltips = [
 // Define the expected tooltip texts
 tooltipText = [
 ('Bible Training') : 'If you have attended Sunday School classes for years, select Informal Training. If you have attended or taught Bible classes, select Some Bible School Classes.If your preferred assignments do not require Bible training, you can select Not Applicable.',
-('Affiliated with a church?') : 'This would be a church with a staff member that can provide a reference, if requested.']
+('Affiliated with a church') : 'This would be a church with a staff member that can provide a reference, if requested.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []	/*	//THE SUBMIT KEY ON ANY TAB WILL CAUSE THESE MESSAGES TO DISAPPEAR

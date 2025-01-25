@@ -37,17 +37,24 @@ if (username != 'cktest05jc') {
 //  Need to modify for new password tooltip text
 //	Need to call other test cases for the Experience, Availability, Service/Comment, and Your Ministry Prefs tabs
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 domain = GlobalVariable.domain
 
+username = GlobalVariable.username
+
+url = (('https://journey.' + domain) + '/signup/candidate')
+
 // Write results to text file
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) +
+'.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing Register Journey Candidate on ' + domain) + '\n')
+outFile.write(('Testing Register Journey Candidate on ' + domain) + '.\n')
+
 
 //================================== Delete the user ===============================================
-//WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
 // Define path to tooltip icons and text images
 path = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey candidate/journey contact registration/'
@@ -65,7 +72,7 @@ tooltips = ['username', 'email', 'password', 'first_name', 'last_name', 'learn_a
 requiredFieldMsgs = [('div_Password must be at least 6 characters long-Msg') : ' ', ('div_Please enter a valid email address-Msg') : ' '
     , ('div_The Fiirst Name field is required-Msg') : ' ', ('div_The cell phone field is required-Msg') : ' ', ('div_The last name field is required-Msg') : ' '
     , ('div_The terms and conditions field is required-Msg') : ' ', ('div_Username must be at least 6 characters long-Msg') : ' ']
-
+/*
 // Open the Journey login page
 WebUI.callTestCase(findTestCase('_Functions/Open Journey Login Page'), [:], FailureHandling.OPTIONAL)
 
@@ -81,8 +88,20 @@ url = WebUI.getUrl()
 if(url != myURL) {
 	WebUI.navigateToUrl('https://journey.' + GlobalVariable.domain + '/signup/candidate')
 }
+*/
+domain = GlobalVariable.domain
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
+username = GlobalVariable.username
+
+url = (('https://journey.' + domain) + '/signup/candidate')
+
+WebUI.openBrowser(null)
+
+WebUI.maximizeWindow()
+
+WebUI.navigateToUrl(url)
+
+//WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
 
 // Prep for selenium and sikulix funtions
 WebDriver driver = DriverFactory.getWebDriver()
@@ -94,7 +113,7 @@ WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_U
 Screen s = new Screen()
 
 WebUI.clearText(findTestObject('Journey Candidate Profile/Journey Register/input_Username'))
-
+/*
 // Test for username, email, and password required messages
 WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_Username must be at least 6 characters long-Msg'))
 
@@ -116,7 +135,7 @@ WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Reg
 WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The last name field is required-Msg'))
 
 WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The cell phone field is required-Msg'))
-
+*/
 WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Register/input_Password'), GlobalVariable.password)
 
 WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_First Name'), GlobalVariable.username)

@@ -13,10 +13,12 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.util.KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -53,6 +55,7 @@ xpaths = [partnership_agreement, terms_and_conditions]
 // Define path to tooltip text images
 //tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/admin info/'
+
 // Define the folder where the tooltip test objects live
 testObjectFolder = 'Education partner Profile/Tabs/Admin Info/'
 
@@ -69,8 +72,13 @@ tooltipText = [
 // Define the required field missing error message test objects
 requiredFieldMsgs = []
 
+// Define the page's links and the text to search for on the linked page
+pageLinks = [('School Qualifications') : 'SCHOOL QUALIFICATIONS', ('Contact MissionNext') : 'Contact MissionNext',
+	('Partnership Agreement') : 'PARTNERSHIP AGREEMENT', ('Terms and Conditions') : 'Terms and Conditions']
+
 //Go to the Admin Info tab
-WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Admin Info'))
+object = 'Education Partner Profile/Tabs/a_Admin Info'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Admin Info Tab'], 
@@ -78,6 +86,11 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
+// Test the external page link (need to do it up front because some of the xpaths get changed in the further processing
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks,
+	('varObjectPath') : 'Object Repository/Education Partner Profile/Tabs/Admin Info/',
+	('varCallingTab') : 'Object Repository/Education Partner Profile/Tabs/a_Admin Info'], FailureHandling.OPTIONAL)
 
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
@@ -128,6 +141,7 @@ parms = ['1', '1']
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.delay(2)
 
 object = 'Education Partner Profile/Tabs/Admin Info/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

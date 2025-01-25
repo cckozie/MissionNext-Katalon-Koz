@@ -44,13 +44,13 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varPositions, varExperiences]
+parms = [varAvailable_positions, varExperience_preferred]
 
 //xpath of the Positions Available group (div?)
 positions = '//input[@id=\'profile_group-1456436124.683_educational_positions\']'
 
 //xpath of the Positions Available group (div?)
-experiences = '//input[@id=\'profile_group-1456436124.683_teacher_experience_preferred\']'
+experiences = "//input[@id='profile_group-1456436124.683_teacher_experience_preferred']"
 
 xpaths = [positions, experiences]
 
@@ -100,7 +100,35 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
 
+// Test for all required field error messages
+outText = 'Verifying the required field messages.\n'
+
+outFile.append(outText)
+
+fieldList = []
+
+requiredFieldMsgs.each({
+		fieldList.add(it.key)
+	})
+
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
+	FailureHandling.STOP_ON_FAILURE)
+
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+
+if (varAvailable_other_positions != null) {
+	object = 'Object Repository/Education Partner Profile/Tabs/Positions Needed/textarea_Other Available Positions'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
+		, ('varParm1') : varAvailable_other_positions], FailureHandling.STOP_ON_FAILURE)
+}
+
+if (varOther_experience_comment != null) {
+	object = 'Object Repository/Education Partner Profile/Tabs/Positions Needed/textarea_Other Experience Comment'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
+		, ('varParm1') : varOther_experience_comment], FailureHandling.STOP_ON_FAILURE)
+}
+
+
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Positions Needed/button_Complete Submit'))
 

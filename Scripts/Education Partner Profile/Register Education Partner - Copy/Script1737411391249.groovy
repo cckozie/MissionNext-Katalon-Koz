@@ -116,7 +116,7 @@ WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : usernam
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //================================== Preopen the email app for testing the link for Custstomer Support 
-File file = new File('/System/Applications/Mail.app')
+File file = new File('/Applications/Microsoft Outlook.app')
 
 Desktop.getDesktop().open(file)
 */

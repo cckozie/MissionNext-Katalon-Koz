@@ -46,7 +46,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/tabs/contact info/'
 
 // Define the folder where the tooltip test objects live
 testObjectFolder = ('Education Candidate Profile/Tabs/Contact Info/')
@@ -78,6 +78,9 @@ requiredFieldMsgs = [
 ('Gender') : 'The gender field is required.',
 ('Country of Citizenship') : 'The citizenship country field is required.',
 ('Birth Year') : 'The birth year field is required.']
+
+// Define the page's links and the text to search for on the linked page
+pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
@@ -143,27 +146,9 @@ if (varMarital_status != null) {
 		('varObject') : object, ('varParm1') : varMarital_status], FailureHandling.STOP_ON_FAILURE)
 }
 
-//Test terms and conditions link
-object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/a_Terms and Conditions'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.switchToWindowIndex(1)
-
-WebUI.delay(1)
-
-newUrl = WebUI.getUrl()
-
-if (newUrl.indexOf('org/terms') < 0) {
-	println('######## Failed to find Terms and Conditions page')
-}
-
-WebUI.delay(1)
-
-WebUI.closeWindowIndex(1)
-
-WebUI.switchToWindowIndex(0)
-
-WebUI.delay(1)
+// Test the external page links
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
+	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
 
 object = 'Education Candidate Profile/Tabs/Contact Info/btn_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

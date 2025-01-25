@@ -39,7 +39,7 @@ if (username != 'cktest04ec') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 
 //######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -135,7 +135,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 's
 	('varObject') : object, ('varParm1') : GlobalVariable.email], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
 	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/button_Sign up'
@@ -149,7 +149,7 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
 	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_First Name'
@@ -241,8 +241,10 @@ outFile.append(outText)
 
 //Complete and submit the registration
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
 	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+
+//WebUI.delay(10)
 
 object = 'Object Repository/Education Candidate Profile/Register/checkbox_Terms and Conditions'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
@@ -254,7 +256,30 @@ if (!(registerOnly)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
         FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
+        success = WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
+
+        if (success) {
+			outText = '\n+++ Education candidate registration successful. Thank you page was found.\n'
+			
+			outFile.append(outText)
+			
+			WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
+			
+			optionsComment = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Options-Comment'), FailureHandling.OPTIONAL)
+			
+			if(optionsComment) {
+				outText = '+++ Education login after profile creation was successful.\n'
+			} else {
+				outText = '--- Education login after profile creation failed.\n'				
+			}
+			outFile.append(outText)
+			
+        } else {
+			outText = '\n--- Education candidate registration FAILED. Thank you page was NOT found.\n'
+			
+			outFile.append(outText)
+
+		}
 }
 
 //WebUI.closeBrowser()

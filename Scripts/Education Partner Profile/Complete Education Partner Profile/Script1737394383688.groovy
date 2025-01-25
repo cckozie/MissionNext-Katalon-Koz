@@ -17,8 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+///#########################################
+///#########################################
+//	Test access to tabs when profile was previously completed
+//	Add test for external links on all tabs
+//	Test logging, including image match percentages
+///#########################################
+///#########################################
+
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Positions Needed']
+pages = ['Match Filters']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -126,22 +134,15 @@ if(pages.size() == 0 || 'All' in pages || 'Positions Needed' in pages) {
 	//Complete the Positions Needed tab
 	available_positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
 	
-	experience_preferred = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science']
+	experience_preferred = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science','ESL']
 	
 	available_other_positions = 'None at this time'
 	
 	other_experience_comment = 'Will consider internships as work experience.'
 	
-	languages_english = [1]
-	
-	languages_esl= []
-
-	languages_language_teacher = [1]
-		
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Positions Needed'), [('varAvailable_positions') : available_positions
 		, ('varExperience_preferred') : experience_preferred, ('varAvailable_other_positions') : available_other_positions
-		, ('varOther_experience_comment') : other_experience_comment, ('varLanguages_english') : languages_english
-		, ('varLanguages_esl') : languages_esl, ('varLanguages_language_teacher') : languages_language_teacher], FailureHandling.OPTIONAL)
+		, ('varOther_experience_comment') : other_experience_comment], FailureHandling.OPTIONAL)
 }
 	
 if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {

@@ -70,6 +70,9 @@ requiredFieldMsgs = [
 ('Preferred School Positions') : 'The preferred education positions field is required.',
 ('Preferred Region(s)') : 'The world region preferences field is required.']
 
+// Define the page's links and the text to search for on the linked page
+pageLinks = [('countries by region') : 'Countries by Region']
+
 //Go to the Preferences tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
 
@@ -99,27 +102,9 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Candidate Profile/Tabs/Preferences/div_Link to list of countries by region'
-//object = 'Object Repository/Education Candidate Profile/Tabs/Preferences/a_countries by region'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.switchToWindowIndex(1)
-
-WebUI.delay(1)
-
-newUrl = WebUI.getUrl()
-
-if (newUrl.indexOf('countries_list.php') < 0) {
-	println('######## Failed to find Countries by Region page')
-}
-
-WebUI.delay(1)
-
-WebUI.closeWindowIndex(1)
-
-WebUI.switchToWindowIndex(0)
-
-WebUI.delay(1)
+// Test the external page links
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
+	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Preferences/'], FailureHandling.OPTIONAL)
 
 object = 'Education Candidate Profile/Tabs/Preferences/input_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

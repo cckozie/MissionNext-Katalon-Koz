@@ -17,20 +17,24 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+// Ensure that we are using the correct execution profile
+username = GlobalVariable.username
+
+if (username != 'cktest05jc') {
+	println('The Execution Profile must be set to "Journey Candidate"')
+
+	System.exit(0)
+}
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-url =  'journey.' + GlobalVariable.domain + '/journey-home/login-here/'
+WebUI.navigateToUrl('https://journey.' + GlobalVariable.domain + '/journey-home/login-here/')
 
-WebUI.navigateToUrl(url)
+WebUI.setText(findTestObject('Object Repository/Journey Candidate Profile/Login/input_Username'), GlobalVariable.username)
 
-/*
-// Handle the MissionApp popup
-popup = WebUI.verifyElementPresent(findTestObject('Object Repository/temp/i_Wordpress_eicon-close'), 3, FailureHandling.OPTIONAL)
+WebUI.setEncryptedText(findTestObject('Object Repository/Journey Candidate Profile/Login/input_Password'), GlobalVariable.password)
 
-if (popup) {
-    WebUI.click(findTestObject('Object Repository/temp/i_Wordpress_eicon-close'))
-}
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Login/button_Log In'))
 
-*/
