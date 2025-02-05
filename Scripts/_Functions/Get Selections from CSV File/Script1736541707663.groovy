@@ -31,6 +31,7 @@ String line = reader.readLine();
 include = false
 	
 while (line != null) {
+	println(line)
 	group = line.indexOf('<Group>')
 	println(group)
 	if(group >= 0) {
@@ -63,6 +64,7 @@ while (line != null) {
 	}
 	// read next line
 	line = reader.readLine();
+//	WebUI.delay(1)
 }
 
 reader.close();

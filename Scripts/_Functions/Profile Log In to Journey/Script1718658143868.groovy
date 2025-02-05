@@ -20,9 +20,9 @@ import org.openqa.selenium.Keys as Keys
 // Open the Journey login page
 WebUI.callTestCase(findTestCase('_Functions/Open Journey Login Page'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Login/input_Username_log in'), GlobalVariable.username)
+WebUI.setText(findTestObject('Journey Candidate Profile/Login/input_Username'), GlobalVariable.username)
 
-WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Login/input_Password_log in'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Login/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Login/button_Log In'))
+WebUI.click(findTestObject('Journey Candidate Profile/Login/button_Log In'))
 

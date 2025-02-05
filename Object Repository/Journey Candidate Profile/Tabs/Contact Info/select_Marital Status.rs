@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Marital Status</name>
+   <tag></tag>
+   <elementGuidId>7a803d19-157d-4fdb-8d6c-57f6229c8d31</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1444754265.711_marital_status']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>c85ad175-9de7-4e05-876f-0f02f62f8d56</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-dependant</name>
+      <type>Main</type>
+      <value>1</value>
+      <webElementGuid>76f1a0b6-3614-497f-bf0d-c79da2c4c1b5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>marital_status</value>
+      <webElementGuid>dd0ed54a-02ae-4482-a6aa-9143868eb027</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>221</value>
+      <webElementGuid>281329cd-32e2-473e-82bc-41f96438c071</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1444754265.711][marital_status]</value>
+      <webElementGuid>932dac98-c4c7-4878-978c-131165d77929</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1444754265.711_marital_status</value>
+      <webElementGuid>2ef61691-54d7-471f-a371-46131461b4dd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>custom-field</name>
+      <type>Main</type>
+      <value>2</value>
+      <webElementGuid>df50bb0a-0c9f-4015-8220-7c984025cad9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+Single
+Married
+Separated
+Divorced
+Widowed
+</value>
+      <webElementGuid>64078256-e42c-4d05-beb2-52807823a047</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1444754265.711_marital_status&quot;)</value>
+      <webElementGuid>9764aadd-59dc-4c05-a334-dd5b9e19a048</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1444754265.711_marital_status']</value>
+      <webElementGuid>bfd8d273-aee2-4e3e-807f-995d7789cb54</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1444754265.711']/div[15]/div[2]/select</value>
+      <webElementGuid>42ed4738-4971-4941-8b6a-555ec2106abc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Marital status'])[1]/following::select[1]</value>
+      <webElementGuid>e05340c1-f84b-4139-95d6-aeea0f71f12d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Birth Year*'])[1]/following::select[1]</value>
+      <webElementGuid>181a50ee-5050-4f94-948c-99d363c11228</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Dependent Children'])[1]/preceding::select[1]</value>
+      <webElementGuid>4a4bc352-d7bf-466f-b2d6-7f790a1c9f9c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[15]/div[2]/select</value>
+      <webElementGuid>e234ea43-4691-4835-a85f-2f66faa4fb5a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1444754265.711][marital_status]' and @id = 'profile_group-1444754265.711_marital_status' and (text() = '
+Single
+Married
+Separated
+Divorced
+Widowed
+' or . = '
+Single
+Married
+Separated
+Divorced
+Widowed
+')]</value>
+      <webElementGuid>1b8f8429-1141-4787-8bcd-df73074554f1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

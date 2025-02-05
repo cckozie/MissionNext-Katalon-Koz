@@ -31,17 +31,17 @@ testObjectPath = 'Journey Profile/Contact Info tab/'
 
 WebUI.callTestCase(findTestCase('_Functions/Profile Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Dashboard/a_My Profile'))
+WebUI.click(findTestObject('Journey Candidate Profile/Dashboard/a_My Profile'))
 
-WebUI.click(findTestObject('Journey Candidate Profile/tab_Contact_Info'))
+WebUI.click(findTestObject('Journey Candidate Profile/Tabs/a_Contact Info'))
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Tab-Contact Info/input_First Name'), '')
+WebUI.setText(findTestObject('Journey Candidate Profile/Tabs/Contact Info/input_First Name'), '')
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Tab-Contact Info/input_Last Name'), '')
+WebUI.setText(findTestObject('Journey Candidate Profile/Tabs/Contact Info/input_Last Name'), '')
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Tab-Contact Info/input_Email'), 'cckozie@gmail.com')
+WebUI.setText(findTestObject('Journey Candidate Profile/Tabs/Contact Info/input_Email'), 'cckozie@gmail.com')
 
-WebUI.click(findTestObject('Journey Candidate Profile/Tab-Contact Info/btn_Submit'))
+WebUI.click(findTestObject('Journey Candidate Profile/Tabs/Contact Info/btn_Submit'))
 
 /*
 for (def entry : inputFields) {

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Awareness Trip</name>
+   <tag></tag>
+   <elementGuidId>9b93faab-ad58-47b2-97cf-da5f84078d47</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1623987079.732_awarneness_trip']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>47456c6d-b360-4b52-bdb0-1ecd6c737bb4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>awarneness_trip</value>
+      <webElementGuid>a645216c-39bc-4425-9687-90e9bcffa4f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>106</value>
+      <webElementGuid>44bc32c6-1c3a-43e5-a2ba-8a50457449f2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1623987079.732][awarneness_trip]</value>
+      <webElementGuid>f6c7f040-598e-4e95-9f10-8d9b1d98df6d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1623987079.732_awarneness_trip</value>
+      <webElementGuid>9c2bdb2a-4949-481d-8482-2b3fd1c55cca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+No
+Yes
+</value>
+      <webElementGuid>f665c39d-1d77-4b86-a652-a00e0f7dccc5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1623987079.732_awarneness_trip&quot;)</value>
+      <webElementGuid>35ede8e2-3a8f-4ab4-973f-f95dd1c5eac4</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1623987079.732_awarneness_trip']</value>
+      <webElementGuid>5ed39a10-605c-40a6-a629-4304850f267c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1623987079.732']/div[5]/div[3]/select</value>
+      <webElementGuid>e2fd319f-a0cc-4cd9-9789-65e08a5126d2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Awareness Trip'])[1]/following::select[1]</value>
+      <webElementGuid>dd016be4-277e-43b9-a153-b26246eec328</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Vision Trip'])[1]/following::select[2]</value>
+      <webElementGuid>cbdaec4b-e806-4694-8855-def1be701756</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Comments:'])[1]/preceding::select[1]</value>
+      <webElementGuid>a6ccfd52-3b96-4508-a0f0-1c9e8cf47c7f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='For meaningful results, select Categories that match areas of Ministry Preferences below.'])[1]/preceding::select[1]</value>
+      <webElementGuid>713d17c5-0780-4d93-b0d9-8b12aac39746</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[5]/div[3]/select</value>
+      <webElementGuid>d1f4ac4c-036b-4ce8-b198-8a162cec257c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1623987079.732][awarneness_trip]' and @id = 'profile_group-1623987079.732_awarneness_trip' and (text() = '
+No
+Yes
+' or . = '
+No
+Yes
+')]</value>
+      <webElementGuid>d38c2fc0-e500-4211-aaa5-65c079e268b9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

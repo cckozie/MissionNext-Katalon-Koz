@@ -31,9 +31,9 @@ testObjectPath = 'Journey Profile/Contact Info tab/'
 
 WebUI.callTestCase(findTestCase('_Functions/Profile Log In to Journey'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Dashboard/a_My Profile'))
+WebUI.click(findTestObject('Journey Candidate Profile/Dashboard/a_My Profile'))
 
-WebUI.click(findTestObject('Journey Candidate Profile/tab_Contact_Info'))
+WebUI.click(findTestObject('Journey Candidate Profile/Tabs/a_Contact Info'))
 
 WebUI.executeJavaScript('window.open();', [])
 

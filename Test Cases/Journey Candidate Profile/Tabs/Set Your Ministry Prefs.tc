@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Your Ministry Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>d47a7030-41ed-4646-abd7-098d5aacb5b5</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7434ac6c-f91c-4f5e-ac43-e8e439b53f42</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a0200b4c-6d8c-47e4-85b9-ec1fe977e4b3</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>7434ac6c-f91c-4f5e-ac43-e8e439b53f42</id>
+      <masked>false</masked>
+      <name>varPositions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>a0200b4c-6d8c-47e4-85b9-ec1fe977e4b3</id>
+      <masked>false</masked>
+      <name>varExperiences</name>
+   </variable>
+</TestCaseEntity>

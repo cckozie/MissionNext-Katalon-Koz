@@ -119,7 +119,7 @@ for (def it : tooltips) {
 			min = 80
 			
 			if(pct.toFloat() < min.toFloat()) {
-				outText = outText + ' <<<<'
+				outText = '>>>>> ' + outText + ' <<<<<'
 			}
 
             if (myKey != 'dummy') {
@@ -151,6 +151,8 @@ for (def it : tooltips) {
 // Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
 outText = 'Verifying the tooltip text on the page is what was expected.\n'
 
+println(tooltipTextMap)
+
 outFile.append(outText)
 
 for (def it : tooltipText) {
@@ -162,6 +164,12 @@ for (def it : tooltipText) {
 	
 	myText = myText.trim()
 
+	println(myKey)
+	
+	println(myText)
+	
+	println(tooltipTextMap.get(myKey))
+	
 	actualText = tooltipTextMap.get(myKey).replace('"','')
 	
 	actualText = actualText.trim()

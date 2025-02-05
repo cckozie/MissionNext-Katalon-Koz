@@ -25,7 +25,7 @@ if(count == 0) {
 	outText = '??? Bypassing field error message test'
 	
     outFile.append(outText + '\n')
-	System.exit(0)
+	
 } else {
 
 	fieldList = varFieldList

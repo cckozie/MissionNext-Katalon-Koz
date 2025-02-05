@@ -75,7 +75,7 @@ testObjectFolder = ('Education Candidate Profile/Tabs/Situation/')
 tooltips = [
 ('dummy') : 'dummy',
 ('Bible Training') : 'img_Bible Training_field-tooltip',
-('Affiliated with a church?') : 'img_Affiliated with a church_field-tooltip']
+('Affiliated with a church') : 'img_Affiliated with a church_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [

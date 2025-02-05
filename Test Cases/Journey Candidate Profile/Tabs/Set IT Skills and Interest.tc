@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set IT Skills and Interest</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e15ccebc-0cd8-42f3-b204-709dc3846f13</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7b9fec02-9b04-42a9-a28b-8bedc96b8aa6</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a7e4fe1f-a581-4f38-8b4c-d596be2094bd</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>7b9fec02-9b04-42a9-a28b-8bedc96b8aa6</id>
+      <masked>false</masked>
+      <name>varPositions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>a7e4fe1f-a581-4f38-8b4c-d596be2094bd</id>
+      <masked>false</masked>
+      <name>varExperiences</name>
+   </variable>
+</TestCaseEntity>

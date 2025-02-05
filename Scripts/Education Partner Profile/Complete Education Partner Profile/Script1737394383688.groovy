@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
 ///#########################################
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Match Filters']
+pages = []
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username

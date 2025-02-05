@@ -64,68 +64,68 @@ WebDriver driver = DriverFactory.getWebDriver()
 
 Actions action = new Actions(driver)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Login/span_Apply Now - Journey'))
+WebUI.click(findTestObject('Journey Candidate Profile/Login/span_Apply Now - Journey'))
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
+WebUI.click(findTestObject('Journey Candidate Profile/Register/button_Sign up'))
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Username'), '=====> WAITING FOR SIKULIX <=====')
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Username'), '=====> WAITING FOR SIKULIX <=====')
 
 Screen s = new Screen()
 
-WebUI.clearText(findTestObject('Journey Candidate Profile/Journey Register/input_Username'))
+WebUI.clearText(findTestObject('Journey Candidate Profile/Register/input_Username'))
 
 // Test for username, email, and password required messages
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_Username must be at least 6 characters long-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_Username must be at least 6 characters long-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_Please enter a valid email address-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_Please enter a valid email address-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_Password must be at least 6 characters long-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_Password must be at least 6 characters long-Msg'))
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Username'), GlobalVariable.username)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Email'), GlobalVariable.email)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Email'), GlobalVariable.email)
 
-WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
+WebUI.click(findTestObject('Journey Candidate Profile/Register/button_Sign up'))
 
 // Test for first name, last name, and phone number required messages
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The Fiirst Name field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_The Fiirst Name field is required-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The last name field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_The last name field is required-Msg'))
 
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The cell phone field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_The cell phone field is required-Msg'))
 
-WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_First Name'), GlobalVariable.username)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_First Name'), GlobalVariable.username)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Last Name'), GlobalVariable.last_name)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Last Name'), GlobalVariable.last_name)
 
-WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Journey Register/select_Country'), GlobalVariable.country, false)
+WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Register/select_Country'), GlobalVariable.country, false)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/input_Best Phone Number'), GlobalVariable.phone_number)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Best Phone Number'), GlobalVariable.phone_number)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
+WebUI.click(findTestObject('Journey Candidate Profile/Register/button_Sign up'))
 
-WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
 if (GlobalVariable.prefer_text) {
-    WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/checkbox_Prefer Text Message'))
+    WebUI.click(findTestObject('Journey Candidate Profile/Register/checkbox_Prefer Text Message'))
 }
 
-WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Journey Register/select_Learn About Us'), GlobalVariable.learn_about, false)
+WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Register/select_Learn About Us'), GlobalVariable.learn_about, false)
 
-WebUI.setText(findTestObject('Journey Candidate Profile/Journey Register/textarea_Other Comment'), GlobalVariable.other_comment)
+WebUI.setText(findTestObject('Journey Candidate Profile/Register/textarea_Other Comment'), GlobalVariable.other_comment)
 
-WebUI.click(findTestObject('Journey Candidate Profile/Journey Register/button_Sign up'))
+WebUI.click(findTestObject('Journey Candidate Profile/Register/button_Sign up'))
 
 // Test for terms and conditions required messages
-WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Journey Register/div_The terms and conditions field is required-Msg'))
+WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Register/div_The terms and conditions field is required-Msg'))
 
-WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Journey Register/a_Privacy Policy'), 3)
+WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Register/a_Privacy Policy'), 3)
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey Register/a_Privacy Policy'))
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Register/a_Privacy Policy'))
 
 WebUI.switchToWindowIndex(1)
 
@@ -139,7 +139,7 @@ if(newUrl.indexOf('org/privacy') < 0) {
 
 WebUI.switchToWindowIndex(0)
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey Register/a_Terms and Conditions'))
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Register/a_Terms and Conditions'))
 
 WebUI.switchToWindowIndex(1)
 
@@ -159,16 +159,16 @@ WebUI.switchToWindowIndex(0)
 
 WebUI.delay(1)
 
-WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Journey Register/input_Username'), 2)
+WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Register/input_Username'), 2)
 
 // Test for privacy policy page
 // Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
 for (def tooltip : tooltips) {
     if (tooltip == 'username') {
-        WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Journey Register/h1_JOURNEY CANDIDATE REGISTRATION'), 0)
+        WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Register/h1_JOURNEY CANDIDATE REGISTRATION'), 0)
     } else {
         if (tooltip == 'learn_about_us') {
-            WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Journey Register/img_Learn About Us_field-tooltip'), 0)
+            WebUI.scrollToElement(findTestObject('Journey Candidate Profile/Register/img_Learn About Us_field-tooltip'), 0)
         }
     }
     
@@ -228,24 +228,24 @@ for (def tooltip : tooltips) {
     }
 }
 
-WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Journey Register/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Journey Candidate Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey Register/checkbox_Terms and Conditions'))
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Register/checkbox_Terms and Conditions'))
 	
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Journey Register/button_Sign up'))
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Register/button_Sign up'))
 
 //WebUI.closeBrowser()
 
 // WE SHOULD NOW BE ON THE CONTACT INFO PAGE
 
 if(GlobalVariable.gender == 'Male') {
-	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tab-Contact Info/radio_Gender_Male'))
+	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/Contact Info/radio_Male'))
 } else {
-	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tab-Contact Info/radio_Gender_Female'))
+	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/Contact Info/radio_Female'))
 }
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Journey Candidate Profile/Tab-Contact Info/select_State'), GlobalVariable.state, false)
+WebUI.selectOptionByValue(findTestObject('Object Repository/Journey Candidate Profile/Tabs/Contact Info/select_State'), GlobalVariable.state, false)
 
-WebUI.setText(findTestObject('Object Repository/Journey Candidate Profile/Tab-Contact Info/input_Birth_Year'), GlobalVariable.birth_year)
+WebUI.setText(findTestObject('Object Repository/Journey Candidate Profile/Tabs/Contact Info/input_Birth Year'), GlobalVariable.birth_year)
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tab-Contact Info/btn_Submit'))
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/Contact Info/btn_Submit'))

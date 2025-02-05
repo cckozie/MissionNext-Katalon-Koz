@@ -82,6 +82,9 @@ tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain on
     , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
     , ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
+// Define the page's links and the text to search for on the linked page
+pageLinks = [('Privacy Policy') : 'Privacy Policy', ('Terms and Conditions') : 'Terms and Conditions']
+
 // Define the required field missing error message test objects
 requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
@@ -194,46 +197,9 @@ outText = 'Verifying the links to other pages.\n'
 
 outFile.append(outText)
 
-//Test links to Privacy Policy and Terms and Conditions pages
-object = 'Object Repository/Education Candidate Profile/Register/a_Privacy Policy'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.switchToWindowIndex(1)
-
-WebUI.delay(1)
-
-newUrl = WebUI.getUrl()
-
-if (newUrl.indexOf('org/privacy') < 0) {
-    println('######## Failed to find Privacy page')
-}
-
-WebUI.delay(1)
-
-WebUI.closeWindowIndex(1)
-
-WebUI.switchToWindowIndex(0)
-
-object = 'Object Repository/Education Candidate Profile/Register/a_Terms and Conditions'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.switchToWindowIndex(1)
-
-WebUI.delay(1)
-
-newUrl = WebUI.getUrl()
-
-if (newUrl.indexOf('org/terms') < 0) {
-    println('######## Failed to find Terms and Conditions page')
-}
-
-WebUI.delay(1)
-
-WebUI.closeWindowIndex(1)
-
-WebUI.switchToWindowIndex(0)
-
-WebUI.delay(1)
+// Click the other hyperlinks and verify pages opened
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'],
+	FailureHandling.STOP_ON_FAILURE)
 
 outText = 'Submitting the finished page.\n'
 
