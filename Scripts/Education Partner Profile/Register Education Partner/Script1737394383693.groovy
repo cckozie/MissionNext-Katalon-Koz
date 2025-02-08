@@ -216,7 +216,7 @@ robot.keyRelease(KeyEvent.VK_META)
 
 // Click the other hyperlinks and verify pages opened
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.OPTIONAL)
 
 // Submit the form with all of the fields empty
 object = 'Education Partner Profile/Register/button_Sign up'

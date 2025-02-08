@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest07jp') {
+if (username != 'cktest07jp' && username != 'cktest02jp') {
 	println('The Execution Profile must be set to "Journey Partner"')
 
 	System.exit(0)
@@ -31,8 +31,6 @@ WebUI.openBrowser('')
 WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://journey.' + GlobalVariable.domain + '/journey-home/login-here/')
-
-WebUI.callTestCase(findTestCase('_Functions/Take Screenshot'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Login/input_Username'), GlobalVariable.username)
 

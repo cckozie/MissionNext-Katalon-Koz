@@ -47,6 +47,7 @@ if(count == 0) {
 	        println(outText)
 	
 	        outFile.append(outText + '\n')
+			
 	    }
 	}
 	

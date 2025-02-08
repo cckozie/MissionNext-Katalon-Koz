@@ -44,7 +44,11 @@ for(it in pageLinks) {
 	object = objectPath + myElement
 	println(object)
 
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	fromURL = WebUI.getUrl()
+	
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
+	
+	toURL = WebUI.getUrl()
 	
 	windowHandles = driver.getWindowHandles().toArray()
 	
@@ -56,12 +60,27 @@ for(it in pageLinks) {
 		
 	}
 	
-	WebUI.waitForPageLoad(10)
+	if(windowCount == 1 && toURL == fromURL) {
+		
+		outText = '----- Clicking on the ' + it.key + ' link did not open a new page or tab. The link does not work.'
+		
+		println(outText)
 
-	WebUI.delay(2)
+		outFile.append(outText + '\n')
+
+		KeywordUtil.markError('\n' + outText)
+		
+		textFound = false
+		
+	} else {
+		
+		WebUI.waitForPageLoad(10)
 	
-	textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
-
+		WebUI.delay(2)
+		
+		textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
+	}
+	
 	if (textFound) {
 		outText = (((('+++++ The text "' + myText) + '" was found after clicking on the ') + it.key) + ' link')
 
@@ -117,7 +136,7 @@ for(it in pageLinks) {
 			
 			println(object)
 			
-			WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+			WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
 			WebUI.waitForPageLoad(10)
 			WebUI.delay(1)
 			

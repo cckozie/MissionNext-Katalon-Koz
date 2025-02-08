@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Affiliated with a Church</name>
+   <tag></tag>
+   <elementGuidId>19510945-66ce-4eca-a977-dd4b5b2b7497</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1446521957.744_affiliated_with_a_church']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>fe863441-7726-43ee-9896-a31001a15c34</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>affiliated_with_a_church</value>
+      <webElementGuid>0b478f97-e7a1-4a62-b5cd-910c3b7e9e65</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>100</value>
+      <webElementGuid>f4bd0cba-030a-4d51-b2aa-e05217e0d45a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1446521957.744][affiliated_with_a_church]</value>
+      <webElementGuid>04e13e32-45ca-43e9-ae21-a419841dd5b7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1446521957.744_affiliated_with_a_church</value>
+      <webElementGuid>23f0d937-7fd0-4184-a7e8-e4fd5b755475</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+Yes
+ No
+</value>
+      <webElementGuid>fb3afd26-de29-48cd-a6e0-2850370802a4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1446521957.744_affiliated_with_a_church&quot;)</value>
+      <webElementGuid>4dfa6728-2f63-4d89-855b-b9a58745909b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1446521957.744_affiliated_with_a_church']</value>
+      <webElementGuid>30888254-7ba2-437e-bd70-de1681f19ec7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1446521957.744']/div/div[2]/select</value>
+      <webElementGuid>ecf3036b-8e22-4b63-8db8-fe0df36d0dae</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Affiliated with a Church?'])[1]/following::select[1]</value>
+      <webElementGuid>00bb3300-65bd-46e7-9142-1ced81542c91</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Not a programmer'])[1]/following::select[1]</value>
+      <webElementGuid>37ea8a4b-d922-46b6-9126-74fd3ce711c7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Yes'])[4]/preceding::select[1]</value>
+      <webElementGuid>589578b5-3a49-481e-b646-4b54e6279c6a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[11]/div/div[2]/select</value>
+      <webElementGuid>1f74ccaa-12f3-4649-b70a-a0a8853315b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1446521957.744][affiliated_with_a_church]' and @id = 'profile_group-1446521957.744_affiliated_with_a_church' and (text() = '
+Yes
+ No
+' or . = '
+Yes
+ No
+')]</value>
+      <webElementGuid>04cc65c9-6f0c-42d7-9e6a-71530d36d227</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
