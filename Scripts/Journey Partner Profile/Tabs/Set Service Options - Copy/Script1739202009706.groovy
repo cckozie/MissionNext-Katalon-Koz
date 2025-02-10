@@ -98,11 +98,6 @@ tooltips = [
 ('TimeHours Needed') : 'img_TimeHours Needed_field-tooltip',
 ('Awareness Trip') : 'img_Awareness Trip_field-tooltip',
 ('Vision Trip') : 'img_Vision Trip_field-tooltip',
-('Vision Trip Description') : 'img_Vision Trip Description_field-tooltip',
-('Short-Term Trip Lengths') : 'img_Short-Term Trip Lengths_field-tooltip',
-('Short-Term Availability') : 'img_Short-Term Availability_field-tooltip',
-('Short-Term Objective') : 'img_Short-Term Objective_field-tooltip',
-('Short-Term Statement') : 'img_Short-Term Statement_field-tooltip',
 ('Preferred Regions') : 'img_Preferred Region(s)_field-tooltip',
 ('Languages') : 'img_Languages_field-tooltip']
 
@@ -112,9 +107,6 @@ tooltipText = [
 ('Time/Hours Needed') : 'Check all that generally apply for your assignments.',
 ('Awareness Trip') : 'Does your organization accommodate mission Awareness Trips?',
 ('Vision Trip') : 'Does your organization offer Vision Trips?',
-('Short-Term Trip Lengths') : 'The Open selection will match all short-term candidates',
-('Short-Term Availability') : 'The Open selection will match all candidates',
-('Short-Term Objective') : 'The candidates make a single choice.',
 ('Preferred Region(s)') : 'Check all regions where your agency has activity. If there are needs at the home office, select the region where your organization has its headquarters.',
 ('Languages') : "Check all that are needed and/or helpful. If selecting 'Other,' complete the field below."]
 
@@ -129,21 +121,7 @@ requiredFieldMsgs = [
 //Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Service Options'))
 
-//Must select some options for all fields and tooltips to be displayed
-object = 'Object Repository/Journey Partner Profile/Tabs/Service Options/input_Awareness Trip'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click',
-	('varObject') : object, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Journey Partner Profile/Tabs/Service Options/input_Vision Trip'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click',
-	('varObject') : object, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Journey Partner Profile/Tabs/Service Options/input_Need Candidates for Short-Term Assignments'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click',
-	('varObject') : object, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
-
-
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Service Options Tab'], 
     FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages
@@ -211,6 +189,14 @@ if (varOther_languages != null) {
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
 		('varObject') : object, ('varParm1') : varOther_languages], FailureHandling.STOP_ON_FAILURE)
 }
+
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Service Options Tab'],
+	FailureHandling.STOP_ON_FAILURE)
+
+// Call the tooltip testing script
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
+		, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
+	FailureHandling.OPTIONAL)
 
 object = ('Journey Partner Profile/Tabs/btn_Complete Submit')
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)

@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Organization Info']
+pages = ['Contact Info', 'Organization Info', 'Service Options']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -124,9 +124,13 @@ travel_options = 'Travel funding negotiated'
 
 time_hours_needed = ['Part Time ~ 20 Hours/Week', 'Part of Each Year', 'Summer Opportunities']
 
-awareness_trip = 'No'
+awareness_trip = 'Yes'
+
+awareness_trip_description = 'Awareness trips to North Africa'
 
 vision_trip = 'Yes'
+
+vision_trip_description = 'Several vision trip options'
 
 need_candidates_for_short_term_assignments = 'Yes'
 
@@ -136,7 +140,7 @@ short_term_availability = ['Summer', 'Fall']
 
 short_term_objective = ['Explore opportunities in missions to find a good fit', 'Gain first-hand exposure to missions']
 
-short_term_statement = 'Highly recommended'
+short_term_statement = 'Many short-term opportunities.'
 
 preferred_regions = ['Southeast Asia', 'Central America', "Europe, West", 'North America', 'Central America']
 
@@ -144,10 +148,12 @@ languages = ['English is a native language', 'Other']
 
 other_languages = 'Polish'
 
-WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Availability'), [('varTime_commitments') : time_commitments
+WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Service Options'), [('varTime_commitments') : time_commitments
 		, ('varAvailable_start_options') : available_start_options, ('varTravel_options') : travel_options
 		, ('varTime_hours_needed') : time_hours_needed, ('varAwareness_trip') : awareness_trip
-		, ('varVision_trip') : vision_trip, ('varNeed_candidates_for_short_term_assignments') : need_candidates_for_short_term_assignments
+		, ('varAwareness_trip_description') : awareness_trip_description, ('varVision_trip') : vision_trip
+		, ('varVision_trip_description') : vision_trip_description
+		, ('varNeed_candidates_for_short_term_assignments') : need_candidates_for_short_term_assignments
 		, ('varShort_term_trip_length') : short_term_trip_length, ('varShort_term_availability') : short_term_availability
 		, ('varShort_term_objective') : short_term_objective, ('varShort_term_statement') : short_term_statement
 		, ('varPreferred_regions') : preferred_regions, ('varLanguages') : languages, ('varOther_languages') : other_languages],

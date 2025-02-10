@@ -42,7 +42,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/contact info/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey partner/'
 
 // Define the folder where the tooltip test objects live
 testObjectFolder = 'Journey partner Profile/Tabs/Contact Info/'
@@ -76,9 +76,9 @@ pageLinks = [:]
 
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Journey Partner Profile/Tabs/a_Contact Info'))
-System.exit(1)
+
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], 
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages
@@ -148,5 +148,7 @@ if (varCountry != null) {
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
 	('varObjectPath') : 'Object Repository/Journey Candidate Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
 
-WebUI.click(findTestObject('Journey Partner Profile/Tabs/btn_Complete Submit'))
+object = 'Journey Partner Profile/Tabs/btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object
+	, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
 

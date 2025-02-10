@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Preferred Region(s</name>
+   <name>img_Short-Term Availability_field-tooltip</name>
    <tag></tag>
-   <elementGuidId>18c73f9f-b6c5-4c82-aa3f-88db99409abe</elementGuidId>
+   <elementGuidId>542b0cc9-6c19-4ff7-9251-6d2346aefc8b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='profile_group-1446521622.636_regions_of_the_world']</value>
+         <value>//div[@id='group-1446521622.636']/div[10]/div[2]/div/img</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -22,79 +22,79 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>0664dc88-2185-4cdf-b64f-0e47bc7bce50</webElementGuid>
+      <value>img</value>
+      <webElementGuid>d27d9341-8669-41c9-b177-49677574347c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>src</name>
       <type>Main</type>
-      <value>profile_group-1446521622.636_regions_of_the_world</value>
-      <webElementGuid>045080ee-1ce4-45ae-a740-8dba4f064e7c</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>checkbox</value>
-      <webElementGuid>4b27ae24-e194-428b-bc3f-8f8a33512574</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>profile[group-1446521622.636][regions_of_the_world][]</value>
-      <webElementGuid>7446211f-1f50-4480-abe9-d2e812d295fc</webElementGuid>
+      <value>https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
+      <webElementGuid>c6299bdf-b3a8-416a-963d-613414357d90</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>value</name>
+      <name>class</name>
       <type>Main</type>
-      <value>Africa, North</value>
-      <webElementGuid>3cb102eb-dea3-45ca-9a62-a99139ab4be5</webElementGuid>
+      <value>field-tooltip</value>
+      <webElementGuid>3d2005f6-c2ac-48d7-b0a8-485bf0d180ab</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>tooltip</value>
+      <webElementGuid>358092bd-9c12-4c56-baf3-e230e359d7ac</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-original-title</name>
+      <type>Main</type>
+      <value>The Open selection will match all candidates</value>
+      <webElementGuid>f386d174-835e-48d3-a679-baad29953e36</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;group-1446521622.636&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/div[@class=&quot;mn-checkbox mn-large-checkbox&quot;]/div[1]/input[@id=&quot;profile_group-1446521622.636_regions_of_the_world&quot;]</value>
-      <webElementGuid>b2b96cd8-9633-4335-ab57-714f18c0649c</webElementGuid>
+      <value>id(&quot;group-1446521622.636&quot;)/div[@class=&quot;subgroup dependent-group&quot;]/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
+      <webElementGuid>0a215d2b-d75a-400d-85c7-cf8a7a0bbaa1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//input[@id='profile_group-1446521622.636_regions_of_the_world']</value>
-      <webElementGuid>ff630391-8918-4b74-8eb2-d0d851b4b4be</webElementGuid>
+      <value>//div[@id='group-1446521622.636']/div[10]/div[2]/div/img</value>
+      <webElementGuid>d5299860-16d7-40b8-a57f-c3309a7afdcc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
+      <name>xpath:img</name>
       <type>Main</type>
-      <value>//div[@id='group-1446521622.636']/div[11]/div[2]/div/div/input</value>
-      <webElementGuid>0d0dea80-5397-4656-aedb-16384b222e1a</webElementGuid>
+      <value>(//img[@alt='tooltip'])[21]</value>
+      <webElementGuid>5227cb92-3624-42d4-ab47-ebd2af7cea99</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[11]/div[2]/div/div/input</value>
-      <webElementGuid>8991ff16-3aee-47c5-bdf0-c047f5866e1d</webElementGuid>
+      <value>//div[4]/div[10]/div[2]/div/img</value>
+      <webElementGuid>12864ba8-e06a-49da-901e-96de38da4e56</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'profile_group-1446521622.636_regions_of_the_world' and @type = 'checkbox' and @name = 'profile[group-1446521622.636][regions_of_the_world][]']</value>
-      <webElementGuid>77b6ea22-ecf5-4e87-b964-83dab73ebaf8</webElementGuid>
+      <value>//img[@src = 'https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
+      <webElementGuid>b13b2144-cb3f-4538-9ba1-429495391fd4</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

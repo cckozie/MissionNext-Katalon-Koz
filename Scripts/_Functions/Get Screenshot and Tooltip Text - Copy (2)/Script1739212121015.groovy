@@ -48,7 +48,6 @@ frame.setLocation(600, 0);
 frame.setAlwaysOnTop (true)
 frame.show();
 
-/*
 if (WebUI.verifyTextPresent('Partnership Application', false, FailureHandling.OPTIONAL)) {
     user = 'Partner'
 } else if(WebUI.verifyTextPresent('Positions Needed', false, FailureHandling.OPTIONAL)) {
@@ -57,24 +56,23 @@ if (WebUI.verifyTextPresent('Partnership Application', false, FailureHandling.OP
     user = 'Candidate'
 }
 println('User type is ' + user)
-*/
+
 path = '/Users/cckozie/Documents/MissionNext/Screenshots and Tooltip Text/'
 
 // Set the calling parameter values or defaults
 if (binding.hasVariable('varExtension')) {
-    extension = (varExtension)
+    extension = ('_' + varExtension)
 
     println('Extension is ' + extension)
 } else {
     extension = ''
 }
-/*
+
 title = (WebUI.getWindowTitle() + extension)
 
 title = title.replace('/', '_')
-*/
 
-fileBase = path + extension
+fileBase = (((path + user) + '_') + title)
 
 fileImage = (fileBase + '_Screenshot.png')
 

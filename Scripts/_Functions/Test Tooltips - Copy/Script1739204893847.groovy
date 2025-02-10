@@ -208,16 +208,6 @@ def scrollToObject(def object) {
     element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
 
     loc = element.getLocation()
-	
-	x = loc.getX()
-	
-	if(x >= 560) {
-		outText = '####### ERROR: The tooltip for ' + myKey + ' is not positioned near its label.'
-	
-		println(outText)
-
-		outFile.append(outText + '\n')
-	}
 
     y = loc.getY()
 
