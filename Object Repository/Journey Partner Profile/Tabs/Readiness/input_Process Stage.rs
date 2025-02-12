@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>95ede98e-ecc0-4fa9-b0e7-3e97440028e7</webElementGuid>
+      <webElementGuid>01a3e127-34b7-45ef-9cfa-44fa2ba523a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1446521801.898_candidate_process_stages</value>
-      <webElementGuid>74deac5a-2181-4320-b3b7-50acfb20cc74</webElementGuid>
+      <webElementGuid>3ad1a183-4bec-4694-a05b-2ae104bbc6f9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>7e41608a-6bbe-458a-9d01-1ceb90545994</webElementGuid>
+      <webElementGuid>0cfe519c-c84d-4399-b0a5-222c7649bdd2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1446521801.898][candidate_process_stages][]</value>
-      <webElementGuid>479d338a-464a-43f2-8bc1-a6df6b635c64</webElementGuid>
+      <webElementGuid>ae27d2d2-9c6e-42c1-b5ec-85a39502802b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>value</name>
       <type>Main</type>
       <value>(!) I am just beginning to look at missions</value>
-      <webElementGuid>9d1e6da2-8aad-40a5-a731-742298a75f82</webElementGuid>
+      <webElementGuid>1f93fdf8-2ef0-4694-b8e6-5cb673875ce2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446521801.898&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/div[@class=&quot;mn-checkbox mn-small-checkbox&quot;]/div[1]/input[@id=&quot;profile_group-1446521801.898_candidate_process_stages&quot;]</value>
-      <webElementGuid>dac7cef8-0e9c-4ff6-9057-d457ae588fe3</webElementGuid>
+      <webElementGuid>50787b59-ab47-4c38-b256-0fec2fdcc20c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group-1446521801.898_candidate_process_stages']</value>
-      <webElementGuid>9639cad5-5866-49ab-9b5e-fb3603d89eb7</webElementGuid>
+      <webElementGuid>d7cf871e-1c67-495d-b501-62c81bf7fdda</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446521801.898']/div/div[3]/div/div/input</value>
-      <webElementGuid>74d1d59c-f540-4da8-91f4-fdf35140ba08</webElementGuid>
+      <webElementGuid>19f53519-4b17-42ae-8f09-e992cba0864e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div/div[3]/div/div/input</value>
-      <webElementGuid>49a5d628-dc33-4c22-8021-f75b5c3df597</webElementGuid>
+      <webElementGuid>22a55325-9f59-4bb8-9876-1f57ead14646</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group-1446521801.898_candidate_process_stages' and @type = 'checkbox' and @name = 'profile[group-1446521801.898][candidate_process_stages][]']</value>
-      <webElementGuid>059c2092-d104-418e-80a8-5d8b49f883c0</webElementGuid>
+      <webElementGuid>a85a0747-9fbd-4799-9b88-1a1a4f579eed</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

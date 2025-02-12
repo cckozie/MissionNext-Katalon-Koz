@@ -26,5 +26,5 @@ ministries = ['Adult Men', 'Marriage & Family', 'Public Relations', 'Writers', '
     , 'Micro-Enterprise']
 
 GlobalVariable.ministriesList = ministries
-WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Read Journey Ministry Prefs'), [('varMinistries') : ministries], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Journey Partner Profile/Archives/Read Journey Ministry Prefs'), [('varMinistries') : ministries], FailureHandling.STOP_ON_FAILURE)
 

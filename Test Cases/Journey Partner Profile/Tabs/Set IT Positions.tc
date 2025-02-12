@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set IT Positions</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>872c5506-0207-4922-8648-458f35532fdf</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9d04f398-65e5-4a30-aac4-7d1ecf025bbc</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1b1c7209-729c-45ae-a015-0abcb0607ffc</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>9d04f398-65e5-4a30-aac4-7d1ecf025bbc</id>
+      <masked>false</masked>
+      <name>varIT_expertice_needed</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>1b1c7209-729c-45ae-a015-0abcb0607ffc</id>
+      <masked>false</masked>
+      <name>varComputer_languages</name>
+   </variable>
+</TestCaseEntity>

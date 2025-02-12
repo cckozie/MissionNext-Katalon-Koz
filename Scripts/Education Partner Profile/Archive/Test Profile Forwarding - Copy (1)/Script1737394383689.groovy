@@ -88,7 +88,7 @@ for(email in emails) {
 		Probably use parameter passing, or may want to break it into smaller pieces that can be called independently)
 		*/
 		
-		WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email - Copy'), [('varFromKey') : 'do_not_reply@info.missionnext.org', 
+		WebUI.callTestCase(findTestCase('_Functions/Archive/Generic Wait for Email - Copy'), [('varFromKey') : 'do_not_reply@info.missionnext.org', 
 			('varSubjectKey') : 'Candidate Profile for Taiwo Adejinmi from MissionNext'], FailureHandling.STOP_ON_FAILURE)
 			
 		timeStop = new Date()

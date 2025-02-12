@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Recruiting Countries</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7bb1ccf7-c716-4929-a403-6a305935e4ba</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4a4d95e9-e8dc-4d0a-af87-e386a8e1754a</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>4a4d95e9-e8dc-4d0a-af87-e386a8e1754a</id>
+      <masked>false</masked>
+      <name>varRecruit_from_countries</name>
+   </variable>
+</TestCaseEntity>

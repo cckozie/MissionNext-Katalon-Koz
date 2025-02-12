@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>6731e52c-cb6c-46c2-9473-95ee07940a02</webElementGuid>
+      <webElementGuid>9d82a5ce-6bd3-4a15-b962-d6a86354b377</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1446521801.898_attended_perspectives?</value>
-      <webElementGuid>4eb4540b-572f-4f78-bdc1-0df89476a464</webElementGuid>
+      <webElementGuid>d749b086-e8b5-403c-b760-c29eb77e28e1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>da10ff53-2fb3-4bb8-b99a-db9a696576bf</webElementGuid>
+      <webElementGuid>197ffdbe-d467-4a50-9bf4-cb29fe327c81</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1446521801.898][attended_perspectives?][]</value>
-      <webElementGuid>94b1e864-6842-416b-a262-38dd20cf4eb4</webElementGuid>
+      <webElementGuid>69129242-49e1-4798-9aa3-d0edd9f6859f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>value</name>
       <type>Main</type>
       <value>(!) I have not taken the Perspectives Course</value>
-      <webElementGuid>02c6655f-f132-4e18-8ab3-63797c4d5913</webElementGuid>
+      <webElementGuid>625ec0a5-3240-41f4-bc07-6c2a499de68c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446521801.898&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/div[@class=&quot;mn-checkbox mn-small-checkbox&quot;]/div[1]/input[@id=&quot;profile_group-1446521801.898_attended_perspectives?&quot;]</value>
-      <webElementGuid>69a6e9c3-d355-43c0-86b9-decd6fed426c</webElementGuid>
+      <webElementGuid>1203340f-b237-40b6-bf65-0576d1352dde</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group-1446521801.898_attended_perspectives?']</value>
-      <webElementGuid>38636c70-0a55-4e9a-8871-cf9df6a38131</webElementGuid>
+      <webElementGuid>ff3d2243-440b-487d-b5cc-d8498ffb2138</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446521801.898']/div[4]/div[2]/div/div/input</value>
-      <webElementGuid>1c93d9a8-b4f6-4fb7-8090-41cbd476b5e8</webElementGuid>
+      <webElementGuid>a26d8d04-98b2-424d-b43c-72341a5fdb54</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div[4]/div[2]/div/div/input</value>
-      <webElementGuid>da7f20e5-12ac-49d7-aad1-944bf4a0d162</webElementGuid>
+      <webElementGuid>65b99b4f-3f9e-485e-acc0-1bca7a025bf5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group-1446521801.898_attended_perspectives?' and @type = 'checkbox' and @name = 'profile[group-1446521801.898][attended_perspectives?][]']</value>
-      <webElementGuid>3c9cbe7e-1f78-4ca9-9629-816b79fb90e2</webElementGuid>
+      <webElementGuid>e5801828-66a8-41c6-b4fb-32a3e6c4391f</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

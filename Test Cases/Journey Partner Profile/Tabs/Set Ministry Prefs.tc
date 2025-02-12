@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Ministry Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0c134509-3e26-4976-ac08-8aa5e14b7602</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ff129242-54b7-4453-8dc3-94af2f00d605</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>eb7b22e4-e599-439b-b848-9dfbc2a29879</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a9492936-4802-4276-ad8f-b8f9561e8e04</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>ff129242-54b7-4453-8dc3-94af2f00d605</id>
+      <masked>false</masked>
+      <name>varMinistry_preferences</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>eb7b22e4-e599-439b-b848-9dfbc2a29879</id>
+      <masked>false</masked>
+      <name>varExperiences</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>a9492936-4802-4276-ad8f-b8f9561e8e04</id>
+      <masked>false</masked>
+      <name>varOther_people_group</name>
+   </variable>
+</TestCaseEntity>

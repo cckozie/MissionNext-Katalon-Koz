@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>c3b6449e-7400-43de-b011-c732e087e226</webElementGuid>
+      <webElementGuid>3d978f4c-3d18-49ee-808d-3abb7bb4aaa5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>12f76f32-54cf-4163-acc7-8024d6c7d9e4</webElementGuid>
+      <webElementGuid>e4098e86-ceb6-435b-a45c-f470f7760e90</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>a3cd2b6e-f8c1-415d-8670-fe5262af26c2</webElementGuid>
+      <webElementGuid>5cd8de29-36fc-4b22-b849-9dc4714af300</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>44b5b12e-751f-40cc-bdaa-43d772ea87e9</webElementGuid>
+      <webElementGuid>cf95bed7-39eb-4c5c-9e42-3f461f1b048b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates. </value>
-      <webElementGuid>dddcf225-2d64-496d-a9f4-d70b9b77a689</webElementGuid>
+      <webElementGuid>3db91207-2d6e-4a44-9177-843dd6560cb6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446521801.898&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>e69abfa8-50b8-4bff-8804-55de6342105c</webElementGuid>
+      <webElementGuid>f5c410d0-0b67-42a6-90b4-b3a60704fa66</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446521801.898']/div/div[2]/img</value>
-      <webElementGuid>5150be20-8eb8-4bbd-b40f-b8465d3735e3</webElementGuid>
+      <webElementGuid>a3ec3eb9-2c3d-4641-a09c-864a32cae62c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[26]</value>
-      <webElementGuid>7ae57366-627b-4ba6-bacd-cd878a1dc991</webElementGuid>
+      <webElementGuid>3ae20289-f6f0-48c2-bdaa-a7ed096b91df</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div/div[2]/img</value>
-      <webElementGuid>672c2a9b-e14a-44ee-be9a-139da5169e9d</webElementGuid>
+      <webElementGuid>878bb710-9dfe-4343-a264-b21d5d313be3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>175d09c0-ca4c-4038-8e1d-49ab6c57e6c2</webElementGuid>
+      <webElementGuid>b36d1619-a84b-4cb9-adba-f1cc0e16dbd8</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -389,7 +389,7 @@ ministries = ['Adult Men', 'Marriage & Family', 'Public Relations', 'Writers', '
 	, 'A&P Mechanic', 'Pilot - Single Engine', 'Project Management', 'Business', 'Engineering', 'Project Managers', 'Agriculture/Horticulture'
 	, 'Micro-Enterprise']
 
-WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Journey Ministry Prefs'), [('varMinistries') : ministries], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Journey Partner Profile/Archives/Set Journey Ministry Prefs'), [('varMinistries') : ministries], FailureHandling.STOP_ON_FAILURE)
 
 
 

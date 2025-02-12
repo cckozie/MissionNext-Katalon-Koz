@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>4ead8fbb-bec9-4310-8578-26e4f782db88</webElementGuid>
+      <webElementGuid>275a51d7-490e-438e-a843-5abf56996259</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1446521801.898_bible_school_training</value>
-      <webElementGuid>9cdc3b88-3522-48f1-a455-3ba990ebb011</webElementGuid>
+      <webElementGuid>5f85a135-fff7-45d9-9c7e-9ba62b9708fe</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>478f37f8-7b52-4b00-aee7-020f302727b2</webElementGuid>
+      <webElementGuid>59f920c6-bf18-4774-b696-9e82cfc73368</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1446521801.898][bible_school_training][]</value>
-      <webElementGuid>cf0e77ec-42e9-423f-946b-c0ac855b455e</webElementGuid>
+      <webElementGuid>4a6eff8a-a199-4ab5-a794-cc6d78d51791</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>value</name>
       <type>Main</type>
       <value>Minimal Bible training</value>
-      <webElementGuid>01d369f0-dbdf-4759-a2c7-71d332fac9ff</webElementGuid>
+      <webElementGuid>af72c73a-a13e-43df-a6a3-8aa464731a68</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1446521801.898&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-9&quot;]/div[@class=&quot;mn-checkbox mn-medium-checkbox&quot;]/div[1]/input[@id=&quot;profile_group-1446521801.898_bible_school_training&quot;]</value>
-      <webElementGuid>faf46337-333d-4b2c-bdd4-e3805d200d8c</webElementGuid>
+      <webElementGuid>d735e73b-0376-4975-b045-5eb493033ebb</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='profile_group-1446521801.898_bible_school_training']</value>
-      <webElementGuid>0ddcde37-29c3-49c3-96e2-97fbf3378bb5</webElementGuid>
+      <webElementGuid>2dc15cd1-2d1c-4cef-8bfc-a4418f1a10c9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1446521801.898']/div[3]/div[2]/div/div/input</value>
-      <webElementGuid>0ba31cc5-3480-4f6a-b8b6-989532667f22</webElementGuid>
+      <webElementGuid>83dc81b6-ad0c-437e-84a3-a8d6e5afdfef</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[8]/div[3]/div[2]/div/div/input</value>
-      <webElementGuid>7e8a1152-36b0-43fd-80da-4eee8ba408d0</webElementGuid>
+      <webElementGuid>61ea4a89-a54e-4134-8ca8-538a4dd3c132</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'profile_group-1446521801.898_bible_school_training' and @type = 'checkbox' and @name = 'profile[group-1446521801.898][bible_school_training][]']</value>
-      <webElementGuid>d3d9dbce-a362-403f-b627-2ea55c0f8395</webElementGuid>
+      <webElementGuid>b40fd7a4-437a-415a-b28d-6cabd196a03b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
