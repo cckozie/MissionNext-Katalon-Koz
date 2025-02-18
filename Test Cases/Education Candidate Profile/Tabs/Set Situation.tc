@@ -35,27 +35,27 @@
       <description></description>
       <id>8906198a-1ddd-4377-80bc-f13f823ebcca</id>
       <masked>false</masked>
-      <name>varProcess_stage</name>
+      <name>varPerspectives</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
       <id>008889df-ac85-4968-8cdf-060299d9723a</id>
       <masked>false</masked>
-      <name>varBible_training</name>
+      <name>varDescribe_training</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
       <id>af508938-9d9f-4d60-9719-42167f8bdffd</id>
       <masked>false</masked>
-      <name>varChurch_affiliated</name>
+      <name>varChurch_involvement</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
       <id>a308f26a-7469-43c8-952b-37b22286d98a</id>
       <masked>false</masked>
-      <name>varJourney_guide</name>
+      <name>varChurch_name</name>
    </variable>
 </TestCaseEntity>

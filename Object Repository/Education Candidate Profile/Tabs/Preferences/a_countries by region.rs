@@ -6,12 +6,12 @@
    <elementGuidId>e91359b7-8073-47a2-b82c-b78d47b9ac12</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='group-1449972047.293']/div[2]/div[5]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>6a5eaebb-9b54-435f-9a61-f105b62ca3b8</webElementGuid>
+      <webElementGuid>acf68934-f54f-4549-bfd5-864b7d274454</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://info.missionnext.org/countries_list.php</value>
-      <webElementGuid>1449495f-666d-4515-baef-87acd1ed83c4</webElementGuid>
+      <webElementGuid>0e2c9792-b3e2-416e-9ea9-8b11e804ea9a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>ce19fde7-e332-43a0-9d7d-003b96197b0a</webElementGuid>
+      <webElementGuid>c4a88466-85df-4a7e-a2a8-f5ccf9be74dc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>countries by region</value>
-      <webElementGuid>9c80cde3-e669-4b3b-91aa-62311a0431fb</webElementGuid>
+      <webElementGuid>198ca762-3643-4b15-8358-9a962bef4d0e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1449972047.293&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
-      <webElementGuid>adeb9678-fc47-4a90-91f8-b9058a819259</webElementGuid>
+      <webElementGuid>c7c88491-1ce5-4a50-8d21-d343bc441c77</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1449972047.293']/div[2]/div[5]/a</value>
-      <webElementGuid>e2500cf1-08d9-43aa-a996-a275fed0054d</webElementGuid>
+      <webElementGuid>b5c4a365-aa19-4f62-8142-b0af42b84efb</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'countries by region')]</value>
-      <webElementGuid>6d8d4250-ef4e-4908-953d-9d6e484b047c</webElementGuid>
+      <webElementGuid>e77a273e-23b1-48bc-8d63-d6b46cd56d9e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='The world region preferences field is required.'])[1]/following::a[1]</value>
-      <webElementGuid>73a5a090-f54c-446f-b971-e2b51cf325fe</webElementGuid>
+      <webElementGuid>12b17675-3c90-4072-8e4b-d1647bd6480f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Paid &amp; Volunteer Positions*'])[1]/preceding::a[1]</value>
-      <webElementGuid>a322c610-6dc9-4ce2-9b1f-c4d08f96c069</webElementGuid>
+      <webElementGuid>01f68a2a-ed10-4433-b508-69f1d05ff9e5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Volunteer/self-supported position'])[1]/preceding::a[1]</value>
-      <webElementGuid>91081ecd-93f4-4420-b748-e3873e374883</webElementGuid>
+      <webElementGuid>e756fe62-657d-4e6c-b899-4a5b0da5301b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='countries by region']/parent::*</value>
-      <webElementGuid>1e1c807f-b3d9-4d91-b3ed-a61678296593</webElementGuid>
+      <webElementGuid>4ee20bf9-bcad-4d48-b085-f872cfd0699c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://info.missionnext.org/countries_list.php')]</value>
-      <webElementGuid>e38c84f3-d30c-4078-b517-a113f70f6a98</webElementGuid>
+      <webElementGuid>babc20d0-c530-4b43-a6f6-302f5b2231da</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[5]/a</value>
-      <webElementGuid>5d943268-f34d-499d-b10b-b0644f63550c</webElementGuid>
+      <webElementGuid>c21a05b1-2a7d-4056-9ac8-028cb4dbbbf4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://info.missionnext.org/countries_list.php' and (text() = 'countries by region' or . = 'countries by region')]</value>
-      <webElementGuid>b0c72350-da64-4552-a5a3-79e74f220dfb</webElementGuid>
+      <webElementGuid>4abb4e06-a059-4297-b48c-6ebcfe7b153a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

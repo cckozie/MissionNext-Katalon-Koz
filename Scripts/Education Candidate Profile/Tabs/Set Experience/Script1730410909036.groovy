@@ -70,7 +70,7 @@ requiredFieldMsgs = [('Life Experience') : 'The missions exposure field is requi
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
 
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Experience Tab'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
 
 // Call the tooltip testing script

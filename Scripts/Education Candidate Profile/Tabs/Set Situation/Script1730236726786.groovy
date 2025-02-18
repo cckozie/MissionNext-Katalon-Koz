@@ -91,7 +91,7 @@ requiredFieldMsgs = []	/*	//THE SUBMIT KEY ON ANY TAB WILL CAUSE THESE MESSAGES 
 //Go to the Situation tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Situation'))
 
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Situation Tab'], FailureHandling.STOP_ON_FAILURE)
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

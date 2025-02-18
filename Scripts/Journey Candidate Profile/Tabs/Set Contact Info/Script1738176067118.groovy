@@ -67,16 +67,17 @@ tooltips = [
 tooltipText = [
 ('First Name') : 'May include your middle initial; enter last name below.',
 ('Last Name') : 'Family Name',
-('Your Email ') : 'Your primary email address',
-('State    ') : 'List is country-specific. Selection is required.',
+('Your Email') : 'Your primary email address',
+('State') : 'List is country-specific. Selection is required.',
 ('Your Country of Citizenship') : 'If you hold dual citizenship, select the country where you normally reside. ',
 ('Birth Year') : 'Four Digit Year',
 ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
-// Define the required field missing error message
+// Define the required field missing error message test objects
 requiredFieldMsgs = [
 ('Gender') : 'The gender field is required.',
-('Country of Citizenship') : 'The citizenship country field is required.',
+('State') : 'The state field is required.',
+('Your Country of Citizenship') : 'The citizenship country field is required.',
 ('Birth Year') : 'The birth year field is required.']
 
 // Define the page's links and the text to search for on the linked page
@@ -86,7 +87,7 @@ pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 WebUI.click(findTestObject('Journey Candidate Profile/Tabs/a_Contact Info'))
 
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages

@@ -102,7 +102,7 @@ requiredFieldMsgs = [
 //Go to the Availability tab
 WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_Availability'))
 
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Availability Tab'], 
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages

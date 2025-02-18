@@ -26,7 +26,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 username = GlobalVariable.username
 
 if (username != 'cktest04ec') {
-    println('The Execution Profile must be set to "Education Partner"')
+    println('The Execution Profile must be set to "Education Candidate"')
 
     System.exit(0)
 }
@@ -67,9 +67,9 @@ tooltips = [
 tooltipText = [
 ('First Name') : 'May include your middle initial; enter last name below.',
 ('Last Name') : 'Family Name',
-('Your Email ') : 'Your primary email address',
-('State    ') : 'List is country-specific. Selection is required.',
-('Your Country of Citizenship') : 'If you hold dual citizenship, select the country where you normally reside. ',
+('Your Email') : 'Your primary email address',
+('State') : 'List is country-specific. Selection is required.',
+('Your Country of Citizenship') : 'If you hold dual citizenship, select the country where you normally reside.',
 ('Birth Year') : 'Four Digit Year',
 ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
@@ -85,31 +85,33 @@ pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'))
 
-//Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'],
-	FailureHandling.STOP_ON_FAILURE)
-
-//For script setup only - finds the required field error messages
-//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
-
-// Call the tooltip testing script
-WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
-	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
-	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
-
-// Test for all required field error messages
-outText = 'Verifying the required field messages.\n'
-
-outFile.append(outText)
-
-fieldList = []
-
-requiredFieldMsgs.each {
-	fieldList.add(it.key)
+if(!GlobalVariable.fastPath) {
+	//Get the actual tooltip text
+	tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
+		FailureHandling.STOP_ON_FAILURE)
+	
+	//For script setup only - finds the required field error messages
+	//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+	
+	// Call the tooltip testing script
+	WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
+		('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
+		('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+	
+	// Test for all required field error messages
+	outText = 'Verifying the required field messages.\n'
+	
+	outFile.append(outText)
+	
+	fieldList = []
+	
+	requiredFieldMsgs.each {
+		fieldList.add(it.key)
+	}
+	
+	WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
+		('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 }
-
-WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -146,10 +148,12 @@ if (varMarital_status != null) {
 		('varObject') : object, ('varParm1') : varMarital_status], FailureHandling.STOP_ON_FAILURE)
 }
 
+if(!GlobalVariable.fastPath) {
 // Test the external page links
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
 	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
+}
 
-object = 'Education Candidate Profile/Tabs/Contact Info/btn_Submit'
+object = 'Education Candidate Profile/Tabs/btn_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

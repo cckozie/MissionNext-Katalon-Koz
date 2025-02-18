@@ -57,6 +57,8 @@ if (fieldTooltips.size() > 0) {
 
 	labels.each({
 			label = it.getText().replace('*','')	//Strip off the required field indicator
+			
+			label = label.trim()
 
 			label = label.replace('?','')	//Strip off question marks
 

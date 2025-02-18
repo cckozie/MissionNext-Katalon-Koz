@@ -69,7 +69,7 @@ pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
 
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Contact Info Tab'], 
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages

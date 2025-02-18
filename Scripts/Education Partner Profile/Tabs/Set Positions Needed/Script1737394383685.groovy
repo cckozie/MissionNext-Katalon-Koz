@@ -78,7 +78,7 @@ requiredFieldMsgs = [
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Positions Needed'))
 
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Admin Info Tab'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages

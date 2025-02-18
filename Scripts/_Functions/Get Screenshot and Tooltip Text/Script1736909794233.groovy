@@ -37,16 +37,17 @@ import javax.swing.*;
 //Execute the screenshot and save to local machine
 //Call Get Toolipt Text to get the text for each field and save to CSV file on local machine
 
-WebDriver driver = DriverFactory.getWebDriver()
-
 frame = new JFrame("");
 JPanel p = new JPanel();
-JLabel l = new JLabel("LOADING ...", SwingConstants.CENTER);
+JLabel l = new JLabel('Getting screenshot and tooltip text...', SwingConstants.CENTER);
 frame.add(l);
 frame.setSize(300, 100);
 frame.setLocation(600, 0);
 frame.setAlwaysOnTop (true)
 frame.show();
+
+
+WebDriver driver = DriverFactory.getWebDriver()
 
 /*
 if (WebUI.verifyTextPresent('Partnership Application', false, FailureHandling.OPTIONAL)) {
@@ -115,6 +116,7 @@ if (tooltipMap.size() > 0) {
 		name = it.key
 		
 		it.value = it.value.replace('\n','') //Because some tooltips have lots of carriage returns
+		it.value =it.value.trim()
 
 //		it.value = it.value.replace(",", "','") //Encapsulate commas in quotes for CSV
 		
@@ -131,10 +133,12 @@ if (tooltipMap.size() > 0) {
 	outFile.write(outText)
 }
 
-frame.hide();
 
 // Take and save the screenshot
 WebUI.takeFullPageScreenshot(fileImage)
+
+frame.dispose()
+
 
 return tooltipMap
 

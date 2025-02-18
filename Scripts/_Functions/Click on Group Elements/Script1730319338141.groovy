@@ -21,10 +21,20 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import javax.swing.*;
 
 debug = true	//Print debug info
 
 toggle = true	//Toggle selected checkboxes if already checked
+
+frame = new JFrame("");
+JPanel p = new JPanel();
+JLabel l = new JLabel('Making user selections...', SwingConstants.CENTER);
+frame.add(l);
+frame.setSize(300, 100);
+frame.setLocation(600, 0);
+frame.setAlwaysOnTop (true)
+frame.show();
 
 WebDriver driver = DriverFactory.getWebDriver()
 println(varParms)
@@ -101,6 +111,7 @@ for(i = 0; i < varXpaths.size(); i++) {
 	}
 }
 
+frame.dispose()
 
 def scrollToObject(def object) {
 	println(('Converting ' + object) + ' to web element')

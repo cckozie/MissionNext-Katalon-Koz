@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Spouse Teaching Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>18e1012c-df52-499a-b7c2-805e119ba282</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>aaf2d48a-17be-445b-b052-e223343c717d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1479f965-1caf-4c37-b62b-645413ad3250</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>aaf2d48a-17be-445b-b052-e223343c717d</id>
+      <masked>false</masked>
+      <name>varSpouse_preferred_education_positions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>1479f965-1caf-4c37-b62b-645413ad3250</id>
+      <masked>false</masked>
+      <name>varSpouse_education_preferences_comment</name>
+   </variable>
+</TestCaseEntity>

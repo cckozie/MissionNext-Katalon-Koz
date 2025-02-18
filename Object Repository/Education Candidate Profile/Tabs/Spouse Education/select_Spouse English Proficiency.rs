@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Spouse English Proficiency</name>
+   <tag></tag>
+   <elementGuidId>90d2f348-c18c-475e-a015-fe6cf6a5302f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1631402580.093_spouse_english_proficiency']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>baf61d30-04e6-483d-9364-24a3ea131a1a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>spouse_english_proficiency</value>
+      <webElementGuid>aea5adda-fe60-414f-af25-fed8abf540dc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>320</value>
+      <webElementGuid>a6ff432b-ee96-4fe2-aa73-61cb9eb15676</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1631402580.093][spouse_english_proficiency]</value>
+      <webElementGuid>e54f111c-3536-462d-a9f3-86aacdfc0348</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1631402580.093_spouse_english_proficiency</value>
+      <webElementGuid>acfd1647-7085-44ba-9af4-8aeda144ff85</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+</value>
+      <webElementGuid>6d87e733-7fb4-4c12-8fb2-9765e2b7f001</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1631402580.093_spouse_english_proficiency&quot;)</value>
+      <webElementGuid>73712d7b-f445-4995-b2f2-38252203830c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1631402580.093_spouse_english_proficiency']</value>
+      <webElementGuid>9b4e4273-0809-4ef0-b0f8-c0c11ad1cce1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1631402580.093']/div[6]/div[3]/select</value>
+      <webElementGuid>4ea32978-1083-44cc-a2a6-14263e060968</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Spouse English Proficiency'])[1]/following::select[1]</value>
+      <webElementGuid>123e6da8-e185-42c6-87f2-0bf9da093825</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Spouse Additional Language(s)'])[1]/preceding::select[1]</value>
+      <webElementGuid>e5541687-5c6b-4a30-afd0-22b358fc97a3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Select those positions for which your Spouse would be qualified.'])[1]/preceding::select[1]</value>
+      <webElementGuid>a094c944-dcca-4d36-b834-ea3f300c2cee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[16]/div[6]/div[3]/select</value>
+      <webElementGuid>a93ad67b-d905-44d2-bc94-2a5e4bd42345</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1631402580.093][spouse_english_proficiency]' and @id = 'profile_group-1631402580.093_spouse_english_proficiency' and (text() = '
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+' or . = '
+
+Rudimentary
+Elementary
+Intermediate
+Proficient
+Advanced
+Not Applicable
+')]</value>
+      <webElementGuid>c8b2887c-a09e-479f-a295-403e10d52665</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

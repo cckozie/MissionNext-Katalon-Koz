@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import org.apache.commons.lang3.StringUtils
+import javax.swing.*;
 
 BufferedReader reader;
 checked = []
@@ -29,6 +30,17 @@ reader = new BufferedReader(new FileReader("/Users/cckozie/Documents/MissionNext
 String line = reader.readLine();
 
 include = false
+
+frame = new JFrame("");
+JPanel p = new JPanel();
+JLabel l = new JLabel('Loading selections from file...', SwingConstants.CENTER);
+frame.add(l);
+frame.setSize(300, 100);
+frame.setLocation(600, 0);
+frame.setAlwaysOnTop (true)
+frame.show();
+
+
 	
 while (line != null) {
 	println(line)
@@ -66,6 +78,8 @@ while (line != null) {
 	line = reader.readLine();
 //	WebUI.delay(1)
 }
+
+frame.dispose()
 
 reader.close();
 println(checked)

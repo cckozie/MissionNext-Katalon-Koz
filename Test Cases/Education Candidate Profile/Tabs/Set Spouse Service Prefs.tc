@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Spouse Service Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bb675e49-ed5c-46bd-a461-a31434852e52</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0deda855-c5e3-40d3-9420-c3374226ceab</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>0deda855-c5e3-40d3-9420-c3374226ceab</id>
+      <masked>false</masked>
+      <name>varSpouse_preferences_comment</name>
+   </variable>
+</TestCaseEntity>

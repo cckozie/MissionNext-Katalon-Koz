@@ -77,7 +77,7 @@ requiredFieldMsgs = [
 ('Preferred Positions') : 'The ministry preferences field is required.']
 
 //Get the actual tooltip text
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Your Ministry Prefs Tab'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
 
 //For script setup only - finds the required field error messages
