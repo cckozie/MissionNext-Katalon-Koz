@@ -266,6 +266,22 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in page
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pages)) {
+
+    // Complete the Spouse Teaching Prefs tab
+    // Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
+    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Teaching Prefs'))
+
+    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse teaching prefs.csv'
+            , ('varSelections') : 'Spouse Preferred Education Positions'], FailureHandling.STOP_ON_FAILURE)
+
+    spouse_education_preferences_comment = 'Willing to consider other positions.'
+
+    WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Teaching Prefs'), [('varSpouse_preferred_education_positions') : positions
+            , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.STOP_ON_FAILURE)
+}
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) {
     // Complete the Education tab
     spouse_formal_degree = 'Yes'
@@ -288,22 +304,6 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) 
             , ('varSpouse_previous_experience') : spouse_previous_experience, ('varSpouse_other_experience') : spouse_other_experience
             , ('varSpouse_english_proficiency') : spouse_english_proficiency, ('varSpouse_additional_languages') : spouse_additional_languages], 
         FailureHandling.STOP_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pages)) {
-
-    // Complete the Spouse Teaching Prefs tab
-    // Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Teaching Prefs'))
-
-    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse teaching prefs.csv'
-            , ('varSelections') : 'Spouse Preferred Education Positions'], FailureHandling.STOP_ON_FAILURE)
-
-    spouse_education_preferences_comment = 'Willing to consider other positions.'
-
-    WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Teaching Prefs'), [('varSpouse_preferred_education_positions') : positions
-            , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.STOP_ON_FAILURE)
 }
 
 if (!(called)) {

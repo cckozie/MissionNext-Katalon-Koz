@@ -24,9 +24,9 @@ import javax.swing.*;
 
 BufferedReader reader;
 checked = []
-//varFileName = 'Education Candidate Forms/preferred positions.csv'
-//varSelections = 'regions'
-reader = new BufferedReader(new FileReader("/Users/cckozie/Documents/MissionNext/" + varFileName));
+
+//reader = new BufferedReader(new FileReader("/Users/cckozie/Documents/MissionNext/" + varFileName));
+reader = new BufferedReader(new FileReader('/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/' + varFileName));
 String line = reader.readLine();
 
 include = false

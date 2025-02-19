@@ -107,32 +107,18 @@ for (def it : tooltips) {
             foundStr = found.toString()
 
             matchP = foundStr.indexOf('%')
-			
-			if(matchP >= 0) {
 
-	            println(matchP)
-	
-	            pct = foundStr.substring(matchP + 1, matchP + 6)
+            println(matchP)
 
-				pctF = pct.toFloat()
-				
-			} else {
-				matchP = foundStr.indexOf('S:')
-				
-				pct = foundStr.substring(matchP + 2, matchP + 6)
-				
-				println(pct)
-				
-				pctF = (Float.parseFloat(pct) * 100).round(2)
-				
-				println(pctF)
-			}
+            pct = foundStr.substring(matchP + 1, matchP + 6)
+
+            outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pct) + '%')
 			
-           outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pctF) + '%')
+			pctF = pct.toFloat()
 			
 			min = 80
 			
-			if(pctF.toFloat() < min.toFloat()) {
+			if(pct.toFloat() < min.toFloat()) {
 				outText = '>>>>> ' + outText + ' <<<<<'
 			}
 

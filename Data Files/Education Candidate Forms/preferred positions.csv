@@ -1,0 +1,95 @@
+<Group>positions,
+Administration,
+ÊAdministrative Assistant,
+ÊAdministrator,y
+ÊAssistant Principal,
+ÊAthletic Director,
+ÊChildcare Director,
+ÊDay Care Center Director,
+ÊDirector,y
+ÊOutdoor Program Supervisor,
+ÊPreschool Director,
+ÊPrincipal,
+ÊRecruiting Teachers,
+ÊSuperintendent of Child Education,
+ÊSuperintendent of Schools,
+Education Support,
+ÊBoarding Home Assistant,
+ÊBoarding Home Parent,
+ÊChildcare Attendant,y
+ÊCurriculum Specialist,
+ÊEducation Consultant,
+ÊEducation Resource Coordinator,
+ÊIT Coordinator,
+"ÊManager, Business",
+"ÊManager, Facilities",
+"ÊManager, Finance",
+"ÊManager, Maintenance",
+ÊNon-Traditional Consultant,
+ÊSchool Counselor,y
+ÊSchool Librarian,
+ÊSchool Librarian Assistant,
+ÊSchool Nurse,
+ÊSchool Psychologist,
+ÊSchool Psychometrist,y
+ÊTeacher's Aide,
+ÊYouth Director/Worker,
+General Teachers,
+ÊDistance Education Teacher,y
+ÊElementary School Teacher,
+ÊHigh School Teacher,
+ÊHome Schooling,
+ÊKindergarten Teacher,y
+ÊMiddle School Teacher,
+ÊNon-Traditional School Teacher,
+ÊPreschool Teacher,y
+ÊSubstitute Teacher,y
+ÊTutor,y
+Language Teachers,
+ÊEnglish Second Language (ESL),
+ÊEnglish Teacher,y
+ÊForeign Language - French,
+ÊForeign Language - Portuguese,
+ÊForeign Language - Spanish,
+ÊForeign Language Teacher,
+Specialty Teachers,
+ÊArt Teacher,y
+ÊArts - Performing,
+ÊAthletic Coach,
+ÊBible Teacher,
+ÊBusiness Education Teacher,y
+ÊComputer Teacher (School),y
+ÊDrama Teacher,
+ÊGeography Teacher,
+ÊHealth Teacher,
+ÊHistory Teacher,
+ÊHome Economics Teacher,
+ÊIndustrial Arts Teacher,y
+ÊMathematics Teacher,y
+ÊMusic Teacher,
+ÊPhysical Education Teacher,
+ÊReading Teacher/Specialist,
+ÊResource Teacher,
+"ÊScience, Biology",
+"ÊScience, Chemistry",
+"ÊScience, Physics",y
+ÊScience Teacher,y
+ÊSocial Studies Teacher,
+ÊSpecial Education Teacher,
+ÊOther (Comment Below),
+,
+<Group>regions,
+"ÊAfrica, North",
+"ÊAfrica, Sub-Sahara",
+ÊMiddle East,
+ÊOceania,
+ÊSouth America,y
+"ÊAsia, Central",
+"ÊAsia, Northern",
+ÊSoutheast Asia,
+"ÊAsia, Southern",
+ÊCaribbean,y
+ÊCentral America,y
+"ÊEurope, East",
+"ÊEurope, West",y
+ÊNo Preference,
