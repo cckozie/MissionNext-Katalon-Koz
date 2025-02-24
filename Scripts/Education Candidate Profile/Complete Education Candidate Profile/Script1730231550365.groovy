@@ -283,7 +283,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pag
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) {
-    // Complete the Education tab
+    // Complete the Spouse Education tab
     spouse_formal_degree = 'Yes'
 
     spouse_education_credentials = 'Pending'

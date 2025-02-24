@@ -110,7 +110,15 @@ requiredFieldMsgs.each({
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Journey Candidate Profile/Tabs/Your Ministry Prefs/input_BUSINESS AS MISSION'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+	object = 'Journey Candidate Profile/Tabs/Your Ministry Prefs/input_Business'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
 
 if (varOther_people_group != null) {
 	object = 'Object Repository/Journey Candidate Profile/Tabs/Your Ministry Prefs/textarea_Other People Group'

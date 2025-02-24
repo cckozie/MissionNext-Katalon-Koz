@@ -218,8 +218,10 @@ object = 'Object Repository/Journey Candidate Profile/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
-    WebUI.callTestCase(findTestCase('Journey Candidate Profile/Complete Journey Candidate Profile'), [('varCalled') : true], 
+    pages = WebUI.callTestCase(findTestCase('Journey Candidate Profile/Complete Journey Candidate Profile'), [('varCalled') : true], 
         FailureHandling.STOP_ON_FAILURE)
+	
+	if(pages.size() == 0 || pages == 'All') {
 
         success = WebUI.verifyTextPresent('THANK YOU FOR SUBMITTING YOUR PROFILE ON MISSIONNEXT JOURNEY!', false)
 		
@@ -245,6 +247,7 @@ if (!(registerOnly)) {
 			outFile.append(outText)
 
 		}
+	}
 }
 
 //WebUI.closeBrowser()

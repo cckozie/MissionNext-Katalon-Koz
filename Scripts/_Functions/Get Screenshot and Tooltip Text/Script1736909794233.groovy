@@ -26,6 +26,10 @@ import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import java.io.File as File
 import javax.swing.*;
 
+if(GlobalVariable.fastPath) {
+	return
+}
+
 /*
 ============================================================================================================
 	Moved capture of tooltip text into test case 'Get Tooltip Text'

@@ -20,7 +20,7 @@ import javax.swing.*;
 
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Your Ministry Prefs']
+pages = ['Contact Info', 'Experience', 'IT Skills and Interest', 'Spouse Info','Spouse Ministry Prefs']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -89,7 +89,7 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	
 	birth_year = '1949'
 	
-	marital_status = 'Widowed'
+	marital_status = 'Married'
 	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
 	        , ('varState') : state, ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship
@@ -204,29 +204,26 @@ if(pages.size() == 0 || 'All' in pages || 'Service/Comment' in pages) {
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'IT Skills and Interest' in pages) {
-	frame = new JFrame("");
-	JPanel p = new JPanel();
-	JLabel l = new JLabel("LOADING ...", SwingConstants.CENTER);
-	frame.add(l);
-	frame.setSize(300, 100);
-	frame.setLocation(600, 0);
-	frame.setAlwaysOnTop (true)
-	frame.show();
-		
+	
 	// Complete the IT Skills and Interests tab
-	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_IT Skills and Interest'))
-	
-	// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/Journey Candidate Forms/Your Ministry Prefs.csv
-	categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-	[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Job Categories'], FailureHandling.STOP_ON_FAILURE)
-	
-	proficiencies = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-	[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Proficiencies'], FailureHandling.STOP_ON_FAILURE)
-	
-	languages = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-	[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'Computer Languages'], FailureHandling.STOP_ON_FAILURE)
-	
-	frame.hide();
+	if(!GlobalVariable.fastPath) {
+		
+		WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_IT Skills and Interest'))
+		
+		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/Journey Candidate Forms/Your Ministry Prefs.csv
+		categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Job Categories'], FailureHandling.STOP_ON_FAILURE)
+		
+		proficiencies = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Proficiencies'], FailureHandling.STOP_ON_FAILURE)
+		
+		languages = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Journey Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'Computer Languages'], FailureHandling.STOP_ON_FAILURE)
+	} else {
+		categories = ''
+		proficiencies = ''
+		languages = ''
+	}
 	
 	it_comments = 'My strongest language skills are in Python'
 	
@@ -236,27 +233,87 @@ if(pages.size() == 0 || 'All' in pages || 'IT Skills and Interest' in pages) {
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
+	// Complete the Contact Info tab
+	spouse_first_name = 'Jennifer'
+
+	spouse_birth_year = '1951'
+
+	spouse_citizenship_country = 'United States'
+
+	spouse_ethnicity = 'WHITE/CAUCASIAN'
+
+	spouse_serving_with_you = 'Yes'
+
+	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Spouse Info'), [('varSpouse_first_name') : spouse_first_name
+			, ('varSpouse_birth_year') : spouse_birth_year, ('varSpouse_citizenship_country') : spouse_citizenship_country
+			, ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.STOP_ON_FAILURE)
+}
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages)) {
+	// Complete the Contact Info tab
+	spouse_highest_degree_earned = 'Bachelor of Arts (BA)'
+
+	spouse_degree_field = 'Music'
+
+	spouse_occupation = 'At home mom'
+	
+	spouse_bible_training = 'Some Bible school classes'
+	
+	spouse_describe_bible_training = 'Online classes from Hillsdale'
+	
+	spouse_cross_cultural_experience = 'Not served in a culture other than my own'
+	
+	spouse_missions_experience = 'I have attended a missions event'
+	
+	spouse_attended_perspectives = 'I am planning to take the Perspectives Course'
+	
+	spouse_experience = 'Sunday School teacher'
+
+	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Spouse Experience'), [('varSpouse_highest_degree_earned') : spouse_highest_degree_earned
+		, ('varSpouse_degree_field') : spouse_degree_field, ('varSpouse_occupation') : spouse_occupation
+		, ('varSpouse_bible_training') : spouse_bible_training, ('varSpouse_describe_bible_training') : spouse_describe_bible_training
+		, ('varSpouse_cross_cultural_experience') : spouse_cross_cultural_experience, ('varSpouse_missions_experience') : spouse_missions_experience
+		, ('varSpouse_attended_perspectives') : spouse_attended_perspectives, ('varSpouse_experience') : spouse_experience]
+		, FailureHandling.STOP_ON_FAILURE)
+}
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Ministry Prefs' in pages)) {
+// Complete the Spouse Service Prefs tab
+	if(!GlobalVariable.fastPath) {
+		// Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
+		WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_Spouse Ministry Prefs'))
+	
+		positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Journey Candidate Forms/spouse ministry prefs.csv'
+				, ('varSelections') : 'Spouse Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
+	} else {
+		positions = ''
+	}
+	
+	spouse_preferences_comment = 'Willing to consider other opportunities'
+
+	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Spouse Ministry Prefs'), [('varSpouse_preferred_prefs') : positions
+			, ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.STOP_ON_FAILURE)
+}
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
-	frame = new JFrame("");
-	JPanel p = new JPanel();
-	JLabel l = new JLabel("LOADING ...", SwingConstants.CENTER);
-	frame.add(l);
-	frame.setSize(300, 100);
-	frame.setLocation(600, 0);
-	frame.setAlwaysOnTop (true)
-	frame.show();
+	if(!GlobalVariable.fastPath) {
+		// Complete the Your Ministry Prefs tab
+		WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_Your Ministry Prefs'))
 		
-	// Complete the Your Ministry Prefs tab
-	WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_Your Ministry Prefs'))
-	
-	// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/Journey Candidate Forms/Your Ministry Prefs.csv
-	categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-	[('varFileName') : 'Journey Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Job Categories'], FailureHandling.STOP_ON_FAILURE)
-	
-	positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-		[('varFileName') : 'Journey Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
-	
-	frame.hide();
+		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/Journey Candidate Forms/Your Ministry Prefs.csv
+		categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Journey Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Job Categories'], FailureHandling.STOP_ON_FAILURE)
+		
+		positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+			[('varFileName') : 'Journey Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
+		
+	} else {
+		categories = ''
+	}
 	
 	other_people_group = 'None'
 	
@@ -267,3 +324,5 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 if(!called) { 	//Leave the browser open if this script was called from another script
 //	WebUI.closeBrowser()
 }
+
+return pages

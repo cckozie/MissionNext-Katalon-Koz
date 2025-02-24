@@ -25,10 +25,10 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest04') {
-	println('The Execution Profile must be set to "Education Candidate"')
+if (username != 'cktest05jc') {
+    println('The Execution Profile must be set to "Journey Candidate"')
 
-	System.exit(0)
+    System.exit(0)
 }
 
 //Check to see if we're writing printed output to a file
@@ -37,7 +37,7 @@ domain = GlobalVariable.domain
 writeFile = false
 
 // Set output file
-testName = 'Education Candidate Spouse Experience Tab'
+testName = 'Journey Candidate Spouse Info Tab'
 
 outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
 
@@ -46,29 +46,36 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Education candidate/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Journey candidate/'
 
 // Define the folder where the tooltip test objects live
-testObjectFolder = ('Education Candidate Profile/Tabs/Spouse Experience/')
+testObjectFolder = ('Journey Candidate Profile/Tabs/Spouse Info/')
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
 tooltips = [
 ('dummy') : 'dummy',
-('Spouse Degree Field') : 'img_Spouse Degree Field_field-tooltip']
+('Spouse Birth Year') : 'img_Spouse Birth Year_field-tooltip',
+('Spouse Citizenship Country') : 'img_Spouse Citizenship Country_field-tooltip',
+('Spouse Serving with You') : 'img_Spouse Serving with You_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
-('Spouse Degree Field') : 'Spouse Earned Degree Field']
+('Spouse Birth Year') : 'Four Digit Year',
+('Spouse Citizenship Country') : 'If you have dual citizenship, select the country where you normally reside.',
+('Spouse Serving with You') : "Normally, this will be 'Yes' if you are planning to serve overseas six months or more."]
+
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = []
+requiredFieldMsgs = [
+('Spouse First Name') : 'The spouse first name: field is required.',
+('Spouse Birth Year') : 'The spouse birth year field is required.']
 
 // Define the page's links and the text to search for on the linked page
 pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 
-//Go to the Spouse Experience tab
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Spouse Experience'))
+//Go to the Spouse Info tab
+WebUI.click(findTestObject('Journey Candidate Profile/Tabs/a_Spouse Info'))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -96,40 +103,39 @@ requiredFieldMsgs.each {
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
-
 // Set the input fields provided
-if (varSpouse_highest_degree_earned != null) {
-	object = 'Object Repository/Education Candidate Profile/Tabs/Spouse Experience/select_Spouse Highest Degree Earned'
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectByValue',
-		('varObject') : object, ('varParm1') : varSpouse_highest_degree_earned], FailureHandling.STOP_ON_FAILURE)
-}
-
-if (varSpouse_degree_field != null) {
-	object = 'Object Repository/Education Candidate Profile/Tabs/Spouse Experience/input_Spouse Degree Field'
+if (varSpouse_first_name != null) {
+    object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/input_Spouse First Name'
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-		('varObject') : object, ('varParm1') : varSpouse_degree_field], FailureHandling.STOP_ON_FAILURE)
+		('varObject') : object, ('varParm1') : varSpouse_first_name], FailureHandling.STOP_ON_FAILURE)
 }
 
-if (varSpouse_occupation != null) {
-	object = 'Object Repository/Education Candidate Profile/Tabs/Spouse Experience/textarea_Spouse Occupation'
+if (varSpouse_birth_year != null) {
+	object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/input_Spouse Birth Year'
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-		('varObject') : object, ('varParm1') : varSpouse_occupation], FailureHandling.STOP_ON_FAILURE)
+		('varObject') : object, ('varParm1') : varSpouse_birth_year], FailureHandling.STOP_ON_FAILURE)
 }
 
-// Set the Spouse an Educator checkbox
-if (varSpouse_an_educator == 'Yes') {
-	WebDriver driver = DriverFactory.getWebDriver()
-	object = 'Object Repository/Education Candidate Profile/Tabs/Spouse Experience/input_Spouse an Educator'
-	element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-	myStatus = element.isSelected()
-	if((varSpouse_an_educator == 'Yes' && !myStatus) || (varSpouse_an_educator == 'No' && myStatus)) {
-		WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object, ('varParm1') : null],
-			FailureHandling.STOP_ON_FAILURE)
-		WebUI.delay(1)
-	}
+if (varSpouse_citizenship_country != null) {
+    object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/select_Spouse Citizenship Country'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varSpouse_citizenship_country], FailureHandling.STOP_ON_FAILURE)
 }
 
-object = 'Education Candidate Profile/Tabs/btn_Submit'
+if (varSpouse_ethnicity != null) {
+    object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/select_Spouse Ethnicity'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
+		('varObject') : object, ('varParm1') : varSpouse_ethnicity], FailureHandling.STOP_ON_FAILURE)
+}
+
+if (varSpouse_serving_with_you == 'Yes') {
+	object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/input_Spouse Serving with You Yes'
+} else if (varSpouse_serving_with_you == 'No') {
+	object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Info/input_Spouse Serving with You No'
+}
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+
+object = 'Journey Candidate Profile/Tabs/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

@@ -23,7 +23,7 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import javax.swing.*;
 
-debug = true	//Print debug info
+debug = false	//Print debug info
 
 toggle = true	//Toggle selected checkboxes if already checked
 

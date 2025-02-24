@@ -26,6 +26,10 @@ import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+if(GlobalVariable.fastPath) {
+	return
+}
+
 // Define the tooltip images path
 tooltipImagePath = varTooltipImagePath
 

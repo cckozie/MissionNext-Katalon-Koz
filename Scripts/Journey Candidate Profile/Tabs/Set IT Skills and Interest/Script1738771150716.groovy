@@ -60,7 +60,7 @@ xpaths = [it_job_categories, it_proficiencies, computer_languages]
 
 // Define path to tooltip text images
 //tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey candidate/journey skills and interest/'
 
 // Define the folder where the tooltip test objects live
 testObjectFolder = 'Journey Candidate Profile/Tabs/IT Skills and Interest/'
@@ -77,6 +77,8 @@ tooltipText = [
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []
+
+WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs/a_IT Skills and Interest'))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -110,10 +112,22 @@ requiredFieldMsgs.each({
 		fieldList.add(it.key)
 	})
 
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], 
+		FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Journey Candidate Profile/Tabs/IT Skills and Interest/input_IT Job Categories'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+	object = 'Journey Candidate Profile/Tabs/IT Skills and Interest/input_IT Proficiencies'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+	object = 'Journey Candidate Profile/Tabs/IT Skills and Interest/input_Python'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
+
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
 if (varIT_comments != null) {
 	object = 'Object Repository/Journey Candidate Profile/Tabs/IT Skills and Interest/textarea_IT Comments'

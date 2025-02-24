@@ -21,6 +21,10 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
+if(GlobalVariable.fastPath) {
+	return
+}
+
 outFile = GlobalVariable.outFile
 
 pageLinks = varPageLinks

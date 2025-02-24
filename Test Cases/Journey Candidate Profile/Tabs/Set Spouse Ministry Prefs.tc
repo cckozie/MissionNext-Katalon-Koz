@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Spouse Ministry Prefs</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>51890252-882c-44be-a791-e3be05539522</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>98f0a26c-bfee-4cd0-a216-4d4f7f49d7b4</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>98f0a26c-bfee-4cd0-a216-4d4f7f49d7b4</id>
+      <masked>false</masked>
+      <name>varSpouse_preferences_comment</name>
+   </variable>
+</TestCaseEntity>

@@ -22,6 +22,10 @@ import java.io.IOException;
 import org.apache.commons.lang3.StringUtils
 import javax.swing.*;
 
+if(GlobalVariable.fastPath) {
+	return
+}
+
 BufferedReader reader;
 checked = []
 
