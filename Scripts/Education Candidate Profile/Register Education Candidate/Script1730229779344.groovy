@@ -219,8 +219,10 @@ object = 'Object Repository/Education Candidate Profile/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
-    WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
+    pages = WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
         FailureHandling.STOP_ON_FAILURE)
+
+	if(pages.size() == 0 || pages == 'All') {
 
         success = WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
 
@@ -246,6 +248,7 @@ if (!(registerOnly)) {
 			outFile.append(outText)
 
 		}
+	}
 }
 
 //WebUI.closeBrowser()

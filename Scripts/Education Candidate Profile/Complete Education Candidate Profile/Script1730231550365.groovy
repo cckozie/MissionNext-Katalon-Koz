@@ -186,15 +186,20 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Availability' in pages)) {
 if (((pages.size() == 0) || ('All' in pages)) || ('Preferences' in pages)) {
 	
     // Complete the Preferences tab
+	if(!GlobalVariable.fastPath) {
     // Get the positions and regions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/preferred positions.csv
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
-
-    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
-            , ('varSelections') : 'positions'], FailureHandling.STOP_ON_FAILURE)
-
-    regions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
-            , ('varSelections') : 'regions'], FailureHandling.STOP_ON_FAILURE)
-
+	    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+	
+	    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
+	            , ('varSelections') : 'positions'], FailureHandling.STOP_ON_FAILURE)
+	
+	    regions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
+	            , ('varSelections') : 'regions'], FailureHandling.STOP_ON_FAILURE)
+	} else {
+		positions = ''
+		regions = ''
+	}
+	
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Preferences'), [('varPositions') : positions, ('varRegions') : regions], 
         FailureHandling.STOP_ON_FAILURE)
@@ -253,12 +258,17 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages))
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in pages)) {
 
     // Complete the Spouse Service Prefs tab
-    // Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Service Prefs'))
+	if(!GlobalVariable.fastPath) {
+	    // Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
+	    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Service Prefs'))
+	
+	    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse service prefs.csv'
+	            , ('varSelections') : 'Spouse Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
 
-    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse service prefs.csv'
-            , ('varSelections') : 'Spouse Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
-
+	} else {
+		positions = ''
+	}
+	
     spouse_preferences_comment = 'Willing to consider other opportunities'
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Service Prefs'), [('varSpouse_preferred_prefs') : positions
@@ -269,13 +279,18 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in page
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pages)) {
 
     // Complete the Spouse Teaching Prefs tab
+	if(!GlobalVariable.fastPath) {
     // Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
-    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Teaching Prefs'))
-
-    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse teaching prefs.csv'
-            , ('varSelections') : 'Spouse Preferred Education Positions'], FailureHandling.STOP_ON_FAILURE)
-
-    spouse_education_preferences_comment = 'Willing to consider other positions.'
+	    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Teaching Prefs'))
+	
+	    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/spouse teaching prefs.csv'
+	            , ('varSelections') : 'Spouse Preferred Education Positions'], FailureHandling.STOP_ON_FAILURE)
+	
+	} else {
+		positions = ''
+	}
+	
+	spouse_education_preferences_comment = 'Willing to consider other positions.'
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Teaching Prefs'), [('varSpouse_preferred_education_positions') : positions
             , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.STOP_ON_FAILURE)
@@ -311,3 +326,4 @@ if (!(called)) {
     //	WebUI.closeBrowser()
 }
 
+return pages

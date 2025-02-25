@@ -20,7 +20,7 @@ import javax.swing.*;
 
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Contact Info', 'Experience', 'IT Skills and Interest', 'Spouse Info','Spouse Ministry Prefs']
+pages = []
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username

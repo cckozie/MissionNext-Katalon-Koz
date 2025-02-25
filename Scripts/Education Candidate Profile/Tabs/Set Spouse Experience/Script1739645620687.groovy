@@ -25,7 +25,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest04') {
+if (username != 'cktest04ec') {
 	println('The Execution Profile must be set to "Education Candidate"')
 
 	System.exit(0)
