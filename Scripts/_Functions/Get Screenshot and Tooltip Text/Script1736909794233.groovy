@@ -41,16 +41,16 @@ if(GlobalVariable.fastPath) {
 //Execute the screenshot and save to local machine
 //Call Get Toolipt Text to get the text for each field and save to CSV file on local machine
 
-
-frame = new JFrame("");
-JPanel p = new JPanel();
-JLabel l = new JLabel('Getting screenshot and tooltip text...', SwingConstants.CENTER);
-frame.add(l);
-frame.setSize(300, 100);
-frame.setLocation(600, 0);
-frame.setAlwaysOnTop (true)
-frame.show();
-
+if(!GlobalVariable.testSuiteRunning) {
+	frame = new JFrame("");
+	JPanel p = new JPanel();
+	JLabel l = new JLabel('Getting screenshot and tooltip text...', SwingConstants.CENTER);
+	frame.add(l);
+	frame.setSize(300, 100);
+	frame.setLocation(600, 0);
+	frame.setAlwaysOnTop (true)
+	frame.show();
+}
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -142,8 +142,9 @@ if (tooltipMap.size() > 0) {
 // Take and save the screenshot
 WebUI.takeFullPageScreenshot(fileImage)
 
-frame.dispose()
-
+if(!GlobalVariable.testSuiteRunning) {
+	frame.dispose()
+}
 
 return tooltipMap
 

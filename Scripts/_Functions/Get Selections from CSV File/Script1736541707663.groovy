@@ -35,15 +35,16 @@ String line = reader.readLine();
 
 include = false
 
-frame = new JFrame("");
-JPanel p = new JPanel();
-JLabel l = new JLabel('Loading selections from file...', SwingConstants.CENTER);
-frame.add(l);
-frame.setSize(300, 100);
-frame.setLocation(600, 0);
-frame.setAlwaysOnTop (true)
-frame.show();
-
+if(!GlobalVariable.testSuiteRunning) {
+	frame = new JFrame("");
+	JPanel p = new JPanel();
+	JLabel l = new JLabel('Loading selections from file...', SwingConstants.CENTER);
+	frame.add(l);
+	frame.setSize(300, 100);
+	frame.setLocation(600, 0);
+	frame.setAlwaysOnTop (true)
+	frame.show();
+}
 
 	
 while (line != null) {
@@ -83,7 +84,9 @@ while (line != null) {
 //	WebUI.delay(1)
 }
 
-frame.dispose()
+if(!GlobalVariable.testSuiteRunning) {
+	frame.dispose()
+}
 
 reader.close();
 println(checked)
