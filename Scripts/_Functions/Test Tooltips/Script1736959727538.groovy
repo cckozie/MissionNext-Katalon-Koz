@@ -108,31 +108,10 @@ for (def it : tooltips) {
         println(found)
 
         if (found != null) {
-            foundStr = found.toString()
+			pctF = WebUI.callTestCase(findTestCase('_Functions/Find Image Percent Match'), [('varFound') : found], 
+				FailureHandling.OPTIONAL)
 
-            matchP = foundStr.indexOf('%')
-			
-			if(matchP >= 0) {
-
-	            println(matchP)
-	
-	            pct = foundStr.substring(matchP + 1, matchP + 6)
-
-				pctF = pct.toFloat()
-				
-			} else {
-				matchP = foundStr.indexOf('S:')
-				
-				pct = foundStr.substring(matchP + 2, matchP + 6)
-				
-				println(pct)
-				
-				pctF = (Float.parseFloat(pct) * 100).round(2)
-				
-				println(pctF)
-			}
-			
-           outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pctF) + '%')
+			outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pctF) + '%')
 			
 			min = 80
 			

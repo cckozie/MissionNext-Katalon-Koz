@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Find Image Percent Match</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8c6b0d33-ec20-4dc5-8527-c9c7fc5b5829</testCaseGuid>
+</TestCaseEntity>

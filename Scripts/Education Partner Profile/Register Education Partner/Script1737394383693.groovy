@@ -158,21 +158,14 @@ if(!GlobalVariable.fastPath) {
 	    println(found)
 	
 	    if (found != null) {
-	        foundStr = found.toString()
-	
-	        matchP = foundStr.indexOf('%')
-	
-	        println(matchP)
-	
-	        pct = foundStr.substring(matchP + 1, matchP + 6)
-	
-	        outText = (('+++ Image match for email to customer support is ' + pct) + '%')
-	
-	        pctF = pct.toFloat()
-	
+			pctF = WebUI.callTestCase(findTestCase('_Functions/Find Image Percent Match'), [('varFound') : found],
+				FailureHandling.OPTIONAL)
+
+			outText = (('+++ Image match for email to customer support is ' + pctF) + '%')
+		
 	        min = 80
 	
-	        if (pct.toFloat() < min.toFloat()) {
+	        if (pctF.toFloat() < min.toFloat()) {
 	            outText = (outText + ' <<<<')
 	        }
 	    } else {
