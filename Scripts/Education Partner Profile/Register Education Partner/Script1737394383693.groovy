@@ -97,12 +97,13 @@ requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 charact
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
-//================================== Preopen the email app for testing the link for Custstomer Support 
-File file = new File('/Applications/Microsoft Outlook.app')
+if(!GlobalVariable.fastPath) {
+	//================================== Preopen the email app for testing the link for Custstomer Support 
+	File file = new File('/Applications/Microsoft Outlook.app')
+	Desktop.getDesktop().open(file)
+}
 
-Desktop.getDesktop().open(file)
-
-//================================== Delete any existing emails ====================================
+//================================== Delete any existing MN emails ====================================
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
 
 //================================== Create the education partner ==================================
@@ -130,89 +131,90 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
     FailureHandling.STOP_ON_FAILURE)
 
-// Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
-Screen s = new Screen()
-
-object = 'Object Repository/Education Partner Profile/Register/a_Customer Support'
-
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.delay(1)
-//Start robot
-Robot robot = new Robot()
-
-myImage = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/Email Customer Support.png'
-
-f = new File(myImage)
-
-println(f)
-
-if (f.exists()) {
-    println('Looking for ' + myImage)
-
-    Pattern icn = new Pattern(myImage).similar(0.10)
-
-    found = s.exists(icn)
-
-    println(found)
-
-    if (found != null) {
-        foundStr = found.toString()
-
-        matchP = foundStr.indexOf('%')
-
-        println(matchP)
-
-        pct = foundStr.substring(matchP + 1, matchP + 6)
-
-        outText = (('+++ Image match for email to customer support is ' + pct) + '%')
-
-        pctF = pct.toFloat()
-
-        min = 80
-
-        if (pct.toFloat() < min.toFloat()) {
-            outText = (outText + ' <<<<')
-        }
-    } else {
-        outText = '--- Unable to find image for email to customer support'
-    }
-    
-    println(outText)
-
-    outFile.append(outText + '\n')
-} else {
-    outText = ('Unable to find the image file ' + myImage)
-
-    outFile.append(outText + '\n')
-
-    println(outText)
-
-    KeywordUtil.markError('\n' + outText)
+if(!GlobalVariable.fastPath) {
+	// Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
+	Screen s = new Screen()
+	
+	object = 'Object Repository/Education Partner Profile/Register/a_Customer Support'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.delay(1)
+	//Start robot
+	Robot robot = new Robot()
+	
+	myImage = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/Email Customer Support.png'
+	
+	f = new File(myImage)
+	
+	println(f)
+	
+	if (f.exists()) {
+	    println('Looking for ' + myImage)
+	
+	    Pattern icn = new Pattern(myImage).similar(0.10)
+	
+	    found = s.exists(icn)
+	
+	    println(found)
+	
+	    if (found != null) {
+	        foundStr = found.toString()
+	
+	        matchP = foundStr.indexOf('%')
+	
+	        println(matchP)
+	
+	        pct = foundStr.substring(matchP + 1, matchP + 6)
+	
+	        outText = (('+++ Image match for email to customer support is ' + pct) + '%')
+	
+	        pctF = pct.toFloat()
+	
+	        min = 80
+	
+	        if (pct.toFloat() < min.toFloat()) {
+	            outText = (outText + ' <<<<')
+	        }
+	    } else {
+	        outText = '--- Unable to find image for email to customer support'
+	    }
+	    
+	    println(outText)
+	
+	    outFile.append(outText + '\n')
+	} else {
+	    outText = ('Unable to find the image file ' + myImage)
+	
+	    outFile.append(outText + '\n')
+	
+	    println(outText)
+	
+	    KeywordUtil.markError('\n' + outText)
+	}
+	
+	// Close the email window and app
+	WebUI.delay(1)
+	
+	//Take the Don't Save option
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_ESCAPE)
+	
+	robot.keyRelease(KeyEvent.VK_ESCAPE)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Quit the app
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_Q)
+	
+	robot.keyRelease(KeyEvent.VK_Q)
+	
+	robot.keyRelease(KeyEvent.VK_META)
 }
-
-// Close the email window and app
-WebUI.delay(1)
-
-//Take the Don't Save option
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_ESCAPE)
-
-robot.keyRelease(KeyEvent.VK_ESCAPE)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-WebUI.delay(1)
-
-//Quit the app
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_Q)
-
-robot.keyRelease(KeyEvent.VK_Q)
-
-robot.keyRelease(KeyEvent.VK_META)
 
 // Click the other hyperlinks and verify pages opened
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'], 

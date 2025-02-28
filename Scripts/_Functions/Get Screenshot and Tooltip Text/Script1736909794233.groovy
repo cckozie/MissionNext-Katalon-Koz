@@ -41,6 +41,7 @@ if(GlobalVariable.fastPath) {
 //Execute the screenshot and save to local machine
 //Call Get Toolipt Text to get the text for each field and save to CSV file on local machine
 
+
 frame = new JFrame("");
 JPanel p = new JPanel();
 JLabel l = new JLabel('Getting screenshot and tooltip text...', SwingConstants.CENTER);

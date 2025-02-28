@@ -114,7 +114,15 @@ requiredFieldMsgs.each({
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Education Partner Profile/Tabs/Positions Needed/checkbox_Administrator'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+	object = 'Education Partner Profile/Tabs/Positions Needed/checkbox_English'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
 
 if (varAvailable_other_positions != null) {
 	object = 'Object Repository/Education Partner Profile/Tabs/Positions Needed/textarea_Other Available Positions'
@@ -130,5 +138,6 @@ if (varOther_experience_comment != null) {
 
 
 
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/Positions Needed/button_Complete Submit'))
+object = 'Object Repository/Education Partner Profile/Tabs/Positions Needed/button_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

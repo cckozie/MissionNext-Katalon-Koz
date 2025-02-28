@@ -82,6 +82,7 @@ if(dashboard) {
 		WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
 }
 
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	// Complete the Contact Info tab
 	key_contact_phone = '952-442-1703'
@@ -101,6 +102,7 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 }
 
 
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'School Info' in pages) {
 	// Complete the School Info tab
 	description = 'The Kosieracki Christian K-12 School'
@@ -130,12 +132,23 @@ if(pages.size() == 0 || 'All' in pages || 'School Info' in pages) {
 			, ('varHide_listing') : hide_listing, ('varReason_for_hiding') : reason_for_hiding], FailureHandling.STOP_ON_FAILURE)
 }
 
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Positions Needed' in pages) {
 	//Complete the Positions Needed tab
-	available_positions = ['Assistant Principal', 'Principal', 'Childcare Director', 'English Teacher', 'Manager, Business']
-	
-	experience_preferred = ['Administrator', 'Non-Traditional', 'Teacher\'s Aide', 'Computer Science','ESL']
-	
+	if(!GlobalVariable.fastPath) {
+		
+		WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
+		
+		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/Journey Partner Forms/IT Positions.csv
+		available_positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Education Partner Forms/Positions Needed.csv', ('varSelections') : 'Available Positions'], FailureHandling.STOP_ON_FAILURE)
+		
+		experience_preferred = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Education Partner Forms/Positions Needed.csv', ('varSelections') : 'Experience Preferred'], FailureHandling.STOP_ON_FAILURE)
+	} else {
+		available_positions = ''
+		experience_preferred = ''
+	}
 	available_other_positions = 'None at this time'
 	
 	other_experience_comment = 'Will consider internships as work experience.'
@@ -144,7 +157,8 @@ if(pages.size() == 0 || 'All' in pages || 'Positions Needed' in pages) {
 		, ('varExperience_preferred') : experience_preferred, ('varAvailable_other_positions') : available_other_positions
 		, ('varOther_experience_comment') : other_experience_comment], FailureHandling.OPTIONAL)
 }
-	
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {
 //Complete the Service Options tab
 	
@@ -160,6 +174,7 @@ if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {
 }
 	
 	
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	//Complete the Readiness tab
 	process_stage = ['I am actively investigating missions', 'I am ready to select a ministry']
@@ -183,6 +198,24 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 		('varRelocation') : relocation], FailureHandling.OPTIONAL)
 }
 
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if(pages.size() == 0 || 'All' in pages || 'Admin Info' in pages) {	//Can't be last because no required entries
+	// Complete the Admin Info tab
+	mission_statement = 'Will submit by email.'
+	
+	meet_christian_school_qualifications = 'Not sure. Contact MissionNext Education'
+	
+	partnership_agreement = []
+	
+	terms_and_conditions = []
+		
+	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Admin Info'), [('varMission_statement') : mission_statement
+		, ('varMeet_christian_school_qualifications') : meet_christian_school_qualifications
+		, ('varPartnership_agreement') : partnership_agreement, ('varTerms_and_conditions') : terms_and_conditions]
+		, FailureHandling.STOP_ON_FAILURE)
+}
+
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 	//Complete the Match Filters tab
 	degree = ['No']
@@ -203,18 +236,3 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 		('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.OPTIONAL)
 }
 
-if(pages.size() == 0 || 'All' in pages || 'Admin Info' in pages) {
-	// Complete the Admin Info tab
-	mission_statement = 'Will submit by email.'
-	
-	meet_christian_school_qualifications = 'Not sure. Contact MissionNext Education'
-	
-	partnership_agreement = []
-	
-	terms_and_conditions = []
-		
-	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Admin Info'), [('varMission_statement') : mission_statement
-		, ('varMeet_christian_school_qualifications') : meet_christian_school_qualifications
-		, ('varPartnership_agreement') : partnership_agreement, ('varTerms_and_conditions') : terms_and_conditions]
-		, FailureHandling.STOP_ON_FAILURE)
-}

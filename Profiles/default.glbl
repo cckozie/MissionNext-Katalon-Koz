@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>fastPath</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

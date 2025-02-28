@@ -117,7 +117,15 @@ if (varNeed_specific_it_positions == 'Yes') {
 	}
 }
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Journey Partner Profile/Tabs/Ministry Prefs/input_Bible Teaching'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+	object = 'Journey Partner Profile/Tabs/Ministry Prefs/input_Bible Translation'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
 
 if (varOther_people_group != null) {
 	object = 'Object Repository/Journey Partner Profile/Tabs/Ministry Prefs/textarea_Other People Group'

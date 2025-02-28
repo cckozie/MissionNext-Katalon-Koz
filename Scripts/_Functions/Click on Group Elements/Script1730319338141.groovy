@@ -72,7 +72,6 @@ for(i = 0; i < varXpaths.size(); i++) {
 				
 			}
 		}
-		myObj = WebUI.convertWebElementToTestObject(element) //Convert the element to a test object
 		
 		myType = element.getAttribute("type")	//We need to know if it's checkbox or radio button
 		
@@ -92,20 +91,20 @@ for(i = 0; i < varXpaths.size(); i++) {
 				}
 			if(toggle && myStatus && inList) {
 				println('Toggling off ' + myValue)
-				click(myObj)
+				click(element)
 //				WebUI.delay(1)
 				myStatus = false
 			}
 			if(!myStatus && inList || myStatus && !inList) {
 				if(debug) {println('Clicking ' + myValue)}
 					println('Clicking ' + myValue)
-					click(myObj)
+					click(element)
 			}
 			
 		//If it's a radio button, then just click it if it's the one
 		} else { 		//Must be radio button
 			if(inList) {
-				click(myObj)
+				click(element)
 			}
 		}
 	}
@@ -113,12 +112,12 @@ for(i = 0; i < varXpaths.size(); i++) {
 
 frame.dispose()
 
-def scrollToObject(def object) {
-	println(('Converting ' + object) + ' to web element')
-
-	element = WebUiCommonHelper.findWebElement(object, 1)
-	
+def scrollToObject(def element) {
 	loc = element.getLocation()
+	
+	if(debug) {
+		println('Location is ' + loc)
+	}
 
 	y = loc.getY()
 
@@ -137,9 +136,9 @@ def scrollToObject(def object) {
 	}
 }
 
-def click(def object) {
-	scrollToObject(object)
+def click(def elem) {
+	scrollToObject(elem)
 
-	WebUI.click(object)
+	elem.click()
 }
 

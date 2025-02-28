@@ -86,7 +86,7 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 }
 
 //Go to the Match Filters tab
-//WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Match Filters'))
+WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Match Filters'))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)

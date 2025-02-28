@@ -108,7 +108,16 @@ requiredFieldMsgs.each({
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Journey Partner Profile/Tabs/IT Positions/input_Developer, Applications'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs//btn_Complete Submit'))
+	object = 'Journey Partner Profile/Tabs/IT Positions/input_Python'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
+
+object = 'Object Repository/Journey Partner Profile/Tabs//btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

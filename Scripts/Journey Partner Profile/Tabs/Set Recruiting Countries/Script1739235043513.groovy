@@ -80,6 +80,8 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Recruiting Countries'))
 }
 
+WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Recruiting Countries'))
+
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
@@ -105,7 +107,16 @@ requiredFieldMsgs.each({
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+if(!GlobalVariable.fastPath) {
+	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
+} else {
+	object = 'Journey Partner Profile/Tabs/Recruiting Countries/input_United States'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs//btn_Complete Submit'))
+	object = 'Journey Partner Profile/Tabs/Recruiting Countries/input_Brazil'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+}
+
+object = 'Object Repository/Journey Partner Profile/Tabs//btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

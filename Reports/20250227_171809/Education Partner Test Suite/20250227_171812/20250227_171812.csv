@@ -1,0 +1,95 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Education Partner Test Suite,Chrome 133.0.0.0,,,27-02-2025 17:25:14,27-02-2025 17:30:36,5m - 21.504s,ERROR
+,,,,,,,
+Test Cases/Education Partner Profile/Register Education Partner,Chrome 133.0.0.0,,,27-02-2025 17:25:14,27-02-2025 17:31:01,5m - 46.794s,ERROR
+username = username,Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.094s,PASSED
+"if (username != ""cktest06ep"")",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.000s,PASSED
+registerOnly = false,Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+domain = domain,Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+username = username,Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"url = ""https://education."" + domain + ""/signup/organization""",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.002s,PASSED
+outFile = new java.io.File(((/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner on  + domain) + .txt)),Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.002s,PASSED
+outFile = outFile,Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"outFile.write(""Testing Register Education Partner on "" + domain + "".
+"")",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.003s,PASSED
+"tooltipImagePath = ""/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/""",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"testObjectFolder = ""Education Partner Profile/Register/""",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"tooltips = [""dummy"":""dummy"", ""Username"":""img_Username_field-tooltip"", ""Password"":""img_Password_field-tooltip"", ""Key Contact Email"":""img_Key Contact Email_field-tooltip"", ... ]",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"tooltipText = [""Username"":""Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Password"":""The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase."", ... ]",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.000s,PASSED
+"pageLinks = [""Affiliated Organizations"":""Affiliated Organizations"", ""countries by region"":""Countries by Region"", ""Partnership Agreement"":""Partnership Agreement"", ... ]",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.001s,PASSED
+"requiredFieldMsgs = [""Username"":""Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Password"":""The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase."", ... ]",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:15,0.000s,PASSED
+"callTestCase(findTestCase(""Admin/Delete User""), [""varUsername"":username], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:25:15,27-02-2025 17:25:25,10.075s,PASSED
+if (!(fastPath)),Chrome 133.0.0.0,,,27-02-2025 17:25:25,27-02-2025 17:25:25,0.244s,PASSED
+"callTestCase(findTestCase(""_Functions/Delete Emails""), [:], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:25:25,27-02-2025 17:25:27,1.367s,PASSED
+openBrowser(url),Chrome 133.0.0.0,,,27-02-2025 17:25:27,27-02-2025 17:25:32,5.890s,PASSED
+maximizeWindow(),Chrome 133.0.0.0,,,27-02-2025 17:25:32,27-02-2025 17:25:33,0.366s,PASSED
+navigateToUrl(url),Chrome 133.0.0.0,,,27-02-2025 17:25:33,27-02-2025 17:25:34,1.530s,PASSED
+waitForPageLoad(10),Chrome 133.0.0.0,,,27-02-2025 17:25:34,27-02-2025 17:25:34,0.006s,PASSED
+"tooltipTextMap = callTestCase(findTestCase(""_Functions/Get Screenshot and Tooltip Text""), [""varExtension"":""Register""], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:25:34,27-02-2025 17:25:38,3.947s,PASSED
+tooltipTextMap.each({ -> ... }),Chrome 133.0.0.0,,,27-02-2025 17:25:38,27-02-2025 17:25:38,0.003s,PASSED
+driver = getWebDriver(),Chrome 133.0.0.0,,,27-02-2025 17:25:38,27-02-2025 17:25:38,0.000s,PASSED
+action = new org.openqa.selenium.interactions.Actions(driver),Chrome 133.0.0.0,,,27-02-2025 17:25:38,27-02-2025 17:25:38,0.003s,PASSED
+"callTestCase(findTestCase(""_Functions/Test Tooltips""), [""varTooltipImagePath"":tooltipImagePath, ""varTooltips"":tooltips, ""varTooltipText"":tooltipText, ""varTestObjectFolder"":testObjectFolder, ... ], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:25:38,27-02-2025 17:25:51,12.717s,PASSED
+if (!(fastPath)),Chrome 133.0.0.0,,,27-02-2025 17:25:51,27-02-2025 17:25:55,3.685s,PASSED
+"callTestCase(findTestCase(""_Functions/Test External Links""), [""varPageLinks"":pageLinks, ""varObjectPath"":""Object Repository/Education Partner Profile/Register/""], OPTIONAL)",Chrome 133.0.0.0,,,27-02-2025 17:25:55,27-02-2025 17:26:36,41.154s,PASSED
+"object = ""Education Partner Profile/Register/button_Sign up""",Chrome 133.0.0.0,,,27-02-2025 17:26:36,27-02-2025 17:26:36,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""click"", ""varObject"":object], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:36,27-02-2025 17:26:39,3.566s,PASSED
+"fieldList = [""Username"", ""Password"", ""Key Contact Email""]",Chrome 133.0.0.0,,,27-02-2025 17:26:39,27-02-2025 17:26:39,0.000s,PASSED
+"outText = ""Verifying the field messages for "" + fieldList + "".
+""",Chrome 133.0.0.0,,,27-02-2025 17:26:39,27-02-2025 17:26:39,0.001s,PASSED
+outFile.append(outText),Chrome 133.0.0.0,,,27-02-2025 17:26:39,27-02-2025 17:26:39,0.001s,PASSED
+"callTestCase(findTestCase(""_Functions/Test Field Error Messages""), [""varFieldList"":fieldList, ""varRequiredFieldMsgs"":requiredFieldMsgs], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:39,27-02-2025 17:26:40,0.292s,PASSED
+"object = ""Education Partner Profile/Register/input_Username""",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:40,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":username], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:40,0.156s,PASSED
+"object = ""Education Partner Profile/Register/input_Password""",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:40,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setEncryptedText"", ""varObject"":object, ""varParm1"":password], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:40,0.111s,PASSED
+"object = ""Education Partner Profile/Register/input_Key Contact Email""",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:40,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":email], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:40,27-02-2025 17:26:41,1.150s,PASSED
+"object = ""Education Partner Profile/Register/button_Sign up""",Chrome 133.0.0.0,,,27-02-2025 17:26:41,27-02-2025 17:26:41,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""click"", ""varObject"":object], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:41,27-02-2025 17:26:44,2.616s,PASSED
+waitForPageLoad(10),Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.005s,PASSED
+"fieldList = [""Key Contact First Name"", ""Key Contact Last Name"", ""Organization"", ""Description"", ""Website Address"", ""Meet Christian School Qualifications"", ""Partnership Agreement"", ""Terms and Conditions""]",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.001s,PASSED
+"outText = ""Verifying the field messages for "" + fieldList + "".
+""",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.000s,PASSED
+outFile.append(outText),Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Test Field Error Messages""), [""varFieldList"":fieldList, ""varRequiredFieldMsgs"":requiredFieldMsgs], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.368s,PASSED
+"object = ""Education Partner Profile/Register/input_Password""",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setEncryptedText"", ""varObject"":object, ""varParm1"":password], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.102s,PASSED
+"object = ""Education Partner Profile/Register/input_Key Contact First Name""",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":first_name], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.118s,PASSED
+"object = ""Education Partner Profile/Register/input_Key Contact Last Name""",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:44,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":last_name], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:44,27-02-2025 17:26:45,1.145s,PASSED
+"object = ""Education Partner Profile/Register/input_Organization""",Chrome 133.0.0.0,,,27-02-2025 17:26:45,27-02-2025 17:26:45,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":organization], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:45,27-02-2025 17:26:46,0.116s,PASSED
+"object = ""Education Partner Profile/Register/input_Abbreviation""",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.001s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":abbreviation], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.108s,PASSED
+"object = ""Education Partner Profile/Register/select_World Region""",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.001s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""selectOptionByValue"", ""varObject"":object, ""varParm1"":world_region], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.110s,PASSED
+"object = ""Education Partner Profile/Register/select_Country""",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""selectOptionByValue"", ""varObject"":object, ""varParm1"":country], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.105s,PASSED
+"object = ""Education Partner Profile/Register/textarea_Description""",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":description], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.109s,PASSED
+"website = ""https://"" + domain",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.000s,PASSED
+"object = ""Education Partner Profile/Register/input_Website Address""",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:46,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":website], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:46,27-02-2025 17:26:47,1.168s,PASSED
+orgs = affiliated_orgs,Chrome 133.0.0.0,,,27-02-2025 17:26:47,27-02-2025 17:26:47,0.000s,PASSED
+for (def org : orgs),Chrome 133.0.0.0,,,27-02-2025 17:26:47,27-02-2025 17:26:47,0.302s,PASSED
+"object = ""Education Partner Profile/Register/select_School Qualifications""",Chrome 133.0.0.0,,,27-02-2025 17:26:47,27-02-2025 17:26:47,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""selectOptionByValue"", ""varObject"":object, ""varParm1"":meet_qualifications], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:47,27-02-2025 17:26:48,0.102s,PASSED
+"object = ""Education Partner Profile/Register/select_How did you hear about MissionNext""",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""selectOptionByValue"", ""varObject"":object, ""varParm1"":learn_about], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.098s,PASSED
+"object = ""Object Repository/Education Partner Profile/Register/textarea_Referral or Other Comment""",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""setText"", ""varObject"":object, ""varParm1"":other_comment], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.115s,PASSED
+"object = ""Education Partner Profile/Register/checkbox_Partnership Agreement""",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""click"", ""varObject"":object], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.098s,PASSED
+"object = ""Education Partner Profile/Register/checkbox_Terms and Conditions""",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:48,0.000s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""click"", ""varObject"":object], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:48,27-02-2025 17:26:49,1.131s,PASSED
+delay(2),Chrome 133.0.0.0,,,27-02-2025 17:26:49,27-02-2025 17:26:51,2.007s,PASSED
+"object = ""Object Repository/Education Partner Profile/Register/button_Sign up""",Chrome 133.0.0.0,,,27-02-2025 17:26:51,27-02-2025 17:26:51,0.001s,PASSED
+"callTestCase(findTestCase(""_Functions/Perform Action""), [""varAction"":""click"", ""varObject"":object], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:26:51,27-02-2025 17:28:00,1m - 9.359s,PASSED
+delay(1),Chrome 133.0.0.0,,,27-02-2025 17:28:00,27-02-2025 17:28:01,1.007s,PASSED
+waitForPageLoad(10),Chrome 133.0.0.0,,,27-02-2025 17:28:01,27-02-2025 17:28:01,0.013s,PASSED
+"pending = verifyTextPresent(""Approval Pending"", false, OPTIONAL)",Chrome 133.0.0.0,,,27-02-2025 17:28:01,27-02-2025 17:28:01,0.032s,PASSED
+if (pending),Chrome 133.0.0.0,,,27-02-2025 17:28:01,27-02-2025 17:28:01,0.001s,PASSED
+"callTestCase(findTestCase(""_Functions/Generic Wait for Email""), [""varFromKey"":""chris.kosieracki@missionnext.org"", ""varSubjectKey"":""Approval request"", ""varSearchKey"":username], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,27-02-2025 17:28:01,27-02-2025 17:28:03,1.387s,PASSED
+"if (returnCode == ""found"")",Chrome 133.0.0.0,,,27-02-2025 17:28:03,27-02-2025 17:31:01,2m - 58.298s,ERROR

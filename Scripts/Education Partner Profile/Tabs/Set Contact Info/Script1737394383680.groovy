@@ -42,8 +42,8 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // Define path to tooltip text images
-//tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/tabs/contact info/'
+
 // Define the folder where the tooltip test objects live
 testObjectFolder = 'Education partner Profile/Tabs/Contact Info/'
 
@@ -63,7 +63,7 @@ requiredFieldMsgs = [('Key Contact Phone') : 'The key contact phone field is req
     , ('Organization City') : 'The school city field is required.', ('Province/State/Region') : 'The province state region field is required.']
 
 // Define the page's links and the text to search for on the linked page
-pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
+pageLinks = [('countries by region') : 'Countries by Region', 'Find your International Post Code' : 'International Zip Code']
 
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
@@ -138,7 +138,7 @@ if (varWorld_region != null) {
 
 // Test the external page links
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
-	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
+	('varObjectPath') : 'Object Repository/Education Partner Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/Contact Info/btn_Complete Submit'))
 
