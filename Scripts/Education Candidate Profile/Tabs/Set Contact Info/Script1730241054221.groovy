@@ -89,7 +89,7 @@ if(!GlobalVariable.fastPath) {
 	//Get the actual tooltip text
 	tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 		FailureHandling.STOP_ON_FAILURE)
-	System.exit(1)
+	
 	//For script setup only - finds the required field error messages
 	//WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 	
