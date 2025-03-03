@@ -233,7 +233,7 @@ if (!(registerOnly)) {
 			
 			WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 			
-			optionsComment = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Options-Comment'), FailureHandling.OPTIONAL)
+			optionsComment = WebUI.verifyTextPresent('HELLO, CKTEST04EC KOSIERACKI', false)
 			
 			if(optionsComment) {
 				outText = '+++ Education login after profile creation was successful.\n'

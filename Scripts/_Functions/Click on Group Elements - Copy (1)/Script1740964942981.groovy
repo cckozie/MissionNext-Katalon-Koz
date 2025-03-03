@@ -48,17 +48,15 @@ println(varParms)
 for(i = 0; i < varXpaths.size(); i++) {
 	
 	if(debug) {println('Desired label is "' + varParms[i] + '"')}
-//	if(varParms[i].indexOf('Europe') >= 0) {
-//		println('#############   Europe : ' + varParms[i])
-//	}
+	if(varParms[i].indexOf('Europe') >= 0) {
+		println('#############   Europe : ' + varParms[i])
+	}
 	
 	elements = driver.findElements(By.xpath(varXpaths[i]))
 	
 	element_count = elements.size()
 	
-//	for(element in elements) {
-	elements.each {
-		element = it
+	for(element in elements) {
 		
 		myValue = element.getAttribute("value")
 		

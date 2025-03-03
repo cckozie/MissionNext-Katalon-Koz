@@ -26,7 +26,12 @@ if(GlobalVariable.fastPath) {
 	return
 }
 
+BufferedReader reader;
 checked = []
+
+//reader = new BufferedReader(new FileReader("/Users/cckozie/Documents/MissionNext/" + varFileName));
+reader = new BufferedReader(new FileReader('/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/' + varFileName));
+String line = reader.readLine();
 
 include = false
 
@@ -41,53 +46,49 @@ if(!GlobalVariable.testSuiteRunning) {
 	frame.show();
 }
 
-String[] selections = new File('/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/' + varFileName)
-
-//println(selections)
-//println(selections.size())
-String[] groups = selections.findAll{element -> element.contains('<Group>')}
-//println(groups)
-groupLocs = [:]
-for (group in groups){
-	groupLocs.put(group, selections.findIndexOf{ it == group })
-}
-//println(groupLocs)
-count = groupLocs.size()
-
-myGroup = varSelections
-myGroup = '<Group>' + myGroup + ','
-loc = groupLocs.get(myGroup)
-//println(loc)
-
-sequence = groups.findIndexOf{ it == myGroup}
-//println(sequence)
-
-loc1 = groupLocs.get(groups[sequence]) + 1
-//println(loc1)
-
-if(sequence + 1 < count) {
-	loc2 = groupLocs.get(groups[sequence + 1]) -1
-} else {
-	loc2 = selections.size()-1
-}
-//println(loc2)
-
-myList = selections[loc1+1..loc2]
-//println(myList)
-myList = myList.findAll{element -> element.contains(',y')}
-//println(myList)
-
-myList.each {
-	checked.add(it.substring(1, it.length()-2).replace('�', ''))
-}
-
-checked.each {
-	println(it)
+	
+while (line != null) {
+//	println(line)
+	group = line.indexOf('<Group>')
+//	println(group)
+	if(group >= 0) {
+		selections = line.substring(group + 7,line.length()-1)
+//		println(selections)
+		if(selections == varSelections) {
+			include = true
+		} else {
+			include = false
+		}
+	} else {
+		if (include) {
+//			println(line)
+			comma = line.indexOf(',y')
+			if(comma > 0) {
+				commaCount = StringUtils.countMatches(line, ',')
+				if(commaCount > 1) {
+//					println('Mulitple Commas : ' + line)
+//					line = StringUtils.replaceOnce(line,',','')
+					line = line.replace('"','')
+					label = line.substring(1,line.length()-2)
+				} else {
+					label = line.substring(1,comma)
+				}
+//				println(label);
+				checked.add(label)
+	//			checked.add("'" + label + "'")
+			}
+		}
+	}
+	// read next line
+	line = reader.readLine();
+//	WebUI.delay(1)
 }
 
 if(!GlobalVariable.testSuiteRunning) {
 	frame.dispose()
 }
 
+reader.close();
+//println(checked)
 return checked
 

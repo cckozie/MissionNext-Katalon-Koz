@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = []
+pages = ['Preferences']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -192,7 +192,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Preferences' in pages)) {
 	
 	    positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
 	            , ('varSelections') : 'positions'], FailureHandling.STOP_ON_FAILURE)
-	
+		
 	    regions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'Education Candidate Forms/preferred positions.csv'
 	            , ('varSelections') : 'regions'], FailureHandling.STOP_ON_FAILURE)
 	} else {
