@@ -24,7 +24,7 @@ import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Contact Info', 'Organization Info', 'Service Options', 'Readiness', 'Ministry Prefs', 'IT Positions']
-pages = []
+pages = ['IT Positions']
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username

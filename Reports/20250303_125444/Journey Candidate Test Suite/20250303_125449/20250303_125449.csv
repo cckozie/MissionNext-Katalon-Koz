@@ -1,0 +1,29 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Journey Candidate Test Suite,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:58,16.407s,ERROR
+,,,,,,,
+Test Cases/Journey Candidate Profile/Register Journey Candidate,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:58,16.312s,ERROR
+username = username,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.001s,PASSED
+"if (username != ""cktest05jc"")",Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.000s,PASSED
+registerOnly = false,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.000s,PASSED
+domain = domain,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.001s,PASSED
+username = username,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.001s,PASSED
+"url = ""https://journey."" + domain + ""/signup/candidate""",Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.001s,PASSED
+outFile = new java.io.File(((/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on  + domain) + .txt)),Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.001s,PASSED
+outFile = outFile,Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.000s,PASSED
+"outFile.write(""Testing Register Journey Candidate on "" + domain + "".
+"")",Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:42,0.003s,PASSED
+"callTestCase(findTestCase(""Admin/Delete User""), [""varUsername"":username], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,03-03-2025 12:55:42,03-03-2025 12:55:52,9.995s,PASSED
+"tooltipImagePath = ""/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/""",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.000s,PASSED
+"testObjectFolder = ""Journey Candidate Profile/Register/""",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.001s,PASSED
+"tooltips = [""dummy"":""dummy"", ""Username"":""img_Username_field-tooltip"", ""Email"":""img_Email_field-tooltip"", ""Password"":""img_Password_field-tooltip"", ... ]",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.000s,PASSED
+"tooltipText = [""Username"":""Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Email"":""Your primary email address and must be unique in our database."", ... ]",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.001s,PASSED
+"pageLinks = [""Privacy Policy"":""Privacy Policy"", ""Terms and Conditions"":""Terms and Conditions""]",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.000s,PASSED
+"requiredFieldMsgs = [""Username"":""Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Password"":""The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase."", ... ]",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.000s,PASSED
+"openBrowser("""")",Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:52,0.508s,PASSED
+maximizeWindow(),Chrome 133.0.0.0,,,03-03-2025 12:55:52,03-03-2025 12:55:53,0.365s,PASSED
+navigateToUrl(url),Chrome 133.0.0.0,,,03-03-2025 12:55:53,03-03-2025 12:55:58,4.907s,PASSED
+waitForPageLoad(10),Chrome 133.0.0.0,,,03-03-2025 12:55:58,03-03-2025 12:55:58,0.007s,PASSED
+"tooltipTextMap = callTestCase(findTestCase(""_Functions/Get Screenshot and Tooltip Text""), [""varExtension"":""Register""], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,03-03-2025 12:55:58,03-03-2025 12:55:58,0.141s,PASSED
+driver = getWebDriver(),Chrome 133.0.0.0,,,03-03-2025 12:55:58,03-03-2025 12:55:58,0.000s,PASSED
+action = new org.openqa.selenium.interactions.Actions(driver),Chrome 133.0.0.0,,,03-03-2025 12:55:58,03-03-2025 12:55:58,0.004s,PASSED
+"callTestCase(findTestCase(""_Functions/Test Tooltips""), [""varTooltipImagePath"":tooltipImagePath, ""varTooltips"":tooltips, ""varTooltipText"":tooltipText, ""varTestObjectFolder"":testObjectFolder, ... ], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,03-03-2025 12:55:58,03-03-2025 12:55:58,0.179s,ERROR

@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Education Candidate Test Suite,Chrome 133.0.0.0,,,03-03-2025 13:03:28,03-03-2025 13:04:00,31.718s,FAILED
+,,,,,,,
+Test Cases/Education Candidate Profile/Register Education Candidate,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:04:00,6.163s,FAILED
+username = username,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+"if (username != ""cktest04ec"")",Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+registerOnly = false,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+domain = domain,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+username = username,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+"url = ""https://education."" + domain + ""/signup/candidate""",Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+outFile = new java.io.File(((/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on  + domain) + .txt)),Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+outFile = outFile,Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.000s,PASSED
+"outFile.write(""Testing Register Education Candidate on "" + domain + "".
+"")",Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:53,0.001s,PASSED
+"callTestCase(findTestCase(""Admin/Delete User""), [""varUsername"":username], STOP_ON_FAILURE)",Chrome 133.0.0.0,,,03-03-2025 13:03:53,03-03-2025 13:03:59,5.176s,PASSED
+"tooltipImagePath = ""/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/""",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"testObjectFolder = ""Education Candidate Profile/Register/""",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"tooltips = [""dummy"":""dummy"", ""Username"":""img_Username_field-tooltip"", ""Email"":""img_Email_field-tooltip"", ""Password"":""img_Password_field-tooltip"", ... ]",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"tooltipText = [""Username"":""Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Email"":""Your primary email address and must be unique in our database."", ... ]",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"pageLinks = [""Privacy Policy"":""Privacy Policy"", ""Terms and Conditions"":""Terms and Conditions""]",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"requiredFieldMsgs = [""Username"":""Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address."", ""Password"":""The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase."", ... ]",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.000s,PASSED
+"openBrowser("""")",Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.509s,PASSED
+maximizeWindow(),Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:03:59,0.366s,PASSED
+navigateToUrl(url),Chrome 133.0.0.0,,,03-03-2025 13:03:59,03-03-2025 13:04:00,0.101s,FAILED

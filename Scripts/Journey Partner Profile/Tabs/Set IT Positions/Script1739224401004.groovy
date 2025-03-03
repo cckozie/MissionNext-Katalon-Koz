@@ -77,11 +77,11 @@ requiredFieldMsgs = []
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
 //Log in as Journey Partner if not on dashboard page
-if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?requestUri=/dashboard')) {
+if (!(url) == (('https://journey.' + GlobalVariable.domain) + '/profile?requestUri=/dashboard')) {
     WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
-	
-	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_IT Positions'))
 }
+
+WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_IT Positions'))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -111,7 +111,7 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
 if(!GlobalVariable.fastPath) {
 	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 } else {
-	object = 'Journey Partner Profile/Tabs/IT Positions/input_Developer, Applications'
+	object = 'Journey Partner Profile/Tabs/IT Positions/input_Developer_Applications'
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 	object = 'Journey Partner Profile/Tabs/IT Positions/input_Python'

@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Developer, Applications</name>
+   <name>input_Developer_Applications</name>
    <tag></tag>
    <elementGuidId>38491ae7-f6bb-4821-ae07-0752c16679bf</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>(//input[@id='profile_group-1694886773.315_it_expertise_needed'])[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

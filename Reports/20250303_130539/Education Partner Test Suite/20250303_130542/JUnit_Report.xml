@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Education Partner Test Suite" time="0.415" tests="1" failures="0" errors="1">
+   <testsuite name="Education Partner Test Suite" tests="1" failures="0" errors="1" time="0.415" skipped="0" timestamp="03-03-2025T13:06:29" hostname="cckozie - 192.168.4.43" id="Test Suites/Education Partner Test Suite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20250303_130539/Education Partner Test Suite/20250303_130542"/>
+         <property name="logFiles" value="/Users/cckozie/git/MissionNext-Katalon-Koz/Reports/20250303_130539/Education Partner Test Suite/20250303_130542/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="cckozie - 192.168.4.43"/>
+         <property name="hostAddress" value="192.168.4.43"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="9.7.3.223"/>
+      </properties>
+      <testcase name="Test Cases/Education Partner Profile/Register Education Partner" time="0.262" classname="Test Cases/Education Partner Profile/Register Education Partner" status="ERROR">
+         <error type="ERROR" message="Test Cases/Education Partner Profile/Register Education Partner FAILED.&#xa;Reason:&#xa;org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:&#xa;file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 33: unable to resolve class org.sikuli.script.SikulixForJython&#xa; @ line 33, column 1.&#xa;   import org.sikuli.script.SikulixForJython as SikulixForJython&#xa;   ^&#xa;&#xa;file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen&#xa; @ line 136, column 9.&#xa;   	Screen s = new Screen()&#xa;           ^&#xa;&#xa;file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen&#xa; @ line 136, column 13.&#xa;   	Screen s = new Screen()&#xa;               ^&#xa;&#xa;file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern&#xa; @ line 154, column 14.&#xa;   	    Pattern icn = new Pattern(myImage).similar(0.10)&#xa;                ^&#xa;&#xa;file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern&#xa; @ line 154, column 20.&#xa;   	    Pattern icn = new Pattern(myImage).similar(0.10)&#xa;                      ^&#xa;&#xa;5 errors&#xa;&#xa;	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)&#xa;	at TempTestSuite1741028742610.run(TempTestSuite1741028742610.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[03-03-2025T13:06:29 - [TEST_CASE][ERROR] - Test Cases/Education Partner Profile/Register Education Partner: Test Cases/Education Partner Profile/Register Education Partner FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 33: unable to resolve class org.sikuli.script.SikulixForJython
+ @ line 33, column 1.
+   import org.sikuli.script.SikulixForJython as SikulixForJython
+   ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 9.
+   	Screen s = new Screen()
+           ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 13.
+   	Screen s = new Screen()
+               ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 14.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 20.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                      ^
+
+5 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1741028742610.run(TempTestSuite1741028742610.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[03-03-2025T13:06:29 - [TEST_CASE][ERROR] - Test Cases/Education Partner Profile/Register Education Partner: Test Cases/Education Partner Profile/Register Education Partner FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 33: unable to resolve class org.sikuli.script.SikulixForJython
+ @ line 33, column 1.
+   import org.sikuli.script.SikulixForJython as SikulixForJython
+   ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 9.
+   	Screen s = new Screen()
+           ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 13.
+   	Screen s = new Screen()
+               ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 14.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 20.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                      ^
+
+5 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1741028742610.run(TempTestSuite1741028742610.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[03-03-2025T13:06:29 - [TEST_SUITE][ERROR] - Education Partner Test Suite: Test Cases/Education Partner Profile/Register Education Partner FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 33: unable to resolve class org.sikuli.script.SikulixForJython
+ @ line 33, column 1.
+   import org.sikuli.script.SikulixForJython as SikulixForJython
+   ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 9.
+   	Screen s = new Screen()
+           ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 13.
+   	Screen s = new Screen()
+               ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 14.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 20.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                      ^
+
+5 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1741028742610.run(TempTestSuite1741028742610.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+      <system-err><![CDATA[03-03-2025T13:06:29 - [TEST_SUITE][ERROR] - Education Partner Test Suite: Test Cases/Education Partner Profile/Register Education Partner FAILED.
+Reason:
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 33: unable to resolve class org.sikuli.script.SikulixForJython
+ @ line 33, column 1.
+   import org.sikuli.script.SikulixForJython as SikulixForJython
+   ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 9.
+   	Screen s = new Screen()
+           ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 136: unable to resolve class Screen
+ @ line 136, column 13.
+   	Screen s = new Screen()
+               ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 14.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                ^
+
+file:/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts/Education%20Partner%20Profile/Register%20Education%20Partner/Script1737394383693.groovy: 154: unable to resolve class Pattern
+ @ line 154, column 20.
+   	    Pattern icn = new Pattern(myImage).similar(0.10)
+                      ^
+
+5 errors
+
+	at com.kms.katalon.core.main.ScriptEngine.getScript(ScriptEngine.java:199)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:150)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:180)
+	at TempTestSuite1741028742610.run(TempTestSuite1741028742610.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+   </testsuite>
+</testsuites>

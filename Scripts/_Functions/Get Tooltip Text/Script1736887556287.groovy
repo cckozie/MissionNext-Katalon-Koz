@@ -55,24 +55,35 @@ if (fieldTooltips.size() > 0) {
 
 	labels = driver.findElements(By.xpath('//label'))
 
-	labels.each({
+//	showMore = driver.find_elements_by_class_name('getPhotos')
+//	onlyVisible = filter(lambda x: x.is_displayed(), showMore)
+	
+	println('labels count = ' + labels.size())
+
+	labels.each{
+		if(it.isDisplayed()) {	//Eleminate labels on other tabs
+	
 			label = it.getText().replace('*','')	//Strip off the required field indicator
 			
 			label = label.trim()
-
+	
 			label = label.replace('?','')	//Strip off question marks
-
+	
 			labelLocation = it.getLocation()
-
+	
 			xLocation = labelLocation.getX()
-
+	
 			if (xLocation < rightBorder) {
 				yLocation = labelLocation.getY()
-
+	
 				fieldLabels.put(label, yLocation)
 			}
-		})
-
+		}
+	}
+	
+	println('fieldLabels count = ' + fieldLabels.size())
+	
+	
 //	Match up the tooltips with their associated field labels based on the field and toolip's y (vertical) location	
 	for (def label : fieldLabels) {
 		
