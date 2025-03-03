@@ -4,3 +4,6 @@
 /.settings/
 /.classpath
 .svn/
+Reports/
+Drivers/
+.project
