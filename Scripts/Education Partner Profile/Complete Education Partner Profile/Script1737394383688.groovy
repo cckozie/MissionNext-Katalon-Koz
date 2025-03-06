@@ -28,6 +28,10 @@ import org.openqa.selenium.Keys as Keys
 // Set to page(s) to run, or empty or 'All' to run all pages
 pages = []
 
+if(GlobalVariable.testSuiteRunning) {
+	pages = []
+}
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -98,7 +102,7 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Contact Info'), [('varKey_contact_phone') : key_contact_phone
 			, ('varOrganization_phone') : organization_phone, ('varOrganization_city') : organization_city
 			, ('varProvince_state_region') : province_state_region
-			, ('varWorld_region') : world_region], FailureHandling.STOP_ON_FAILURE)
+			, ('varWorld_region') : world_region], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 
@@ -129,7 +133,7 @@ if(pages.size() == 0 || 'All' in pages || 'School Info' in pages) {
 			, ('varYear_founded') : year_founded, ('varVision_trip') : vision_trip, ('varVision_trip_description') : vision_trip_description
 			, ('varSchool_year_starts') : school_year_starts, ('varSchool_accredited') : school_accredited
 			, ('varStudent_capacity') : student_capacity, ('varWebsite_address') : website_address
-			, ('varHide_listing') : hide_listing, ('varReason_for_hiding') : reason_for_hiding], FailureHandling.STOP_ON_FAILURE)
+			, ('varHide_listing') : hide_listing, ('varReason_for_hiding') : reason_for_hiding], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -155,7 +159,7 @@ if(pages.size() == 0 || 'All' in pages || 'Positions Needed' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Positions Needed'), [('varAvailable_positions') : available_positions
 		, ('varExperience_preferred') : experience_preferred, ('varAvailable_other_positions') : available_other_positions
-		, ('varOther_experience_comment') : other_experience_comment], FailureHandling.OPTIONAL)
+		, ('varOther_experience_comment') : other_experience_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -170,7 +174,7 @@ if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Service Options'), 
 		[('VarTime_commitments') : time_commitments, ('varStart_options') : start_options,
-			('varSchool_terms_available') : school_terms_available], FailureHandling.OPTIONAL)
+			('varSchool_terms_available') : school_terms_available], FailureHandling.CONTINUE_ON_FAILURE)
 }
 	
 	
@@ -195,7 +199,7 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
 		('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
 		('varPerspectives') : perspectives,	('varMissions_experience') : missions_experience, 
-		('varRelocation') : relocation], FailureHandling.OPTIONAL)
+		('varRelocation') : relocation], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -212,7 +216,7 @@ if(pages.size() == 0 || 'All' in pages || 'Admin Info' in pages) {	//Can't be la
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Admin Info'), [('varMission_statement') : mission_statement
 		, ('varMeet_christian_school_qualifications') : meet_christian_school_qualifications
 		, ('varPartnership_agreement') : partnership_agreement, ('varTerms_and_conditions') : terms_and_conditions]
-		, FailureHandling.STOP_ON_FAILURE)
+		, FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -233,6 +237,6 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Match Filters'), [('varDegree') : degree,
 		('varExperience') : experience, ('varCredentials') : credentials, ('varEnglish') : english,
-		('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.OPTIONAL)
+		('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.CONTINUE_ON_FAILURE)
 }
 

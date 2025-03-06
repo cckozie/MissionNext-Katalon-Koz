@@ -77,8 +77,10 @@ tooltipText = [
 // Define the required field missing error message test objects
 requiredFieldMsgs = [:]
 
+
 // Define the page's links and the text to search for on the linked page
-pageLinks = [:]
+pageLinks = [('Partnership Agreement') : 'Partnership Agreement', ('Terms and Conditions') : 'Terms and Conditions']
+
 
 //Go to the Organization Info tab
 WebUI.click(findTestObject('Journey Partner Profile/Tabs/a_Organization Info'))
@@ -93,7 +95,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
-    FailureHandling.OPTIONAL)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
@@ -139,7 +141,7 @@ if (varHide_listing != null) {
 
 // Test the external page links
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
-	('varObjectPath') : 'Object Repository/Journey Candidate Profile/Tabs/Organization Info/'], FailureHandling.OPTIONAL)
+	('varObjectPath') : 'Object Repository/Journey Candidate Profile/Tabs/Organization Info/'], FailureHandling.CONTINUE_ON_FAILURE)
 
 object = 'Journey Partner Profile/Tabs/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object

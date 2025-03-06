@@ -21,6 +21,10 @@ import javax.swing.*
 // Set to page(s) to run, or empty or 'All' to run all pages
 pages = []
 
+if(GlobalVariable.testSuiteRunning) {
+	pages = []
+}
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -89,7 +93,7 @@ if ((((pages.size() == 0) || ('All' in pages)) || ('Contact Info' in pages)) || 
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender, ('varCountry') : country
             , ('varCountry_of_Citizenship') : country_of_citizenship, ('varBirth_year') : birth_year, ('varMarital_status') : marital_status], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -112,7 +116,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Experience' in pages)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Experience'), [('varHighest_degree') : highest_degree
             , ('varDegree_field') : degree_field, ('varClassroom_experience') : classroom_experience, ('varOccupation') : occupation
             , ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -138,7 +142,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Education' in pages)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Education'), [('varFormal_degree') : formal_degree
             , ('varTeaching_credentials') : teaching_credentials, ('varCredential_authority') : credential_authority, ('varPrevious_experience') : previous_experience
             , ('varOther_experience') : other_experience, ('varEnglish_proficiency') : english_proficiency, ('varAdditional_languages') : additional_languages
-            , ('varProficiency') : proficiency], FailureHandling.STOP_ON_FAILURE)
+            , ('varProficiency') : proficiency], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -163,7 +167,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Situation' in pages)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Situation'), [('varProcess_stage') : process_stage
             , ('varBible_training') : bible_training, ('varChurch_affiliated') : church_affiliated, ('varJourney_guide') : journey_guide
             , ('varPerspectives') : perspectives, ('varDescribe_training') : describe_training, ('varChurch_name') : church_name
-            , ('varChurch_involvement') : church_involvement], FailureHandling.STOP_ON_FAILURE)
+            , ('varChurch_involvement') : church_involvement], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -179,7 +183,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Availability' in pages)) {
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Availability'), [('varWhen_available') : when_available
             , ('varTerm_available') : term_available, ('varTime_commitments') : time_commitments, ('varRelocation_options') : relocation_options], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -202,7 +206,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Preferences' in pages)) {
 	
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Preferences'), [('varPositions') : positions, ('varRegions') : regions], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -215,7 +219,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Options/Comment' in pages)) {
     comments = 'I really hope I can get a partially paid position'
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Options-Comment'), [('varPaid_volunteer') : paid_volunteer
-            , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.STOP_ON_FAILURE)
+            , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -235,7 +239,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Info'), [('varSpouse_first_name') : spouse_first_name
             , ('varSpouse_last_name') : spouse_last_name, ('varSpouse_birth_year') : spouse_birth_year, ('varSpouse_citizenship_country') : spouse_citizenship_country
-            , ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.STOP_ON_FAILURE)
+            , ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -251,7 +255,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages))
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Experience'), [('varSpouse_highest_degree_earned') : spouse_highest_degree_earned
             , ('varSpouse_degree_field') : spouse_degree_field, ('varSpouse_occupation') : spouse_occupation, ('varSpouse_an_educator') : spouse_an_educator], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -272,7 +276,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in page
     spouse_preferences_comment = 'Willing to consider other opportunities'
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Service Prefs'), [('varSpouse_preferred_prefs') : positions
-            , ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.STOP_ON_FAILURE)
+            , ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -293,7 +297,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pag
 	spouse_education_preferences_comment = 'Willing to consider other positions.'
 
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Teaching Prefs'), [('varSpouse_preferred_education_positions') : positions
-            , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.STOP_ON_FAILURE)
+            , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -318,7 +322,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) 
             , ('varSpouse_education_credentials') : spouse_education_credentials, ('varSpouse_credential_authority') : spouse_credential_authority
             , ('varSpouse_previous_experience') : spouse_previous_experience, ('varSpouse_other_experience') : spouse_other_experience
             , ('varSpouse_english_proficiency') : spouse_english_proficiency, ('varSpouse_additional_languages') : spouse_additional_languages], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 if (!(called)) {

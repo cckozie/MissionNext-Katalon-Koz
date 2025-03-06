@@ -24,7 +24,11 @@ import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Contact Info', 'Organization Info', 'Service Options', 'Readiness', 'Ministry Prefs', 'IT Positions']
-pages = ['IT Positions']
+pages = []
+
+if(GlobalVariable.testSuiteRunning) {
+	pages = []
+}
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -107,7 +111,7 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Contact Info'), [('varKey_contact_phone') : key_contact_phone
 			, ('varOrganization_phone') : organization_phone, ('varOrganization_city') : organization_city
 			, ('varProvince_state_region') : province_state_region
-			, ('varCountry') : country], FailureHandling.STOP_ON_FAILURE)
+			, ('varCountry') : country], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 //////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -125,7 +129,7 @@ if(pages.size() == 0 || 'All' in pages || 'Organization Info' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Organization Info'), [('varYear_founded') : year_founded
 			, ('varLink_back_url') : link_back_url, ('varHide_listing') : hide_listing
-			, ('varSecurity_explanation') : security_explanation], FailureHandling.STOP_ON_FAILURE)
+			, ('varSecurity_explanation') : security_explanation], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -172,7 +176,7 @@ if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {
 			, ('varShort_term_trip_length') : short_term_trip_length, ('varShort_term_availability') : short_term_availability
 			, ('varShort_term_objective') : short_term_objective, ('varShort_term_statement') : short_term_statement
 			, ('varPreferred_regions') : preferred_regions, ('varLanguages') : languages, ('varOther_languages') : other_languages],
-		FailureHandling.STOP_ON_FAILURE)
+		FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 //////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -192,7 +196,7 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
 		('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
-		('varPerspectives') : perspectives,	('varRelocation') : relocation], FailureHandling.OPTIONAL)
+		('varPerspectives') : perspectives,	('varRelocation') : relocation], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -214,7 +218,7 @@ if(pages.size() == 0 || 'All' in pages || 'Ministry Prefs' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Ministry Prefs'), [('varMinistry_preferences') : preferences
 		, ('varNeed_specific_it_positions') : need_specific_it_positions, ('varOther_people_group') : other_people_group]
-		, FailureHandling.STOP_ON_FAILURE)
+		, FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -235,7 +239,7 @@ if(pages.size() == 0 || 'All' in pages || 'IT Positions' in pages) {
 	}
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set IT Positions'), [('varIT_expertice_needed') : positions
-		, ('varComputer_languages') : languages], FailureHandling.STOP_ON_FAILURE)
+		, ('varComputer_languages') : languages], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 
@@ -252,7 +256,7 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Match Filters')
 		, [('varAffiliated_with_a_church') : affiliated_with_a_church, ('varPaid_volunteer_positions') : paid_volunteer_positions
-	        , ('varMatch_percent_rate') : match_percent_rate, ('varProfile_years') : profile_years], FailureHandling.STOP_ON_FAILURE)
+	        , ('varMatch_percent_rate') : match_percent_rate, ('varProfile_years') : profile_years], FailureHandling.CONTINUE_ON_FAILURE)
 }	
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -269,7 +273,7 @@ if(pages.size() == 0 || 'All' in pages || 'Recruiting Countries' in pages) {
 	}
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Recruiting Countries')
-		, [('varRecruit_from_countries') : countries], FailureHandling.STOP_ON_FAILURE)
+		, [('varRecruit_from_countries') : countries], FailureHandling.CONTINUE_ON_FAILURE)
 }
 	
 	

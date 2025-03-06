@@ -99,8 +99,8 @@ WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : usernam
 
 if(!GlobalVariable.fastPath) {
 	//================================== Preopen the email app for testing the link for Custstomer Support 
-	File file = new File('/Applications/Microsoft Outlook.app')
-	Desktop.getDesktop().open(file)
+	app = 'Microsoft Outlook'
+	WebUI.callTestCase(findTestCase('_Functions/Start Application'), [('varApplication') : app], FailureHandling.STOP_ON_FAILURE)
 }
 
 //================================== Delete any existing MN emails ====================================
@@ -129,7 +129,7 @@ Actions action = new Actions(driver)
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 if(!GlobalVariable.fastPath) {
 	// Click on the Customer Support link and use Sikulix to verify the opening of an email addressed to us
@@ -211,7 +211,7 @@ if(!GlobalVariable.fastPath) {
 
 // Click the other hyperlinks and verify pages opened
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'], 
-    FailureHandling.OPTIONAL)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 // Submit the form with all of the fields empty
 object = 'Education Partner Profile/Register/button_Sign up'
@@ -220,6 +220,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Password', 'Key Contact Email']
 
@@ -228,7 +229,7 @@ outText = (('Verifying the field messages for ' + fieldList) + '.\n')
 outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 // Set username, password, and email and then test for the other missing data error messages
 object = 'Education Partner Profile/Register/input_Username'
@@ -261,7 +262,7 @@ outText = (('Verifying the field messages for ' + fieldList) + '.\n')
 outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 // Fill in the other fields and submit
 object = 'Education Partner Profile/Register/input_Password'

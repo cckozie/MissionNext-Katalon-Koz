@@ -90,12 +90,12 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 // Test the external page link (need to do it up front because some of the xpaths get changed in the further processing
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks,
 	('varObjectPath') : 'Object Repository/Education Partner Profile/Tabs/Admin Info/',
-	('varCallingTab') : 'Object Repository/Education Partner Profile/Tabs/a_Admin Info'], FailureHandling.OPTIONAL)
+	('varCallingTab') : 'Object Repository/Education Partner Profile/Tabs/a_Admin Info'], FailureHandling.CONTINUE_ON_FAILURE)
 
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
-    FailureHandling.OPTIONAL)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 //Enter the admin info fields
 if (varMission_statement != null) {
@@ -133,7 +133,7 @@ requiredFieldMsgs.each({
 	})
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 //Check the required boxes (the checkboxes don't actually have any labels, they are read only as '1')
 parms = ['1', '1']

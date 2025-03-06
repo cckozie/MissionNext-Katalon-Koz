@@ -24,6 +24,10 @@ import java.lang.String as String
 import groovy.time.*
 import java.time.Duration as Duration
 import java.time.Instant as Instant
+import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+KeywordLogger log = new KeywordLogger()
 
 /////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //	Modified to allow fromKey and subjectKey to be lists
@@ -284,6 +288,7 @@ if (messages.length >= msgCount) {
 			if (writeFile) {
 				outFile.append(outText + '\n')
 			}
+			log.logFailed(outText)
 	    }
 	}
 }

@@ -22,6 +22,10 @@ import javax.swing.*;
 // Set to page(s) to run, or empty or 'All' to run all pages
 pages = []
 
+if(GlobalVariable.testSuiteRunning) {
+	pages = []
+}
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -93,7 +97,7 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
 	        , ('varState') : state, ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship
-			, ('varBirth_year') : birth_year, ('varMarital_status') : marital_status], FailureHandling.STOP_ON_FAILURE)
+			, ('varBirth_year') : birth_year, ('varMarital_status') : marital_status], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -114,7 +118,7 @@ if(pages.size() == 0 || 'All' in pages || 'Experience' in pages) {
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Experience'), [('varHighest_degree') : highest_degree
 			, ('varDegree_field') : degree_field, ('varOccupation') : occupation, ('varCross_cultural') : cross_cultural
 			, ('varLife_experience') : life_experience, ('varIT_professional') : it_professional],
-		FailureHandling.STOP_ON_FAILURE)
+		FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -145,7 +149,7 @@ if(pages.size() == 0 || 'All' in pages || 'Situation' in pages) {
 			, ('varPerspectives') : perspectives, ('varMissions_experience') : missions_experience
 			, ('varInterest_in_missionary_training') : interest_in_missionary_training, ('varChurch_affiliated') : church_affiliated
 			, ('varChurch_name') : church_name, ('varChurch_involvement') : church_involvement
-			, ('varJourney_guide') : journey_guide], FailureHandling.STOP_ON_FAILURE)
+			, ('varJourney_guide') : journey_guide], FailureHandling.CONTINUE_ON_FAILURE)
 }
 	
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -179,7 +183,7 @@ WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Availability
 		, ('varLength_of_assignment') : length_of_assignment, ('varShort_term_availability') : short_term_availability
 		, ('varShort_term_objective') : short_term_objective, ('varShort_term_comment') : short_term_comment
 		, ('varTravel_options') : travel_options, ('varRelocation_options') : relocation_options], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -199,7 +203,7 @@ if(pages.size() == 0 || 'All' in pages || 'Service/Comment' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Service-Comment'), [('varPreferred_regions') : preferred_regions
 	        , ('varLanguages') : languages,  ('varAdditional_languages') : additional_languages, ('varVision_trip') : vision_trip
-			, ('varAwareness_trip') : awareness_trip, ('varComments') : comments], FailureHandling.STOP_ON_FAILURE)
+			, ('varAwareness_trip') : awareness_trip, ('varComments') : comments], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -229,7 +233,7 @@ if(pages.size() == 0 || 'All' in pages || 'IT Skills and Interest' in pages) {
 	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set IT Skills and Interest'), [('varIT_job_categories') : categories
 		, ('varIT_proficiencies') : proficiencies, ('varComputer_languages') : languages, 
-		('varIT_comments') : it_comments], FailureHandling.STOP_ON_FAILURE)
+		('varIT_comments') : it_comments], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -247,7 +251,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
 
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Spouse Info'), [('varSpouse_first_name') : spouse_first_name
 			, ('varSpouse_birth_year') : spouse_birth_year, ('varSpouse_citizenship_country') : spouse_citizenship_country
-			, ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.STOP_ON_FAILURE)
+			, ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -276,7 +280,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages))
 		, ('varSpouse_bible_training') : spouse_bible_training, ('varSpouse_describe_bible_training') : spouse_describe_bible_training
 		, ('varSpouse_cross_cultural_experience') : spouse_cross_cultural_experience, ('varSpouse_missions_experience') : spouse_missions_experience
 		, ('varSpouse_attended_perspectives') : spouse_attended_perspectives, ('varSpouse_experience') : spouse_experience]
-		, FailureHandling.STOP_ON_FAILURE)
+		, FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -295,7 +299,7 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Ministry Prefs' in pag
 	spouse_preferences_comment = 'Willing to consider other opportunities'
 
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Spouse Ministry Prefs'), [('varSpouse_preferred_prefs') : positions
-			, ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.STOP_ON_FAILURE)
+			, ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -318,7 +322,7 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 	other_people_group = 'None'
 	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Your Ministry Prefs'), [('varJob_categories') : categories
-		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.STOP_ON_FAILURE)
+		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 if(!called) { 	//Leave the browser open if this script was called from another script

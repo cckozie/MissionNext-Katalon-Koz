@@ -143,7 +143,7 @@ WebUI.navigateToUrl(url)
 WebUI.waitForPageLoad(10)
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Register'],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 /*
 tooltipTextMap.each({
@@ -157,11 +157,11 @@ Actions action = new Actions(driver)
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
 		, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
-	FailureHandling.OPTIONAL)
+	FailureHandling.CONTINUE_ON_FAILURE)
 //System.exit(1)
 // Click the other hyperlinks and verify pages opened
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Journey Partner Profile/Register/'],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 // Submit the form with all of the fields empty
 object = 'Journey Partner Profile/Register/button_Sign up'
@@ -179,7 +179,7 @@ outText = (('Verifying the field messages for ' + fieldList) + '.\n')
 outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 // Set username, password, and email and then test for the other missing data error messages
 object = 'Journey Partner Profile/Register/input_Username'
@@ -215,7 +215,7 @@ outText = (('Verifying the field messages for ' + fieldList) + '.\n')
 outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 
 object = 'Journey Partner Profile/Register/input_Password'
@@ -329,7 +329,7 @@ WebUI.delay(1)
 // Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
 
-pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
+pending = WebUI.verifyTextPresent('THANK YOU FOR APPLYING FOR A MISSIONNEXT JOURNEY PARTNERSHIP!', false, FailureHandling.OPTIONAL)
 
 if (pending) {
 	outText = 'Approval Pending page was found.'

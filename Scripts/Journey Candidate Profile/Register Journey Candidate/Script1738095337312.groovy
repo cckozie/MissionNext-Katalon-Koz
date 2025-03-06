@@ -109,7 +109,7 @@ Actions action = new Actions(driver)
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -126,7 +126,7 @@ outFile.append(outText)
 fieldList = ['Username', 'Email', 'Password']
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
 
 object = 'Journey Candidate Profile/Register/input_Username'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
@@ -147,7 +147,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 fieldList = ['First Name', 'Last Name', 'Country', 'Phone Number', 'Terms and Conditions']
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
 object = 'Journey Candidate Profile/Register/input_Password'
@@ -190,7 +190,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 fieldList = ['Terms and Conditions']
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
 
 outText = 'Verifying the links to other pages.\n'
 
@@ -198,7 +198,7 @@ outFile.append(outText)
 
 // Click the other hyperlinks and verify pages opened
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 outText = 'Submitting the finished page.\n'
 

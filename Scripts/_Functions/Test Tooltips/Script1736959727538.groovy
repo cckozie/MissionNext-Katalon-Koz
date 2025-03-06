@@ -24,7 +24,10 @@ import org.openqa.selenium.interactions.Actions as Actions
 import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+//import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+//KeywordLogger log = new KeywordLogger()
 
 if(GlobalVariable.fastPath) {
 	return
@@ -124,6 +127,7 @@ for (def it : tooltips) {
                 println(outText)
 
                 outFile.append(outText + '\n')
+				KeywordUtil.markError('Tooltip match value for ' + myKey + ' is less than ' + min + '%')
             }
         } else {
 			if(myKey != 'dummy') {
@@ -132,6 +136,8 @@ for (def it : tooltips) {
 	            println(outText)
 	
 	            outFile.append(outText + '\n')
+				
+				KeywordUtil.markError(outText)
 			}
         }
     } else {
@@ -141,7 +147,9 @@ for (def it : tooltips) {
 
         println(outText)
 
-        KeywordUtil.markError('\n' + outText)
+//        KeywordUtil.markError('\n' + outText)
+		KeywordUtil.markError(outText)
+		
     }
 }
 
@@ -181,6 +189,8 @@ for (def it : tooltipText) {
 		println(outText)
 
 		outFile.append(outText + '\n')
+		KeywordUtil.markError(outText)
+		
 		
 /* FOR DEBUGGING
 		println('Expected length is ' + myText.length())
@@ -214,6 +224,8 @@ def scrollToObject(def object) {
 		println(outText)
 
 		outFile.append(outText + '\n')
+		KeywordUtil.markError(outText)
+		
 	}
 
     y = loc.getY()

@@ -20,6 +20,10 @@ import com.kms.katalon.core.util.KeywordUtil
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+KeywordLogger log = new KeywordLogger()
 
 if(GlobalVariable.fastPath) {
 	return
@@ -71,8 +75,9 @@ for(it in pageLinks) {
 		println(outText)
 
 		outFile.append(outText + '\n')
-
-		KeywordUtil.markError('\n' + outText)
+		log.logFailed(outText)
+		
+//		KeywordUtil.markError('\n' + outText)
 		
 		textFound = false
 		
@@ -97,8 +102,8 @@ for(it in pageLinks) {
 		println(outText)
 
 		outFile.append(outText + '\n')
-
-		KeywordUtil.markError('\n' + outText)
+		log.logFailed(outText)
+//		KeywordUtil.markError('\n' + outText)
 	}
 	
 	if(windowCount == 2) {
@@ -119,7 +124,7 @@ for(it in pageLinks) {
 
 		outFile.append(outText + '\n')
 
-		KeywordUtil.markError('\n' + outText)
+//		KeywordUtil.markError('\n' + outText)
 		WebUI.back()
 		
 		WebUI.waitForPageLoad(10)

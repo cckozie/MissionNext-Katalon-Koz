@@ -99,7 +99,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 // Call the tooltip testing script
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath ,
 	('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
-	('varTooltipTextMap') : tooltipTextMap], FailureHandling.STOP_ON_FAILURE)
+	('varTooltipTextMap') : tooltipTextMap], FailureHandling.CONTINUE_ON_FAILURE)
 
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
@@ -113,7 +113,7 @@ requiredFieldMsgs.each {
 }
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.STOP_ON_FAILURE)
+	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
 
 // Set the text boxes and dropdown lists
 if (varPerspectives != null) {
@@ -139,8 +139,6 @@ if (varChurch_involvement != null) {
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
 		('varObject') : object, ('varParm1') : varChurch_involvement], FailureHandling.STOP_ON_FAILURE)
 }
-
-//WebUI.callTestCase(findTestCase('_Functions/Click on All Group Elements'), [('varXpaths') : xpaths], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths,
 	('varParms') : parms], FailureHandling.STOP_ON_FAILURE)

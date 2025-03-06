@@ -78,7 +78,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
         , ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap], 
-    FailureHandling.OPTIONAL)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
@@ -92,7 +92,7 @@ requiredFieldMsgs.each({
     })
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
-    FailureHandling.STOP_ON_FAILURE)
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 //Enter the contact info fields
 if (varKey_contact_phone != null) {
@@ -138,7 +138,7 @@ if (varWorld_region != null) {
 
 // Test the external page links
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
-	('varObjectPath') : 'Object Repository/Education Partner Profile/Tabs/Contact Info/'], FailureHandling.OPTIONAL)
+	('varObjectPath') : 'Object Repository/Education Partner Profile/Tabs/Contact Info/'], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/Contact Info/btn_Complete Submit'))
 

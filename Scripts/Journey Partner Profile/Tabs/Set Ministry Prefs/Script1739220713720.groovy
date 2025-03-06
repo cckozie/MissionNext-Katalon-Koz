@@ -81,7 +81,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
 		, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
-	FailureHandling.OPTIONAL)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -102,7 +102,7 @@ requiredFieldMsgs.each({
 	})
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
-	FailureHandling.STOP_ON_FAILURE)
+	FailureHandling.CONTINUE_ON_FAILURE)
 
 // Set the Need Specific IT Positions checkbox
 if (varNeed_specific_it_positions == 'Yes') {
