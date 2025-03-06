@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>Get Selections from CSV File - Copy</name>
-   <tag></tag>
-   <comment></comment>
-   <recordOption>OTHER</recordOption>
-   <testCaseGuid>f906b96e-e42b-4e7b-9941-8383b6947a47</testCaseGuid>
-</TestCaseEntity>
