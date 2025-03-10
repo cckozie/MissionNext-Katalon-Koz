@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_SwitchTo</name>
+   <tag></tag>
+   <elementGuidId>1ebf63d5-7f72-49ef-88aa-f26f191b9885</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.switch_to_user > a</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tr[@id='user-2545']/td[2]/div/span[5]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>accde660-8503-4863-b130-d11e7fe605fa</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/login-here?action=switch_to_user&amp;user_id=2545&amp;nr=1&amp;_wpnonce=2c2baea8f7</value>
+      <webElementGuid>43a311e2-2438-44f2-9b52-2360c92b9590</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Switch To</value>
+      <webElementGuid>a5b55d86-5fbd-43f2-ace6-f5444c70c8e3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;user-2545&quot;)/td[@class=&quot;name column-name has-row-actions column-primary&quot;]/div[@class=&quot;row-actions visible&quot;]/span[@class=&quot;switch_to_user&quot;]/a[1]</value>
+      <webElementGuid>7bb9c2e5-9e49-4d0a-9288-1883919d04b4</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tr[@id='user-2545']/td[2]/div/span[5]/a</value>
+      <webElementGuid>a4865250-4bd7-4256-ac45-5b32e8b995f9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Switch To')]</value>
+      <webElementGuid>d1414830-2060-4492-98d9-64fdc8b2d40d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Send password reset'])[3]/following::a[1]</value>
+      <webElementGuid>d5937cd4-a9d7-44f2-814c-5287fb1b3746</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Show more details'])[1]/preceding::a[1]</value>
+      <webElementGuid>e793f566-3cc6-44f3-ad71-9ed4e772807a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='headquarters@missionnext.org'])[1]/preceding::a[1]</value>
+      <webElementGuid>8807d774-507b-47d1-9d37-99451a5d1402</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Switch To']/parent::*</value>
+      <webElementGuid>0a749945-3ec5-42d3-92ef-21412680c744</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/login-here?action=switch_to_user&amp;user_id=2545&amp;nr=1&amp;_wpnonce=2c2baea8f7')]</value>
+      <webElementGuid>4dc7e210-d989-42a1-8711-637c82470840</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[5]/a</value>
+      <webElementGuid>b02b52d6-03d6-4f22-8f07-41dc127503e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/login-here?action=switch_to_user&amp;user_id=2545&amp;nr=1&amp;_wpnonce=2c2baea8f7' and (text() = 'Switch To' or . = 'Switch To')]</value>
+      <webElementGuid>8c8a3b1a-ca2d-4bea-bbca-a8d1c042a0e9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

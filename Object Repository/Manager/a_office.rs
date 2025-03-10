@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_office</name>
+   <tag></tag>
+   <elementGuidId>4fb04dbe-bffb-4742-97f7-90f6a612265d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>strong > a</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tr[@id='user-2545']/td/strong/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>141635c8-ef74-4128-86f7-c997e6793554</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://journey.missionnext.org/wp-admin/user-edit.php?user_id=2545&amp;wp_http_referer=%2Fwp-admin%2Fusers.php%3Fs%3Doffice%26action%3D-1%26new_role%26paged%3D1%26action2%3D-1%26new_role2%26doing_wp_cron%3D1741470950.5587940216064453125000</value>
+      <webElementGuid>21612681-65af-4f1c-9b47-d6bdda859fc4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>office</value>
+      <webElementGuid>80d2718e-701e-4179-94b7-5a20f3d37b44</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;user-2545&quot;)/td[@class=&quot;username column-username&quot;]/strong[1]/a[1]</value>
+      <webElementGuid>dd844a0f-f4da-4fed-89f7-d8140c184653</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//tr[@id='user-2545']/td/strong/a</value>
+      <webElementGuid>9dbe61e4-a64f-4cd9-8a10-9016bea80fed</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'office')]</value>
+      <webElementGuid>70cecc7a-e26a-49c2-bde0-fce1138e5be6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Select office'])[1]/following::a[1]</value>
+      <webElementGuid>c1aa80e6-131a-4b94-9bd5-b89747660e2b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sort ascending.'])[3]/following::a[1]</value>
+      <webElementGuid>4a1612f1-a205-43fc-b6e7-555bfc06d321</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unknown'])[1]/preceding::a[1]</value>
+      <webElementGuid>e4f3b28c-ea28-40d8-b7aa-baf40a727841</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://journey.missionnext.org/wp-admin/user-edit.php?user_id=2545&amp;wp_http_referer=%2Fwp-admin%2Fusers.php%3Fs%3Doffice%26action%3D-1%26new_role%26paged%3D1%26action2%3D-1%26new_role2%26doing_wp_cron%3D1741470950.5587940216064453125000')]</value>
+      <webElementGuid>7bf87aca-17e7-4afa-a2c1-e574ee0d19a5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//strong/a</value>
+      <webElementGuid>764327a5-3bc3-417c-ac70-327094ab8200</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://journey.missionnext.org/wp-admin/user-edit.php?user_id=2545&amp;wp_http_referer=%2Fwp-admin%2Fusers.php%3Fs%3Doffice%26action%3D-1%26new_role%26paged%3D1%26action2%3D-1%26new_role2%26doing_wp_cron%3D1741470950.5587940216064453125000' and (text() = 'office' or . = 'office')]</value>
+      <webElementGuid>fdc69261-8a3e-4584-979c-5263582f9e7c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
