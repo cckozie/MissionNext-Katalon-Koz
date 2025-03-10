@@ -26,7 +26,7 @@ import javax.swing.*;
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest04ec') {
+if(username[-3..-1] != '4ec') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)

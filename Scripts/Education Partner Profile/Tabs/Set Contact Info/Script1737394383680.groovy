@@ -22,7 +22,7 @@ import com.kms.katalon.core.util.KeywordUtil
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest06ep') {
+if(username[-3..-1] != '6ep') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)

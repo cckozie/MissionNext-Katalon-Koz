@@ -19,89 +19,11 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import java.awt.Desktop as Desktop
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+//import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
-WebUI.openBrowser('')
+//new ExecutionProfilesLoader().loadProfile("Education Candidate 14")
 
-WebUI.maximizeWindow()
+println "GlobalVariable.username=" + GlobalVariable.username
 
-Screen s = new Screen()
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Journey Partner 17'], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('missionnext.org')
-
-menusPath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Menu/'
-
-initImage = menusPath + 'Big M.png'
-
-WebUI.delay(1)
-
-s.click(initImage)
-
-//WebUI.delay(1)
-
-
-menus = ['Menu Login':['Journey','Education','Quickstart'], 'Menu About':['About','Impact Report',
-	'Join Us','Strategic and Mobilization Partners','Subscribe to Bridge'], 'Menu Goer':['Goer', 'Quickstart','Start Your Journey',
-	'Serve in Education','Jobs','Resources'], 'Menu Sender':['Sender', 'Organizations','Schools','Churches',
-	'Strategic and Mobilization Partners', 'Resources'], 'Menu Supporter':['Supporter','Mobilizer','Donor','Intercessor', 
-	'Strategic and Mobilization Partners', 'Volunteer'],'Menu Events':[null], 'Menu Blog':['MissionNext Blog','Founders Blog'],
-	'Menu Donate':[null]]
-
-pageText = ['Menu Login_Journey':'Log into Journey',
-	'Menu Login_Education':'Log Into Education',
-	'Menu Login_Quickstart':'Login to QuickStart',
-	'Menu About_About':'Welcome to MissionNext',
-	'Menu About_Impact Report':'Impact Report',
-	'Menu About_Join Us':'Positions with MissionNext',
-	'Menu About_Strategic and Mobilization Partners':'Strategic and Mobilization Partners',
-	'Menu About_Subscribe to Bridge':'Sign Up for the Bridge!',
-	'Menu Goer_Goer':'Am I ready?',
-	'Menu Goer_Quickstart':'Complete our QuickStart',
-	'Menu Goer_Start Your Journey':'Welcome to MissionNext Journey',
-	'Menu Goer_Serve in Education':'Welcome To MissionNext Education',
-	'Menu Goer_Jobs':'POSITIONS WITH OUR PARTNERS',
-	'Menu Goer_Resources':'Resources for Goers',
-	'Menu Sender_Sender':'What Kind of Sender are You?',
-	'Menu Sender_Organizations':'Journey Pricing',
-	'Menu Sender_Schools':'Education Pricing',
-	'Menu Sender_Churches':'Resources for Churches',
-	'Menu Sender_Strategic and Mobilization Partners':'Strategic and Mobilization Partners',
-	'Menu Sender_Resources':'Resources for Senders',
-	'Menu Supporter_Supporter':'How Do you Engage in Missions?',
-	'Menu Supporter_Mobilizer':'Resources for mobilizers',
-	'Menu Supporter_Donor':'Some Things Are Worth Investing In!',
-	'Menu Supporter_Intercessor':'The Role of the Faithful Intercessor',
-	'Menu Supporter_Strategic and Mobilization Partners':'Strategic and Mobilization Partners',
-	'Menu Supporter_Volunteer':'Heart of a Volunteer',
-	'Menu Events_null':'Events',
-	'Menu Blog_MissionNext Blog':'The MissionNext Blog',
-	'Menu Blog_Founders Blog':"The Founder's Blog",
-	'Menu Donate_null':'Donate to MissionNext']
-	
-//menu_options = []
-
-menus.each {
-	
-	menu = it.key
-	
-	options = it.value
-	
-	println(menu)
-	
-	println(options)
-	
-	for(option in options) {
-		
-		println(option)
-		
-		textKey = menu + '_' + option
-		
-		text = pageText.get(textKey)
-
-		WebUI.waitForPageLoad(10)
-	
-		WebUI.callTestCase(findTestCase('_Functions/Select Home Page Menu Option'), [('varMenu') : menu, ('varOption') : option,
-			('varText') : text], FailureHandling.STOP_ON_FAILURE)
-		
-		WebUI.navigateToUrl('missionnext.org')
-	}
-}

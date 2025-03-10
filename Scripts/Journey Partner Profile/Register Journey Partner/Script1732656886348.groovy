@@ -29,7 +29,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest07jp' && username != 'cktest02jp')  {
+if(username[-3..-1] != '7jp') {
     println('The Execution Profile must be set to "Journey Partner"')
 
     System.exit(0)
@@ -329,16 +329,16 @@ WebUI.delay(1)
 // Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
 
-pending = WebUI.verifyTextPresent('THANK YOU FOR APPLYING FOR A MISSIONNEXT JOURNEY PARTNERSHIP!', false, FailureHandling.OPTIONAL)
+pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
 
 if (pending) {
-	outText = 'Approval Pending page was found.'
+	outText = '+++ Approval Pending page was found.'
 
 	println(outText)
 
 	outFile.append(outText + '\n')
 } else {
-	outText = 'Failed to find the Approval Pending page.'
+	outText = '--- Failed to find the Approval Pending page.'
 
 	println(outText)
 
@@ -381,6 +381,7 @@ if (GlobalVariable.returnCode == 'found') {
 			outText = '+++ Journey partner login after profile creation was successful.\n'
 		} else {
 			outText = '--- Journey partner login after profile creation failed.\n'
+			KeywordUtil.markError('\n' + outText)
 		}
 		outFile.append(outText)
 	}

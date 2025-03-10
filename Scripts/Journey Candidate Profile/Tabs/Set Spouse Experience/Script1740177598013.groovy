@@ -25,7 +25,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest05jc') {
+if(username[-3..-1] != '5jc') {
 	println('The Execution Profile must be set to "Journey Candidate"')
 
 	System.exit(0)

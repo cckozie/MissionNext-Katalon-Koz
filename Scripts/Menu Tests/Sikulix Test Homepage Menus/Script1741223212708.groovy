@@ -114,6 +114,10 @@ menus.each {
 		WebUI.waitForPageLoad(10)
 		
 		found = WebUI.verifyTextPresent('(?i)' + text, true, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		if(!found) {
+			println('Unable to verify text "' + text + ' on page linked to from ' + menu + '/' + option)
+		}
 	
 		WebUI.navigateToUrl('missionnext.org')
 	}

@@ -32,7 +32,7 @@ import javax.swing.*;
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest04ec') {
+if(username[-3..-1] != '4ec') {
     println('The Execution Profile must be set to "Education Candidate"')
 
     System.exit(0)
@@ -157,7 +157,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 's
 
 object = 'Education Candidate Profile/Register/input_First Name'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
+	('varObject') : object, ('varParm1') : GlobalVariable.first_name], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Last Name'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',

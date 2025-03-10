@@ -33,7 +33,7 @@ if(GlobalVariable.testSuiteRunning) {
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest07jp' && username != 'cktest02jp') {
+if(username[-3..-1] != '7jp') {
     println('The Execution Profile must be set to "Journey Partner"')
 
     System.exit(0)

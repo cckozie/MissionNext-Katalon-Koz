@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest04ec') {
+if(username[-3..-1] != '4ec') {
 	println('The Execution Profile must be set to "Education Candidate"')
 
 	System.exit(0)

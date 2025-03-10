@@ -6,13 +6,43 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'missionnext.org'</initValue>
+      <name>domain</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>fastPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>false</initValue>
       <name>testSuiteRunning</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'missionnext.org'</initValue>
-      <name>domain</name>
+      <initValue>'educationgoer'</initValue>
+      <name>ecUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'educationsender'</initValue>
+      <name>epUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'journeygoer'</initValue>
+      <name>jcUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'journeysender'</initValue>
+      <name>jpUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'vH5WeN5iH2nRL+Ca1Ce/6g=='</initValue>
+      <name>genericPw</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -26,7 +56,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
-      <name>fastPath</name>
+      <initValue>''</initValue>
+      <name>virtualProfileName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>virtualProfileUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>virtualProfilePassword</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

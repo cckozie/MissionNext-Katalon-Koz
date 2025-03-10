@@ -21,7 +21,6 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
-import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import java.awt.Desktop as Desktop
@@ -30,12 +29,13 @@ import java.awt.event.KeyEvent as KeyEvent
 import java.io.*
 import org.apache.commons.lang.WordUtils as WordUtils
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if (username != 'cktest06ep') {
+if(username[-3..-1] != '6ep') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)
@@ -396,14 +396,40 @@ if (GlobalVariable.returnCode == 'found') {
         //================================== Complete the Education Partner tabs ========================
         WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
 
-        outText = '\nEducation Partner registration was successful.'
+        outText = '\nEducation Partner registration was successful. Continuing to complete profile'
 
         println(outText)
 
         outFile.append(outText)
 		
 		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
-    }
+		
+		found = WebUI.verifyTextPresent('(?i)Hello, The CCK TEST Education Partner', true, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		if(found) {
+			outText = '\n***** Education Partner login after creation was successful. *****'
+			
+		} else {
+			outText = '\n##### Education Partner completion may have failed. Unable to find the text "Hello, The CCK TEST Education Partner" after logging in. #####'
+		}
+		
+		println(outText) 
+
+		outFile.append(outText)			
+		
+    } else {
+		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+		
+		found = WebUI.verifyTextPresent('Complete your profile by answering', false)
+		
+		if(found) {
+			outText = '\n***** The login after registering as an Education Partner was successful. *****'
+			
+		} else {
+			outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'	
+			KeywordUtil.markError('\n' + outText)
+		}
+	}
 }
 
 
