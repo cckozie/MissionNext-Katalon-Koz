@@ -40,7 +40,9 @@ if(username[-3..-1] != '4ec') {
 
 //######################################################################################################
 registerOnly = false //Set this flag to true if you do not want to complete the tabs
-
+if(GlobalVariable.testSuiteRunning) {
+	registerOnly = false
+}
 //######################################################################################################
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //	Need to add tests for the tooltips on all of the tabs. 

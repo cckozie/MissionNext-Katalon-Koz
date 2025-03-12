@@ -43,7 +43,9 @@ if(username[-3..-1] != '6ep') {
 
 //######################################################################################################
 registerOnly = false //Set this flag to true if you do not want to complete the tabs
-
+if(GlobalVariable.testSuiteRunning) {
+	registerOnly = false
+}
 //######################################################################################################
 //================================== Initialize ===============================================
 // Get the domain and set the url
