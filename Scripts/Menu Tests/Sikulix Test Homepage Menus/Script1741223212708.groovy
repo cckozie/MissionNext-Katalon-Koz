@@ -20,6 +20,13 @@ import org.sikuli.script.*
 import java.awt.Desktop as Desktop
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/')+1)
+myTestCase = myTestCase.substring(0,myTestCase.length()-3)
+
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+
+outFile.write('Running ' + myTestCase + '\n')
+
 Screen s = new Screen()
 
 menus = ['Menu Login':['Journey','Education','Quickstart'], 'Menu About':['About','Impact Report',
@@ -116,7 +123,9 @@ menus.each {
 		found = WebUI.verifyTextPresent('(?i)' + text, true, FailureHandling.CONTINUE_ON_FAILURE)
 		
 		if(!found) {
-			println('Unable to verify text "' + text + ' on page linked to from ' + menu + '/' + option)
+			outText = 'Unable to verify text "' + text + ' on page linked to from ' + menu + '/' + option
+			println(outText)
+			outFile.append(outText + '\n')
 		}
 	
 		WebUI.navigateToUrl('missionnext.org')

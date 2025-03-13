@@ -3,7 +3,7 @@
    <description></description>
    <name>cktest02</name>
    <tag></tag>
-   <defaultProfile>true</defaultProfile>
+   <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'cktest02'</initValue>

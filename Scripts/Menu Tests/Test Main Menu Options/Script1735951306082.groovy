@@ -26,6 +26,14 @@ import javax.swing.JFrame
 import java.awt.Frame
 import javax.swing.JOptionPane
 
+myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/')+1)
+myTestCase = myTestCase.substring(0,myTestCase.length()-3)
+
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+
+outFile.write('Running ' + myTestCase + '\n')
+
+
 printIt = false
 
 separator = '----------------------------------------------------------------------------------------------------------------------------------------------------------'
@@ -638,6 +646,8 @@ if(notFoundCount == 0) {
 		}
 	}
 }
+
+outFile.append(outMsg)
 
 //Display all of the error messages
 JOptionPane.showMessageDialog(new Frame('Test result'), outMsg)

@@ -51,6 +51,10 @@ regions = '//input[@id=\'profile_group-1449972047.293_world_region_preferences\'
 xpaths = [positions, regions]
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+//Page text test (Issue #247)
+preferredPositions = "Preferred School Positions is a required field."
+preferredRegions = "Preferred Region(s) is a required field."
+
 // Define path to tooltip text images
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education candidate/'
 
@@ -99,6 +103,22 @@ requiredFieldMsgs.each {
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
+
+positionText = WebUI.getText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Preferences/text_Preferred School Positions is a required field'))
+println('positionText is ' + positionText)
+if(positionText != preferredPositions) {
+	outText = "##### The expected text for the Preferred Positions section was found to be '" + positionText + "', but should be '" + preferredPositions + "'."
+	println(outText)
+	outFile.append(outText + '\n')
+}
+
+regionText = WebUI.getText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Preferences/text_Preferred Region(s) is a required field'))
+println('regionText is ' + regionText)
+if(regionText != preferredRegions) {
+	outText = "##### The expected text for the Preferred Regions section was found to be '" regionText + "', but should be '" + preferredRegions + "'."
+	println(outText)
+	outFile.append(outText + '\n')
+}
 
 if(!GlobalVariable.fastPath) {
 	WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)

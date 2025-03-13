@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = []
+pages = ['Preferences']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
