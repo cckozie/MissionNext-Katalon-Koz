@@ -30,6 +30,13 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
+if(GlobalVariable.mobileScreen) {
+	
+	WebUI.setViewPortSize(600, 1200)
+	
+	WebUI.delay(1)
+}
+
 WebUI.navigateToUrl('https://journey.' + GlobalVariable.domain + '/journey-home/login-here/')
 
 WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Login/input_Username'), GlobalVariable.username)

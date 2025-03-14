@@ -23,8 +23,6 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import javax.swing.*;
 
-outFile = GlobalVariable.outFile
-
 debug = false	//Print debug info
 
 toggle = true	//Toggle selected checkboxes if already checked
@@ -144,42 +142,14 @@ def scrollToObject(def element) {
 	}
 }
 
-def printError(msg) {
-	println(msg)
-	lastIndex = 0
-	colons = []
-	colons = msg.findAll(~/:/) { match ->
-		lastIndex = msg.indexOf(match, lastIndex+1)
-	}
-	error = msg.substring(colons[0]+1, colons[1])
-//	println(error)
-	
-	typeIndex = msg.indexOf('type=')
-	typeEnd = msg.indexOf('" ',typeIndex+1)
-	type = msg.substring(typeIndex+5, typeEnd).replace('"', '')
-//	println(type)
-	
-	valueIndex = msg.indexOf('value=')
-	valueEnd = msg.indexOf('"',valueIndex+7)
-	value = msg.substring(valueIndex+7, valueEnd).replace('"', '')
-//	println(value)
-	
-	errorMsg = '##### ERROR: ' + error + ' on ' + type + ' ' + value
-	
-	println(errorMsg)
-	
-	outFile.append(errorMsg + '\n')
-}
-
 def click(def elem) {
 	scrollToObject(elem)
 
 	try {
 		elem.click();
 	} catch (Exception e) {
-//		println("Exception Occured:" + e);
-		printError("Exception Occured - " + e)
-//		System.exit(0)
+		println("Exception Occured:" + e);
+		System.exit(0)
 	}
 //	elem.click()
 }

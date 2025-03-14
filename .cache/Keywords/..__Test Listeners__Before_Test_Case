@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "F436811780D78EEB80620672E87A5660",
+  "keywordFileContentHash": "1FFFB2AB5B011638FA10CADDC5AAE674",
   "keywordClasses": [
     {
       "name": "Before_Test_Case",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": true
+  "javadocParsed": false
 }

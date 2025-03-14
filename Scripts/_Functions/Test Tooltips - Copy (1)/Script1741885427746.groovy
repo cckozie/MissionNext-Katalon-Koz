@@ -120,15 +120,15 @@ for (def it : tooltips) {
 			
 			if(pctF.toFloat() < min.toFloat()) {
 				outText = '>>>>> ' + outText + ' <<<<<'
-
-	            if (myKey != 'dummy') {
-	                //The new sikulix gets the wrong match results for the first element, so this is a dummy match
-	                println(outText)
-	
-	                outFile.append(outText + '\n')
-					KeywordUtil.markError('Tooltip match value for ' + myKey + ' is less than ' + min + '%')
-	            }
 			}
+
+            if (myKey != 'dummy') {
+                //The new sikulix gets the wrong match results for the first element, so this is a dummy match
+                println(outText)
+
+                outFile.append(outText + '\n')
+				KeywordUtil.markError('Tooltip match value for ' + myKey + ' is less than ' + min + '%')
+            }
         } else {
 			if(myKey != 'dummy') {
 	            outText = ('--- Unable to find tooltip text for ' + myKey)
@@ -139,7 +139,7 @@ for (def it : tooltips) {
 				
 				KeywordUtil.markError(outText)
 			}
-		}
+        }
     } else {
         outText = ('--- Unable to find image file ' + myImage)
 

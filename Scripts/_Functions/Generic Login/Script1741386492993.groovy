@@ -26,6 +26,13 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
+if(GlobalVariable.mobileScreen) {
+	
+	WebUI.setViewPortSize(600, 1200)
+	
+	WebUI.delay(1)
+}
+
 WebUI.navigateToUrl('https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/')
 
 WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), GlobalVariable.username)

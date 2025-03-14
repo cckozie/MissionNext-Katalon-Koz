@@ -27,7 +27,7 @@ import org.openqa.selenium.By as By
 ministryPreferences = ['Adult Men', 'Adult Women', 'Bible Teaching', 'Worship Leader', 'Church Planter', 'Leadership Development'
     , 'Marriage & Family', 'Missions Pastor', 'Pastor/Associate Pastor', 'Youth Pastor']
 
-Runtime.getRuntime().exec('open /Applications/GoogleAnalyticsOptOut.app', '/Applications/GoogleAnalyticsOptOut/')
+//Runtime.getRuntime().exec('open /Applications/GoogleAnalyticsOptOut.app', '/Applications/GoogleAnalyticsOptOut/')
 
 WebUI.openBrowser('')
 

@@ -17,25 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
-import java.awt.Desktop as Desktop
 
+imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Misc/'
 
+app = 'AvastSecureLine'
 
-Integer getPid(processName) {
-	'ps -A'.execute()
-		   .text
-		   .split('\n')
-		   .find { it.contains processName }?.split()?.first() as Integer
+WebUI.callTestCase(findTestCase('_Functions/Start Application'), [('varApplication') : app], FailureHandling.STOP_ON_FAILURE)
+
+if (varDesiredState.toLowerCase() == 'off') {
+	image = 'on'
+} else {
+	image = 'off'
 }
 
-myApp = varApplication
-println(myApp)
+Screen s = new Screen()
 
-myPid = getPid(myApp)
+target = imagePath + image + '.png'
 
-println(myPid)
-myPid = null //IGNORE THAT IT MAY BE RUNNING
-if(myPid == null) {
-	File file = new File('/Applications/' + myApp + '.app')
-	Desktop.getDesktop().open(file)
+try {
+	s.click(target)
+} catch (Exception e) {
+	println('Could not click on ' + target)
 }

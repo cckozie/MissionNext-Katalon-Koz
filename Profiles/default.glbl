@@ -17,6 +17,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>false</initValue>
+      <name>mobileScreen</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
       <name>testSuiteRunning</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

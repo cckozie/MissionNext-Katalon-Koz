@@ -16,30 +16,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.apache.commons.lang3.StringUtils
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
-import com.kms.katalon.core.webui.common.WebUiCommonHelper
-import javax.swing.JFrame
-import java.awt.Frame
-import javax.swing.JOptionPane
-import com.kms.katalon.core.configuration.RunConfiguration
-import java.io.File as File
 
+// 1. RUN FIRST WITH FUNCTION SET TO 'get links', THEN REPLACE THE homePageLinks LIST WITH THE LIST PRINTED IN THE CONSOLE, REPLACING THE LAST COMMA WITH A ]
+// 2. RUN WITH FUNCTION SET TO 'get titles', THEN REPLACE THE titleMap LIST WITH THE LIST PRINTED IN THE CONSOLE, REPLACING THE LAST COMMA WITH A ]
+// 3. REPLACE BOTH LISTS IN THE 'Test All Menu Links' TEST CASE WITH THE UPDATED LISTS FROM THIS TEST CASE
 
-myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/')+1)
-myTestCase = myTestCase.substring(0,myTestCase.length()-3)
-
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
-
-outFile.write('Running ' + myTestCase + '\n')
-
-
-printIt = false
-
-separator = '----------------------------------------------------------------------------------------------------------------------------------------------------------'
+//function = 'get links'
+function = 'get titles'
 
 pageLinks = []
 
@@ -251,7 +238,9 @@ homePageLinks = [    //Format is HOME PAGE URL | LINKED TO URL
 	"quickstart.missionnext.org|https://quickstart.missionnext.org/signup/candidate",
 	"quickstart.missionnext.org|https://quickstart.missionnext.org/site-map/"]
 	
-titleMap = [	//Format is HOME PAGE URL | LINKED TO URL : PAGE TITLE
+
+	
+titleMap = [	//Format is HOME PAGE URL | LINKED TO URL : LINKED PAGE TITLE
 	"education.missionnext.org|http://missionnext.org/contact-us/" : "Contact Us - MissionNext.org",
 	"education.missionnext.org|http://missionnext.org/events" : "Events - MissionNext.org",
 	"education.missionnext.org|http://missionnext.org/homepage/goer/education-partner-schools/" : "Education Partner Schools - MissionNext.org",
@@ -459,279 +448,97 @@ titleMap = [	//Format is HOME PAGE URL | LINKED TO URL : PAGE TITLE
 	"quickstart.missionnext.org|https://quickstart.missionnext.org/signup/candidate" : "QuickStart",
 	"quickstart.missionnext.org|https://quickstart.missionnext.org/site-map/" : "Site Map - QuickStart"]
 	
-	
+titleMap = [:]
+
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-// Home page URL's
-startPages = ['missionnext.org', 'journey.missionnext.org', 'education.missionnext.org', 'quickstart.missionnext.org']
+// Find all of the links on missionnext, journey, education, and quickstart home pages
+startPages = ['missionnext.org', 'journey.missionnext.org', 'education.missionnext.org', 'quickstart.missionnext.org', 'jg.missionnext.org']
 
-// Ignore all URL's that contain any of these items
 bypassList = ['plugin', 'wp-content', 'wp-json', 'feed', 'xml', 'jquery', 'wpincludes', 'wp-includes', 'wp_cron', 'twitter', 'facebook', 'linkedin', 'instagram', '#']
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-// Find all of the links on each of the home pages
-for(page in startPages) { //List of home pages
-	
-	WebUI.navigateToUrl(page)
-	
-	WebUI.waitForPageLoad(30)	
-	
-	elements = driver.findElements(By.tagName("a")) 	//Find all of the links on the home page being processed
-	
-	elements.each {		//Process each link
+if(function == 'get links') {
+	for(page in startPages) {
 		
-		href = it.getAttribute('href')	//Get the URL of the link
+		WebUI.navigateToUrl(page)
 		
-		skip = false
+		WebUI.waitForPageLoad(30)
 		
-		if(href != null) {				//Bypass any in the ignore list
-	
-			for(item in bypassList) {
-				
-				pos = href.indexOf(item)
-				
-				if(pos >= 1) {
-				
-					skip = true
+		elements = driver.findElements(By.tagName("a"));
+		
+		elements.each {
+			
+			href = it.getAttribute('href')
+			
+			skip = false
+			
+			if(href != null) {
+		
+				for(item in bypassList) {
 					
-					break
+					pos = href.indexOf(item)
+					
+					if(pos >= 1) {
+					
+						skip = true
+						
+						break
+					}
+				}
+				
+				if(!skip) {
+					
+					element = page + '|' + href
+					
+					pageLinks.add(element)
 				}
 			}
-			
-			if(!skip) {
-				
-				element = page + '|' + href
-				
-				pageLinks.add(element)		//Build the list of links
-			}
 		}
 	}
-}
-pageLinks = pageLinks.sort()	//Sort the list
-
-myLinks = pageLinks.unique()	//Only key the links when the home page and link is unique
-
-//Print the home page links found
-if(printIt) {
+	pageLinks = pageLinks.sort()
+	
+	myLinks = pageLinks.unique()
+	
+	//Print the home page list so it can be pasted into homePageLinks
 	println('\n\nPage links:')
 	pageLinks.each {
-		println(it)
+		println('"' + it + '",')
 	}
+	
+	System.exit(0)
 }
 
-unexpectedLinks = []
+if(function == 'get titles') {
 
-pageLinks.each { 	//Build a list of messages related to any links we were not expecting to find
-	
-	if(!homePageLinks.contains(it)) {
+	// Capture the title of the pages linked to
+	homePageLinks.each {
 		
 		delim = it.indexOf('|')
-			
+		
 		homePage = it.substring(0,delim)
 		
 		link = it.substring(delim + 1)
-	
-		unexpectedLinks.add('The link from home page "' + homePage + '" to "' + link + '" was not expected.')
+		
+		WebUI.navigateToUrl(link)
+		
+		WebUI.waitForPageLoad(30)
+		
+		title = WebUI.getWindowTitle()	//Get the page's title
+		
+		titleMap.put(it, title)
 		
 	}
-}
-
-unexpectedLinks.each {
-	println(it)
-}
-
-unfoundLinks = []
-
-homePageLinks.each {	//Build a list of messages related to any links we were expecting to find but did not find
 	
-	if(!pageLinks.contains(it)) {
-		
-		delim = it.indexOf('|')
-			
-		homePage = it.substring(0,delim)
-		
-		link = it.substring(delim + 1)
+	WebUI.closeBrowser()
 	
-		unfoundLinks.add('The expected page link from home page "' + homePage + '" to "' + link + '" was not found.')
-		
+	//Print the map so it can be pasted into the titleMap
+	println('\n\ntitleMap:')
+	titleMap.each {
+		println('"' + it.key + '" : "' + it.value + '",')
 	}
 }
-
-unfoundLinks.each{
-	println(it)
-}
-
-wrongPages = []		
-
-notFound = []
-
-unexpectedCount = 0
-
-// Navigate to each link and verify that the page title is what is expected and that it does not cause a 404 error
-pageLinks.each {
 	
-	delim = it.indexOf('|')
-	
-	homePage = it.substring(0,delim)
-	
-	link = it.substring(delim + 1)
-	
-	WebUI.navigateToUrl(link)
-	
-	WebUI.waitForPageLoad(30)
-	
-	title = WebUI.getWindowTitle()	//Get the page's title
-	
-	expectedTitle = titleMap.get(it)
-	
-	if(title != expectedTitle || title.length() != expectedTitle.length()) {
-		
-		msg = 'From the home page "' + homePage + '" with link to "' + link + '", the expected page title is "' + expectedTitle + '", but the page title found is "' + title + '".'
-
-		println(msg)
-		
-		wrongPages.add(msg)	//Build a list of the wrong pages found
-	}
-	
-	if(!WebUI.verifyTextNotPresent('Oops', false, FailureHandling.OPTIONAL)) {
-		
-		msg = 'From the home page "' + homePage + '" the link to "' + link + '" generated a 404 page not found error.'
-		notFound.add(msg)	//Build a list of 404 errors
-	}
-}
-
-outMsg = ''
-
-//Print the messages related to unexpected links
-first = true
-unexpectedLinkCount = unexpectedLinks.size()
-if(unexpectedLinkCount == 0) {
-	msg = 'No unexpected links were encountered.\n\n'
-	msgPrint(msg)
-	
-} else {
-	count = 0
-	unexpectedLinks.each {
-		if(first) {
-			msg = 'Unexpected links:'
-			msgPrint(msg)
-			msg = unexpectedLinkCount + ' unexpected links were encountered.'
-			msgPrint(msg)
-			msgPrint(separator)
-			first = false
-		}
-		
-		msg = it
-		msgPrint(msg)
-		count ++
-		
-		if(count == unexpectedLinkCount) {
-			msgPrint(separator)
-			msgPrint('\n\n')
-		}
-	}
-}
-
-//Print the messages related to expected links not found
-first = true
-unfoundLinksCount = unfoundLinks.size()
-if(unfoundLinksCount == 0) {
-	msg = 'All expected links were found.\n\n'
-	msgPrint(msg)
-	
-} else {
-	count = 0
-	unfoundLinks.each {
-		if(first) {
-			msg = 'Expected but unfound links:'
-			msgPrint(msg)
-			msg = unfoundLinksCount + ' expected links cound not be found.'
-			msgPrint(msg)
-			msgPrint(separator)
-			first = false
-		}
-		
-		msg = it
-		msgPrint(msg)
-		count ++
-		
-		if(count == unfoundLinksCount) {
-			msgPrint(separator)
-			msgPrint('\n\n')
-		}
-	}
-}
-
-//Print the messages related to pages whose title did not match what was expected
-first = true
-wrongPageCount = wrongPages.size()
-if(wrongPageCount == 0) {
-	msg = 'No links to the wrong page were encountered.\n\n'
-	msgPrint(msg)
-	
-} else {
-	count = 0
-	wrongPages.each {
-		if(first) {
-			msg = 'Links to wrong page:'
-			msgPrint(msg)
-			msg = wrongPageCount + ' links to the wrong page were encountered. (The page title was not what was expected.)'
-			msgPrint(msg)
-			msgPrint(separator)
-			first = false
-		}
-		
-		msg = it
-		msgPrint(msg)
-		count ++
-		
-		if(count == wrongPageCount) {
-			msgPrint(separator)
-			msgPrint('\n\n')
-		}
-	}
-}
-
-//Print the messages related to 404 errors
-first = true
-notFoundCount = notFound.size()
-if(notFoundCount == 0) {
-	msg = 'No page not found errors were encountered.\n\n'
-	msgPrint(msg)
-} else {
-	count = 0
-	notFound.each {
-		if(first) {
-			msg = '404 Errors:'
-			msgPrint(msg)
-			msg = notFoundCount + ' page not found errors were encountered.'
-			msgPrint(msg)
-			msgPrint(separator)
-			first = false
-		}
-		
-		msg = it
-		msgPrint(msg)
-		count ++
-		
-		if(count == notFoundCount) {
-			msgPrint(separator)
-			msgPrint('\n\n')
-		}
-	}
-}
-
-outFile.append(outMsg)
-
-//Display all of the error messages
-JOptionPane.showMessageDialog(new Frame('Test result'), outMsg)
-
-WebUI.closeBrowser()
-
-def msgPrint(msg) {	//Function to build the output message text
-	println(msg)
-	outMsg = outMsg + msg + '\n'
-}

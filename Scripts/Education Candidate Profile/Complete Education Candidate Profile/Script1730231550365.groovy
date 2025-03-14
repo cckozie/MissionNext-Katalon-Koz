@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Preferences']
+pages = []
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -55,15 +55,20 @@ if (GlobalVariable.outFile != '') {
     writeFile = true
 }
 
+mobile = ''
+if(GlobalVariable.mobileScreen) {
+	mobile = ', Mobile Screen'
+}
+
 if (!(writeFile)) {
-    outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
-    domain) + '.txt')
+    outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
+    domain + '.txt')
 
     GlobalVariable.outFile = outFile
 
-    outFile.write(('Testing Complete Education Candidate Profile on ' + domain) + '\n')
+    outFile.write('Testing Complete Education Candidate Profile on ' + domain + mobile + '\n')
 } else {
-    outFile.append(('\nTesting Complete Education Candidate Profile on ' + domain) + '\n')
+    outFile.append('\nTesting Complete Education Candidate Profile on ' + domain + mobile + '\n')
 }
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)

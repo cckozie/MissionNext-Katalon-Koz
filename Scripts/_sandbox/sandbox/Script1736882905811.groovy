@@ -23,7 +23,26 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 //new ExecutionProfilesLoader().loadProfile("Education Candidate 14")
 
-println "GlobalVariable.username=" + GlobalVariable.username
+msg = 'Exception Occured-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1449971279.254_time_commitment" type="checkbox" name="profile[group-1449971279.254][time_commitment][]" value="One year to two years"> is not clickable at point (64, 287). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 text-danger">...</div>'
 
-WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Journey Partner 17'], FailureHandling.STOP_ON_FAILURE)
+lastIndex = 0
+colons = []
+colons = msg.findAll(~/:/) { match ->
+	lastIndex = msg.indexOf(match, lastIndex+1)
+}
+error = msg.substring(colons[0]+1, colons[1])
+println(error)
 
+typeIndex = msg.indexOf('type=')
+typeEnd = msg.indexOf('" ',typeIndex+1)
+type = msg.substring(typeIndex+5, typeEnd).replace('"', '')
+println(type)
+
+valueIndex = msg.indexOf('value=')
+valueEnd = msg.indexOf('"',valueIndex+7)
+value = msg.substring(valueIndex+7, valueEnd).replace('"', '')
+println(value)
+
+errorMsg = '##### ERROR: ' + error + ' on ' + type + ' ' + value
+
+println(errorMsg)

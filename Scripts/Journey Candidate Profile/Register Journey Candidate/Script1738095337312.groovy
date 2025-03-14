@@ -98,6 +98,13 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
+if(GlobalVariable.mobileScreen) {
+	
+	WebUI.setViewPortSize(600, 1200)
+	
+	WebUI.delay(1)
+}
+
 WebUI.navigateToUrl(url)
 
 WebUI.waitForPageLoad(10)
