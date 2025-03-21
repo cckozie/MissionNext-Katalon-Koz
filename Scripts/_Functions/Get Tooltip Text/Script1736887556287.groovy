@@ -109,8 +109,9 @@ if (fieldTooltips.size() > 0) {
 //	Match up the tooltips with their associated field labels based on the field and toolip's y (vertical) location	
 //	results = [:]
 	i = 0
-	fieldTooltips.each{
-//	for(it in fieldTooltips) {
+	println('Count is ' + fieldTooltips.size())
+//	fieldTooltips.each{
+	for(it in fieldTooltips) {
 		kY = it.key
 		tY = it.value
 		tYi = tY.toInteger() + 4
@@ -120,6 +121,10 @@ if (fieldTooltips.size() > 0) {
 //		println('lYi is ' + lYi)
 		while(tYi > lYi) {
 			i = i + 1
+			println('i is ' + i)
+			if(i+1 >= fieldLabels.size()) {
+				break
+			}
 			lY = labelsY[i+1]
 			lYi = lY.toInteger()
 //			println('lYi is ' + lYi)

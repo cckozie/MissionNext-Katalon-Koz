@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Kosieracki'</initValue>
+      <initValue>'Kozie'</initValue>
       <name>last_name</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -61,12 +61,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'The CCK TEST Journey Partner'</initValue>
+      <initValue>'The Waconia TEST Journey Partner Organiation'</initValue>
       <name>organization</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'CCK JP'</initValue>
+      <initValue>'CCKTEST07JP'</initValue>
       <name>abbreviation</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -81,7 +81,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'1250 Waconia Pkwy N'</initValue>
+      <initValue>'1250 Waconia Pkwy North'</initValue>
       <name>address</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,7 +101,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'A journey partner ministry'</initValue>
+      <initValue>'A journey partner ministry for TESTING'</initValue>
       <name>description</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
