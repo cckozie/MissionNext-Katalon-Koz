@@ -19,30 +19,110 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import java.awt.Desktop as Desktop
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-//import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.By as By
+import org.openqa.selenium.interactions.Actions as Actions
+import java.io.File as File
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import javax.swing.*;
+import com.kms.katalon.core.testobject.TestObjectXpath
 
-//new ExecutionProfilesLoader().loadProfile("Education Candidate 14")
+fieldTooltips = ['Check all that generally apply. Open will match all candidates.':'515',
+'Check all that generally apply for your assignments.':'793',
+'Does your organization accommodate mission Awareness Trips?':'890',
+'Does your organization offer Vision Trips?':'1045',
+'Does your organization accommodate Vision Trips?':'1151',
+'The Open selection will match all short-term candidates':'1236',
+'The Open selection will match all candidates':'1294',
+'The candidates make a single choice.':'1369',
+'Some explanation of the short-term program is helpful. ':'1559',
+'Check all regions where your agency has activity. If there are needs at the home office, select the region where your organization has its headquarters.':'1591',
+'Check all that are needed and/or helpful. If selecting "Other", complete the field below.':'1720']
 
-msg = 'Exception Occured-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input id="profile_group-1449971279.254_time_commitment" type="checkbox" name="profile[group-1449971279.254][time_commitment][]" value="One year to two years"> is not clickable at point (64, 287). Other element would receive the click: <div class="col-sm-offset-3 col-sm-9 text-danger">...</div>'
 
-lastIndex = 0
-colons = []
-colons = msg.findAll(~/:/) { match ->
-	lastIndex = msg.indexOf(match, lastIndex+1)
+fieldLabels = ['Time Commitments':'516',
+'Available Start Options':'613',
+'Travel Options':'710',
+'Time/Hours Needed':'794',
+'Awareness Trip':'891',
+'Awareness Trip Description':'922',
+'Vision Trip':'1046',
+'Vision Trip Description':'1077',
+'Need Candidates for Short-Term Assignments':'1183',
+'Short-Term Trip Lengths':'1236',
+'Short-Term Availability':'1294',
+'Short-Term Objective':'1369',
+'Short-Term Statement':'1426',
+'Preferred Region(s)':'1592',
+'Languages':'1721',
+'Other Languages':'1815']
+
+labelsY = []
+fieldLabels.each{
+	labelsY.add(it.value)
 }
-error = msg.substring(colons[0]+1, colons[1])
-println(error)
+labelsCount = labelsY.size()
 
-typeIndex = msg.indexOf('type=')
-typeEnd = msg.indexOf('" ',typeIndex+1)
-type = msg.substring(typeIndex+5, typeEnd).replace('"', '')
-println(type)
+results = [:]
+i = 0
+//fieldTooltips.each{
+for(it in fieldTooltips) {
+	kY = it.key
+	tY = it.value
+	tYi = tY.toInteger() + 4
+	println('tYi is ' + tYi)
+	lY = labelsY[i+1]
+	lYi = lY.toInteger()
+	println('lYi is ' + lYi)
+	while(tYi > lYi) {
+		i = i + 1
+		lY = labelsY[i+1]
+		lYi = lY.toInteger()
+		println('lYi is ' + lYi)
+	}
+	lY = labelsY[i]
+	myKey = fieldLabels.find{ it.value == lY }?.key		
+	println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
+	results.put(myKey,kY)
 
-valueIndex = msg.indexOf('value=')
-valueEnd = msg.indexOf('"',valueIndex+7)
-value = msg.substring(valueIndex+7, valueEnd).replace('"', '')
-println(value)
+}
 
-errorMsg = '##### ERROR: ' + error + ' on ' + type + ' ' + value
 
-println(errorMsg)
+
+
+/*
+i = 0
+//fieldTooltips.each {
+for(it in fieldTooltips) {
+	println('next pair is ' + it.key + ':' + it.value)
+	found = false
+	tKey = it.key
+	tY = it.value.toInteger()
+	println('tY is ' + tY)
+	while(!found && i < labelsCount -2) {
+		println('i is '+ i)
+		lY = labelsY[i]
+		lYi = lY.toInteger()
+		println('lYi is ' + lYi + ' and lY + 1 is ' + labelsY[i+1].toInteger())
+		if((tY == lYi || tY == lYi-1) && tY < labelsY[i+1].toInteger()) {
+			myKey = fieldLabels.find{ it.value == lY }?.key
+			println(myKey + ':' + tKey)
+			results.put(myKey, tKey)
+			found = true
+			i = i + 1
+			break
+		} else {
+			i = i + 1
+		}
+	}
+//	i = i + 2
+
+}
+
+*/
+results.each{
+	println(it.key + ':' + it.value)
+}

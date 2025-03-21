@@ -22,6 +22,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import javax.swing.*;
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -136,5 +137,18 @@ WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLin
 
 object = 'Education Candidate Profile/Tabs/Preferences/input_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Preferences'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)
+
 
 

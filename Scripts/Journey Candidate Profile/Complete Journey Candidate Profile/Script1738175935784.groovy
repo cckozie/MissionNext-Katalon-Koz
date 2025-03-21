@@ -20,7 +20,7 @@ import javax.swing.*;
 
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = []
+pages = ['Your Ministry Prefs']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -317,6 +317,7 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 		
 	} else {
 		categories = ''
+		positions = ''
 	}
 	
 	other_people_group = 'None'
@@ -325,8 +326,6 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
-if(!called) { 	//Leave the browser open if this script was called from another script
-//	WebUI.closeBrowser()
-}
+println(pages)
 
 return pages

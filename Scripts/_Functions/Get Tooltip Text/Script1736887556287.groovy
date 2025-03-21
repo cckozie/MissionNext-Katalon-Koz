@@ -21,6 +21,9 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 
+debug = false
+
+outFile = GlobalVariable.outFile
 
 fieldTooltips = [:]
 
@@ -30,6 +33,7 @@ WebDriver driver = DriverFactory.getWebDriver()
 
 // Find all of the tooltips on the page
 tooltips = driver.findElements(By.className('field-tooltip'))
+println(tooltips.size())
 
 // Get the tooltip locations
 for(it in tooltips) {
@@ -46,12 +50,22 @@ for(it in tooltips) {
 	}
 }
 
+fieldTooltips.sort{ -it.value }
+
+if(debug) {
+	fieldTooltips.each {
+		println(it.key + ':' + it.value)
+	}
+}
+
 // If tooltips were found, get all of the field labels that are left of the tooltip locations
 if (fieldTooltips.size() > 0) {
 	
 	rightBorder = xLocation
 
 	fieldLabels = [:]
+	
+	labelsY = []
 
 	labels = driver.findElements(By.xpath('//label'))
 
@@ -77,27 +91,51 @@ if (fieldTooltips.size() > 0) {
 				yLocation = labelLocation.getY()
 	
 				fieldLabels.put(label, yLocation)
+				labelsY.add(yLocation)
 			}
 		}
 	}
 	
 	println('fieldLabels count = ' + fieldLabels.size())
 	
+	if(debug) {
+		fieldLabels.each { 
+			println(it.key + ':' + it.value)
+		}
+	}
+	
+	fieldLabels.sort{ -it.value }
 	
 //	Match up the tooltips with their associated field labels based on the field and toolip's y (vertical) location	
-	for (def label : fieldLabels) {
-		
-		y = label.value
-
-		for (def tooltip : fieldTooltips) {
-			
-			if (((tooltip.value == y) || (tooltip.value == (y + 1))) || (tooltip.value == (y - 1))) {
-				
-				tooltipMap.put(label.key, tooltip.key)
-
-				break
-			}
+//	results = [:]
+	i = 0
+	fieldTooltips.each{
+//	for(it in fieldTooltips) {
+		kY = it.key
+		tY = it.value
+		tYi = tY.toInteger() + 4
+//		println('tYi is ' + tYi)
+		lY = labelsY[i+1]
+		lYi = lY.toInteger()
+//		println('lYi is ' + lYi)
+		while(tYi > lYi) {
+			i = i + 1
+			lY = labelsY[i+1]
+			lYi = lY.toInteger()
+//			println('lYi is ' + lYi)
 		}
+		lY = labelsY[i]
+		myKey = fieldLabels.find{ it.value == lY }?.key	
+		if(debug) {	
+			println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
+		}
+		tooltipMap.put(myKey,kY)
+	}
+}
+
+if(debug) {
+	tooltipMap.each {
+		println(it.key + ':' + it.value)
 	}
 }
 

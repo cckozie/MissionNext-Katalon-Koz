@@ -175,3 +175,16 @@ if (varHide_listing == 'Yes') {
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/School Info/btn_Complete Submit'))
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Education Partner Profile/Tabs/a_School Info'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)
+
+

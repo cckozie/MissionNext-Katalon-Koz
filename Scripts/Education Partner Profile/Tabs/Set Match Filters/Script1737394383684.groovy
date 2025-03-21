@@ -138,3 +138,33 @@ WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpa
 
 object = 'Object Repository/Education Partner Profile/Tabs/Match Filters/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// The tab may not be found since this is typically the last tab. In that case, test for the Thank You page
+WebUI.waitForPageLoad(10)
+
+profile = WebUI.verifyElementVisible(findTestObject('Education Partner Profile/Tabs/a_Contact Info'), FailureHandling.OPTIONAL)
+
+if (profile) {
+	myClass = WebUI.getAttribute(findTestObject('Education Partner Profile/Tabs/a_Match Filters'), 'class', FailureHandling.OPTIONAL)
+	if(!myClass.contains('error')) {
+		outText = testName + ' was successfully completed.\n'
+	} else {
+		outText = 'Unable to successfully complete ' + testName + '.\n'
+		KeywordUtil.markError(outText)
+	}
+} else {
+	myURL = WebUI.getUrl()
+	
+	if(myURL.contains('https://education.missionnext.org/dashboard')) {
+		outText = (testName + ' was successfully completed.\n')
+	} else {
+		outText = (('Unable to successfully complete ' + testName) + '.\n')
+
+		KeywordUtil.markError(outText)
+	}
+}
+
+println(outText)
+outFile.append(outText)
+

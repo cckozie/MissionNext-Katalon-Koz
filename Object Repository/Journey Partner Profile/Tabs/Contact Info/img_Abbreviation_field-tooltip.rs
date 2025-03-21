@@ -23,15 +23,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>01bef5b8-e37e-4414-800b-d233896da851</webElementGuid>
+      <webElementGuid>8aec3b91-d369-4f0c-9910-4d253f365c30</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>18557eed-9f33-407b-85e2-462b443f848c</webElementGuid>
+      <value>https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
+      <webElementGuid>8599fff4-edea-44db-ac4f-e3963ef03e5b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>c79c820d-243f-4879-a1d8-93642aa818fa</webElementGuid>
+      <webElementGuid>ab719095-cea0-44f6-9c3e-86ad559f05eb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>800c35f9-0edb-4e1c-8e9e-68a9af147353</webElementGuid>
+      <webElementGuid>bf114161-424c-40f5-9652-1afaebab50d8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Generally, the first initials of your organization name; this is used in some displays.</value>
-      <webElementGuid>7acedf1f-2f3b-4b3b-9efc-0e47f5309f63</webElementGuid>
+      <webElementGuid>22e43f2d-addf-46c2-80b9-0c3eda013243</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>fd5b8117-4844-4a06-aeb1-cc8a055c71be</webElementGuid>
+      <webElementGuid>8326470c-e691-477a-a59e-45f8d393eda0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group1']/div[2]/div/img</value>
-      <webElementGuid>366553af-bb13-417c-b106-4f0b842490e3</webElementGuid>
+      <webElementGuid>6c554e6c-f73a-4c0f-996d-409f50c9c6d6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[2]</value>
-      <webElementGuid>1b5a8dd6-e9d1-44e1-8835-5f38d457203f</webElementGuid>
+      <webElementGuid>d09335eb-150e-40db-b1b5-b4c07c26dc71</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,14 +87,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/img</value>
-      <webElementGuid>ed182ae7-b530-48e6-981a-8c857568a215</webElementGuid>
+      <webElementGuid>bfac7592-73a9-4aa7-8076-70126a8e0876</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//img[@src = 'https://journey.explorenext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>92e81948-3b63-461d-b330-e1a9b68721d7</webElementGuid>
+      <value>//img[@src = 'https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
+      <webElementGuid>43456f4d-316c-4f8a-b7fe-49e28ebc7db1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

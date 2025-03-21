@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[@id='ui-id-4']</value>
+         <value>//*[@id=&quot;tabs&quot;]/ul/li[4]</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>3f79f5a1-0435-426d-bce3-70866ddc3a0a</webElementGuid>
+      <webElementGuid>c78c1d71-7a46-47e3-b527-f6ecc483a099</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>#group-1446521801.898</value>
-      <webElementGuid>4ee3ab71-a019-44cd-81c1-209461c592dc</webElementGuid>
+      <webElementGuid>3e6867d2-5eb0-45a0-abe6-3ab821035ea2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>-1</value>
-      <webElementGuid>59c31082-370a-401d-a1ec-123a4b78f9e5</webElementGuid>
+      <webElementGuid>287f381d-df25-4c48-bbeb-c5b645a19e07</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>class</name>
       <type>Main</type>
       <value>ui-tabs-anchor</value>
-      <webElementGuid>32f19b13-55c9-40ab-96a7-f92058389fc0</webElementGuid>
+      <webElementGuid>41635392-6fba-4d28-a38d-fe881b8813d5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>ui-id-4</value>
-      <webElementGuid>93c9e990-71e1-42b4-b156-dde8b3bb31dc</webElementGuid>
+      <webElementGuid>ce5260fb-fe26-4d5c-9b26-8f7e419b5495</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Readiness</value>
-      <webElementGuid>7bfca367-5301-44c5-91d6-4305e569e0dc</webElementGuid>
+      <webElementGuid>78e6ffce-851d-4058-9cb1-03fa9a6e8837</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;ui-id-4&quot;)</value>
-      <webElementGuid>3d8ad554-4bc8-4d35-a9d5-3e84a86086b5</webElementGuid>
+      <webElementGuid>b56ce66b-3012-41c8-90e1-e950131edf9c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//a[@id='ui-id-4']</value>
-      <webElementGuid>33944826-661d-4524-a439-958b37517e57</webElementGuid>
+      <webElementGuid>a2ec8640-3f2e-4b85-9fd1-36885decb5c4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='tabs']/ul/li[4]/a</value>
-      <webElementGuid>c3c74591-afe3-4ee8-a83c-b15741862348</webElementGuid>
+      <webElementGuid>4978ea3d-77e8-4d3d-aa51-3d8693a1d96c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Readiness')]</value>
-      <webElementGuid>33a22969-d5d6-445c-9a4c-03a367eedee1</webElementGuid>
+      <webElementGuid>2437c0f3-de81-4bad-af29-d6b8324a6945</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Service Options'])[1]/following::a[1]</value>
-      <webElementGuid>5e715805-be19-4900-a176-b95414bc36c1</webElementGuid>
+      <webElementGuid>157ee306-1c09-4f6f-96de-ac8c0d8b9879</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Organization Info'])[1]/following::a[2]</value>
-      <webElementGuid>373ecb6c-7d6e-4b90-9d8a-ff4a7a4e0633</webElementGuid>
+      <webElementGuid>051c749b-67e7-4889-a05f-459647a4215c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Ministry Prefs'])[1]/preceding::a[1]</value>
-      <webElementGuid>bce328e5-6a76-41ad-84f0-61d5f32294a8</webElementGuid>
+      <webElementGuid>23088b5e-5de8-4b6a-b81b-cf0b435fa40b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='IT Positions'])[1]/preceding::a[2]</value>
-      <webElementGuid>16f702e7-2fe3-4020-a6d2-66d67aa6c576</webElementGuid>
+      <webElementGuid>04c2b042-c61a-48f3-89ea-3d4120cee0ec</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,7 +135,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Readiness']/parent::*</value>
-      <webElementGuid>31b6f11a-fffd-4d39-b6bc-647648a78814</webElementGuid>
+      <webElementGuid>d2713fde-9547-425f-ba02-c092a8253d57</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -143,7 +143,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '#group-1446521801.898')]</value>
-      <webElementGuid>39ce45bc-5a9e-4f7d-acb1-8943a74f4f7c</webElementGuid>
+      <webElementGuid>bd6d3f57-5b12-499a-b48d-a6745af7de44</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -151,7 +151,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/ul/li[4]/a</value>
-      <webElementGuid>311b8575-265b-44a0-9f36-25e631404aff</webElementGuid>
+      <webElementGuid>72ba9b99-b61c-41ab-a607-d0f41af90fc4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -159,6 +159,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '#group-1446521801.898' and @id = 'ui-id-4' and (text() = 'Readiness' or . = 'Readiness')]</value>
-      <webElementGuid>c09ddb43-b518-497b-8084-1d82a75cabc3</webElementGuid>
+      <webElementGuid>bd1ca9d9-c03a-4d69-9d7e-40a131f8ea6b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

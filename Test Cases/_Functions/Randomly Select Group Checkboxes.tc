@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Randomly Select Group Checkboxes</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fe2419f1-e835-45d7-8141-66c0c0a0cd65</testCaseGuid>
+</TestCaseEntity>

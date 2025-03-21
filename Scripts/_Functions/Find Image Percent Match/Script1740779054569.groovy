@@ -43,4 +43,5 @@ if(matchP >= 0) {
 	println(pctF)
 }
 
+println('pctF is ' + pctF)
 return pctF

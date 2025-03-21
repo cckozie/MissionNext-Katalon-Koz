@@ -74,4 +74,9 @@
       <initValue>''</initValue>
       <name>virtualProfilePassword</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>screenshotOnly</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

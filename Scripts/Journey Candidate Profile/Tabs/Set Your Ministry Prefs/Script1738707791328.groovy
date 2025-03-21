@@ -80,6 +80,10 @@ requiredFieldMsgs = [
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
 
+if(GlobalVariable.screenshotOnly) {
+	return
+}
+
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -129,3 +133,31 @@ if (varOther_people_group != null) {
 
 WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs//btn_Complete Submit'))
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// The tab may not be found since this is typically the last tab. In that case, test for the Thank You page
+WebUI.waitForPageLoad(10)
+
+profile = WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Tabs/a_Contact Info'), FailureHandling.OPTIONAL)
+
+if (profile) {
+	myClass = WebUI.getAttribute(findTestObject('Journey Candidate Profile/Tabs/a_Your Ministry Prefs'), 'class', FailureHandling.OPTIONAL)
+	if(!myClass.contains('error')) {
+		outText = testName + ' was successfully completed.\n'
+	} else {
+		outText = 'Unable to successfully complete ' + testName + '.\n'
+		KeywordUtil.markError(outText)
+	}
+} else {
+	found = WebUI.verifyTextPresent('Thank You', false, FailureHandling.OPTIONAL)
+
+	if (found) {
+		outText = (testName + ' was successfully completed.\n')
+	} else {
+		outText = (('Unable to successfully complete ' + testName) + '.\n')
+
+		KeywordUtil.markError(outText)
+	}
+}
+
+println(outText)
+outFile.append(outText)

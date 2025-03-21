@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[@id='ui-id-8']</value>
+         <value>//*[@id=&quot;tabs&quot;]/ul/li[8]</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>c8e22e4c-0f49-45b9-b832-45637b6482e9</webElementGuid>
+      <webElementGuid>1438601d-6735-4847-aec3-5dac73d7dd78</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>#group-1463520836.272</value>
-      <webElementGuid>caf54632-f7fa-477b-ad95-97bdb5f4fb08</webElementGuid>
+      <webElementGuid>fe499020-dfc9-4602-8d37-ee339e7be30f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>dependent-group ui-tabs-anchor</value>
-      <webElementGuid>0ae092b9-c433-4688-b0ab-bcf31421c3d7</webElementGuid>
+      <webElementGuid>bf205f0c-573f-4e5e-9157-08f02a28cb1c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>group-1463520836.272</value>
-      <webElementGuid>a06199c0-9e4a-47d5-89e3-83d26645ada6</webElementGuid>
+      <webElementGuid>da70a699-1f97-4b33-8994-4c9b49888572</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>data-depends-on</name>
       <type>Main</type>
       <value>marital_status</value>
-      <webElementGuid>5379296e-d2a8-4b4f-8bf1-cdc0998f80e5</webElementGuid>
+      <webElementGuid>da9159d5-3b3a-4e7c-b0ab-25d0159fdb5c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>tabindex</name>
       <type>Main</type>
       <value>-1</value>
-      <webElementGuid>658b2ab0-cf18-42ca-b1df-1659a98bd598</webElementGuid>
+      <webElementGuid>8154d282-01fb-4054-aa64-27f72d703ce4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>id</name>
       <type>Main</type>
       <value>ui-id-8</value>
-      <webElementGuid>0f385ce2-70d1-43b9-8706-30bc2245919f</webElementGuid>
+      <webElementGuid>481507c1-b770-4139-98fd-28e8e9719b47</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Spouse Info</value>
-      <webElementGuid>8fac560e-d101-4b68-8f26-3532a6dee9db</webElementGuid>
+      <webElementGuid>50cc37ad-1252-4784-b39a-1dfb63888918</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;ui-id-8&quot;)</value>
-      <webElementGuid>e3327c70-da0c-4992-b4bd-59ab2bfca052</webElementGuid>
+      <webElementGuid>41f6fd7d-afab-4cda-93b2-e92adc04403b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//a[@id='ui-id-8']</value>
-      <webElementGuid>303f949c-cff4-4317-a961-9c559b29ce59</webElementGuid>
+      <webElementGuid>0b8613df-9755-4e94-a19f-544582226ec3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='tabs']/ul/li[8]/a</value>
-      <webElementGuid>1f6c650c-91ee-40a2-89bb-6951a0428b36</webElementGuid>
+      <webElementGuid>2367f35f-42d0-47fa-a78a-c7a8870e0570</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Spouse Info')]</value>
-      <webElementGuid>57b940a2-b01e-4388-a46e-a70f11dc0cb2</webElementGuid>
+      <webElementGuid>84618331-20b5-45d6-9b9f-d705f994929e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Options/Comment'])[1]/following::a[1]</value>
-      <webElementGuid>07889391-92c0-41e4-abef-c0ad26db50be</webElementGuid>
+      <webElementGuid>30174908-dac4-4e10-b7c3-0c153fdd5de6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Preferences'])[1]/following::a[2]</value>
-      <webElementGuid>b61f5060-42b8-45da-a56e-4bfdc35e6329</webElementGuid>
+      <webElementGuid>cc392ccb-829e-44b0-8a72-c79116700e98</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,7 +135,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Spouse Experience'])[1]/preceding::a[1]</value>
-      <webElementGuid>e6a5521d-4ee5-4d9f-a0c7-44c0515c2408</webElementGuid>
+      <webElementGuid>438cc09b-b5c3-45dc-ab66-0642837b28e1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -143,7 +143,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Spouse Service Prefs'])[1]/preceding::a[2]</value>
-      <webElementGuid>540e0468-8378-43ba-8b7a-e8425c5221c5</webElementGuid>
+      <webElementGuid>ab2608ee-fcb9-4f38-9af2-b49dfe5fb743</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -151,7 +151,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Spouse Info']/parent::*</value>
-      <webElementGuid>a7c1ce2d-f6ca-4e52-9db7-8a00bc368102</webElementGuid>
+      <webElementGuid>5a15ceac-a9dc-4fa1-b16a-70359afa9840</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -159,7 +159,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '#group-1463520836.272')]</value>
-      <webElementGuid>65448bf0-c15f-4c5a-8849-24517369b880</webElementGuid>
+      <webElementGuid>fd17ee40-1094-442d-894c-0a9f5f66e6b6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -167,7 +167,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/ul/li[8]/a</value>
-      <webElementGuid>bba90195-6488-41e0-a4d7-c3eb6cda15fc</webElementGuid>
+      <webElementGuid>71d5b1c5-6b28-44f3-85b0-b0aee2f4419f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -175,6 +175,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '#group-1463520836.272' and @id = 'ui-id-8' and (text() = 'Spouse Info' or . = 'Spouse Info')]</value>
-      <webElementGuid>b57e5721-3418-4fb7-9761-4d28086ca3a6</webElementGuid>
+      <webElementGuid>c8ffec1c-ea61-4361-97af-d9fd8ff0d371</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

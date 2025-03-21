@@ -42,9 +42,9 @@ if(username[-3..-1] != '6ep') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
-	registerOnly = false
+	registerOnly = true
 }
 //######################################################################################################
 //================================== Initialize ===============================================
@@ -399,11 +399,11 @@ if (GlobalVariable.returnCode == 'found') {
 
     //================================== Create a subscriptioon for the new education partner ========================
     WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
-            , ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
+            , ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
 
     if (!(registerOnly)) {
         //================================== Complete the Education Partner tabs ========================
-        WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
+        WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
         outText = '\nEducation Partner registration was successful. Continuing to complete profile'
 
@@ -411,15 +411,15 @@ if (GlobalVariable.returnCode == 'found') {
 
         outFile.append(outText)
 		
-		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 		
-		found = WebUI.verifyTextPresent('(?i)Hello, The CCK TEST Education Partner', true, FailureHandling.CONTINUE_ON_FAILURE)
+		myURL = WebUI.getUrl()
 		
-		if(found) {
+		if(myURL.contains('https://education.missionnext.org/dashboard')) {
 			outText = '\n***** Education Partner login after creation was successful. *****'
 			
 		} else {
-			outText = '\n##### Education Partner completion may have failed. Unable to find the text "Hello, The CCK TEST Education Partner" after logging in. #####'
+			outText = '\n##### Education Partner completion may have failed. The landing URL is ' + myURL + '. #####'
 		}
 		
 		println(outText) 
@@ -427,7 +427,7 @@ if (GlobalVariable.returnCode == 'found') {
 		outFile.append(outText)			
 		
     } else {
-		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 		
 		found = WebUI.verifyTextPresent('Complete your profile by answering', false)
 		

@@ -34,7 +34,7 @@ KeywordLogger log = new KeywordLogger()
 /////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 //************* Time to wait in minutes ****************
-waitTime = 4 //I've seen it take 10+ minutes
+waitTime = 5 //I've seen it take 10+ minutes
 
 scriptStart = new Date()
 
@@ -87,11 +87,7 @@ println(searchKey)
 writeFile = false
 
 if (GlobalVariable.outFile != '') {
-    String myFile = GlobalVariable.outFile
-
-    println(myFile)
-
-    outFile = new File(myFile)
+    outFile = GlobalVariable.outFile
 
     writeFile = true
 }
@@ -297,9 +293,11 @@ emailFolder.close(false)
 			
 if(msgFoundCount == fromKey.size()) {
 	
-	GlobalVariable.returnCode = 'found'
+	return true
 	
 } else {
+	
+	return false
 	
 	if(msgFoundCount == 0) {
 

@@ -36,7 +36,7 @@ if(username[-3..-1] != '7jp') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
 }
@@ -357,10 +357,10 @@ if (pending) {
 }
 
 //================================== Wait for the approval pending email for the new journey partner =========
-WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
+found = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
 	, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
-if (GlobalVariable.returnCode == 'found') {
+if (found) {
 	println(('Approval request email for ' + GlobalVariable.username) + ' was found')
 
 	WebUI.closeBrowser()
@@ -374,7 +374,7 @@ if (GlobalVariable.returnCode == 'found') {
 
 	if (!(registerOnly)) {
 		//================================== Complete the Education Partner tabs ========================
-		WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 
 		outText = '\nJourney Partner registration was successful.\n'
 
@@ -382,7 +382,7 @@ if (GlobalVariable.returnCode == 'found') {
 
 		outFile.append(outText)
 		
-		WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 		
 		expectedText = WebUI.verifyTextPresent('HELLO, THE CCK TEST JOURNEY PARTNER', false)
 		
@@ -394,5 +394,10 @@ if (GlobalVariable.returnCode == 'found') {
 		}
 		outFile.append(outText)
 	}
+} else {
+	outText = '##### ERROR: Approval pending email was not found.'
+	println(outText)
+	outFile.append(outText + '\n')
+	KeywordUtil.markError('\n' + outText)
 }
 

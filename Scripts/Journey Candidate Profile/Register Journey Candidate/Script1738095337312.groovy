@@ -39,7 +39,7 @@ if(username[-3..-1] != '5jc') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
@@ -229,25 +229,25 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 
 if (!(registerOnly)) {
     pages = WebUI.callTestCase(findTestCase('Journey Candidate Profile/Complete Journey Candidate Profile'), [('varCalled') : true], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
 	
-	if(pages.size() == 0 || pages == 'All') {
-
-        success = WebUI.verifyTextPresent('THANK YOU FOR SUBMITTING YOUR PROFILE ON MISSIONNEXT JOURNEY!', false)
+	if(pages == null || pages.isEmpty() || pages == 'All') {
 		
-        if (success) {
+		myURL = WebUI.getUrl()
+
+        if (myURL.contains('https://journey.missionnext.org/mn-thank-you-page/')) {
 			outText = '\n+++ Journey candidate registration successful. Thank you page was found.\n'
 			
 			outFile.append(outText)
 			
-			WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
+			WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 			
-			dashboardMessage = WebUI.verifyTextPresent('HELLO, CKTEST05JC KOSIERACKI', false, FailureHandling.OPTIONAL)
+			myURL = WebUI.getUrl()
 			
-			if(dashboardMessage) {
-				outText = '+++ Journey login after profile creation was successful.\n'
+			if(myURL.contains('journey.missionnext.org/dashboard')) {
+				outText = '+++ Journey candidate login after profile creation was successful.\n'
 			} else {
-				outText = '--- Journey login after profile creation failed.\n'				
+				outText = '--- Journey candidate login after profile creation failed.\n'				
 			}
 			outFile.append(outText)
 			

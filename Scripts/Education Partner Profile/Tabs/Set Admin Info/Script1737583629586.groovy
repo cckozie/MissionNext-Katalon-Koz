@@ -146,3 +146,16 @@ WebUI.delay(2)
 object = 'Education Partner Profile/Tabs/Admin Info/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Education Partner Profile/Tabs/a_Admin Info'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)
+
+

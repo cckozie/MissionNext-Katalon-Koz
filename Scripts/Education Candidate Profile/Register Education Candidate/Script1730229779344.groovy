@@ -13,6 +13,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import groovy.console.ui.SystemOutputInterceptor as SystemOutputInterceptor
 import internal.GlobalVariable as GlobalVariable
@@ -242,9 +243,11 @@ if (!(registerOnly)) {
 			
 			WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 			
-			optionsComment = WebUI.verifyTextPresent('(?i)HELLO, CKTEST04EC KOSIERACKI', true)
+			WebUI.waitForPageLoad(10)
 			
-			if(optionsComment) {
+			myURL = WebUI.getUrl()
+			
+			if(myURL.contains('https://education.missionnext.org/dashboard')) {
 				outText = '+++ Education login after profile creation was successful.\n'
 			} else {
 				outText = '--- Education login after profile creation failed.\n'				
@@ -255,9 +258,8 @@ if (!(registerOnly)) {
 			outText = '\n--- Education candidate registration FAILED. Thank you page was NOT found.\n'
 			
 			outFile.append(outText)
-
 		}
-	}
+	}	
 }
 
 //WebUI.closeBrowser()

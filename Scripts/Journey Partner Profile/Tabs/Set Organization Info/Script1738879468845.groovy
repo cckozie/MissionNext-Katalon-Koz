@@ -141,9 +141,20 @@ if (varHide_listing != null) {
 
 // Test the external page links
 WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
-	('varObjectPath') : 'Object Repository/Journey Candidate Profile/Tabs/Organization Info/'], FailureHandling.CONTINUE_ON_FAILURE)
+	('varObjectPath') : 'Object Repository/Journey Partner Profile/Tabs/Organization Info/'], FailureHandling.CONTINUE_ON_FAILURE)
 
 object = 'Journey Partner Profile/Tabs/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object
 	, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Journey Partner Profile/Tabs/a_Organization Info'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)

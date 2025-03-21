@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Status of Group Elements</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>19f7b2c0-05fc-4ec0-a9c3-0c8827ab2556</testCaseGuid>
+</TestCaseEntity>

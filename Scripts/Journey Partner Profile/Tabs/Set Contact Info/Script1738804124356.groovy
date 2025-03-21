@@ -53,6 +53,8 @@ tooltips = [
 ('dummy') : 'dummy',
 ('Organization') : 'img_Organization_field-tooltip',
 ('Abbreviation') : 'img_Abbreviation_field-tooltip',
+('Mailing Address') : 'img_Mailing Address_field-tooltip',
+('Organization City') : 'img_Organization City_field-tooltip',
 ('PostZip Code') : 'img_PostZip Code_field-tooltip',
 ('Key Contact Email') : 'img_Key Contact Email_field-tooltip',
 ('Website Address') : 'img_Website Address_field-tooltip',
@@ -62,6 +64,8 @@ tooltips = [
 tooltipText = [
 ('Organization') : 'Name of your Organization.(Shorten, if too long to fit in field)',
 ('Abbreviation') : 'Generally, the first initials of your organization name; this is used in some displays.',
+('Mailing Address') : 'Organization mailing address is required',
+('Organization City') : 'Organization city field is required',
 ('Post/Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.',
 ('Key Contact Email') : 'Email address must be unique. Use another for a different MissionNext account.',
 ('Website Address') : 'Must start with https://',
@@ -151,4 +155,16 @@ WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLin
 object = 'Journey Partner Profile/Tabs/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object
 	, ('varParm1') : null], FailureHandling.STOP_ON_FAILURE)
+
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Journey Partner Profile/Tabs/a_Contact Info'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)
 

@@ -142,3 +142,15 @@ WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLin
 
 WebUI.click(findTestObject('Education Partner Profile/Tabs/Contact Info/btn_Complete Submit'))
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+WebUI.waitForPageLoad(10)
+myClass = WebUI.getAttribute(findTestObject('Education Partner Profile/Tabs/a_Contact Info'), 'class', FailureHandling.OPTIONAL)
+if(!myClass.contains('error')) {
+	outText = testName + ' was successfully completed.\n'
+} else {
+	outText = 'Unable to successfully complete ' + testName + '.\n'
+	KeywordUtil.markError(outText)
+}
+println(outText)
+outFile.append(outText)
+

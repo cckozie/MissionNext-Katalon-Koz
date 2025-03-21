@@ -120,3 +120,31 @@ if(!GlobalVariable.fastPath) {
 object = 'Object Repository/Journey Partner Profile/Tabs//btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
+// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// The tab may not be found since this is typically the last tab. In that case, test for the Thank You page
+WebUI.waitForPageLoad(10)
+
+profile = WebUI.verifyElementVisible(findTestObject('Journey Candidate Profile/Tabs/a_Contact Info'), FailureHandling.OPTIONAL)
+
+if (profile) {
+	myClass = WebUI.getAttribute(findTestObject('Journey Partner Profile/Tabs/a_Recruiting Countries'), 'class', FailureHandling.OPTIONAL)
+	if(!myClass.contains('error')) {
+		outText = testName + ' was successfully completed.\n'
+	} else {
+		outText = 'Unable to successfully complete ' + testName + '.\n'
+		KeywordUtil.markError(outText)
+	}
+} else {
+	myURL = WebUI.getUrl()
+	
+	if(myURL.contains('https://journey.missionnext.org/dashboard')) {
+		outText = (testName + ' was successfully completed.\n')
+	} else {
+		outText = (('Unable to successfully complete ' + testName) + '.\n')
+
+		KeywordUtil.markError(outText)
+	}
+}
+
+println(outText)
+outFile.append(outText)
