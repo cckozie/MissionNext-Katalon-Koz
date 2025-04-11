@@ -19,6 +19,8 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import java.awt.Desktop as Desktop
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration
+
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/')+1)
 myTestCase = myTestCase.substring(0,myTestCase.length()-3)

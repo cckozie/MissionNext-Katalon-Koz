@@ -17,8 +17,36 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import java.io.FileReader as FileReader
+import java.io.IOException as IOException
+import org.apache.commons.lang3.StringUtils as StringUtils
+import javax.swing.*
+import org.sikuli.script.*
+import org.sikuli.script.SikulixForJython as SikulixForJython
+import java.awt.Robot as Robot
+import java.awt.event.KeyEvent as KeyEvent
+import java.io.File as File
+import java.awt.Toolkit as Toolkit
+import java.awt.datatransfer.Clipboard as Clipboard
+
+
+myValues = []
+
+values = 'Candidate Name '
+
+space = values.indexOf(' ')
+
+myValues.add(values.substring(0,space))
+
+myValues.add(values.substring(space + 1))
+
+println(myValues)
+
+/*
 //myValue = 'Administrator'
 myValue = 'Administrator'
 for(chr in myValue) {
 	println((int) chr)
 }
+
+*/

@@ -22,40 +22,27 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 if (binding.hasVariable('varUsername')) {
-	username = varUsername
+    username = varUsername
 } else {
-	username = GlobalVariable.username
+    username = GlobalVariable.username
 }
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
-if(GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-	println(myFile)
-	outFile = new java.io.File(myFile)
-	writeFile = true
+
+WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+
+if (GlobalVariable.outFile != '') {
+    String myFile = GlobalVariable.outFile
+
+    println(myFile)
+
+    outFile = new File(myFile)
+
+    writeFile = true
 }
 
 domain = GlobalVariable.domain
-
-url = 'https://api.' + domain
-
-WebUI.openBrowser('')
-
-//WebUI.navigateToUrl('https://api.explorenext.org')
-WebUI.navigateToUrl(url)
-
-WebUI.setText(findTestObject('Admin/API Login/input_username'), 'chriskosieracki')
-
-WebUI.setEncryptedText(findTestObject('Admin/API Login/input_password'), '4Q/2PF7UjxevAl0v0kCS+w==')
-
-WebUI.click(findTestObject('Admin/API Login/btn_Sign in'))
-
-WebUI.click(findTestObject('Admin/API Dashboard/a_Users'))
-
-WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), username)
-
-WebUI.delay(5)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -75,56 +62,50 @@ for (row = 1; row < row_count; row++) {
 
         WebUI.delay(5)
 
-        outText = 'Granting access to ' + username
+        outText = ('Granting access to ' + username)
 
-		println('=====> '+ outText)
-		
-		if(writeFile) {
-			outFile.append(outText + '\n')
-		}
-		
+        println('=====> ' + outText)
+
+        if (writeFile) {
+            outFile.append(outText + '\n')
+        }
+        
         WebUI.click(findTestObject('Object Repository/Admin/API Dashboard/button_Grant Access'))
 
         WebUI.delay(1)
-		
-		granted = false
-		
-		loops = 10
-		
-		loop = 0
-		
-		while(!granted && loop < loops) {
-		
-			granted = WebUI.verifyTextPresent('ACCESS GRANTED', false, FailureHandling.OPTIONAL)
-			
-			WebUI.delay(2)
-			
-			loop ++
-			
-		}
-		
-		if(granted) {
 
-			outText = 'Access granted to ' + username
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-		
-		} else {
-			
-			outText = 'FAILED TO GRANT ACCESS TO ' + username
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-			
-		}
+        granted = false
 
+        loops = 10
+
+        loop = 0
+
+        while (!(granted) && (loop < loops)) {
+            granted = WebUI.verifyTextPresent('ACCESS GRANTED', false, FailureHandling.OPTIONAL)
+
+            WebUI.delay(2)
+
+            loop++
+        }
+        
+        if (granted) {
+            outText = ('Access granted to ' + username)
+
+            println('=====> ' + outText)
+
+            if (writeFile) {
+                outFile.append(outText + '\n')
+            }
+        } else {
+            outText = ('FAILED TO GRANT ACCESS TO ' + username)
+
+            println('=====> ' + outText)
+
+            if (writeFile) {
+                outFile.append(outText + '\n')
+            }
+        }
+        
         WebUI.click(findTestObject('Object Repository/Admin/API Dashboard/a_Logout'))
 
         break

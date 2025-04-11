@@ -53,7 +53,7 @@ reg.setH(150)
 
 reg.highlight(3)
 */
-WebUI.callTestCase(findTestCase('Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Jobs List Beta/a_Jobs List Beta'))
 

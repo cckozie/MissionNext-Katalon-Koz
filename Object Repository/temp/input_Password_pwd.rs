@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='password-020f398']</value>
+         <value>//input[@id='user_pass']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#password-020f398</value>
+         <value>#user_pass</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,15 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>12243c3c-747d-4ed8-92f3-63756b2ed3f4</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>size</name>
-      <type>Main</type>
-      <value>1</value>
-      <webElementGuid>32c5a9c9-c3bb-44c0-b274-e36a576a7daa</webElementGuid>
+      <webElementGuid>627890c1-e772-4527-9ebc-ed4fc137474a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>password</value>
-      <webElementGuid>1466e715-8462-473f-8b6b-1a611448afa3</webElementGuid>
+      <webElementGuid>5f28dea7-b702-4358-ba28-85bfc4167b30</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,62 +39,94 @@
       <name>name</name>
       <type>Main</type>
       <value>pwd</value>
-      <webElementGuid>46f568ca-65c4-443c-937f-efb64eca3d2e</webElementGuid>
+      <webElementGuid>f1e1faee-6e1c-40d4-a57d-32878565ae0c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>password-020f398</value>
-      <webElementGuid>eed3b9b1-0c49-4748-94f5-08547e6b1185</webElementGuid>
+      <value>user_pass</value>
+      <webElementGuid>cdea6339-9700-422f-bfc7-372ad2b6b0c2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>elementor-field elementor-field-textual elementor-size-md</value>
-      <webElementGuid>b78ab21e-128f-40c5-9319-82854413309e</webElementGuid>
+      <value>input password-input</value>
+      <webElementGuid>256693f5-dead-4431-a9e3-c78f87f7b589</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>size</name>
+      <type>Main</type>
+      <value>20</value>
+      <webElementGuid>921fc143-e5c6-4d5b-b76a-95311867446b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>autocomplete</name>
+      <type>Main</type>
+      <value>current-password</value>
+      <webElementGuid>dc8661d1-32e9-459a-8f84-cf5b08ef49dd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>spellcheck</name>
+      <type>Main</type>
+      <value>false</value>
+      <webElementGuid>f59fcf36-9b97-4438-b96c-46e26835599e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>required</name>
+      <type>Main</type>
+      <value>required</value>
+      <webElementGuid>08e74963-945f-49ad-9347-b30a549f8ee8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;password-020f398&quot;)</value>
-      <webElementGuid>7658b40c-b95e-4625-99c3-d6ef56fa07ad</webElementGuid>
+      <value>id(&quot;user_pass&quot;)</value>
+      <webElementGuid>46da86d9-9080-4b14-9b54-29a1bdb727bf</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='password-020f398']</value>
-      <webElementGuid>046c21c6-8d02-4e06-a60b-8ca9a4f2ab84</webElementGuid>
+      <value>//input[@id='user_pass']</value>
+      <webElementGuid>809809e5-e853-47e1-aab4-90fde752229b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='content']/div/section[2]/div/div/div/section/div/div[2]/div/div/div/form/div/div[2]/input</value>
-      <webElementGuid>aea97843-1e58-4a85-bc11-c8004b2ea215</webElementGuid>
+      <value>//form[@id='loginform']/div/div/input</value>
+      <webElementGuid>056832f2-3f4e-4f29-af30-b78670b8015d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/input</value>
-      <webElementGuid>35bad8a6-959d-4e1c-8641-84c7cea03cb6</webElementGuid>
+      <value>//div/input</value>
+      <webElementGuid>a0d6e147-b0f8-4159-be0f-a9d25a6905d3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@type = 'password' and @name = 'pwd' and @id = 'password-020f398']</value>
-      <webElementGuid>8001f292-754f-4f62-b89c-2d955d0621a0</webElementGuid>
+      <value>//input[@type = 'password' and @name = 'pwd' and @id = 'user_pass']</value>
+      <webElementGuid>2c0be11c-ba66-438d-a9e2-b2387d198177</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

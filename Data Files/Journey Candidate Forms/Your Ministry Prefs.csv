@@ -1,5 +1,5 @@
 ﻿<Group>Job Categories,
- BUSINESS AS MISSION,y
+ BUSINESS AS MISSION,
  CHURCH DEVELOPMENT,
  COMMUNICATIONS,
  COMMUNITY DEVELOPMENT,
@@ -17,7 +17,7 @@
  RELIEF AND DEVELOPMENT,
  RESOURCE MANAGEMENT,
  SUPPORT HELPS,
- SUPPORT PROFESSIONAL,y
+ SUPPORT PROFESSIONAL,
 <Group>Preferred Position(s),
 BUSINESS AS MISSION,
  Accounting,
@@ -233,7 +233,7 @@ RELIEF AND DEVELOPMENT,
  General Contractor,
  Healthcare,
  HIV/AIDS,
- IT Training,
+ IT Training,y
  Micro-Enterprise,
  Micro-Finance,
  Orphanage,

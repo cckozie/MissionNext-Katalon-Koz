@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='loader']/img</value>
+         <value>//img[@alt='Close Window']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#loader > img</value>
+         <value>img[alt=&quot;Close Window&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,54 +23,86 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>df3caf0b-6ee1-479f-9e8b-861bc5b7bbe7</webElementGuid>
+      <webElementGuid>9df280b2-dc6f-4ea9-b8f1-eb553a71ae46</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/spinner_big.gif</value>
-      <webElementGuid>99e0cecf-77b0-4a1c-a212-f24fdb7cd95b</webElementGuid>
+      <value>images/close.jpg</value>
+      <webElementGuid>70101d28-6927-47ba-a433-cd87a338ff5d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>Close Window</value>
+      <webElementGuid>f18abf55-064c-4f06-aedc-c12add332e53</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>120</value>
+      <webElementGuid>eec4496e-7c2e-458b-9c76-31e6700b85d1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>50</value>
+      <webElementGuid>ba4684a7-dc81-4eea-a272-78505f9f16f2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>border</name>
+      <type>Main</type>
+      <value>0</value>
+      <webElementGuid>49b0a216-852d-417b-acd0-053e661d4230</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>align</name>
+      <type>Main</type>
+      <value>right</value>
+      <webElementGuid>004256ef-d441-4899-83c7-ffadbb9350e8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;loader&quot;)/img[1]</value>
-      <webElementGuid>9abddaa2-9be7-45f1-aaec-8255a2011ce9</webElementGuid>
+      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class=&quot;body&quot;]/a[1]/img[1]</value>
+      <webElementGuid>62ba3389-8663-4340-adda-e653d41c98a1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:idRelative</name>
-      <type>Main</type>
-      <value>//div[@id='loader']/img</value>
-      <webElementGuid>4969efd0-6d47-4025-adce-f32e5e8c0bd6</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:img</name>
       <type>Main</type>
-      <value>//img[contains(@src,'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/spinner_big.gif')]</value>
-      <webElementGuid>db20a4cb-1c9b-4026-baec-b073b813e1c2</webElementGuid>
+      <value>//img[@alt='Close Window']</value>
+      <webElementGuid>b840a2e3-d7a0-4648-8256-6f17b4e231a4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/img</value>
-      <webElementGuid>47c74059-4abe-4150-a012-37d15131929f</webElementGuid>
+      <value>//a/img</value>
+      <webElementGuid>4c067a51-581a-40ad-b8bb-fb0608086488</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/spinner_big.gif']</value>
-      <webElementGuid>8549dcac-f06a-453a-bd40-44d17b91d417</webElementGuid>
+      <value>//img[@src = 'images/close.jpg' and @alt = 'Close Window']</value>
+      <webElementGuid>3465bb9e-46c6-431a-b38e-7da1fba2c64e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

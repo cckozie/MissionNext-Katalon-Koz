@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>e2772eed-ab5d-4f66-bbc0-d89efce8a75a</webElementGuid>
+      <webElementGuid>efdafbb1-ef77-460b-9b9e-5352cfb1a50a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/job</value>
-      <webElementGuid>a30849f8-8e90-46ce-a9e5-f4953a879899</webElementGuid>
+      <webElementGuid>656ed58a-55b0-4abd-a712-2cba2f7b0c67</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>text</name>
       <type>Main</type>
       <value>My School Jobs</value>
-      <webElementGuid>2dae9456-0f7d-4921-98d7-51dce2995625</webElementGuid>
+      <webElementGuid>9eaab636-e2b2-45e5-acf5-712f9143beb9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[8]</value>
-      <webElementGuid>2a05b6d1-e122-438d-9f82-ceabdca2b113</webElementGuid>
+      <webElementGuid>3fe87114-b666-43ad-93af-ae33d3217b09</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/div/div/div[2]/a[8]</value>
-      <webElementGuid>d18495c9-ed86-4766-81f7-02e71e5f65d4</webElementGuid>
+      <webElementGuid>88d0b109-67cb-4563-8910-8b513228694e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'My School Jobs')]</value>
-      <webElementGuid>36da966d-db60-4577-9fe8-48074c3a6275</webElementGuid>
+      <webElementGuid>747962b4-8f86-4738-a517-309fd237d554</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Favorites'])[1]/following::a[1]</value>
-      <webElementGuid>dbbff1ff-bd10-421f-b959-22d66688dfbb</webElementGuid>
+      <webElementGuid>8e18c9e8-8351-4373-b145-866d52519cc1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Educators'])[1]/following::a[2]</value>
-      <webElementGuid>e2136378-8f8b-4aae-8b7e-35b3b82b3697</webElementGuid>
+      <webElementGuid>c4b5580b-04eb-4a7c-bd2c-ebab4bd40f17</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Inquiry List'])[1]/preceding::a[1]</value>
-      <webElementGuid>dfd50365-98d4-48cf-b952-5069c24e115d</webElementGuid>
+      <webElementGuid>1eb4a5df-4153-43b1-b9a4-2bbfc43d0fe3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Manage Folders'])[1]/preceding::a[2]</value>
-      <webElementGuid>34bbc8f9-a2ee-4611-9a94-3039bf77b205</webElementGuid>
+      <webElementGuid>a78094dd-1e8f-4177-a9af-979e736a8b92</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='My School Jobs']/parent::*</value>
-      <webElementGuid>8cd69443-9bef-4fbe-b5b9-23e5c9d68d71</webElementGuid>
+      <webElementGuid>c23fd217-9300-490a-89e0-bae033118e3d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/job')]</value>
-      <webElementGuid>317d8cec-eeab-48ee-b73b-5259ec8e2a97</webElementGuid>
+      <webElementGuid>f753981e-94e8-46c4-97b2-4a25e6820a81</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//a[8]</value>
-      <webElementGuid>c8e265e2-9773-4eeb-bc94-652c8ae00c71</webElementGuid>
+      <webElementGuid>75775a33-bd9f-4897-8fef-9f222e3c1f17</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/job' and (text() = 'My School Jobs' or . = 'My School Jobs')]</value>
-      <webElementGuid>d4ad9c81-3630-41f2-9cf0-4084133f53d9</webElementGuid>
+      <webElementGuid>65303eb5-df34-46c2-9206-74826311f11a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

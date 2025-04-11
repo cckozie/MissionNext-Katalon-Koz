@@ -373,6 +373,10 @@ if (found) {
 			, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 
 	if (!(registerOnly)) {
+		//================================== Wait until access has been granted (11:00pm ET) ========================
+		WebUI.callTestCase(findTestCase('_Functions/Wait Until Time'), [('varFormat') : "HH", ('varTime') : '23', ('varDelay') : 600],
+			 FailureHandling.CONTINUE_ON_FAILURE)
+
 		//================================== Complete the Education Partner tabs ========================
 		WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 

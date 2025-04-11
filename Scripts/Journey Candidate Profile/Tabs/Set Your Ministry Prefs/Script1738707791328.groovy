@@ -130,8 +130,17 @@ if (varOther_people_group != null) {
 		, ('varParm1') : varOther_people_group], FailureHandling.STOP_ON_FAILURE)
 }
 
+//Take another screenshot of the page with selections
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName + '_selected' + '_' + GlobalVariable.username],
+	FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs//btn_Complete Submit'))
+
+//WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Tabs//btn_Complete Submit'))
+
+object = 'Object Repository/Journey Candidate Profile/Tabs/btn_Complete Submit'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+
 
 // Test to see if the tab is complete (not colored red, class does not contain 'error')
 // The tab may not be found since this is typically the last tab. In that case, test for the Thank You page

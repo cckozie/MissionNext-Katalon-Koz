@@ -79,4 +79,9 @@
       <initValue>false</initValue>
       <name>screenshotOnly</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>killAvast</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

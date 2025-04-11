@@ -33,7 +33,8 @@ class Before_Test_Case {
 		println testCaseContext.getTestCaseVariables()
 //		app = 'Google Analytics Opt Out'
 		WebUI.callTestCase(findTestCase('_Functions/Start Application'), [('varApplication') : 'Google Analytics Opt Out'], FailureHandling.STOP_ON_FAILURE)
-		WebUI.callTestCase(findTestCase('_Functions/Manage Avast VPN'), [('varDesiredState') : 'off'], FailureHandling.OPTIONAL)
-		
+		if(GlobalVariable.killAvast) {
+			WebUI.callTestCase(findTestCase('_Functions/Manage Avast VPN'), [('varDesiredState') : 'off'], FailureHandling.OPTIONAL)
+		}
 	}
 }

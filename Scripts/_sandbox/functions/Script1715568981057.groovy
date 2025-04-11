@@ -17,31 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-/*
-total = add_numbers(2, 7)
+values = ['air', 'bowl', 'candle','!dog']
+values2 = ['boy','chair','air','candle','pig']
 
-println(total)
-
-myString = '0.89'
-
-strVal = Float.valueOf(myString) * 100
-
-println(strVal + '%')
-
-//BigDecimal bdVal = new BigDecimal(myString)
-bdVal = new BigDecimal(myString)
-
-bdVal = (bdVal *100).intValue()
-
-println(bdVal + '%')
-
-myVal = myString.replace('.','').toInteger()
-
-println(myVal + '%')
-
-def add_numbers(def num1, def num2) {
-    sum = (num1 + num2)
-
-    return sum
-}
-*/
+println(values.intersect(values2))
+//values.intersect( values2 )
