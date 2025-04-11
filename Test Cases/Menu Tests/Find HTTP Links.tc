@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Find HTTP Links</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7263be7d-a9f7-4468-9b92-a8e5e31f98c9</testCaseGuid>
+</TestCaseEntity>

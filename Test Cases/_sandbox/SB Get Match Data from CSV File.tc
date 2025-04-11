@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SB Get Match Data from CSV File</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>93d94c9f-5e6c-4525-ad3f-d6e993121402</testCaseGuid>
+</TestCaseEntity>

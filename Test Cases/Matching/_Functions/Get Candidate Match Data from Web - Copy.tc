@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Candidate Match Data from Web - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>17d0c708-b88d-474e-84c1-1e6365ff208d</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Switch back to Chris Kosieracki</name>
+   <tag></tag>
+   <elementGuidId>6fbf099c-8f06-4913-82c6-4041e2a0b5f1</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#user_switching_switch_on > a</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//p[@id='user_switching_switch_on']/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>c23d8b34-42ee-42e3-9959-f695725089f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/login-here?action=switch_to_olduser&amp;nr=1&amp;_wpnonce=b11a2493d5&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org%2Fdashboard</value>
+      <webElementGuid>b95e7ec5-1b5b-487d-a77d-fba1a6155861</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Switch back to Chris Kosieracki</value>
+      <webElementGuid>31dc9b05-bc50-451d-bc64-05f23a5e144d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;user_switching_switch_on&quot;)/a[1]</value>
+      <webElementGuid>0c89ecca-6fe0-460f-995e-5d91ce651ee8</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//p[@id='user_switching_switch_on']/a</value>
+      <webElementGuid>830fba48-3ea6-4eea-abed-7bd2a7a948f6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Switch back to Chris Kosieracki')]</value>
+      <webElementGuid>057baa17-7381-45ec-97e1-d64519206b32</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Linkedin'])[1]/following::a[2]</value>
+      <webElementGuid>c5e871a7-1450-47af-95ce-04196433e105</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[1]/following::a[3]</value>
+      <webElementGuid>f26d15e6-bc9b-4340-8e2b-792586e05647</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Switch back to Chris Kosieracki']/parent::*</value>
+      <webElementGuid>24bb9f87-eb6f-47a2-9036-18ae70c24358</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/login-here?action=switch_to_olduser&amp;nr=1&amp;_wpnonce=b11a2493d5&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org%2Fdashboard')]</value>
+      <webElementGuid>ff510243-ad6d-4ed0-ba6f-41a50553ffe7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//body/p/a</value>
+      <webElementGuid>a7b6c84a-1849-4424-9a34-d1a04a3852b3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/login-here?action=switch_to_olduser&amp;nr=1&amp;_wpnonce=b11a2493d5&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org%2Fdashboard' and (text() = 'Switch back to Chris Kosieracki' or . = 'Switch back to Chris Kosieracki')]</value>
+      <webElementGuid>d8a3f132-673e-4a43-960d-3cc638449837</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

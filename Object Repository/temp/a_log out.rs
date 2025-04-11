@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_log out</name>
+   <tag></tag>
+   <elementGuidId>56d9850f-6f13-48be-82b1-ffe34bb53902</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='error-page']/div/p[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>8c69a568-00f9-464f-b769-90d1089ec72c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=%2Fjourney-home%2Flogin-here%2F&amp;_wpnonce=ffb25f4558</value>
+      <webElementGuid>f2909b82-cf30-4995-9d3b-0d90c87cdbe0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>log out</value>
+      <webElementGuid>ae269596-0dec-46c7-a6c2-fddc7aca0053</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;error-page&quot;)/div[@class=&quot;wp-die-message&quot;]/p[2]/a[1]</value>
+      <webElementGuid>87e9fe70-1df0-4b20-a09e-fe09592166d7</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='error-page']/div/p[2]/a</value>
+      <webElementGuid>c695fc08-fb4e-46b4-bfb3-6adce19ccf52</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'log out')]</value>
+      <webElementGuid>a03858d5-f5a7-4cbb-9ba0-50f273606ea4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='log out']/parent::*</value>
+      <webElementGuid>f8ee913d-8763-461e-9778-0aad28c21e84</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=%2Fjourney-home%2Flogin-here%2F&amp;_wpnonce=ffb25f4558')]</value>
+      <webElementGuid>5b97476a-4c94-46c7-a18b-c0b2cb006a26</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a</value>
+      <webElementGuid>30f94ba1-3144-4069-b5c0-72ee90e50441</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=%2Fjourney-home%2Flogin-here%2F&amp;_wpnonce=ffb25f4558' and (text() = 'log out' or . = 'log out')]</value>
+      <webElementGuid>49ad0365-9e03-42ed-a4c9-2cc2346f0497</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

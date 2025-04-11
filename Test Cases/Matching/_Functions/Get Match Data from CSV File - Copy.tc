@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Match Data from CSV File - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ab1abac3-202b-4a22-83a7-6ad3b45b83ce</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get User Full Profile (Sikulix)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6ba73a8e-0ae9-4f9a-b35e-0bb917a49785</testCaseGuid>
+</TestCaseEntity>
