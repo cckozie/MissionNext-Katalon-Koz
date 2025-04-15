@@ -1,0 +1,247 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.28
+
+Date: 2025-04-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  216.82.37.200
+
+  Log out
+
+  mission_next_prod
+
+ Created	2025-03-31
+ Updated	2025-03-31
+ Last Login	2025-04-14
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for cktest04ec TEST Kosieracki as Candidate on Education
+Field ID	Field Name	  User Value(s) [User ID=16392]
+Name & Preferences
+19	First Name	cktest04ec TEST
+21	Last Name	Kosieracki
+24	Email	cktest04@missionnext.org
+104	Time Commitment(s)	One year to two years
+Long Term
+304	I/We can be Available	In one to two years
+126	Paid & Volunteer Positions	Position requires raising some support
+A salary provided; enough to live locally
+Contact Info
+30	Country	United States
+34	Best Phone Number	952-442-1703
+Ministry Positions
+Enter other Ethnicity
+Enter Family Status
+229	Dependent Children	None
+Experience
+113	Highest Earned Degree	Bachelor of Science (BS)
+163	Degree Field	Physical Science
+334	Classroom Experience	Yes
+58	Occupation	Middle School Teacher
+129	Cross-Cultural Experience	Occasionally served in cultures other than my own
+303	Missions Experience	I have taken a short-term missions trip
+160	Life Experience	I've been a believer for 23 years. I went on a mission trip to train Vietnamese in Bible translation
+Education
+233	Formal Education Degree	Yes
+234	Formal Teaching Credentials	Pending
+235	Credential Authority	TBD
+264	Previous Experience	Business Education
+Industrial Arts
+Physical Education
+Sciences - Physical Science/Physics
+Substitute Teacher
+Technology
+237	Other Experience	Middle school football coach
+128	English Proficiency	Advanced
+111	Additional Language(s)	French
+Additional Language ProficiencyGroup
+332	Additional Language Proficiency	Rudimentary
+Situation
+100	Process Stage	I am actively investigating missions
+312	Attended Perspectives?	I am planning to take the Perspectives Course
+284	Bible Training	Some Bible school classes
+61	Describe Bible Training:	I audited some classes at Crown College
+307	Affiliated with a church?	Yes
+112	Journey Guide Option	Maybe at a later time
+Church
+48	Church Name	Parkside Church of the C&MA
+302	Church Involvement	I am serving in my local church
+Availability
+304	I/We can be Available	In one to two years
+326	School Term Available	Spring Semester
+Fall Semester
+104	Time Commitment(s)	One year to two years
+Long Term
+260	Relocation Option(s)	Not sure
+Preferences
+287	Preferred School Positions	Substitute Teacher
+Tutor
+English Teacher
+Art Teacher
+Business Education Teacher
+Computer Teacher (School)
+Industrial Arts Teacher
+Mathematics Teacher
+Science Teacher
+Administrator
+Director
+Childcare Attendant
+School Counselor
+School Psychometrist
+Distance Education Teacher
+Kindergarten Teacher
+Preschool Teacher
+339	Preferred Region(s)	South America
+Caribbean
+Central America
+Options/Comment
+126	Paid & Volunteer Positions	Position requires raising some support
+A salary provided; enough to live locally
+127	Travel Options	Some travel funds available
+Travel funding negotiated
+Travel funds provided
+335	Educator Comments	I really hope I can get a partially paid position
+68	Spouse First Name	Jennifer
+69	Spouse Last Name	Kosieracki
+169	Spouse Birth Year	1951
+192	Spouse Citizenship Country	United States
+376	Spouse Ethnicity	WHITE/CAUCASIAN
+227	Spouse Serving with You?	Yes
+117	Spouse Highest Earned Degree	High School or Equivalent
+164	Spouse Degree Field	Music
+290	Spouse Occupation	Piano Teacher
+122	Spouse an Educator?	1
+194	Spouse Preferred Position(s)	Elementary Education
+Informal Education
+Special Education
+JESUS Film Showings/Dist
+Personal/Group Evangelism
+Literature Preparation
+Family Ministry
+Mothers Helper/Nanny
+Worship Leader
+Art Director
+Music
+Visual Arts
+Mentoring
+Pre-School/Toddlers
+289	Spouse Preferences Comment	Willing to consider other opportunities
+268	Spouse Formal Education Degree	Yes
+266	Spouse Education Credentials	Pending
+269	Spouse Credential Authority	TBD
+270	Spouse Previous Experience	Elementary
+Kindergarten
+Music Teacher
+Pre-School
+Teacher's Aide
+Tutoring
+271	Spouse Other Experience	Independent piano teacher
+320	Spouse English Proficiency	Advanced
+340	Spouse Additional Language(s)	None
+288	Spouse Preferred Education Positions	Teacher's Aide
+Elementary School Teacher
+Kindergarten Teacher
+Preschool Teacher
+Tutor
+Art Teacher
+Arts - Performing
+Drama Teacher
+Music Teacher
+297	Spouse Education Preferences Comment	Willing to consider other positions.
+194	Spouse Preferred Position(s)	Elementary Education
+Informal Education
+Special Education
+JESUS Film Showings/Dist
+Personal/Group Evangelism
+Literature Preparation
+Family Ministry
+Mothers Helper/Nanny
+Worship Leader
+Art Director
+Music
+Visual Arts
+Mentoring
+Pre-School/Toddlers
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 16392:
+Table: users
+ID	username	email	created	updated	last login	Active
+16392	cktest04ec	cktest04@missionnext.org	2025-03-31	2025-03-31	2025-04-14	Yes
+Days ago: 	14  	14  	0  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+16392	1	Candidate	128
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+16392	6 EDU	Yes	2025-03-31	2030-04-14	active	
+
+Table: user_apps
+ID	App ID	Application
+16392	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+16392	2	Short-Term	Yes	128
+16392	3	Journey	Yes	128
+16392	11	IT-Technology	Yes	128
+16392	14	QuickStart	Yes	128
+16392	5	BAMmatch	Yes	
+16392	9	Mission Next	Yes	
+16392	4	JourneyGuide	Yes	
+16392	10	Canada	Yes	
+16392	13	Urbana	Yes	
+16392	6	Education	Yes	128
+
+
+
+
+
+
+
+
+
+
+
+
+
