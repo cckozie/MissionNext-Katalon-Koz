@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Get Match Data from Web</name>
+   <name>Get Profile from Web (Partners and Candidates)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>809f5c54-98bf-4c1c-8a14-67a042363111</testCaseGuid>
+   <testCaseGuid>0c490d37-b4ff-4a01-90e2-3a9aa8921b99</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>395b6bba-b083-42c0-be89-c2ade8c08758</variableId>
+      <variableId>4823df48-666a-4557-80ec-7b04fdf6967f</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>395b6bba-b083-42c0-be89-c2ade8c08758</id>
+      <id>4823df48-666a-4557-80ec-7b04fdf6967f</id>
       <masked>false</masked>
       <name>varUsername</name>
    </variable>

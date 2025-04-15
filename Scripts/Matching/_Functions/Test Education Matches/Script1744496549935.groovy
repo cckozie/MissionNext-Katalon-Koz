@@ -29,63 +29,56 @@ import java.io.File as File
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
 
-bypass = false
+bypass = true	//Clipboard holds table
 
-imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/'
+dashboardLinks = ['a_Jobs List Beta'] //, 'a_Candidate Matches', 'a_Jobs List Beta']
+
+//for(link in dashboardLinks) {
 
 if(!bypass) {
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername'):'cktest06ep', ('varSite'):'Education'], FailureHandling.STOP_ON_FAILURE)
+
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [:], FailureHandling.STOP_ON_FAILURE)
 	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
+	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Jobs List Beta'))
+	
+	Screen s = new Screen()
+	
+	WebUI.delay(3)
+	
+	job = s.find('/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/BAM Coordinator.png')
+	
+	matchButton = s.find('/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/Matches.png')
+	
+	matchButton.setY(job.getY())
+	
+	s.click(matchButton)
+	
+	WebUI.delay(3)
+	
+	Robot robot = new Robot()
+	
+	s.click('/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/What Matched Jobs.png')
+	
+	//Select All
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Copy
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_META)
 }
-
-Screen s = new Screen()
-
-matchReg = s.find(imagePath + 'What Matched Organization.png')
-
-matchReg.highlight(1)
-WebUI.delay(3)
-System.exit(0)
-regPct = find("1744450194782.png")
-regPct.highlight(1)
-regLast = find("1744450417568.png")
-click("1744450417568.png")
-
-regLast.highlight(1)
-print(regLast.getX())
-regPct.setX(regLast.getX() + 1)
-regPct.setW(100)
-regPct.highlight(1)
-name = regPct.text()
-print(name)
-loc = Location(495,792)
-click(loc)
-
-
-Robot robot = new Robot()
-
-s.click('/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/What Matched Jobs.png')
-
-//Select All
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-WebUI.delay(1)
-
-//Copy
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_META)
-
 	
 tempFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/my test page tmp.csv'
 

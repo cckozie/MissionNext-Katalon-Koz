@@ -23,8 +23,10 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'office'], FailureHandling.STOP_ON_FAILURE)
-
+username = 'acaci'
+site = 'Education'
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername'):username, ('varSite'):site], FailureHandling.STOP_ON_FAILURE)
+System.exit(0)
 WebUI.delay(5)
 
-WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite'):site], FailureHandling.STOP_ON_FAILURE)

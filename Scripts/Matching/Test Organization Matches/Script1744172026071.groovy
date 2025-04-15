@@ -19,7 +19,26 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.io.File as File
 
-WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from Web'), [('varMatchType'):'Organization'], FailureHandling.STOP_ON_FAILURE)
+refreshCandidateFile = false
+
+runType = 'EO'
+
+runTypeMap = ['EO' : ['Education', 'Organization', 'acacia', 'hr@acaciaschool.org']]
+
+values = runTypeMap.get(runType)
+
+site = values[0]
+
+matchType = values[1]
+
+username = values[2]
+
+orgEmail = values[3]
+
+if(refreshCandidateFile) {
+	WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from Web'), [('varMatchType'):matchType,
+		('varSite'):site, ('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+}
 
 stopOnError = false
 
@@ -42,34 +61,58 @@ errorFile.write(('Running ' + myTestCase) + '\n')
 
 GlobalVariable.outFile = outFile
 
-//####
-//complete these (org's) for all match fields
-//add another map for user's wildcards
-/*
-wildcards = [
-	'Process Stage':'I am just beginning to look at missions',
-	'Attended Perspectives?':'I have not taken the Perspectives Course',
-	'Relocation Option(s)':'Not a Match criterion',
-	'Affiliated with a Church?':'No',
-	'Paid & Volunteer Positions':'No Preference',
-	'Time Commitment(s)':'Open - Will negotiate']
-*/
-orgWildcards = [('Paid & Volunteer Positions') : 'No Preference', ('Affiliated with a Church?') : 'No', ('Attended Perspectives?') : 'I have not taken the Perspectives Course'
+//Journey Organization
+orgWildcardsJO = [('Paid & Volunteer Positions') : 'No Preference', ('Affiliated with a Church?') : 'No', ('Attended Perspectives?') : 'I have not taken the Perspectives Course'
     , ('Relocation Option(s)') : 'Not a Match criterion', ('Time/Hours Needed') : 'Open', ('Time Commitments') : 'Open - Will negotiate'
     , ('Preferred Region(s)') : 'No Preference', ('Process Stage') : 'I am just beginning to look at missions']
 
-userWildcards = [('Paid & Volunteer Positions') : 'Open', ('Relocation Option(s)') : 'Not sure', ('Time/Hours Available') : 'Open'
+userWildcardsJO = [('Paid & Volunteer Positions') : 'Open', ('Relocation Option(s)') : 'Not sure', ('Time/Hours Available') : 'Open'
     , ('Time Commitment(s)') : 'Open - Will negotiate', ('Preferred Region(s)') : 'No Preference']
 
-site = 'Journey'
+//Education Organization
+orgWildcardsEO = [
+	'Affiliated with a Church?' : 'No',
+	'Available Start Options' : 'No Preference',
+	'Time Commitments' : 'Open - Will negotiate',
+	'Process Stage' : 'I am just beginning to look at missions',
+	'Relocation Option(s)' : 'Not a Match criterion',
+	'Experience Preferred' : 'No',
+	'Formal Education Degree' : 'No',
+	'Classroom Experience' : 'No',
+	'Paid & Volunteer Positions' : 'No Preference',
+	'Bible Training' : 'Not Applicable',
+	'Cross-cultural Experience' : 'Not served in a culture other than my own']
 
-type = 'Org'
+userWildcardsEO = [
+	'I/We can be Available' : 'Not sure',
+	'Time Commitment(s)': 'Open - Will negotiate',
+	'Relocation Option(s)' : 'Not sure',
+	'Paid & Volunteer Positions' : 'Open']
 
-orgEmail = 'headquarters@missionnext.org'
+if(site == 'Education') {
+	if(matchType == 'Organization') {
+		orgWildcards = orgWildcardsEO
+		userWildcards = userWildcardsEO
+	} else {
+		orgWildcards = orgWildcardsEJ
+		userWildcards = userWildcardsEJ
+	}
+} else {
+	if(matchType == 'Organization') {
+		orgWildcards = orgWildcardsJO
+		userWildcards = userWildcardsJO
+	} else {
+		orgWildcards = orgWildcardsJJ
+		userWildcards = userWildcardsJJ
+	}
+}
+	
+
+radioType = matchType.substring(0,3)
 
 candidateMatches = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from CSV File'), [('varMatchType'):'Organization'], FailureHandling.STOP_ON_FAILURE)
 
-matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varType') : type], 
+matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : radioType], 
     FailureHandling.STOP_ON_FAILURE)
 
 outText = '\n matchValues\n'
@@ -92,8 +135,8 @@ matchValues.each({
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : null], FailureHandling.STOP_ON_FAILURE)
 
-orgFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email', ('varEmail') : orgEmail], 
-    FailureHandling.STOP_ON_FAILURE)
+orgFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email',
+	 ('varEmail') : orgEmail, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
 outText = '\n orgFieldValues\n'
 
@@ -131,11 +174,11 @@ for (def itc : candidateMatches) {
         }
         
         userFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'lastName'
-                , ('varFirstName') : firstName, ('varLastName') : lastName], FailureHandling.STOP_ON_FAILURE)
+                , ('varFirstName') : firstName, ('varLastName') : lastName, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
         if (userFieldValues == null) {
             userFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'firstName'
-                    , ('varFirstName') : firstName, ('varLastName') : lastName], FailureHandling.STOP_ON_FAILURE)
+                    , ('varFirstName') : firstName, ('varLastName') : lastName, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
         }
         
         WebUI.delay(5)
@@ -254,7 +297,7 @@ for (def itc : candidateMatches) {
             
             //		matchValues.each {
             for (def it : matchValues) {
-                if (!(excluded)) {
+                if (!(excluded) && (runType != 'EO' || it.key != 'Previous Experience')) {
                     matched = false
 
                     outText = ((('\nTesting candidate ' + it.key) + ', organization ') + (it.value[0]))

@@ -19,6 +19,8 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
 
+site = varSite
+
 imageFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/log_out?.png'
 
 Screen s = new Screen()
@@ -42,4 +44,4 @@ while(s.exists(imageFile)) {
 
 WebUI.waitForPageLoad(15)
 
-WebUI.click(findTestObject('Object Repository/Switch To/div_You are Logged in as - (Logout)'))
+WebUI.click(findTestObject('Object Repository/Switch To/a_Final Log Out ' + site))

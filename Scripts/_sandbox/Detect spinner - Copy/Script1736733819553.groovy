@@ -23,44 +23,29 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.JavascriptExecutor;
 
-WebUI.openBrowser('')
+rules = ['Time Commitment(s)':['Time Commitments', 5,5,5]]
 
-WebUI.maximizeWindow()
+candidate = ['Time Commitment(s)':['One year to two years', 'Long Term']]
 
-WebDriver driver = DriverFactory.getWebDriver()
+organization = ['Time Commitments':['One year', 'One year to two years', 'Long Term']]
 
-WebUI.navigateToUrl('https://education.missionnext.org/signup/candidate')
+candidate = ['Time Commitment(s)':['One year to two years', 'Long Term']]
 
-WebUI.waitForPageLoad(10)
+organization = ['Time Commitments':['One year', 'One year to two years', 'Long Term']]
 
-element = driver.findElement(By.xpath('/html/body/div[1]/div/div[2]'))
-
-count = 0
-
-JavascriptExecutor executor = (JavascriptExecutor) driver;
-Object elementAttributes = executor.executeScript("var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; return items;",element);
-
-attrsStart = elementAttributes.toString()
-println('start :' + attrsStart)
-while(count < 500) {
-	elementAttributes = executor.executeScript("var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; return items;",element);
+for(it in rules) {
+	rulesValues = rules.get(it.key)
+	orgKey = rulesValues[0]
+	println('orgKey = ' + orgKey)
+	orgValues = organization.get(orgKey)
+	candValues = candidate.get(it.key)
 	
-	attrs = elementAttributes.toString()
-	if(attrs != attrsStart) {
-		println(count + ':' + attrs)
-		break
-	}
-	count ++
 }
-elementAttributes = executor.executeScript("var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; return items;",element);
+println('orgValues = ' + orgValues)
+println('candValues = ' + candValues)
 
-attrs = elementAttributes.toString()
-println('start :' + attrsStart)
+match = candValues.intersect(orgValues)
 
-println(count + ':' + attrs)
+println(match)
 
-//WebUI.waitForElementAttributeValue(findTestObject, null, null, 0).call(findTestObject('Object Repository/temp/Element_Spinner'), 
-//    10)
-
-//WebUI.waitForElementAttributeValue(findTestObject('temp/Element_Loader'), 'display', 'none', 10)
 

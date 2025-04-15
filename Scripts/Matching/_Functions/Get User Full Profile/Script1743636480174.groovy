@@ -13,6 +13,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
@@ -37,6 +38,8 @@ if(varType == 'email') {
 	user = varFirstName + ' ' + varLastName
 	searchKey = varLastName
 }
+
+println(varSite)
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
@@ -124,7 +127,7 @@ if(row_count > 1) {
 		
 		firstNameExists = false
 			
-		if(varType != 'email') {
+		if(varType != 'email') { 
 			
 			// ############# Check first and last names here before clicking the Full Profile button
 			// The possible options here are:
@@ -135,24 +138,33 @@ if(row_count > 1) {
 			// 3. Not a candidate profile - The first and last name fields are not on the screen so this is not a
 			//		candidate. It may be a partner or guide, or may be an error screen of some sort
 			//		so click the back button to get the next user
+			// 4. Not a profile for the site desired - If the candidate has both Journey and Education profiles, only the 
+			// 		Journey profile data will be displayed here. If running education matches and the word 'Journey' is on
+			//		this page, then bypass this candidate.
 			
-			//	First check for the First Name field to be on the page
-			firstNameExists = WebUI.verifyElementPresent(findTestObject('Object Repository/Admin/API Dashboard/td_First Name'), 3, FailureHandling.OPTIONAL)
-			
-			if(firstNameExists) {
-				fName = WebUI.getText(findTestObject('Object Repository/Admin/API Dashboard/td_First Name')).toLowerCase()
-				
-				lName = WebUI.getText(findTestObject('Object Repository/Admin/API Dashboard/td_Last Name')).toLowerCase()
-				
-				if(fName == varFirstName.toLowerCase() && lName == varLastName.toLowerCase()) {
-		
-					user = varFirstName + ' ' + varLastName
-		
-					userFound = true
-				}
-		
+			bypass = false
+			if(varSite == 'Education' && WebUI.verifyTextPresent('Journey', false, FailureHandling.OPTIONAL)) {
+				bypass = true
 			}
-		
+			
+			if(!bypass) {
+				//	Check for the First Name field to be on the page
+				firstNameExists = WebUI.verifyElementPresent(findTestObject('Object Repository/Admin/API Dashboard/td_First Name'), 3, FailureHandling.OPTIONAL)
+				
+				if(firstNameExists) {
+					fName = WebUI.getText(findTestObject('Object Repository/Admin/API Dashboard/td_First Name')).toLowerCase()
+					
+					lName = WebUI.getText(findTestObject('Object Repository/Admin/API Dashboard/td_Last Name')).toLowerCase()
+					
+					if(fName == varFirstName.toLowerCase() && lName == varLastName.toLowerCase()) {
+			
+						user = varFirstName + ' ' + varLastName
+			
+						userFound = true
+					}
+			
+				}
+			}
 		}
 		
 		if(userFound || varType == 'email') {

@@ -41,7 +41,9 @@ WebUI.waitForPageLoad(10)
 
 s.hover(imagePath + 'My Sites.png')
 
-s.hover(imagePath + 'Journey.png')
+siteImage = imagePath + 'Dashboard ' + varSite
+
+s.hover(siteImage)
 
 s.click(imagePath + 'Dashboard.png')
 

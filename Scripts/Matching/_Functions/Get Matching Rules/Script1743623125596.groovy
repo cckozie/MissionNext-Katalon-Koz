@@ -50,9 +50,8 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 object = 'Object Repository/Admin/AD Matching/select_Website'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue', ('varObject') : object, ('varParm1') : siteValue], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Admin/AD Matching/radio_' + varType + '-2-Candidate'
+object = 'Object Repository/Admin/AD Matching/radio_' + varMatchType + '-2-Candidate'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
 
 object = 'Object Repository/Admin/AD Matching/btn_Go'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
