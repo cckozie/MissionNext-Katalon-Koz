@@ -70,7 +70,7 @@ WebUI.setText(findTestObject('Admin/Ad User Viewer Utility/input_Find account by
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Admin/Ad User Viewer Utility/input_Find account by Username_beginning'))
+WebUI.click(findTestObject('Admin/Ad User Viewer Utility/button_Find account by Username'))
 
 WebUI.delay(1)
 

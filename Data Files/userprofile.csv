@@ -1,0 +1,179 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.28
+
+Date: 2025-04-15
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  191.96.80.16
+
+  Log out
+
+  mission_next_prod
+
+ Created	2025-03-26
+ Updated	2025-04-14
+ Last Login	2025-04-14
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for The CCK TEST Education Partner CCK EP as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=16373]
+Contact Info
+21	Organization	The CCK TEST Education Partner
+20	Abbreviation	CCK EP
+6	Key Contact First Name	cktest06ep TEST
+7	Key Contact Last Name	Kosieracki
+12	Key Contact Email	cktest06@missionnext.org
+22	Key Contact Phone	1234567890
+111	Organization Phone	1234567890
+10	Country	United States
+28	Organization City	Minneapolis
+151	World Region	North America
+School Info
+66	Description	An education partner ministry
+107	Vision Trip	No
+149	School Year Starts	January
+150	School Accredited	No
+65	Website Address	https://missionnext.org
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
+High School Teacher
+Middle School Teacher
+Substitute Teacher
+Arts - Performing
+139	Experience Preferred	Elementary
+High School
+Home Schooling
+Middle School
+Tutoring
+Arts - Performing
+Arts - Visual
+English
+Service Options
+70	Time Commitments	One year
+One year to two years
+Long Term
+45	Available Start Options	Within 12 months
+In one to two years
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Occasionally served in cultures other than my own
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+105	Relocation Option(s)	I am willing to relocate within North America
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	Yes
+143	Formal Teaching Credentials	Yes
+Pending
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	Yes
+59	Travel Options	Some Travel funds available
+Travel funding negotiated
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Admin Info
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+161	Match Percent Rate	50
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 16373:
+Table: users
+ID	username	email	created	updated	last login	Active
+16373	cktest06ep	cktest06@missionnext.org	2025-03-26	2025-04-14	2025-04-14	Yes
+Days ago: 	20  	1  	1  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+16373	2	Organization	82
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+16373	6 EDU	No	2025-02-17	2026-02-18	active	Admin Add
+
+Table: user_apps
+ID	App ID	Application
+16373	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+16373	5	BAMmatch	Yes	
+16373	9	Mission Next	Yes	
+16373	4	JourneyGuide	Yes	
+16373	10	Canada	Yes	
+16373	2	Short-Term	Yes	
+16373	11	IT-Technology	Yes	
+16373	13	Urbana	Yes	
+16373	14	QuickStart	Yes	
+16373	3	Journey	Yes	
+16373	6	Education	Yes	
+
+
+
+
+
+
+
+
+

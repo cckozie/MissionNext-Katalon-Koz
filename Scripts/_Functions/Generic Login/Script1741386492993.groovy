@@ -18,13 +18,32 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
-new ExecutionProfilesLoader().loadProfile(varProfile)
+if(varProfile != '') {
+	new ExecutionProfilesLoader().loadProfile(varProfile)
+	
+	site = varProfile[0..varProfile.indexOf(' ') - 1]
+	
+	username = GlobalVariable.username
+	
+	password = GlobalVariable.password
+	
+} else {
+	site = varSite
+	
+	username = varUsername
+	
+	password = varPassword
+}
 
-site = varProfile[0..varProfile.indexOf(' ') - 1]
+//Only open a browser if there is not already one open
+windowIndex = WebUI.getWindowIndex()
 
-WebUI.openBrowser('')
+if(windowIndex < 0) {
 
-WebUI.maximizeWindow()
+	WebUI.openBrowser('')
+	
+	WebUI.maximizeWindow()
+}
 
 if(GlobalVariable.mobileScreen) {
 	
@@ -35,9 +54,9 @@ if(GlobalVariable.mobileScreen) {
 
 WebUI.navigateToUrl('https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/')
 
-WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), GlobalVariable.username)
+WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Password'), GlobalVariable.password)
+WebUI.setEncryptedText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Password'), password)
 
 WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/button_Log In'))
 

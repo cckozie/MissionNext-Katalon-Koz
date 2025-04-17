@@ -29,7 +29,7 @@ import java.io.File as File
 import java.awt.Toolkit as Toolkit
 import java.awt.datatransfer.Clipboard as Clipboard
 
-
+/*
 myValues = []
 
 values = 'Candidate Name '
@@ -41,12 +41,11 @@ myValues.add(values.substring(0,space))
 myValues.add(values.substring(space + 1))
 
 println(myValues)
+*/
 
-/*
 //myValue = 'Administrator'
 myValue = 'Administrator'
 for(chr in myValue) {
 	println((int) chr)
 }
 
-*/

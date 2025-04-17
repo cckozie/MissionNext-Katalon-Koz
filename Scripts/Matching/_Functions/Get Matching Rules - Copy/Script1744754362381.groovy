@@ -32,7 +32,7 @@ writeFile = false
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.waitForPageLoad(10)
+WebUI.delay(5)
 
 if (GlobalVariable.outFile != '') {
     String myFile = GlobalVariable.outFile
@@ -91,14 +91,10 @@ for (row = 2; row < row_count; row++) {
 
 	matchValues.put(orgField, [cndField, weight, single, couple])
 }
-
-/*
 matchValues.each{ 
         println(it.key + ' = ' + it.value)
 }
-*/
-WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
 
 return matchValues
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test School Matches</name>
+   <name>Test School Matches - Copy (3)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>68acd6a3-e8e7-4aa2-9a53-8dbc194cb355</testCaseGuid>
+   <testCaseGuid>b0eb9fac-5484-48d4-b6d3-82b9f39c25e7</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>cdcd41d9-647d-4b5f-bfb4-3e8e596b915f</variableId>
+      <variableId>46ca10de-71d6-42f7-a826-b0d43451f28a</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>cdcd41d9-647d-4b5f-bfb4-3e8e596b915f</id>
+      <id>46ca10de-71d6-42f7-a826-b0d43451f28a</id>
       <masked>false</masked>
       <name>varUsername</name>
    </variable>

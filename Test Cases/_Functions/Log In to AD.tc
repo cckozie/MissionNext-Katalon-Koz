@@ -12,11 +12,24 @@
       <value></value>
       <variableId>2738ac54-d89f-4a3e-be6a-b765a5732d3e</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e7d6d393-0c98-48d0-9b0d-86a9b2ae8b3d</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
       <id>2738ac54-d89f-4a3e-be6a-b765a5732d3e</id>
       <masked>false</masked>
       <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>true</defaultValue>
+      <description></description>
+      <id>e7d6d393-0c98-48d0-9b0d-86a9b2ae8b3d</id>
+      <masked>false</masked>
+      <name>varNewBrowser</name>
    </variable>
 </TestCaseEntity>

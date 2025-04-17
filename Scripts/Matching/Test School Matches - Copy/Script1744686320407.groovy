@@ -51,7 +51,9 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
  */
 
 
-categoriesPartner = [
+
+// Entries in AD candidate profile page that need to be ignored
+categoriesOrganization = [
 	'Contact Info',
 	'School Info',
 	'Vision Trip Description',
@@ -65,6 +67,7 @@ categoriesPartner = [
 	'Ministry Prefs',
 	'IT Positions']
 
+// Entries in AD organization profile page that need to be ignored
 categoriesCandidate = [
 	'Name & Preferences',
 	'Contact Info',
@@ -80,6 +83,28 @@ categoriesCandidate = [
 	'Preferences',
 	'Options/Comment',
 	]
+	
+//Education Organization Wildcards
+orgWildcardsEO = [
+	'Affiliated with a Church?' : 'No',
+	'Available Start Options' : 'No Preference',
+	'Time Commitments' : 'Open - Will negotiate',
+	'Process Stage' : 'I am just beginning to look at missions',
+	'Relocation Option(s)' : 'Not a Match criterion',
+	'Experience Preferred' : 'No',
+	'Formal Education Degree' : 'No',
+	'Classroom Experience' : 'No',
+	'Paid & Volunteer Positions' : 'No Preference',
+	'Bible Training' : 'Not Applicable',
+	'Cross-cultural Experience' : 'Not served in a culture other than my own']
+
+//Education Candidate Wildcards
+userWildcardsEO = [
+	'I/We can be Available' : 'Not sure',
+	'Time Commitment(s)': 'Open - Will negotiate',
+	'Relocation Option(s)' : 'Not sure',
+	'Paid & Volunteer Positions' : 'Open']
+
 
 debug = true
 
@@ -125,7 +150,7 @@ for(profileType in profileTypes) {
 		
 		tempFile = filePath + 'education partner profile-api.txt'
 		
-		categories = categoriesPartner
+		categories = categoriesOrganization
 		
 		organizationSelections = [:]
 		
@@ -141,7 +166,7 @@ for(profileType in profileTypes) {
 	
 	if(profileType == 'Organization') {
 		tempFile = filePath + 'education partner profile-api.txt'
-		categories = categoriesPartner
+		categories = categoriesOrganization
 	} else {
 		tempFile = filePath + 'education candidate profile-api.txt'
 		categories = categoriesCandidate
@@ -160,7 +185,7 @@ for(profileType in profileTypes) {
 				values = []
 				tab = line.indexOf('\t')
 				number = line.substring(0,tab)
-				if(!fieldNumbers.contains(number)) {
+				if(!fieldNumbers.contains(number)) { // It's a field (and not a dup of one already found. Some dupes in table)
 					fieldNumbers.add(number)
 					println(number)
 					line = line.substring(tab + 1)
@@ -174,9 +199,8 @@ for(profileType in profileTypes) {
 						if(value.length() >= 2) {
 							values.add(value)
 						}
-		//					System.exit(0)
 						line = getNextLine(reader)
-						while (!line.contains('\t')) { // not field 
+						while (!line.contains('\t')) { // Get all of the field selections
 							line = line.trim()
 							values.add(line)
 							line = getNextLine(reader)
@@ -184,8 +208,7 @@ for(profileType in profileTypes) {
 								break
 							}
 						}
-						println('Values is ' + values)
-		//				System.exit(1)
+//						println('Values is ' + values)
 						if(profileType == 'Organization' && field in schoolMatchFields) { //field in schoolMatchFields || 
 							organizationSelections.put(field,values)
 						} else {

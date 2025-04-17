@@ -26,17 +26,20 @@ import org.sikuli.script.SikulixForJython as SikulixForJython
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 import java.io.File as File
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
+import java.awt.Toolkit as Toolkit
+import java.awt.datatransfer.Clipboard as Clipboard
 
 bypass = false
 
+WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : ''], FailureHandling.STOP_ON_FAILURE)
+
 imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/'
 
-if(!bypass) {
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername'):'cktest06ep', ('varSite'):'Education'], FailureHandling.STOP_ON_FAILURE)
-	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
+if (!(bypass)) {
+    WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'cktest06ep', ('varSite') : 'Education'], 
+        FailureHandling.STOP_ON_FAILURE)
+
+    WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
 }
 
 Screen s = new Screen()
@@ -44,23 +47,36 @@ Screen s = new Screen()
 matchReg = s.find(imagePath + 'What Matched Organization.png')
 
 matchReg.highlight(1)
+
 WebUI.delay(3)
+
 System.exit(0)
-regPct = find("1744450194782.png")
+
+regPct = find('1744450194782.png')
+
 regPct.highlight(1)
-regLast = find("1744450417568.png")
-click("1744450417568.png")
+
+regLast = find('1744450417568.png')
+
+click('1744450417568.png')
 
 regLast.highlight(1)
-print(regLast.getX())
-regPct.setX(regLast.getX() + 1)
-regPct.setW(100)
-regPct.highlight(1)
-name = regPct.text()
-print(name)
-loc = Location(495,792)
-click(loc)
 
+print(regLast.getX())
+
+regPct.setX(regLast.getX() + 1)
+
+regPct.setW(100)
+
+regPct.highlight(1)
+
+name = regPct.text()
+
+print(name)
+
+loc = Location(495, 792)
+
+click(loc)
 
 Robot robot = new Robot()
 
@@ -86,14 +102,13 @@ robot.keyRelease(KeyEvent.VK_C)
 
 robot.keyRelease(KeyEvent.VK_META)
 
-	
 tempFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/my test page tmp.csv'
 
 outFile = new File(tempFile)
 
-Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard();
+Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard()
 
-String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString();
+String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString()
 
 println(data)
 
@@ -132,23 +147,23 @@ while ((line != null) && (count <= 10)) {
     println(line)
 
     values = line.split('\t')
-	
+
     if (save || ((values[0]) == '#')) {
-		
         save = true
-		
-		println(line.indexOf('New Listing'))
-		println(line.indexOf('New_Listing'))
-		println(line.indexOf('Age Order'))
-		
-		if(values[0] != 'New Listing' && values[0] != 'New_Listing' && line.indexOf('Age Order') < 0) {
-				
-			if(values.size() < 5) {
-				break
-			}
-			
-			outFile.append(line.replace('\t', ',') + '\n')
-		
+
+        println(line.indexOf('New Listing'))
+
+        println(line.indexOf('New_Listing'))
+
+        println(line.indexOf('Age Order'))
+
+        if ((((values[0]) != 'New Listing') && ((values[0]) != 'New_Listing')) && (line.indexOf('Age Order') < 0)) {
+            if (values.size() < 5) {
+                break
+            }
+            
+            outFile.append(line.replace('\t', ',') + '\n')
+
             myKey = (values[0])
 
             values = values.drop(1)
@@ -160,8 +175,8 @@ while ((line != null) && (count <= 10)) {
             myValues.add(values[7])
 
             matchValues.put(myKey, myValues)
-			
-			println(myKey + ':' + myValues)
+
+            println((myKey + ':') + myValues)
 
             myValues = []
 
@@ -183,3 +198,4 @@ WebUI.click(findTestObject('Object Repository/Manager/btn_Close'))
 System.exit(0)
 
 return matchValues
+

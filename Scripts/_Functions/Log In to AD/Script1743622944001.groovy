@@ -20,6 +20,9 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+
+
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
@@ -30,11 +33,19 @@ if(GlobalVariable.outFile != '') {
 	writeFile = true
 }
 
+
 domain = GlobalVariable.domain
 
 url = 'https://ad.' + domain
 
-WebUI.openBrowser('')
+
+index = WebUI.getWindowIndex(FailureHandling.OPTIONAL)
+
+if(index < 0) {
+	WebUI.openBrowser('')
+	
+	WebUI.maximizeWindow()
+}
 
 WebUI.navigateToUrl(url)
 
@@ -44,5 +55,8 @@ WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_password'), 'fAJOXt1
 
 WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
 
+println('Logged in to AD window index is ' + WebUI.getWindowIndex())
+
 WebUI.waitForPageLoad(15)
+
 

@@ -1,0 +1,192 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.28
+
+Date: 2025-04-17
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  216.82.37.200
+
+  Log out
+
+  mission_next_prod
+
+ Created	2022-12-11
+ Updated	2025-04-10
+ Last Login	2025-04-10
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Julie Fe Abayan as Candidate on Education
+Field ID	Field Name	  User Value(s) [User ID=14909]
+Name & Preferences
+19	First Name	Julie Fe
+21	Last Name	Abayan
+24	Email	abayan911@gmail.com
+310	Preferred Region(s)	Africa, North
+Africa, Sub-Sahara
+Asia, Central
+Asia, Northern
+Southeast Asia
+Asia, Southern
+Central America
+Europe, East
+Europe, West
+Oceania
+104	Time Commitment(s)	Long Term
+304	I/We can be Available	Immediately
+126	Paid & Volunteer Positions	Open
+Contact Info
+30	Country	Philippines
+29	Post/Zip Code	6510
+34	Best Phone Number	+(63)9568342695
+35	Best Way to Contact	By Email
+Ministry Positions
+220	Job Categories	EVANGELISM
+EDUCATION
+193	Preferred Position(s)	Middle School/Jr. High
+Secondary Education
+JESUS Film Showings/Dist
+Enter other Ethnicity
+Enter Family Status
+229	Dependent Children	None
+Experience
+113	Highest Earned Degree	Bachelor of Education (BEd)
+163	Degree Field	Secondary Education (Physical Sciences)
+334	Classroom Experience	Yes
+58	Occupation	Teacher
+129	Cross-Cultural Experience	Occasionally served in cultures other than my own
+303	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+160	Life Experience	I am 30 years old and have been a Christian for more than a decade now. I was reached through Campus Ministry when I was in college. Since then, I have committed to following the Lord and taking steps of adventure to know Him even better. I have been teaching for 7 years now in a secular public school, and it is within my conviction to be used by the Lord in missions through teaching. I do not know how it will become possible, but I'm trying steps now to start moving and doing something about what God has put in my heart. I hope your team can help.
+81	Resume	candidate14909_resume.pdf
+Education
+233	Formal Education Degree	Yes
+235	Credential Authority	Professional Regulation Commission (Philippines)
+264	Previous Experience	Sciences - Chemistry
+Sciences - Earth Science
+Sciences - Physical Science/Physics
+Sciences
+Middle School
+High School
+128	English Proficiency	Intermediate
+111	Additional Language(s)	Filipino
+Additional Language ProficiencyGroup
+Situation
+100	Process Stage	I am ready to select a ministry
+312	Attended Perspectives?	I am planning to take the Perspectives Course
+284	Bible Training	Some Bible school classes
+61	Describe Bible Training:	I am currently enrolled in a seminary school. I am taking up my Masters of Arts in Counseling degree with integration of theology.
+307	Affiliated with a church?	Yes
+112	Journey Guide Option	Yes, I will give it a try
+Church
+48	Church Name	ABUYOG ETERNAL LIFE MINISTRIES CHRISTIAN FELLOWSHIP CENTER INC.
+302	Church Involvement	I am serving in my local church
+Availability
+304	I/We can be Available	Immediately
+326	School Term Available	Full Year
+104	Time Commitment(s)	Long Term
+260	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Preferences
+287	Preferred School Positions	Middle School Teacher
+Science, Chemistry
+Science Teacher
+High School Teacher
+Science, Physics
+339	Preferred Region(s)	Central America
+Oceania
+Europe, East
+South America
+Asia, Northern
+Southeast Asia
+Asia, Southern
+No Preference
+Options/Comment
+126	Paid & Volunteer Positions	Open
+127	Travel Options	Travel funds provided
+335	Educator Comments	I graduated with a Secondary Education degree majoring in Physical Sciences. I have been in the field for more than 7 years now and taught Grades 7-10 students. I experienced teaching Physics, Chemistry, Earth Science, and Biology.
+192	Spouse Citizenship Country	United States
+376	Spouse Ethnicity	Select your Ethnicity
+227	Spouse Serving with You?	No
+117	Spouse Highest Earned Degree	High School or Equivalent
+268	Spouse Formal Education Degree	No
+266	Spouse Education Credentials	No
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 14909:
+Table: users
+ID	username	email	created	updated	last login	Active
+14909	juliefeabayan	abayan911@gmail.com	2022-12-11	2025-04-10	2025-04-10	Yes
+Days ago: 	858  	7  	7  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+14909	1	Candidate	153
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+14909	3 JN	Yes	2025-04-10	2030-04-10	active	
+14909	6 EDU	Yes	2022-12-11	2030-04-10	active	
+
+Table: user_apps
+ID	App ID	Application
+14909	3	Journey
+14909	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+14909	5	BAMmatch	Yes	
+14909	9	Mission Next	Yes	
+14909	4	JourneyGuide	Yes	
+14909	10	Canada	Yes	
+14909	13	Urbana	Yes	
+14909	3	Journey	Yes	153
+14909	14	QuickStart	Yes	153
+14909	11	IT-Technology	Yes	153
+14909	2	Short-Term	Yes	153
+14909	6	Education	No	153
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 
 debug = true
-
+/*
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
 	'/') + 1)
 
@@ -67,6 +67,7 @@ matchValues.each({
 System.exit(0)
 
 WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Education Partner 06'], FailureHandling.STOP_ON_FAILURE)
+*/
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
 
@@ -144,6 +145,7 @@ for (def rg : icons) {
     s.click(imagePath + 'Popup Close Window Button.png')
 
     WebUI.delay(1)
+	
 
     name = new Location(regLastName.getX() + 5, rg.getY() + 3)
 

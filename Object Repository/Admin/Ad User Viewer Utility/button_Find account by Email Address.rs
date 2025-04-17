@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Find account by Username_beginning</name>
+   <name>button_Find account by Email Address</name>
    <tag></tag>
-   <elementGuidId>823f59ef-67d8-40b9-9c35-dc6ecb81b2a3</elementGuidId>
+   <elementGuidId>883b3283-f9a2-4de0-9112-8c9e879dcc0a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input[name=&quot;begin_&quot;]</value>
+         <key>XPATH</key>
+         <value>(//input[@name='begin_'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@name='begin_']</value>
+         <key>CSS</key>
+         <value>tr:nth-of-type(5) > td:nth-of-type(3) > input[name=&quot;begin_&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>fa6171b1-5c49-4bcb-b17e-6c2be37eabaf</webElementGuid>
+      <webElementGuid>85453c5e-cd24-4b33-9501-753108f311b2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>submit</value>
-      <webElementGuid>ee7b1435-9bb1-4fa9-9463-86d7990e0633</webElementGuid>
+      <webElementGuid>c4884ed0-1a0c-44c6-91de-3f6e70c08fdc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,39 +39,39 @@
       <name>name</name>
       <type>Main</type>
       <value>begin_</value>
-      <webElementGuid>3f00bec0-2156-4f56-99cd-e031070586a5</webElementGuid>
+      <webElementGuid>ddf3dc0a-63dc-453e-9734-49f81e437f89</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Begin Username Search</value>
-      <webElementGuid>a73bf804-7b4f-4230-ba6d-91d4e3cc94c2</webElementGuid>
+      <value>Begin Email Search</value>
+      <webElementGuid>ef4cb9e5-6f0c-4b3b-a342-7df15d02e4ea</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]</value>
-      <webElementGuid>646b0385-8840-472b-9128-9344ef5a53b9</webElementGuid>
+      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/table[1]/tbody[1]/tr[5]/td[3]/input[1]</value>
+      <webElementGuid>5edfc1ad-ee0a-4cd7-97b8-072a7ef92d7a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@name='begin_']</value>
-      <webElementGuid>098e1b8f-37f5-401d-8888-4e8c03b8d085</webElementGuid>
+      <value>(//input[@name='begin_'])[2]</value>
+      <webElementGuid>a3e3b46a-60cf-4d1e-9082-2357ee3bc38c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//tr[3]/td[3]/input</value>
-      <webElementGuid>f02e596d-cf40-4d0c-b7a8-e038bfae95a9</webElementGuid>
+      <value>//tr[5]/td[3]/input</value>
+      <webElementGuid>d0b42314-072c-4134-8360-c35c220f3e02</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,6 +79,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'submit' and @name = 'begin_']</value>
-      <webElementGuid>f2d03d9b-46b8-47f7-a34c-6ffb30b01501</webElementGuid>
+      <webElementGuid>13c0ce34-fcbd-4b87-9af5-090a9b289211</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
