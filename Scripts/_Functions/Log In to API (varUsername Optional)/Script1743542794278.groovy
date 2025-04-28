@@ -40,9 +40,14 @@ domain = GlobalVariable.domain
 
 url = 'https://api.' + domain
 
-WebUI.openBrowser('')
+index = WebUI.getWindowIndex(FailureHandling.OPTIONAL)
 
-//WebUI.navigateToUrl('https://api.explorenext.org')
+if(index < 0) {
+	WebUI.openBrowser('')
+	
+	WebUI.maximizeWindow()
+}
+
 WebUI.navigateToUrl(url)
 
 WebUI.setText(findTestObject('Admin/API Login/input_username'), 'chriskosieracki')

@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>false</initValue>
+      <initValue>true</initValue>
       <name>fastPath</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -81,7 +81,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>killAvast</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

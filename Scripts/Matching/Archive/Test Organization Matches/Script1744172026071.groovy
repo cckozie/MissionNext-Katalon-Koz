@@ -36,7 +36,7 @@ username = values[2]
 orgEmail = values[3]
 
 if(refreshCandidateFile) {
-	WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from Web'), [('varMatchType'):matchType,
+	WebUI.callTestCase(findTestCase('Matching/_Functions/Archive/Get Match Data from Web'), [('varMatchType'):matchType,
 		('varSite'):site, ('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 }
 

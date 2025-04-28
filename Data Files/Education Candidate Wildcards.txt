@@ -1,0 +1,6 @@
+['Time Commitment(s)':['Open - Will negotiate'],
+ 'Preferred Region(s)':['No Preference'],
+ 'Paid & Volunteer Positions':['Volunteer/self-supported position', 'Open'],
+ 'Travel Options':['No travel funding provided'],
+ 'I/We can be Available':['Not sure'],
+ 'Relocation Option(s)':['Not sure']]

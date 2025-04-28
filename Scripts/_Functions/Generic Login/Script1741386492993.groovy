@@ -18,6 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
+println(varProfile)
 if(varProfile != '') {
 	new ExecutionProfilesLoader().loadProfile(varProfile)
 	
@@ -36,7 +37,12 @@ if(varProfile != '') {
 }
 
 //Only open a browser if there is not already one open
-windowIndex = WebUI.getWindowIndex()
+try {
+	windowIndex = WebUI.getWindowIndex()
+} catch(e1) {
+	windowIndex = -1
+}
+//windowIndex = WebUI.getWindowIndex()
 
 if(windowIndex < 0) {
 

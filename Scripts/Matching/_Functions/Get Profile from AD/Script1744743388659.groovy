@@ -133,9 +133,6 @@ if(userFound) {
 	WebUI.delay(2)
 
 } else {
-	for(chr in emailAddress) {
-		println(chr + '=>' + (int) chr)
-	}
-	System.exit(0)
+	return null
 }
 return userFound

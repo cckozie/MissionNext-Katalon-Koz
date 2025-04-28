@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test School Matches - in functions</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>68acd6a3-e8e7-4aa2-9a53-8dbc194cb355</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>cdcd41d9-647d-4b5f-bfb4-3e8e596b915f</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cdcd41d9-647d-4b5f-bfb4-3e8e596b915f</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Profile from API</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6439e038-1fba-42f1-b8b8-58855e849648</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f1482b2a-9929-4380-9d9f-6f296e41d7b4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>93d47a4d-b800-4295-971f-5a0d84813970</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0122e89e-828a-4a57-9564-916f76895c7e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f1482b2a-9929-4380-9d9f-6f296e41d7b4</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>93d47a4d-b800-4295-971f-5a0d84813970</id>
+      <masked>false</masked>
+      <name>varEmail</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0122e89e-828a-4a57-9564-916f76895c7e</id>
+      <masked>false</masked>
+      <name>varFile</name>
+   </variable>
+</TestCaseEntity>

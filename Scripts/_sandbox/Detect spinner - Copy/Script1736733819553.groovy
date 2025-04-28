@@ -23,29 +23,7 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.JavascriptExecutor;
 
-rules = ['Time Commitment(s)':['Time Commitments', 5,5,5]]
+Organization_selections = ['Part Time ~ 20 Hours/Week', 'Full Time']
+Candidate_selections = ['Part Time ~ 10 Hours/Week', 'Full Time']
 
-candidate = ['Time Commitment(s)':['One year to two years', 'Long Term']]
-
-organization = ['Time Commitments':['One year', 'One year to two years', 'Long Term']]
-
-candidate = ['Time Commitment(s)':['One year to two years', 'Long Term']]
-
-organization = ['Time Commitments':['One year', 'One year to two years', 'Long Term']]
-
-for(it in rules) {
-	rulesValues = rules.get(it.key)
-	orgKey = rulesValues[0]
-	println('orgKey = ' + orgKey)
-	orgValues = organization.get(orgKey)
-	candValues = candidate.get(it.key)
-	
-}
-println('orgValues = ' + orgValues)
-println('candValues = ' + candValues)
-
-match = candValues.intersect(orgValues)
-
-println(match)
-
-
+println(Organization_selections.intersect(Candidate_selections))

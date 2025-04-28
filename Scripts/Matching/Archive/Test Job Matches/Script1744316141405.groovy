@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.io.File as File
 
-WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from Web'), [('varMatchType'):'Jobs'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Matching/_Functions/Archive/Get Match Data from Web'), [('varMatchType'):'Jobs'], FailureHandling.STOP_ON_FAILURE)
 
 stopOnError = false
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test School Matches - Copy (2) (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5313c999-e077-4041-bd12-486c8f442062</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>8a852ec4-8403-4277-b4dd-377d9f59ae68</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8a852ec4-8403-4277-b4dd-377d9f59ae68</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

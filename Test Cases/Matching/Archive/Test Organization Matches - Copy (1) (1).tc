@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Organization Matches - Copy (1) (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3fc90ee4-24f8-4e64-bada-5d71f21701ef</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>dc67d2e5-d3b8-4abd-9423-44b125bb45f5</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>dc67d2e5-d3b8-4abd-9423-44b125bb45f5</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

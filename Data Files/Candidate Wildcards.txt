@@ -1,0 +1,9 @@
+['Time Commitment(s)':['Open - Will negotiate'],
+ 'Time/Hours Available':['Open'],
+ 'Paid & Volunteer Positions':['Volunteer/self-supported position', 'Open'],
+ 'Length of Assignment':['Open'],
+ 'Short-Term Availability':['Open'],
+ 'Travel Options':['No travel funding provided'],
+ 'Preferred Region(s)':['No Preference'],
+ 'I/We can be Available':['Not sure'],
+ 'Relocation Option(s)':['Not sure']]

@@ -31,40 +31,51 @@ import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 import org.apache.commons.io.FileUtils as FileUtils
-
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-def by_y(match) {
-	return match.y
-}
+highlight = false
 
+updateWildcards = false
 
+debug = false
 
-//#### Add wildcard maps
-/*
- * Log into AD (function - exists) - Window 0
- * Get match rules (function - exists) - W0
- * Get organization profile (function - new) - W0
- * Switch to new tab - W1
- * Log in as organization
- * Show match table
- * For candidates in table:
- * 		Get table match percent
- * 		Get popup match percent
- * 		Switch to AD tab - W0
- * 		Get candidate profile (function - reuse new)
- * 		Calculate match percent logging matches
- * 		Report match values
- * 		Switch back to table tab
+pages = 10 //How many match table pages to test
+
+//####	Mods to make
+/*	
+ * Multiple scrolls in popup until match % is found - Edwin Clavel #149
+ * Repeat table percent read if zero - break and display highlight
  * 
  */
+//#### Delta for Journey
+/*	org username and password
+ * 	match rules
+ *  dashboard link
+ *  org and candidate wildcard lists
+ *  org and candidate category lists
+ *  I think the rest should work as is
+ *  Consider a front-end script to set the above
+ *  May be able to use mostly intact for jobs, too
+ */
+
 orgUsername = 'cktest06ep'
 
 orgPassword = '54sGs6IdgS9Or2VrKr+d9g=='
 
+myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
+		'/') + 1)
+
+myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+
+
+
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
+
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
+
+outFile.write(('Running ' + myTestCase) + '\n\n')
 
 // Path for Sikulix script images
 imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/Matching/'
@@ -73,7 +84,6 @@ imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner
 myImage = '/Users/cckozie/Documents/Sikuli/Missionnext/Education Candidate Matches/myFile.png'
 
 profileFile = (filePath + 'userprofile.txt')
-
 
 // Entries in AD candidate profile page that need to be ignored
 categoriesOrganization = ['Contact Info', 'School Info', 'Vision Trip Description', 'Security', 'Positions Needed', 'Service Options'
@@ -84,26 +94,83 @@ categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions
     , 'Experience', 'Education', 'Additional Language ProficiencyGroup', 'Situation', 'Church', 'Availability', 'Preferences'
     , 'Options/Comment']
 
-//Education Organization Wildcards
-orgWildcardsEO = [('Affiliated with a Church?') : 'No', ('Available Start Options') : 'No Preference', ('Time Commitments') : 'Open - Will negotiate'
-    , ('Process Stage') : 'I am just beginning to look at missions', ('Relocation Option(s)') : 'Not a Match criterion', ('Experience Preferred') : 'No'
-    , ('Formal Education Degree') : 'No', ('Classroom Experience') : 'No', ('Paid & Volunteer Positions') : 'No Preference'
-    , ('Bible Training') : 'Not Applicable', ('Cross-cultural Experience') : 'Not served in a culture other than my own']
+if (!(updateWildcards)) {
+    //Use these hardcoded maps (or copy new ones from the wildcard data files from last update run)
+    //Education Partner Wildcards
+    partnerWildcards = 
+	['Time Commitments':['Open - Will negotiate'],
+	'Available Start Options':['No Preference'],
+	'School Term(s) Available':['Open'],
+	'Process Stage':['I am just beginning to look at missions'],
+	'Cross-cultural Experience':['Not served in a culture other than my own'],
+	'Bible Training':['Not Applicable'],
+	'Attended Perspectives?':['I have not taken the Perspectives Course'],
+	'Relocation Option(s)':['Not a Match criterion'],
+	'Formal Education Degree':['No'],
+	'Classroom Experience':['No'],
+	'Formal Teaching Credentials':['No'],
+	'English Proficiency':['Not Applicable'],
+	'Paid & Volunteer Positions':['No Preference'],
+	'Affiliated with a Church?':['No']]
+	
+    //Education Candidate Wildcards
+    candidateWildcards = 
+	['Time Commitment(s)':['Open - Will negotiate'],
+	 'Preferred Region(s)':['No Preference'],
+	 'Paid & Volunteer Positions':['Volunteer/self-supported position', 'Open'],
+	 'Travel Options':['No travel funding provided'],
+	 'I/We can be Available':['Not sure'],
+	 'Relocation Option(s)':['Not sure']] 
+	
+} else {	//Load new wildcard maps for candidates and partners
+	
+	wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : 'Education'], 
+		FailureHandling.STOP_ON_FAILURE)
 
-//Education Candidate Wildcards
-candWildcardsEO = [('I/We can be Available') : 'Not xsure', ('Time Commitment(s)') : 'Open - Will negotiate', ('Relocation Option(s)') : 'Not sure'
-    , ('Paid & Volunteer Positions') : 'Open']
+    candidateWildcards = (wildcards[0])
 
-debug = true
+    partnerWildcards = (wildcards[1])
+}
+
+//Write the wildcard maps to the output file
+outFile.append('Candidate Wildcards\n')
+outFile.append(candidateWildcards.toString() + '\n')
+
+outFile.append('Partner Wildcards\n')
+outFile.append(partnerWildcards.toString() + '\n\n')
+
+/*
+Education Candidate
+>time_commitment:Open - Will negotiate
+world_region_preferences:No Preference
+financial_support:Open
+travel_support:No travel funding provided
+
+Education Partner
+>time_commitments:Open - Will negotiate
+>available_start_options:No Preference
+school_term_available:Open
+candidate_process_stages:I am just beginning to look at missions
+cross-cultural_experience:Not served in a culture other than my own
+>bible_school_training:Not Applicable
+attended_perspectives?:I have not taken the Perspectives Course
+relocation_question:Not a Match criterion
+school_formal_education_degree:No
+school_classroom_experience:No
+has_teaching_credentials:No
+english_skills:Not Applicable
+financial_support:No Preference
+*/
+debug = false
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
 myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
+resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
 
-outFile.write(('Running ' + myTestCase) + '\n\n')
+resultsFile.write(('Running ' + myTestCase) + '\n')
 
 errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-ERRORS.txt')
 
@@ -114,26 +181,19 @@ GlobalVariable.outFile = outFile
 site = 'Education'
 
 radioType = 'Org'
-/*
-WebUI.openBrowser('')
 
-WebUI.maximizeWindow()
+lastEmailAddress = ''
 
-WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : ''], FailureHandling.STOP_ON_FAILURE)
-*/
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : radioType], 
     FailureHandling.STOP_ON_FAILURE)
-// One tab at this point on ad menu page
 
+// One tab at this point on ad menu page
 Screen s = new Screen()
 
 //Settings.MoveMouseDelay = 0
-
 tab = '\t'
 
 outText = 'Matching Rules'
-
-//println(outText)
 
 outFile.append(('\n ' + outText) + '\n')
 
@@ -146,7 +206,6 @@ matchValues.each({
         3]))
 
         //println(outText)
-
         outFile.append(outText + '\n')
 
         candidateMatchFields.add(it.key)
@@ -158,20 +217,14 @@ BufferedReader reader
 
 adTab = WebUI.getWindowIndex()
 
-//println('On return from get match rules on AD window index is ' + adTab)
-
 WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varUsername') : orgUsername, ('varFile') : profileFile
-	, ('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
-
-//println('On return from get profile on AD window index is ' + WebUI.getWindowIndex())
+        , ('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
 
 returnValues = formatProfile(profileFile, categoriesOrganization, organizationMatchFields)
 
-organizationSelections = returnValues[0]
+organizationSelections = (returnValues[0])
 
 outText = '\n\n Organization Selections'
-
-//println(outText)
 
 outFile.append(outText + '\n')
 
@@ -179,7 +232,6 @@ organizationSelections.each({
         outText = ((it.key + ':') + it.value)
 
         //println(outText)
-
         outFile.append(outText + '\n')
     })
 
@@ -195,59 +247,28 @@ orgTab = 1
 
 WebUI.switchToWindowIndex(orgTab)
 
-//println('After opening and switching to a new tab, the tab index is ' + orgTab)
-
-WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : orgUsername,
-	('varPassword') : orgPassword, ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
-
-//println('index is now ' + WebUI.getWindowIndex())
-
-//println(WebUI.getWindowTitle())
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : orgUsername, ('varPassword') : orgPassword
+        , ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
 
-//println('After opening the table tab, the tab index is ' + WebUI.getWindowTitle())
-
-tableTab = orgTab + 1
+tableTab = (orgTab + 1)
 
 // Now at the match table page
 //WebUI.waitForPageLoad(10)
+img = (imagePath + 'What Matched Edu Table.png')
 
-img = imagePath + 'What Matched Edu Table.png'
+s.wait(img, 10)
 
-s.wait(img,10)
+WebUI.delay(1)
 
 regMatch = s.find(img)
 
-//regMatch.highlight(1)
-
-s.click(img)
-
-s.wheel(Mouse.WHEEL_UP, 11)
-
-regMatch.setY(128)
-regMatch.setH(795)
-regMatch.highlight(1)
-
-
-
-//regMatch.setH(150)
-//regMatch.highlight(1)
-
-//icons = regMatch.findAll(imagePath + 'Spy Glass.png')
-icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
-
-//sorted_icons = sorted(icons, key=by_y)
-//sorted_icons = sorted(icons, key=lambda y)
-
-//add 14
-iconLocs = [:]
-for(rg in icons) {
-	//println(rg.getX() + ':' + rg.getY())
-	iconLocs.put(rg.getY() + 12, rg.getX() + 14)
+if (highlight) {
+    regMatch.highlight(1)
 }
 
-iconLocs.sort()
+s.click(img)
 
 regLastName = s.find(imagePath + 'Last Name Header.png')
 
@@ -257,377 +278,446 @@ regLastName.setW(30)
 
 regPct = s.find(imagePath + 'Match Percent Header.png')
 
-//regLastName.highlight(1)
+if (highlight) {
+    regPct.highlight(1)
+}
 
-//for (def rg : icons) {
-//	print(rg.y)
-for(it in iconLocs) {
-	
-	rg = new Location(it.value,it.key)
-	
-//	rg.highlight(1)
+//This is the spy glass icon lane
+regMatch.setY(128)
 
-	regPct.setY(rg.getY()-12)
-	
-	regPct.setX(rg.getX()-14)
-	
-	regPct.setW(35)
+regMatch.setH(795)
 
-	regPct.setH(25)
+wheelCount = 11
 
-//	regPct.highlight(1)
+pageCount = 1
 
-	capturedFile = s.capture(regPct).getFile()
+while (pageCount <= pages) {
+    s.wheel(Mouse.WHEEL_UP, wheelCount)
 
-	tablePct = getRegionText(capturedFile)
+    WebUI.delay(1)
 
-	print('Table percent match is ' + tablePct)
+    if (highlight) {
+        regMatch.highlight(1)
+    }
+    
+    icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
 
-	rg.click()
+    iconLocs = [:]
 
-//	WebUI.delay(2)
+    //Don't know how to sort regions in groovy
+    for (def rg : icons) {
+        iconLocs.put(rg.getY(), rg.getX())
+    }
+    
+    iconLocs = iconLocs.sort()
 
-	s.wait(imagePath + 'What Matched Popup Text.png',5)
-	
-	what = s.find(imagePath + 'What Matched Popup Text.png')
+    for (def it : iconLocs) {
+        rg = new Region(it.value - 5, it.key - 12, 30, 40)
 
-	scrolled = false
+        regPct.setY(it.key)
 
-	if(!s.exists(imagePath + 'Popup Percent Text.png')) {
+        regPct.setH(22)
+
+        regPct.setW(regPct.getW())
+
+        if (highlight) {
+            regPct.highlight(1)
+        }
+        
+        capturedFile = s.capture(regPct).getFile()
+
+        tablePct = getRegionText(capturedFile)
 		
-		s.hover(imagePath + 'What Matched Popup Text.png')
-		
-		s.wheel(Mouse.WHEEL_UP, 2)
-		
-		scrolled = true
-		
-		WebUI.delay(1)
-	} 
-//	Pattern("1744859284953.png").similar(.59)
-//	pct = s.find(new Pattern(imagePath + 'Popup Percent Text.png').similar(0.60))
-	
-	Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
-	
-	pct = s.exists(icn)
-
-	//println(pct)
-	
-
-	pct.setX(what.getX() - 10)
-
-	pct.setW(50)
-
-	pct.highlight(1)
-
-	capturedFile = s.capture(pct).getFile()
-
-	popupPct = getRegionText(capturedFile)
-
-	print('Popup percent match is ' + popupPct)
-	
-	if(scrolled) {
-		s.wheel(Mouse.WHEEL_DOWN, 5)
-	}
-
-	s.click(imagePath + 'Popup Close Window Button.png')
-
-	WebUI.delay(1)
-	
-	name = new Location(regLastName.getX() + 5, rg.getY() + 3)
-
-	s.click(name)
-
-	s.wait(imagePath + 'Candidate Profile Close Button.png', 10)
-	
-	Robot robot = new Robot()
-	
-	for (int i = 0; i < 4; i++) { // how many times you want CRTL+'-' pressed
-		robot.keyPress(KeyEvent.VK_META)
-		robot.keyPress(KeyEvent.VK_ADD)
-		robot.keyRelease(KeyEvent.VK_ADD)
-		robot.keyRelease(KeyEvent.VK_META)
-	}
-
-	regEmail = s.find(imagePath + "Email.png")
-	
-	regEmail.setX(regEmail.getX() + regEmail.getW())
-	
-	regEmail.setW(350)
-
-
-	/*
-	regEmail = s.find(imagePath + "Your Email.png")
-	
-	regEmail.setX(regEmail.getX() + 216)
-	
-	regEmail.setW(220)
-	*/
-	regEmail.highlight(1)
-	
-	capturedFile = s.capture(regEmail).getFile()
-	
-	emailAddress = getRegionText(capturedFile).replaceAll("\\p{C}", "").replace(":","").replace(" ","")
-
-	emailAddress = emailAddress.replace(":","")
-	
-	emailAddress = emailAddress.replace(" ","")
-	
-	emailAddress = emailAddress.replace("_","")
-	
-	emailAddress = emailAddress.replace(":","")
-	
-//	emailAddress.replace("‘","")
-	
-	//println(emailAddress)
-	
-	for (int i = 0; i < 4; i++) { // how many times you want CRTL+'-' pressed
-		robot.keyPress(KeyEvent.VK_META)
-		robot.keyPress(KeyEvent.VK_SUBTRACT)
-		robot.keyRelease(KeyEvent.VK_SUBTRACT)
-		robot.keyRelease(KeyEvent.VK_META)
-	}
-
-    s.click(imagePath + 'Candidate Profile Close Button.png', 5)
-	
-	WebUI.delay(2)
-	
-	WebUI.switchToWindowIndex(adTab)	
-	
-	WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
-	
-	userFound = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varEmail') : emailAddress, ('varFile') : profileFile
-		, ('varSearchType') : 'email'], FailureHandling.STOP_ON_FAILURE)
-	
-	if(userFound) {
-		returnValues = formatProfile(profileFile, categoriesCandidate, candidateMatchFields)
-		
-		WebUI.closeWindowIndex(3)
-		
-		WebUI.switchToWindowIndex(adTab)
-		
-		WebUI.delay(1)
-		
-		candidateSelections = returnValues[0]
-		
-		married = returnValues[1]
-		
-		spouseServing = returnValues[2]
-		
-		outText = '\n\n Candidate Selections for ' + firstName + ' ' + lastName
-		
-		//println(outText)
-		
-		outFile.append(outText + '\n')
-		
-		if(!married) {
-			outText = 'Candidate is not married.'
-		} else {
-			outText = 'Candidate is married and spouse is '
-			
-			if(!spouseServing) {
-				outText += ' not '
-			}
-			
-			outText += 'serving.'
+		if(tablePct.length() < 2) {
+			tablePct = 0
 		}
+
+        print('Table percent match is ' + tablePct)
+
+        rg.click()
+
+        //	WebUI.delay(2)
+        s.wait(imagePath + 'What Matched Popup Text.png', 5)
+
+        what = s.find(imagePath + 'What Matched Popup Text.png')
+
+        scrolled = false
+		
+		scrollCount = 0
+
+        while (!(s.exists(imagePath + 'Popup Percent Text.png'))) {
+            s.hover(imagePath + 'What Matched Popup Text.png')
+
+            s.wheel(Mouse.WHEEL_UP, 2)
 			
-		//println(outText)
+			scrollCount = scrollCount + 2
+
+            scrolled = true
+
+            WebUI.delay(1)
+        }
+        
+        Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
+
+        pct = s.exists(icn)
+
+        //println(pct)
+        pct.setX(what.getX() - 10)
+
+        pct.setW(50)
+
+        if (highlight) {
+            pct.highlight(1)
+        }
+        
+        capturedFile = s.capture(pct).getFile()
+
+        popupPct = getRegionText(capturedFile)
+
+        print('Popup percent match is ' + popupPct)
+
+        if (scrolled) {
+            s.wheel(Mouse.WHEEL_DOWN, scrollCount)
+        }
+        
+        s.click(imagePath + 'Popup Close Window Button.png')
+
+        WebUI.delay(1)
+
+        name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
+
+        s.click(name)
+
+        s.wait(imagePath + 'Candidate Profile Close Button.png', 10)
+
+        Robot robot = new Robot()
+
+        for (int i = 0; i < 4; i++) {
+            // how many times you want CRTL+'-' pressed
+            robot.keyPress(KeyEvent.VK_META)
+
+            robot.keyPress(KeyEvent.VK_ADD)
+
+            robot.keyRelease(KeyEvent.VK_ADD)
+
+            robot.keyRelease(KeyEvent.VK_META)
+        }
+        
+        regEmail = s.find(imagePath + 'Email.png')
+
+        regEmail.setX(regEmail.getX() + regEmail.getW())
+
+        regEmail.setW(350)
+
+        if (highlight) {
+            regEmail.highlight(1)
+        }
+        
+        capturedFile = s.capture(regEmail).getFile()
+
+        emailAddress = getRegionText(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
+
+        emailAddress = emailAddress.replace(':', '')
+
+        emailAddress = emailAddress.replace(' ', '')
+
+        emailAddress = emailAddress.replace('_', '')
+
+        emailAddress = emailAddress.replace(':', '')
+
+        //println(emailAddress)
+        for (int i = 0; i < 4; i++) {
+            // how many times you want CRTL+'-' pressed
+            robot.keyPress(KeyEvent.VK_META)
+
+            robot.keyPress(KeyEvent.VK_SUBTRACT)
+
+            robot.keyRelease(KeyEvent.VK_SUBTRACT)
+
+            robot.keyRelease(KeyEvent.VK_META)
+        }
+        
+        s.click(imagePath + 'Candidate Profile Close Button.png', 5)
+
+        //		WebUI.delay(2)
+        if (emailAddress == lastEmailAddress) {
+            continue
+        }
+        
+        lastEmailAddress = emailAddress
+
+        WebUI.switchToWindowIndex(adTab)
+
+        WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
+
+        userFound = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varEmail') : emailAddress
+                , ('varFile') : profileFile, ('varSearchType') : 'email'], FailureHandling.STOP_ON_FAILURE)
+
+        if (userFound != null) {
+            returnValues = formatProfile(profileFile, categoriesCandidate, candidateMatchFields)
+
+            WebUI.closeWindowIndex(3)
+
+            WebUI.switchToWindowIndex(adTab)
+
+            WebUI.delay(1)
+
+            candidateSelections = (returnValues[0])
+
+            married = (returnValues[1])
+
+            spouseServing = (returnValues[2])
+
+            outText = ((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName)
+
+            //println(outText)
+            outFile.append(outText + '\n')
+
+            outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
+
+            resultsFile.append(outText + '\n')
+
+            if (!(married)) {
+                outText = 'Candidate is not married.'
+            } else {
+                outText = 'Candidate is married and spouse is '
+
+                if (!(spouseServing)) {
+                    outText += ' not '
+                }
+                
+                outText += 'serving.'
+            }
+            
+            //println(outText)
+            outFile.append(outText + '\n')
+
+            candidateSelections.each({ 
+                    outText = ((it.key + ':') + it.value)
+
+                    //println(outText)
+                    outFile.append(outText + '\n')
+                })
+
+            //	WebUI.closeWindowIndex(1)
+            WebUI.switchToWindowIndex(tableTab)
+
+            WebUI.delay(1)
+
+            doMatching(candidateSelections, organizationSelections) //println(outText)
+        } else {
+            outText = ('Failed to find user with email of ' + emailAddress)
+
+            outFile.append(('\n' + outText) + '\n')
+        }
+        
+        WebUI.switchToWindowIndex(tableTab)
+    }
+    
+    pageCount += 1
+
+    wheelCount = 18
+} 
+
+def doMatching(def candidateSelections, def organizationSelections) {
+    if (married && !(spouseServing)) {
+        married = false
+    }
+    
+    if (married) {
+        pointValue = 3
+    } else {
+        pointValue = 2
+    }
+    
+    excluded = false
+
+    points = 0.0
+	
+	lostPoints = 0.0
+
+    matchValues.each({ 
+            match = false
+
+            if (!(excluded)) {
+                candidateValues = candidateSelections.get(it.key)
+
+                values = matchValues.get(it.key)
+
+                orgSelectionKey = (values[0])
+
+                matchValue = (values[1]).toInteger()
+
+                pointsSingle = (values[2])
+
+                pointsMarried = (values[3])
+
+                organizationValues = organizationSelections.get(orgSelectionKey)
+
+                outText = ('\nFor ' + it.key)
+
+                outFile.append(outText + '\n')
+
+                outText = ('Organization selections = ' + organizationValues)
+
+                outFile.append(outText + '\n')
+
+                outText = ('Candidate selections = ' + candidateValues)
+
+                outFile.append(outText + '\n')
+
+                if (matchValue != 5) {
+                    newPoints = (values[pointValue]).toFloat().round(1)
+                } else {
+                    newPoints = 0
+                }
+                
+                cWC = candidateWildcards.get(it.key)	//Need to allow for cWC being a list
+
+//                if ((cWC != null) && (cWC in candidateValues)) {
+                if ((cWC != null) && (cWC.intersect(candidateValues)).size() > 0)  {
+                    outText = (((('Candidate wildcard match on ' + cWC.intersect(candidateValues)) + '. Adding ') + newPoints) + ' points.')
+
+                    outFile.append(outText + '\n')
+
+                    points = (points + newPoints)
+
+                    match = true
+                } else if (!(match)) {
+                    oWC = partnerWildcards.get(orgSelectionKey)
+					println('partner wildcards = ' + oWC)
+					println('partner selections =' + organizationValues)
+
+                    if (oWC != null && oWC.intersect(organizationValues).size() > 0) {
+                        outText = ('Organization wildcard match on ' + oWC.intersect(organizationValues) + '. Adding ' + newPoints + ' points.')
+
+                        outFile.append(outText + '\n')
+
+                        points = (points + newPoints)
+
+                        match = true
+                    } else if(!match && candidateValues != null && organizationValues != null) {
+                        matches = candidateValues.intersect(organizationValues)
+
+                        if (matches.size() > 0) {
+                            outText = (((('Found match on ' + candidateValues.intersect(organizationValues)) + '. Adding ') + 
+                            newPoints) + ' points.')
+
+                            outFile.append(outText + '\n')
+
+                            points = (points + newPoints)
+
+                            match = true
+                        }
+                    }
+                }
+            }
+            
+            if (match) {
+                outText = (('Add match is now ' + points.round(1)) + '%.')
+
+                outFile.append(outText + '\n')
+				
+            } else {
+                if (matchValue == 5) {
+                    excluded = true
+                }
+                
+                outText = 'No match found.'
+
+                outFile.append(outText + '\n')
+				
+				outText = 'Subtracting ' + newPoints + ' points.'
+				
+				outFile.append(outText + '\n')
+				
+				lostPoints = lostPoints + newPoints
+				
+//				outText = (('Subtract match is now ' + (100.0 - lostPoints).round(1)) + '%.')
+				
+//				outFile.append(outText + '\n')
+            }
+        })
+
+    if (excluded) {
+        outText = 'This is a must match field. Candidate is excluded.'
+
+        outFile.append(outText + '\n')
+    }
+	
+	addedPct = points.round(0).toInteger()
+    
+	println('addedPct=' + addedPct)
+	println('popupPct=' + popupPct)
+	println('tablePct=' + tablePct)
+	
+	error = false
+	
+	popPct = popupPct.toString().replace('\n', '')
+	
+	popPct = popPct.replace('%','')
+	
+	if((addedPct.toInteger() - tablePct.toInteger() > 1) || (tablePct.toInteger() - popPct.toInteger()) > 1) {
+		error = true
+	}
+	
+    outText = ('\nCalculated match percentage adding is ' + addedPct + '%.')
+
+    outFile.append(outText + '\n')
+	
+//	subtPct = (100 - lostPoints).round(0).toInteger()
+	
+//	outText = ('Calculated match percentage subtracting is ' + subtrPct + '%.')
+	
+//	outFile.append(outText + '\n')
+	
+    tblPct = tablePct.toString()
+
+    tblPct = tblPct.replace('\n', '')
+
+    outText = (('Table match percentage is ' + tblPct) + '%.')
+
+    outFile.append(outText + '\n')
+
+    outText = ('Popup match percentage is ' + popupPct)
+
+    outFile.append(outText + '\n')
+
+    popupPct = popupPct.toString().replace('\n', '')
+	
+	if(error) {
+		outText = '##### ERRORS FOUND #####'
 		outFile.append(outText + '\n')
-		
-		candidateSelections.each{
-			outText = ((it.key + ':') + it.value)
-	
-			//println(outText)
-	
-			outFile.append(outText + '\n')
-		}
-		
-	//	WebUI.closeWindowIndex(1)
-		
-		WebUI.switchToWindowIndex(tableTab)
-		
-		WebUI.delay(1)
-		
-		doMatching(candidateSelections, organizationSelections)
-		
-	} else {
-		outText = 'Failed to find user with email of ' + emailAddress
-		//println(outText)
-		outFile.append('\n' + outText + '\n')
 	}
-	
-	WebUI.switchToWindowIndex(tableTab)
-		
-}
-	
 
-def doMatching(candidateSelections, organizationSelections) {
-	if (married && !(spouseServing)) {
-	    married = false
-	}
-	
-	if (married) {
-	    pointValue = 3
-	} else {
-	    pointValue = 2
-	}
-	
-	excluded = false
-	
-	points = 0.0
-	
-	matchValues.each({ 
-	        match = false
-	
-	        if (!(excluded)) {
-	            candidateValues = candidateSelections.get(it.key)
-	
-	            values = matchValues.get(it.key)
-	
-	            orgSelectionKey = (values[0])
-	
-	            matchValue = (values[1]).toInteger()
-	
-	            pointsSingle = (values[2])
-	
-	            pointsMarried = (values[3])
-	
-	            organizationValues = organizationSelections.get(orgSelectionKey)
-	
-	            outText = ('\nFor ' + it.key)
-	
-	            //println(outText)
-	
-	            outFile.append(outText + '\n')
-	
-	            outText = ('Organization selections = ' + organizationValues)
-	
-	            //println(outText)
-	
-	            outFile.append(outText + '\n')
-	
-	            outText = ('Candidate selections = ' + candidateValues)
-	
-	            //println(outText)
-	
-	            outFile.append(outText + '\n')
-	
-	            if (matchValue != 5) {
-	                newPoints = (values[pointValue]).toFloat().round(1)
-	            } else {
-	                newPoints = 0
-	            }
-	            
-	            cWC = candWildcardsEO.get(it.key)
-	
-	            if ((cWC != null) && (cWC in candidateValues)) {
-	                outText = (((('Candidate wildcard match on ' + cWC) + '. Adding ') + newPoints) + ' points.')
-	
-	                //println(outText)
-	
-	                outFile.append(outText + '\n')
-	
-	                points = (points + newPoints)
-	
-	                match = true
-	            } else if (!(match)) {
-	                oWC = orgWildcardsEO.get(orgSelectionKey)
-	
-	                if ((oWC != null) && (oWC in organizationValues)) {
-	                    outText = (((('Organization wildcard match on ' + oWC) + '. Adding ') + newPoints) + ' points.')
-	
-	                    //println(outText)
-	
-	                    outFile.append(outText + '\n')
-	
-	                    points = (points + newPoints)
-	
-	                    match = true
-	                } else if (!(match) && candidateValues != null && organizationValues != null) {
-	                    matches = candidateValues.intersect(organizationValues)
-	
-	                    if (matches.size() > 0) {
-	                        outText = (((('Found match on ' + candidateValues.intersect(organizationValues)) + '. Adding ') + 
-	                        newPoints) + ' points.')
-	
-	                        //println(outText)
-	
-	                        outFile.append(outText + '\n')
-	
-	                        points = (points + newPoints)
-	
-	                        match = true
-	                    }
-	                }
-	            }
-	        }
-	        
-	        if (match) {
-	            outText = (('Match is now ' + points.round(1)) + '%.')
-	
-	            //println(outText)
-	
-	            outFile.append(outText + '\n') //	add point calcs
-	        } else {
-	            if (matchValue == 5) {
-	                excluded = true
-	            }
-	            
-	            outText = 'No match found.'
-	
-	            //println(outText)
-	
-	            outFile.append(outText + '\n')
-	        }
-	    })
-	
-	if (excluded) {
-	    outText = 'This is a must match field. Candidate is excluded.'
-	
-	    //println(outText)
-	
-	    outFile.append(outText + '\n')
-	}
-	
-	outText = (('Calculated match percentage is ' + points.round(1)) + '%.')
-	
-	//println(outText)
-	
-	outFile.append(outText + '\n')
-	
-	outText = 'Table match percentage is ' + tablePct
-	
-	//println(outText)
-	
-	outFile.append(outText + '\n')
-	
-	outText = 'Popup match percentage is ' + popupPct
-	
-	//println(outText)
-	
-	outFile.append(outText + '\n\n')
-	
+    outFile.append('\n\n')
 
+    outText = 'Match percentages: Calculated = ' + addedPct + ' %, Table = ' + tblPct + '%, Popup = ' + popupPct + '.\n\n'
+	
+	if(error) {
+		outText = '##### ERROR: ' + outText
+	}
+	
+	resultsFile.append(outText)
+	
+	
+//	System.exit(0)
 }
 
- 
-def getNextLine(reader,categories) {
-	line = reader.readLine()
-//	//println(line + ':' + line.length())
-	while(line != null && line.length() <= 2 || line in categories) {
-//		//println(line + ':' + line.length())
-		line = reader.readLine()
-//		//println(line)
-	}
-//	//println(line + ':' + line.length())
-	if(line != null && !line.contains('Logout')) {
-		return line
-	} else {
-		return 'end'
-	}
+def getNextLine(def reader, def categories) {
+    line = reader.readLine()
+
+    while (((line != null) && (line.length() <= 2)) || (line in categories)) {
+        line = reader.readLine()
+    }
+    
+    if ((line != null) && !(line.contains('Logout'))) {
+        return line
+    } else {
+        return 'end'
+    }
 }
 
- 
 def formatProfile(def file, def categories, def matchFields) {
     reader = new BufferedReader(new FileReader(file))
 
@@ -646,8 +736,6 @@ def formatProfile(def file, def categories, def matchFields) {
     while (line != 'end') {
         line = getNextLine(reader, categories)
 
-        //println(line)
-
         while (line != 'end') {
             if (line.substring(1, 4).contains('\t')) {
                 values = []
@@ -659,22 +747,14 @@ def formatProfile(def file, def categories, def matchFields) {
                 if (!(fieldNumbers.contains(number))) {
                     fieldNumbers.add(number)
 
-                    //println(number)
-
                     line = line.substring(tab + 1)
-
-                    //println(line)
 
                     tab = line.indexOf('\t')
 
                     if (tab >= 0) {
                         field = line.substring(0, tab).trim()
 
-                        //println('Field is ' + field)
-
                         value = line.substring(tab + 1).trim()
-
-                        //println('Value is ' + value)
 
                         if (value.length() >= 2) {
                             values.add(value)
@@ -703,14 +783,14 @@ def formatProfile(def file, def categories, def matchFields) {
                                 married = true
                             }
                         }
-						
-						if(field == 'First Name') {
-							firstName = value
-						}
                         
-						if(field == 'Last Name') {
-							lastName = value
-						}
+                        if (field == 'First Name') {
+                            firstName = value
+                        }
+                        
+                        if (field == 'Last Name') {
+                            lastName = value
+                        }
                         
                         if (field == 'Spouse Serving with You?') {
                             if ('Yes' in values) {
@@ -747,18 +827,18 @@ def formatProfile(def file, def categories, def matchFields) {
 }
 
 def getRegionText(def imageFile) {
-	FileUtils.copyFile(new File(imageFile), new File(myImage))
+    FileUtils.copyFile(new File(imageFile), new File(myImage))
 
-	sout = new StringBuffer()
+    sout = new StringBuffer()
 
-	serr = new StringBuffer()
+    serr = new StringBuffer()
 
-	command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
+    command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
 
-	command.consumeProcessOutput(sout, serr)
+    command.consumeProcessOutput(sout, serr)
 
-	command.waitForOrKill(1000)
+    command.waitForOrKill(1000)
 
-	return sout
+    return sout
 }
 

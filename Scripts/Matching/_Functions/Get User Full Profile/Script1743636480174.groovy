@@ -62,15 +62,40 @@ Actions act = new Actions(driver);
 
 JavascriptExecutor js =(JavascriptExecutor)driver;
 
-WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), searchKey)
-
-WebUI.delay(5)
+WebUI.waitForPageLoad(10)
 
 WebElement Table = driver.findElement(By.xpath('//*[@id="default-rezult"]/table'))
  
 List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
-int row_count = Rows.size()
+println(Rows.size())
+
+loopMax = 5
+
+loop = 1
+
+while(Rows.size() < 2 && loop <= loopMax) {
+	
+	WebUI.delay(1)
+	
+	Rows = Table.findElements(By.tagName('tr'))
+	
+	loop++
+}
+
+startRows = Rows.size()
+
+WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), searchKey)
+
+while(Rows.size() == startRows) {
+	
+	WebUI.delay(1)
+	
+	Rows = Table.findElements(By.tagName('tr'))
+	
+}
+
+row_count = Rows.size()
 
 println(row_count + ' rows found')
 
@@ -82,21 +107,14 @@ if(row_count > 1) {
 		 
 		Rows = Table.findElements(By.tagName('tr'))
 		 
-		println('here')
 		row = Rows.get(r)
+		
 		fieldValues = [:]
 		
-		//List<WebElement> Columns = Rows.get(1).findElements(By.tagName('td'))
 		List<WebElement> Columns = row.findElements(By.tagName('td'))
 		
 		col = Columns.get(1)
-	/*
-		println(Columns.get(1).getText())
 		
-		js.executeScript("arguments[0].style.border='5px dotted yellow'", Columns.get(1));
-		
-		act.moveToElement(Columns.get(1)).moveByOffset(-10, 0).click().perform();
-	*/
 		println(col.getText())
 		
 		int center = col.getSize().getWidth()
@@ -171,8 +189,8 @@ if(row_count > 1) {
 		
 			WebUI.click(findTestObject('Object Repository/Admin/API User Profile/btn_Full Profile'))
 			
-			WebUI.delay(5)
-							
+//			WebUI.delay(5)
+			
 			outText = ('Getting full profile of ' + user)
 			
 			println('=====> ' + outText)
@@ -252,22 +270,22 @@ if(row_count > 1) {
 			lName = ''
 		}
 		
-		WebUI.delay(1)
+//		WebUI.delay(1)
 		
 		WebUI.back()
 		
-		WebUI.delay(1)
+//		WebUI.delay(1)
 
 		if(r < row_count -1 && !found) {
 		
 			WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), searchKey)
 			
-			WebUI.delay(5)
+//			WebUI.delay(5)
 			
 		} else {
-		
-			return fieldValues
 			
+			return fieldValues
+						
 			break
 		}
 	}
