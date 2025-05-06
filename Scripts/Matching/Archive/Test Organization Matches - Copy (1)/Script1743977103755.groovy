@@ -45,7 +45,7 @@ type = 'Org'
 
 orgEmail = 'headquarters@missionnext.org'
 
-candidateMatches = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from CSV File'), [:], FailureHandling.STOP_ON_FAILURE)
+candidateMatches = WebUI.callTestCase(findTestCase('Matching/_Functions/Archive/Get Match Data from CSV File'), [:], FailureHandling.STOP_ON_FAILURE)
 
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varType') : type],
 	FailureHandling.STOP_ON_FAILURE)

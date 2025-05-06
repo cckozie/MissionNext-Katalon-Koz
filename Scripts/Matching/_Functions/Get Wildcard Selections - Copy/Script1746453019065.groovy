@@ -29,11 +29,9 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 //varSite = 'Journey'
 //varSite = 'Education'
-//varSite = 'Job'
 
 varMap = ['Journey' : ['Journey Candidate Profile', 'Journey Candidate 05', 'Journey Partner 07'],
-	'Education' : ['Education Candidate Profile', 'Education Candidate 04', 'Education Partner 06'],
-	'Job' : ['Journey Partner Profile', 'Journey Candidate 05', 'Journey Partner 07']]	
+	'Education' : ['Education Candidate Profile', 'Education Candidate 04', 'Education Partner 06']]	
 
 varValues = varMap.get(varSite)
 
@@ -43,19 +41,8 @@ for(username in [varValues[1],varValues[2]]) {
 	
 	WebDriver driver = DriverFactory.getWebDriver()
 	
-	if(username != varValues[2] || varSite != 'Job') {
+	WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Profile'))
 	
-		WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Profile'))
-		
-	} else {
-	
-		WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Agency Jobs'))
-		
-		WebUI.waitForPageLoad(10)
-		
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/btn_New Job'))
-	}
-		
 	WebUI.waitForPageLoad(10)
 	
 	WebUI.delay(5)
@@ -186,12 +173,7 @@ wcPS = convertMap(wcPartners)
 if(debug) {
 	println('WCPartners = ' + wcPS)
 }
-
-if(varSite != 'Job') {
-	outFile = new File(filePath + varSite + ' Partner Wildcards.txt')
-} else {
-	outFile = new File(filePath + varSite + ' Wildcards.txt')
-}
+outFile = new File(filePath + varSite + ' Partner Wildcards.txt')
 outFile.write(wcPS)
 
 wcCS = convertMap(wcCandidates)

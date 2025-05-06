@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Get Matching Rules</name>
+   <name>Test Organization Matches - Copy</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>a1367ef4-411a-43c9-987a-c5e3e34ec84c</testCaseGuid>
+   <testCaseGuid>8b6bbf27-d4db-4e1b-bbb3-56ca9652bff3</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>5c4a0b10-849c-4741-8e1e-7b7abb45ce8a</variableId>
+      <variableId>ad299252-94e6-48de-84e8-19e4f32b02cc</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'Org'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>5c4a0b10-849c-4741-8e1e-7b7abb45ce8a</id>
+      <id>ad299252-94e6-48de-84e8-19e4f32b02cc</id>
       <masked>false</masked>
-      <name>varMatchType</name>
+      <name>varUsername</name>
    </variable>
 </TestCaseEntity>

@@ -110,7 +110,7 @@ if(site == 'Education') {
 
 radioType = matchType.substring(0,3)
 
-candidateMatches = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Match Data from CSV File'), [('varMatchType'):'Organization'], FailureHandling.STOP_ON_FAILURE)
+candidateMatches = WebUI.callTestCase(findTestCase('Matching/_Functions/Archive/Get Match Data from CSV File'), [('varMatchType'):'Organization'], FailureHandling.STOP_ON_FAILURE)
 
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : radioType], 
     FailureHandling.STOP_ON_FAILURE)

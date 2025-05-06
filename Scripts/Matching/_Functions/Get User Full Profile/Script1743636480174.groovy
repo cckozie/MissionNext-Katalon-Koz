@@ -54,7 +54,7 @@ if (GlobalVariable.outFile != '') {
 	writeFile = true
 }
 
-writeFile = false
+outFile.append('Looking for user with searchKey = ' + searchKey + '\n')
 
 WebDriver driver = DriverFactory.getWebDriver()
 

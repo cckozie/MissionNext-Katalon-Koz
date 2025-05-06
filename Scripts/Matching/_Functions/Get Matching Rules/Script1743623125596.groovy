@@ -87,9 +87,17 @@ for (row = 2; row < row_count; row++) {
 	
 	orgFields.add(orgField)
 	
-	cndFields.add(cndFields)
-
-	matchValues.put(orgField, [cndField, weight, single, couple])
+	cndFields.add(cndField)
+	
+	if(varMatchType == 'Org') { //default in Katalon 'variables' tab
+		
+		matchValues.put(orgField, [cndField, weight, single, couple])
+	
+	} else {
+		
+		matchValues.put(cndField, [orgField, weight, single, couple])
+	}
+		
 }
 
 /*
@@ -99,6 +107,8 @@ matchValues.each{
 */
 WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
 
+WebUI.closeBrowser()
+
 return matchValues
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()

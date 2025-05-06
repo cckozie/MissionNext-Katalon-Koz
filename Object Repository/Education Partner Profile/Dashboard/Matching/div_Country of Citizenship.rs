@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Email Address</name>
+   <name>div_Country of Citizenship</name>
    <tag></tag>
-   <elementGuidId>7eaa3e3d-d47e-4dd0-8244-75701350ffd3</elementGuidId>
+   <elementGuidId>243a4dd8-6cf5-4a98-a7de-53c61f811299</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div[2]/div[2]/p/span</value>
+         <key>CSS</key>
+         <value>div:nth-of-type(9) > div > div</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>p > span</value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main&quot;]/div/div/div[2]/div[2]/fieldset[1]/div[9]/div/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,79 +22,79 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
-      <webElementGuid>82e28e86-c9da-4211-824b-daf10364d1cf</webElementGuid>
+      <value>div</value>
+      <webElementGuid>fdfd743e-5fab-48d7-aac3-3d46a8f5be44</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>abayan911@gmail.com</value>
-      <webElementGuid>59276d2b-d851-4d13-84a3-7377db0cd1ce</webElementGuid>
+      <value>Nigeria</value>
+      <webElementGuid>84c3f4ad-0e3a-4f10-92f7-81b9d6980cdb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;content&quot;]/p[1]/span[1]</value>
-      <webElementGuid>ac73cb50-241f-46d6-9d54-3e75b2d7eef8</webElementGuid>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;content&quot;]/fieldset[@class=&quot;mn-profile-group&quot;]/div[9]/div[1]/div[1]</value>
+      <webElementGuid>fb0a29d6-adc7-4fb2-b3c6-49d85561cf10</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='main']/div/div/div[2]/div[2]/p/span</value>
-      <webElementGuid>37093aaa-f602-46cd-96db-23e1f31e87ce</webElementGuid>
+      <value>//div[@id='main']/div/div/div[2]/div[2]/fieldset/div[9]/div/div</value>
+      <webElementGuid>1eded96c-a984-4e20-a175-c8dfe174f4c2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::span[1]</value>
-      <webElementGuid>a48998c6-1377-4e99-976f-f36a4073b793</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Your Country of Citizenship:'])[1]/following::div[2]</value>
+      <webElementGuid>ce5246d9-e9d8-441d-9284-c630ba4449f0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Info'])[1]/preceding::span[1]</value>
-      <webElementGuid>88542372-06d1-4ee9-9b64-c5f5029358df</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Nigeria'])[1]/following::div[3]</value>
+      <webElementGuid>a62c016e-9a85-4998-8251-c99cdc3e4952</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='First Name:'])[1]/preceding::span[1]</value>
-      <webElementGuid>367d021f-e96c-4159-83aa-9552d97fdc25</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Birth Year:'])[1]/preceding::div[1]</value>
+      <webElementGuid>cc40e762-a3dc-4ee9-a446-760a9b1ba74d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='abayan911@gmail.com']/parent::*</value>
-      <webElementGuid>759e9670-bc0d-447a-8b3c-7cb1aa3cc11c</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Marital status:'])[1]/preceding::div[3]</value>
+      <webElementGuid>d469d9cb-812a-4e58-941f-3914b1253e84</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//p/span</value>
-      <webElementGuid>f640e609-9e75-4961-93cb-540e12e2dc33</webElementGuid>
+      <value>//div[9]/div/div</value>
+      <webElementGuid>de435ebf-17e5-4ec8-ae7b-4d88b2b522cc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//span[(text() = 'abayan911@gmail.com' or . = 'abayan911@gmail.com')]</value>
-      <webElementGuid>ddbae5f5-4abe-4bf1-8a4a-d162be7c2411</webElementGuid>
+      <value>//div[(text() = 'Nigeria' or . = 'Nigeria')]</value>
+      <webElementGuid>6ee39aa5-7dd7-4baa-888d-51e02698109e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

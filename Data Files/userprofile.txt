@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.28
 
-Date: 2025-04-28
+Date: 2025-05-02
 
 
 
@@ -30,15 +30,15 @@ Email Webmaster
   Candidate JSON
 
   Your IP Address
-  181.214.107.250
+  181.214.107.214
 
   Log out
 
   mission_next_prod
 
- Created	2020-11-02
- Updated	2024-03-30
- Last Login	2024-03-30
+ Created	2025-03-26
+ Updated	2025-05-02
+ Last Login	2025-05-02
  
 	
 	
@@ -51,251 +51,140 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Brian Chiwela as Candidate on Education
-Field ID	Field Name	  User Value(s) [User ID=14127]
-Name & Preferences
-19	First Name	Brian
-21	Last Name	Chiwela
-24	Email	bchiwela06@yahoo.com
-104	Time Commitment(s)	Long Term
-Open - Will negotiate
-304	I/We can be Available	Immediately
-126	Paid & Volunteer Positions	Open
+Profile for The CCK TEST 06 Education Partner CCK EP as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=16373]
 Contact Info
-30	Country	Rwanda
-29	Post/Zip Code	79
-34	Best Phone Number	+260 977352692/+260 763 292909/+250791982802
-35	Best Way to Contact	Call Anytime
-Ministry Positions
-Enter other Ethnicity
-Enter Family Status
-229	Dependent Children	None
-Experience
-113	Highest Earned Degree	Other Master Degree
-163	Degree Field	Management and leadership in Education
-334	Classroom Experience	Yes
-58	Occupation	Bible Teacher, and Social Studies Teacher
-129	Cross-Cultural Experience	Extensive experience serving in cultures other than my own
-303	Missions Experience	I have taken a short-term missions trip
-I have attended a missions event
-I have served in ministry or missions full time
-160	Life Experience	I have a diverse range of experience in the education sector and child protection. In the past, I have worked as a School Chaplain, Secondary School Teacher of Religious Education, and Vice Principal at a private Christian School. Additionally, I have served as a House Parent and Child Protection Coordinator at Chengelo School. Currently, I am working as a Bible teacher and Social Studies teacher in Rwanda.
-Education
-233	Formal Education Degree	Yes
-235	Credential Authority	Teaching Council of Zambia
-264	Previous Experience	Kindergarten
-Support
-Maintenance
-Other (add Comment Below)
-Administrator
-Recruiting
-Housing/Boarding/Childcare
-Social Subjects
-Middle School
-Bible
-High School
-Counseling
-237	Other Experience	Teaching and Preaching in school and our Local churches
-128	English Proficiency	Proficient
-111	Additional Language(s)	Bemba
-Additional Language ProficiencyGroup
-332	Additional Language Proficiency	Proficient
-Situation
-100	Process Stage	I am ready to select a ministry
-312	Attended Perspectives?	I have not taken the Perspectives Course
-284	Bible Training	Bible school degree or equivalent
-61	Describe Bible Training:	Theology with Education. Church planting and world mission.
-307	Affiliated with a church?	Yes
-112	Journey Guide Option	Yes, I will give it a try
-Church
-48	Church Name	North Church -
-302	Church Involvement	I have support of a pastor to serve in missions
-Availability
-304	I/We can be Available	Immediately
-326	School Term Available	Open - Will negotiate
-104	Time Commitment(s)	Long Term
-Open - Will negotiate
-260	Relocation Option(s)	I am willing to relocate outside the US and Canada
-Preferences
-287	Preferred School Positions	Outdoor Program Supervisor
-Assistant Principal
-Bible Teacher
-Superintendent of Child Education
-Youth Director/Worker
+21	Organization	The CCK TEST 06 Education Partner
+20	Abbreviation	CCK EP
+6	Key Contact First Name	cktest06ep TEST
+7	Key Contact Last Name	Kosieracki
+12	Key Contact Email	cktest06@missionnext.org
+22	Key Contact Phone	1234567890
+111	Organization Phone	1234567890
+26	Mailing Address	Waconia
+10	Country	United States
+28	Organization City	Minneapolis
+93	State	Minnesota
+30	Post/Zip Code	55387
+151	World Region	North America
+School Info
+66	Description	An education partner ministry
+107	Vision Trip	No
+149	School Year Starts	January
+150	School Accredited	No
+65	Website Address	https://missionnext.org
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
 High School Teacher
 Middle School Teacher
-Recruiting Teachers
-Other (Comment Below)
-Non-Traditional Consultant
-Manager, Maintenance
-English Second Language (ESL)
-School Counselor
-Childcare Attendant
-Boarding Home Assistant
-Social Studies Teacher
-Teacher's Aide
+Substitute Teacher
+Arts - Performing
+139	Experience Preferred	Elementary
+High School
 Home Schooling
-Principal
-Distance Education Teacher
-Tutor
-Boarding Home Parent
-339	Preferred Region(s)	No Preference
-Options/Comment
-126	Paid & Volunteer Positions	Open
-127	Travel Options	Travel funds provided
-335	Educator Comments	I am self-motivated and able to work with minimal supervision. I am also a team player and enjoy collaborating with individuals from diverse cultures. I am focused and readily embrace the vision of any organization I am a part of. Working with people, especially young individuals, brings me joy as I have a passion for making a positive impact in their lives. Additionally, I love traveling, meeting people from various cultures, making new friends, and teaching. I have been fortunate to meet and work with individuals from diverse cultures throughout my career, and it has been a privilege to make a positive impact on their lives by sharing my own experiences. With over 12 years of teaching experience, I have also served as a School Chaplain and counselor, providing support and guidance to students. Currently, I am working as a Bible and Social Studies teacher, where I continue to inspire and educate young minds.
-68	Spouse First Name	Averess
-69	Spouse Last Name	Ndhlovu
-169	Spouse Birth Year	1983
-192	Spouse Citizenship Country	Zambia
-376	Spouse Ethnicity	Select your Ethnicity
-227	Spouse Serving with You?	Yes
-117	Spouse Highest Earned Degree	Master of Business Admin (MBA)
-164	Spouse Degree Field	Public Administration and Development Studies
-290	Spouse Occupation	Administrator
-122	Spouse an Educator?	1
-194	Spouse Preferred Position(s)	Data Entry
-People Group Research
-Admin/Management
-City Coordinator
-Lit Wholesale Dist
-Dorm Parent/Hospitality
-Volunteer Coordinator
-Personal/Group Evangelism
-Marriage & Family
-Mentoring
-Personnel/HR
-Housing Coordinator
-Third-Culture Kids
-Pre-School/Toddlers
-Higher Education
-Literacy
-JESUS Film Showings/Dist
-Community Organizer
-Prayer Partner
-Administrative Assistant
-Junior High
-Discipleship
-Logistics
-Christian Growth
-Marketing
-Senior High
-Public Relations
-Church Relations
-Student (College)
-Prison Ministry
-Shipping/Freight Mgmt
-Camping
-College Students
-Event Coordinator
-Relief (Logistics)
-Elementary
-Adult Women
-Informal Education
-Leadership Development
-Warehouse Manager
-Community Relations
-Unreached People Groups
-Education
-Intro to Christianity
-289	Spouse Preferences Comment	readily available to work with children and young adults
-268	Spouse Formal Education Degree	Yes
-266	Spouse Education Credentials	Yes
-269	Spouse Credential Authority	The University of Zambia
-270	Spouse Previous Experience	Other (Add comment below)
-Kindergarten
+Middle School
 Tutoring
-Bible
-Administrator
-271	Spouse Other Experience	Hold a Postgraduate Diploma in Teaching Methodolgy
-320	Spouse English Proficiency	Proficient
-340	Spouse Additional Language(s)	Nyanja and Bemba
-288	Spouse Preferred Education Positions	Reading Teacher/Specialist
-Administrator
-Manager, Business
-Recruiting Teachers
-Administrative Assistant
-English Second Language (ESL)
-306	Spouse Attended Perspectives?	I have not taken the Perspectives Course
-194	Spouse Preferred Position(s)	Data Entry
-People Group Research
-Admin/Management
-City Coordinator
-Lit Wholesale Dist
-Dorm Parent/Hospitality
-Volunteer Coordinator
-Personal/Group Evangelism
-Marriage & Family
-Mentoring
-Personnel/HR
-Housing Coordinator
-Third-Culture Kids
-Pre-School/Toddlers
-Higher Education
-Literacy
-JESUS Film Showings/Dist
-Community Organizer
-Prayer Partner
-Administrative Assistant
-Junior High
-Discipleship
-Logistics
-Christian Growth
-Marketing
-Senior High
-Public Relations
-Church Relations
-Student (College)
-Prison Ministry
-Shipping/Freight Mgmt
-Camping
-College Students
-Event Coordinator
-Relief (Logistics)
-Elementary
-Adult Women
-Informal Education
-Leadership Development
-Warehouse Manager
-Community Relations
-Unreached People Groups
-Education
-Intro to Christianity
-67	Preferences Comment	Religious Education Teacher, and Christian Education Teacher
+Arts - Performing
+Arts - Visual
+English
+Service Options
+70	Time Commitments	One year
+One year to two years
+Long Term
+45	Available Start Options	Within 12 months
+In one to two years
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Occasionally served in cultures other than my own
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+105	Relocation Option(s)	I am willing to relocate within North America
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	Yes
+143	Formal Teaching Credentials	Yes
+Pending
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	Yes
+59	Travel Options	Some Travel funds available
+Travel funding negotiated
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Recruiting Countries
+108	Recruit From Countries	United States
+Japan
+Philippines
+Kosovo
+Admin Info
+84	Mission Statement	https://missionnext.org
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+94	Ministry Preferences	Business
+Electrical
+IT Business Analyst
+Quality Assurance Engineer
+Software Developer
+Software Systems Integrator
+Software Type Designer
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+161	Match Percent Rate	20
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	United States
+Japan
+Philippines
+Kosovo
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 14127:
+Show records for this user: user_id = 16373:
 Table: users
 ID	username	email	created	updated	last login	Active
-14127	chiwb1	bchiwela06@yahoo.com	2020-11-02	2024-03-30	2024-03-30	Yes
-Days ago: 	1638  	394  	394  	 
+16373	cktest06ep	cktest06@missionnext.org	2025-03-26	2025-05-02	2025-05-02	Yes
+Days ago: 	37  	0  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-14127	1	Candidate	189
+16373	2	Organization	115
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-14127	6 EDU	No	2022-06-19	2027-06-19	active	
+16373	3 JN	No	2025-02-17	2026-02-18	active	Admin Add
+16373	6 EDU	No	2025-02-17	2026-02-18	active	Admin Add
 
 Table: user_apps
 ID	App ID	Application
-14127	6	Education
+16373	6	Education
+16373	3	Journey
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-14127	5	BAMmatch	Yes	183
-14127	6	Education	Yes	189
-14127	4	JourneyGuide	Yes	183
-14127	11	IT-Technology	Yes	189
-14127	14	QuickStart	Yes	189
-14127	13	Urbana	Yes	183
-14127	2	Short-Term	Yes	189
-14127	3	Journey	Yes	189
-14127	10	Canada	Yes	183
-14127	9	Mission Next	Yes	183
+16373	5	BAMmatch	Yes	
+16373	9	Mission Next	Yes	
+16373	10	Canada	Yes	
+16373	4	JourneyGuide	Yes	113
+16373	2	Short-Term	Yes	
+16373	11	IT-Technology	Yes	
+16373	13	Urbana	Yes	
+16373	14	QuickStart	Yes	
+16373	3	Journey	Yes	
+16373	6	Education	Yes	113
 
 
 

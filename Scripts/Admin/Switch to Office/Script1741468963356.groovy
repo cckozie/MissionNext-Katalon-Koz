@@ -23,9 +23,13 @@ Screen s = new Screen()
 
 imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/'
 
-WebUI.openBrowser('')
+index = WebUI.getWindowIndex(FailureHandling.OPTIONAL)
 
-WebUI.maximizeWindow()
+if(index < 0) {
+	WebUI.openBrowser('')
+	
+	WebUI.maximizeWindow()
+}
 
 WebUI.navigateToUrl('https://missionnext.org/managerlogin/')
 
@@ -62,7 +66,7 @@ s.click(imagePath + 'switch to.png')
 
 
 //if(s.exists(imagePath + 'Yes switch to office') {
-s.click(imagePath + 'Yes switch to office')
+//s.click(imagePath + 'Yes switch to office')
 //}
 
 

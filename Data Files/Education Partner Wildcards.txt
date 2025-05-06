@@ -11,4 +11,5 @@
  'Formal Teaching Credentials':['No'],
  'English Proficiency':['Not Applicable'],
  'Paid & Volunteer Positions':['No Preference'],
+ 'Recruit From Countries':['All'],
  'Affiliated with a Church?':['No']]

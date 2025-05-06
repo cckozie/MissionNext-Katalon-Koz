@@ -37,13 +37,11 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
 highlight = false
 
-updateWildcards = false	
+updateWildcards = false	//MAKE SURE YOU HAVE CURRENT WILDCARDS LOADED TO THE FOLLOWING MAPS
 
 debug = false
 
-site = 'Journey' // Journey or Education
-
-radioType = 'Org'	// Org or Job
+site = 'Education' //***
 
 pages = 1 //How many match table pages to test
 
@@ -126,10 +124,31 @@ categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions
     , 'Options/Comment']
 
 if (!(updateWildcards)) {
-	
-	candidateWildcards = evaluate(new File(filePath + site + ' Candidate Wildcards.txt'))
-	
-	partnerWildcards = evaluate(new File(filePath + site + ' Partner Wildcards.txt'))
+    //Use these hardcoded maps (or copy new ones from the wildcard data files from last update run)
+    //Education Partner Wildcards
+    partnerWildcards = ['Time Commitments':['Open - Will negotiate'],
+ 'Available Start Options':['No Preference'],
+ 'School Term(s) Available':['Open'],
+ 'Process Stage':['I am just beginning to look at missions'],
+ 'Cross-cultural Experience':['Not served in a culture other than my own'],
+ 'Bible Training':['Not Applicable'],
+ 'Attended Perspectives?':['I have not taken the Perspectives Course'],
+ 'Relocation Option(s)':['Not a Match criterion'],
+ 'Formal Education Degree':['No'],
+ 'Classroom Experience':['No'],
+ 'Formal Teaching Credentials':['No'],
+ 'English Proficiency':['Not Applicable'],
+ 'Paid & Volunteer Positions':['No Preference'],
+ 'Recruit From Countries':['All'],
+ 'Affiliated with a Church?':['No']]
+
+    //Education Candidate Wildcards
+    candidateWildcards = ['Time Commitment(s)':['Open - Will negotiate'],
+ 'Preferred Region(s)':['No Preference'],
+ 'Paid & Volunteer Positions':['Volunteer/self-supported position', 'Open'],
+ 'Travel Options':['No travel funding provided'],
+ 'I/We can be Available':['Not sure'],
+ 'Relocation Option(s)':['Not sure']]
 	
 } else {
     wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
@@ -148,6 +167,30 @@ outFile.append('Partner Wildcards\n')
 
 outFile.append(partnerWildcards.toString() + '\n\n')
 
+/*
+Education Candidate
+>time_commitment:Open - Will negotiate
+world_region_preferences:No Preference
+financial_support:Open
+travel_support:No travel funding provided
+
+Education Partner
+>time_commitments:Open - Will negotiate
+>available_start_options:No Preference
+school_term_available:Open
+candidate_process_stages:I am just beginning to look at missions
+cross-cultural_experience:Not served in a culture other than my own
+>bible_school_training:Not Applicable
+attended_perspectives?:I have not taken the Perspectives Course
+relocation_question:Not a Match criterion
+school_formal_education_degree:No
+school_classroom_experience:No
+has_teaching_credentials:No
+english_skills:Not Applicable
+financial_support:No Preference
+*/
+debug = false
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
@@ -162,6 +205,8 @@ errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myT
 errorFile.write(('Running ' + myTestCase) + '\n')
 
 GlobalVariable.outFile = outFile
+
+radioType = 'Org'
 
 lastEmailAddress = ''
 
@@ -212,8 +257,7 @@ if (site == 'Journey') {
 	
 	apiTab = WebUI.getWindowIndex()
 	
-} else { //Education
-	
+} else {
 	adTab = WebUI.getWindowIndex()
 	
     WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varUsername') : orgUsername, ('varFile') : profileFile
@@ -421,8 +465,6 @@ while (pageCount <= pages) {
         name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
 
         s.click(name)
-		
-		WebUI.delay(1)
 /*
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/button_Close'), 5)
 		
@@ -455,6 +497,13 @@ while (pageCount <= pages) {
 			
 			s.wait(imagePath + 'Contact Info.png',10)
 			
+//			s.wait(imagePath + 'Candidate Profile Big Close Button.png',10)
+			
+//			s.wait(new Pattern(imagePath + 'Candidate Profile Big Close Button.png').similar(0.70),10)
+
+//			s.click(imagePath + 'Candidate Profile Big Close Button.png', 5)
+			
+			
 			s.hover(closeButtonReg)
 			
             button = 'big'
@@ -462,6 +511,8 @@ while (pageCount <= pages) {
             s.wheel(Mouse.WHEEL_UP, 8)
         }
        
+//        WebUI.delay(1)
+
         Robot robot = new Robot()
 
         if (button == 'small') {
@@ -525,6 +576,7 @@ while (pageCount <= pages) {
 			big_close_button = imagePath + 'Candidate Profile Big Close Button EDU'
 		}
         
+//		regMaritalStatus = s.find(new Pattern(imagePath + 'Marital status.png').similar(0.20))
 		regMaritalStatus = s.find(marital_status)
 		
         regMaritalStatus.setX((regMaritalStatus.getX() + regMaritalStatus.getW()) + 210)
@@ -541,6 +593,7 @@ while (pageCount <= pages) {
 
         maritalStatus = getRegionText(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
 
+//        regEmail = s.find(imagePath + 'Your Email.png')
 		regEmail = s.find(your_email)
 		
         regEmail.setX((regEmail.getX() + regEmail.getW()) + 240)
@@ -565,8 +618,11 @@ while (pageCount <= pages) {
 
         emailAddress = emailAddress.replace(':', '')
 
+//        s.click(imagePath + 'Candidate Profile Big Close Button.png', 5)
 		s.click(big_close_button, 5)
 		
+        //		WebUI.closeWindowIndex(2)
+        //		WebUI.delay(2)
         if (emailAddress == lastEmailAddress) {
 			
             continue

@@ -26,8 +26,117 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 import org.sikuli.script.SikulixForJython as SikulixForJython
 
-WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : null], FailureHandling.STOP_ON_FAILURE)
+BufferedReader reader
 
-userFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'name',
-	('varFirstName') : 'Dennis', ('varLastName') : 'Gaymon'], FailureHandling.STOP_ON_FAILURE)
-println(userFieldValues)
+filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
+
+jobFile = (filePath + 'jobprofile.txt')
+
+jobFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/jobprofile.txt'
+
+matchFields = [:]
+
+categories = []
+
+formatProfile(jobFile, categories, matchFields)
+
+
+def formatProfile(def file, def categories, def matchFields) {
+	reader = new BufferedReader(new FileReader(file))
+
+	selections = [:]
+
+	fieldNumbers = []
+
+	values = []
+
+	married = false
+
+	spouseServing = false
+	
+	line = ' '
+	
+	line = reader.readLine()
+	
+	isField = false
+	
+	while(line != null) {
+	
+		while (!isField && line != null) { // Read to the first field
+			
+			line = reader.readLine()
+			
+			if(line == null) {
+				break
+			}
+			
+			println('1>' + line)
+			
+			if(line != null && line.contains(':')) {
+			
+				colon = line.indexOf(':')
+				
+				println(colon)
+	
+				isField = true
+				
+				while(isField) {
+				
+					values = []
+					
+					field = line.substring(0, colon).trim()
+					
+					println('field is ' + field)
+					
+					if(line.length() - colon > 2) {
+						
+						value = line.substring(colon + 2).trim()
+						
+						values.add(value)
+					}
+					
+					line = reader.readLine()
+					
+					println('2>' + line)
+					
+					while(!line.contains(':') && line != null) {
+						
+						values.add(line)
+						
+						line = reader.readLine()
+						
+						if(line == null) {
+							break
+						}
+					
+						println('3>' + line)
+					
+					}
+					
+					selections.putAt(field, values)
+					
+					println(field + ':' + values)
+					
+					if(line == null) {
+						break
+					}
+					
+					if(!line.contains(':')) {
+						
+						isField = false
+						
+					} else {
+						
+						colon = line.indexOf(':')
+					}
+					
+				}	
+			}
+		}
+	}
+}
+
+selections.each {
+	println(it)
+}
+	

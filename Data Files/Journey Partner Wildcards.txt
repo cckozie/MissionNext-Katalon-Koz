@@ -12,4 +12,5 @@
  'Relocation Option(s)':['Not a Match criterion'],
  'Paid & Volunteer Positions':['No Preference'],
  'Profile Years':['All'],
+ 'Recruit From Countries':['All'],
  'Affiliated with a Church?':['No']]
