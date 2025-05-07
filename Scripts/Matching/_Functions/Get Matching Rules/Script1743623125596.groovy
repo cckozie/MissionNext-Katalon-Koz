@@ -107,8 +107,9 @@ matchValues.each{
 */
 WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
 
-WebUI.closeBrowser()
+if(varSite == 'Journey') {	
+	WebUI.closeBrowser()
+}
 
 return matchValues
 
-WebUI.closeBrowser()

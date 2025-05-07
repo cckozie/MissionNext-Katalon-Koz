@@ -60,9 +60,13 @@ WebUI.click(findTestObject('Object Repository/Manager/input_Search Users Submit'
 WebUI.waitForPageLoad(20)
 //System.exit(0)
 
+WebUI.delay(1)
+
 s.hover(imagePath + 'office.png')
 
-s.click(imagePath + 'switch to.png')
+WebUI.delay(1)
+
+s.click(imagePath + 'switch to.png',5)
 
 
 //if(s.exists(imagePath + 'Yes switch to office') {

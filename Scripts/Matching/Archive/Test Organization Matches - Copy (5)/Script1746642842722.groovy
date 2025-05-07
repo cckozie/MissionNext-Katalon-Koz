@@ -77,14 +77,34 @@ if (site == 'Journey') {
     orgEmail = orgEducationEmail
 }
 
+//####	Mods to make
+/*	
+ * Multiple scrolls in popup until match % is found - Edwin Clavel #149
+ * Repeat table percent read if zero - break and display highlight
+ * Need to add languages to org and candidate - journey
+ * For Journey, get organization and candidate profiles from API instead of AD
+ * 
+ */
+//#### Delta for Journey
+/*	org username and password X
+ * 	match rules X
+ *  dashboard link
+ *  org and candidate wildcard lists X
+ *  org and candidate category lists X
+ *  get country of citizenship from profile with email address
+ *  
+ *  I think the rest should work as is
+ *  Consider a front-end script to set the above
+ *  May be able to use mostly intact for jobs, too
+ */
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
-myTestCase = myTestCase.substring(0, myTestCase.length() - 3) + '-' + site
+myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
@@ -128,10 +148,10 @@ outFile.append('Partner Wildcards\n')
 
 outFile.append(partnerWildcards.toString() + '\n\n')
 
-//myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
-//        '/') + 1)
+myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
+        '/') + 1)
 
-//myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 
 resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
 

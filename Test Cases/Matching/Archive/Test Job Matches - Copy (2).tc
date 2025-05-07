@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Get Wildcard Selections - Copy</name>
+   <name>Test Job Matches - Copy (2)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>d0d5871b-1c7f-4488-9599-947463c927e7</testCaseGuid>
+   <testCaseGuid>50f6b744-21c3-4c9b-8772-03e3b1d9576f</testCaseGuid>
 </TestCaseEntity>

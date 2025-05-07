@@ -54,7 +54,9 @@ if (GlobalVariable.outFile != '') {
 	writeFile = true
 }
 
-outFile.append('Looking for user with searchKey = ' + searchKey + '\n')
+writeFile = false
+
+//outFile.append('Looking for user with searchKey = ' + searchKey + '\n')
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -87,12 +89,15 @@ startRows = Rows.size()
 
 WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), searchKey)
 
-while(Rows.size() == startRows) {
+loop = 1
+
+while(Rows.size() == startRows && loop <= loopMax) {
 	
 	WebUI.delay(1)
 	
 	Rows = Table.findElements(By.tagName('tr'))
 	
+	loop++
 }
 
 row_count = Rows.size()

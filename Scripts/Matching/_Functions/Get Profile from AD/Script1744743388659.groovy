@@ -48,20 +48,19 @@ searchType = varSearchType
 println(searchType)
 
 /*
-writeFile = false
-if(GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-	println(myFile)
-	outFile = new java.io.File(myFile)
-	writeFile = true
+try {
+	WebUI.getWindowIndex()
+	
+} catch (BrowserNotOpenedException) {
+	
+	WebUI.openBrowser('')
+	
+	WebUI.maximizeWindow()
+	
+	WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : ''], FailureHandling.STOP_ON_FAILURE)
 }
-
-WebUI.openBrowser('')
-
-WebUI.maximizeWindow()
-
-WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : ''], FailureHandling.STOP_ON_FAILURE)
 */
+
 WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
 
 WebUI.waitForPageLoad(10)

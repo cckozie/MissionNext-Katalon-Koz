@@ -32,8 +32,6 @@ import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
 
-bypass = false
-
 debug = false
 
 pages = 3
@@ -298,343 +296,330 @@ while (pageCount <= pages) {
     s.wheel(Mouse.WHEEL_UP, wheelCount)
 
     WebUI.delay(1)
-	
-	wheelCount = wheelCountMax
-	
-	if(!bypass) {
 
-	    if (highlight) {
-	        regMatch.highlight(2)
-	    }
-	    
-	    icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
-	
-	    iconLocs = [:]
-	
-	    //Don't know how to sort regions in groovy
-	    for (def rg : icons) {
-	        iconLocs.put(rg.getY(), rg.getX())
-	    }
-	    
-	    iconLocs = iconLocs.sort()
-	
-	    for (def it : iconLocs) {
-	        rg = new Region(it.value - 5, it.key - 12, 30, 40)
-	
-	        regPct.setY(it.key)
-	
-	        regPct.setH(22)
-	
-	        regPct.setW(regPct.getW())
-	
-	        if (highlight) {
-	            regPct.highlight(1)
-	        }
-	        
+    if (highlight) {
+        regMatch.highlight(2)
+    }
+    
+    icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
+
+    iconLocs = [:]
+
+    //Don't know how to sort regions in groovy
+    for (def rg : icons) {
+        iconLocs.put(rg.getY(), rg.getX())
+    }
+    
+    iconLocs = iconLocs.sort()
+
+    for (def it : iconLocs) {
+        rg = new Region(it.value - 5, it.key - 12, 30, 40)
+
+        regPct.setY(it.key)
+
+        regPct.setH(22)
+
+        regPct.setW(regPct.getW())
+
+        if (highlight) {
+            regPct.highlight(1)
+        }
+        
+        capturedFile = s.capture(regPct).getFile()
+
+        tablePct = getRegionText(capturedFile)
+		
+		if(!tablePct.isNumber()) {
 	        capturedFile = s.capture(regPct).getFile()
 	
 	        tablePct = getRegionText(capturedFile)
 			
 			if(!tablePct.isNumber()) {
-		        capturedFile = s.capture(regPct).getFile()
-		
-		        tablePct = getRegionText(capturedFile)
-				
-				if(!tablePct.isNumber()) {
-					tablePct = '0'
-				}
+				tablePct = '0'
 			}
-	/*
-	        if (tablePct.length() < 2) {
-	            tablePct = 0
-	
-	            capturedFile = s.capture(regPct).getFile()
-	
-	            tablePct = getRegionText(capturedFile)
-	        }
-	        
-	        if (tablePct.length() < 2) {
-	            tablePct = 0
-	        }
-	*/       
-	        print('Table percent match is ' + tablePct)
-	
-	        rg.click()
-	
-	        //	WebUI.delay(2)
-	        s.wait(imagePath + 'What Matched Popup Text.png', 5)
-	
-	        what = s.find(imagePath + 'What Matched Popup Text.png')
-	
-	        scrolled = false
-	
-	        scrollCount = 0
-	
-	        while (!(s.exists(imagePath + 'Popup Percent Text.png'))) {
-	            s.hover(imagePath + 'What Matched Popup Text.png')
-	
-	            s.wheel(Mouse.WHEEL_UP, 2)
-	
-	            scrollCount = (scrollCount + 2)
-	
-	            scrolled = true
-	
-	            WebUI.delay(1)
-	        }
-	        
-	        Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
-	
-	        pct = s.exists(icn)
-	
-	        pct.setX(what.getX())
-	
-	        pct.setW(50)
-	
-	        if (highlight) {
-	            pct.highlight(1)
-	        }
-	        
+		}
+/*
+        if (tablePct.length() < 2) {
+            tablePct = 0
+
+            capturedFile = s.capture(regPct).getFile()
+
+            tablePct = getRegionText(capturedFile)
+        }
+        
+        if (tablePct.length() < 2) {
+            tablePct = 0
+        }
+*/       
+        print('Table percent match is ' + tablePct)
+
+        rg.click()
+
+        //	WebUI.delay(2)
+        s.wait(imagePath + 'What Matched Popup Text.png', 5)
+
+        what = s.find(imagePath + 'What Matched Popup Text.png')
+
+        scrolled = false
+
+        scrollCount = 0
+
+        while (!(s.exists(imagePath + 'Popup Percent Text.png'))) {
+            s.hover(imagePath + 'What Matched Popup Text.png')
+
+            s.wheel(Mouse.WHEEL_UP, 2)
+
+            scrollCount = (scrollCount + 2)
+
+            scrolled = true
+
+            WebUI.delay(1)
+        }
+        
+        Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
+
+        pct = s.exists(icn)
+
+        pct.setX(what.getX())
+
+        pct.setW(50)
+
+        if (highlight) {
+            pct.highlight(1)
+        }
+        
+        capturedFile = s.capture(pct).getFile()
+
+        popupPct = getRegionText(capturedFile)
+
+ 		if(!popupPct.isNumber()) {
+			
 	        capturedFile = s.capture(pct).getFile()
 	
-	        popupPct = getRegionText(capturedFile).replace('%','')
+	        popupPct = getRegionText(capturedFile)
 			
-			println(popupPct)
-	
-	 		if(!popupPct.isNumber()) {
-				
-		        capturedFile = s.capture(pct).getFile()
-		
-		        popupPct = getRegionText(capturedFile)
-				
-				println(popupPct)
-				
-				if(!popupPct.isNumber()) {
-					popupPct = '0'
-				}
+			if(!popupPct.isNumber()) {
+				popupPct = '0'
 			}
-			
-	        print('Popup percent match is ' + popupPct)
-	
-	        space = popupPct.indexOf(' ')
-	
-	        if (space > 0) {
-	            popupPct = popupPct.substring(0, space)
-	        }
-	        
-	        print('Popup percent match is ' + popupPct)
-	
-	        if (scrolled) {
-	            s.wheel(Mouse.WHEEL_DOWN, scrollCount)
-	        }
-			
-	        s.click(imagePath + 'Popup Close Window Button.png')
-	
-	        name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
-	
-	        s.click(name)
-	
-	        if (first) {
-	            s.wait(imagePath + 'Candidate Profile Close Button.png', 10)
-	
-	            closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
-	
-	            s.hover(closeButtonReg)
-	
-	            button = 'small'
-	
-	            s.wheel(Mouse.WHEEL_UP, 5)
-	
-	            first = false
-	        } else {
-	            s.wait(imagePath + 'Contact Info.png', 30)
-	
-	            s.hover(closeButtonReg)
-	
-	            button = 'big'
-	
-	            s.wheel(Mouse.WHEEL_UP, 8)
-	        }
-	        
-	        if (button == 'small') {
-	            zooms = 4
-	
-	            for (int i = 0; i < zooms; i++) {
-	                // how many times you want CRTL+'-' pressed
-	                robot.keyPress(KeyEvent.VK_META)
-	
-	                robot.keyPress(KeyEvent.VK_ADD)
-	
-	                robot.keyRelease(KeyEvent.VK_ADD)
-	
-	                robot.keyRelease(KeyEvent.VK_META)
-	            }
-	        }
-	        
-	        WebUI.delay(1)
-	
-	        regCountry = s.find(imagePath + 'Your Country of Citizenship.png')
-	
-	        regCountry.setX((regCountry.getX() + regCountry.getW()) + 73)
-	
-	        regCountry.setW(450)
-	
-	        regCountry.setH(30)
-	
-	        if (highlight) {
-	            regCountry.highlight(1)
-	        }
-	        
-	        capturedFile = s.capture(regCountry).getFile()
-	
-	        println(capturedFile)
-	
-	        YourCountryofCitizenship = getRegionText(capturedFile)
-	
-	        if (YourCountryofCitizenship.contains('UnitedStates')) {
-	            YourCountryofCitizenship = 'United States'
-	        }
-	        
-	        print(YourCountryofCitizenship)
-	
-	        marital_status = (imagePath + 'Marital status.png')
-	
-	        your_email = (imagePath + 'Your Email.png')
-	
-	        big_close_button = (imagePath + 'Candidate Profile Big Close Button.png')
-	
-	        regMaritalStatus = s.find(marital_status)
-	
-	        regMaritalStatus.setX((regMaritalStatus.getX() + regMaritalStatus.getW()) + 210)
-	
-	        regMaritalStatus.setW(220)
-	
-	        regMaritalStatus.setH(30)
-	
-	        if (highlight) {
-	            regMaritalStatus.highlight(1)
-	        }
-	        
-	        capturedFile = s.capture(regMaritalStatus).getFile()
-	
-	        String maritalStatus = getRegionText(capturedFile)
-	
-	        maritalStatus = maritalStatus.trim()
-	
-	        regEmail = s.find(your_email)
-	
-	        regEmail.setX((regEmail.getX() + regEmail.getW()) + 240)
-	
-	        regEmail.setW(450)
-	
-	        regEmail.setH(30)
-	
-	        if (highlight) {
-	            regEmail.highlight(1)
-	        }
-	        
-	        capturedFile = s.capture(regEmail).getFile()
-	
-	        emailAddress = getRegionText(capturedFile)
-	
-	        s.click(big_close_button, 5)
-	
-	        if (emailAddress == lastEmailAddress) {
-	            continue
-	        }
-	        
-	        lastEmailAddress = emailAddress
-	
-	        WebUI.switchToWindowIndex(apiTab)
-	
-	        candidateSelections = [:]
-	
-	        candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email'
-	                , ('varEmail') : emailAddress, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
-	
-	        if (candidateFieldValues != null) {
-	            candidateFieldValues.each({ 
-	                    println(it)
-	                })
-	
-	            for (def v : candidateFieldValues) {
-	                myKey = v.key
-	
-	                if (matchValues.containsKey(myKey)) {
-	                    candidateSelections.put(v.key, v.value)
-	                }
-	            }
-	            
-	            if ('Married' in candidateFieldValues.get('Marital status')) {
-	                married = true
-	            } else {
-	                married = false
-	            }
-	            
-	            if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
-	                spouseServing = true
-	            } else {
-	                spouseServing = false
-	            }
-	            
-	            firstName = (candidateFieldValues.getAt('First Name')[0])
-	
-	            lastName = (candidateFieldValues.getAt('Last Name')[0])
-	
-	            outText = ((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName)
-	
-	            outFile.append(outText + '\n')
-	
-	            outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
-	
-	            resultsFile.append(outText + '\n')
-	
-	            if (!(married)) {
-	                outText = 'Candidate is not married.'
-	            } else {
-	                outText = 'Candidate is married and spouse is '
-	
-	                if (!(spouseServing)) {
-	                    outText += 'not '
-	                }
-	                
-	                outText += 'serving.'
-	            }
-	            
-	            outFile.append(outText + '\n')
-	
-	            /*
-				candidateSelections.each({
-						outText = ((it.key + ':') + it.value)
+		}
 		
-						outFile.append(outText + '\n')
-					})
-	*/
-	            doMatching(candidateFieldValues, jobSelections //println(outText)
-	                )
-	        } else {
-	            outText = ('Failed to find user with email of ' + emailAddress)
+        print('Popup percent match is ' + popupPct)
+
+        space = popupPct.indexOf(' ')
+
+        if (space > 0) {
+            popupPct = popupPct.substring(0, space)
+        }
+        
+        if (scrolled) {
+            s.wheel(Mouse.WHEEL_DOWN, scrollCount)
+        }
+        
+        s.click(imagePath + 'Popup Close Window Button.png')
+
+        name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
+
+        s.click(name)
+
+        if (first) {
+            s.wait(imagePath + 'Candidate Profile Close Button.png', 10)
+
+            closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
+
+            s.hover(closeButtonReg)
+
+            button = 'small'
+
+            s.wheel(Mouse.WHEEL_UP, 5)
+
+            first = false
+        } else {
+            s.wait(imagePath + 'Contact Info.png', 10)
+
+            s.hover(closeButtonReg)
+
+            button = 'big'
+
+            s.wheel(Mouse.WHEEL_UP, 8)
+        }
+        
+        if (button == 'small') {
+            zooms = 4
+
+            for (int i = 0; i < zooms; i++) {
+                // how many times you want CRTL+'-' pressed
+                robot.keyPress(KeyEvent.VK_META)
+
+                robot.keyPress(KeyEvent.VK_ADD)
+
+                robot.keyRelease(KeyEvent.VK_ADD)
+
+                robot.keyRelease(KeyEvent.VK_META)
+            }
+        }
+        
+        WebUI.delay(1)
+
+        regCountry = s.find(imagePath + 'Your Country of Citizenship.png')
+
+        regCountry.setX((regCountry.getX() + regCountry.getW()) + 73)
+
+        regCountry.setW(450)
+
+        regCountry.setH(30)
+
+        if (highlight) {
+            regCountry.highlight(1)
+        }
+        
+        capturedFile = s.capture(regCountry).getFile()
+
+        println(capturedFile)
+
+        YourCountryofCitizenship = getRegionText(capturedFile)
+
+        if (YourCountryofCitizenship.contains('UnitedStates')) {
+            YourCountryofCitizenship = 'United States'
+        }
+        
+        print(YourCountryofCitizenship)
+
+        marital_status = (imagePath + 'Marital status.png')
+
+        your_email = (imagePath + 'Your Email.png')
+
+        big_close_button = (imagePath + 'Candidate Profile Big Close Button.png')
+
+        regMaritalStatus = s.find(marital_status)
+
+        regMaritalStatus.setX((regMaritalStatus.getX() + regMaritalStatus.getW()) + 210)
+
+        regMaritalStatus.setW(220)
+
+        regMaritalStatus.setH(30)
+
+        if (highlight) {
+            regMaritalStatus.highlight(1)
+        }
+        
+        capturedFile = s.capture(regMaritalStatus).getFile()
+
+        String maritalStatus = getRegionText(capturedFile)
+
+        maritalStatus = maritalStatus.trim()
+
+        regEmail = s.find(your_email)
+
+        regEmail.setX((regEmail.getX() + regEmail.getW()) + 240)
+
+        regEmail.setW(450)
+
+        regEmail.setH(30)
+
+        if (highlight) {
+            regEmail.highlight(1)
+        }
+        
+        capturedFile = s.capture(regEmail).getFile()
+
+        emailAddress = getRegionText(capturedFile)
+
+        s.click(big_close_button, 5)
+
+        if (emailAddress == lastEmailAddress) {
+            continue
+        }
+        
+        lastEmailAddress = emailAddress
+
+        WebUI.switchToWindowIndex(apiTab)
+
+        candidateSelections = [:]
+
+        candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email'
+                , ('varEmail') : emailAddress, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+
+        if (candidateFieldValues != null) {
+            candidateFieldValues.each({ 
+                    println(it)
+                })
+
+            for (def v : candidateFieldValues) {
+                myKey = v.key
+
+                if (matchValues.containsKey(myKey)) {
+                    candidateSelections.put(v.key, v.value)
+                }
+            }
+            
+            if ('Married' in candidateFieldValues.get('Marital status')) {
+                married = true
+            } else {
+                married = false
+            }
+            
+            if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
+                spouseServing = true
+            } else {
+                spouseServing = false
+            }
+            
+            firstName = (candidateFieldValues.getAt('First Name')[0])
+
+            lastName = (candidateFieldValues.getAt('Last Name')[0])
+
+            outText = ((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName)
+
+            outFile.append(outText + '\n')
+
+            outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
+
+            resultsFile.append(outText + '\n')
+
+            if (!(married)) {
+                outText = 'Candidate is not married.'
+            } else {
+                outText = 'Candidate is married and spouse is '
+
+                if (!(spouseServing)) {
+                    outText += 'not '
+                }
+                
+                outText += 'serving.'
+            }
+            
+            outFile.append(outText + '\n')
+
+            /*
+			candidateSelections.each({
+					outText = ((it.key + ':') + it.value)
 	
-	            outFile.append(('\n' + outText) + '\n')
-	
-	            resultsFile.append(('\n' + outText) + '\n')
-	        }
-	        
-	        Set<String> allWindows = driver.getWindowHandles()
-			driver.switchTo().window(allWindows[2])
-			
-	/*
-	        for (String currentWindow : allWindows) {
-	            println(currentWindow)
-	            driver.switchTo().window(currentWindow)
-	        }
-	*/
-	        WebUI.delay(1)
-	    }
+					outFile.append(outText + '\n')
+				})
+*/
+            doMatching(candidateFieldValues, jobSelections //println(outText)
+                )
+        } else {
+            outText = ('Failed to find user with email of ' + emailAddress)
+
+            outFile.append(('\n' + outText) + '\n')
+
+            resultsFile.append(('\n' + outText) + '\n')
+        }
+        
+        Set<String> allWindows = driver.getWindowHandles()
+		driver.switchTo().window(allWindows[2])
 		
-//		pageCount++
-	}
+/*
+        for (String currentWindow : allWindows) {
+            println(currentWindow)
+            driver.switchTo().window(currentWindow)
+        }
+*/
+        WebUI.delay(1)
+    }
+	
 	pageCount++
-	
 }
 
 //Switch to partner dashboard
@@ -985,19 +970,8 @@ def doMatching(def candidateSelections, def jobSelections) {
 
         tablePct = tablePct.toInteger()
 
-		code = ''
-		
         if ((Math.abs(addedPct - tablePct) > 1) || (Math.abs(tablePct - popPct) > 1)) {
             error = true
-			if(Math.abs(addedPct - tablePct) > 1) {	
-				code = '12 '
-			}
-			if(Math.abs(addedPct - popPct) > 1) {
-				code = code + '13 '
-			}
-			if(Math.abs(tablePct - popPct) > 1) {
-				code = code + '23'
-			}
         }
         
         outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
@@ -1017,7 +991,7 @@ def doMatching(def candidateSelections, def jobSelections) {
         outFile.append(outText + '\n')
 
         if (error) {
-            outText = '##### ERRORS ' + code + ' FOUND #####'
+            outText = '##### ERRORS FOUND #####'
 
             outFile.append(outText + '\n')
         }
@@ -1028,7 +1002,7 @@ def doMatching(def candidateSelections, def jobSelections) {
         '%.\n\n')
 
         if (error) {
-            outText = ('##### ERRORS ' + code + ': ' + outText)
+            outText = ('##### ERROR: ' + outText)
         }
     }
     
