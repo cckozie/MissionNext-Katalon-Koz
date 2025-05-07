@@ -120,9 +120,11 @@ matchValues.each({
         //println(outText)
         outFile.append(outText + '\n')
 
-        candidateMatchFields.add(it.key)
-
-        jobMatchFields.add(it.value[0])
+//        candidateMatchFields.add(it.key)
+		jobMatchFields.add(it.key)
+		
+//        jobMatchFields.add(it.value[0])
+        candidateMatchFields.add(it.value[0])
     })
 
 WebUI.delay(2)
@@ -233,7 +235,7 @@ jobProfileFile.write(data)
 
 jobSelections = formatProfile(jobProfileFile, matchValues)
 
-outText = 'Job Selections'
+outText = '\n\n Job Selections'
 
 println(outText)
 
@@ -559,7 +561,7 @@ while (pageCount <= pages) {
 	            for (def v : candidateFieldValues) {
 	                myKey = v.key
 	
-	                if (matchValues.containsKey(myKey)) {
+	                if (candidateMatchFields.contains(myKey)) {
 	                    candidateSelections.put(v.key, v.value)
 	                }
 	            }
@@ -602,13 +604,13 @@ while (pageCount <= pages) {
 	            
 	            outFile.append(outText + '\n')
 	
-	            /*
+	            
 				candidateSelections.each({
 						outText = ((it.key + ':') + it.value)
 		
 						outFile.append(outText + '\n')
 					})
-	*/
+	
 	            doMatching(candidateFieldValues, jobSelections //println(outText)
 	                )
 	        } else {
