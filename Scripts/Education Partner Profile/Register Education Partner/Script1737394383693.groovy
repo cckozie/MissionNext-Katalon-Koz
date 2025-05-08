@@ -382,10 +382,10 @@ if (pending) {
 }
 
 //================================== Wait for the approval pending email for the new education partner =========
-WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
+emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
         , ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
-if (GlobalVariable.returnCode == 'found') {
+if (emailFound) {
     outText = (('Approval request email for ' + username) + ' was found')
 
     println(outText)

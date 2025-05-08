@@ -76,6 +76,10 @@ for (row = 2; row < row_count; row++) {
     List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 	
     orgField = Columns.get(1).getText().trim()
+	
+	if(orgField == '') { //bottom of table reached
+		break
+	}
 
     cndField = Columns.get(2).getText().trim()
 	

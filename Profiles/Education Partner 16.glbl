@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'The CCK TEST Education Partner'</initValue>
+      <initValue>'The CCK TEST 16EP Education Partner'</initValue>
       <name>organization</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -78,5 +78,10 @@
       <description></description>
       <initValue>''</initValue>
       <name>returnCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>allow_delete</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

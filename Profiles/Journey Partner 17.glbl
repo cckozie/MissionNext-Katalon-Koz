@@ -61,7 +61,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'The CCK TEST Journey Partner'</initValue>
+      <initValue>'The CCK TEST 17 Journey Partner Organization'</initValue>
       <name>organization</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -153,5 +153,10 @@
       <description></description>
       <initValue>[]</initValue>
       <name>ministriesList</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>allow_delete</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

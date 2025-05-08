@@ -36,7 +36,7 @@ bypass = false
 
 debug = false
 
-pages = 3
+pages = 1
 
 site = 'Journey'
 
@@ -870,7 +870,7 @@ def doMatching(def candidateSelections, def jobSelections) {
 
                 ifPrint('matchValue = ' + matchValue)
 
-                if ((matchValue != 5) && !((values[pointValue]).contains('-'))) {
+                if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
                     newPoints = (values[pointValue]).toFloat().round(1)
                 } else {
                     newPoints = 0

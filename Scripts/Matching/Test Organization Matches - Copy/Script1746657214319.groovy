@@ -34,7 +34,6 @@ import org.apache.commons.io.FileUtils as FileUtils
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
 highlight = false
 
@@ -48,25 +47,35 @@ radioType = 'Org'	// Org or Job
 
 pages = 1 //How many match table pages to test
 
-if(site == 'Journey') {
-	user = 'Journey Partner 17'
-}
+orgJourneyUsername = 'cktest07jp'
 
-if(site == 'Education') {
-	user = 'Education Partner 06'
-}
+orgJourneyPassword = 'e+4GBczmpX6OSkyCMXXwIg=='
 
-new ExecutionProfilesLoader().loadProfile(user)
+orgJourneyEmail = 'cktest07@missionnext.org'
 
-orgUsername = GlobalVariable.username
+orgEducationUsername = 'cktest06ep'
 
-orgPassword = GlobalVariable.password
+orgEducationPassword = '54sGs6IdgS9Or2VrKr+d9g=='
 
-orgEmail = GlobalVariable.email
+orgEducationEmail = 'cktest06@missionnext.org' //Not used
 
 firstName = ''
 
 lastName = ''
+
+if (site == 'Journey') {
+    orgUsername = orgJourneyUsername
+
+    orgPassword = orgJourneyPassword
+
+    orgEmail = orgJourneyEmail
+} else {
+    orgUsername = orgEducationUsername
+
+    orgPassword = orgEducationPassword
+
+    orgEmail = orgEducationEmail
+}
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -784,7 +793,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
             println(matchValue)
 
-            if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
+            if ((matchValue != 5) && !((values[pointValue]).contains('-'))) {
                 newPoints = (values[pointValue]).toFloat().round(1)
             } else {
                 newPoints = 0

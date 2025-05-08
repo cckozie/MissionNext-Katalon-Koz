@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.io.File as File
+import com.kms.katalon.core.util.KeywordUtil
 
 if (binding.hasVariable('varUsername')) {
 	username = varUsername
@@ -41,13 +42,15 @@ if(GlobalVariable.outFile != '') {
 	println('outFile not defined')
 }
 
-/*
-if(writeFile) {
-	outFile.append('can you see this?' + '\n')
+if(!GlobalVariable.allow_delete) {
+	outText = 'Profile for user indicates to not allow delete.'
+	println(outText)
+	if(writeFile) {
+		outFile.append(outText + '\n')
+	}
+	KeywordUtil.markFailedAndStop('Profile for user indicates to not allow delete.')
+	
 }
-
-System.exit(0)
-*/
 
 domain = GlobalVariable.domain
 

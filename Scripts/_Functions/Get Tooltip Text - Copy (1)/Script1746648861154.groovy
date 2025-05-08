@@ -21,7 +21,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 
-debug = true
+debug = false
 
 outFile = GlobalVariable.outFile
 
@@ -115,27 +115,22 @@ if (fieldTooltips.size() > 0) {
 		kY = it.key
 		tY = it.value
 		tYi = tY.toInteger() + 4
-		if(fieldLabels.size() > 1) {
-	//		println('tYi is ' + tYi)
+//		println('tYi is ' + tYi)
+		lY = labelsY[i+1]
+		lYi = lY.toInteger()
+//		println('lYi is ' + lYi)
+		while(tYi > lYi) {
+			i = i + 1
+			println('i is ' + i)
+			if(i+1 >= fieldLabels.size()) {
+				break
+			}
 			lY = labelsY[i+1]
 			lYi = lY.toInteger()
-	//		println('lYi is ' + lYi)
-			while(tYi > lYi) {
-				i = i + 1
-				println('i is ' + i)
-				if(i+1 >= fieldLabels.size()) {
-					break
-				}
-				lY = labelsY[i+1]
-				lYi = lY.toInteger()
-	//			println('lYi is ' + lYi)
-			}
-			lY = labelsY[i]
-			myKey = fieldLabels.find{ it.value == lY }?.key
-		} else {
-			myKey = label
-			lYi = tYi - 4
+//			println('lYi is ' + lYi)
 		}
+		lY = labelsY[i]
+		myKey = fieldLabels.find{ it.value == lY }?.key	
 		if(debug) {	
 			println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
 		}

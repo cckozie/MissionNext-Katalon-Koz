@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.28
 
-Date: 2025-05-07
+Date: 2025-05-08
 
 
 
@@ -36,9 +36,9 @@ Email Webmaster
 
   mission_next_prod
 
- Created	2017-10-01
- Updated	2024-12-16
- Last Login	2025-01-18
+ Created	2016-04-12
+ Updated	2017-07-27
+ Last Login	2019-03-15
  
 	
 	
@@ -51,154 +51,121 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Abbie Abendroth as Candidate on Education
-Field ID	Field Name	  User Value(s) [User ID=11104]
+Profile for Nathan Bateman as Candidate on Education
+Field ID	Field Name	  User Value(s) [User ID=8136]
 Name & Preferences
-19	First Name	Abbie
-21	Last Name	Abendroth
-24	Email	ababendroth1@outlook.com
+19	First Name	Nathan
+21	Last Name	Bateman
+24	Email	nathan.bateman.jr@gmail.com
 310	Preferred Region(s)	Southeast Asia
-104	Time Commitment(s)	One year
-One year to two years
-Long Term
-Open - Will negotiate
-304	I/We can be Available	In one to two years
+104	Time Commitment(s)	Long Term
+304	I/We can be Available	Within 12 months
 126	Paid & Volunteer Positions	Open
-Only envision serving in paid positions
-A salary provided; enough to live locally
 Contact Info
 30	Country	United States
-29	Post/Zip Code	43215
-34	Best Phone Number	3802580197
-35	Best Way to Contact	By Email
+29	Post/Zip Code	66075
+34	Best Phone Number	9132740493
+35	Best Way to Contact	Call Anytime
+63	Comments:	7 Years International School Teaching Experience in Christian Education
 Ministry Positions
-220	Job Categories	SUPPORT HELPS
-DISCIPLESHIP
-EVANGELISM SUPPORT
-DISCIPLE YOUTH
-EVANGELISM
-COMMUNITY DEVELOPMENT
-BUSINESS AS MISSION
-RELIEF AND DEVELOPMENT
-CHURCH DEVELOPMENT
-ESL/TESOL
-JUSTICE/ADVOCACY
-SUPPORT PROFESSIONAL
-EDUCATION
-193	Preferred Position(s)	Mentoring
-Unreached People Groups
-Pre-School/Toddlers
-Refugee Work - Europe
-Personal/Group Evangelism
-Elementary
-International, Outside US
-Children in Crisis
-Community Organizer
-Prayer Partner
-Military Kids
-Third-Culture Kids
-Administrative Assistant
-ESL - Teach, Will Learn How
-City Coordinator
-Christian Growth
-Hospitality
-Education
-Adult Women
-Orphanage
-Elementary Education
 Enter other Ethnicity
 Enter Family Status
-229	Dependent Children	None
+229	Dependent Children	4
 Experience
-113	Highest Earned Degree	Bachelor of Arts (BA)
-163	Degree Field	Early Childhood Education
+113	Highest Earned Degree	Bachelor of Education (BEd)
+163	Degree Field	Business/Computer Education
 334	Classroom Experience	Yes
-58	Occupation	Teacher
+58	Occupation	HS Teacher/Freelance Web Developer
 129	Cross-Cultural Experience	Extensive experience serving in cultures other than my own
-303	Missions Experience	I have attended a missions event
-I have taken a short-term missions trip
-I have served in ministry or missions full time
+303	Missions Experience	I have served in ministry or missions full time
+160	Life Experience	From SW Georgia and born again at 21 while in college. I had always professed Christ but never truly repented and submitted to His Lordship. I immediately switched my major to Education at the Lord's leading and served for 7 years in Bangkok, Thailand where I met my wife and three of our four children were born. Living cross culturally gave me many challenges and experiences both as a believer and an educator. I prefer to attend national churches and try my best to learn the language spoken locally.
+81	Resume	candidate8136_resume.pdf
 Education
 233	Formal Education Degree	Yes
-234	Formal Teaching Credentials	Yes
-235	Credential Authority	State of Ohio, and after Ohio I have taken all classes necessary in order to apply for an initial ACSI license.
-264	Previous Experience	Non-Traditional
-Housing/Boarding/Childcare
-Elementary
-Teacher's Aide
+235	Credential Authority	GA PSC, KS DOE
+264	Previous Experience	High School
+Technology
+Middle School
+237	Other Experience	Project Manager
 128	English Proficiency	Advanced
+111	Additional Language(s)	Thai
 Additional Language ProficiencyGroup
+332	Additional Language Proficiency	Intermediate
 Situation
-100	Process Stage	I am ready to select a ministry
+100	Process Stage	I am actively investigating missions
 312	Attended Perspectives?	I have not taken the Perspectives Course
-284	Bible Training	Some Bible school classes
-61	Describe Bible Training:	I have taken Bible courses in college as required by my school.
+284	Bible Training	Informal Bible training
+61	Describe Bible Training:	My bible training consists of discipleship via Fishermen Ministries in Valdosta, GA as well as personal study of the scriptures and reading the writings of Theologians primarily from the 17th-19th centuries such as Spurgeon, Bunyan, Wesley, Finney, and Baxter
 307	Affiliated with a church?	Yes
 112	Journey Guide Option	Yes, I will give it a try
 Church
-48	Church Name	OneChurch
-302	Church Involvement	I am serving in my local church
+48	Church Name	Cornerstone
+302	Church Involvement	I regularly attend church
 Availability
-304	I/We can be Available	In one to two years
-326	School Term Available	Open - Will negotiate
-Full Year
-104	Time Commitment(s)	One year
-One year to two years
-Long Term
-Open - Will negotiate
+304	I/We can be Available	Within 12 months
+326	School Term Available	Fall Semester
+104	Time Commitment(s)	Long Term
 260	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Preferences
-287	Preferred School Positions	Elementary School Teacher
+287	Preferred School Positions	High School Teacher
+Computer Teacher (School)
+Bible Teacher
+Middle School Teacher
+Business Education Teacher
+Distance Education Teacher
 339	Preferred Region(s)	Southeast Asia
 Options/Comment
 126	Paid & Volunteer Positions	Open
-Only envision serving in paid positions
-A salary provided; enough to live locally
-127	Travel Options	Travel funds provided
+127	Travel Options	Some travel funds available
+Travel funds provided
 Travel funding negotiated
-Some travel funds available
-335	Educator Comments	I served in SE Asia as a full-time, homeroom elementary teacher at an accredited K-12 school from July 2018 to June 2023. I returned to the USA in June 2023 and began working at a non profit as an office assistant in August 2023. I’m ready to go back abroad and back into the classroom.
-169	Spouse Birth Year	YYYY
+335	Educator Comments	Dear Sir or Madam: Thank you for considering my profile. It is my desire to serve in Christian Education where the vision for academic excellence is realized in the context of a biblical worldview. As a technology teacher and web developer, I see great potential for kingdom work but also the urgent need to help young people develop into responsible citizens ready to harness the power of technology while also being able to self regulate their usage. The most valuable strength I bring to the table from an educational standpoint is my sincere love for the content I teach. I make it a priority to stay abreast of technological trends in education as well and in industry. I have industry-standard certification in the field of web development and enjoy experimenting with new technologies to create engaging learning experiences that meet expected outcomes, while being enjoyable. I thoroughly enjoy integrating a biblical worldview into the content and am eager to be in an environment to do this again.
+68	Spouse First Name	Amy
+69	Spouse Last Name	Bateman
+169	Spouse Birth Year	1976
 192	Spouse Citizenship Country	United States
-376	Spouse Ethnicity	Select your Ethnicity
 227	Spouse Serving with You?	No
 117	Spouse Highest Earned Degree	High School or Equivalent
-268	Spouse Formal Education Degree	No
-266	Spouse Education Credentials	No
+290	Spouse Occupation	Math/French HS Teacher - Stay at home mother currently
+268	Spouse Formal Education Degree	Yes
+266	Spouse Education Credentials	Yes
+269	Spouse Credential Authority	KS DOE - Expired
+270	Spouse Previous Experience	High School
+Language Teacher
+288	Spouse Preferred Education Positions	Other
+297	Spouse Education Preferences Comment	Stay at home mom - 3 kids - 1yr, 3yr, 5yr - at the time of writing
 306	Spouse Attended Perspectives?	I have not taken the Perspectives Course
+67	Preferences Comment	Certifications in 6-12 Computer/Business and 4-8 Math and Reading; 12 hrs of Master's level Ed. Tech courses
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 11104:
+Show records for this user: user_id = 8136:
 Table: users
 ID	username	email	created	updated	last login	Active
-11104	ababendroth	ababendroth1@outlook.com	2017-10-01	2024-12-16	2025-01-18	Yes
-Days ago: 	2775  	142  	109  	 
+8136	nathan.bateman.jr@gmail.com	nathan.bateman.jr@gmail.com	2016-04-12	2017-07-27	2019-03-15	Yes
+Days ago: 	3313  	2842  	2246  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-11104	1	Candidate	139
+8136	1	Candidate	103
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-11104	6 EDU	No	2021-03-08	2026-12-31	active	
-11104	3 JN	No	2021-03-08	2026-12-31	active	
+8136	6 EDU	No	2017-07-27	2025-08-05	active	MT Upload
 
 Table: user_apps
 ID	App ID	Application
-11104	6	Education
-11104	3	Journey
+8136	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-11104	9	Mission Next	Yes	157
-11104	4	JourneyGuide	Yes	157
-11104	6	Education	Yes	139
-11104	3	Journey	Yes	139
-11104	5	BAMmatch	Yes	157
-11104	10	Canada	Yes	157
-11104	2	Short-Term	Yes	139
+8136	5	BAMmatch	Yes	118
+8136	4	JourneyGuide	Yes	118
+8136	9	Mission Next	Yes	118
+8136	3	Journey	Yes	103
+8136	2	Short-Term	Yes	103
+8136	6	Education	Yes	103
 
 
 
