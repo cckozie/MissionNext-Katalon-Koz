@@ -19,9 +19,11 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
-WebUI.navigateToUrl('https://education.explorenext.org/education-home/register/')
+WebUI.navigateToUrl('https://education.missionnext.org/education-home/register/')
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/a_Apply Now'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/a_Apply Now'))
+object = 'Object Repository/Education Affiliate/a_Apply Now'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.switchToWindowTitle('Education')
 
@@ -43,8 +45,11 @@ WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_Contac
 
 WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_City_registrationgroup1city'), 'Waconia')
 
-WebUI.selectOptionByValue(findTestObject('Object Repository/Education Affiliate/select_AlabamaAlaskaArizonaArkansasCaliforn_3be247'), 
-    'Minnesota', true)
+//WebUI.selectOptionByValue(findTestObject('Object Repository/Education Affiliate/select_AlabamaAlaskaArizonaArkansasCaliforn_3be247'), 
+//    'Minnesota', true)
+object = 'Object Repository/Education Affiliate/select_AlabamaAlaskaArizonaArkansasCaliforn_3be247'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
+	, ('varParm1') : 'Minnesota'], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_PostalZip Code_registrationgroup1srvc_326d84'), 
     '55387')
@@ -58,9 +63,13 @@ WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_Abbrev
 WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_Web Address_registrationgroup-1464701_7a30be'), 
     'https://explorenext.org')
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/input_MissionNext_registrationgroup-1464701_606ca5'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/input_MissionNext_registrationgroup-1464701_606ca5'))
+object = 'Object Repository/Education Affiliate/input_MissionNext_registrationgroup-1464701_606ca5'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Web Address_registrationgroup-1464701_7a30be'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Web Address_registrationgroup-1464701_7a30be'))
+object = 'Object Repository/Education Affiliate/input_Web Address_registrationgroup-1464701_7a30be'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_Board of Directors_registrationgroup-_d6bfee'), 
     'https://explorenext.org')
@@ -71,9 +80,15 @@ WebUI.setText(findTestObject('Object Repository/Education Affiliate/input_Statem
 WebUI.setText(findTestObject('Object Repository/Education Affiliate/textarea_References_registrationgroup-14647_9feed9'), 
     'https://explorenext.org')
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Partnership Agreement_registrationgro_ccbf5d'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Partnership Agreement_registrationgro_ccbf5d'))
+object = 'Object Repository/Education Affiliate/input_Partnership Agreement_registrationgro_ccbf5d'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Terms and Conditions_registrationgrou_fd616e'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/input_Terms and Conditions_registrationgrou_fd616e'))
+object = 'Object Repository/Education Affiliate/input_Terms and Conditions_registrationgrou_fd616e'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Education Affiliate/button_Sign up'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/button_Sign up'))
+object = 'Object Repository/Education Affiliate/button_Sign up'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

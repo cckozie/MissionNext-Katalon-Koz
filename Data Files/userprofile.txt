@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.2.28
+PHP version: 8.2.29
 
-Date: 2025-05-08
+Date: 2025-07-21
 
 
 
@@ -30,15 +30,15 @@ Email Webmaster
   Candidate JSON
 
   Your IP Address
-  46.110.33.77
+  46.110.33.110
 
   Log out
 
   mission_next_prod
 
- Created	2016-04-12
- Updated	2017-07-27
- Last Login	2019-03-15
+ Created	2025-05-08
+ Updated	2025-07-10
+ Last Login	2025-07-21
  
 	
 	
@@ -51,121 +51,137 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Nathan Bateman as Candidate on Education
-Field ID	Field Name	  User Value(s) [User ID=8136]
-Name & Preferences
-19	First Name	Nathan
-21	Last Name	Bateman
-24	Email	nathan.bateman.jr@gmail.com
-310	Preferred Region(s)	Southeast Asia
-104	Time Commitment(s)	Long Term
-304	I/We can be Available	Within 12 months
-126	Paid & Volunteer Positions	Open
+Profile for The CCK TEST 16EP Education Partner MPLS CCK EP as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=16450]
 Contact Info
-30	Country	United States
-29	Post/Zip Code	66075
-34	Best Phone Number	9132740493
-35	Best Way to Contact	Call Anytime
-63	Comments:	7 Years International School Teaching Experience in Christian Education
-Ministry Positions
-Enter other Ethnicity
-Enter Family Status
-229	Dependent Children	4
-Experience
-113	Highest Earned Degree	Bachelor of Education (BEd)
-163	Degree Field	Business/Computer Education
-334	Classroom Experience	Yes
-58	Occupation	HS Teacher/Freelance Web Developer
-129	Cross-Cultural Experience	Extensive experience serving in cultures other than my own
-303	Missions Experience	I have served in ministry or missions full time
-160	Life Experience	From SW Georgia and born again at 21 while in college. I had always professed Christ but never truly repented and submitted to His Lordship. I immediately switched my major to Education at the Lord's leading and served for 7 years in Bangkok, Thailand where I met my wife and three of our four children were born. Living cross culturally gave me many challenges and experiences both as a believer and an educator. I prefer to attend national churches and try my best to learn the language spoken locally.
-81	Resume	candidate8136_resume.pdf
-Education
-233	Formal Education Degree	Yes
-235	Credential Authority	GA PSC, KS DOE
-264	Previous Experience	High School
-Technology
-Middle School
-237	Other Experience	Project Manager
-128	English Proficiency	Advanced
-111	Additional Language(s)	Thai
-Additional Language ProficiencyGroup
-332	Additional Language Proficiency	Intermediate
-Situation
-100	Process Stage	I am actively investigating missions
-312	Attended Perspectives?	I have not taken the Perspectives Course
-284	Bible Training	Informal Bible training
-61	Describe Bible Training:	My bible training consists of discipleship via Fishermen Ministries in Valdosta, GA as well as personal study of the scriptures and reading the writings of Theologians primarily from the 17th-19th centuries such as Spurgeon, Bunyan, Wesley, Finney, and Baxter
-307	Affiliated with a church?	Yes
-112	Journey Guide Option	Yes, I will give it a try
-Church
-48	Church Name	Cornerstone
-302	Church Involvement	I regularly attend church
-Availability
-304	I/We can be Available	Within 12 months
-326	School Term Available	Fall Semester
-104	Time Commitment(s)	Long Term
-260	Relocation Option(s)	I am willing to relocate outside the US and Canada
-Preferences
-287	Preferred School Positions	High School Teacher
-Computer Teacher (School)
-Bible Teacher
+21	Organization	The CCK TEST 16EP Education Partner MPLS
+20	Abbreviation	CCK EP
+6	Key Contact First Name	cktest16ep TEST
+7	Key Contact Last Name	Kosieracki
+12	Key Contact Email	cktest16@missionnext.org
+22	Key Contact Phone	1234567890
+111	Organization Phone	1234567890
+10	Country	United States
+28	Organization City	Minneapolis
+151	World Region	North America
+School Info
+66	Description	An education partner ministry
+107	Vision Trip	No
+149	School Year Starts	January
+150	School Accredited	No
+65	Website Address	https://missionnext.org
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Assistant Principal
+Principal
+Superintendent of Schools
+Teacher's Aide
 Middle School Teacher
-Business Education Teacher
-Distance Education Teacher
-339	Preferred Region(s)	Southeast Asia
-Options/Comment
-126	Paid & Volunteer Positions	Open
-127	Travel Options	Some travel funds available
-Travel funds provided
+Substitute Teacher
+Science Teacher
+139	Experience Preferred	Administrator
+Elementary
+High School
+Middle School
+Teacher's Aide
+Sciences
+Service Options
+70	Time Commitments	Open - Will negotiate
+45	Available Start Options	No Preference
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am actively investigating missions
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	Yes
+143	Formal Teaching Credentials	Yes
+Pending
+51	English Proficiency	Proficient
+100	Affiliated with a Church?	No
+59	Travel Options	No travel funding provided
+Some Travel funds available
 Travel funding negotiated
-335	Educator Comments	Dear Sir or Madam: Thank you for considering my profile. It is my desire to serve in Christian Education where the vision for academic excellence is realized in the context of a biblical worldview. As a technology teacher and web developer, I see great potential for kingdom work but also the urgent need to help young people develop into responsible citizens ready to harness the power of technology while also being able to self regulate their usage. The most valuable strength I bring to the table from an educational standpoint is my sincere love for the content I teach. I make it a priority to stay abreast of technological trends in education as well and in industry. I have industry-standard certification in the field of web development and enjoy experimenting with new technologies to create engaging learning experiences that meet expected outcomes, while being enjoyable. I thoroughly enjoy integrating a biblical worldview into the content and am eager to be in an environment to do this again.
-68	Spouse First Name	Amy
-69	Spouse Last Name	Bateman
-169	Spouse Birth Year	1976
-192	Spouse Citizenship Country	United States
-227	Spouse Serving with You?	No
-117	Spouse Highest Earned Degree	High School or Equivalent
-290	Spouse Occupation	Math/French HS Teacher - Stay at home mother currently
-268	Spouse Formal Education Degree	Yes
-266	Spouse Education Credentials	Yes
-269	Spouse Credential Authority	KS DOE - Expired
-270	Spouse Previous Experience	High School
-Language Teacher
-288	Spouse Preferred Education Positions	Other
-297	Spouse Education Preferences Comment	Stay at home mom - 3 kids - 1yr, 3yr, 5yr - at the time of writing
-306	Spouse Attended Perspectives?	I have not taken the Perspectives Course
-67	Preferences Comment	Certifications in 6-12 Computer/Business and 4-8 Math and Reading; 12 hrs of Master's level Ed. Tech courses
+Travel funds provided
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Position requires raising your support
+Position requires raising some support
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Admin Info
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	No
+161	Match Percent Rate	50
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 8136:
+Show records for this user: user_id = 16450:
 Table: users
 ID	username	email	created	updated	last login	Active
-8136	nathan.bateman.jr@gmail.com	nathan.bateman.jr@gmail.com	2016-04-12	2017-07-27	2019-03-15	Yes
-Days ago: 	3313  	2842  	2246  	 
+16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-07-10	2025-07-21	Yes
+Days ago: 	74  	11  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-8136	1	Candidate	103
+16450	2	Organization	90
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-8136	6 EDU	No	2017-07-27	2025-08-05	active	MT Upload
+16450	6 EDU	No	2025-05-08	2026-05-08	active	Admin Add
 
 Table: user_apps
 ID	App ID	Application
-8136	6	Education
+16450	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-8136	5	BAMmatch	Yes	118
-8136	4	JourneyGuide	Yes	118
-8136	9	Mission Next	Yes	118
-8136	3	Journey	Yes	103
-8136	2	Short-Term	Yes	103
-8136	6	Education	Yes	103
+16450	3	Journey	Yes	90
+16450	5	BAMmatch	Yes	
+16450	9	Mission Next	Yes	
+16450	4	JourneyGuide	Yes	
+16450	10	Canada	Yes	
+16450	6	Education	Yes	90
+16450	2	Short-Term	Yes	
+16450	11	IT-Technology	Yes	
+16450	13	Urbana	Yes	
+16450	14	QuickStart	Yes	
 
 
 

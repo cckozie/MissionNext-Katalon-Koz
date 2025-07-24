@@ -72,7 +72,7 @@ List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
 println(Rows.size())
 
-loopMax = 5
+loopMax = 15
 
 loop = 1
 
@@ -192,6 +192,10 @@ if(row_count > 1) {
 		
 		if(userFound || varType == 'email') {
 		
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/API User Profile/button_Cancel Subscription'),10)
+
+			WebUI.delay(2)
+					
 			WebUI.click(findTestObject('Object Repository/Admin/API User Profile/btn_Full Profile'))
 			
 //			WebUI.delay(5)
@@ -241,9 +245,11 @@ if(row_count > 1) {
 				if(pos >= 0) {
 					myValues = value.split("\12")
 					for(val in myValues) {
+						val = val.replace(',', '*') //some positions contain a comma
 						values.add(val)
 					}
 				} else {
+					value = value.replace(',', '*')
 					values.add(value)
 				}
 			}

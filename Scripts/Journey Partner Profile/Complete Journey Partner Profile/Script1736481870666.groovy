@@ -24,7 +24,7 @@ import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Contact Info', 'Organization Info', 'Service Options', 'Readiness', 'Ministry Prefs', 'IT Positions']
-pages = []
+pages = ['Recruiting Countries']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []

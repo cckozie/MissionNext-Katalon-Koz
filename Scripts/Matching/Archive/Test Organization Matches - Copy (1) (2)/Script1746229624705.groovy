@@ -424,13 +424,13 @@ while (pageCount <= pages) {
 		
 		WebUI.delay(1)
 /*
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/button_Close'), 5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Matching/button_Close'), 5)
 		
-		email = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Email Address'))
+		email = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Email Address'))
 		
-		countryOfCitizenship = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Country of Citizenship'))
+		countryOfCitizenship = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Country of Citizenship'))
 		
-		maritalStatus = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Maritial Status'))
+		maritalStatus = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Maritial Status'))
 		
 		println(email)
 		println(countryOfCitizenship)

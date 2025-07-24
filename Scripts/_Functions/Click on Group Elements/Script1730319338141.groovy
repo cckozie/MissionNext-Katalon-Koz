@@ -25,7 +25,7 @@ import javax.swing.*;
 
 outFile = GlobalVariable.outFile
 
-debug = false	//Print debug info
+debug = true	//Print debug info
 
 toggle = true	//Toggle selected checkboxes if already checked
 
@@ -58,6 +58,8 @@ for(i = 0; i < varXpaths.size(); i++) {
 	
 	element_count = elements.size()
 	
+	if(debug) {println('element_count is ' + elements.size())}
+	
 //	for(element in elements) {
 	elements.each {
 		element = it
@@ -66,9 +68,9 @@ for(i = 0; i < varXpaths.size(); i++) {
 		
 		if(debug) {println('Element label is "' + myValue + '"')}
 		
-		//This processing is necessary because '(!) ' is getting prepended to the value attribute
-		//	if it starts with 'No'
-		if(myValue.length() >= 4) {
+		//This processing is necessary because '(!) ' is getting prepended to the value attribute to designate wildcard response
+
+		if(it != null && myValue.length() >= 4) {
 			
 			if(myValue.substring(0,4) == '(!) ') {
 				

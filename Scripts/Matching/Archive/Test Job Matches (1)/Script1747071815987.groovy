@@ -32,11 +32,17 @@ import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
 
+/*	TO DO:
+ * Need to save list of recruiting countries and verify all listed candidates have Country of Residence matching the list
+ * Remove all commented code
+ * 
+ */
+
 bypass = false
 
 debug = false
 
-pages = 1
+pages = 5
 
 site = 'Journey'
 
@@ -157,7 +163,7 @@ orgTab = WebUI.getWindowIndex()
 
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Jobs List Beta'))
 
-s.wait(imagePath + 'Add Jobs Button.png', 10)
+s.wait(imagePath + 'Add Jobs Button.png', 30)
 
 regButtons = s.find(imagePath + 'Add Jobs Button.png')
 
@@ -169,7 +175,7 @@ if (highlight) {
 
 img = (imagePath + 'Delete X.png')
 
-s.wait(img, 10)
+s.wait(img, 30)
 
 s.click(img)
 
@@ -196,10 +202,11 @@ myY = button.getY()
 println('myY is ' + myY)
 
 job.setY(myY + 2)
+job.setY(myY + 120 + 2)	//Mobilizer job
 
 s.click(job)
 
-s.wait(imagePath + 'Job Close Button', 10)
+s.wait(imagePath + 'Job Close Button', 30)
 
 Robot robot = new Robot()
 
@@ -255,7 +262,7 @@ if (highlight) {
 	myButton.highlight(1)
 }
 
-buttonLoc = new Location(myButton.getX() + 10, myButton.getY() + 10)
+buttonLoc = new Location(myButton.getX() + 10, myButton.getY() + 10 + 120) //mobilizer job
 
 s.click(buttonLoc)
 
@@ -263,7 +270,7 @@ matchTableWindowTitle = WebUI.getWindowTitle()
 
 matchTableURL = WebUI.getUrl()
 
-s.wait(imagePath + 'What Matched.png', 10)
+s.wait(imagePath + 'What Matched.png', 30)
 
 regLastName = s.find(imagePath + 'Last Name.png')
 
@@ -436,7 +443,7 @@ while (pageCount <= pages) {
 	        s.click(name)
 	
 	        if (first) {
-	            s.wait(imagePath + 'Candidate Profile Close Button.png', 10)
+	            s.wait(imagePath + 'Candidate Profile Close Button.png', 30)
 	
 	            closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
 	
@@ -808,6 +815,8 @@ def doMatching(def candidateSelections, def jobSelections) {
     lostPoints = 0.0
 
     categoryMatch = false
+	
+	categoryJobs = [:]
 
     for (def it : matchValues) {
         ifPrint('Testing match values ' + it)
@@ -859,6 +868,12 @@ def doMatching(def candidateSelections, def jobSelections) {
                 outText = ('\nFor ' + myKey)
 
                 outFile.append(outText + '\n')
+				
+				if(myKey == 'Ministry Preferences' && categoryMatch) {
+					
+					jobValues = categoryJobs.get(matchedCategory)
+					
+				}
 
                 outText = ('Job selections = ' + jobValues)
 
@@ -926,6 +941,16 @@ def doMatching(def candidateSelections, def jobSelections) {
 
                             if (category) {
                                 categoryMatch = true
+								
+								if(categoryJobs.size() == 0) {
+								
+									matchedCategory = myKey
+									
+									categoryJobs.put(myKey,jobValues)
+									
+									outFile.append('*** ' + myKey + ':' + jobValues + '\n')
+								
+	                            }
                             }
                         }
                     }
@@ -937,7 +962,19 @@ def doMatching(def candidateSelections, def jobSelections) {
                     outFile.append(outText + '\n')
 
                     if (category) {
+						
                         categoryMatch = true
+						
+						matchedCategory = myKey
+						
+						if(categoryJobs.size() == 0) {
+						
+							matchedCategory = myKey
+							
+							categoryJobs.put(myKey,jobValues)
+							
+							outFile.append('*** ' + myKey + ':' + jobValues + '\n')
+						}
                     }
                 } else {
                     if (matchValue == 5) {

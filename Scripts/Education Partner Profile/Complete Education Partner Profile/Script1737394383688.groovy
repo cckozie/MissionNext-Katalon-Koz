@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
 ///#########################################
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = []
+pages = ['Recruiting Countries']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -240,3 +240,20 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 		('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+if(pages.size() == 0 || 'All' in pages || 'Recruiting Countries' in pages) {
+	if(!GlobalVariable.fastPath) {
+	// Complete the Recruiting Countries tab
+		WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Recruiting Countries'))
+		
+		// Get the recruiting countries from /Users/cckozie/Documents/MissionNext/Education Partner Forms/Recruiting Countries.csv
+		countries = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
+		[('varFileName') : 'Education Partner Forms/Recruiting Countries.csv', ('varSelections') : 'Recruit From Countries'], FailureHandling.STOP_ON_FAILURE)
+	} else {
+		countries = ''
+	}
+	
+	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Recruiting Countries')
+		, [('varRecruit_from_countries') : countries], FailureHandling.CONTINUE_ON_FAILURE)
+}
+	

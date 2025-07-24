@@ -35,6 +35,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
+import java.time.Instant
 
 highlight = false
 
@@ -42,18 +43,18 @@ updateWildcards = false
 
 debug = false
 
-site = 'Education' // Journey or Education
+site = 'Journey' // Journey or Education
 
-radioType = 'Org'	// Org or Job
+matchType = 'Org'	// Org or Job
 
-pages = 1 //How many match table pages to test
+pages = 3 //How many match table pages to test, actual number of pages to process or 'ALL'
 
 if(site == 'Journey') {
 	user = 'Journey Partner 17'
 }
 
 if(site == 'Education') {
-	user = 'Education Partner 06'
+	user = 'Education Partner 16'
 }
 
 new ExecutionProfilesLoader().loadProfile(user)
@@ -103,7 +104,9 @@ if (!(updateWildcards)) {
 	partnerWildcards = evaluate(new File(filePath + site + ' Partner Wildcards.txt'))
 	
 } else {
-    wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+//    wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+	wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site,
+		('varType') : matchType], FailureHandling.STOP_ON_FAILURE)
 
     candidateWildcards = (wildcards[0])
 
@@ -136,7 +139,7 @@ GlobalVariable.outFile = outFile
 
 lastEmailAddress = ''
 
-matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : radioType], 
+matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : matchType], 
     FailureHandling.STOP_ON_FAILURE)
 
 // One tab at this point on ad menu page
@@ -238,7 +241,7 @@ tableTab = (orgTab + 1)
 //WebUI.waitForPageLoad(10)
 img = (imagePath + 'What Matched Edu Table.png')
 
-s.wait(img, 10)
+s.wait(img, 30)
 
 WebUI.delay(1)
 
@@ -263,9 +266,9 @@ if (highlight) {
 }
 
 //This is the spy glass icon lane
-regMatch.setY(178)
+regMatch.setY(165)
 
-regMatch.setH(795)
+regMatch.setH(750)
 
 if(site == 'Journey') {
 
@@ -284,7 +287,12 @@ pageCount = 1
 
 first = true
 
-while (pageCount <= pages) {
+folder = false
+
+done = false
+
+//while (pageCount <= pages || folder) {
+while(!done) {
 	s.hover(regMatch)
 	
     s.wheel(Mouse.WHEEL_UP, wheelCount)
@@ -294,7 +302,7 @@ while (pageCount <= pages) {
     if (highlight) {
 		regMatch.highlight(2)
     }
-    
+	
     icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
 
     iconLocs = [:]
@@ -319,10 +327,11 @@ while (pageCount <= pages) {
             regPct.highlight(1)
         }
         
-        capturedFile = s.capture(regPct).getFile()
+//        capturedFile = s.capture(regPct).getFile()
 
-        tablePct = getRegionText(capturedFile)
-
+//        tablePct = getRegionText(capturedFile)
+		tablePct = getRegionText(regPct)
+/*		
         if (tablePct.length() < 2) {
 			
             tablePct = 0
@@ -336,13 +345,28 @@ while (pageCount <= pages) {
 			
 			tablePct = 0
 		}
-		
+*/		
         print('Table percent match is ' + tablePct)
+		
+		popup = false
+		
+		popupCnt = 0
 
         rg.click()
 
-        //	WebUI.delay(2)
-        s.wait(imagePath + 'What Matched Popup Text.png', 5)
+//        s.wait(imagePath + 'What Matched Popup Text.png', 30)
+		while(!popup) {
+			if(s.exists(imagePath + 'What Matched Popup Text.png',10)) {
+				popup = true
+			} else {
+				popupCnt += 1
+				if(popupCnt > 2) {
+					rg.click()
+					popupCnt = 0
+				}
+				WebUI.delay(1)
+			}
+		}
 
         what = s.find(imagePath + 'What Matched Popup Text.png')
 
@@ -350,8 +374,9 @@ while (pageCount <= pages) {
 
         scrollCount = 0
 
+		s.hover(imagePath + 'What Matched Popup Text.png')
+		
         while (!(s.exists(imagePath + 'Popup Percent Text.png'))) {
-            s.hover(imagePath + 'What Matched Popup Text.png')
 
             s.wheel(Mouse.WHEEL_UP, 2)
 
@@ -375,10 +400,11 @@ while (pageCount <= pages) {
             pct.highlight(1)
         }
         
-        capturedFile = s.capture(pct).getFile()
+//        capturedFile = s.capture(pct).getFile()
 
-        popupPct = getRegionText(capturedFile)
-
+//        popupPct = getRegionText(capturedFile)
+		popupPct = getRegionText(pct)
+		
         print('Popup percent match is ' + popupPct)
 
         if (scrolled) {
@@ -389,28 +415,16 @@ while (pageCount <= pages) {
 
 //        WebUI.delay(1)
 
-        name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
+        name = new Location(regLastName.getX() + 7, regPct.getY() + 5)
 
         s.click(name)
 		
-		WebUI.delay(1)
 /*
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/button_Close'), 5)
-		
-		email = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Email Address'))
-		
-		countryOfCitizenship = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Country of Citizenship'))
-		
-		maritalStatus = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Maritial Status'))
-		
-		println(email)
-		println(countryOfCitizenship)
-		println(maritalStatus)
-*/		
+		WebUI.delay(1)
 		
         if (first) {
 			
-			s.wait(imagePath + 'Candidate Profile Close Button.png',10)
+			s.wait(imagePath + 'Candidate Profile Close Button.png',30)
 			
 			closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
 			
@@ -424,7 +438,7 @@ while (pageCount <= pages) {
 			
         } else {
 			
-			s.wait(imagePath + 'Contact Info.png',10)
+			s.wait(imagePath + 'Contact Info.png',30)
 			
 			s.hover(closeButtonReg)
 			
@@ -471,7 +485,7 @@ while (pageCount <= pages) {
         
         capturedFile = s.capture(regCountry).getFile()
 
-        YourCountryofCitizenship = getRegionText(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', 
+        YourCountryofCitizenship = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', 
             '')
 
         if (YourCountryofCitizenship.contains('UnitedStates')) {
@@ -510,7 +524,7 @@ while (pageCount <= pages) {
         
         capturedFile = s.capture(regMaritalStatus).getFile()
 
-        maritalStatus = getRegionText(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
+        maritalStatus = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
 
 		regEmail = s.find(your_email)
 		
@@ -526,7 +540,7 @@ while (pageCount <= pages) {
         
         capturedFile = s.capture(regEmail).getFile()
 
-        emailAddress = getRegionText(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
+        emailAddress = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
 
         emailAddress = emailAddress.replace(':', '')
 
@@ -535,6 +549,8 @@ while (pageCount <= pages) {
         emailAddress = emailAddress.replace('_', '')
 
         emailAddress = emailAddress.replace(':', '')
+		
+		if(debug) {println('emailAddress is ' + emailAddress)}
 
 		s.click(big_close_button, 5)
 		
@@ -552,6 +568,8 @@ while (pageCount <= pages) {
 			WebUI.switchToWindowIndex(apiTab)
 			
 			candidateSelections = [:]
+			
+			if(debug) {println('Calling Get User Full Profile with email address ' + emailAddress)}
 			
 			candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email',
 				('varEmail') : emailAddress, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
@@ -720,14 +738,147 @@ while (pageCount <= pages) {
 	        }
 	        
 	        WebUI.switchToWindowIndex(tableTab)
-	    }
-	    
-   }
-   
-   pageCount += 1
-   
-   wheelCount = wheelCountMax
 
+	    }
+*/
+		
+		
+		
+		
+		s.wait(imagePath + 'Candidate Profile Close Button.png', 30)
+		
+		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
+			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
+		
+		println(candidateMatchFields)
+
+		println(candidateFieldValues)
+		
+//		System.exit(0)
+
+		firstName = (candidateFieldValues.get('First Name')[0])
+
+		lastName = (candidateFieldValues.get('Last Name')[0])
+
+		maritalStatus = (candidateFieldValues.get('Marital status')[0])
+
+		spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
+
+		outText = (((((' \n\nCandidate profile for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+
+		outFile.append(outText + '\n')
+
+		println(outText)
+
+		candidateFieldValues.each({
+				outText = ((it.key + ':') + it.value)
+
+				outFile.append(outText + '\n')
+
+				println(outText)
+			})
+
+		candidateSelections = [:]
+		
+		if (candidateFieldValues != null) {
+			candidateFieldValues.each({
+					println(it)
+				})
+
+			for (def v : candidateFieldValues) {
+				myKey = v.key
+
+				if (candidateMatchFields.contains(myKey)) {
+					candidateSelections.put(v.key, v.value)
+				}
+			}
+			
+			if ('Married' in candidateFieldValues.get('Marital status')) {
+				married = true
+			} else {
+				married = false
+			}
+			
+			if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
+				spouseServing = true
+			} else {
+				spouseServing = false
+			}
+			
+			firstName = (candidateFieldValues.getAt('First Name')[0])
+
+			lastName = (candidateFieldValues.getAt('Last Name')[0])
+
+			outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
+
+			outFile.append(outText + '\n')
+
+			outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
+
+			resultsFile.append(outText + '\n')
+			
+			candidateText = outText
+
+			if (!(married)) {
+				outText = 'Candidate is not married.'
+			} else {
+				outText = 'Candidate is married and spouse is '
+
+				if (!(spouseServing)) {
+					outText += 'not '
+				}
+				
+				outText += 'serving.'
+			}
+			
+			outFile.append(outText + '\n')
+			
+			maritalStatusText = outText
+/*
+				candidateSelections.each({
+						outText = ((it.key + ':') + it.value)
+						if(it.key != 'Spouse Serving with You?' && it.key != 'Preferences Comment') {
+							outFile.append(outText + '\n')
+						}
+					})
+*/
+			doMatching(candidateSelections, organizationSelections) 
+				
+		}
+		
+		s.click(imagePath + 'Candidate Profile Close Button.png')
+		
+		WebUI.delay(1)
+	}
+//	}
+	pageCount += 1
+	 
+	wheelCount = wheelCountMax
+	
+//	if(pages.isNumber() && pageCount >= pages) {
+	if(pages.getClass() == java.lang.Integer && pageCount >= pages) {
+		 done = true
+		 
+	} else { 
+		
+		if(folder && s.exists(imagePath + 'Set Folders Button.png',1)) {
+			done = true
+		}
+		
+		if(!s.exists(imagePath + 'Red Arrow.png',1) && s.exists(imagePath + 'Set Folders Button.png',1)) {
+			done = true
+		}
+
+		if(s.exists(imagePath + 'Red Arrow.png',1)) {
+			s.click(imagePath + 'Red Arrow.png')
+			folder = true
+			WebUI.delay(1)
+			fldrBtn = s.find(imagePath + 'Opened Folder.png')
+			regMatch.setY(fldrBtn.getY())
+			outText = '\n\n>>>>> Processing Folder Candidates <<<<<\n'
+			outFile.append(outText)
+		}
+	}
 }
 
 def doMatching(def candidateSelections, def organizationSelections) {
@@ -973,7 +1124,7 @@ def getNextLine(def reader, def categories) {
     }
 }
 
-def formatProfile(def file, def categories, def matchFields) {
+def formatProfile(def file, def categories, def matchFields) { //education
     reader = new BufferedReader(new FileReader(file))
 
     selections = [:]
@@ -1078,12 +1229,12 @@ def formatProfile(def file, def categories, def matchFields) {
     }
     
     reader.close()
-
+	println(selections)
 //    return [selections, married, spouseServing, firstName, lastName]
     return [selections, married, spouseServing]
 }
 
-def getRegionText(def imageFile) {
+def getRegionTextI(def imageFile) {		//Get text from image file
     FileUtils.copyFile(new File(imageFile), new File(myImage))
 
     sout = new StringBuffer()
@@ -1095,7 +1246,64 @@ def getRegionText(def imageFile) {
     command.consumeProcessOutput(sout, serr)
 
     command.waitForOrKill(1000)
+	
+	if(debug) {println('serr is ' + serr)}
+
+	if(debug) {println('sout is ' + sout)}
 
     return sout
+}
+
+def getRegionText(def region) {	//Get text from region
+	Screen s = new Screen()
+	
+	myPct = ''
+	
+	loops = 5
+	
+	loop = 0
+	
+	while(myPct == '' && loop < loops) {
+	
+		capturedFile = s.capture(region).getFile()
+			
+		FileUtils.copyFile(new File(capturedFile), new File(myImage))
+	
+		sout = new StringBuffer()
+	
+		serr = new StringBuffer()
+	
+		command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
+	
+		command.consumeProcessOutput(sout, serr)
+	
+		command.waitForOrKill(2000)
+	
+		println('sout is ' + sout)
+	
+		println('serr is ' + serr)
+	
+		String strSout = sout
+		
+		strSout = strSout.replace('%', '')
+		
+		if(strSout.isNumber() && strSout.length() > 0) {
+			pctMatch = strSout
+			break
+		} else {
+			pctMatch = 999
+		}
+		
+		loop++
+		
+		WebUI.delay(1)
+		myInstant = Instant.now()
+		errFile = '/Users/cckozie/Documents/MissionNext/Fail Screenshots/' + myInstant + '.png'
+		FileUtils.copyFile(new File(capturedFile), new File(errFile))
+		
+	}
+
+	if(debug) {println('% match is ' + pctMatch)}
+	return pctMatch
 }
 

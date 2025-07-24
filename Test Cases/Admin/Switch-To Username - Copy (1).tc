@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Switch-To Username - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>16b52a78-6aeb-42fa-a245-5a3f749ab162</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>fb45e11b-08f1-48ee-b55c-a8acf0f98230</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'null'</defaultValue>
+      <description></description>
+      <id>fb45e11b-08f1-48ee-b55c-a8acf0f98230</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

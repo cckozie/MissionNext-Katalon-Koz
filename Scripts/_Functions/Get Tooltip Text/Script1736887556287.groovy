@@ -47,6 +47,10 @@ for(it in tooltips) {
 		xLocation = ttLocation.getX()
 
 		fieldTooltips.put(ttText, yLocation)
+		
+		if(debug) {
+			println(ttText + ':' + yLocation)
+		}
 	}
 }
 
@@ -86,12 +90,13 @@ if (fieldTooltips.size() > 0) {
 			labelLocation = it.getLocation()
 	
 			xLocation = labelLocation.getX()
-	
+			
 			if (xLocation < rightBorder) {
 				yLocation = labelLocation.getY()
 	
 				fieldLabels.put(label, yLocation)
 				labelsY.add(yLocation)
+				myLabel = label
 			}
 		}
 	}
@@ -111,35 +116,40 @@ if (fieldTooltips.size() > 0) {
 	i = 0
 	println('Count is ' + fieldTooltips.size())
 //	fieldTooltips.each{
-	for(it in fieldTooltips) {
-		kY = it.key
-		tY = it.value
-		tYi = tY.toInteger() + 4
-		if(fieldLabels.size() > 1) {
-	//		println('tYi is ' + tYi)
-			lY = labelsY[i+1]
-			lYi = lY.toInteger()
-	//		println('lYi is ' + lYi)
-			while(tYi > lYi) {
-				i = i + 1
-				println('i is ' + i)
-				if(i+1 >= fieldLabels.size()) {
-					break
-				}
+	println(label + ':' + ttText)
+	if(fieldTooltips.size() == 1) {
+		tooltipMap.put(myLabel,ttText)
+	} else {
+		for(it in fieldTooltips) {
+			kY = it.key
+			tY = it.value
+			tYi = tY.toInteger() + 4
+			if(fieldLabels.size() > 1) {
+		//		println('tYi is ' + tYi)
 				lY = labelsY[i+1]
 				lYi = lY.toInteger()
-	//			println('lYi is ' + lYi)
+		//		println('lYi is ' + lYi)
+				while(tYi > lYi) {
+					i = i + 1
+					println('i is ' + i)
+					if(i+1 >= fieldLabels.size()) {
+						break
+					}
+					lY = labelsY[i+1]
+					lYi = lY.toInteger()
+		//			println('lYi is ' + lYi)
+				}
+				lY = labelsY[i]
+				myKey = fieldLabels.find{ it.value == lY }?.key
+			} else {
+				myKey = label
+				lYi = tYi - 4
 			}
-			lY = labelsY[i]
-			myKey = fieldLabels.find{ it.value == lY }?.key
-		} else {
-			myKey = label
-			lYi = tYi - 4
+			if(debug) {	
+				println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
+			}
+			tooltipMap.put(myKey,kY)
 		}
-		if(debug) {	
-			println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
-		}
-		tooltipMap.put(myKey,kY)
 	}
 }
 

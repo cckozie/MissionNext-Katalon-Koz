@@ -22,6 +22,6 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
-test = '7m'
-
-println(!test.isNumber())
+test = 'ab	cde	dbA'
+num = test.count('\t')
+println(num)

@@ -104,11 +104,11 @@ for (row = 2; row < row_count; row++) {
 		
 }
 
-/*
+
 matchValues.each{ 
-        println(it.key + ' = ' + it.value)
+        println(it)
 }
-*/
+
 WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
 
 if(varSite == 'Journey') {	

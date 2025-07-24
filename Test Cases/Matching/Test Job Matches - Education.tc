@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Job Matches</name>
+   <name>Test Job Matches - Education</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>41bbc5a8-cc8e-443f-a46e-119d2731d94a</testCaseGuid>
+   <testCaseGuid>4191f88d-4146-48e7-8386-ec2c8b44c2e2</testCaseGuid>
 </TestCaseEntity>

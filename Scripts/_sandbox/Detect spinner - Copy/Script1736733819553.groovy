@@ -21,9 +21,8 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
-Organization_selections = ['Part Time ~ 20 Hours/Week', 'Full Time']
-Candidate_selections = ['Part Time ~ 10 Hours/Week', 'Full Time']
+//WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'scmnschool', ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'scmnschool', ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
 
-println(Organization_selections.intersect(Candidate_selections))

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Administrator Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8242f85f-1189-4e90-9c3a-17f8b126ad6d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>97414881-d153-483c-9ae0-e8106b39f1ed</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'null'</defaultValue>
+      <description></description>
+      <id>97414881-d153-483c-9ae0-e8106b39f1ed</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

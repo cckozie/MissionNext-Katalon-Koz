@@ -7,7 +7,6 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>dfa06b96-3612-4474-9c3b-6a886db2823d</webElementGuid>
+      <webElementGuid>e40ba288-afb9-4c9e-a96a-7a21f7800fa0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://info.missionnext.org/jobs_list.php?s=3</value>
-      <webElementGuid>9f4d52cf-83a9-401e-a1f3-0dd139390321</webElementGuid>
+      <webElementGuid>75c4a058-4cfa-4c83-9739-85a13efa3425</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +38,7 @@
       <name>title</name>
       <type>Main</type>
       <value>Jobs</value>
-      <webElementGuid>863afa61-99ab-4c94-a0ca-41481f6d3b80</webElementGuid>
+      <webElementGuid>143691c1-73b6-48e6-9656-8aef0539ca66</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>58627814-a815-4da4-bfd8-97d92135282b</webElementGuid>
+      <webElementGuid>dab30a1c-a527-4f21-9c1e-d60dd8dea42c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>class</name>
       <type>Main</type>
       <value>matches</value>
-      <webElementGuid>f969432c-8772-481a-99b7-7a66edcca478</webElementGuid>
+      <webElementGuid>187a8b52-8e9c-4b03-8672-6983b750f329</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +62,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Jobs List Beta</value>
-      <webElementGuid>ca7d44d4-8edd-4f47-bd39-63c303c788bd</webElementGuid>
+      <webElementGuid>b48acbf3-84d9-486a-a06c-9d7ec7c20ab5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[@class=&quot;matches&quot;]</value>
-      <webElementGuid>1b59e9ac-1733-4fe8-b898-08e42b29be8e</webElementGuid>
+      <webElementGuid>38d894d1-73c0-41f3-85c0-9f6e8555e6b1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/div/div/div[2]/a[10]</value>
-      <webElementGuid>aa402476-a869-4cb4-8bd9-783ec38799d1</webElementGuid>
+      <webElementGuid>2d2a6c6e-c64f-47b0-8d85-7f2acc7c1c3e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Jobs List Beta')]</value>
-      <webElementGuid>46a1b0b3-e54d-44c8-a521-752c33a3480e</webElementGuid>
+      <webElementGuid>2efa7559-f199-4ab8-a2dc-69b33b3187de</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +94,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Agency Jobs'])[1]/following::a[1]</value>
-      <webElementGuid>5c717a0d-6146-4399-bcbc-02b14bc87ff1</webElementGuid>
+      <webElementGuid>0e6bd4e2-fc0d-43a5-9603-cda3b6b5d785</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +102,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Favorites'])[1]/following::a[2]</value>
-      <webElementGuid>137c3b76-0626-4bf7-b3f6-0974f8afc284</webElementGuid>
+      <webElementGuid>9c136b99-5590-4417-b28a-e3928de9aa98</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +110,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Inquiry List'])[1]/preceding::a[1]</value>
-      <webElementGuid>e94bfc7b-8ae1-4e9e-9e74-998397d97f78</webElementGuid>
+      <webElementGuid>65cdeaf3-bb06-45e2-a6e5-2445e080372d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +118,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Manage Folders'])[1]/preceding::a[2]</value>
-      <webElementGuid>8dc07a04-eda1-4d28-ac5f-303d1458d0c5</webElementGuid>
+      <webElementGuid>104ed4bc-129c-48c2-872e-46d2c30454d1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +126,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Jobs List Beta']/parent::*</value>
-      <webElementGuid>4be4f5c2-d566-4155-b2a0-37a635b43822</webElementGuid>
+      <webElementGuid>419f9976-13e7-455a-a62b-55470a54cf39</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,7 +134,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://info.missionnext.org/jobs_list.php?s=3')]</value>
-      <webElementGuid>c920ff25-77bb-4d69-868f-fdf90e9becfa</webElementGuid>
+      <webElementGuid>9cafd8c6-514b-4eb0-a16a-bb281ecf8ccc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -143,7 +142,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//a[10]</value>
-      <webElementGuid>f39460d9-ea07-4395-891e-5d364c9c1519</webElementGuid>
+      <webElementGuid>0dc6cb91-1c3f-424f-b57a-026382259209</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -151,6 +150,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://info.missionnext.org/jobs_list.php?s=3' and @title = 'Jobs' and (text() = 'Jobs List Beta' or . = 'Jobs List Beta')]</value>
-      <webElementGuid>65692f49-6ba4-434e-9dc4-e4faee2c3028</webElementGuid>
+      <webElementGuid>fa72d017-cfbc-4330-9828-661d85b6ae72</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

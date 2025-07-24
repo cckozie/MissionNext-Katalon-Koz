@@ -29,13 +29,17 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 //varSite = 'Journey'
 //varSite = 'Education'
-//varSite = 'Job'
+//varType = 'Job'
+//varType = 'Org'
 
-varMap = ['Journey' : ['Journey Candidate Profile', 'Journey Candidate 05', 'Journey Partner 07'],
-	'Education' : ['Education Candidate Profile', 'Education Candidate 04', 'Education Partner 06'],
-	'Job' : ['Journey Partner Profile', 'Journey Candidate 05', 'Journey Partner 07']]	
+varMap = ['Journey_Job' : ['Journey Partner Profile', 'Journey Candidate 05', 'Journey Partner 07', 'a_My Agency Jobs'],
+	'Journey_Org' : ['Journey Candidate Profile', 'Journey Candidate 05', 'Journey Partner 07'],
+	'Education_Job' : ['Education Partner Profile', 'Education Candidate 04', 'Education Partner 06', 'a_My School Jobs'],
+	'Education_Org' : ['Education Candidate Profile', 'Education Candidate 04', 'Education Partner 06']]
 
-varValues = varMap.get(varSite)
+mapKey = varSite + '_' + varType
+
+varValues = varMap.get(mapKey)
 
 for(username in [varValues[1],varValues[2]]) {
 	
@@ -43,19 +47,24 @@ for(username in [varValues[1],varValues[2]]) {
 	
 	WebDriver driver = DriverFactory.getWebDriver()
 	
-	if(username != varValues[2] || varSite != 'Job') {
-	
-		WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Profile'))
+	WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Profile'))
 		
-	} else {
-	
-		WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Agency Jobs'))
+	if(username == varValues[2]) {
 		
-		WebUI.waitForPageLoad(10)
+		if(varType == 'Org') {
 		
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/btn_New Job'))
+			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/a_My Profile'))
+			
+		} else {
+		
+			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/' + varValues[3]))
+			
+			WebUI.waitForPageLoad(10)
+			
+			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Matching/btn_New Job'))
+		}
 	}
-		
+			
 	WebUI.waitForPageLoad(10)
 	
 	WebUI.delay(5)
@@ -187,10 +196,10 @@ if(debug) {
 	println('WCPartners = ' + wcPS)
 }
 
-if(varSite != 'Job') {
+if(varType != 'Job') {
 	outFile = new File(filePath + varSite + ' Partner Wildcards.txt')
 } else {
-	outFile = new File(filePath + varSite + ' Wildcards.txt')
+	outFile = new File(filePath + varSite + ' Job Wildcards.txt')
 }
 outFile.write(wcPS)
 

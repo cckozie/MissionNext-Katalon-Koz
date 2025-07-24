@@ -39,7 +39,7 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Manager/input_Password'
 
 WebUI.click(findTestObject('Object Repository/Manager/input_Log In'))
 
-WebUI.waitForPageLoad(10)
+WebUI.waitForPageLoad(30)
 
 s.hover(imagePath + 'My Sites.png')
 
@@ -58,9 +58,8 @@ WebUI.setText(findTestObject('Object Repository/Manager/input_Search Users'), 'o
 WebUI.click(findTestObject('Object Repository/Manager/input_Search Users Submit'))
 
 WebUI.waitForPageLoad(20)
-//System.exit(0)
 
-WebUI.delay(1)
+s.wait(imagePath + 'office.png', 30)
 
 s.hover(imagePath + 'office.png')
 

@@ -34,48 +34,39 @@ import org.apache.commons.io.FileUtils as FileUtils
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
-highlight = false
+highlight = true
 
 updateWildcards = false	
 
-debug = false
+debug = true
 
-site = 'Education' // Journey or Education
+site = 'Journey' // Journey or Education
 
 radioType = 'Org'	// Org or Job
 
-pages = 1 //How many match table pages to test
+pages = 3 //How many match table pages to test
 
-orgJourneyUsername = 'cktest07jp'
+if(site == 'Journey') {
+	user = 'Journey Partner 17'
+}
 
-orgJourneyPassword = 'e+4GBczmpX6OSkyCMXXwIg=='
+if(site == 'Education') {
+	user = 'Education Partner 06'
+}
 
-orgJourneyEmail = 'cktest07@missionnext.org'
+new ExecutionProfilesLoader().loadProfile(user)
 
-orgEducationUsername = 'cktest06ep'
+orgUsername = GlobalVariable.username
 
-orgEducationPassword = '54sGs6IdgS9Or2VrKr+d9g=='
+orgPassword = GlobalVariable.password
 
-orgEducationEmail = 'cktest06@missionnext.org' //Not used
+orgEmail = GlobalVariable.email
 
 firstName = ''
 
 lastName = ''
-
-if (site == 'Journey') {
-    orgUsername = orgJourneyUsername
-
-    orgPassword = orgJourneyPassword
-
-    orgEmail = orgJourneyEmail
-} else {
-    orgUsername = orgEducationUsername
-
-    orgPassword = orgEducationPassword
-
-    orgEmail = orgEducationEmail
-}
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -247,7 +238,7 @@ tableTab = (orgTab + 1)
 //WebUI.waitForPageLoad(10)
 img = (imagePath + 'What Matched Edu Table.png')
 
-s.wait(img, 10)
+s.wait(img, 30)
 
 WebUI.delay(1)
 
@@ -404,13 +395,13 @@ while (pageCount <= pages) {
 		
 		WebUI.delay(1)
 /*
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/button_Close'), 5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Education Partner Profile/Matching/button_Close'), 5)
 		
-		email = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Email Address'))
+		email = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Email Address'))
 		
-		countryOfCitizenship = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Country of Citizenship'))
+		countryOfCitizenship = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Country of Citizenship'))
 		
-		maritalStatus = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Dashboard/Matching/div_Maritial Status'))
+		maritalStatus = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/div_Maritial Status'))
 		
 		println(email)
 		println(countryOfCitizenship)
@@ -419,7 +410,7 @@ while (pageCount <= pages) {
 		
         if (first) {
 			
-			s.wait(imagePath + 'Candidate Profile Close Button.png',10)
+			s.wait(imagePath + 'Candidate Profile Close Button.png',30)
 			
 			closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
 			
@@ -433,7 +424,7 @@ while (pageCount <= pages) {
 			
         } else {
 			
-			s.wait(imagePath + 'Contact Info.png',10)
+			s.wait(imagePath + 'Contact Info.png',30)
 			
 			s.hover(closeButtonReg)
 			
@@ -544,6 +535,8 @@ while (pageCount <= pages) {
         emailAddress = emailAddress.replace('_', '')
 
         emailAddress = emailAddress.replace(':', '')
+		
+		if(debug) {println('emailAddress is ' + emailAddress)}
 
 		s.click(big_close_button, 5)
 		
@@ -561,6 +554,8 @@ while (pageCount <= pages) {
 			WebUI.switchToWindowIndex(apiTab)
 			
 			candidateSelections = [:]
+			
+			if(debug) {println('Calling Get User Full Profile with email address ' + emailAddress)}
 			
 			candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email',
 				('varEmail') : emailAddress, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
@@ -793,7 +788,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
             println(matchValue)
 
-            if ((matchValue != 5) && !((values[pointValue]).contains('-'))) {
+            if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
                 newPoints = (values[pointValue]).toFloat().round(1)
             } else {
                 newPoints = 0
@@ -1104,6 +1099,10 @@ def getRegionText(def imageFile) {
     command.consumeProcessOutput(sout, serr)
 
     command.waitForOrKill(1000)
+	
+	if(debug) {println('serr is ' + serr)}
+
+	if(debug) {println('sout is ' + sout)}
 
     return sout
 }
