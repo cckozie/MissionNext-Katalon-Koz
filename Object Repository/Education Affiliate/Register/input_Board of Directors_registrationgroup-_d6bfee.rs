@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Partnership Agreement_registrationgro_ccbf5d</name>
+   <name>input_Board of Directors_registrationgroup-_d6bfee</name>
    <tag></tag>
-   <elementGuidId>cc5f52b3-b4e6-436c-9938-5a7c88660aa7</elementGuidId>
+   <elementGuidId>47a40d5c-c4a1-402a-bfbf-828754471c84</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group-1464701251.989_partnership_agreement']</value>
+         <value>//input[@id='registration_group-1464701251.989_board_of_directors']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,102 +22,102 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>237a44b0-ec23-47e7-8ee7-c44eae3918f0</webElementGuid>
+      <webElementGuid>e837a9c4-9b9f-4799-8130-d71163a7a68c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-boolean </value>
-      <webElementGuid>46ede407-1527-44d3-86cf-00a9c27b31c5</webElementGuid>
+      <value>mn-input </value>
+      <webElementGuid>dcaeba74-7ac2-4acb-b88c-ad06316e23d5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>partnership_agreement</value>
-      <webElementGuid>842f6fbf-5883-41c0-836b-b2c0c87de8de</webElementGuid>
+      <value>board_of_directors</value>
+      <webElementGuid>3e709396-1f0c-4ea9-b89e-ce756173eca0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>53</value>
-      <webElementGuid>8f8eb09c-86c9-4eaf-bf84-72ac10e1a2cc</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>registration[group-1464701251.989][partnership_agreement]</value>
-      <webElementGuid>d846977d-6277-4ac8-84a5-55a140834823</webElementGuid>
+      <value>27</value>
+      <webElementGuid>6cf6a09b-4bd4-478a-8398-772f639a6a5f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>registration_group-1464701251.989_partnership_agreement</value>
-      <webElementGuid>cac8ef38-187b-42b5-bdea-116da5477d67</webElementGuid>
+      <value>registration_group-1464701251.989_board_of_directors</value>
+      <webElementGuid>cbcae3e5-6345-4eaf-9ee5-9a70f1692521</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>registration[group-1464701251.989][board_of_directors]</value>
+      <webElementGuid>f4584af1-0af3-4fc4-8ed2-fb517a42f570</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>checkbox</value>
-      <webElementGuid>f5fc231e-3b82-419a-b000-d1db0658df38</webElementGuid>
+      <value>input</value>
+      <webElementGuid>038d1b24-2a4b-47f9-8276-7007b5464c06</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>value</name>
+      <name>data-type</name>
       <type>Main</type>
-      <value>1</value>
-      <webElementGuid>e525e1f2-a3af-4b19-916f-aa43189f18d4</webElementGuid>
+      <value>input</value>
+      <webElementGuid>231bd544-f62b-4e69-8b4c-abad957f155a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_partnership_agreement&quot;)</value>
-      <webElementGuid>eae39524-cfdd-4938-8dce-1838a7e01c4e</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_board_of_directors&quot;)</value>
+      <webElementGuid>dcdcfd94-4d88-4ff0-b896-46929df3469f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group-1464701251.989_partnership_agreement']</value>
-      <webElementGuid>12629439-1558-495f-abc8-05823dae4a99</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_board_of_directors']</value>
+      <webElementGuid>8515b2bb-65b2-4887-b464-b9b464480933</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div[9]/div[3]/input</value>
-      <webElementGuid>9e64e422-a465-4409-9cae-7e2625af88d8</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[6]/div[3]/input</value>
+      <webElementGuid>8ed6911b-cd72-49dc-98ce-5279ce62880f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[9]/div[3]/input</value>
-      <webElementGuid>c13e00db-01b6-49a2-8e71-c6d611d782a2</webElementGuid>
+      <value>//div[6]/div[3]/input</value>
+      <webElementGuid>fe0bf38f-f5f5-4bdd-a334-b67537f91e08</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@name = 'registration[group-1464701251.989][partnership_agreement]' and @id = 'registration_group-1464701251.989_partnership_agreement' and @type = 'checkbox']</value>
-      <webElementGuid>b4b06502-2cdd-4602-9858-259f3d638c30</webElementGuid>
+      <value>//input[@id = 'registration_group-1464701251.989_board_of_directors' and @name = 'registration[group-1464701251.989][board_of_directors]' and @type = 'input']</value>
+      <webElementGuid>cd307622-23c6-405f-9cc3-98723718c8ea</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

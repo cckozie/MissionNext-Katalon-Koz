@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Web Address_registrationgroup-1464701_7a30be</name>
+   <name>input_Partnership Agreement_registrationgro_ccbf5d</name>
    <tag></tag>
-   <elementGuidId>019891ec-7285-4099-a2e2-0c13920286ee</elementGuidId>
+   <elementGuidId>cc5f52b3-b4e6-436c-9938-5a7c88660aa7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group-1464701251.989_web_address']</value>
+         <value>//input[@id='registration_group-1464701251.989_partnership_agreement']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,110 +22,102 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>743ca6c4-1143-457e-8711-4041c4982a2c</webElementGuid>
+      <webElementGuid>237a44b0-ec23-47e7-8ee7-c44eae3918f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-input mn-medium-field</value>
-      <webElementGuid>4f8e2c7e-ca83-4ae6-a4ff-fdc03e31a8f8</webElementGuid>
+      <value>mn-boolean </value>
+      <webElementGuid>46ede407-1527-44d3-86cf-00a9c27b31c5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>web_address</value>
-      <webElementGuid>85dd0d4a-7e7f-422f-8259-12a8a8f8fba6</webElementGuid>
+      <value>partnership_agreement</value>
+      <webElementGuid>842f6fbf-5883-41c0-836b-b2c0c87de8de</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>31</value>
-      <webElementGuid>09770b64-b42b-4ea5-bb17-6c536445c884</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>registration_group-1464701251.989_web_address</value>
-      <webElementGuid>c7b2732b-6a4c-41bb-bff4-aad3d5efad8f</webElementGuid>
+      <value>53</value>
+      <webElementGuid>8f8eb09c-86c9-4eaf-bf84-72ac10e1a2cc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>registration[group-1464701251.989][web_address]</value>
-      <webElementGuid>be3086b1-c48d-4b0d-90a7-abdd18983e0e</webElementGuid>
+      <value>registration[group-1464701251.989][partnership_agreement]</value>
+      <webElementGuid>d846977d-6277-4ac8-84a5-55a140834823</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>registration_group-1464701251.989_partnership_agreement</value>
+      <webElementGuid>cac8ef38-187b-42b5-bdea-116da5477d67</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>04697f03-4809-4930-82dd-0c0266850a79</webElementGuid>
+      <value>checkbox</value>
+      <webElementGuid>f5fc231e-3b82-419a-b000-d1db0658df38</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-type</name>
+      <name>value</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>5e79ff26-ab75-443a-9ca6-57e8bfdb913c</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>placeholder</name>
-      <type>Main</type>
-      <value>https://</value>
-      <webElementGuid>756786a8-9398-4602-a127-f31b7523d1e5</webElementGuid>
+      <value>1</value>
+      <webElementGuid>e525e1f2-a3af-4b19-916f-aa43189f18d4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_web_address&quot;)</value>
-      <webElementGuid>b5c86cd9-b5dd-4048-82eb-ea4abbc783e0</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_partnership_agreement&quot;)</value>
+      <webElementGuid>eae39524-cfdd-4938-8dce-1838a7e01c4e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group-1464701251.989_web_address']</value>
-      <webElementGuid>a75434f4-5af9-4fbc-a90f-158a3a03e74a</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_partnership_agreement']</value>
+      <webElementGuid>12629439-1558-495f-abc8-05823dae4a99</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div[3]/div[2]/input</value>
-      <webElementGuid>4f7012a9-0c08-466d-8302-8bcda5ec1c05</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[9]/div[3]/input</value>
+      <webElementGuid>9e64e422-a465-4409-9cae-7e2625af88d8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div[3]/div[2]/input</value>
-      <webElementGuid>a6ab354a-6ade-4c97-b92f-8f105b4e3b1d</webElementGuid>
+      <value>//div[9]/div[3]/input</value>
+      <webElementGuid>c13e00db-01b6-49a2-8e71-c6d611d782a2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'registration_group-1464701251.989_web_address' and @name = 'registration[group-1464701251.989][web_address]' and @type = 'input' and @placeholder = 'https://']</value>
-      <webElementGuid>a1151c28-c085-4815-8178-7d6e02f12d1b</webElementGuid>
+      <value>//input[@name = 'registration[group-1464701251.989][partnership_agreement]' and @id = 'registration_group-1464701251.989_partnership_agreement' and @type = 'checkbox']</value>
+      <webElementGuid>b4b06502-2cdd-4602-9858-259f3d638c30</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

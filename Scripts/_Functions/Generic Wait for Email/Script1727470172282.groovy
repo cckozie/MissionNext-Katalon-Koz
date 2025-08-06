@@ -61,9 +61,9 @@ if (binding.hasVariable('varSubjectKey')) {
 }
 
 if (binding.hasVariable('varFromKey')) {
-    fromKey = varFromKey
+    fromKey = varFromKey.toLowerCase()
 } else {
-    fromKey = 'Chris.Kosieracki@missionnext.org'
+    fromKey = 'Chris.Kosieracki@missionnext.org'.toLowerCase()
 }
 
 isList = false
@@ -176,6 +176,8 @@ if (messages.length >= msgCount) {
 		println('\n********* Processing email number ' + emailNumber)
 		
         String from = message.getFrom()[0]
+		
+		from = from.toLowerCase()
 
         String subject = message.getSubject()
 
@@ -220,9 +222,9 @@ if (messages.length >= msgCount) {
 
 				println('----- From is:' + from)
 				
-				println('==== fromKey is:' + fromKey[i])
+				println('==== fromKey is:' + fromKey[i].toLowerCase())
 				
-		        fromMatch = from.indexOf(fromKey[i])
+		        fromMatch = from.indexOf(fromKey[i].toLowerCase())
 		
 		        println(fromMatch)
 		

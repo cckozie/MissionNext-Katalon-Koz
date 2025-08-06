@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Terms and Conditions_registrationgrou_fd616e</name>
+   <name>input_Abbreviation_registrationgroup-146470_26a1ce</name>
    <tag></tag>
-   <elementGuidId>a874892c-a5e6-4f31-bbd3-c4d59b4fb6b8</elementGuidId>
+   <elementGuidId>22843744-04ab-4b0f-a660-01a4facad5cd</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group-1464701251.989_agree_with_terms']</value>
+         <value>//input[@id='registration_group-1464701251.989_abbreviation']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,102 +22,102 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>bfd44492-7e13-49ad-96c7-29d2d7074664</webElementGuid>
+      <webElementGuid>0302d7b3-e98b-479a-aece-48811f2afdbf</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-boolean </value>
-      <webElementGuid>5a1f4d52-f5c3-4b8e-ae69-3b49b72daf98</webElementGuid>
+      <value>mn-input </value>
+      <webElementGuid>a7716695-4f71-4660-8ec3-2572bf47e2bb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>agree_with_terms</value>
-      <webElementGuid>696132d1-7bae-4719-bf7d-0fd31ea9cd76</webElementGuid>
+      <value>abbreviation</value>
+      <webElementGuid>be1526a3-fb6d-4af7-89c4-5a722486b9c2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>6</value>
-      <webElementGuid>13338d6b-425e-4037-9bbf-fc1980f83313</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>registration[group-1464701251.989][agree_with_terms]</value>
-      <webElementGuid>d7fa2dfa-4b4c-4212-9a3b-bb54448efbd6</webElementGuid>
+      <value>12</value>
+      <webElementGuid>532b7e3b-e532-4b68-9252-c8fac62d25c5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>registration_group-1464701251.989_agree_with_terms</value>
-      <webElementGuid>4d729b61-4b31-46f0-87ca-cd6bd1893e6d</webElementGuid>
+      <value>registration_group-1464701251.989_abbreviation</value>
+      <webElementGuid>bda877d2-4cd7-44d3-8343-fe1ac8a51289</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>registration[group-1464701251.989][abbreviation]</value>
+      <webElementGuid>f6d93639-b23b-4136-9d24-45b7eb04af7a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>checkbox</value>
-      <webElementGuid>859d90a0-96a0-41c7-972b-261610e08d8f</webElementGuid>
+      <value>input</value>
+      <webElementGuid>023c49d1-3667-4925-80f8-1271d13dc5c4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>value</name>
+      <name>data-type</name>
       <type>Main</type>
-      <value>1</value>
-      <webElementGuid>890f23ac-d75a-4e4b-89cc-75b71f7ad685</webElementGuid>
+      <value>input</value>
+      <webElementGuid>026fb89c-4b82-4c5e-b44e-9a90712d02c1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_agree_with_terms&quot;)</value>
-      <webElementGuid>d991fb2c-d48e-408b-859c-676e389dee0f</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_abbreviation&quot;)</value>
+      <webElementGuid>aae22980-57c5-447e-863d-3cd11a78fe9a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group-1464701251.989_agree_with_terms']</value>
-      <webElementGuid>9d6f43cd-91e7-49fb-9379-56dcbdb02121</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_abbreviation']</value>
+      <webElementGuid>ffd6964b-3c12-4768-8377-841f1bd08baf</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div[10]/div[3]/input</value>
-      <webElementGuid>9560c32b-e413-432f-a8a8-b366805557aa</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[2]/div[2]/input</value>
+      <webElementGuid>43059821-dc69-4e0b-abdf-4494a7a60ba1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[10]/div[3]/input</value>
-      <webElementGuid>acff9b76-559e-4549-b9c7-323b177ba3c1</webElementGuid>
+      <value>//div[4]/div[2]/div[2]/input</value>
+      <webElementGuid>2b7d3500-020d-4e34-8fa5-d83ab7e511f8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@name = 'registration[group-1464701251.989][agree_with_terms]' and @id = 'registration_group-1464701251.989_agree_with_terms' and @type = 'checkbox']</value>
-      <webElementGuid>a6082be1-f3be-43c5-b69b-a041ed982cfd</webElementGuid>
+      <value>//input[@id = 'registration_group-1464701251.989_abbreviation' and @name = 'registration[group-1464701251.989][abbreviation]' and @type = 'input']</value>
+      <webElementGuid>0726f58e-bd31-4667-8044-34a7bd47cd6e</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

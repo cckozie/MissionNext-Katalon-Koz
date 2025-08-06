@@ -24,5 +24,5 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
 //WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'scmnschool', ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'scmnschool', ('varSite') : 'Education'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Education Affiliate 09'], FailureHandling.STOP_ON_FAILURE)
 

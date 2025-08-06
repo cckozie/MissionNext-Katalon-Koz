@@ -24,6 +24,8 @@ if(varProfile != '') {
 	
 	site = varProfile[0..varProfile.indexOf(' ') - 1]
 	
+	println(site)
+	
 	username = GlobalVariable.username
 	
 	password = GlobalVariable.password

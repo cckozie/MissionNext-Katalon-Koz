@@ -42,21 +42,27 @@ home = 'https://missionnext.org/'
 
 // Open browser with extension to exclude analytics
 
-WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('')
 
+WebUI.maximizeWindow()
+
+startPage = 'https://missionnext.org/'
+
+/* - JFrame not working
 // Prompt for start page 
-
 JFrame frame = new JFrame('My First JFrame')
 
 frame.requestFocus()
 
 home = 'https://missionnext.org/'
 
-startPage = JOptionPane.showInputDialog(frame, 'Enter the website where you would like to begin!')
+//startPage = JOptionPane.showInputDialog(frame, 'Enter the website where you would like to begin!')
 
 if (startPage == '') {
 	startPage = home
 }
+*/
 
 // Clear the data tables
 clearTables()

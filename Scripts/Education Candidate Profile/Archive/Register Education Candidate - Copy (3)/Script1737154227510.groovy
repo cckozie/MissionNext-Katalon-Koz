@@ -179,7 +179,7 @@ setText('Education Candidate Profile/Education Register/input_First Name', Globa
 
 setText('Education Candidate Profile/Education Register/input_Last Name', GlobalVariable.last_name)
 
-selectOptionByLabel('Education Candidate Profile/Education Register/select_Country', GlobalVariable.country, false)
+selectOptionByLabel('Education Candidate Profile/Education Register/select_Country', GlobalVariable.zip, false)
 
 setText('Education Candidate Profile/Education Register/input_Best Phone Number', GlobalVariable.phone_number)
 

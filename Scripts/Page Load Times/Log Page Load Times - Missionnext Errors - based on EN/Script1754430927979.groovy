@@ -34,7 +34,7 @@ import org.apache.commons.dbcp2.BasicDataSource as BasicDataSource
 // Never navigate to a page whose url contains a string in the bypass table
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//							Added primary key on en_web_pages because of dupes in en_web_pages_accessed
+//							Added primary key on mn_web_pages because of dupes in mn_web_pages_accessed
 //							Modified to ignore links that include '#' (anchor tag)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // ======== DEFINES ==========
@@ -53,13 +53,13 @@ tStart = new Date()
 
 startTime = new Date().format('yyyy-MM-dd HH:mm:ss')
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Page Load Times - Explorenext Errors ' + tStart.getTime() + '.txt')
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Page Load Times - missionnext Errors ' + tStart.getTime() + '.txt')
 
-outFile.write('Testing Log Page Load Times - Explorenext Errors\'s\n')
+outFile.write('Testing Log Page Load Times - missionnext Errors\'s\n')
 
-badLinkFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Bad Links - Explorenext.txt')
+badLinkFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Bad Links - missionnext.txt')
 
-badLinkFile.write('Testing Log Page Load Times - Explorenext Errors\'s\n')
+badLinkFile.write('Testing Log Page Load Times - missionnext Errors\'s\n')
 
 bypassList = ['plugin', 'wp-content', 'wp-json', 'feed', 'xml', 'jquery', 'wpincludes', 'wp-includes', 'facebook', 'instagram'
     , 'twitter', 'linkedin', 'browsers', '#', 'group']
@@ -67,7 +67,7 @@ bypassList = ['plugin', 'wp-content', 'wp-json', 'feed', 'xml', 'jquery', 'wpinc
 // Clear the data tables
 clearTables()
 
-home = 'https://explorenext.org/'
+home = 'https://missionnext.org/'
 //home = 'https://journey.explorenext.org/'
 
 // Open browser with extension to exclude analytics
@@ -87,7 +87,7 @@ for (def bypass : bypassList) {
 
 valueClause = valueClause.substring(0, valueClause.length() - 1)
 
-sql.executeInsert('INSERT INTO en_web_pages_bypass (string)' + valueClause)
+sql.executeInsert('INSERT INTO mn_web_pages_bypass (string)' + valueClause)
 
 // Call navigate function returning link list
 linkList = navigateToUrl('', startPage)
@@ -137,7 +137,7 @@ while (!(done)) {
 		// Else: link list is empty
 		// If stack is not empty
 		//   Pop link from stack
-		//   Retrive the link list from en_web_page_links
+		//   Retrive the link list from mn_web_page_links
 		// Else: stack is empty
 		//   Set done flag
 
@@ -146,7 +146,7 @@ while (!(done)) {
 				
 			outFile.append('Marking page ' + toUrl + ' as done\n')
 			
-			sql.execute("update en_web_page_links set processed = true where to_url = '" + toUrl + "'")
+			sql.execute("update mn_web_page_links set processed = true where to_url = '" + toUrl + "'")
 			
             fromPage = pageStack.pop()
 			
@@ -164,10 +164,10 @@ while (!(done)) {
 			
 			}
 */
-            sql.eachRow("select to_url from en_web_page_links where processed = false and from_url = '" + fromPage + "'", { def row ->
+            sql.eachRow("select to_url from mn_web_page_links where processed = false and from_url = '" + fromPage + "'", { def row ->
                     linkList.add(row[0])
                 })
-//            links = sql.execute("select to_url from en_web_page_links where from_url = '" + fromPage + "'")
+//            links = sql.execute("select to_url from mn_web_page_links where from_url = '" + fromPage + "'")
 			
 			println(linkList)
 			
@@ -197,7 +197,7 @@ outFile.append('Navigated to ' + pageCount + ' pages.\n')
 // Delete all current rows and then insert all links into temp table
 // If link contians 'missionnext.org' write to error table, if link doesn't contain 'explorenext.org' skip it
 // If we found some valid links
-//insert into en_web_pages_temp (url)
+//insert into mn_web_pages_temp (url)
 //		WebUI.delay(1)
 // Delete all links for pages to disregard; include any links to self and any pages already accessed
 //		WebUI.delay(1)
@@ -225,14 +225,14 @@ def navigateToUrl(def from, def link) {
 	
 	if(pageTitle.contains('Page not found')) {
 		badLinkFile.append("\n'" + link + "' from " + from + " loaded the 'Oops!' page.\n")
-		sql.executeInsert("insert into en_web_page_not_found values('" + from + "', '" + link + "')")
+		sql.executeInsert("insert into mn_web_page_not_found values('" + from + "', '" + link + "')")
 	}
 	
 	noCriticalError = WebUI.verifyTextNotPresent('There has been a critical error on this website.', false, FailureHandling.CONTINUE_ON_FAILURE)
 	
 	if(!noCriticalError) {
 		badLinkFile.append("\n'" + link + "' from " + from + " has a critical error.\n")
-		sql.executeInsert("insert into en_web_page_critical_error values('" + from + "', '" + link + "')")
+		sql.executeInsert("insert into mn_web_page_critical_error values('" + from + "', '" + link + "')")
 	}
 /*
 		 
@@ -285,7 +285,7 @@ def navigateToUrl(def from, def link) {
 		    }
 		    
 		    if (linkList != null) {
-		        sql.execute('delete from en_web_pages_temp')
+		        sql.execute('delete from mn_web_pages_temp')
 		
 		        valueClause = 'values'
 				
@@ -312,22 +312,22 @@ def navigateToUrl(def from, def link) {
 	        pageLinks = []
 	
 	        if (valueClause != 'value') {
-	            sql.executeInsert('insert into en_web_pages_temp (url)' + valueClause)
+	            sql.executeInsert('insert into mn_web_pages_temp (url)' + valueClause)
 	
-	            sql.executeInsert("insert into en_web_page_errors select '" + link + "', url from en_web_pages_temp where url like '%missionnext.org%'")
+	            sql.executeInsert("insert into mn_web_page_errors select '" + link + "', url from mn_web_pages_temp where url like '%missionnext.org%'")
 	
-	//			sql.execute("delete from en_web_pages_temp where url like '%missionnext.org%' or url not like '%explorenext.org%' or url like '%#%'")
-				sql.execute("delete from en_web_pages_temp where url not like '%explorenext.org%'")
+	//			sql.execute("delete from mn_web_pages_temp where url like '%missionnext.org%' or url not like '%missionnext.org%' or url like '%#%'")
+				sql.execute("delete from mn_web_pages_temp where url not like '%missionnext.org%'")
 				
-	            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_pages_bypass b where a.url like \'%\' || b.string || \'%\')')
+	            sql.execute('delete from mn_web_pages_temp a where exists (select 1 from mn_web_pages_bypass b where a.url like \'%\' || b.string || \'%\')')
 	
-	            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_page_links b where a.url = b.from_url or a.url = b.to_url)')
+	            sql.execute('delete from mn_web_pages_temp a where exists (select 1 from mn_web_page_links b where a.url = b.from_url or a.url = b.to_url)')
 	
-	            sql.execute(('delete from en_web_pages_temp a where url = \'' + link) + '\'')
+	            sql.execute(('delete from mn_web_pages_temp a where url = \'' + link) + '\'')
 				
-	            sql.executeInsert("insert into en_web_page_links select '" + link + "', url from en_web_pages_temp")
+	            sql.executeInsert("insert into mn_web_page_links select '" + link + "', url from mn_web_pages_temp")
 				
-	            sql.eachRow('select url from en_web_pages_temp', { def row ->
+	            sql.eachRow('select url from mn_web_pages_temp', { def row ->
 	                    pageLinks.add(row[0])
 	                })
 	        }
@@ -347,7 +347,7 @@ def updateDB(def fromUrl, def myUrl, def where, def duration) {
 
     toWhere = (('WHERE to_url = \'' + myUrl) + '\'')
 
-    sql.query('SELECT COUNT(*) from en_page_load_times ' + toWhere, { def resultSet ->
+    sql.query('SELECT COUNT(*) from mn_page_load_times ' + toWhere, { def resultSet ->
             while (resultSet.next()) {
                 rows = resultSet.getString(1).toInteger()
             }
@@ -360,10 +360,10 @@ def updateDB(def fromUrl, def myUrl, def where, def duration) {
     lastTimeStamp = now
 
     if (rows == 0) {
-        sql.executeInsert('INSERT INTO en_page_load_times VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [fromUrl, myUrl, duration
+        sql.executeInsert('INSERT INTO mn_page_load_times VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [fromUrl, myUrl, duration
                 , duration, duration, 1, now, now, now])
     } else {
-        sql.query('SELECT * from en_page_load_times ' + toWhere, { def resultSet ->
+        sql.query('SELECT * from mn_page_load_times ' + toWhere, { def resultSet ->
                 while (resultSet.next()) {
                     lastFrom = resultSet.getString(1)
 
@@ -403,35 +403,35 @@ def updateDB(def fromUrl, def myUrl, def where, def duration) {
 
         count++
 
-        sql.executeUpdate("UPDATE en_page_load_times SET max_time_from_url = $maxUrl, minimum_time = $min, maximum_time = $max, average_time = $newAvg, test_count = $count,			minimum_timestamp = $minTimeStamp, maximum_timestamp = $maxTimeStamp, last_timestamp = $lastTimeStamp " + 
+        sql.executeUpdate("UPDATE mn_page_load_times SET max_time_from_url = $maxUrl, minimum_time = $min, maximum_time = $max, average_time = $newAvg, test_count = $count,			minimum_timestamp = $minTimeStamp, maximum_timestamp = $maxTimeStamp, last_timestamp = $lastTimeStamp " + 
             toWhere)
     }
     
-    sql.executeInsert('INSERT INTO en_web_pages VALUES (?)', [myUrl])
+    sql.executeInsert('INSERT INTO mn_web_pages VALUES (?)', [myUrl])
 }
 
 def clearTables() {
     println('******************* Clearing tables ***********************')
 
-    sql.execute('DELETE FROM en_web_pages_bypass')
+    sql.execute('DELETE FROM mn_web_pages_bypass')
 
-    sql.execute('DELETE FROM en_web_pages')
+    sql.execute('DELETE FROM mn_web_pages')
 
-    sql.execute('DELETE FROM en_web_page_errors')
+    sql.execute('DELETE FROM mn_web_page_errors')
 
-    sql.execute('DELETE FROM en_web_page_not_found')
+    sql.execute('DELETE FROM mn_web_page_not_found')
 
-    sql.execute('DELETE FROM en_web_page_critical_error')
+    sql.execute('DELETE FROM mn_web_page_critical_error')
 
-    sql.execute('DELETE FROM en_web_page_links')
+    sql.execute('DELETE FROM mn_web_page_links')
 
-    sql.execute('DELETE FROM en_page_load_times')
+    sql.execute('DELETE FROM mn_page_load_times')
 
 //    WebUI.delay(5)
 }
 
 /*
 Started at : 2024-07-11 18:24:13
-2024-07-11 18:26:39.389 DEBUG Log Page Load Times - Explorenext Errors - 25: println("Ended at   : " + stopTime)
+2024-07-11 18:26:39.389 DEBUG Log Page Load Times - missionnext Errors - 25: println("Ended at   : " + stopTime)
 Ended at   : 2024-07-11 18:26:39
 */

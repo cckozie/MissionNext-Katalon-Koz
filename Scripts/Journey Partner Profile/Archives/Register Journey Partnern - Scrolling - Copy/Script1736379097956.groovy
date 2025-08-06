@@ -307,7 +307,7 @@ fieldMessages.each({
 // Enter the remaining fields and submit the form
 WebUI.setEncryptedText(findTestObject('Journey Partner Profile/Register/input_Password'), GlobalVariable.password)
 
-WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Register/input_Organization'), GlobalVariable.organization)
+WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/Register/input_Organization'), GlobalVariable.organization_name)
 
 WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Abbreviation'), GlobalVariable.abbreviation)
 
@@ -325,15 +325,15 @@ WebUI.selectOptionByValue(findTestObject('Journey Partner Profile/Register/selec
 
 WebUI.setText(findTestObject('Journey Partner Profile/Register/textarea_Mailing Address'), GlobalVariable.address)
 
-WebUI.setText(findTestObject('Journey Partner Profile/Register/input_City'), GlobalVariable.city)
+WebUI.setText(findTestObject('Journey Partner Profile/Register/input_City'), GlobalVariable.zip)
 
 WebUI.selectOptionByValue(findTestObject('Journey Partner Profile/Register/select_State'), GlobalVariable.state, false)
 
 WebUI.setText(findTestObject('Journey Partner Profile/Register/input_PostZip Code'), GlobalVariable.zip)
 
-WebUI.selectOptionByValue(findTestObject('Journey Partner Profile/Register/select_Country'), GlobalVariable.country, false)
+WebUI.selectOptionByValue(findTestObject('Journey Partner Profile/Register/select_Country'), GlobalVariable.zip, false)
 
-WebUI.setText(findTestObject('Journey Partner Profile/Register/textarea_Description'), GlobalVariable.description)
+WebUI.setText(findTestObject('Journey Partner Profile/Register/textarea_Description'), GlobalVariable.web_address)
 
 website = 'https://' + GlobalVariable.domain
 
@@ -353,7 +353,7 @@ WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Board of Di
 
 WebUI.setText(findTestObject('Journey Partner Profile/Register/input_Statement of Faith'), GlobalVariable.sof)
 
-WebUI.setText(findTestObject('Journey Partner Profile/Register/textarea_References'), GlobalVariable.references)
+WebUI.setText(findTestObject('Journey Partner Profile/Register/textarea_References'), GlobalVariable.referencess)
 
 WebUI.selectOptionByValue(findTestObject('Journey Partner Profile/Register/select_Referral'), GlobalVariable.hear_about, 
     false)

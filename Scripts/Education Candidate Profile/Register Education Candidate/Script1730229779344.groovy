@@ -175,7 +175,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 's
 
 object = 'Education Candidate Profile/Register/select_Country'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
-	('varObject') : object, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
+	('varObject') : object, ('varParm1') : GlobalVariable.zip], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Best Phone Number'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',

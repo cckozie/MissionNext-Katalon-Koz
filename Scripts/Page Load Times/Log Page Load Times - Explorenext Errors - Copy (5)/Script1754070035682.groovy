@@ -57,10 +57,6 @@ outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Page L
 
 outFile.write('Testing Log Page Load Times - Explorenext Errors\'s\n')
 
-badLinkFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Log Bad Links - Explorenext.txt')
-
-badLinkFile.write('Testing Log Page Load Times - Explorenext Errors\'s\n')
-
 bypassList = ['plugin', 'wp-content', 'wp-json', 'feed', 'xml', 'jquery', 'wpincludes', 'wp-includes', 'facebook', 'instagram'
     , 'twitter', 'linkedin', 'browsers', '#', 'group']
 
@@ -68,7 +64,6 @@ bypassList = ['plugin', 'wp-content', 'wp-json', 'feed', 'xml', 'jquery', 'wpinc
 clearTables()
 
 home = 'https://explorenext.org/'
-//home = 'https://journey.explorenext.org/'
 
 // Open browser with extension to exclude analytics
 //WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
@@ -109,38 +104,28 @@ while (!(done)) {
         linkList.sort()
 
         toUrl = (linkList[0])
-				
-//		nextUrl = toUrl.toLowerCase()
-		
-//		if(!nextUrl.contains('missionnext.')) {
 
+        // Push element to stack
+        pageStack.push(fromPage)
+		outFile.append('Pushing ' + fromPage + '\n')
 
-	        // Push element to stack
-	        pageStack.push(fromPage)
-			outFile.append('Pushing ' + fromPage + '\n')
-	
-	        // Set done flag for element in all pages table
-	        //===========================================================	
-	        // Call navigate function returning link list
-	        lastPage = fromPage
-	
-			outFile.append('Navigating from ' + fromPage + ' to ' + toUrl + '\n')
-	        linkList = navigateToUrl(fromPage, toUrl)
-			pageCount ++
-	
-	        fromPage = toUrl 
-//		} else {
-//			badLinkFile.append("'" + toUrl + "' is a link to MISSIONNEXT from  " + fromPage + ".\n")
-//		}
+        // Set done flag for element in all pages table
+        //===========================================================	
+        // Call navigate function returning link list
+        lastPage = fromPage
 
-    } else {
+		outFile.append('Navigating from ' + fromPage + ' to ' + toUrl + '\n')
+        linkList = navigateToUrl(fromPage, toUrl)
+		pageCount ++
+
+        fromPage = toUrl 
 		// Else: link list is empty
-		// If stack is not empty
-		//   Pop link from stack
-		//   Retrive the link list from en_web_page_links
-		// Else: stack is empty
-		//   Set done flag
-
+        // If stack is not empty 
+        //   Pop link from stack
+        //   Retrive the link list from en_web_page_links
+        // Else: stack is empty
+        //   Set done flag
+    } else {
         if (!(pageStack.isEmpty())) {
 //		if (pageStack.size() > 0) {
 				
@@ -208,134 +193,101 @@ outFile.append('Navigated to ' + pageCount + ' pages.\n')
 // ======== Insert/Update Load Times ==========
 
 def navigateToUrl(def from, def link) {
-	
     println((('>>>>>>>>>>>>>>>> Navigating from ' + from) + ' to  ') + link)
 	
     timeStart = new Date()
 
-//    WebUI.navigateToUrl(link)
-	WebUI.navigateToUrl(link, FailureHandling.CONTINUE_ON_FAILURE)
-	
-	goodLink = WebUI.verifyTextNotPresent('Check if there is a typo', false, FailureHandling.CONTINUE_ON_FAILURE)
-	if(!goodLink) {
-		badLinkFile.append("'" + link + "' from " + from + " is a bad link.\n")
-	}
+    WebUI.navigateToUrl(link)
 
-	pageTitle = WebUI.getWindowTitle()
-	
-	if(pageTitle.contains('Page not found')) {
-		badLinkFile.append("\n'" + link + "' from " + from + " loaded the 'Oops!' page.\n")
-		sql.executeInsert("insert into en_web_page_not_found values('" + from + "', '" + link + "')")
-	}
-	
-	noCriticalError = WebUI.verifyTextNotPresent('There has been a critical error on this website.', false, FailureHandling.CONTINUE_ON_FAILURE)
-	
-	if(!noCriticalError) {
-		badLinkFile.append("\n'" + link + "' from " + from + " has a critical error.\n")
-		sql.executeInsert("insert into en_web_page_critical_error values('" + from + "', '" + link + "')")
-	}
-/*
-		 
-//		WebUI.back()
-		System.exit(0)
-		
-		linkList = []
-		
-	} else {
-*/
-	    timeStop = new Date()
-	
-	    float duration = (timeStop.getTime() - timeStart.getTime()) / 1000
-	
-	    String whereClause = ((('WHERE max_time_from_url = \'' + from) + '\' AND to_url = \'') + link) + '\''
-	
-	    println(whereClause)
-	
-	    updateDB(from, link, whereClause, duration)
-	
-//	    WebUI.navigateToUrl(link)
-		WebUI.navigateToUrl(link, FailureHandling.CONTINUE_ON_FAILURE)
+    timeStop = new Date()
 
+    float duration = (timeStop.getTime() - timeStart.getTime()) / 1000
+
+    String whereClause = ((('WHERE max_time_from_url = \'' + from) + '\' AND to_url = \'') + link) + '\''
+
+    println(whereClause)
+
+    updateDB(from, link, whereClause, duration)
+
+    WebUI.navigateToUrl(link)
+
+    WebUI.delay(1)
+
+    linkList = []
+
+    pageLinks = []
 	
-	    WebUI.delay(1)
+	notBlog = WebUI.verifyTextNotPresent('RECENT POSTS', false, FailureHandling.CONTINUE_ON_FAILURE)
 	
-	    linkList = []
+	if(notBlog) {
+
+	    WebDriver driver = DriverFactory.getWebDriver()
 	
-	    pageLinks = []
-		
-		notBlog = WebUI.verifyTextNotPresent('RECENT POSTS', false, FailureHandling.CONTINUE_ON_FAILURE)
-//		notBlog = WebUI.verifyTextNotPresent('Share on:', false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-//		if(notBlog) {
-		if(notBlog && goodLink) {
-				
-		    WebDriver driver = DriverFactory.getWebDriver()
-		
-		    List<WebElement> linkList = driver.findElements(By.tagName('a'))
-		
-		    if (linkList == null) {
-		        WebUI.delay(2)
-		
-		        WebUI.navigateToUrl(link)
-		
-		        WebUI.delay(2)
-		
-		        linkList = driver.findElements(By.tagName('a'))
-				
-		    }
-		    
-		    if (linkList != null) {
-		        sql.execute('delete from en_web_pages_temp')
-		
-		        valueClause = 'values'
-				
-				elementNo = 0
-				
-				listSize = linkList.size()
-		
-				println(listSize)
-				
-		        for (def lnk : linkList) {
-					elementNo ++
-					try {
-						url = lnk.getAttribute('href')
-		                valueClause = (((valueClause + '(\'') + url) + '\'),')
-					}
-					catch(e) {
-						println('***************** STALE REFERENCE ERROR on link ' + elementNo + ' of ' + listSize + '*****************')
-					}
-	            }
-	        }
-		        
-	        valueClause = valueClause.substring(0, valueClause.length() - 1)
+	    List<WebElement> linkList = driver.findElements(By.tagName('a'))
 	
-	        pageLinks = []
+	    if (linkList == null) {
+	        WebUI.delay(2)
 	
-	        if (valueClause != 'value') {
-	            sql.executeInsert('insert into en_web_pages_temp (url)' + valueClause)
+	        WebUI.navigateToUrl(link)
 	
-	            sql.executeInsert("insert into en_web_page_errors select '" + link + "', url from en_web_pages_temp where url like '%missionnext.org%'")
+	        WebUI.delay(2)
 	
-	//			sql.execute("delete from en_web_pages_temp where url like '%missionnext.org%' or url not like '%explorenext.org%' or url like '%#%'")
-				sql.execute("delete from en_web_pages_temp where url not like '%explorenext.org%'")
-				
-	            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_pages_bypass b where a.url like \'%\' || b.string || \'%\')')
-	
-	            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_page_links b where a.url = b.from_url or a.url = b.to_url)')
-	
-	            sql.execute(('delete from en_web_pages_temp a where url = \'' + link) + '\'')
-				
-	            sql.executeInsert("insert into en_web_page_links select '" + link + "', url from en_web_pages_temp")
-				
-	            sql.eachRow('select url from en_web_pages_temp', { def row ->
-	                    pageLinks.add(row[0])
-	                })
-	        }
-				
-	    } else {
-			println('------------ BLOG PAGE ------------- or BAD LINK')
+	        linkList = driver.findElements(By.tagName('a'))
+			
 	    }
-//	}
+	    
+	    if (linkList != null) {
+	        sql.execute('delete from en_web_pages_temp')
+	
+	        valueClause = 'values'
+			
+			elementNo = 0
+			
+			listSize = linkList.size()
+	
+			println(listSize)
+			
+	        for (def lnk : linkList) {
+				elementNo ++
+				try {
+					url = lnk.getAttribute('href')
+	                valueClause = (((valueClause + '(\'') + url) + '\'),')
+				}
+				catch(e) {
+					println('***************** STALE REFERENCE ERROR on link ' + elementNo + ' of ' + listSize + '*****************')
+				}
+            }
+        }
+	        
+        valueClause = valueClause.substring(0, valueClause.length() - 1)
+
+        pageLinks = []
+
+        if (valueClause != 'value') {
+            sql.executeInsert('insert into en_web_pages_temp (url)' + valueClause)
+
+            sql.executeInsert("insert into en_web_page_errors select '" + link + "', url from en_web_pages_temp where url like '%missionnext.org%'")
+
+//			sql.execute("delete from en_web_pages_temp where url like '%missionnext.org%' or url not like '%explorenext.org%' or url like '%#%'")
+			sql.execute("delete from en_web_pages_temp where url not like '%explorenext.org%'")
+			
+            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_pages_bypass b where a.url like \'%\' || b.string || \'%\')')
+
+            sql.execute('delete from en_web_pages_temp a where exists (select 1 from en_web_page_links b where a.url = b.from_url or a.url = b.to_url)')
+
+            sql.execute(('delete from en_web_pages_temp a where url = \'' + link) + '\'')
+			
+            sql.executeInsert("insert into en_web_page_links select '" + link + "', url from en_web_pages_temp")
+			
+            sql.eachRow('select url from en_web_pages_temp', { def row ->
+                    pageLinks.add(row[0])
+                })
+        }
+			
+    } else {
+		println('------------ BLOG PAGE -------------')
+    }
+	
     
 //    println(pageLinks)
 
@@ -418,10 +370,6 @@ def clearTables() {
     sql.execute('DELETE FROM en_web_pages')
 
     sql.execute('DELETE FROM en_web_page_errors')
-
-    sql.execute('DELETE FROM en_web_page_not_found')
-
-    sql.execute('DELETE FROM en_web_page_critical_error')
 
     sql.execute('DELETE FROM en_web_page_links')
 

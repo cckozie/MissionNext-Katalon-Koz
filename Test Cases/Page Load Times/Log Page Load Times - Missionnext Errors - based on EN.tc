@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Education Affiliate</name>
+   <name>Log Page Load Times - Missionnext Errors - based on EN</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>6ce3b2dd-04e8-4f56-b8b5-26cb6aecc21e</testCaseGuid>
+   <testCaseGuid>121ded66-1cc1-4328-8bfa-4308b9c8ee0d</testCaseGuid>
 </TestCaseEntity>

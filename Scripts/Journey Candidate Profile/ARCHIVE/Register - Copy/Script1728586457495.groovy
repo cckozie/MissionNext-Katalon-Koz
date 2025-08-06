@@ -90,7 +90,7 @@ WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_First Nam
 
 WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Last Name'), GlobalVariable.last_name)
 
-WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Register/select_Country'), GlobalVariable.country, false)
+WebUI.selectOptionByLabel(findTestObject('Journey Candidate Profile/Register/select_Country'), GlobalVariable.zip, false)
 
 WebUI.setText(findTestObject('Journey Candidate Profile/Register/input_Best Phone Number'), GlobalVariable.phone_number)
 

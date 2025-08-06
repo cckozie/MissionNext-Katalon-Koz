@@ -412,15 +412,15 @@ WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Conta
 
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Key Contact Last Name'), GlobalVariable.last_name)
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/input_Organization'), GlobalVariable.organization)
+WebUI.setText(findTestObject('Education Partner Profile/Register/input_Organization'), GlobalVariable.organization_name)
 
 WebUI.setText(findTestObject('Education Partner Profile/Register/input_Abbreviation'), GlobalVariable.abbreviation)
 
 WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_World Region'), GlobalVariable.world_region, false)
 
-WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_Country'), GlobalVariable.country, false)
+WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_Country'), GlobalVariable.zip, false)
 
-WebUI.setText(findTestObject('Education Partner Profile/Register/textarea_Description'), GlobalVariable.description)
+WebUI.setText(findTestObject('Education Partner Profile/Register/textarea_Description'), GlobalVariable.web_address)
 
 website = 'https://' + GlobalVariable.domain
 
@@ -434,7 +434,7 @@ for (def org : orgs) {
 	WebUI.click(findTestObject('Education Partner Profile/Register/' + myObject))
 }
 
-WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_School Qualifications'), GlobalVariable.meet_qualifications, 
+WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_School Qualifications'), GlobalVariable.references, 
     false)
 
 WebUI.selectOptionByValue(findTestObject('Education Partner Profile/Register/select_How did you hear about MissionNext'), 

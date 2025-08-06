@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Organization Full Name_registrationgr_b0384c</name>
+   <name>textarea_References_registrationgroup-14647_9feed9</name>
    <tag></tag>
-   <elementGuidId>ebc2eaee-4fe3-49bc-ad96-1f102aa30994</elementGuidId>
+   <elementGuidId>21cf91e0-de06-4b9e-9e41-f511547aa46b</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group-1464701251.989_agency_full_name']</value>
+         <value>//textarea[@id='registration_group-1464701251.989_references']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,103 +21,95 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>c19a0dbe-69f6-4fd6-83e5-abf4c4f61a87</webElementGuid>
+      <value>textarea</value>
+      <webElementGuid>a2a64d66-e2db-4630-a646-0065694d8a61</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-input mn-medium-field</value>
-      <webElementGuid>4aa31bf8-1aed-4c1c-b0ee-5e9ecd7f96e9</webElementGuid>
+      <value>mn-text mn-medium-field</value>
+      <webElementGuid>050489d6-5a0a-4f02-bf32-3f027be72863</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>agency_full_name</value>
-      <webElementGuid>cf4e52b5-3600-4298-816d-6e9f31dd5b5e</webElementGuid>
+      <value>references</value>
+      <webElementGuid>eb25fadc-5504-49a0-b6a5-93dc4e387016</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>11</value>
-      <webElementGuid>4648a177-597f-4070-a3a8-ad2c6f248a45</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>registration_group-1464701251.989_agency_full_name</value>
-      <webElementGuid>abaee013-3679-4d16-820a-b67a060c4dd6</webElementGuid>
+      <value>29</value>
+      <webElementGuid>1de1bbdd-d92e-41a6-a168-a04f58cdf612</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>registration[group-1464701251.989][agency_full_name]</value>
-      <webElementGuid>7d26a3b3-02ff-4919-b47e-964a61208cc5</webElementGuid>
+      <value>registration[group-1464701251.989][references]</value>
+      <webElementGuid>763e1c5b-1977-42c8-b885-4a04c3dfa95a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>id</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>d7bf4079-0840-4728-9d45-cc27b1f39e25</webElementGuid>
+      <value>registration_group-1464701251.989_references</value>
+      <webElementGuid>202c6233-f144-46c3-a9fc-333ed89aec6a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-type</name>
+      <name>placeholder</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>b825ade7-76bd-4dac-bf32-ab257364eb1a</webElementGuid>
+      <value>References:</value>
+      <webElementGuid>93d6da26-a983-4e0c-9333-d4ceb7cab11f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_agency_full_name&quot;)</value>
-      <webElementGuid>3991a201-016a-4543-bb11-7b0b1838075c</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_references&quot;)</value>
+      <webElementGuid>50b1c907-9734-477d-b870-7cd4040dceab</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group-1464701251.989_agency_full_name']</value>
-      <webElementGuid>64469ecb-2ab6-4f8f-8710-7f2154f35e46</webElementGuid>
+      <value>//textarea[@id='registration_group-1464701251.989_references']</value>
+      <webElementGuid>87ca275c-ec36-4c18-8d0c-1f044711a114</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div/div[2]/input</value>
-      <webElementGuid>22838ed6-f3d0-415e-a7ad-d2539a49d569</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[8]/div[2]/textarea</value>
+      <webElementGuid>5ad8c019-bec9-4e23-b3b4-7a109b0566b9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div/div[2]/input</value>
-      <webElementGuid>e3691f26-e652-45e4-a1ae-2503922d84f9</webElementGuid>
+      <value>//div[8]/div[2]/textarea</value>
+      <webElementGuid>a3e6d292-3e2a-4037-bc4e-10a3e59d95c6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'registration_group-1464701251.989_agency_full_name' and @name = 'registration[group-1464701251.989][agency_full_name]' and @type = 'input']</value>
-      <webElementGuid>21afed58-eca2-42ed-a929-c1fc1e40252a</webElementGuid>
+      <value>//textarea[@name = 'registration[group-1464701251.989][references]' and @id = 'registration_group-1464701251.989_references' and @placeholder = 'References:']</value>
+      <webElementGuid>c7b9e29e-3104-4bda-a855-6c109e0bbd8d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

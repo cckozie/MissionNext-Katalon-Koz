@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Abbreviation_registrationgroup-146470_26a1ce</name>
+   <name>input_Statement of Faith_registrationgroup-_bf62ab</name>
    <tag></tag>
-   <elementGuidId>22843744-04ab-4b0f-a660-01a4facad5cd</elementGuidId>
+   <elementGuidId>d5360456-d7b8-4ab8-aed9-5a77f2d915fb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group-1464701251.989_abbreviation']</value>
+         <value>//input[@id='registration_group-1464701251.989_statement_of_faith']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>0302d7b3-e98b-479a-aece-48811f2afdbf</webElementGuid>
+      <webElementGuid>b1524976-20b7-4870-aa10-a03e7d7cba62</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,39 +30,39 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-input </value>
-      <webElementGuid>a7716695-4f71-4660-8ec3-2572bf47e2bb</webElementGuid>
+      <webElementGuid>5ac19ccd-0518-4243-90ea-0681571cdbc0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>abbreviation</value>
-      <webElementGuid>be1526a3-fb6d-4af7-89c4-5a722486b9c2</webElementGuid>
+      <value>statement_of_faith</value>
+      <webElementGuid>dc8490c2-1dc6-41bd-8874-0669d9e87264</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>12</value>
-      <webElementGuid>532b7e3b-e532-4b68-9252-c8fac62d25c5</webElementGuid>
+      <value>28</value>
+      <webElementGuid>b2bedd72-86c4-41bc-b94b-2a506cf97883</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>registration_group-1464701251.989_abbreviation</value>
-      <webElementGuid>bda877d2-4cd7-44d3-8343-fe1ac8a51289</webElementGuid>
+      <value>registration_group-1464701251.989_statement_of_faith</value>
+      <webElementGuid>1a8a2335-82d5-45db-b947-391ea8681d94</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>registration[group-1464701251.989][abbreviation]</value>
-      <webElementGuid>f6d93639-b23b-4136-9d24-45b7eb04af7a</webElementGuid>
+      <value>registration[group-1464701251.989][statement_of_faith]</value>
+      <webElementGuid>ba51b02f-2797-4d9f-8e2b-43b8ea347914</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>023c49d1-3667-4925-80f8-1271d13dc5c4</webElementGuid>
+      <webElementGuid>dadada30-1f83-46e9-abfc-312dc9ad6fa6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,46 +78,46 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>026fb89c-4b82-4c5e-b44e-9a90712d02c1</webElementGuid>
+      <webElementGuid>ede11ec1-7e81-4093-901e-0951c6ccf284</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_abbreviation&quot;)</value>
-      <webElementGuid>aae22980-57c5-447e-863d-3cd11a78fe9a</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_statement_of_faith&quot;)</value>
+      <webElementGuid>cb6bdc58-9445-4a04-9368-d35329b7d6de</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group-1464701251.989_abbreviation']</value>
-      <webElementGuid>ffd6964b-3c12-4768-8377-841f1bd08baf</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_statement_of_faith']</value>
+      <webElementGuid>fbaf817d-40cd-414a-b3f2-36667f1a0c89</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div[2]/div[2]/input</value>
-      <webElementGuid>43059821-dc69-4e0b-abdf-4494a7a60ba1</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[7]/div[2]/input</value>
+      <webElementGuid>7fefecac-01f5-43a3-800b-e691068f8a28</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div[2]/div[2]/input</value>
-      <webElementGuid>2b7d3500-020d-4e34-8fa5-d83ab7e511f8</webElementGuid>
+      <value>//div[4]/div[7]/div[2]/input</value>
+      <webElementGuid>522a73d2-7d88-43a3-be84-7e93f666b6fa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'registration_group-1464701251.989_abbreviation' and @name = 'registration[group-1464701251.989][abbreviation]' and @type = 'input']</value>
-      <webElementGuid>0726f58e-bd31-4667-8044-34a7bd47cd6e</webElementGuid>
+      <value>//input[@id = 'registration_group-1464701251.989_statement_of_faith' and @name = 'registration[group-1464701251.989][statement_of_faith]' and @type = 'input']</value>
+      <webElementGuid>38058bca-5891-405e-a090-808d71cb8bc0</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

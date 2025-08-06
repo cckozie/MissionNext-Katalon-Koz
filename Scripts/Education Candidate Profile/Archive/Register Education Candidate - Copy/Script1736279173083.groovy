@@ -115,7 +115,7 @@ WebUI.setText(findTestObject('Education Candidate Profile/Register/input_First N
 
 WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Last Name'), GlobalVariable.last_name)
 
-WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Register/select_Country'), GlobalVariable.country, 
+WebUI.selectOptionByLabel(findTestObject('Education Candidate Profile/Register/select_Country'), GlobalVariable.zip, 
     false)
 
 WebUI.setText(findTestObject('Education Candidate Profile/Register/input_Best Phone Number'), GlobalVariable.phone_number)

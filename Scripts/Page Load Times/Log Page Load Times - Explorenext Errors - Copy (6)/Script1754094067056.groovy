@@ -218,21 +218,7 @@ def navigateToUrl(def from, def link) {
 	
 	goodLink = WebUI.verifyTextNotPresent('Check if there is a typo', false, FailureHandling.CONTINUE_ON_FAILURE)
 	if(!goodLink) {
-		badLinkFile.append("'" + link + "' from " + from + " is a bad link.\n")
-	}
-
-	pageTitle = WebUI.getWindowTitle()
-	
-	if(pageTitle.contains('Page not found')) {
-		badLinkFile.append("\n'" + link + "' from " + from + " loaded the 'Oops!' page.\n")
-		sql.executeInsert("insert into en_web_page_not_found values('" + from + "', '" + link + "')")
-	}
-	
-	noCriticalError = WebUI.verifyTextNotPresent('There has been a critical error on this website.', false, FailureHandling.CONTINUE_ON_FAILURE)
-	
-	if(!noCriticalError) {
-		badLinkFile.append("\n'" + link + "' from " + from + " has a critical error.\n")
-		sql.executeInsert("insert into en_web_page_critical_error values('" + from + "', '" + link + "')")
+		badLinkFile.append("'" + link + "' from " + from + " is a bad link .\n")
 	}
 /*
 		 
@@ -418,10 +404,6 @@ def clearTables() {
     sql.execute('DELETE FROM en_web_pages')
 
     sql.execute('DELETE FROM en_web_page_errors')
-
-    sql.execute('DELETE FROM en_web_page_not_found')
-
-    sql.execute('DELETE FROM en_web_page_critical_error')
 
     sql.execute('DELETE FROM en_web_page_links')
 

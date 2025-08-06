@@ -266,7 +266,7 @@ fieldMessages.each({
 // Enter the remaining fields and submit the form
 setEncryptedText('Journey Partner Profile/Register/input_Password', GlobalVariable.password)
 
-setText('Object Repository/Journey Partner Profile/Register/input_Organization', GlobalVariable.organization)
+setText('Object Repository/Journey Partner Profile/Register/input_Organization', GlobalVariable.organization_name)
 
 setText('Journey Partner Profile/Register/input_Abbreviation', GlobalVariable.abbreviation)
 
@@ -284,15 +284,15 @@ selectOptionByValue('Journey Partner Profile/Register/select_Tier Level', Global
 
 setText('Journey Partner Profile/Register/textarea_Mailing Address', GlobalVariable.address)
 
-setText('Journey Partner Profile/Register/input_City', GlobalVariable.city)
+setText('Journey Partner Profile/Register/input_City', GlobalVariable.zip)
 
 selectOptionByValue('Journey Partner Profile/Register/select_State', GlobalVariable.state, false)
 
 setText('Journey Partner Profile/Register/input_PostZip Code', GlobalVariable.zip)
 
-selectOptionByValue('Journey Partner Profile/Register/select_Country', GlobalVariable.country, false)
+selectOptionByValue('Journey Partner Profile/Register/select_Country', GlobalVariable.zip, false)
 
-setText('Journey Partner Profile/Register/textarea_Description', GlobalVariable.description)
+setText('Journey Partner Profile/Register/textarea_Description', GlobalVariable.web_address)
 
 website = ('https://' + GlobalVariable.domain)
 
@@ -312,7 +312,7 @@ setText('Journey Partner Profile/Register/input_Board of Directors', GlobalVaria
 
 setText('Journey Partner Profile/Register/input_Statement of Faith', GlobalVariable.sof)
 
-setText('Journey Partner Profile/Register/textarea_References', GlobalVariable.references)
+setText('Journey Partner Profile/Register/textarea_References', GlobalVariable.referencess)
 
 selectOptionByValue('Journey Partner Profile/Register/select_Referral', GlobalVariable.hear_about, false)
 

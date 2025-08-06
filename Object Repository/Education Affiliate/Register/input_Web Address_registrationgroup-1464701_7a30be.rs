@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>textarea_References_registrationgroup-14647_9feed9</name>
+   <name>input_Web Address_registrationgroup-1464701_7a30be</name>
    <tag></tag>
-   <elementGuidId>21cf91e0-de06-4b9e-9e41-f511547aa46b</elementGuidId>
+   <elementGuidId>019891ec-7285-4099-a2e2-0c13920286ee</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//textarea[@id='registration_group-1464701251.989_references']</value>
+         <value>//input[@id='registration_group-1464701251.989_web_address']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,95 +21,111 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>textarea</value>
-      <webElementGuid>a2a64d66-e2db-4630-a646-0065694d8a61</webElementGuid>
+      <value>input</value>
+      <webElementGuid>743ca6c4-1143-457e-8711-4041c4982a2c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-text mn-medium-field</value>
-      <webElementGuid>050489d6-5a0a-4f02-bf32-3f027be72863</webElementGuid>
+      <value>mn-input mn-medium-field</value>
+      <webElementGuid>4f8e2c7e-ca83-4ae6-a4ff-fdc03e31a8f8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>references</value>
-      <webElementGuid>eb25fadc-5504-49a0-b6a5-93dc4e387016</webElementGuid>
+      <value>web_address</value>
+      <webElementGuid>85dd0d4a-7e7f-422f-8259-12a8a8f8fba6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>29</value>
-      <webElementGuid>1de1bbdd-d92e-41a6-a168-a04f58cdf612</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>name</name>
-      <type>Main</type>
-      <value>registration[group-1464701251.989][references]</value>
-      <webElementGuid>763e1c5b-1977-42c8-b885-4a04c3dfa95a</webElementGuid>
+      <value>31</value>
+      <webElementGuid>09770b64-b42b-4ea5-bb17-6c536445c884</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
-      <value>registration_group-1464701251.989_references</value>
-      <webElementGuid>202c6233-f144-46c3-a9fc-333ed89aec6a</webElementGuid>
+      <value>registration_group-1464701251.989_web_address</value>
+      <webElementGuid>c7b2732b-6a4c-41bb-bff4-aad3d5efad8f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>registration[group-1464701251.989][web_address]</value>
+      <webElementGuid>be3086b1-c48d-4b0d-90a7-abdd18983e0e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>04697f03-4809-4930-82dd-0c0266850a79</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-type</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>5e79ff26-ab75-443a-9ca6-57e8bfdb913c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
-      <value>References:</value>
-      <webElementGuid>93d6da26-a983-4e0c-9333-d4ceb7cab11f</webElementGuid>
+      <value>https://</value>
+      <webElementGuid>756786a8-9398-4602-a127-f31b7523d1e5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group-1464701251.989_references&quot;)</value>
-      <webElementGuid>50b1c907-9734-477d-b870-7cd4040dceab</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_web_address&quot;)</value>
+      <webElementGuid>b5c86cd9-b5dd-4048-82eb-ea4abbc783e0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//textarea[@id='registration_group-1464701251.989_references']</value>
-      <webElementGuid>87ca275c-ec36-4c18-8d0c-1f044711a114</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_web_address']</value>
+      <webElementGuid>a75434f4-5af9-4fbc-a90f-158a3a03e74a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1464701251.989']/div[8]/div[2]/textarea</value>
-      <webElementGuid>5ad8c019-bec9-4e23-b3b4-7a109b0566b9</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[3]/div[2]/input</value>
+      <webElementGuid>4f7012a9-0c08-466d-8302-8bcda5ec1c05</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div[2]/textarea</value>
-      <webElementGuid>a3e6d292-3e2a-4037-bc4e-10a3e59d95c6</webElementGuid>
+      <value>//div[4]/div[3]/div[2]/input</value>
+      <webElementGuid>a6ab354a-6ade-4c97-b92f-8f105b4e3b1d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//textarea[@name = 'registration[group-1464701251.989][references]' and @id = 'registration_group-1464701251.989_references' and @placeholder = 'References:']</value>
-      <webElementGuid>c7b9e29e-3104-4bda-a855-6c109e0bbd8d</webElementGuid>
+      <value>//input[@id = 'registration_group-1464701251.989_web_address' and @name = 'registration[group-1464701251.989][web_address]' and @type = 'input' and @placeholder = 'https://']</value>
+      <webElementGuid>a1151c28-c085-4815-8178-7d6e02f12d1b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

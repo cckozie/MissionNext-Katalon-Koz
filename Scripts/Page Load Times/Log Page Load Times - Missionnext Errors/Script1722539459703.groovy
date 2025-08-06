@@ -70,7 +70,10 @@ clearTables()
 home = 'https://missionnext.org/'
 
 // Open browser with extension to exclude analytics
-WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('_Functions/Open Chrome Browser - No Analytics'), [('dropDownOption') : 'QuickStart'], FailureHandling.STOP_ON_FAILURE)
+WebUI.openBrowser('')
+
+WebUI.maximizeWindow()
 
 startPage = home
 

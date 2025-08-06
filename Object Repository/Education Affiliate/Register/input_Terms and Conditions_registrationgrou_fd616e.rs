@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_PostalZip Code_registrationgroup1srvc_326d84</name>
+   <name>input_Terms and Conditions_registrationgrou_fd616e</name>
    <tag></tag>
-   <elementGuidId>e25b679f-770c-4bf3-b7e3-985393528aaa</elementGuidId>
+   <elementGuidId>a874892c-a5e6-4f31-bbd3-c4d59b4fb6b8</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@id='registration_group1_srvc_agency_postal/zip_code']</value>
+         <value>//input[@id='registration_group-1464701251.989_agree_with_terms']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,102 +22,102 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>225235e8-ba12-40ad-8c7f-0e37d389369a</webElementGuid>
+      <webElementGuid>bfd44492-7e13-49ad-96c7-29d2d7074664</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>mn-input mn-small-field</value>
-      <webElementGuid>4020c227-320e-476e-9647-b8c163052600</webElementGuid>
+      <value>mn-boolean </value>
+      <webElementGuid>5a1f4d52-f5c3-4b8e-ae69-3b49b72daf98</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-key</name>
       <type>Main</type>
-      <value>srvc_agency_postal/zip_code</value>
-      <webElementGuid>155e27fb-ff2b-471d-a071-fca14a757b4c</webElementGuid>
+      <value>agree_with_terms</value>
+      <webElementGuid>696132d1-7bae-4719-bf7d-0fd31ea9cd76</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>data-id</name>
       <type>Main</type>
-      <value>37</value>
-      <webElementGuid>dd575479-b46c-4f0c-8bdd-9bdb0725f396</webElementGuid>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>id</name>
-      <type>Main</type>
-      <value>registration_group1_srvc_agency_postal/zip_code</value>
-      <webElementGuid>1b743d01-5a58-454a-9e6d-268a54656e57</webElementGuid>
+      <value>6</value>
+      <webElementGuid>13338d6b-425e-4037-9bbf-fc1980f83313</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
-      <value>registration[group1][srvc_agency_postal/zip_code]</value>
-      <webElementGuid>5e1bb4d7-9050-4384-a493-14a00d2bbd93</webElementGuid>
+      <value>registration[group-1464701251.989][agree_with_terms]</value>
+      <webElementGuid>d7fa2dfa-4b4c-4212-9a3b-bb54448efbd6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>registration_group-1464701251.989_agree_with_terms</value>
+      <webElementGuid>4d729b61-4b31-46f0-87ca-cd6bd1893e6d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>769b99a4-19a6-4e57-9927-80ce35fe777b</webElementGuid>
+      <value>checkbox</value>
+      <webElementGuid>859d90a0-96a0-41c7-972b-261610e08d8f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-type</name>
+      <name>value</name>
       <type>Main</type>
-      <value>input</value>
-      <webElementGuid>990ee1c6-8e38-44b7-94c4-2e3da3985258</webElementGuid>
+      <value>1</value>
+      <webElementGuid>890f23ac-d75a-4e4b-89cc-75b71f7ad685</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;registration_group1_srvc_agency_postal/zip_code&quot;)</value>
-      <webElementGuid>cfcfc43d-7b3d-436e-a0aa-623200ae17c7</webElementGuid>
+      <value>id(&quot;registration_group-1464701251.989_agree_with_terms&quot;)</value>
+      <webElementGuid>d991fb2c-d48e-408b-859c-676e389dee0f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@id='registration_group1_srvc_agency_postal/zip_code']</value>
-      <webElementGuid>ae6feb85-1861-4265-8d86-1ae031590549</webElementGuid>
+      <value>//input[@id='registration_group-1464701251.989_agree_with_terms']</value>
+      <webElementGuid>9d6f43cd-91e7-49fb-9379-56dcbdb02121</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group1']/div[9]/div[2]/input</value>
-      <webElementGuid>5f17d7f3-d050-46f5-ad67-ac6c97466a4e</webElementGuid>
+      <value>//div[@id='group-1464701251.989']/div[10]/div[3]/input</value>
+      <webElementGuid>9560c32b-e413-432f-a8a8-b366805557aa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[9]/div[2]/input</value>
-      <webElementGuid>dd9cb199-6bd9-4a1b-8d3e-42981c6a9670</webElementGuid>
+      <value>//div[10]/div[3]/input</value>
+      <webElementGuid>acff9b76-559e-4549-b9c7-323b177ba3c1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//input[@id = 'registration_group1_srvc_agency_postal/zip_code' and @name = 'registration[group1][srvc_agency_postal/zip_code]' and @type = 'input']</value>
-      <webElementGuid>240f1cb6-d555-4e0d-bdd5-d14f30227381</webElementGuid>
+      <value>//input[@name = 'registration[group-1464701251.989][agree_with_terms]' and @id = 'registration_group-1464701251.989_agree_with_terms' and @type = 'checkbox']</value>
+      <webElementGuid>a6082be1-f3be-43c5-b69b-a041ed982cfd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

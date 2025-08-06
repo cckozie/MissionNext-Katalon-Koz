@@ -22,6 +22,15 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
 
-test = 'ab	cde	dbA'
-num = test.count('\t')
-println(num)
+username = 'cktest09ea'
+
+emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
+		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+
+if (emailFound) {
+	outText = (('Approval request email for ' + username) + ' was found')
+
+	println(outText)
+} else {
+	println('could not find email')
+}
