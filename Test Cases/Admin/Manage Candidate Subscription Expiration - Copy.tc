@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Manage Candidate Subscription Expiration - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0731843b-5ebe-4601-a6ec-891c1c11f1a1</testCaseGuid>
+</TestCaseEntity>

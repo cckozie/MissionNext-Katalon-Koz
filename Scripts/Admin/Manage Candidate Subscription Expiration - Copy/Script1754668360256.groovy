@@ -23,8 +23,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.io.File as File
 
-printOnly = false
-
+// clicking back 3 times goes back to original page
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
@@ -34,32 +33,15 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
 
-dataFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription List.csv')
+dataFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription Edits.csv')
 
-editsFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription Edits.csv')
+GlobalVariable.outFile = outFile
 
-//GlobalVariable.outFile = outFile
+outFile.write(('Running ' + myTestCase) + '\n\n')
 
-//outFile.write(('Running ' + myTestCase) + '\n\n')
+dataFile.write('line,id,days,last,first,username,last in,expires,change to,apps')
 
-if(!printOnly) {
-	
-	if(!editsFile.isFile()) {
-		editsFile.write('Running ' + myTestCase + '\n\nChanges made to candidate subscription expiration dates.\n\n')
-		
-		editsFile.append('line,id,days,last,first,username,last in,expires,changed to,apps')
-		
-		editsFile.append('\n')
-	} 
-	
-} else {
-	
-	dataFile.write('Running ' + myTestCase + '\n\n')
-	
-	dataFile.append('line,id,days,last,first,username,last in,expires,should be,apps')
-	
-	dataFile.append('\n')
-}
+dataFile.append('\n')
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -89,9 +71,8 @@ println(row_count + ' rows found')
 
 mmdd = '-12-31'
 
-row_count = 30
-
-for (row = 1; row < row_count; row++) {
+//System.exit(0)
+for (row = 2; row < row_count; row++) {
     //for (row = 1; row < 36; row++) {
     List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 
@@ -123,8 +104,8 @@ for (row = 1; row < row_count; row++) {
 
     username = Columns.get(10).getText().trim()
 
-//    println((((((((((((((((lineNum + ', ') + id) + ', ') + days) + ', ') + lastName) + ', ') + username) + ', ') + firstName) + 
-//        ', ') + lastIn) + ', ') + expireDate) + ', ') + myApps)
+    println((((((((((((((((lineNum + ', ') + id) + ', ') + days) + ', ') + lastName) + ', ') + username) + ', ') + firstName) + 
+        ', ') + lastIn) + ', ') + expireDate) + ', ') + myApps)
 
     int loginYear = lastIn as int
 
@@ -134,88 +115,65 @@ for (row = 1; row < row_count; row++) {
 
     md = expireDate.substring(4, 10)
 
-//    println('md is ' + md)
+    println('md is ' + md)
 
     if ((expireYear != endYear) || (md != mmdd)) {
-        
+        //		println('Year should be ' + endYear)
         newDate = (endYear + mmdd)
 
-//        println('Expire date should be ' + newDate)
-		
-		if(!printOnly) {
+        println('Expire date should be ' + newDate)
+    } else {
+        newDate = ''
+    }
+    
+    if (id == '13894') {
+        Columns.get(5).click()
+
+        WebUI.waitForPageLoad(30)
+
+        editXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody'
+
+        WebElement editTable = driver.findElement(By.xpath(editXpath))
+
+        List<WebElement> editRows = editTable.findElements(By.tagName('tr'))
+
+        int edit_row_count = editRows.size()
+
+        println(edit_row_count + ' edit rows found')
+
+        for (editRow = 1; editRow < edit_row_count; editRow++) {
+            List<WebElement> editColumns = editRows.get(editRow).findElements(By.tagName('a'))
+
+            println(editColumns.size() + ' <a> tags found')
+
+            editLink = editColumns.get(0).getAttribute('href')
+
+            println('edit link is ' + editLink)
+
+            editColumns.get(0).click()
+
+            WebUI.delay(1)
+
+            WebUI.setText(findTestObject('Admin/Ad Subscription Utility/input_YYYY-MM-DD_end_date'), newDate)
 			
-	        Columns.get(5).click()
-	
-	        WebUI.waitForPageLoad(30)
-	
-	        editXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody'
-	
-	        WebElement editTable = driver.findElement(By.xpath(editXpath))
-	
-	        List<WebElement> editRows = editTable.findElements(By.tagName('tr'))
-	
-	        int edit_row_count = editRows.size()
-	
-	        println(edit_row_count + ' edit rows found')
-	
-	        for (editRow = 1; editRow < edit_row_count; editRow++) {
-	            List<WebElement> editColumns = editRows.get(editRow).findElements(By.tagName('a'))
-	
-	            println(editColumns.size() + ' <a> tags found')
-	
-	            editLink = editColumns.get(0).getAttribute('href')
-	
-	            println('edit link is ' + editLink)
-	
-	            editColumns.get(0).click()
-	
-	            WebUI.delay(1)
-	
-	            WebUI.setText(findTestObject('Admin/Ad Subscription Utility/input_YYYY-MM-DD_end_date'), newDate)
-				
-				WebUI.delay(5)
-	
-				WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
-	
-	            WebUI.back()
-				
-				WebUI.delay(1)
-				
-	            WebUI.back()
-				
-				WebUI.delay(1)
-	        }
-			
-			editsFile.append(lineNum + ', ' + id + ', ' + days + ', ' + lastName + ', ' + firstName + ', ' + username + ', ' + lastIn + ', ' + expireDate + ', ' + newDate + ', ' + myApps)
-			
-			editsFile.append('\n')
-			
-			WebUI.back()
+			WebUI.delay(5)
+
+			WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
+
+            WebUI.back()
 			
 			WebUI.delay(1)
-
-			WebUI.refresh()
 			
-			WebUI.waitForPageLoad(30)
+            WebUI.back()
 			
-			Table = driver.findElement(By.xpath(myXpath))
-			
-			Rows = Table.findElements(By.tagName('tr'))
-			
-	    }
+			WebUI.delay(1)
+        }
 		
-    } else {
-		newDate = ''
-	}
-	
-	if(printOnly) {
-	
-		dataFile.append(lineNum + ', ' + id + ', ' + days + ', ' + lastName + ', ' + firstName + ', ' + username + ', ' + lastIn + ', ' + expireDate + ', ' + newDate + ', ' + myApps)
-		
-		dataFile.append('\n')
-	} else {
-		
-	}
-
+		System.exit(0)
+    } //	dataFile.append(lineNum + ', ' + id + ', ' + days + ', ' + lastName + ', ' + firstName + ', ' + username + ', ' + lastIn + ', ' + expireDate + ', ' + newDate + ', ' + myApps)
+    //line,id,days,lastName,firstName,lastIn,expireDate,newDate)
+    //	dataFile.append('\n')
+    //	Columns.get(5).click()
+    //	System.exit(0)
 }
 

@@ -44,13 +44,11 @@ editsFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscr
 
 if(!printOnly) {
 	
-	if(!editsFile.isFile()) {
-		editsFile.write('Running ' + myTestCase + '\n\nChanges made to candidate subscription expiration dates.\n\n')
-		
-		editsFile.append('line,id,days,last,first,username,last in,expires,changed to,apps')
-		
-		editsFile.append('\n')
-	} 
+	editsFile.write('Running ' + myTestCase + '\n\nChanges made to candidate subscription expiration dates.\n\n')
+	
+	editsFile.append('line,id,days,last,first,username,last in,expires,changed to,apps')
+	
+	editsFile.append('\n')
 	
 } else {
 	
@@ -89,7 +87,7 @@ println(row_count + ' rows found')
 
 mmdd = '-12-31'
 
-row_count = 30
+row_count = 14
 
 for (row = 1; row < row_count; row++) {
     //for (row = 1; row < 36; row++) {
@@ -197,10 +195,6 @@ for (row = 1; row < row_count; row++) {
 			WebUI.refresh()
 			
 			WebUI.waitForPageLoad(30)
-			
-			Table = driver.findElement(By.xpath(myXpath))
-			
-			Rows = Table.findElements(By.tagName('tr'))
 			
 	    }
 		
