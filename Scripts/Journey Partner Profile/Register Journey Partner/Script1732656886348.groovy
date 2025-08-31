@@ -36,7 +36,7 @@ if(username[-3..-1] != '7jp') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
 }
@@ -232,7 +232,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Object Repository/Journey Partner Profile/Register/input_Organization'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.organization_name],
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.organization],
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/input_Abbreviation'
@@ -268,7 +268,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/input_City'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.zip],
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.city],
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/select_State'
@@ -281,10 +281,10 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 
 object = 'Journey Partner Profile/Register/select_Country'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
-	, ('varParm1') : GlobalVariable.zip], FailureHandling.STOP_ON_FAILURE)
+	, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/textarea_Description'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.web_address],
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.website],
 	FailureHandling.STOP_ON_FAILURE)
 
 website = ('https://' + GlobalVariable.domain)
@@ -313,7 +313,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/textarea_References'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.referencess],
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.references],
 	FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/select_Referral'

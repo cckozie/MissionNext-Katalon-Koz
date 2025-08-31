@@ -35,6 +35,10 @@ if(index < 0) {
 
 WebUI.navigateToUrl('https://missionnext.org/managerlogin/')
 
+WebUI.waitForPageLoad(20)
+
+WebUI.delay(2)
+
 WebUI.setText(findTestObject('Object Repository/Manager/input_Username or Email Address'), 'chriskosieracki')
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Manager/input_Password'), 'xPc6erizqpZS5RHkbVxVdKyWkQxV4SRKassnbXTAWhQ=')

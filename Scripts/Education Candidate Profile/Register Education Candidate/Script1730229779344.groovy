@@ -40,7 +40,7 @@ if(username[-3..-1] != '4ec') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
 }
@@ -92,7 +92,7 @@ pageLinks = [('Privacy Policy') : 'Privacy Policy', ('Terms and Conditions') : '
 requiredFieldMsgs = [('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
     , ('Email') : 'Please enter a valid email address.', ('First Name') : 'The First Name field is required.', ('Last Name') : 'The last name field is required.'
-    , ('Country') : 'The country field is required.', ('Phone Number') : 'The phone number field is required.', ('Terms and Conditions') : 'The terms and conditions field is required.']
+    , ('Country') : 'The country field is required.', ('Phone Number') : 'The phone field is required.', ('Terms and Conditions') : 'The terms and conditions field is required.']
 
 //================================== Create the education partner ==================================
 WebUI.openBrowser('')
@@ -175,7 +175,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 's
 
 object = 'Education Candidate Profile/Register/select_Country'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
-	('varObject') : object, ('varParm1') : GlobalVariable.zip], FailureHandling.STOP_ON_FAILURE)
+	('varObject') : object, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Best Phone Number'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',

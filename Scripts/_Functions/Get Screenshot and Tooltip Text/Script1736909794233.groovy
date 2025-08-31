@@ -87,23 +87,27 @@ fileImage = (fileBase + '_Screenshot.png')
 WebUI.waitForPageLoad(30)
 
 //Wait for the spinner to disappear (this test is not 100% effective. Moves on after 2 seconds if it can't determine the spinner stopped
-spinner = driver.findElement(By.xpath('/html/body/div[1]/div/div[2]'))
+try {
+	spinner = driver.findElement(By.xpath('/html/body/div[1]/div/div[2]'))
 
-JavascriptExecutor executor = (JavascriptExecutor) driver;
-
-elementAttributes = executor.executeScript('var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; return items;', 
-    spinner)
-
-attrs = elementAttributes.toString()
-
-waits = 0
-
-while ((attrs.indexOf('display: none') < 0) && (waits < 2)) {
-    WebUI.delay(1)
-
-    attrs = elementAttributes.toString()
-
-    waits++
+	JavascriptExecutor executor = (JavascriptExecutor) driver;
+	
+	elementAttributes = executor.executeScript('var items = {}; for (index = 0; index < arguments[0].attributes.length; ++index) { items[arguments[0].attributes[index].name] = arguments[0].attributes[index].value }; return items;', 
+	    spinner)
+	
+	attrs = elementAttributes.toString()
+	
+	waits = 0
+	
+	while ((attrs.indexOf('display: none') < 0) && (waits < 2)) {
+	    WebUI.delay(1)
+	
+	    attrs = elementAttributes.toString()
+	
+	    waits++
+	}
+} catch (e1) {
+	WebUI.delay(2)
 }
 
 // Get the tooltip fields and text

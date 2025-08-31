@@ -154,4 +154,9 @@
       <initValue>[]</initValue>
       <name>ministriesList</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>true</initValue>
+      <name>allow_delete</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

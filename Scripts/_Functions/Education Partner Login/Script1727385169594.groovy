@@ -20,12 +20,13 @@ import org.openqa.selenium.Keys as Keys
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
+/*
 if(username[-3..-1] != '6ep') {
 	println('The Execution Profile must be set to "Education Partner"')
 
 	System.exit(0)
 }
-
+*/
 WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
