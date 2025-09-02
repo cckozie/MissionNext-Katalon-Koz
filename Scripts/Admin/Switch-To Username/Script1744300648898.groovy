@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
 
-//varUsername = 'mytnschools'
+varUsername = 'cktest05jc'
 
 Screen s = new Screen()
 

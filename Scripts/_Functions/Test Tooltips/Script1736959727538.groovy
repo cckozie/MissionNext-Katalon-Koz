@@ -209,38 +209,47 @@ for (def it : tooltipText) {
 
 def scrollToObject(def object) {
     println(('Converting ' + object) + ' to web element')
-
-    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-
-    loc = element.getLocation()
 	
-	x = loc.getX()
-	
-	if(x >= 560) {
-		outText = '####### ERROR: The tooltip for ' + myKey + ' is not positioned near its label.'
-	
-		println(outText)
+	try {
 
-		outFile.append(outText + '\n')
-		KeywordUtil.markError(outText)
+	    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+	
+	    loc = element.getLocation()
 		
+		x = loc.getX()
+		
+		if(x >= 560) {
+			outText = '####### ERROR: The tooltip for ' + myKey + ' is not positioned near its label.'
+		
+			println(outText)
+	
+			outFile.append(outText + '\n')
+			KeywordUtil.markError(outText)
+			
+		}
+	
+	    y = loc.getY()
+	
+	    println('Y location is ' + y)
+	
+	    top = WebUI.getViewportTopPosition()
+	
+	    println('Viewport top is ' + top)
+	
+	    bottom = (top + 600)
+	
+	    if (((y - top) < 150) || ((bottom - y) < 10)) {
+	        WebUI.scrollToPosition(0, y - 170)  //// THIS NUMBER (170) IS FOR TOOLTIP SCROLLING ONLY. OTHERS USE 150.
+	
+	        WebUI.delay(1)
+	    }
+	} catch (Exception e) { 
+		outText = '####### ERROR: Unable to find tooltip "' + object + '"'
+		
+		println(outText)
+		
+		outFile.append(outText + '\n')
 	}
-
-    y = loc.getY()
-
-    println('Y location is ' + y)
-
-    top = WebUI.getViewportTopPosition()
-
-    println('Viewport top is ' + top)
-
-    bottom = (top + 600)
-
-    if (((y - top) < 150) || ((bottom - y) < 10)) {
-        WebUI.scrollToPosition(0, y - 170)  //// THIS NUMBER (170) IS FOR TOOLTIP SCROLLING ONLY. OTHERS USE 150.
-
-        WebUI.delay(1)
-    }
 }
 
 def click(def object) {

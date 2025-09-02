@@ -39,7 +39,7 @@ if(username[-3..-1] != '5jc') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
@@ -48,6 +48,11 @@ if(GlobalVariable.testSuiteRunning) {
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+suffix = '-Register Only'
+if(!registerOnly) {
+	suffix = '-Full Profile'
+}
+
 GlobalVariable.screenshotOnly = false
 
 domain = GlobalVariable.domain
@@ -57,8 +62,7 @@ username = GlobalVariable.username
 url = (('https://journey.' + domain) + '/signup/candidate')
 
 // Write results to text file
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain) + 
-'.txt')
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Candidate on ' + domain + suffix + '.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -230,6 +234,8 @@ object = 'Object Repository/Journey Candidate Profile/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
+	WebUI.delay(5)
+	
     pages = WebUI.callTestCase(findTestCase('Journey Candidate Profile/Complete Journey Candidate Profile'), [('varCalled') : true], 
         FailureHandling.CONTINUE_ON_FAILURE)
 	
@@ -260,7 +266,16 @@ if (!(registerOnly)) {
 
 		}
 	}
+} else {
+	success = WebUI.verifyTextPresent('Complete your profile by answering required questions on each tab', false)
+	
+	if (success) {
+		outText = '\n+++ Education candidate registration successful. Profile tabs page was found.\n'
+		
+		outFile.append(outText)
+	}
 }
+
 
 //WebUI.closeBrowser()
 

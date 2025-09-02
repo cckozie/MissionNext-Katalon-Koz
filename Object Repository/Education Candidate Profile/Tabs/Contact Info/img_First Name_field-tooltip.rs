@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='group-1443546232.861']/div/div[2]/img</value>
+         <value>//*[@id=&quot;group-1443546232.861&quot;]/div[1]/div[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>f63e33ae-7964-4723-a399-9129c3c12851</webElementGuid>
+      <webElementGuid>01d9c6fe-8653-4d7f-9e06-ea50829980f7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>a49589d8-9e0b-461d-a0ed-10adf26c637f</webElementGuid>
+      <webElementGuid>9511295a-ca18-48c4-8749-dcf5223a3e88</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>a1986c02-0c3a-4f6d-b1e7-29b99157d3ad</webElementGuid>
+      <webElementGuid>61a9e37d-1848-42f1-ad19-2f146dba6d43</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>28d3148d-007e-4841-a65c-f1e2509f3004</webElementGuid>
+      <webElementGuid>c57e1d59-fdbc-4dae-8078-a51435a15e31</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>May include your middle initial; enter last name below.</value>
-      <webElementGuid>4d02efe1-828e-4d4b-8eec-120721903d19</webElementGuid>
+      <webElementGuid>250cd158-9c44-4e92-9723-6ebeeae95924</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1443546232.861&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>b16ee6ac-1628-4092-9c85-817f7b216b27</webElementGuid>
+      <webElementGuid>86289c3a-30ed-4967-831e-0fe67c75d47e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1443546232.861']/div/div[2]/img</value>
-      <webElementGuid>a6589788-5755-489c-b004-9b7cf030c394</webElementGuid>
+      <webElementGuid>bb01cd70-229e-4406-8157-048ab3ccb2ac</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[@alt='tooltip']</value>
-      <webElementGuid>9dc4b702-b3d6-439c-9a0c-f40957e43035</webElementGuid>
+      <webElementGuid>d08fbbfa-aa97-4c2a-914c-f8107942dca7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/div[2]/img</value>
-      <webElementGuid>7c1e5e08-9060-4c35-9f02-8ccd3828c016</webElementGuid>
+      <webElementGuid>7068c03c-9c64-45f6-9744-53dd8964f3e1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>61f44d82-1bf7-4bc2-8a66-748af782bd8e</webElementGuid>
+      <webElementGuid>89fd154f-dd7d-4510-942b-d8bdb9f87e7b</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

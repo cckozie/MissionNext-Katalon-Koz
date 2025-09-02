@@ -91,7 +91,7 @@ tooltipText = [
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
-('Mission Experience') : 'The missions exposure field is required.']
+('Mission Experience') : 'The missions experience field is required.']
 //('Affiliated with a Church') : 'The affiliated with church field is required.'] //Message disappears after Submit button clicked
 
 //Go to the Situation tab

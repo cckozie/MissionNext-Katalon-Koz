@@ -41,6 +41,12 @@ if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
 }
 //######################################################################################################
+
+suffix = '-Register Only'
+if(!registerOnly) {
+	suffix = '-Full Profile'
+}
+
 //================================== Initialize ===============================================
 // Get the domain and set the url
 
@@ -51,7 +57,7 @@ username = GlobalVariable.username
 url = (('https://journey.' + domain) + '/signup/organization')
 
 // Write results to text file
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Partner on ' + domain) + '.txt')
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Partner on ' + domain + suffix + '.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -284,7 +290,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 	, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Journey Partner Profile/Register/textarea_Description'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.website],
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.description],
 	FailureHandling.STOP_ON_FAILURE)
 
 website = ('https://' + GlobalVariable.domain)

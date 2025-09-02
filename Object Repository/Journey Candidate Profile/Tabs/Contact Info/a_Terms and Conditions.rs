@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='group-1444754265.711']/div[17]/div[4]/a</value>
+         <value>//div[@id='group-1444754265.711']/div[18]/div[4]/a</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>bcc118ec-2b8f-4fee-85ab-c60e3c49ee49</webElementGuid>
+      <webElementGuid>cf14c05a-f4f1-4327-b1ab-e419f4c52591</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionnext.org/terms/</value>
-      <webElementGuid>00be0187-91e6-4b09-8186-a6b9cfac0915</webElementGuid>
+      <webElementGuid>2aaa349e-5499-4fe2-af3c-8bafab5ed246</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>79683d0e-ec7d-43ac-b79d-c3fe2503619e</webElementGuid>
+      <webElementGuid>48d22783-6c4b-4e12-8c8e-c039d518ea44</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Terms and Conditions</value>
-      <webElementGuid>a3564fa3-0210-4e20-abda-2b1fa4e8d5af</webElementGuid>
+      <webElementGuid>4c5bf46c-1398-4e91-b4ad-cafeb6b6967a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,15 +55,15 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1444754265.711&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
-      <webElementGuid>8a0eb5ce-94e6-4278-971e-4db925577bbc</webElementGuid>
+      <webElementGuid>021519bc-714c-45f9-b052-f762573f40c9</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1444754265.711']/div[17]/div[4]/a</value>
-      <webElementGuid>8dbb27f4-a5cc-4ef5-8059-1c17a97b795b</webElementGuid>
+      <value>//div[@id='group-1444754265.711']/div[18]/div[4]/a</value>
+      <webElementGuid>f49930ff-af5d-47be-b13a-81981c1ffbf1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Terms and Conditions')]</value>
-      <webElementGuid>ba25a2ca-db67-4a5c-838e-143435e9ea4c</webElementGuid>
+      <webElementGuid>7c9caf59-18ee-4310-99ab-ad8238189139</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Terms and Conditions*'])[1]/following::a[1]</value>
-      <webElementGuid>cb5b8f2c-83c1-4578-b78a-bef10d37f8ba</webElementGuid>
+      <webElementGuid>293e2f8d-5c09-4398-9252-e0bfae113416</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Highest Earned Degree'])[1]/preceding::a[1]</value>
-      <webElementGuid>0484cfab-36db-471b-95fb-393feee391a6</webElementGuid>
+      <webElementGuid>c8943e5b-b8e4-4c3e-8c14-f0cf3e908667</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Degree Field'])[1]/preceding::a[1]</value>
-      <webElementGuid>2e8c1e97-a36e-4489-88bf-7520ab7a34f5</webElementGuid>
+      <webElementGuid>7bd0d3d0-4020-458c-8515-149f38bd48b8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionnext.org/terms/')]</value>
-      <webElementGuid>9f4bc7b7-108c-4672-94f0-2b6ef5bce088</webElementGuid>
+      <webElementGuid>c7e1fee0-7527-4033-b066-5e2d26e5a381</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/a</value>
-      <webElementGuid>d6acb830-6535-4231-bdf9-cf578395f3a4</webElementGuid>
+      <webElementGuid>a983c4de-07b1-441a-9da4-1e7ba646fce8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +119,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionnext.org/terms/' and (text() = 'Terms and Conditions' or . = 'Terms and Conditions')]</value>
-      <webElementGuid>78df4a4c-2d1b-45b7-bc80-efca3c85ecf3</webElementGuid>
+      <webElementGuid>cb6f3b9e-d0ca-4d09-a16a-b29f26c70f3c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

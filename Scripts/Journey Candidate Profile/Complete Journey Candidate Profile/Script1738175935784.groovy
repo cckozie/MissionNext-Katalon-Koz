@@ -20,7 +20,9 @@ import javax.swing.*;
 
 
 // Set to page(s) to run, or empty or 'All' to run all pages
+//pages = ['Experience','IT Skills and Interest']
 pages = []
+
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []

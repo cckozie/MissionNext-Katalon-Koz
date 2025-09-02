@@ -66,7 +66,7 @@ tooltips = [
 tooltipText = [('Life Experience') : 'May include your testimony or other experience you wish to share.']
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = [('Life Experience') : 'The missions exposure field is required.']
+requiredFieldMsgs = [('Life Experience') : 'The missions experience field is required.']
 	
 //Go to the Experience tab
 WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))

@@ -40,7 +40,7 @@ if(username[-3..-1] != '4ec') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false
 }
@@ -50,6 +50,12 @@ if(GlobalVariable.testSuiteRunning) {
 //  Consider using a called script to test all tooltips.
 //  Write all failures to the output file
 ///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+suffix = '-Register Only'
+if(!registerOnly) {
+	suffix = '-Full Profile'
+}
+
 domain = GlobalVariable.domain
 
 username = GlobalVariable.username
@@ -57,8 +63,7 @@ username = GlobalVariable.username
 url = (('https://education.' + domain) + '/signup/candidate')
 
 // Write results to text file
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain) + 
-'.txt')
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain + suffix + '.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -229,6 +234,8 @@ object = 'Object Repository/Education Candidate Profile/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
+	WebUI.delay(5)
+	
     pages = WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
         FailureHandling.STOP_ON_FAILURE)
 
@@ -260,6 +267,14 @@ if (!(registerOnly)) {
 			outFile.append(outText)
 		}
 	}	
+} else {
+	success = WebUI.verifyTextPresent('Complete your profile by answering required questions on each tab', false)
+	
+	if (success) {
+		outText = '\n+++ Education candidate registration successful. Profile tabs page was found.\n'
+		
+		outFile.append(outText)
+	}
 }
 
 //WebUI.closeBrowser()
