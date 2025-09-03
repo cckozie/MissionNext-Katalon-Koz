@@ -46,7 +46,7 @@ highlight = false
 
 updateWildcards = false
 
-pages = 2
+pages = GlobalVariable.matchPages
 
 site = 'Education'
 
@@ -532,11 +532,14 @@ allWindows = driver.getWindowHandles()
 
 driver.switchTo().window(allWindows[1])
 
-// Log out of office
-WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+if(user != 'cktest16ep') {
+	// Log out of office
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+}
 
-WebUI.closeBrowser( ////// FUNCTIONS
-    )
+WebUI.closeBrowser()
+
+WebUI.delay(5) //In case running as test suite
 
 def ifPrint(def msg) {
     if (debug) {

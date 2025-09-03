@@ -73,7 +73,7 @@ tooltipText = [
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
-('Organization Phone') : 'The agency phone field is required.']
+('Organization Phone') : 'The phone field is required.']
 
 // Define the page's links and the text to search for on the linked page
 pageLinks = [:]
@@ -84,6 +84,16 @@ WebUI.click(findTestObject('Journey Partner Profile/Tabs/a_Contact Info'))
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

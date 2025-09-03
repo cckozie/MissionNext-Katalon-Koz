@@ -41,15 +41,15 @@ lastY = -100
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varPaid_volunteer_positions, varProfile_years]
+parms = [varProfile_years]
 
 //xpath of the Paid & Volunteer Positions group
-paid_volunteer_position = "//input[@id='profile_group-1446521957.744_financial_support']"
+//paid_volunteer_position = "//input[@id='profile_group-1446521957.744_financial_support']"
 
 //xpath of Profile Years group
 profile_years = "//input[@id='profile_group-1446521957.744_profile_years']"
 
-xpaths = [paid_volunteer_position, profile_years]
+xpaths = [profile_years]
 
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Define path to tooltip text images
@@ -63,18 +63,18 @@ testObjectFolder = 'Journey Partner Profile/Tabs/Match Filters/'
 tooltips = [
 ('dummy') : 'dummy',
 ('Affiliated with a Church') : 'img_Affiliated with a Church_field-tooltip',
-('Match Percent Rate') : 'img_Match Percent Rate_field-tooltip',
-('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
+('Match Percent Rate') : 'img_Match Percent Rate_field-tooltip']
+//('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
 ('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference.",
-('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position.",
+//('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position.",
 ('Match Percent Rate') : 'Candidates with a match percentage rate below the level selected will be hidden. ']
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = [
-('Paid & Volunteer Positions') : 'The financial support field is required.']
+requiredFieldMsgs = []
+//('Paid & Volunteer Positions') : 'The financial support field is required.']
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -90,6 +90,16 @@ WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Mat
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

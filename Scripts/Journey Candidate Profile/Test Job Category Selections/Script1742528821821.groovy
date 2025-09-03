@@ -199,3 +199,4 @@ if(errorCount == 0) {
 	outFile.append(outText + '\n')
 }
 
+WebUI.closeBrowser()

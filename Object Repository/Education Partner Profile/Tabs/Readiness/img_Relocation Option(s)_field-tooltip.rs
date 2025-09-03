@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='group-1456436491.551']/div[6]/div[2]/img</value>
+         <value>//div[@id='group-1456436491.551']/div[7]/div[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>b0706631-0bc8-491a-b7d1-47bbc367df45</webElementGuid>
+      <webElementGuid>47f290ca-6792-4fb8-9a08-0a642cbaeb2c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>eac2d029-fdcb-44e2-8025-fb8fab35a1ed</webElementGuid>
+      <webElementGuid>8ec637de-4cc2-4445-a6d2-7ee6ee652972</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>5b5562b7-74dd-4028-850f-5797541cfb00</webElementGuid>
+      <webElementGuid>0954f776-6454-4204-b558-fd299a61ccb7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>01d94b98-bc7c-42b0-a592-84e38f200c33</webElementGuid>
+      <webElementGuid>870d00c9-d2b1-4981-b7be-522aba037195</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Check all candidate selections you could consider based on your available positions. If  selecting 'Not a match criteria', there's no need to check the others.</value>
-      <webElementGuid>f8a96e5e-5975-47e8-83f1-445c10e1f682</webElementGuid>
+      <webElementGuid>84325a2e-5e60-4101-b408-cb5f397de6bb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,15 +63,15 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1456436491.551&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>eedfd1af-d8a3-4c4d-92c2-ffc3656d649b</webElementGuid>
+      <webElementGuid>3f918ebb-f810-4b0e-8d62-1b16984c700e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group-1456436491.551']/div[6]/div[2]/img</value>
-      <webElementGuid>2818f32d-a5ae-43e7-a0b1-5fc854080f71</webElementGuid>
+      <value>//div[@id='group-1456436491.551']/div[7]/div[2]/img</value>
+      <webElementGuid>88bd971d-7099-4b1d-b8bb-7f13d3f7a834</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,15 +79,15 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[21]</value>
-      <webElementGuid>ce16e36d-99ee-4a04-9608-fd6a2bf7ffdd</webElementGuid>
+      <webElementGuid>331c7c88-1761-4a4b-a41c-b73b69bdd49f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[6]/div[2]/img</value>
-      <webElementGuid>b85e1f4b-5322-46ff-8d20-a49ef6a4047f</webElementGuid>
+      <value>//div[7]/div[2]/img</value>
+      <webElementGuid>e8022aee-ef82-469b-a305-f1e4fc19245e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>a02802d4-c2ca-4fb7-834c-687f54c938b0</webElementGuid>
+      <webElementGuid>9bb8b375-4cf5-43de-b57c-003ec3644c27</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -45,7 +45,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varDegree, varExperience, varCredentials, varEnglish, varTravel, varPaid_volunteer]
+parms = [varDegree, varExperience, varCredentials, varEnglish, varTravel] //, varPaid_volunteer] - moved to Readiness tab
 
 println(parms)
 
@@ -65,9 +65,9 @@ english = '//input[@id=\'profile_group-1456436956.575_english_skills\']'
 travel = '//input[@id=\'profile_group-1456436956.575_travel_support\']'
 
 //xpath of the Paid_volunteer group
-paid_volunteer = '//input[@id=\'profile_group-1456436956.575_financial_support\']'
+//paid_volunteer = '//input[@id=\'profile_group-1456436956.575_financial_support\']'
 
-xpaths = [degree, experience, credentials, english, travel, paid_volunteer]
+xpaths = [degree, experience, credentials, english, travel] //, paid_volunteer]
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Define path to tooltip text images
@@ -85,8 +85,8 @@ tooltips = [
 ('Classroom Experience') : 'img_Classroom Experience_field-tooltip',
 ('Formal Teaching Credentials') : 'img_Formal Teaching Credentials_field-tooltip',
 ('English Proficiency') : 'img_English Proficiency_field-tooltip',
-('Affiliated with a Church') : 'img_Affiliated with a Church_field-tooltip',
-('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
+('Affiliated with a Church') : 'img_Affiliated with a Church_field-tooltip']
+//('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
@@ -94,8 +94,8 @@ tooltipText = [
 ('Classroom Experience') : 'No will match all candidates.',
 ('Formal Teaching Credentials') : 'No will match all candidates. ',
 ('English Proficiency') : 'Select all options that best fit job requirements',
-('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference. ",
-('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
+('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference. "]
+//('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
@@ -103,13 +103,23 @@ requiredFieldMsgs = [
 ('Classroom Experience') : 'The school classroom experience field is required.',
 ('Formal Teaching Credentials') : 'The has teaching credentials field is required.',
 ('English Proficiency') : 'The english skills field is required.',
-('Travel Options') : 'The travel support field is required.',
-('Paid & Volunteer Positions') : 'The financial support field is required.']
+('Travel Options') : 'The travel support field is required.']
+//('Paid & Volunteer Positions') : 'The financial support field is required.']
 
 //Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Match Filters'))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

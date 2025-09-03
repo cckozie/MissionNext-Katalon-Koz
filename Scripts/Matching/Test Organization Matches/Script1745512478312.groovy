@@ -43,11 +43,15 @@ updateWildcards = false
 
 debug = false
 
-site = 'Journey' // Journey or Education
+if(varSite != null) {
+	site = varSite
+} else {
+	site = 'Journey' // Journey or Education
+}
 
 matchType = 'Org'	// Org or Job
 
-pages = 3 //How many match table pages to test, actual number of pages to process or 'ALL'
+pages = GlobalVariable.matchPages //How many match table pages to test, actual number of pages to process or 'ALL'
 
 if(site == 'Journey') {
 	user = 'Journey Partner 17'
@@ -880,6 +884,10 @@ while(!done) {
 		}
 	}
 }
+
+WebUI.closeBrowser()
+
+WebUI.delay(5)
 
 def doMatching(def candidateSelections, def organizationSelections) {
     if (married && !(spouseServing)) {

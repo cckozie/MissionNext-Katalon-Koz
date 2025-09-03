@@ -17,21 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import java.text.SimpleDateFormat
+//import java.time.LocalDateTime
+import java.time.*
 
 date = new Date()
-/*
-datePart = date.format("dd/MM/yyyy")
-println(datePart)
-
-day = datePart.substring(0,2)
-month = datePart.substring(3,5)
-year = datePart.substring(6,10)
-
-yearInt = year.toInteger()
-nextYear = year.toInteger() + 1
-println(nextYear)
-
-*/
 start = date.format("yyyy-MM-dd")
 year = start.substring(0,4)
 month = start.substring(5,7)
@@ -45,3 +34,17 @@ if(1==2) {
 }
 println(start)
 println(end)
+
+LocalDateTime now = LocalDateTime.now()
+println(now)
+myTime = now.toLocalTime()
+println(myTime)
+int seconds = myTime.toSecondOfDay()
+println(seconds)
+int midnightPlus = 90000
+delay = midnightPlus - seconds
+println(delay)
+delay = 15
+Thread.sleep(delay * 1000)
+println('i waited')
+//LocalDateTime release = LocalDateTime.of(2019, 10, 30, 13, 30);

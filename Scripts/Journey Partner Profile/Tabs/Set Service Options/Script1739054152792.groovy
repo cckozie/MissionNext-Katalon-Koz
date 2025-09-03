@@ -98,11 +98,11 @@ tooltips = [
 ('TimeHours Needed') : 'img_TimeHours Needed_field-tooltip',
 ('Awareness Trip') : 'img_Awareness Trip_field-tooltip',
 ('Vision Trip') : 'img_Vision Trip_field-tooltip',
-('Vision Trip Description') : 'img_Vision Trip Description_field-tooltip',
-('Short-Term Trip Lengths') : 'img_Short-Term Trip Lengths_field-tooltip',
-('Short-Term Availability') : 'img_Short-Term Availability_field-tooltip',
-('Short-Term Objective') : 'img_Short-Term Objective_field-tooltip',
-('Short-Term Statement') : 'img_Short-Term Statement_field-tooltip',
+//('Vision Trip Description') : 'img_Vision Trip Description_field-tooltip',
+//('Short-Term Trip Lengths') : 'img_Short-Term Trip Lengths_field-tooltip',
+//('Short-Term Availability') : 'img_Short-Term Availability_field-tooltip',
+//('Short-Term Objective') : 'img_Short-Term Objective_field-tooltip',
+//('Short-Term Statement') : 'img_Short-Term Statement_field-tooltip',
 ('Preferred Regions') : 'img_Preferred Region(s)_field-tooltip',
 ('Languages') : 'img_Languages_field-tooltip']
 
@@ -112,9 +112,9 @@ tooltipText = [
 ('Time/Hours Needed') : 'Check all that generally apply for your assignments.',
 ('Awareness Trip') : 'Does your organization accommodate mission Awareness Trips?',
 ('Vision Trip') : 'Does your organization offer Vision Trips?',
-('Short-Term Trip Lengths') : 'The Open selection will match all short-term candidates',
-('Short-Term Availability') : 'The Open selection will match all candidates',
-('Short-Term Objective') : 'The candidates make a single choice.',
+//('Short-Term Trip Lengths') : 'The Open selection will match all short-term candidates',
+//('Short-Term Availability') : 'The Open selection will match all candidates',
+//('Short-Term Objective') : 'The candidates make a single choice.',
 ('Preferred Region(s)') : 'Check all regions where your agency has activity. If there are needs at the home office, select the region where your organization has its headquarters.',
 ('Languages') : "Check all that are needed and/or helpful. If selecting 'Other,' complete the field below."]
 
@@ -148,6 +148,16 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

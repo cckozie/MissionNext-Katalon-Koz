@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
 ///#########################################
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Recruiting Countries']
+pages = ['Match Filters']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -34,13 +34,13 @@ if(GlobalVariable.testSuiteRunning) {
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
-/*
+
 if(username[-3..-1] != '6ep') {
     println('The Execution Profile must be set to "Education Partner"')
 
     System.exit(0)
 }
-*/
+
 domain = GlobalVariable.domain
 
 called = false
@@ -61,9 +61,15 @@ if (GlobalVariable.outFile != '') {
 	writeFile = true
 }
 
+if(pages.size() == 0 || 'All' in pages) {
+	myTabs = 'All'
+} else {
+	myTabs = pages
+}
+
 if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Partner Profile on ' +
-	domain) + '.txt')
+	outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Partner Profile on ' +
+	domain + ' - ' + myTabs + '.txt')
 	
 	GlobalVariable.outFile = outFile
 	
@@ -188,6 +194,8 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	
 	bible_training = ['Some Bible school classes', 'Bible school degree or equivalent']
 	
+	paid_volunteer = ['Position requires raising some support', 'A salary provided; enough to live locally']
+	
 	perspectives = ['I have not taken the Perspectives Course', 'I am planning to take the Perspectives Course',
 		'I have taken or am taking the Perspectives Course']
 	
@@ -197,7 +205,7 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	relocation = ['I am willing to relocate within North America', 'I am willing to relocate overseas']
 	
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
-		('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
+		('varCross_cultural') : cross_cultural, ('varPaid_volunteer') : paid_volunteer, ('varBible_training') : bible_training, 
 		('varPerspectives') : perspectives,	('varMissions_experience') : missions_experience, 
 		('varRelocation') : relocation], FailureHandling.CONTINUE_ON_FAILURE)
 }
@@ -232,12 +240,13 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 	
 	travel = ['Some Travel funds available', 'Travel funding negotiated']
 	
-	paid_volunteer = ['Volunteer/self-supported position', 'Self-supported, need travel and overhead',
-	 'Position requires raising your support', 'Position requires raising some support']
+//This field was moved to Readiness tab
+//	paid_volunteer = ['Volunteer/self-supported position', 'Self-supported, need travel and overhead',
+//	 'Position requires raising your support', 'Position requires raising some support']
 	
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Match Filters'), [('varDegree') : degree,
 		('varExperience') : experience, ('varCredentials') : credentials, ('varEnglish') : english,
-		('varTravel') : travel, ('varPaid_volunteer') : paid_volunteer], FailureHandling.CONTINUE_ON_FAILURE)
+		('varTravel') : travel], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

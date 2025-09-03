@@ -65,7 +65,7 @@ tooltips = [
 
 // Define the expected tooltip texts
 tooltipText = [
-('Recruit From Countries') : "Select countries from which your organization can recruit. The matching scheme will require a 'match' with the candidate's country of citizenship."]
+('Recruit From Countries') : "Select countries from which your organization can recruit. The matching scheme will require a 'match' with the candidate's country of citizenship unless All is checked."]
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
@@ -85,6 +85,16 @@ WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Rec
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
 	FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

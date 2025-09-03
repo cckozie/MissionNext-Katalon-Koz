@@ -89,4 +89,9 @@
       <initValue>false</initValue>
       <name>allow_delete</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>1</initValue>
+      <name>matchPages</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

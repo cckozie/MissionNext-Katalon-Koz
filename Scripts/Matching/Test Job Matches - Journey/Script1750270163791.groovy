@@ -48,7 +48,7 @@ bypass = false
 
 debug = false
 
-pages = 2
+pages = GlobalVariable.matchPages
 
 site = 'Journey'
 
@@ -597,6 +597,8 @@ driver.switchTo().window(allWindows[1])
 WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.closeBrowser()
+
+WebUI.delay(5) //In case running as test suite
 
 
 ////// FUNCTIONS

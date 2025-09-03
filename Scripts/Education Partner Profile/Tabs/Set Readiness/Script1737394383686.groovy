@@ -24,6 +24,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import org.openqa.selenium.JavascriptExecutor;
+import com.kms.katalon.core.util.KeywordUtil
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -47,7 +48,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives,
+parms = [varProcess_stage, varCross_cultural, varPaid_volunteer, varBible_training, varPerspectives,
 	varMissions_experience, varRelocation]
 
 //xpath of the Process Stage group 
@@ -55,6 +56,9 @@ process_stage = "//input[@id='profile_group-1456436491.551_candidate_process_sta
 
 //xpath of the Cross-cultural group
 cross_cultural = "//input[@id='profile_group-1456436491.551_cross-cultural_experience']"
+
+//xpath of the Paid & Volunteer Positions group
+paid_volunteer = "//input[@id='profile_group-1456436491.551_financial_support']"
 
 //xpath of the Bible_training group
 bible_training = "//*[@id='profile_group-1456436491.551_bible_school_training']"
@@ -68,7 +72,7 @@ missions_experience = "//input[@id='profile_group-1456436491.551_missions_exposu
 //xpath of the Relocation group
 relocation = "//input[@id='profile_group-1456436491.551_relocation_question']"
 
-xpaths = [process_stage, cross_cultural, bible_training, perspectives, missions_experience, relocation]
+xpaths = [process_stage, cross_cultural, paid_volunteer, bible_training, perspectives, missions_experience, relocation]
 
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -85,6 +89,7 @@ tooltips = [
 ('dummy') : 'dummy',
 ('Process Stage') : 'img_Process Stage_field-tooltip',
 ('Cross-cultural Experience') : 'img_Cross-cultural Experience_field-tooltip',
+('Paid & Volunteer Positions') : 'img_Paid and Volunteer Positions_field-tooltip',
 ('Bible Training') : 'img_Bible Training_field-tooltip',
 ('Attended Perspectives') : 'img_Attended Perspectives_field-tooltip',
 ('Missions Experience') : 'img_Missions Experience_field-tooltip',
@@ -94,6 +99,7 @@ tooltips = [
 tooltipText = [
 ('Process Stage') : 'Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates. ',
 ('Cross-cultural Experience') : 'Select those that would be acceptable for most positions. The first choice will match all candidates.',
+('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position.",
 ('Bible Training') : "Select all options that best fit the typical requirements for your positions. 'Not Applicable' will not filter out profiles based on a candidate's Bible Training.",
 ('Attended Perspectives') : 'The first selection, Not taken Perspectives, will match all candidates. ',
 ('Missions Experience') : "Indicates a candidate's level of exposure to mission work.",
@@ -102,7 +108,8 @@ tooltipText = [
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
 ('Process Stage') : 'The candidate process stages field is required.',
-('Bible Training') : 'The bible school training field is required.',
+('Bible Training') : 'The bible training field is required.',
+('Paid & Volunteer Positions') : 'The financial support field is required.',
 ('Attended Perspectives') : 'The attended perspectives? field is required.',
 ('Relocation Option(s)') : 'The relocation question field is required.']
 
@@ -110,6 +117,16 @@ requiredFieldMsgs = [
 WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Readiness'))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

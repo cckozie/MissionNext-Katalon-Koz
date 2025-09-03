@@ -7,7 +7,6 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>3ee1542b-05d6-4f8e-a23a-244d2f6587f9</webElementGuid>
+      <webElementGuid>92bda806-1ee8-459f-95fc-0c996bb84e90</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>9692747e-3d1b-4e74-b51b-68c5aab0dd20</webElementGuid>
+      <webElementGuid>da3c89fd-ef08-46b9-a858-a19d108adb3b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>5c0679ba-4f4d-4547-99d0-088b3a81693e</webElementGuid>
+      <webElementGuid>6405a0dd-3d87-4230-a57b-4c7fd438de82</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>e6bb053c-67c1-4b88-8560-3cf569d4627a</webElementGuid>
+      <webElementGuid>747c72d6-02be-4d30-bd05-11a501174057</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Select those that would be acceptable for most positions. The first choice will match all candidates.</value>
-      <webElementGuid>e53f54aa-e988-44d0-9776-1cfb3e65cb94</webElementGuid>
+      <webElementGuid>92190aad-7b7d-49de-81c7-32d348c2ad39</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1456436491.551&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>207a391f-7322-4025-a382-31994e2c7e13</webElementGuid>
+      <webElementGuid>e2c2a806-6f80-480c-a7b9-66c8879c5fed</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1456436491.551']/div[2]/div/img</value>
-      <webElementGuid>66277a0e-bd11-4f95-9445-7880d9623ba7</webElementGuid>
+      <webElementGuid>f6889ed7-e0db-42b4-8902-b199d801ee08</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[17]</value>
-      <webElementGuid>ccc7c3c8-dc36-48cd-adaa-40ff01a1d3b6</webElementGuid>
+      <webElementGuid>24af0743-624c-4c42-9f85-3c735fc25c94</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[7]/div[2]/div/img</value>
-      <webElementGuid>87f3f80a-c2b2-4157-8db3-ef4a223289d1</webElementGuid>
+      <webElementGuid>34846c6a-424e-435a-9760-26a4c9fb84e7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +94,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>c569f27f-4a0f-45f9-87e2-74dee1788317</webElementGuid>
+      <webElementGuid>38721a3d-344e-4698-829f-006ef2bff0c8</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

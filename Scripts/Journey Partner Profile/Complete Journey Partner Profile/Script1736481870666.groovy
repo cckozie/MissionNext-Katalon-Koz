@@ -24,7 +24,7 @@ import javax.swing.*
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Contact Info', 'Organization Info', 'Service Options', 'Readiness', 'Ministry Prefs', 'IT Positions']
-pages = ['Recruiting Countries']
+pages = []
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -59,9 +59,15 @@ if (GlobalVariable.outFile != '') {
 	writeFile = true
 }
 
+if(pages.size() == 0 || 'All' in pages) {
+	myTabs = 'All'
+} else {
+	myTabs = pages
+}
+
 if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Journey Partner Profile on ' +
-	domain) + '.txt')
+	outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Journey Partner Profile on ' +
+	domain + ' - ' + myTabs + '.txt')
 	
 	GlobalVariable.outFile = outFile
 	
@@ -194,8 +200,10 @@ if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	
 	relocation = ['I am willing to relocate within North America', 'I am willing to relocate overseas']
 	
-	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
-		('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, 
+	paid_volunteer_positions = ['Position requires raising some support', 'A salary provided; enough to live locally', 'A salary, enough to live locally + debt assistance']
+	
+WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Readiness'), [('varProcess_stage') : process_stage,
+		('varCross_cultural') : cross_cultural, ('varBible_training') : bible_training, ('varPaid_volunteer') : paid_volunteer_positions,
 		('varPerspectives') : perspectives,	('varRelocation') : relocation], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
@@ -248,15 +256,15 @@ if(pages.size() == 0 || 'All' in pages || 'Match Filters' in pages) {
 	// Complete the Match Filters tab
 	affiliated_with_a_church = 'Yes'
 	
-	paid_volunteer_positions = ['Position requires raising some support', 'A salary provided; enough to live locally', 'A salary, enough to live locally + debt assistance']
+	//paid_volunteer_positions = ['Position requires raising some support', 'A salary provided; enough to live locally', 'A salary, enough to live locally + debt assistance']
 	
 	match_percent_rate = '60'
 	
 	profile_years = ['2023', '2024', '2025']
 	
 	WebUI.callTestCase(findTestCase('Journey Partner Profile/Tabs/Set Match Filters')
-		, [('varAffiliated_with_a_church') : affiliated_with_a_church, ('varPaid_volunteer_positions') : paid_volunteer_positions
-	        , ('varMatch_percent_rate') : match_percent_rate, ('varProfile_years') : profile_years], FailureHandling.CONTINUE_ON_FAILURE)
+		, [('varAffiliated_with_a_church') : affiliated_with_a_church, /*('varPaid_volunteer_positions') : paid_volunteer_positions
+	        ,*/ ('varMatch_percent_rate') : match_percent_rate, ('varProfile_years') : profile_years], FailureHandling.CONTINUE_ON_FAILURE)
 }	
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

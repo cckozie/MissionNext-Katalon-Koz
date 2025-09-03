@@ -47,7 +47,7 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives, varRelocation]
+parms = [varProcess_stage, varCross_cultural, varBible_training, varPerspectives, varRelocation, varPaid_volunteer]
 
 //xpath of the Process Stage group 
 process_stage = "//input[@id='profile_group-1446521801.898_candidate_process_stages']"
@@ -64,7 +64,11 @@ perspectives = "//input[@id='profile_group-1446521801.898_attended_perspectives?
 //xpath of the Relocation group
 relocation = "//input[@id='profile_group-1446521801.898_relocation_question']"
 
-xpaths = [process_stage, cross_cultural, bible_training, perspectives, relocation]
+//xpath of the Paid & Volunteer Positions group
+paid_volunteer = "//input[@id='profile_group-1446521801.898_financial_support']"
+
+
+xpaths = [process_stage, cross_cultural, bible_training, perspectives, relocation, paid_volunteer]
 
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -83,7 +87,8 @@ tooltips = [
 ('Cross-cultural Experience') : 'img_Cross-cultural Experience_field-tooltip',
 ('Bible Training') : 'img_Bible Training_field-tooltip',
 ('Attended Perspectives') : 'img_Attended Perspectives_field-tooltip',
-('Relocation Option(s)') : 'img_Relocation Option(s)_field-tooltip']
+('Relocation Option(s)') : 'img_Relocation Option(s)_field-tooltip',
+('Paid  Volunteer Positions') : 'img_Paid  Volunteer Positions_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
@@ -91,18 +96,31 @@ tooltipText = [
 ('Cross-cultural Experience') : 'Select those that would be acceptable for most positions. The first choice will match all candidates.',
 ('Bible Training') : "Select all options that best fit the typical requirements for your positions. 'Not Applicable' will not filter out profiles based on a candidate's Bible Training.",
 ('Attended Perspectives') : 'The first selection, Not taken Perspectives, will match all candidates.',
-('Relocation Option(s)') : "Check all candidate selections you could consider based on your available positions. If  selecting 'Not a match criteria', there's no need to check the others."]
+('Relocation Option(s)') : "Check all candidate selections you could consider based on your available positions. If  selecting 'Not a match criteria', there's no need to check the others.",
+('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
 ('Process Stage') : 'The candidate process stages field is required.',
 ('Cross-cultural Experience') : 'The cross-cultural experience field is required.',
-('Relocation Options') : 'The relocation question field is required.']
+('Relocation Options') : 'The relocation question field is required.',
+('Paid & Volunteer Positions') : 'The financial support field is required.']
+
 
 //Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Readiness'))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)

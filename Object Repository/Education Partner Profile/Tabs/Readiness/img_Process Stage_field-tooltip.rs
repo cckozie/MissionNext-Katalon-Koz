@@ -7,7 +7,6 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>1d73643c-8fa0-4a60-ada0-a6043c01523e</webElementGuid>
+      <webElementGuid>b42df697-2602-4151-9c36-cc8d5516c165</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +30,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>6e30c00a-df32-4912-9ff7-dae800d724c3</webElementGuid>
+      <webElementGuid>e6df0618-66de-4223-88bd-ba9089ae4cbb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>2b9f7020-b91a-41e5-b7e2-58837e216fb4</webElementGuid>
+      <webElementGuid>09b26f21-5db8-4eca-bb9f-e4fa844a6533</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>831d6e35-2d05-4ffc-bd2f-7a7d8442a694</webElementGuid>
+      <webElementGuid>8b047900-bdfc-48e6-a2d2-5197c37ba46a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates. </value>
-      <webElementGuid>9ea15f49-a7e1-4a68-966f-20e18b5ba672</webElementGuid>
+      <webElementGuid>4f97e172-c43d-49cd-9546-b94431083c62</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;group-1456436491.551&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>1af77c9a-e972-4f4b-b34b-5059db897ce9</webElementGuid>
+      <webElementGuid>b1a970b8-2baf-46f8-9651-e6c3bc2fecbe</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1456436491.551']/div/div[2]/img</value>
-      <webElementGuid>d8f1720b-5eaf-4a07-8101-8820bbe5ee86</webElementGuid>
+      <webElementGuid>1cb59dd2-e1c1-4ced-8c78-7b0991fb4cc9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[16]</value>
-      <webElementGuid>d73706cd-085a-4195-ae1a-69c0b99b122b</webElementGuid>
+      <webElementGuid>c3c6a0c6-5605-41d7-b708-55231bd6f5d2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[7]/div/div[2]/img</value>
-      <webElementGuid>fff383b3-78e0-4757-ba28-9d6446269658</webElementGuid>
+      <webElementGuid>ae9ce23d-54ce-4487-9844-28a196243d56</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +94,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://education.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>75f77470-1ba4-4680-9af7-8d607b4c2eed</webElementGuid>
+      <webElementGuid>96b5571c-f660-4f8c-aac5-309876141ffd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

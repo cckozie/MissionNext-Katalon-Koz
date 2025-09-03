@@ -12,11 +12,24 @@
       <value></value>
       <variableId>3cfa8a9d-5316-49bb-ac17-b65685eb7299</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>9cb0cc3e-1100-4282-95b0-76345ed9e537</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
       <id>3cfa8a9d-5316-49bb-ac17-b65685eb7299</id>
       <masked>false</masked>
       <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>9cb0cc3e-1100-4282-95b0-76345ed9e537</id>
+      <masked>false</masked>
+      <name>varSite</name>
    </variable>
 </TestCaseEntity>

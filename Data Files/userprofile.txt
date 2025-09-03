@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.29
 
-Date: 2025-07-21
+Date: 2025-09-02
 
 
 
@@ -38,7 +38,7 @@ Email Webmaster
 
  Created	2025-05-08
  Updated	2025-07-10
- Last Login	2025-07-21
+ Last Login	2025-09-02
  
 	
 	
@@ -155,8 +155,8 @@ Select another profile
 Show records for this user: user_id = 16450:
 Table: users
 ID	username	email	created	updated	last login	Active
-16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-07-10	2025-07-21	Yes
-Days ago: 	74  	11  	0  	 
+16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-07-10	2025-09-02	Yes
+Days ago: 	117  	54  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
@@ -172,11 +172,11 @@ ID	App ID	Application
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-16450	3	Journey	Yes	90
 16450	5	BAMmatch	Yes	
 16450	9	Mission Next	Yes	
 16450	4	JourneyGuide	Yes	
 16450	10	Canada	Yes	
+16450	3	Journey	Yes	90
 16450	6	Education	Yes	90
 16450	2	Short-Term	Yes	
 16450	11	IT-Technology	Yes	

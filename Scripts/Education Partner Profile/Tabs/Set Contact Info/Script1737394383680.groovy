@@ -59,11 +59,11 @@ tooltipText = [('Organization') : 'Name of your Organization.(Shorten, if too lo
     , ('Organization City ') : 'Organization city field is required', ('Post_Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.']
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = [('Key Contact Phone') : 'The key contact phone field is required.', ('Organization') : 'The school phone field is required.'
-    , ('Organization City') : 'The school city field is required.', ('Province/State/Region') : 'The province state region field is required.']
+requiredFieldMsgs = [('Key Contact Phone') : 'The key contact phone field is required.', ('Organization') : 'The phone field is required.'
+    , ('Organization City') : 'The city field is required.']
 
 // Define the page's links and the text to search for on the linked page
-pageLinks = [('countries by region') : 'Countries by Region', 'Find your International Post Code' : 'International Zip Code']
+pageLinks = [('countries by region') : 'Countries by Region', 'Find your International Post Code' : 'World Zip/Postal Code']
 
 //Go to the Contact Info tab
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
@@ -71,6 +71,16 @@ WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Contact Info'))
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
+
+if(tooltipTextMap.size() != tooltipText.size()) {
+	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+} else {
+	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
+}
+
+println(outText)
+
+outFile.append(outText + '\n')
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
