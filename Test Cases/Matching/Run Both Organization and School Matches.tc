@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Run Both Organization and School Matches</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c54dd9a7-fc70-4b1a-92ac-7dcf818ee7e7</testCaseGuid>
+</TestCaseEntity>

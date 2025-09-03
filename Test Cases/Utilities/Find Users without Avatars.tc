@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Find Users without Avatars</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>467c9b11-c689-44da-90d9-e8308f9493bd</testCaseGuid>
+</TestCaseEntity>

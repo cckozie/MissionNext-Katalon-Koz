@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sleep Until 0100</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>edc4eeca-d29a-4e26-84b5-9f60a8ac192f</testCaseGuid>
+</TestCaseEntity>

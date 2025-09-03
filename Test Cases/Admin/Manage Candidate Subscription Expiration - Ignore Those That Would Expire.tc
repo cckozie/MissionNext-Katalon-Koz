@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Manage Candidate Subscription Expiration - Ignore Those That Would Expire</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6e5b8325-2e61-4982-b923-ba3faab1d9f2</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Register QuickStart Candidate</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ec717cb3-f8d5-43b1-83c8-35a30b9ec918</testCaseGuid>
+</TestCaseEntity>

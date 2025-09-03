@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>text_Last Page Number</name>
+   <tag></tag>
+   <elementGuidId>bfd32b9e-c265-4160-9e8a-993395408bdd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[@id='table-paging']/span/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#table-paging > span.tablenav-paging-text > span.total-pages</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>2b193c5c-0af1-4382-b5d6-25167fb7fc50</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>total-pages</value>
+      <webElementGuid>04c1bd95-801a-41ca-a146-94f36f3168a7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>3</value>
+      <webElementGuid>2245dce7-a0fc-4d36-bbf0-08244dffdf2f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;table-paging&quot;)/span[@class=&quot;tablenav-paging-text&quot;]/span[@class=&quot;total-pages&quot;]</value>
+      <webElementGuid>9e87232d-2c92-4b61-bdca-d85dc8ed495a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//span[@id='table-paging']/span/span</value>
+      <webElementGuid>53fdc164-9dee-4a06-adeb-972d98214756</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Current Page'])[2]/following::span[3]</value>
+      <webElementGuid>9dba7aaf-9a6f-4d43-81fe-d1755befa2ad</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Change role to…'])[3]/following::span[8]</value>
+      <webElementGuid>06f1571a-0f19-4409-a256-7b7bc97acc3e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Next page'])[2]/preceding::span[1]</value>
+      <webElementGuid>bec19cc2-80f7-49c3-80e8-05707dc27865</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Last page'])[2]/preceding::span[3]</value>
+      <webElementGuid>3acd6b4c-69d7-47af-b32e-d7bf02a5c974</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[4]/span/span</value>
+      <webElementGuid>f387c810-a3a2-4da0-8cb5-4b9ec86b0d20</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = '3' or . = '3')]</value>
+      <webElementGuid>e33ffaee-7b65-4fb4-aada-5787b3f5bc84</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

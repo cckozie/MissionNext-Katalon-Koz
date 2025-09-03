@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Privacy Policy</name>
+   <tag></tag>
+   <elementGuidId>b36cb80e-68dd-4327-b196-4943478f63d8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='group1']/div[8]/div[4]/a[2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@target = '_blank' and (text() = 'Privacy Policy' or . = 'Privacy Policy')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>7aeb1abd-2290-4e1d-86e7-78b3f74e526e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/privacy/?_ga=2.169726433.1916001110.1717687301-458176893.1717687300</value>
+      <webElementGuid>29c59073-78d5-40bb-8add-ff6a91c6096e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>title</name>
+      <type>Main</type>
+      <value>Opens in a new tab</value>
+      <webElementGuid>afe40950-fb7c-44bd-8b2b-f218971a6077</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>50dcb846-2814-48f3-a995-97de43f8cc5e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Privacy Policy</value>
+      <webElementGuid>db06a347-60d4-4abb-af6a-b8aa267e2803</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[2]</value>
+      <webElementGuid>c5d2ee17-bebf-4b46-b0fc-ba5e38a9858e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group1']/div[8]/div[4]/a[2]</value>
+      <webElementGuid>3ff18449-efce-4bcd-bc67-72395871511c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Privacy Policy')]</value>
+      <webElementGuid>b7b7e844-d184-4a55-ad9f-bca977e6c0fd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Terms and Conditions'])[1]/following::a[1]</value>
+      <webElementGuid>f97996ca-0e28-4f29-8148-e3c05a395eb5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All fields are required'])[1]/preceding::a[1]</value>
+      <webElementGuid>bd7fc71b-59b8-4417-a2d1-046cebcdcc9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign up'])[1]/preceding::a[1]</value>
+      <webElementGuid>3dfaa384-b0ce-47fd-a9c7-57e0bb46b577</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Privacy Policy']/parent::*</value>
+      <webElementGuid>86b78c4d-a450-4afa-859d-3e96a7485c01</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/privacy/?_ga=2.169726433.1916001110.1717687301-458176893.1717687300')]</value>
+      <webElementGuid>80913ac6-e6bf-476a-b61f-29493b0d6a70</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[2]</value>
+      <webElementGuid>dc1adb04-23a4-47da-9d3f-79b29ea9cae5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/privacy/?_ga=2.169726433.1916001110.1717687301-458176893.1717687300' and @title = 'Opens in a new tab' and (text() = 'Privacy Policy' or . = 'Privacy Policy')]</value>
+      <webElementGuid>39b4ef57-86d2-4291-b4d8-8ae36ede1088</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
