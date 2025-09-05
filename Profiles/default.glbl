@@ -26,6 +26,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>''</initValue>
+      <name>testCaseName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'educationgoer'</initValue>
       <name>ecUsername</name>
    </GlobalVariableEntity>

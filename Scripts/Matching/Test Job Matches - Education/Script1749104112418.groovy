@@ -1,4 +1,5 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -65,18 +66,30 @@ matchType = 'Job' // Org or Job
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
+println(myTestCase)
+if(GlobalVariable.testSuiteRunning) {
+	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+	println(testCaseName)
+	
+	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+	println(myTestCase)
+	
+//	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+} else {
 
-myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
-
+	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+}
+println(myTestCase)
+System.exit(0)
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '.txt')
 
 resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
 
-resultsFile.write(('Running ' + myTestCase) + '\n')
+resultsFile.write(('Running ' + myTestCase) + '\n\n')
 
-errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-ERRORS.txt')
+errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-ERRORS.txt')
 
 errorFile.write(('Running ' + myTestCase) + '\n')
 
@@ -932,6 +945,8 @@ def doMatching(def candidateSelections, def jobSelections) {
         }
     }
     
+	resultsFile.append(' Candidate Selection Matches for ' + firstName + ' ' + lastName + '\n')
+	
     resultsFile.append(outText)
 }
 

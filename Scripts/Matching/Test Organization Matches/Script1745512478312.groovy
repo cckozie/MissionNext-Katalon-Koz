@@ -76,11 +76,21 @@ lastName = ''
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
-myTestCase = myTestCase.substring(0, myTestCase.length() - 3) + '-' + site
+if(GlobalVariable.testSuiteRunning) {
+	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+	
+	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName + '-' + site
+	
+} else {
+
+	myTestCase = myTestCase.substring(0, myTestCase.length() - 3) + '-' + site
+}
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+filePathDetails = '/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/'
+
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase + '.txt')
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
@@ -135,7 +145,7 @@ resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + m
 
 resultsFile.write(('Running ' + myTestCase) + '\n')
 
-errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-ERRORS.txt')
+errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-ERRORS.txt')
 
 errorFile.write(('Running ' + myTestCase) + '\n')
 
@@ -422,333 +432,7 @@ while(!done) {
         name = new Location(regLastName.getX() + 7, regPct.getY() + 5)
 
         s.click(name)
-		
-/*
-		WebUI.delay(1)
-		
-        if (first) {
-			
-			s.wait(imagePath + 'Candidate Profile Close Button.png',30)
-			
-			closeButtonReg = s.find(imagePath + 'Candidate Profile Close Button.png')
-			
-			s.hover(closeButtonReg)
-
-            button = 'small'
-
-            s.wheel(Mouse.WHEEL_UP, 5)
-			
-			first = false
-			
-        } else {
-			
-			s.wait(imagePath + 'Contact Info.png',30)
-			
-			s.hover(closeButtonReg)
-			
-            button = 'big'
-
-            s.wheel(Mouse.WHEEL_UP, 8)
-        }
-       
-        Robot robot = new Robot()
-
-        if (button == 'small') {
-			
-            zooms = 4
-
-            for (int i = 0; i < zooms; i++) {
-                // how many times you want CRTL+'-' pressed
-                robot.keyPress(KeyEvent.VK_META)
-
-                robot.keyPress(KeyEvent.VK_ADD)
-
-                robot.keyRelease(KeyEvent.VK_ADD)
-
-                robot.keyRelease(KeyEvent.VK_META)
-            }
-        }
-        
-        WebUI.delay(1)
-
-        if (site == 'Journey') {
-			regCountry = s.find(imagePath + 'Your Country of Citizenship.png')
-        } else { 
-			regCountry = s.find(imagePath + 'Your Country of Citizenship EDU.png')
-		}
-
-        regCountry.setX((regCountry.getX() + regCountry.getW()) + 73)
-
-        regCountry.setW(450)
-
-        regCountry.setH(30)
-
-        if (highlight) {
-            regCountry.highlight(1)
-        }
-        
-        capturedFile = s.capture(regCountry).getFile()
-
-        YourCountryofCitizenship = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', 
-            '')
-
-        if (YourCountryofCitizenship.contains('UnitedStates')) {
-            YourCountryofCitizenship = 'United States'
-        }
-            
-        println(YourCountryofCitizenship)
-
-
-		if(site == 'Journey') {
-			marital_status = imagePath + 'Marital status JNY.png'
-			
-			your_email = imagePath + 'Your Email JNY.png'
-			
-			big_close_button = imagePath + 'Candidate Profile Big Close Button.png'
-			
-		} else {
-			marital_status = imagePath + 'Marital status EDU.png'
-			
-			your_email = imagePath + 'Your Email EDU.png'
-			
-			big_close_button = imagePath + 'Candidate Profile Big Close Button EDU'
-		}
-        
-		regMaritalStatus = s.find(marital_status)
-		
-        regMaritalStatus.setX((regMaritalStatus.getX() + regMaritalStatus.getW()) + 210)
-
-        regMaritalStatus.setW(220)
-
-        regMaritalStatus.setH(30)
-
-        if (highlight) {
-            regMaritalStatus.highlight(1)
-        }
-        
-        capturedFile = s.capture(regMaritalStatus).getFile()
-
-        maritalStatus = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
-
-		regEmail = s.find(your_email)
-		
-        regEmail.setX((regEmail.getX() + regEmail.getW()) + 240)
-
-        regEmail.setW(450)
-
-        regEmail.setH(30)
-
-        if (highlight) {
-            regEmail.highlight(1)
-        }
-        
-        capturedFile = s.capture(regEmail).getFile()
-
-        emailAddress = getRegionTextI(capturedFile).replaceAll('\\p{C}', '').replace(':', '').replace(' ', '')
-
-        emailAddress = emailAddress.replace(':', '')
-
-        emailAddress = emailAddress.replace(' ', '')
-
-        emailAddress = emailAddress.replace('_', '')
-
-        emailAddress = emailAddress.replace(':', '')
-		
-		if(debug) {println('emailAddress is ' + emailAddress)}
-
-		s.click(big_close_button, 5)
-		
-        if (emailAddress == lastEmailAddress) {
-			
-            continue
-        }
-        
-        lastEmailAddress = emailAddress
-		
-		if(site == 'Journey') {
-			
-			println('switching to apiTab ' + WebUI.getWindowIndex())
-			
-			WebUI.switchToWindowIndex(apiTab)
-			
-			candidateSelections = [:]
-			
-			if(debug) {println('Calling Get User Full Profile with email address ' + emailAddress)}
-			
-			candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email',
-				('varEmail') : emailAddress, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
-		   		   
-//			candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from API'), [('varEmail') : emailAddress, ('varSite') : site],
-//				FailureHandling.STOP_ON_FAILURE)
-				if(candidateFieldValues != null) {
 				
-				candidateFieldValues.each {
-					println(it)
-				}
-				
-				for(v in candidateFieldValues) { 
-					myKey = v.key
-					if (matchValues.containsKey(myKey)) {
-						candidateSelections.put(v.key, v.value)
-					}
-				}
-				
-				if('Married' in candidateFieldValues.get('Marital status')) {
-					married = true
-				} else {
-					married = false
-				}
-				
-				if('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
-					spouseServing = true
-				} else {
-					spouseServing = false
-				}
-	
-				firstName = candidateFieldValues.getAt("First Name")[0]
-				
-				lastName = candidateFieldValues.getAt("Last Name")[0]
-				
-				outText = ('\n\n Candidate Selections for ' + firstName + ' ' + lastName)
-				
-				//println(outText)
-				outFile.append(outText + '\n')
-	
-				outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
-	
-				resultsFile.append(outText + '\n')
-	
-				if (!(married)) {
-					outText = 'Candidate is not married.'
-				} else {
-					outText = 'Candidate is married and spouse is '
-	
-					if (!(spouseServing)) {
-						outText += 'not '
-					}
-					
-					outText += 'serving.'
-				}
-				
-				//println(outText)
-				outFile.append(outText + '\n')
-	
-				candidateSelections.each({
-						outText = ((it.key + ':') + it.value)
-	
-						//println(outText)
-						outFile.append(outText + '\n')
-					})
-				
-				doMatching(candidateSelections, organizationSelections) //println(outText)
-				
-			} else {
-				outText = ('Failed to find user with email of ' + emailAddress)
-				
-				outFile.append(('\n' + outText) + '\n')
-				
-				resultsFile.append(('\n' + outText) + '\n')
-				
-			}
-							
-			WebUI.switchToWindowIndex(tableTab)
-				
-		} else {
-		
-	        WebUI.switchToWindowIndex(adTab)
-	
-	        WebUI.click(findTestObject('Object Repository/Admin/Ad Main/u_Admin Section Home'))
-	
-	        userFound = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varEmail') : emailAddress
-	                , ('varFile') : profileFile, ('varSearchType') : 'email'], FailureHandling.STOP_ON_FAILURE)
-	
-	        println(userFound)
-	
-	        if (userFound != null) {
-	            returnValues = formatProfile(profileFile, categoriesCandidate, candidateMatchFields)
-	
-	            WebUI.closeWindowIndex(3)
-	
-	            WebUI.switchToWindowIndex(adTab)
-	
-	            WebUI.delay(1)
-	
-	            candidateSelections = (returnValues[0])
-				
-				ycoc = []
-				
-				ycoc.add(YourCountryofCitizenship)
-				
-				candidateSelections.put("Your Country of Citizenship", ycoc)
-	
-	            candidateSelections.each({ 
-	                    println(it)
-	                })
-
-	            //            married = (returnValues[1])
-	            if (maritalStatus == 'Married') {
-	                //We now get this from the profile along with email address
-	                married = true
-	            }
-	            
-	            println(married)
-	
-	            spouseServing = (returnValues[2])
-	
-	            println(spouseServing)
-				
-	            outText = ((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName)
-	
-	            //println(outText)
-	            outFile.append(outText + '\n')
-	
-	            outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
-	
-	            resultsFile.append(outText + '\n')
-	
-	            if (!(married)) {
-	                outText = 'Candidate is not married.'
-	            } else {
-	                outText = 'Candidate is married and spouse is '
-	
-	                if (!(spouseServing)) {
-	                    outText += ' not '
-	                }
-	                
-	                outText += 'serving.'
-	            }
-	            
-	            //println(outText)
-	            outFile.append(outText + '\n')
-	
-	            candidateSelections.each({ 
-	                    outText = ((it.key + ':') + it.value)
-	
-	                    //println(outText)
-	                    outFile.append(outText + '\n')
-	                })
-	
-	            //	WebUI.closeWindowIndex(1)
-	            WebUI.switchToWindowIndex(tableTab)
-	
-	            WebUI.delay(1)
-	
-	            doMatching(candidateSelections, organizationSelections //println(outText)
-	                )
-	        } else {
-	            outText = ('Failed to find user with email of ' + emailAddress)
-	
-	            outFile.append(('\n' + outText) + '\n')
-	        }
-	        
-	        WebUI.switchToWindowIndex(tableTab)
-
-	    }
-*/
-		
-		
-		
-		
 		s.wait(imagePath + 'Candidate Profile Close Button.png', 30)
 		
 		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),

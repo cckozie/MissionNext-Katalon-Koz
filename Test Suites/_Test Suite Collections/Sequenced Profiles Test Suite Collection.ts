@@ -55,7 +55,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/_Test Suites/Sleep Until 0100 Test Suite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/_Test Suites/Sleep Until Midnight Eastern Test Suite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

@@ -30,6 +30,7 @@ class Before_Test_Case {
 	@BeforeTestCase
 	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
 		println testCaseContext.getTestCaseId()
+		GlobalVariable.testCaseName = testCaseContext.getTestCaseId()
 		println testCaseContext.getTestCaseVariables()
 //		app = 'Google Analytics Opt Out'
 		WebUI.callTestCase(findTestCase('_Functions/Start Application'), [('varApplication') : 'Google Analytics Opt Out'], FailureHandling.STOP_ON_FAILURE)

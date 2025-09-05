@@ -23,6 +23,8 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+// Modified to close the tab if the 'Oops' page is displayed
+
 KeywordLogger log = new KeywordLogger()
 
 if(GlobalVariable.fastPath) {
@@ -40,7 +42,14 @@ println(objectPath)
 callingTab = varCallingTab
 println(callingTab)
 
+myWindowIndex = WebUI.getWindowIndex()
+
 WebDriver driver = DriverFactory.getWebDriver()
+
+windowHandles = driver.getWindowHandles().toArray()
+
+startWindowCount = windowHandles.size()
+
 
 // Click the other hyperlinks and verify pages opened
 //pageLinks.each {
@@ -62,13 +71,13 @@ for(it in pageLinks) {
 	
 	windowCount = windowHandles.size()
 	
-	if(windowCount == 2) {
+	if(windowCount > startWindowCount) {
 		
-		WebUI.switchToWindowIndex(1)
+		WebUI.switchToWindowIndex(windowCount - 1)
 		
 	}
 	
-	if(windowCount == 1 && toURL == fromURL) {
+	if(windowCount == startWindowCount && toURL == fromURL) {
 		
 		outText = '----- Clicking on the ' + it.key + ' link did not open a new page or tab. The link does not work.'
 		
@@ -106,13 +115,13 @@ for(it in pageLinks) {
 //		KeywordUtil.markError('\n' + outText)
 	}
 	
-	if(windowCount == 2) {
+	if(windowCount > startWindowCount) {
 
-		WebUI.closeWindowIndex(1)
+		WebUI.closeWindowIndex(windowCount - 1)
 	
 		WebUI.delay(1)
 	
-		WebUI.switchToWindowIndex(0)
+		WebUI.switchToWindowIndex(startWindowCount - 1)
 	
 		WebUI.delay(1)
 		

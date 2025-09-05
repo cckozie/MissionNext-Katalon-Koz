@@ -61,17 +61,25 @@ updateWildcards = false
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
-myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+if(GlobalVariable.testSuiteRunning) {
+	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+	
+	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+	
+} else {
+
+	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+}
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '.txt')
 
 resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
 
 resultsFile.write(('Running ' + myTestCase) + '\n')
 
-errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-ERRORS.txt')
+errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-ERRORS.txt')
 
 errorFile.write('Running ' + myTestCase + ' - Listing Errors Only\n')
 

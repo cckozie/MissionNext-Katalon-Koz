@@ -33,7 +33,9 @@ println('Page title is ' + title)
 WebDriver driver = DriverFactory.getWebDriver()
 
 elements = driver.findElements(By.xpath("//div[@class='col-sm-offset-3 col-sm-9 text-danger']"))
- 
+//													  "col-sm-offset-3 col-sm-9 text-danger">
+println(elements.size() + ' error messages found')
+
 messages = []
 for(e in elements) {
 	if(e.isDisplayed()) {
