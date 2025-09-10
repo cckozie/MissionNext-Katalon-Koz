@@ -31,9 +31,9 @@ if(username[-3..-1] != '9ea') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
-	registerOnly = true
+	registerOnly = false	//Need to wait for access to be granted
 }
 //######################################################################################################
 //================================== Initialize ===============================================
@@ -44,12 +44,16 @@ username = GlobalVariable.username
 
 url = (('https://education.' + domain) + '/education-home/register/')
 
-myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
-	'/') + 1)
+myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/') + 1)
 
-myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+if(GlobalVariable.testSuiteRunning) {
+	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+} else {
+	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+}
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + ' on ' + domain + '.txt')
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -65,16 +69,16 @@ testObjectFolder = 'Education Affiliate/Register/'
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
 tooltips = [
 ('dummy') : 'dummy',
-('Abbreviation') : 'img_Abbreviation_field-tooltip',
-('Board of Directors') : 'img_Board of Directors_field-tooltip',
-('Contact Email') : 'img_Contact Email_field-tooltip',
-('Contact Last Name') : 'img_Contact Last Name_field-tooltip',
-('Description') : 'img_Description_field-tooltip',
-('Password') : 'img_Password_field-tooltip',
-('References') : 'img_References_field-tooltip',
-('Statement of Faith') : 'img_Statement of Faith_field-tooltip',
 ('Username') : 'img_Username_field-tooltip',
-('Web Address') : 'img_Web Address_field-tooltip']
+('Password') : 'img_Password_field-tooltip',
+('Contact Last Name') : 'img_Contact Last Name_field-tooltip',
+('Contact Email') : 'img_Contact Email_field-tooltip',
+('Abbreviation') : 'img_Abbreviation_field-tooltip',
+('Web Address') : 'img_Web Address_field-tooltip',
+('Description') : 'img_Description_field-tooltip',
+('Board of Directors') : 'img_Board of Directors_field-tooltip',
+('Statement of Faith') : 'img_Statement of Faith_field-tooltip',
+('References') : 'img_References_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
@@ -129,7 +133,7 @@ WebUI.navigateToUrl(url)
 
 WebUI.waitForPageLoad(10)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/a_Apply Now'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/a_Apply Now'))
 object = 'Object Repository/Education Affiliate/Register/a_Apply Now'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
@@ -142,8 +146,12 @@ tooltipTextMap.each({
 		println(it)
 	})
 
+WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
+	, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
+FailureHandling.CONTINUE_ON_FAILURE)
+
 // Click the other hyperlinks and verify pages opened
-WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Affiliate/Register/'], 
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Affiliate/Register Education Affiliate/'], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
 // Submit the form with all of the fields empty
@@ -277,6 +285,17 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 object = 'Object Repository/Education Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
+//Verify that the correct Approval Pending page is displayed
+found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+
+if(found) {
+	outText = '\nThe appropriate Approval Pending page was displayed'
+	
+} else {
+	outText = '\n##### The appropriate Approval Pending page was NOT displayed #####'
+	KeywordUtil.markError('\n' + outText)
+}
+
 //================================== Wait for the approval pending email for the new education affiliate =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
 		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
@@ -292,4 +311,25 @@ if (emailFound) {
 
 	//================================== Grant access for the new education partner ==================================
 	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	//================================== Create a subscriptioon for the new education partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
+
+	WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
+		KeywordUtil.markError('\n' + outText)
+	}
+	
+	outFile.append(outText + '\n')
+
 }
+
+WebUI.closeBrowser()

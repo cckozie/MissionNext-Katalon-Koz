@@ -17,9 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import javax.swing.*
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = []
+pages = ['Contact Info', 'Availability']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -36,40 +37,18 @@ if(username[-3..-1] != '4ec') {
 
 domain = GlobalVariable.domain
 
-called = false
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-if (binding.hasVariable('varCalled')) {
-    called = varCalled
-}
 
-//Check to see if we're writing printed output to a file
-writeFile = false
-
-if (GlobalVariable.outFile != '') {
-    String myFile = GlobalVariable.outFile
-
-    println(myFile)
-
-    outFile = new File(myFile)
-
-    writeFile = true
-}
-
-mobile = ''
-if(GlobalVariable.mobileScreen) {
-	mobile = ', Mobile Screen'
-}
-
-if (!(writeFile)) {
-    outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Candidate Profile on ' + 
-    domain + '.txt')
-
-    GlobalVariable.outFile = outFile
-
-    outFile.write('Testing Complete Education Candidate Profile on ' + domain + mobile + '\n')
+if(1 == 2) { 	//GlobalVariable.testSuiteRunning || binding.hasVariable('varCalled')) {
+	outFile = GlobalVariable.outFile
+	outFile.append('\nTesting  ' + myTestCase + ' on ' + domain + '.\n\n')
 } else {
-    outFile.append('\nTesting Complete Education Candidate Profile on ' + domain + mobile + '\n')
+	outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+	outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
+	GlobalVariable.outFile = outFile
 }
+
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -330,9 +309,24 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) 
         FailureHandling.CONTINUE_ON_FAILURE)
 }
 
-if (!(called)) {
-    //Leave the browser open if this script was called from another script
-    //	WebUI.closeBrowser()
-}
+WebUI.closeBrowser()
 
-return pages
+if(pages == null || pages.size() == 0 || pages == 'All') {
+	
+	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Education Partnership', false)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Education Partner was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'	
+		KeywordUtil.markError('\n' + outText)
+	}
+	outFile.append(outText + '\n')
+		
+}
+	
+WebUI.closeBrowser()
+

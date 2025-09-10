@@ -25,6 +25,7 @@ import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -38,7 +39,7 @@ if(username[-3..-1] != '7jp') {
 //######################################################################################################
 registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
-	registerOnly = false
+	registerOnly = true
 	testSuite = true
 }
 //######################################################################################################
@@ -57,8 +58,10 @@ username = GlobalVariable.username
 
 url = (('https://journey.' + domain) + '/signup/organization')
 
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
 // Write results to text file
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Journey Partner on ' + domain + suffix + '.txt')
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -381,8 +384,8 @@ if (found) {
 
 	if (!(registerOnly)) {
 		//================================== Wait until access has been granted (11:00pm ET) ========================
-		WebUI.callTestCase(findTestCase('_Functions/Wait Until Time'), [('varFormat') : "HH", ('varTime') : '23', ('varDelay') : 600],
-			 FailureHandling.CONTINUE_ON_FAILURE)
+//		WebUI.callTestCase(findTestCase('_Functions/Wait Until Time'), [('varFormat') : "HH", ('varTime') : '23', ('varDelay') : 600],
+//			 FailureHandling.CONTINUE_ON_FAILURE)
 
 		//================================== Complete the Education Partner tabs ========================
 		WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
@@ -404,7 +407,21 @@ if (found) {
 			KeywordUtil.markError('\n' + outText)
 		}
 		outFile.append(outText)
+	} else {
+		WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+		
+		found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false)
+		
+		if(found) {
+			outText = '\n***** The login after registering as an Journey Partner was successful. *****'
+			
+		} else {
+			outText = '\n##### The login after registering as an Journey Partner was NOT successful. #####'	
+			KeywordUtil.markError('\n' + outText)
+		}
+		outFile.append(outText + '\n')
 	}
+
 } else {
 	outText = '##### ERROR: Approval pending email was not found.'
 	println(outText)
@@ -412,3 +429,4 @@ if (found) {
 	KeywordUtil.markError('\n' + outText)
 }
 
+WebUI.closeBrowser()

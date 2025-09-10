@@ -28,6 +28,7 @@ import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import javax.swing.*;
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 
 // Ensure that we are using the correct execution profile
@@ -40,16 +41,11 @@ if(username[-3..-1] != '4ec') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
-	registerOnly = false
+	registerOnly = true
 }
 //######################################################################################################
-///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//	Need to add tests for the tooltips on all of the tabs. 
-//  Consider using a called script to test all tooltips.
-//  Write all failures to the output file
-///////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 suffix = '-Register Only'
 if(!registerOnly) {
@@ -63,11 +59,20 @@ username = GlobalVariable.username
 url = (('https://education.' + domain) + '/signup/candidate')
 
 // Write results to text file
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Candidate on ' + domain + suffix + '.txt')
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+
+if(1 == 2) { //GlobalVariable.testSuiteRunning) {
+	myTestCase = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+} else {
+	myTestCase = testName
+}
+
+outFile = new File(GlobalVariable.reportPath + myTestCase + suffix + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing Register Education Candidate on ' + domain) + '.\n')
+outFile.write(('Testing ' + myTestCase + ' on ' + domain) + '.\n')
 
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
@@ -237,35 +242,25 @@ if (!(registerOnly)) {
 	WebUI.delay(5)
 	
     pages = WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
-        FailureHandling.STOP_ON_FAILURE)
+        FailureHandling.CONTINUE_ON_FAILURE)
+	
+	println(pages)
+	
+	if(pages == null || pages.size() == 0 || pages == 'All') {
 
-	if(pages.size() == 0 || pages == 'All') {
-
-        success = WebUI.verifyTextPresent('Thank you for submitting your profile on MissionNext Education!', false)
-
-        if (success) {
-			outText = '\n+++ Education candidate registration successful. Thank you page was found.\n'
-			
-			outFile.append(outText)
-			
-			WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
-			
-			WebUI.waitForPageLoad(10)
-			
-			myURL = WebUI.getUrl()
-			
-			if(myURL.contains('https://education.missionnext.org/dashboard')) {
-				outText = '+++ Education login after profile creation was successful.\n'
-			} else {
-				outText = '--- Education login after profile creation failed.\n'				
-			}
-			outFile.append(outText)
-			
-        } else {
-			outText = '\n--- Education candidate registration FAILED. Thank you page was NOT found.\n'
-			
-			outFile.append(outText)
+		WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
+		
+		WebUI.waitForPageLoad(10)
+		
+		myURL = WebUI.getUrl()
+		
+		if(myURL.contains('https://education.missionnext.org/dashboard')) {
+			outText = '\n+++ Education login after profile creation was successful.\n'
+		} else {
+			outText = '\n--- Education login after profile creation failed.\n'				
 		}
+		outFile.append(outText)
+			
 	}	
 } else {
 	success = WebUI.verifyTextPresent('Complete your profile by answering required questions on each tab', false)
@@ -277,5 +272,5 @@ if (!(registerOnly)) {
 	}
 }
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()
 

@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import javax.swing.*;
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 
 // Set to page(s) to run, or empty or 'All' to run all pages
@@ -39,34 +40,15 @@ if(username[-3..-1] != '5jc') {
 
 domain = GlobalVariable.domain
 
-called = false
-if (binding.hasVariable('varCalled')) {
-	called = varCalled
-}
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-//Check to see if we're writing printed output to a file
-writeFile = false
-
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-
-if(!writeFile) {
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Journey Candidate Profile on ' + 
-	domain) + '.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Complete Journey Candidate Profile on ' + domain) + '\n')
+if(1 == 2) { 	//GlobalVariable.testSuiteRunning || binding.hasVariable('varCalled')) {
+	outFile = GlobalVariable.outFile
+	outFile.append('\nTesting  ' + myTestCase + ' on ' + domain + '.\n\n')
 } else {
-	outFile.append(('\nTesting Complete Journey Candidate Profile on ' + domain) + '\n')
-	
+	outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+	outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
+	GlobalVariable.outFile = outFile
 }
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
@@ -75,12 +57,12 @@ if (url == null) {
     WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-dashboard = WebUI.verifyElementPresent(findTestObject('Journey Candidate Profile/Dashboard/a_My Profile'), 2, 
-    FailureHandling.OPTIONAL)
+dashboard = WebUI.verifyElementPresent(findTestObject('Journey Candidate Profile/Dashboard/a_My Profile'), 2, FailureHandling.OPTIONAL)
 
-if(dashboard) { 
-        WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_My Profile'))
+if (dashboard) {
+    WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_My Profile'))
 }
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
@@ -328,6 +310,21 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
-println(pages)
+WebUI.closeBrowser()
 
-return pages
+
+if(pages == null || pages.size() == 0 || pages == 'All') {
+	
+	WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	myURL = WebUI.getUrl()
+	
+	if(myURL.contains('journey.missionnext.org/dashboard')) {
+		outText = '\n+++ Journey candidate login after profile creation was successful.\n'
+	} else {
+		outText = '\n--- Journey candidate login after profile creation failed.\n'
+	}
+	outFile.append(outText)
+}
+
+WebUI.closeBrowser()

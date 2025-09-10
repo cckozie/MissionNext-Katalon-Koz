@@ -21,9 +21,12 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
+
+domain = GlobalVariable.domain
 
 if(username[-3..-1] != '5jc') {
 	println('The Execution Profile must be set to "Journey Candidate"')
@@ -37,9 +40,12 @@ domain = GlobalVariable.domain
 writeFile = false
 
 // Set output file
-testName = 'Journey Candidate Spouse Experience Tab'
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
+
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -111,7 +117,7 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
 // Set the input fields provided
 if (varSpouse_highest_degree_earned != null) {
 	object = 'Object Repository/Journey Candidate Profile/Tabs/Spouse Experience/select_Spouse Highest Degree Earned'
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectByValue',
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
 		('varObject') : object, ('varParm1') : varSpouse_highest_degree_earned], FailureHandling.STOP_ON_FAILURE)
 }
 

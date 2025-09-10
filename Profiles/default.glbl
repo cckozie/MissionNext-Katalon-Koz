@@ -99,4 +99,9 @@
       <initValue>1</initValue>
       <name>matchPages</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Users/cckozie/Documents/MissionNext/Test Reports/'</initValue>
+      <name>reportPath</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

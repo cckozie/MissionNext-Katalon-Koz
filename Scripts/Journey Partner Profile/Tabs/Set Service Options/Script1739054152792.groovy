@@ -21,22 +21,25 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-// Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if(username[-3..-1] != '7jp') {
-    println('The Execution Profile must be set to "Journey Partner"')
+domain = GlobalVariable.domain
 
-    System.exit(0)
+// Ensure that we are using the correct execution profile
+if(username[-3..-1] != '7jp') {
+	println('The Profile must be set to "Journey Partner"')
+
+	System.exit(0)
 }
 
 // Set output file
-testName = 'Journey Partner Service Options Tab'
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile = GlobalVariable.outFile
 
-lastY = -100
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!

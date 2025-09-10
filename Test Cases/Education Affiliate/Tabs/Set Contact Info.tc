@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Contact Info</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>c0bec9e3-edaa-4c03-84bf-f3d9a61ccda3</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5cf95f32-6d9b-44c6-94c3-b543c9843854</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2030674b-bbca-490e-94ff-9a6b6c1688af</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>5cf95f32-6d9b-44c6-94c3-b543c9843854</id>
+      <masked>false</masked>
+      <name>varRecruiting_fax</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>2030674b-bbca-490e-94ff-9a6b6c1688af</id>
+      <masked>false</masked>
+      <name>varMailing_address</name>
+   </variable>
+</TestCaseEntity>

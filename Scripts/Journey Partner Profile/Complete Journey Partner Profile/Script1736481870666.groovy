@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import javax.swing.*
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Contact Info', 'Organization Info', 'Service Options', 'Readiness', 'Ministry Prefs', 'IT Positions']
@@ -46,6 +47,7 @@ if (binding.hasVariable('varCalled')) {
 	called = varCalled
 }
 
+/*
 //Check to see if we're writing printed output to a file
 writeFile = false
 
@@ -76,6 +78,31 @@ if(!writeFile) {
 	outFile.append(('\nTesting Complete Journey Partner Profile on ' + domain) + '\n')
 	
 }
+*/
+
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+
+outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
+
+GlobalVariable.outFile = outFile
+
+
+
+//.First check to see if access has been granted to the user
+granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
+
+if(granted == false || granted == null) {
+	outText = '##### - ' + username + ' has NOT been granted access. Complete profile script is terminated.'
+	
+	outFile.append(outText + '\n')
+	
+	WebUI.closeBrowser()
+	 
+	System.exit(0)
+}
+
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 println(url)
@@ -284,4 +311,22 @@ if(pages.size() == 0 || 'All' in pages || 'Recruiting Countries' in pages) {
 		, [('varRecruit_from_countries') : countries], FailureHandling.CONTINUE_ON_FAILURE)
 }
 	
+WebUI.closeBrowser()
+
+
+if(pages == null || pages.size() == 0 || pages == 'All') {
 	
+	WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.OPTIONAL)
+	
+	expectedText = WebUI.verifyTextPresent('Hello, The Waconia TEST Journey Partner Organiation', false,FailureHandling.OPTIONAL)
+	
+	if(expectedText) {
+		outText = '+++ Journey partner login after profile completion was successful.\n'
+	} else {
+		outText = '--- Journey partner login after profile completion failed.\n'
+		KeywordUtil.markError('\n' + outText)
+	}
+	outFile.append(outText)
+}
+
+WebUI.closeBrowser()

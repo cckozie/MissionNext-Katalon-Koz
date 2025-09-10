@@ -66,21 +66,14 @@ matchType = 'Job' // Org or Job
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
-println(myTestCase)
+
 if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
-	println(testCaseName)
-	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
-	println(myTestCase)
-	
-//	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 } else {
-
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
-println(myTestCase)
-System.exit(0)
+
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '.txt')

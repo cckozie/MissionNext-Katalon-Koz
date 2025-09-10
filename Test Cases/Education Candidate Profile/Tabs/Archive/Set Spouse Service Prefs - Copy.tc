@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Spouse Service Prefs - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>2315aac7-705d-422f-964a-f2c94b498704</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>11e4b462-a4a9-45b4-a4b8-5a4f9332e33e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>11e4b462-a4a9-45b4-a4b8-5a4f9332e33e</id>
+      <masked>false</masked>
+      <name>varSpouse_preferences_comment</name>
+   </variable>
+</TestCaseEntity>

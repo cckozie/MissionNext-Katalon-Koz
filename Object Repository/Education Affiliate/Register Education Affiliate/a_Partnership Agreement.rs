@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Partnership Agreement</name>
+   <tag></tag>
+   <elementGuidId>2ff7225f-49b7-45c5-83dc-7717fb6f3ee9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='group-1464701251.989']/div[9]/div/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-sm-12.before-note > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>db50a8f3-606f-47be-b144-a8dcb80fd1a3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/welcome-to-missionnext/for-organizations/request-partnership/#partnership-commitment</value>
+      <webElementGuid>c1801f19-4274-4bb4-bb7a-1af3c6dd85cb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>0fe75d33-339a-4693-beb6-1db4643942fa</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Partnership Agreement</value>
+      <webElementGuid>5e4ad1c2-823c-49f9-8f70-093bf3b4af26</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;group-1464701251.989&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-12 before-note&quot;]/a[1]</value>
+      <webElementGuid>badf3eb2-4aae-4d6e-905e-bd1e3ad6aee1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1464701251.989']/div[9]/div/a</value>
+      <webElementGuid>37fb47b6-c1c4-4a4e-9a23-e94786828437</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Partnership Agreement')]</value>
+      <webElementGuid>218439d9-e7d2-4185-9350-e3339e0c8fd0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='References*'])[1]/following::a[1]</value>
+      <webElementGuid>6ba903d4-3cad-473d-acb1-a1831d9151f8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Partnership Agreement*'])[1]/preceding::a[1]</value>
+      <webElementGuid>1d61d9a3-2f08-4073-9617-e00f34a1608f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Partnership Agreement']/parent::*</value>
+      <webElementGuid>c81873c8-af99-49b8-916c-97338e31a94c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/welcome-to-missionnext/for-organizations/request-partnership/#partnership-commitment')]</value>
+      <webElementGuid>5e261206-7adc-4c37-bb19-3eb564f22fa5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[9]/div/a</value>
+      <webElementGuid>7b1b0f6e-391a-4543-b918-6a84788e0d8d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/welcome-to-missionnext/for-organizations/request-partnership/#partnership-commitment' and (text() = 'Partnership Agreement' or . = 'Partnership Agreement')]</value>
+      <webElementGuid>e1726a05-5d22-4772-bda9-3c9d545fced3</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

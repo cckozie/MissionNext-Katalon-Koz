@@ -21,9 +21,12 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
+
+domain = GlobalVariable.domain
 
 if(username[-3..-1] != '5jc') {
     println('The Execution Profile must be set to "Journey Candidate"')
@@ -32,9 +35,11 @@ if(username[-3..-1] != '5jc') {
 }
 
 // Set output file
-testName = 'Journey Candidate Availability Tab'
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 lastY = -100
 

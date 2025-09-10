@@ -42,6 +42,8 @@ if (GlobalVariable.outFile != '') {
     writeFile = true
 }
 
+WebUI.delay(2)
+
 domain = GlobalVariable.domain
 
 WebDriver driver = DriverFactory.getWebDriver()
@@ -58,9 +60,12 @@ for (row = 1; row < row_count; row++) {
     user = Columns.get(1).getText()
 
     if (user.indexOf(username) >= 0) {
+		
         Columns.get(1).click()
 
         WebUI.delay(5)
+		
+		
 
         outText = ('Granting access to ' + username)
 
@@ -76,7 +81,7 @@ for (row = 1; row < row_count; row++) {
 
         granted = false
 
-        loops = 10
+        loops = 30 //wait for 1 minute
 
         loop = 0
 

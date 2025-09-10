@@ -1,0 +1,126 @@
+import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
+import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
+import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
+import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
+import com.kms.katalon.core.model.FailureHandling as FailureHandling
+import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.testobject.TestObject as TestObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+
+if (binding.hasVariable('varUsername')) {
+    username = varUsername
+} else {
+    username = GlobalVariable.username
+}
+
+//Check to see if we're writing printed output also to a file
+writeFile = false
+
+WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+
+if (GlobalVariable.outFile != '') {
+    String myFile = GlobalVariable.outFile
+
+    println(myFile)
+
+    outFile = new File(myFile)
+
+    writeFile = true
+}
+
+domain = GlobalVariable.domain
+
+WebDriver driver = DriverFactory.getWebDriver()
+
+WebElement Table = driver.findElement(By.xpath('//*[@id="default-rezult"]/table'))
+
+List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+
+int row_count = Rows.size()
+
+granted = null
+
+for (row = 1; row < row_count; row++) {
+    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+
+    user = Columns.get(1).getText()
+
+    if (user.indexOf(username) >= 0) {
+		
+        Columns.get(1).click()
+
+        WebUI.delay(5)
+
+        outText = ('Checking access granted status for ' + username)
+
+        println('=====> ' + outText)
+
+        if (writeFile) {
+            outFile.append(outText + '\n')
+        }
+        
+        WebUI.delay(1)
+
+        granted = false
+		
+		status = WebUI.getText(findTestObject('Object Repository/Admin/API Dashboard/span_Access Status'))
+		
+		if(status.contains('GRANTED')) {
+			
+			granted = true
+
+        }
+        
+        if (granted) {
+            outText = ('Access has been granted to ' + username)
+
+            println('=====> ' + outText)
+
+            if (writeFile) {
+                outFile.append(outText + '\n')
+            }
+        } else {
+            outText = ('Access has NOT been granted to ' + username)
+
+            println('=====> ' + outText)
+
+            if (writeFile) {
+                outFile.append(outText + '\n')
+            }
+        }
+        
+        WebUI.click(findTestObject('Object Repository/Admin/API Dashboard/a_Logout'))
+
+        break
+    }
+}
+
+if(granted == null) {
+    outText = ('User ' + username  + ' was not found while checking for access status.')
+
+	println('=====> ' + outText)
+	
+				if (writeFile) {
+					outFile.append(outText + '\n')
+				}
+	
+}
+
+WebUI.closeBrowser()
+
+return granted
+

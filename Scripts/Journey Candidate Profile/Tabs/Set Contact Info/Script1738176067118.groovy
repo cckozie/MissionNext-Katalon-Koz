@@ -21,6 +21,7 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -37,9 +38,11 @@ domain = GlobalVariable.domain
 writeFile = false
 
 // Set output file
-testName = 'Journey Candidate Contact Info Tab'
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!

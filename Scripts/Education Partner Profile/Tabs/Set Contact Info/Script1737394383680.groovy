@@ -18,6 +18,25 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+
+username = GlobalVariable.username
+
+domain = GlobalVariable.domain
+
+// Ensure that we are using the correct execution profile
+if(username[-3..-1] != '6ep') {
+	println('The Execution Profile must be set to "Education Partner"')
+
+	System.exit(0)
+}
+
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
+
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username

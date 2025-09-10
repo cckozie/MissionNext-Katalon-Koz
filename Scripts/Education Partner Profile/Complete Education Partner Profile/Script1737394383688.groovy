@@ -16,6 +16,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 ///#########################################
 ///#########################################
@@ -48,6 +49,7 @@ if (binding.hasVariable('varCalled')) {
 	called = varCalled
 }
 
+/*
 //Check to see if we're writing printed output to a file
 writeFile = false
 
@@ -78,8 +80,33 @@ if(!writeFile) {
 	outFile.append(('\nTesting Complete Education Partner Profile on ' + domain) + '\n')
 	
 }
+*/
+
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+
+outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
+
+GlobalVariable.outFile = outFile
+
+
+//.First check to see if access has been granted to the user
+granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
+
+if(granted == false || granted == null) {
+	outText = '##### - ' + username + ' has NOT been granted access. Complete profile script is terminated.'
+	
+	outFile.append(outText + '\n')
+	
+	System.exit(0)
+}
+
+
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
+
+
 
 if (url == null) {
 	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
@@ -265,4 +292,21 @@ if(pages.size() == 0 || 'All' in pages || 'Recruiting Countries' in pages) {
 	WebUI.callTestCase(findTestCase('Education Partner Profile/Tabs/Set Recruiting Countries')
 		, [('varRecruit_from_countries') : countries], FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+WebUI.closeBrowser()
+
+WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.OPTIONAL)
+
+found = WebUI.verifyTextPresent('Hello, The CCK TEST Education Partner', false, FailureHandling.OPTIONAL)
+
+if(found) {
+	outText = '\n***** The login after registering as an Education Partner was successful. *****'
 	
+} else {
+	outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'
+	KeywordUtil.markError('\n' + outText)
+}
+outFile.append(outText + '\n')
+
+WebUI.closeBrowser()
+

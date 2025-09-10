@@ -30,5 +30,6 @@ class Before_Test_Suite {
 	@BeforeTestSuite
 	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
 		GlobalVariable.testSuiteRunning = true
+		GlobalVariable.reportPath = GlobalVariable.reportPath + '_Test Suites/'
 	}
 }

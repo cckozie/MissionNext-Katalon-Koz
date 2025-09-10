@@ -76,6 +76,10 @@ try {
 	} else if (action == 'verifyElementVisible') {
 		println('Varifying ' + testObject + ' is visible.')
 	    return WebUI.verifyElementVisible(findTestObject(testObject), FailureHandling.OPTIONAL)
+	} else {
+		outText = '####### ERROR: Unknown action "' + varAction + '".'
+		println(outText)
+		outFile.append(outText + '\n')
 	}
 } catch (Exception e) {
 	outText = '####### ERROR: Unable to find test object "' + testObject + '"'

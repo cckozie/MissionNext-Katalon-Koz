@@ -24,25 +24,26 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import org.openqa.selenium.JavascriptExecutor;
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-// Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
+domain = GlobalVariable.domain
+
+// Ensure that we are using the correct execution profile
 if(username[-3..-1] != '7jp') {
-	println('The Execution Profile must be set to "Journey Partner"')
+	println('The Profile must be set to "Journey Partner"')
 
 	System.exit(0)
 }
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
-
-writeFile = false
-
 // Set output file
-testName = 'Journey Partner Readiness Tab'
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
+
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!

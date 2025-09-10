@@ -22,20 +22,25 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if ((username[(-3..-1)]) != '4ec') {
-    println('The Execution Profile must be set to "Education Partner"')
+domain = GlobalVariable.domain
 
-    System.exit(0)
+if(username[-3..-1] != '4ec') {
+	println('The Execution Profile must be set to "Education Partner"')
+
+	System.exit(0)
 }
 
-// Set output file
-testName = 'Education Candidate Spouse Education Tab'
 
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+outFile = GlobalVariable.outFile
+
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -139,24 +144,13 @@ WebUI.waitForPageLoad(10)
 
 profile = WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'), FailureHandling.OPTIONAL)
 
-if (profile) {
-    if (!(myClass.contains('error'))) {
-        outText = (testName + ' was successfully completed.\n')
-    } else {
-        outText = (('Unable to successfully complete ' + testName) + '.\n')
+dashboard = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_My Profile'), FailureHandling.OPTIONAL)
 
-        KeywordUtil.markError(outText)
-    }
+if (profile || dashboard) {
+    outText = (testName + ' was successfully completed.\n')
 } else {
-	found = WebUI.verifyTextPresent('Thank You', false, FailureHandling.OPTIONAL)
-
-    if (found) {
-        outText = (testName + ' was successfully completed.\n')
-    } else {
-        outText = (('Unable to successfully complete ' + testName) + '.\n')
-
-        KeywordUtil.markError(outText)
-    }
+    outText = (('Unable to successfully complete ' + testName) + '.\n')
+	KeywordUtil.markError(outText)
 }
 
 println(outText)

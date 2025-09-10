@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Account Information</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>02126a0c-7db7-488c-adad-7628918a6e0c</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1728817f-fbb5-4aaf-bc26-9521f610a7b0</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>1728817f-fbb5-4aaf-bc26-9521f610a7b0</id>
+      <masked>false</masked>
+      <name>varSettings</name>
+   </variable>
+</TestCaseEntity>

@@ -31,6 +31,7 @@ import org.apache.commons.lang.WordUtils as WordUtils
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
@@ -55,13 +56,18 @@ username = GlobalVariable.username
 
 url = (('https://education.' + domain) + '/signup/organization')
 
+// Write results to text file
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
 // Specify file to contain test case results, update the global variable, and write the first line of text
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner on ' + domain) + 
-'.txt')
+//outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Register Education Partner on ' + domain) + '.txt')
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing Register Education Partner on ' + domain) + '.\n')
+//outFile.write(('Testing Register Education Partner on ' + domain) + '.\n')
+outFile.write(('Testing ' + myTestCase + ' on ' + domain) + '.\n')
+
 
 // Define path to tooltip text images
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/'
@@ -395,7 +401,7 @@ if (emailFound) {
 
     println(outText)
 
-    outFile.append(outText)
+    outFile.append(outText + '\n')
 
     WebUI.closeBrowser()
 
@@ -434,7 +440,7 @@ if (emailFound) {
     } else {
 		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 		
-		found = WebUI.verifyTextPresent('Complete your profile by answering', false)
+		found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Education Partnership', false)
 		
 		if(found) {
 			outText = '\n***** The login after registering as an Education Partner was successful. *****'
@@ -443,7 +449,14 @@ if (emailFound) {
 			outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'	
 			KeywordUtil.markError('\n' + outText)
 		}
+		outFile.append(outText + '\n')
 	}
+} else {
+	outText = '##### ERROR: Approval pending email was not found.'
+	println(outText)
+	outFile.append(outText + '\n')
+	KeywordUtil.markError('\n' + outText)
 }
 
+WebUI.closeBrowser()
 
