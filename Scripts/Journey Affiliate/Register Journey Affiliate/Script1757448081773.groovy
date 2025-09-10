@@ -25,7 +25,7 @@ import java.io.File as File
 username = GlobalVariable.username
 
 if(username[-3..-1] != '3ja') {
-	println('The Execution Profile must be set to "Education Affiliate"')
+	println('The Execution Profile must be set to "Journey Affiliate"')
 
 	System.exit(0)
 }
@@ -64,57 +64,36 @@ outFile.write(('Testing Register Journey Affiliate on ' + GlobalVariable.domain)
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/journey affiliate/'
 
 // Define the folder with the tooltip test objects live
-testObjectFolder = 'Journey Affiliate/Register Journey Affiliate/'
+testObjectFolder = 'Journey Affiliate/Register/'
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
 tooltips = [
 ('dummy') : 'dummy',
 ('Username') : 'img_Username_field-tooltip',
-('Password') : 'img_Password_field-tooltip',
-('Contact Last Name') : 'img_Contact Last Name_field-tooltip',
 ('Contact Email') : 'img_Contact Email_field-tooltip',
-('Abbreviation') : 'img_Abbreviation_field-tooltip',
-('Web Address') : 'img_Web Address_field-tooltip',
-('Description') : 'img_Description_field-tooltip',
-('Board of Directors') : 'img_Board of Directors_field-tooltip',
-('Statement of Faith') : 'img_Statement of Faith_field-tooltip',
-('References') : 'img_References_field-tooltip']
+('Password') : 'img_Password_field-tooltip',
+('Contact Last Name') : 'img_Contact Last Name_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
 ('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.',
+('Email') : 'Your primary email address and must be unique in our database.',
 ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.',
-('Contact Last Name') : 'Person working the website to recruit candidates.',
-('Contact Email') : 'Email address must be unique.',
-('Abbreviation') : 'Used in some displays.',
-('Web Address') : 'Must be a full web address and  begin with https://',
-('Description') : 'Hint: Take a paragraph or two from your website.',
-('Statement of Faith') : 'Give web address where this can be found.',
-('References') : 'Name and contact info of third-party references or send by email.']
+('Contact Last Name') : 'Person working the website to recruit candidates.']
 
 // Define the page's links and the text to search for on the linked page
-pageLinks = [('Affiliated Organizations') : 'Affiliated Organizations', ('Partnership Agreement') : 'Partnership Agreement'
-	, ('Privacy Policy') : 'MissionNext respects the need to maintain the privacy', ('Terms and Conditions') : 'PLEASE READ THESE TERMS AND CONDITIONS']
+pageLinks = [('Partnership Agreement') : 'Partnership Agreement', ('Terms and Conditions') : 'PLEASE READ THESE TERMS AND CONDITIONS',
+	('Privacy Policy') : 'MissionNext respects the need to maintain the privacy of information']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
 ('Username') : 'Username must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.',
-('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.',
 ('Contact Email') : 'Please enter a valid email address.',
+('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.',
 ('Contact First Name') : 'The First Name field is required.',
 ('Contact Last Name') : 'The last name field is required.',
-('Contact Phone') : 'The key contact phone field is required.',
-('City') : 'The city field is required.',
-('State') : 'The state field is required.',
-('Country') : '',	//Currently preselected 
-('Postal/Zip Code') : 'The srvc agency postal/zip code field is required.',
 ('Organization Full Name') : 'The agency full name field is required.',
-('Abbreviation') : 'The abbreviation field is required.',
-('Web Address') : 'The web address field is required.',
-('Board of Directors') : 'The board of directors field is required.',
-('Statement of Faith') : 'The statement of faith field is required.',
-('References') : 'The references field is required.',
 ('Partnership Agreement') : 'The partnership agreement field is required.',
 ('Terms and Conditions') : 'The agree with terms field is required.']
 
@@ -125,7 +104,7 @@ WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : usernam
 //================================== Delete any existing MN emails ====================================
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
 
-//================================== Create the education partner ==================================
+//================================== Create the Journey partner ==================================
 WebUI.openBrowser(url)
 
 WebUI.maximizeWindow()
@@ -134,29 +113,30 @@ WebUI.navigateToUrl(url)
 
 WebUI.waitForPageLoad(10)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/a_Apply Now'))
-object = 'Object Repository/Journey Affiliate/Register Journey Affiliate/a_Apply Now'
+//WebUI.click(findTestObject('Object Repository/Journey Affiliate/Register/a_Apply Now'))
+object = 'Object Repository/Journey Affiliate/Register/a_Apply Now'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.switchToWindowTitle('Education')
+//WebUI.switchToWindowTitle('Journey')
 
-tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Education Affiliate Register'],
+tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : 'Journey Affiliate Register'],
 	FailureHandling.STOP_ON_FAILURE)
 
 tooltipTextMap.each({
 		println(it)
 	})
 
+
 WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImagePath') : tooltipImagePath, ('varTooltips') : tooltips
 	, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder, ('varTooltipTextMap') : tooltipTextMap],
 FailureHandling.CONTINUE_ON_FAILURE)
 
-// Click the other hyperlinks and verify pages opened
-WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Affiliate/Register/'], 
+// Click the hyperlinks and verify pages opened
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Journey Affiliate/Register/'], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
 // Submit the form with all of the fields empty
-object = 'Object Repository/Education Affiliate/Register/button_Sign up'
+object = 'Object Repository/Journey Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(10)
@@ -172,30 +152,29 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
     FailureHandling.CONTINUE_ON_FAILURE)
 
 // Set username, password, and email and then test for the other missing data error messages
-object = 'Object Repository/Education Affiliate/Register/input_Username'
+object = 'Object Repository/Journey Affiliate/Register/input_Username'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.username],
 	FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Password'
+object = 'Object Repository/Journey Affiliate/Register/input_Password'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setEncryptedText', ('varObject') : object
 		, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Contact Email'
+object = 'Object Repository/Journey Affiliate/Register/input_Contact Email'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.email],
 	FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/button_Sign up'
+object = 'Object Repository/Journey Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(10)
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
+//System.exit(0)
 
 // Test for other field messages
-fieldList = ['Contact First Name', 'Contact Last Name', 'Contact Phone', 'Country', 'City', 'State', 'Postal/Zip Code', 
-	'Organization Full Name', 'Abbreviation', 'Web Address', 'Board of Directors', 'Statement of Faith',
-    'References', 'Partnership Agreement', 'Terms and Conditions']
+fieldList = ['Contact First Name', 'Contact Last Name',	'Organization Full Name', 'Partnership Agreement', 'Terms and Conditions']
 
 outText = (('Verifying the field messages for ' + fieldList) + '.\n')
 
@@ -205,51 +184,31 @@ WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varF
     FailureHandling.CONTINUE_ON_FAILURE)
 
 // Fill in the other fields and submit
-object = 'Object Repository/Education Affiliate/Register/input_Password'
+object = 'Object Repository/Journey Affiliate/Register/input_Password'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setEncryptedText', ('varObject') : object
 		, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Contact First Name'
+object = 'Object Repository/Journey Affiliate/Register/input_Contact First Name'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.first_name], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Contact Last Name'
+object = 'Object Repository/Journey Affiliate/Register/input_Contact Last Name'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.last_name], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Contact Title'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
-	, ('varParm1') : GlobalVariable.title], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/input_Contact Phone'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
-	, ('varParm1') : GlobalVariable.phone], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/input_City'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
-	, ('varParm1') : GlobalVariable.city], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/select_State'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
-	, ('varParm1') : GlobalVariable.state], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/input_PostalZip Code'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
-	, ('varParm1') : GlobalVariable.zip], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/input_Organization Full Name'
+object = 'Object Repository/Journey Affiliate/Register/input_Organization Full Name'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.organization_name], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/input_Abbreviation'
+/*
+object = 'Object Repository/Journey Affiliate/Register/input_Abbreviation'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.abbreviation], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Web Address'
+object = 'Object Repository/Journey Affiliate/Register/input_Web Address'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.web_address], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/textarea_Description'
+object = 'Object Repository/Journey Affiliate/Register/textarea_Description'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.description], FailureHandling.STOP_ON_FAILURE)
 
@@ -261,33 +220,33 @@ for (def org : orgs) {
     WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : myObject], FailureHandling.STOP_ON_FAILURE)
 }
 
-object = 'Object Repository/Education Affiliate/Register/input_Board of Directors'
+object = 'Object Repository/Journey Affiliate/Register/input_Board of Directors'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.web_address], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Board of Directors'
+object = 'Object Repository/Journey Affiliate/Register/input_Board of Directors'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.web_address], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/input_Statement of Faith'
+object = 'Object Repository/Journey Affiliate/Register/input_Statement of Faith'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.web_address], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/textarea_References'
+object = 'Object Repository/Journey Affiliate/Register/textarea_References'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object
 	, ('varParm1') : GlobalVariable.references], FailureHandling.STOP_ON_FAILURE)
-
-object = 'Object Repository/Education Affiliate/Register/checkbox_Partnership Agreement'
+*/
+object = 'Object Repository/Journey Affiliate/Register/checkbox_Partnership Agreement'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/checkbox_Terms and Conditions'
+object = 'Object Repository/Journey Affiliate/Register/checkbox_Terms and Conditions'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-object = 'Object Repository/Education Affiliate/Register/button_Sign up'
+object = 'Object Repository/Journey Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 //Verify that the correct Approval Pending page is displayed
-found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
 
 if(found) {
 	outText = '\nThe appropriate Approval Pending page was displayed'
@@ -297,12 +256,14 @@ if(found) {
 	KeywordUtil.markError('\n' + outText)
 }
 
-//================================== Wait for the approval pending email for the new education affiliate =========
+outFile.append(outText + '\n')
+
+//================================== Wait for the approval pending email for the new Journey affiliate =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
 		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
 if (emailFound) {
-	outText = (('Approval request email for ' + username) + ' was found')
+	outText = (('Approval request email for ' + username) + ' was found\n')
 
 	println(outText)
 
@@ -310,22 +271,22 @@ if (emailFound) {
 
 	WebUI.closeBrowser()
 
-	//================================== Grant access for the new education partner ==================================
+	//================================== Grant access for the new Journey partner ==================================
 	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 	
-	//================================== Create a subscriptioon for the new education partner ========================
-	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+	//================================== Create a subscriptioon for the new Journey partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Journey'
 			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
 
-	WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 	
-	found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
 	
 	if(found) {
-		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
+		outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
 		
 	} else {
-		outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
+		outText = '\n##### The login after registering as an Journey Affiliage was NOT successful. #####'
 		KeywordUtil.markError('\n' + outText)
 	}
 	

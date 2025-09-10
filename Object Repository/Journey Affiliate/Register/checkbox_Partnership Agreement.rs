@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Partnership Agreement</name>
+   <name>checkbox_Partnership Agreement</name>
    <tag></tag>
    <elementGuidId>9114b8be-351a-4c30-8f0c-5ce7a0f7d3e9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@id='registration_group1_partnership_agreement']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>#registration_group1_partnership_agreement</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='registration_group1_partnership_agreement']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

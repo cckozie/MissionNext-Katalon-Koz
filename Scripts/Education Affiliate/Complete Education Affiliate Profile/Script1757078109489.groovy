@@ -17,6 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 ///#########################################
 ///#########################################
@@ -27,7 +28,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 ///#########################################
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Settings']
+pages = []
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -48,49 +49,24 @@ called = false
 if (binding.hasVariable('varCalled')) {
 	called = varCalled
 }
-/*
-//Check to see if we're writing printed output to a file
-writeFile = false
 
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-*/
 if(pages.size() == 0 || 'All' in pages) {
 	myTabs = 'All'
 } else {
 	myTabs = pages
 }
 
-/*
-if(!writeFile) {
-	outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Education Affiliate Profile on ' +
-	domain + ' - ' + myTabs + '.txt')
-	
+myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+
+if(1 == 2) { 	//GlobalVariable.testSuiteRunning || binding.hasVariable('varCalled')) {
+	outFile = GlobalVariable.outFile
+	outFile.append('\nTesting  ' + myTestCase + ' on ' + domain + '.\n\n')
+} else {
+	outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+	outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
 	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Complete Education Affiliate Profile on ' + domain) + '\n')
-} else {
-	outFile.append(('\nTesting Complete Education Affiliate Profile on ' + domain) + '\n')
 }
-*/
-
-myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/') + 1)
-
-if(GlobalVariable.testSuiteRunning) {
-	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
-	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
-} else {
-	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
-}
-
-outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
 
 //.First check to see if access has been granted to the user
 granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
@@ -112,15 +88,15 @@ if (url == null) {
 	WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-dashboard = WebUI.verifyElementPresent(findTestObject('Education Affiliate/Dashboard/a_My Profile'), 2,
-	FailureHandling.OPTIONAL)
-
-if(dashboard) {
-		WebUI.click(findTestObject('Object Repository/Education Affiliate/Dashboard/a_My Profile'))
-}
-
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
+	dashboard = WebUI.verifyElementPresent(findTestObject('Education Affiliate/Dashboard/a_My Profile'), 2,
+		FailureHandling.OPTIONAL)
+	
+	if(dashboard) {
+			WebUI.click(findTestObject('Object Repository/Education Affiliate/Dashboard/a_My Profile'))
+	}
+	
 	// Complete the Contact Info tab
 	recruiting_fax = '952-442-1703'
 	
@@ -133,6 +109,13 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Account Information' in pages) {
+	dashboard = WebUI.verifyElementPresent(findTestObject('Education Affiliate/Dashboard/a_My Profile'), 2,
+		FailureHandling.OPTIONAL)
+	
+	if(dashboard) {
+			WebUI.click(findTestObject('Object Repository/Education Affiliate/Dashboard/a_My Profile'))
+	}
+	
 	// Complete the Account Info tab
 	settings = 'Yes'
 	
@@ -144,6 +127,13 @@ if(pages.size() == 0 || 'All' in pages || 'Account Information' in pages) {
 settingsVisible = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Affiliate/Tabs/a_Settings'), FailureHandling.OPTIONAL)
 
 if(settingsVisible && (pages.size() == 0 || 'All' in pages || 'Settings' in pages)) {
+	dashboard = WebUI.verifyElementPresent(findTestObject('Education Affiliate/Dashboard/a_My Profile'), 2,
+		FailureHandling.OPTIONAL)
+	
+	if(dashboard) {
+			WebUI.click(findTestObject('Object Repository/Education Affiliate/Dashboard/a_My Profile'))
+	}
+	
 	//Complete the Service Options tab
 	profile_years = ['2024', '2025', '2026']
 	
@@ -151,6 +141,32 @@ if(settingsVisible && (pages.size() == 0 || 'All' in pages || 'Settings' in page
 	
 	WebUI.callTestCase(findTestCase('Education Affiliate/Tabs/Set Settings'), 
 		[('varProfile_years') : profile_years, ('varVisible_to_public') : visible_to_public], FailureHandling.CONTINUE_ON_FAILURE)
+}	
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+WebUI.closeBrowser()
+
+if(1 == 1 || pages == null || pages.size() == 0 || pages == 'All') {
+	
+	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	WebUI.delay(2)
+	
+	found = WebUI.verifyTextPresent('HELLO, THE CCK TEST09 EDUCATION AFFILATE', false, FailureHandling.OPTIONAL)
+	
+	println(found)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Education Affiliate was NOT successful. #####'
+		KeywordUtil.markError('\n' + outText)
+	}
+	outFile.append(outText + '\n')
+		
 }
 	
-	
+WebUI.closeBrowser()
+
+
