@@ -3,15 +3,15 @@
    <description></description>
    <name>select_Country</name>
    <tag></tag>
-   <elementGuidId>709b9965-40d1-410b-94a4-10ae2b3b414c</elementGuidId>
+   <elementGuidId>6bded76e-16bf-4637-a6ec-1142aa8e427e</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//select[@id='registration_group1_country']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#registration_group1_country</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='registration_group1_country']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>680a677b-a427-4f75-b3f9-ee875c6b30d6</webElementGuid>
+      <webElementGuid>cdebc5de-8a2d-4e03-8d21-189a5592fe21</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-select </value>
-      <webElementGuid>a2db3250-2f7d-4141-b4af-a927e2844402</webElementGuid>
+      <webElementGuid>c46d6f1d-569e-42a4-9c89-4f9bcf3bc45f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>country</value>
-      <webElementGuid>b0a7b124-8d29-4244-b469-9d2a3e52afd4</webElementGuid>
+      <webElementGuid>83ba2ee9-3d97-4720-984b-05f13faae77f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>30</value>
-      <webElementGuid>61b059d0-2a34-4e85-971e-66fe2e421583</webElementGuid>
+      <webElementGuid>a7922c70-d9fc-417c-a7f0-39330c82dd8f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[group1][country]</value>
-      <webElementGuid>1b35f076-ef9a-4987-b02e-18c1dd465f86</webElementGuid>
+      <webElementGuid>ba155e3a-869f-4304-9579-993595757a89</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_group1_country</value>
-      <webElementGuid>81bd20a0-68da-4705-a532-eb04627c75a2</webElementGuid>
+      <webElementGuid>abff35f4-4d5f-4d3b-b85b-3e0429c4f611</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,6 +71,7 @@
       <name>text</name>
       <type>Main</type>
       <value>
+
 United States
 Afghanistan
 Aland Islands
@@ -180,6 +181,7 @@ Kenya
 Kiribati
 Korea-North
 Korea-South
+Kosovo
 Kuwait
 Kyrgyzstan
 Laos
@@ -192,14 +194,14 @@ Liechtenstein
 Lithuania
 Luxembourg
 Macao
-Macedonia
+Macedonia, North
 Madagascar
 Malawi
 Malaysia
 Maldives
 Mali
 Malta
-Marshall  Islands
+Marshall Islands
 Martinique
 Mauritania
 Mauritius
@@ -208,6 +210,7 @@ Micronesia
 Moldova
 Monaco
 Mongolia
+Montenegro
 Montserrat
 Morocco
 Mozambique
@@ -249,17 +252,17 @@ Saint Vincent and the Grenadines
 Samoa
 San Marino
 Sao Tome and Principe
-Saudi  Arabia
+Saudi Arabia
 Senegal
-Serbia and Montenegro
+Serbia
 Seychelles
-Sierra  Leone
+Sierra Leone
 Singapore
 Slovakia
 Slovenia
 Solomon Islands
 Somalia
-South  Africa
+South Africa
 Southern Sudan
 Spain
 Sri Lanka
@@ -289,7 +292,6 @@ United States
 Uruguay
 Uzbekistan
 Vanuatu
-Various
 Vatican City
 Venezuela
 Vietnam
@@ -299,8 +301,9 @@ Western Sahara
 Yemen
 Zambia
 Zimbabwe
+Various
 </value>
-      <webElementGuid>63d95b28-8366-4094-b656-97143712cf19</webElementGuid>
+      <webElementGuid>bb159e95-fbfc-4044-bb41-be5a5e248825</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -308,7 +311,7 @@ Zimbabwe
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_group1_country&quot;)</value>
-      <webElementGuid>f93a912b-2d95-4b7b-903e-b5a03c4c66c3</webElementGuid>
+      <webElementGuid>dabe6322-356c-4c57-865c-e3a75015c9fa</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -316,15 +319,15 @@ Zimbabwe
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@id='registration_group1_country']</value>
-      <webElementGuid>501bb017-a3ea-4da2-95fd-3aa0a80b705e</webElementGuid>
+      <webElementGuid>ff248609-9250-42a6-ad46-09bc16fa4ec6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group1']/div[3]/div[2]/select</value>
-      <webElementGuid>ff5ac02c-eab1-4de4-832b-3f20f265a20e</webElementGuid>
+      <value>//div[@id='group1']/div[5]/div[2]/select</value>
+      <webElementGuid>cbf79078-eae6-47f2-90ce-52a530e74233</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -332,31 +335,39 @@ Zimbabwe
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Country*'])[1]/following::select[1]</value>
-      <webElementGuid>9cfe2def-4305-4ad0-813a-9727d12496c4</webElementGuid>
+      <webElementGuid>ef052d40-0008-4365-b2c6-eaf9d3cb3907</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Last Name*'])[1]/following::select[1]</value>
-      <webElementGuid>542ad8ef-2163-49fb-94da-4a7f600b0e13</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Age Bracket*'])[1]/following::select[2]</value>
+      <webElementGuid>70074211-b9af-4b47-a3cf-bb40f53aeb58</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Best Phone Number*'])[1]/preceding::select[1]</value>
-      <webElementGuid>0aa67e2e-6131-4bc8-b9e0-a80ce7a277fa</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Best Phone Number'])[1]/preceding::select[1]</value>
+      <webElementGuid>3671a530-12aa-4fa5-bbf4-f1605f4e8bc2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Best Way to Contact'])[1]/preceding::select[1]</value>
+      <webElementGuid>2b81a63c-9fa8-4242-a28f-db80068b732c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//select</value>
-      <webElementGuid>346d5ead-375d-4eb5-8da2-b6fedc2e1ded</webElementGuid>
+      <value>//div[5]/div[2]/select</value>
+      <webElementGuid>430e8936-4e22-4940-8dc0-0d275ae042dc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -364,6 +375,7 @@ Zimbabwe
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//select[@name = 'registration[group1][country]' and @id = 'registration_group1_country' and (text() = '
+
 United States
 Afghanistan
 Aland Islands
@@ -473,6 +485,7 @@ Kenya
 Kiribati
 Korea-North
 Korea-South
+Kosovo
 Kuwait
 Kyrgyzstan
 Laos
@@ -485,14 +498,14 @@ Liechtenstein
 Lithuania
 Luxembourg
 Macao
-Macedonia
+Macedonia, North
 Madagascar
 Malawi
 Malaysia
 Maldives
 Mali
 Malta
-Marshall  Islands
+Marshall Islands
 Martinique
 Mauritania
 Mauritius
@@ -501,6 +514,7 @@ Micronesia
 Moldova
 Monaco
 Mongolia
+Montenegro
 Montserrat
 Morocco
 Mozambique
@@ -542,17 +556,17 @@ Saint Vincent and the Grenadines
 Samoa
 San Marino
 Sao Tome and Principe
-Saudi  Arabia
+Saudi Arabia
 Senegal
-Serbia and Montenegro
+Serbia
 Seychelles
-Sierra  Leone
+Sierra Leone
 Singapore
 Slovakia
 Slovenia
 Solomon Islands
 Somalia
-South  Africa
+South Africa
 Southern Sudan
 Spain
 Sri Lanka
@@ -582,7 +596,6 @@ United States
 Uruguay
 Uzbekistan
 Vanuatu
-Various
 Vatican City
 Venezuela
 Vietnam
@@ -592,7 +605,9 @@ Western Sahara
 Yemen
 Zambia
 Zimbabwe
+Various
 ' or . = '
+
 United States
 Afghanistan
 Aland Islands
@@ -702,6 +717,7 @@ Kenya
 Kiribati
 Korea-North
 Korea-South
+Kosovo
 Kuwait
 Kyrgyzstan
 Laos
@@ -714,14 +730,14 @@ Liechtenstein
 Lithuania
 Luxembourg
 Macao
-Macedonia
+Macedonia, North
 Madagascar
 Malawi
 Malaysia
 Maldives
 Mali
 Malta
-Marshall  Islands
+Marshall Islands
 Martinique
 Mauritania
 Mauritius
@@ -730,6 +746,7 @@ Micronesia
 Moldova
 Monaco
 Mongolia
+Montenegro
 Montserrat
 Morocco
 Mozambique
@@ -771,17 +788,17 @@ Saint Vincent and the Grenadines
 Samoa
 San Marino
 Sao Tome and Principe
-Saudi  Arabia
+Saudi Arabia
 Senegal
-Serbia and Montenegro
+Serbia
 Seychelles
-Sierra  Leone
+Sierra Leone
 Singapore
 Slovakia
 Slovenia
 Solomon Islands
 Somalia
-South  Africa
+South Africa
 Southern Sudan
 Spain
 Sri Lanka
@@ -811,7 +828,6 @@ United States
 Uruguay
 Uzbekistan
 Vanuatu
-Various
 Vatican City
 Venezuela
 Vietnam
@@ -821,7 +837,8 @@ Western Sahara
 Yemen
 Zambia
 Zimbabwe
+Various
 ')]</value>
-      <webElementGuid>21b97e3e-6f39-4291-a1a8-fa9cbbce096c</webElementGuid>
+      <webElementGuid>fe4a1257-2cf4-4324-988f-fb9fa3186bbf</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

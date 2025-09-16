@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test External Links - Copy (2)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>20a65fb9-b737-4eb5-a11d-88005f0f533f</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>c8e9a88a-71cb-49d3-9028-e7798f987727</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>c8e9a88a-71cb-49d3-9028-e7798f987727</id>
+      <masked>false</masked>
+      <name>varCallingTab</name>
+   </variable>
+</TestCaseEntity>

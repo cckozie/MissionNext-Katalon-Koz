@@ -3,39 +3,35 @@
    <description></description>
    <name>a_Terms and Conditions</name>
    <tag></tag>
-   <elementGuidId>9ba1e033-9efc-482a-b7f6-1adfdcb31b4c</elementGuidId>
+   <elementGuidId>821d8a18-fa96-4b19-b5ea-7eb2a2c3c215</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='group1']/div[8]/div[4]/a</value>
-      </entry>
-      <entry>
          <key>CSS</key>
-         <value>a[title=&quot;Opens in a new tab&quot;]</value>
+         <value>div.col-sm-offset-3.col-sm-9.after-note > a[title=&quot;Opens in a new tab&quot;]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//a[@title = 'Opens in a new tab' and @target = '_blank' and (text() = 'Terms and Conditions' or . = 'Terms and Conditions')]</value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;group-1595728938.496&quot;]/div[3]/div[4]/a[1]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>860200cb-caa9-4e8a-a8b8-4a151a72c531</webElementGuid>
+      <webElementGuid>2545920e-6cb3-455c-852d-245e19f3c140</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
       <value>https://missionnext.org/terms/</value>
-      <webElementGuid>0c20c765-a7c4-4264-8d28-5f602fd49de1</webElementGuid>
+      <webElementGuid>571ea545-e8ef-4584-b84a-07a10fd962fd</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -43,15 +39,15 @@
       <name>title</name>
       <type>Main</type>
       <value>Opens in a new tab</value>
-      <webElementGuid>d039a796-6c78-47ed-b42a-133ecc8f49fb</webElementGuid>
+      <webElementGuid>dd782dda-22b1-4cc3-8dc7-6101e4dcbb34</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>1a0ef8dc-3ceb-417e-9062-6069a15f10b2</webElementGuid>
+      <webElementGuid>c8236a9b-b244-419b-bf5f-0897e464c03f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -59,23 +55,23 @@
       <name>text</name>
       <type>Main</type>
       <value>Terms and Conditions</value>
-      <webElementGuid>adcfc26e-c26e-4d6a-9f28-dcec82103e19</webElementGuid>
+      <webElementGuid>021b327e-8f96-4d17-af7f-eab0313f83f9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
-      <webElementGuid>b56cc809-6d84-4ba2-9d24-2b4b01761a5d</webElementGuid>
+      <value>id(&quot;group-1595728938.496&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-offset-3 col-sm-9 after-note&quot;]/a[1]</value>
+      <webElementGuid>1f314584-65db-4296-a468-b5929d52d5a5</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group1']/div[8]/div[4]/a</value>
-      <webElementGuid>ea614196-017e-497a-a7d6-531ecfc15aa2</webElementGuid>
+      <value>//div[@id='group-1595728938.496']/div[3]/div[4]/a</value>
+      <webElementGuid>583fcaa2-3bbf-4ae1-a09e-5d97892a6956</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -83,7 +79,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Terms and Conditions')]</value>
-      <webElementGuid>42114921-23fa-40ff-b9c1-737f2496c0b7</webElementGuid>
+      <webElementGuid>5a712d61-fa62-430a-87f4-edcd2ae9bc63</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -91,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Terms and Conditions*'])[1]/following::a[1]</value>
-      <webElementGuid>ec9a1d4d-74da-422b-a9df-51c6d8d4ecda</webElementGuid>
+      <webElementGuid>7abb8e5c-4f77-4654-bcae-146958b30880</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -99,15 +95,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy Policy'])[1]/preceding::a[1]</value>
-      <webElementGuid>30874134-b08f-4b28-821b-3e4637135d38</webElementGuid>
+      <webElementGuid>bc5c45a6-7196-4175-b452-a53fffd38fc6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='All fields are required'])[1]/preceding::a[2]</value>
-      <webElementGuid>1e18d46e-0f9f-40f5-b37d-a33a2adf8314</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All fields with an asterisk are required.'])[1]/preceding::a[2]</value>
+      <webElementGuid>30eee74a-86c2-48c6-a246-e8aafa684f16</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -115,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Terms and Conditions']/parent::*</value>
-      <webElementGuid>8ab8f44c-0b2f-4a21-bfd6-94e3e0951232</webElementGuid>
+      <webElementGuid>6b4dc967-616d-4a5b-8997-d74172d06808</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -123,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionnext.org/terms/')]</value>
-      <webElementGuid>737f1891-2ce9-42a1-9ffb-ac2f9b67639c</webElementGuid>
+      <webElementGuid>4a440c3c-7c8d-4524-adf6-0450214ea1fe</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -131,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[4]/a</value>
-      <webElementGuid>8e0227eb-2d76-4ca5-beec-07f8af66924c</webElementGuid>
+      <webElementGuid>3e64e841-b9b5-40aa-ba3d-8b015649d06f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -139,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionnext.org/terms/' and @title = 'Opens in a new tab' and (text() = 'Terms and Conditions' or . = 'Terms and Conditions')]</value>
-      <webElementGuid>cd087f5e-a683-41f0-a33f-953e6cb2d531</webElementGuid>
+      <webElementGuid>facf3e8b-3a0b-43e7-b282-654a0ffab6a4</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

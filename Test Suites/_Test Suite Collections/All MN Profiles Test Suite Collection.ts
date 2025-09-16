@@ -15,7 +15,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/_Test Suites/Education Candidate Test Suite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/_Test Suites/Education Candidate - Test Suite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -25,7 +25,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/_Test Suites/Education Partner - Register Test Suite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/_Test Suites/Education Partner - Register</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -35,7 +35,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/_Test Suites/Journey Candidate Test Suite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/_Test Suites/Journey Candidate - Test Suite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -45,7 +45,7 @@
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/_Test Suites/Journey Partner - Register Test Suite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/_Test Suites/Journey Partner - Register</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

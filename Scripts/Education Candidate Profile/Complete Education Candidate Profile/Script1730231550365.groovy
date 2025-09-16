@@ -314,9 +314,9 @@ WebUI.closeBrowser()
 
 if(pages == null || pages.size() == 0 || pages == 'All') {
 	
-	WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 	
-	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Education Partnership', false)
+	found = WebUI.verifyTextPresent('HELLO, CKTEST04EC TEST KOSIERACKI', false, FailureHandling.OPTIONAL)
 	
 	if(found) {
 		outText = '\n***** The login after registering as an Education Partner was successful. *****'

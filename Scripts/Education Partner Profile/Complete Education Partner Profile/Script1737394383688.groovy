@@ -297,7 +297,7 @@ WebUI.closeBrowser()
 
 WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.OPTIONAL)
 
-found = WebUI.verifyTextPresent('Hello, The CCK TEST Education Partner', false, FailureHandling.OPTIONAL)
+found = WebUI.verifyTextPresent('HELLO, THE CCK TEST EDUCATION PARTNER', false, FailureHandling.OPTIONAL)
 
 if(found) {
 	outText = '\n***** The login after registering as an Education Partner was successful. *****'

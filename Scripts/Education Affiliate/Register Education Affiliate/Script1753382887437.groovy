@@ -37,27 +37,31 @@ if(GlobalVariable.testSuiteRunning) {
 }
 //######################################################################################################
 //================================== Initialize ===============================================
-// Get the domain and set the url
-domain = GlobalVariable.domain
 
-username = GlobalVariable.username
+suffix = '-Register Only'
+if(!registerOnly) {
+	suffix = '-Full Profile'
+}
+
+domain = GlobalVariable.domain
 
 url = (('https://education.' + domain) + '/education-home/register/')
 
-myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf('/') + 1)
+// Write results to text file
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-if(GlobalVariable.testSuiteRunning) {
-	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
-	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+
+if(1 == 2) { //GlobalVariable.testSuiteRunning) {
+	myTestCase = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 } else {
-	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
+	myTestCase = testName
 }
 
-outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+outFile = new File(GlobalVariable.reportPath + myTestCase + suffix + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write('Running ' + myTestCase + ' on ' + domain + '\n\n')
+outFile.write(('Testing ' + myTestCase + ' on ' + domain) + '.\n')
 
 // Define path to tooltip text images
 tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education affiliate/'
@@ -117,13 +121,13 @@ requiredFieldMsgs = [
 ('Partnership Agreement') : 'The partnership agreement field is required.',
 ('Terms and Conditions') : 'The agree with terms field is required.']
 
-
+/*
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
 //================================== Delete any existing MN emails ====================================
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
-
+*/
 //================================== Create the education partner ==================================
 WebUI.openBrowser(url)
 
@@ -133,7 +137,7 @@ WebUI.navigateToUrl(url)
 
 WebUI.waitForPageLoad(10)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/a_Apply Now'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/a_Apply Now'))
 object = 'Object Repository/Education Affiliate/Register/a_Apply Now'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
@@ -151,7 +155,7 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
 FailureHandling.CONTINUE_ON_FAILURE)
 
 // Click the other hyperlinks and verify pages opened
-WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Affiliate/Register Education Affiliate/'], 
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Affiliate/Register/'], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
 // Submit the form with all of the fields empty

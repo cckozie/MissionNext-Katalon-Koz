@@ -42,6 +42,9 @@ println(objectPath)
 callingTab = varCallingTab
 println(callingTab)
 
+testType = varTestType
+println(testType)
+
 myWindowIndex = WebUI.getWindowIndex()
 
 WebDriver driver = DriverFactory.getWebDriver()
@@ -57,6 +60,7 @@ for(it in pageLinks) {
 	myElement = ('a_' + it.key)
 
 	myText = it.value
+	println(myText)
 
 	object = objectPath + myElement
 	println(object)
@@ -77,6 +81,8 @@ for(it in pageLinks) {
 		
 	}
 	
+	textFound = false
+	
 	if(windowCount == startWindowCount && toURL == fromURL) {
 		
 		outText = '----- Clicking on the ' + it.key + ' link did not open a new page or tab. The link does not work.'
@@ -88,7 +94,7 @@ for(it in pageLinks) {
 		
 //		KeywordUtil.markError('\n' + outText)
 		
-		textFound = false
+//		textFound = false
 		
 	} else {
 		
@@ -96,7 +102,19 @@ for(it in pageLinks) {
 	
 		WebUI.delay(2)
 		
-		textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
+		if(testType != 'URL') {
+		
+			textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
+			
+		} else {
+			url = WebUI.getUrl()
+			[println(url)]
+			
+			if(url.contains(myText)) {
+				
+				textFound = true
+			}
+		}
 	}
 	
 	if (textFound) {

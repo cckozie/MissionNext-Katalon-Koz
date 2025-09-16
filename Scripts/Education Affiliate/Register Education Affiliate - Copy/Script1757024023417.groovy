@@ -51,77 +51,77 @@ WebUI.maximizeWindow()
 
 WebUI.navigateToUrl('https://education.missionnext.org/education-home/register/')
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/a_Apply Now'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/a_Apply Now'))
 object = 'Object Repository/Education Affiliate/Register/a_Apply Now'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.switchToWindowTitle('Education')
 System.exit(0)
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Username'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Username'), 
 	username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Password'), 
+WebUI.setEncryptedText(findTestObject('Object Repository/Education Affiliate/Register/input_Password'), 
     GlobalVariable.password)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Contact First Name'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Contact First Name'), 
     GlobalVariable.first_name)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Contact Last Name'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Contact Last Name'), 
     GlobalVariable.last_name)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Contact Email'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Contact Email'), 
 	GlobalVariable.email)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Contact Phone'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Contact Phone'), 
     GlobalVariable.phone)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_City'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_City'), 
 	GlobalVariable.city)
 
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/select_State'), 
+//WebUI.selectOptionByValue(findTestObject('Object Repository/Education Affiliate/Register/select_State'), 
 //    'Minnesota', true)
 object = 'Object Repository/Education Affiliate/Register/select_AlabamaAlaskaArizonaArkansasCaliforn_3be247'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
 	, ('varParm1') : GlobalVariable.state], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_PostalZip Code'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_PostalZip Code'), 
     GlobalVariable.zip)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Organization Full Name'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Organization Full Name'), 
     GlobalVariable.organization_name)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Abbreviation'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Abbreviation'), 
     GlobalVariable.abbreviation)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Web Address'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Web Address'), 
     GlobalVariable.web_address)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_MissionNext_registrationgroup-1464701_606ca5'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/input_MissionNext_registrationgroup-1464701_606ca5'))
 object = 'Object Repository/Education Affiliate/Register/input_MissionNext_registrationgroup-1464701_606ca5'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Web Address'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/input_Web Address'))
 object = 'Object Repository/Education Affiliate/Register/input_Web Address_registrationgroup-1464701_7a30be'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Board of Directors'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Board of Directors'), 
     GlobalVariable.web_address)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Statement of Faith'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/input_Statement of Faith'), 
     GlobalVariable.web_address)
 
-WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/textarea_References'), 
+WebUI.setText(findTestObject('Object Repository/Education Affiliate/Register/textarea_References'), 
     GlobalVariable.references)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Partnership Agreement_registrationgro_ccbf5d'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/input_Partnership Agreement_registrationgro_ccbf5d'))
 object = 'Object Repository/Education Affiliate/Register/input_Partnership Agreement_registrationgro_ccbf5d'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/input_Terms and Conditions'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/input_Terms and Conditions'))
 object = 'Object Repository/Education Affiliate/Register/input_Terms and Conditions_registrationgrou_fd616e'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register Education Affiliate/button_Sign up'))
+//WebUI.click(findTestObject('Object Repository/Education Affiliate/Register/button_Sign up'))
 object = 'Object Repository/Education Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 

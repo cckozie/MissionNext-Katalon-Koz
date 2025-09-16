@@ -30,7 +30,6 @@ if(GlobalVariable.mobileScreen) {
 	
 	WebUI.delay(1)
 }
-
 WebUI.navigateToUrl('https://education.' + GlobalVariable.domain + '/education-home/login-here/')
 
 WebUI.setText(findTestObject('Object Repository/Education Partner Profile/Login/input_Username'), GlobalVariable.username)

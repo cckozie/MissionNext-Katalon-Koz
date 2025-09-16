@@ -3,15 +3,15 @@
    <description></description>
    <name>input_Password</name>
    <tag></tag>
-   <elementGuidId>a5a27f07-47f2-436f-bff2-4c6585febdd6</elementGuidId>
+   <elementGuidId>6c5e7923-6fb5-4ff0-af40-22346989b5b8</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//input[@id='registration_main_fields_password']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#registration_main_fields_password</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='registration_main_fields_password']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>74eee765-e463-4388-ba61-79e7f8ce8429</webElementGuid>
+      <webElementGuid>ad76cd1b-f29c-41bc-a232-d29dfad18e1c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-password </value>
-      <webElementGuid>9245059a-354e-4176-b498-cc9de73ab311</webElementGuid>
+      <webElementGuid>855d16b6-9445-4b66-b845-f86f4ff55cb2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_main_fields_password</value>
-      <webElementGuid>69aa3142-4055-4b9b-abe9-683511703820</webElementGuid>
+      <webElementGuid>e6cbe7cd-f95e-466d-8bd8-e1de9a42175e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[main_fields][password]</value>
-      <webElementGuid>c6bbe315-186c-4e94-8fb3-45164da44a11</webElementGuid>
+      <webElementGuid>60ab0368-5377-47cf-926f-2c60a6fdf1ca</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>type</name>
       <type>Main</type>
       <value>password</value>
-      <webElementGuid>a7729b76-d9a0-4c86-aa0d-c2029ca22062</webElementGuid>
+      <webElementGuid>6adfbf6f-1bc1-4d04-b265-732184a01a33</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>password</value>
-      <webElementGuid>0d66aabf-4342-44e1-b5cd-fee99049359f</webElementGuid>
+      <webElementGuid>9755fcc5-6217-4e50-9576-9396ca3ff723</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_main_fields_password&quot;)</value>
-      <webElementGuid>dcf935cc-36fb-4939-87ea-10b9c5abc869</webElementGuid>
+      <webElementGuid>35a31756-178d-461a-ad42-f1d19b12bf9c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='registration_main_fields_password']</value>
-      <webElementGuid>78b1cba9-4234-412d-98fa-6a5fd5de9270</webElementGuid>
+      <webElementGuid>cc556aaf-7d83-4ed9-a5e2-648e1bbb666d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main_fields']/div[3]/div[2]/input</value>
-      <webElementGuid>b912a508-3abc-4d1a-81db-139d1e342bfb</webElementGuid>
+      <webElementGuid>4206dd85-e8af-4f26-bb6a-b3ca2eeb42e7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div[2]/input</value>
-      <webElementGuid>fd952e6a-e902-4a2c-8cd6-e51143cad0a3</webElementGuid>
+      <webElementGuid>102a7425-f3d7-46ca-bfac-084699ce8fa3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'registration_main_fields_password' and @name = 'registration[main_fields][password]' and @type = 'password']</value>
-      <webElementGuid>1c0f5183-8843-4a73-9d3f-59c71772d969</webElementGuid>
+      <webElementGuid>ad6e244d-a2d6-4361-a804-e4b68a864761</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

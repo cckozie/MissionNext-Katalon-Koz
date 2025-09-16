@@ -39,7 +39,7 @@ domain) + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing job category selections on Your Ministry Prefs tab for journey jandidate ' + username + ' on ' + domain) + '\n')
+outFile.write(('Testing job category selections on Your Ministry Prefs tab for journey candidate ' + username + ' on ' + domain) + '\n')
 
 WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 

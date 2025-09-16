@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Log In</name>
+   <tag></tag>
+   <elementGuidId>fec95fb0-1787-449c-94e1-a361ed32edb8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@name='wp-submit']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button[name=&quot;wp-submit&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>a19c2a9f-7d53-4b17-904d-b8cc071be63d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>submit</value>
+      <webElementGuid>86c014ab-cec1-414b-8c5e-af2758628cd2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-size-md elementor-button</value>
+      <webElementGuid>4c3a40ef-4752-4fa2-838f-5d43f0c173fb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>wp-submit</value>
+      <webElementGuid>8aa23d95-6f6f-4af0-8c4b-daa121ef02c6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+															Log In
+												</value>
+      <webElementGuid>37230c8a-9276-4181-942c-bb59d51fb88f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-13 elementor-motion-effects-parent&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-1b75ada8 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ac44c17&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-75de8d1b elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2a5bd2e8&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-15c96ab elementor-button-align-center elementor-widget elementor-widget-login&quot;]/div[@class=&quot;elementor-widget-container&quot;]/form[@class=&quot;elementor-login elementor-form&quot;]/div[@class=&quot;elementor-form-fields-wrapper&quot;]/div[@class=&quot;elementor-field-group elementor-column elementor-field-type-submit elementor-col-100&quot;]/button[@class=&quot;elementor-size-md elementor-button&quot;]</value>
+      <webElementGuid>310b9b2a-05a4-40b6-aca4-9542e4eed33b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//button[@name='wp-submit']</value>
+      <webElementGuid>43ff60f1-5b83-421b-9779-b128f7137210</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[2]/div/div/div/section/div/div[2]/div/div/div/form/div/div[4]/button</value>
+      <webElementGuid>befe536d-1d27-44ef-b888-d2e3d2ce9ad1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::button[1]</value>
+      <webElementGuid>ed0cad9e-efe3-4b37-aab2-cd70da908252</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Lost your password?'])[1]/preceding::button[1]</value>
+      <webElementGuid>8b2a8766-fae6-4a9c-9b7e-e99431f3d099</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//button</value>
+      <webElementGuid>d652cfb9-83dc-4061-90e5-b5e651db1518</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//button[@type = 'submit' and @name = 'wp-submit' and (text() = '
+															Log In
+												' or . = '
+															Log In
+												')]</value>
+      <webElementGuid>086e785d-c05f-42f8-ae07-00cce0e7e020</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

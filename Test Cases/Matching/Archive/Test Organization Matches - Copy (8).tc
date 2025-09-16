@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Organization Matches - Copy (8)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4150d2b5-ef24-4051-bb38-637b01f19b5f</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>53e2ffcc-418c-4c1d-a1bb-a5d585d3db96</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>06282dfa-4d0e-40eb-8e20-aba32214e9e6</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>53e2ffcc-418c-4c1d-a1bb-a5d585d3db96</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>06282dfa-4d0e-40eb-8e20-aba32214e9e6</id>
+      <masked>false</masked>
+      <name>varSite</name>
+   </variable>
+</TestCaseEntity>

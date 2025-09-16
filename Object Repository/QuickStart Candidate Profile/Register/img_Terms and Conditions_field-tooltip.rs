@@ -3,14 +3,14 @@
    <description></description>
    <name>img_Terms and Conditions_field-tooltip</name>
    <tag></tag>
-   <elementGuidId>b4b62e4e-190a-424a-8a90-cdefe04f9e42</elementGuidId>
+   <elementGuidId>088f116c-d9b5-40bc-aa3c-da7de35aa8d2</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;group1&quot;]/div[8]/div[2]/img</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>XPATH</key>
+         <value>//div[@id='group-1595728938.496']/div[3]/div[2]/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -22,15 +22,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>e3c010fd-4442-4077-85f1-b1a1e03a2c53</webElementGuid>
+      <webElementGuid>d0b9de17-316d-48e6-ae76-13f919e6bc41</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>6db9085c-aab1-4d5d-8426-508bb1899c69</webElementGuid>
+      <value>https://quickstart.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
+      <webElementGuid>454e0aa9-ef1b-45ae-be0c-a1b174dc0c4e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -38,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>eec747cc-6734-4943-9f54-357c0a72966c</webElementGuid>
+      <webElementGuid>00373b6f-46d6-44c6-a840-a477e9593b4e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>ebed0793-5591-4a82-9f83-3fe17a4fb329</webElementGuid>
+      <webElementGuid>eabca91b-a03b-486d-8245-60a07d4d134c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -54,46 +54,46 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Please read and agree with MissionNext Terms and Conditions to continue</value>
-      <webElementGuid>3ac82f15-28d4-4c01-b147-290d791b46aa</webElementGuid>
+      <webElementGuid>7be2abfb-c351-4be6-9b89-46b21a7e04af</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;group1&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>71e6a86b-5e8d-40c1-b376-5160b6e7c7bf</webElementGuid>
+      <value>id(&quot;group-1595728938.496&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
+      <webElementGuid>68d92176-b886-4fb6-811f-67bc9c15c09c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group1']/div[8]/div[2]/img</value>
-      <webElementGuid>94648963-ccb8-40b6-99d4-222e20754164</webElementGuid>
+      <value>//div[@id='group-1595728938.496']/div[3]/div[2]/img</value>
+      <webElementGuid>0bc828c9-9532-4af7-8605-e5104d4b7a50</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:img</name>
       <type>Main</type>
-      <value>(//img[@alt='tooltip'])[7]</value>
-      <webElementGuid>c368f996-7ea3-476b-972c-0010aed70d33</webElementGuid>
+      <value>(//img[@alt='tooltip'])[8]</value>
+      <webElementGuid>d8690f99-8e47-40c9-a0d4-65eac0cd0866</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[8]/div[2]/img</value>
-      <webElementGuid>eca50072-7217-445b-bf06-a57f9af5a313</webElementGuid>
+      <value>//div[3]/div[2]/img</value>
+      <webElementGuid>b7e8968e-082f-433e-b0ad-be167706ea1b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//img[@src = 'https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>e3d57805-a91e-4d42-89ee-0923b2057aba</webElementGuid>
+      <value>//img[@src = 'https://quickstart.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
+      <webElementGuid>b52471e9-16f8-4e2e-9f21-9d12098e0e54</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

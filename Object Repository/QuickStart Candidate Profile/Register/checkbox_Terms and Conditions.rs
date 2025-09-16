@@ -3,15 +3,14 @@
    <description></description>
    <name>checkbox_Terms and Conditions</name>
    <tag></tag>
-   <elementGuidId>d03fec8a-0c90-425f-b035-b206330463b5</elementGuidId>
+   <elementGuidId>62d35879-3b17-4df7-95db-38466920b54e</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
       <entry>
          <key>XPATH</key>
          <value>//input[@id='registration_group-1595728938.496_terms_and_conditions']</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>f39adf77-b48e-4abf-991a-7e627abbe9f2</webElementGuid>
+      <webElementGuid>ff2e04f7-c953-4f9c-91d8-c571e3763424</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-boolean </value>
-      <webElementGuid>1a4b4ccb-89a2-4800-aa54-1e1a3be25965</webElementGuid>
+      <webElementGuid>45bf2bd4-a22c-4bd5-9d60-b75fadaf901b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +38,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>terms_and_conditions</value>
-      <webElementGuid>191ca83c-875a-4570-ad56-f02a23918fdb</webElementGuid>
+      <webElementGuid>674f0f88-b4a6-4b69-a43b-17a93631d8b7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>337</value>
-      <webElementGuid>5d06b306-b42a-4778-9ddd-364bbc097416</webElementGuid>
+      <webElementGuid>c6c0c535-b362-4d16-8386-2176e434fdb1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +54,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[group-1595728938.496][terms_and_conditions]</value>
-      <webElementGuid>faf370f1-17d6-4e72-9143-0aec05d15ecd</webElementGuid>
+      <webElementGuid>52c232e5-c820-43f6-80f2-5cacf5024299</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +62,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_group-1595728938.496_terms_and_conditions</value>
-      <webElementGuid>cd88dd37-e09f-480a-bd72-af2c43baebf6</webElementGuid>
+      <webElementGuid>bbcef39e-7830-40e1-b50e-40c05c1821b5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +70,7 @@
       <name>type</name>
       <type>Main</type>
       <value>checkbox</value>
-      <webElementGuid>36b370a4-e8f0-4a58-8b5d-82e0a5c48768</webElementGuid>
+      <webElementGuid>b2f133a2-a0b7-4b85-99b4-3909d33d4c3d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>value</name>
       <type>Main</type>
       <value>1</value>
-      <webElementGuid>2eac9ef1-4f56-4c4a-8af8-90bc6a12d878</webElementGuid>
+      <webElementGuid>7c9cc971-ed9a-4237-b989-ca29ee338517</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_group-1595728938.496_terms_and_conditions&quot;)</value>
-      <webElementGuid>56856da6-b1c5-4af1-830b-ba4586d45de8</webElementGuid>
+      <webElementGuid>4ce32764-fc86-4845-9ba7-5c61acf14d5c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -95,7 +94,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='registration_group-1595728938.496_terms_and_conditions']</value>
-      <webElementGuid>f909be83-1ef0-4dbd-800d-c2925157d0c7</webElementGuid>
+      <webElementGuid>609377a8-8cdf-4675-8add-948a1a46b637</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +102,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1595728938.496']/div[3]/div[3]/input</value>
-      <webElementGuid>dd23bb15-357e-435a-a394-9d42a115c727</webElementGuid>
+      <webElementGuid>b80fe658-709f-4998-85ef-841e804b182d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +110,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/div[3]/div[3]/input</value>
-      <webElementGuid>6ae21413-1d68-4a3e-ad7e-4f7522188155</webElementGuid>
+      <webElementGuid>c0e3cf9f-39c2-449e-a844-67e97a583c7d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +118,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@name = 'registration[group-1595728938.496][terms_and_conditions]' and @id = 'registration_group-1595728938.496_terms_and_conditions' and @type = 'checkbox']</value>
-      <webElementGuid>21d69134-c8da-424c-a289-89a9b5959c07</webElementGuid>
+      <webElementGuid>c9555192-e0dc-49d3-8bbd-fe5f5f97e2d0</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

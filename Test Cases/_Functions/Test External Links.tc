@@ -12,11 +12,24 @@
       <value></value>
       <variableId>c7e77606-2ae8-4fad-985b-52e103cb001a</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>fe71ca7d-e0fe-45df-af69-46ea2975085e</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
       <id>c7e77606-2ae8-4fad-985b-52e103cb001a</id>
       <masked>false</masked>
       <name>varCallingTab</name>
+   </variable>
+   <variable>
+      <defaultValue>'Text'</defaultValue>
+      <description></description>
+      <id>fe71ca7d-e0fe-45df-af69-46ea2975085e</id>
+      <masked>false</masked>
+      <name>varTestType</name>
    </variable>
 </TestCaseEntity>

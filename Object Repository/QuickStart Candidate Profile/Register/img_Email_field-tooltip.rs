@@ -3,18 +3,14 @@
    <description></description>
    <name>img_Email_field-tooltip</name>
    <tag></tag>
-   <elementGuidId>967384e4-dd4f-44bf-9842-4886ff7e58fc</elementGuidId>
+   <elementGuidId>5eba4b29-15f3-4efb-b359-ce5e8a3540a3</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
       <entry>
          <key>XPATH</key>
          <value>//div[@id='main_fields']/div[2]/div/img</value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@src = 'https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -26,15 +22,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>3fb6d435-40f2-44cf-92c5-420f33723714</webElementGuid>
+      <webElementGuid>76c11eb1-7cde-4b71-859b-4e6132b12b5a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>
-      <value>https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
-      <webElementGuid>dd010f28-aef0-4db1-941d-9440dd1d4122</webElementGuid>
+      <value>https://quickstart.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png</value>
+      <webElementGuid>38cd0080-85c1-460b-bfc6-9cc9808d6e62</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -42,7 +38,7 @@
       <name>class</name>
       <type>Main</type>
       <value>field-tooltip</value>
-      <webElementGuid>2ca407e0-4871-4129-acdb-e78bcfb9484a</webElementGuid>
+      <webElementGuid>850fbfa8-2223-41d6-9560-75b14da9fa63</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -50,7 +46,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>tooltip</value>
-      <webElementGuid>445ba21c-dfc5-4701-8334-54eb9a714326</webElementGuid>
+      <webElementGuid>892551db-f800-42cb-9320-cb4d7ccc19be</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -58,7 +54,7 @@
       <name>data-original-title</name>
       <type>Main</type>
       <value>Your primary email address and must be unique in our database.</value>
-      <webElementGuid>6e9d7c34-d396-47a5-9fec-46de05d9c7ee</webElementGuid>
+      <webElementGuid>f2493c7e-0e3f-49cd-ae40-4491cd6b41ff</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -66,7 +62,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main_fields&quot;)/div[@class=&quot;form-group&quot;]/div[@class=&quot;col-sm-3&quot;]/img[@class=&quot;field-tooltip&quot;]</value>
-      <webElementGuid>61a4c284-617e-496a-ba14-9d52cbc6b97e</webElementGuid>
+      <webElementGuid>696fb1c4-0c43-4d84-99cb-65ec536c9dce</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -74,7 +70,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main_fields']/div[2]/div/img</value>
-      <webElementGuid>da7d8f32-06ea-49cc-a8e3-8313f4f6526c</webElementGuid>
+      <webElementGuid>be78b9b3-189d-47e3-90ad-723fe77c5245</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -82,7 +78,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>(//img[@alt='tooltip'])[2]</value>
-      <webElementGuid>cd3c411c-8fd6-45d7-95c6-4c6274304ecd</webElementGuid>
+      <webElementGuid>531fba0a-b934-452a-bf84-91d866a4192f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -90,14 +86,14 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/img</value>
-      <webElementGuid>27c688b3-f2a9-43e6-869c-0be89daf4129</webElementGuid>
+      <webElementGuid>9cff10ce-3756-4050-9ec0-e9e662708ae7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//img[@src = 'https://journey.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
-      <webElementGuid>be37a5b9-6b2a-4ebb-b31e-73d36d4d1289</webElementGuid>
+      <value>//img[@src = 'https://quickstart.missionnext.org/wp-content/plugins/MissionNext/resources/images/tooltip.png' and @alt = 'tooltip']</value>
+      <webElementGuid>488abe8a-c060-40ef-9085-04fcd05de36d</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -3,15 +3,15 @@
    <description></description>
    <name>input_Best Phone Number</name>
    <tag></tag>
-   <elementGuidId>b4bd2104-63d8-4bcc-86ea-97d639b198fc</elementGuidId>
+   <elementGuidId>076f65fc-5bb1-4c9d-85d5-c5d89372b529</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//input[@id='registration_group1_cell_phone']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#registration_group1_cell_phone</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='registration_group1_cell_phone']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>2712de34-e964-4285-9b32-a3a3dbe0c88b</webElementGuid>
+      <webElementGuid>5a3ad18b-03b6-41a3-a28e-ac62e923b2e7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-input mn-medium-field</value>
-      <webElementGuid>42158084-7b28-49bb-8d55-2a119fe86f5b</webElementGuid>
+      <webElementGuid>acd3ff7c-a940-4b91-8dfe-1f809614ff2c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>cell_phone</value>
-      <webElementGuid>31277e0d-0b76-4673-aa8b-b9116a07bc4f</webElementGuid>
+      <webElementGuid>d20799ff-9dfb-412c-9095-99ff5e30295c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>34</value>
-      <webElementGuid>573a8c00-dac6-49e7-b011-e18cee36c8a6</webElementGuid>
+      <webElementGuid>d3c51165-f87a-44d6-9423-6850f2564d42</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_group1_cell_phone</value>
-      <webElementGuid>53cb99ee-7e99-4586-9fdf-541502662bd4</webElementGuid>
+      <webElementGuid>57fce74b-f48e-47a9-a9f1-59cce48d41ff</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[group1][cell_phone]</value>
-      <webElementGuid>1f51ed2b-69cc-492e-b1c9-ea75c65b1c4a</webElementGuid>
+      <webElementGuid>5bf8f989-3c21-47c5-9792-4c67b4a76bea</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>b43f4177-171e-4128-b0ff-0fdf4b3d990d</webElementGuid>
+      <webElementGuid>3f8a65cd-678a-4218-bf46-39d34c983898</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>d1c8d43f-3c7c-4c2f-bc9a-6a370ae7d4c9</webElementGuid>
+      <webElementGuid>c50c120f-37e2-4c4a-86c3-68c1db5473a2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_group1_cell_phone&quot;)</value>
-      <webElementGuid>b4bd0b98-f29d-4c4f-9636-97fbe81aeb29</webElementGuid>
+      <webElementGuid>a9380a1d-7f95-4762-8f30-776817b4d9ec</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -95,23 +95,23 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='registration_group1_cell_phone']</value>
-      <webElementGuid>9b6e38af-b536-4ce9-a077-01ef05d7dcb1</webElementGuid>
+      <webElementGuid>c9d83109-c25a-4343-9471-503590cce22f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='group1']/div[4]/div[2]/input</value>
-      <webElementGuid>470c958e-a6eb-4887-bf7c-8edb82537e56</webElementGuid>
+      <value>//div[@id='group1']/div[6]/div[2]/input</value>
+      <webElementGuid>01dd9090-1fa4-4027-a3af-36b7a74bcc6f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[4]/div[2]/input</value>
-      <webElementGuid>312c30a0-c0c7-4ec3-a1ad-22cfa97c69d6</webElementGuid>
+      <value>//div[6]/div[2]/input</value>
+      <webElementGuid>bd9d508f-73a3-4ccd-9b51-674d2a7d2683</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +119,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'registration_group1_cell_phone' and @name = 'registration[group1][cell_phone]' and @type = 'input']</value>
-      <webElementGuid>17adb61e-371a-425e-96f3-429136327224</webElementGuid>
+      <webElementGuid>64a1048e-0ce1-46e0-9ae2-5a4bdfac6c56</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -3,15 +3,15 @@
    <description></description>
    <name>input_Username</name>
    <tag></tag>
-   <elementGuidId>41265fda-c179-4c02-875f-e1548486fcb2</elementGuidId>
+   <elementGuidId>99dbf7cb-0213-40f3-8253-8f98b21a0293</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//input[@id='registration_main_fields_username']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#registration_main_fields_username</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='registration_main_fields_username']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>edcff4fe-c4c7-411f-bdf9-259fd1f82766</webElementGuid>
+      <webElementGuid>c494fe4b-7f9d-4a51-80e1-8b75fa5890de</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-input </value>
-      <webElementGuid>5b3b5215-0cd1-4250-8c83-64dae5ee27ab</webElementGuid>
+      <webElementGuid>f659de05-7294-4393-a866-a1f201fad0be</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_main_fields_username</value>
-      <webElementGuid>64ed9a2a-a85f-44bd-9743-950c84c1770a</webElementGuid>
+      <webElementGuid>d8a817e9-3f0e-41fe-b3f2-c5256396bf4f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[main_fields][username]</value>
-      <webElementGuid>6f9e8423-7fef-4cad-9fa3-8ed4ad84839b</webElementGuid>
+      <webElementGuid>6ff7ff66-be85-4327-b6e1-6ca64ebd0191</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>b59022f8-82d0-45fa-9769-b67c71adb1ff</webElementGuid>
+      <webElementGuid>daaccaf7-9691-4a89-8270-e533d13103ae</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>4b36a0c5-9b11-43e8-9d95-ce53d087e2ce</webElementGuid>
+      <webElementGuid>0e02ec08-1f75-46ec-b14b-e1fe04705c87</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_main_fields_username&quot;)</value>
-      <webElementGuid>9a5f133b-16fe-400b-925c-9d8fdcab7146</webElementGuid>
+      <webElementGuid>08b43c88-e396-4bc3-855e-9dc9a775cb1c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='registration_main_fields_username']</value>
-      <webElementGuid>be159ec9-9e3b-4d60-81a2-3d45467e2033</webElementGuid>
+      <webElementGuid>8d349c88-cbeb-4c26-bf25-1585fefb32bc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main_fields']/div/div[2]/input</value>
-      <webElementGuid>34c5b9c9-74cc-4cbd-bd24-c7d5195c0ce9</webElementGuid>
+      <webElementGuid>e1bdd4da-f744-43f6-adb5-5288d95f596b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//input</value>
-      <webElementGuid>e7a36bbb-0277-48e8-a96e-d1bd27e07d77</webElementGuid>
+      <webElementGuid>b9ff1fac-da47-4685-8876-382e923d74fb</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'registration_main_fields_username' and @name = 'registration[main_fields][username]' and @type = 'input']</value>
-      <webElementGuid>0d046498-eae1-41d6-894e-2d43b332ee21</webElementGuid>
+      <webElementGuid>f2fc42b9-b6ad-4710-b1be-b3a277b81b48</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

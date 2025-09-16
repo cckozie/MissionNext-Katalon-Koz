@@ -47,39 +47,6 @@ if (binding.hasVariable('varCalled')) {
 	called = varCalled
 }
 
-/*
-//Check to see if we're writing printed output to a file
-writeFile = false
-
-if (GlobalVariable.outFile != '') {
-	String myFile = GlobalVariable.outFile
-
-	println(myFile)
-
-	outFile = new File(myFile)
-
-	writeFile = true
-}
-
-if(pages.size() == 0 || 'All' in pages) {
-	myTabs = 'All'
-} else {
-	myTabs = pages
-}
-
-if(!writeFile) {
-	outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Test Complete Journey Partner Profile on ' +
-	domain + ' - ' + myTabs + '.txt')
-	
-	GlobalVariable.outFile = outFile
-	
-	outFile.write(('Testing Complete Journey Partner Profile on ' + domain) + '\n')
-} else {
-	outFile.append(('\nTesting Complete Journey Partner Profile on ' + domain) + '\n')
-	
-}
-*/
-
 myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
 outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
@@ -87,8 +54,6 @@ outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.
 outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
 
 GlobalVariable.outFile = outFile
-
-
 
 //.First check to see if access has been granted to the user
 granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
@@ -110,17 +75,7 @@ println(url)
 if (url == null) {
     WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
-/*
-url = WebUI.getUrl(FailureHandling.OPTIONAL)
-println(url)
 
-
-if(url.indexOf('dashboard') >= 0) {
-	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_My Profile'))
-	
-}
-	
-*/
 dashboard = WebUI.verifyElementPresent(findTestObject('Journey Partner Profile/Dashboard/a_My Profile'), 2,
 	FailureHandling.OPTIONAL)
 
@@ -318,7 +273,7 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	
 	WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.OPTIONAL)
 	
-	expectedText = WebUI.verifyTextPresent('Hello, The Waconia TEST Journey Partner Organiation', false,FailureHandling.OPTIONAL)
+	expectedText = WebUI.verifyTextPresent('HELLO, THE WACONIA TEST JOURNEY PARTNER ORGANIZATION', false,FailureHandling.OPTIONAL)
 	
 	if(expectedText) {
 		outText = '+++ Journey partner login after profile completion was successful.\n'

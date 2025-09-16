@@ -60,8 +60,8 @@ for(i = 0; i < varXpaths.size(); i++) {
 	
 	if(debug) {println('element_count is ' + elements.size())}
 	
-//	for(element in elements) {
-	elements.each {
+	for(it in elements) {
+//	elements.each {
 		element = it
 		
 		myValue = element.getAttribute("value")
@@ -83,6 +83,7 @@ for(i = 0; i < varXpaths.size(); i++) {
 		
 		myType = element.getAttribute("type")	//We need to know if it's checkbox or radio button
 		
+		println(varParms[i])
 		if(myValue in varParms[i]) {	//Is the element's label in the list to be selected?
 			inList = true
 		} else {

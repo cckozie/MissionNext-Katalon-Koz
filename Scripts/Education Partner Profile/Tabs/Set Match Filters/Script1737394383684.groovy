@@ -118,8 +118,8 @@ tooltipText = [
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
-('Formal Education Degree') : 'The school formal education degree field is required.',
-('Classroom Experience') : 'The school classroom experience field is required.',
+('Formal Education Degree') : 'The formal education degree field is required.',
+('Classroom Experience') : 'The classroom experience field is required.',
 ('Formal Teaching Credentials') : 'The has teaching credentials field is required.',
 ('English Proficiency') : 'The english skills field is required.',
 ('Travel Options') : 'The travel support field is required.']

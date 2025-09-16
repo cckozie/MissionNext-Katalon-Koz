@@ -392,6 +392,27 @@ if (pending) {
     KeywordUtil.markError('\n' + outText)
 }
 
+// Test the text per issue #364
+message1 = WebUI.verifyTextPresent('We have received your partnership request and will review the information provided on your Application.', false, FailureHandling.OPTIONAL)
+
+message2 = WebUI.verifyTextPresent('If you completed the Affiliate Application for MissionNext Education, you will be granted access to your account without payment.', false, FailureHandling.OPTIONAL)
+
+if (message1 && message2) {
+	outText = '+++ The correct message texts were found on the Approval Pending page.'
+
+	println(outText)
+
+	outFile.append(outText + '\n\n')
+} else {
+	outText = '--- Failed to find correct message texts were found on the Approval Pending page.'
+
+	println(outText)
+
+	outFile.append(outText + '\n\n')
+
+	KeywordUtil.markError('\n' + outText)
+}
+ 
 //================================== Wait for the approval pending email for the new education partner =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
         , ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)

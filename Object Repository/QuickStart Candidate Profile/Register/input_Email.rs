@@ -3,15 +3,15 @@
    <description></description>
    <name>input_Email</name>
    <tag></tag>
-   <elementGuidId>8efa2e19-76b5-49b7-afbb-c1251f703499</elementGuidId>
+   <elementGuidId>6714781f-c5ab-405b-92fc-2a93c539e2d7</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//input[@id='registration_main_fields_email']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#registration_main_fields_email</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@id='registration_main_fields_email']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>9bbafb5d-2234-4ccf-9a8f-278fdd62da6d</webElementGuid>
+      <webElementGuid>94f98882-65b3-4353-a79a-e36249de05e5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>mn-input </value>
-      <webElementGuid>2039fbaa-4142-4d53-8890-cd19ec79b67b</webElementGuid>
+      <webElementGuid>4f9c9ac9-4bea-4f09-bcd3-2aa3d256ac96</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>id</name>
       <type>Main</type>
       <value>registration_main_fields_email</value>
-      <webElementGuid>44e201a0-ef4b-488e-b1fe-854be04e16b9</webElementGuid>
+      <webElementGuid>5daf33a5-f8c0-4ae9-b7d9-f6df55616ae9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>registration[main_fields][email]</value>
-      <webElementGuid>46fba32c-fd3d-41ae-93c4-51a205ef95a9</webElementGuid>
+      <webElementGuid>822ef9be-8947-4a57-aa9f-d1d26affc64f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>879f26ce-345f-4997-a297-0e01b4dd4d3b</webElementGuid>
+      <webElementGuid>4305dadd-c89c-46c3-8e09-da9b3516e132</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>data-type</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>8f2ea358-0951-41be-b9ad-092894c0cff7</webElementGuid>
+      <webElementGuid>92aa30c3-bd3b-49bf-b70f-365e0fcb51e0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;registration_main_fields_email&quot;)</value>
-      <webElementGuid>d41c0c41-6b48-43ed-8ca2-284b6a9331ac</webElementGuid>
+      <webElementGuid>302cb3d5-531e-43a0-aca6-55dc11adb09f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//input[@id='registration_main_fields_email']</value>
-      <webElementGuid>d0c5d5c6-1026-4e80-8f3c-ae4d4931a79e</webElementGuid>
+      <webElementGuid>ba46d7d4-ade8-4acd-b8cc-f21aef018b16</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main_fields']/div[2]/div[2]/input</value>
-      <webElementGuid>1e7cc7f7-b90e-41d7-bfd9-7b30ee1f5c8e</webElementGuid>
+      <webElementGuid>6635429c-f0c0-41f0-a083-ea652501d2d5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div[2]/input</value>
-      <webElementGuid>11d0d814-6653-4f34-8192-cbcda469453e</webElementGuid>
+      <webElementGuid>6f3a0f78-5aac-491f-bc23-fed2e6023780</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@id = 'registration_main_fields_email' and @name = 'registration[main_fields][email]' and @type = 'input']</value>
-      <webElementGuid>3fa8962c-f8dd-44e3-b95d-179d4e76cf48</webElementGuid>
+      <webElementGuid>28d896dc-07be-4098-9a2e-e8e8faa2833c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>
