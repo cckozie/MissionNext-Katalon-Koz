@@ -310,6 +310,10 @@ if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
 		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+if(pages == null || pages.size() == 0 || pages == 'All') {
+	verifyCategories()
+}
+
 WebUI.closeBrowser()
 
 
@@ -321,10 +325,35 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	
 	if(myURL.contains('journey.missionnext.org/dashboard')) {
 		outText = '\n+++ Journey candidate login after profile creation was successful.\n'
+		
+		outFile.append(outText)
+		
+		verifyCategories()
+		
 	} else {
 		outText = '\n--- Journey candidate login after profile creation failed.\n'
+		
+		outFile.append(outText)
 	}
-	outFile.append(outText)
+	
 }
 
 WebUI.closeBrowser()
+
+def verifyCategories() {
+	categories = ['ADD: SUPPORT PROFESSIONAL', 'ADD: BUSINESS AS MISSION', 'ADD: RELIEF AND DEVELOPMENT']
+	
+	for(category in categories) {
+		
+		found = WebUI.verifyTextPresent(category, false, FailureHandling.OPTIONAL)
+		
+		if(found) {
+			outText = '+++ The text ' + category + ' was found on the dashboard.'
+		} else {
+			outText = '--- The text ' + category + ' was NOT found on the dashboard.'
+		}
+		
+		outFile.append(outText + '\n')
+	}
+
+}

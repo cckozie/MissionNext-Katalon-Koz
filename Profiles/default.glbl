@@ -104,4 +104,9 @@
       <initValue>'/Users/cckozie/Documents/MissionNext/Test Reports/'</initValue>
       <name>reportPath</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Wait time in minutes</description>
+      <initValue>5</initValue>
+      <name>emailWaitTime</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 debug = false
 
@@ -34,12 +35,20 @@ if ((username[(-3..-1)]) != '5jc') {
 
 domain = GlobalVariable.domain
 
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Job Category Selections for Journey Candidate ' + username + ' on ' + 
-domain) + '.txt')
+// Write results to text file
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+
+if(GlobalVariable.testSuiteRunning) {
+	myTestCase = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+} else {
+	myTestCase = testName
+}
+
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing job category selections on Your Ministry Prefs tab for journey candidate ' + username + ' on ' + domain) + '\n')
+outFile.write(('Testing ' + myTestCase + ' on ' + domain) + '.\n')
 
 WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 

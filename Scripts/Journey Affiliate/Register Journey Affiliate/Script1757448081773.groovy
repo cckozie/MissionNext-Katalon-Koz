@@ -270,28 +270,29 @@ if (emailFound) {
 	outFile.append(outText)
 
 	WebUI.closeBrowser()
-
-	//================================== Grant access for the new Journey partner ==================================
-	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-	
-	//================================== Create a subscriptioon for the new Journey partner ========================
-	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Journey'
-			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-	
-	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
-	
-	if(found) {
-		outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
-		
-	} else {
-		outText = '\n##### The login after registering as an Journey Affiliage was NOT successful. #####'
-		KeywordUtil.markError('\n' + outText)
-	}
-	
-	outFile.append(outText + '\n')
-
 }
+
+//================================== Grant access for the new Journey partner ==================================
+WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+
+//================================== Create a subscriptioon for the new Journey partner ========================
+WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Journey'
+		, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+
+found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
+
+if(found) {
+	outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
+	
+} else {
+	outText = '\n##### The login after registering as an Journey Affiliage was NOT successful. #####'
+	KeywordUtil.markError('\n' + outText)
+}
+
+outFile.append(outText + '\n')
+
+
 
 WebUI.closeBrowser()

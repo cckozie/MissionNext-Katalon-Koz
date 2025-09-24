@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Contact Info</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>0d76cc6f-b86e-4e13-9422-155bd8680305</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3b4c83ff-486b-4f24-8a1e-ec555b2cff61</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b1e023c4-45ae-4fb0-83d6-ac631a7b31cc</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>3b4c83ff-486b-4f24-8a1e-ec555b2cff61</id>
+      <masked>false</masked>
+      <name>varComments</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>b1e023c4-45ae-4fb0-83d6-ac631a7b31cc</id>
+      <masked>false</masked>
+      <name>varCountry</name>
+   </variable>
+</TestCaseEntity>

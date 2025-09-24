@@ -26,6 +26,9 @@ import java.time.Duration as Duration
 import java.time.Instant as Instant
 import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import javax.swing.*;
 
 KeywordLogger log = new KeywordLogger()
 
@@ -33,8 +36,20 @@ KeywordLogger log = new KeywordLogger()
 //	Modified to allow fromKey and subjectKey to be lists
 /////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+if(!GlobalVariable.testSuiteRunning) {
+	frame = new JFrame("");
+	JPanel p = new JPanel();
+	JLabel l = new JLabel('Waiting for email ...', SwingConstants.CENTER);
+	frame.add(l);
+	frame.setSize(300, 100);
+	frame.setLocation(600, 0);
+	frame.setAlwaysOnTop (true)
+	frame.show();
+}
+
 //************* Time to wait in minutes ****************
-waitTime = 5 //I've seen it take 10+ minutes
+//waitTime = 5 //In minutes -- I've seen it take 10+ minutes
+waitTime = GlobalVariable.emailWaitTime
 
 scriptStart = new Date()
 
@@ -290,20 +305,20 @@ if (messages.length >= msgCount) {
 	    }
 	}
 }
-//close the folder objects
-emailFolder.close(false)
-			
 if(msgFoundCount == fromKey.size()) {
 	
-	return true
+	retValue = true
 	
+	//close the folder objects
+	emailFolder.close(false)
+			
 } else {
 	
-	return false
+	retValue = false
 	
 	if(msgFoundCount == 0) {
 
-		outText = '#### ' + msgFoundCount + ' emails were received.'
+		outText = '#### ERROR:' + msgFoundCount + ' emails were received.'
 		
 		println(outText)
 	
@@ -316,3 +331,8 @@ if(msgFoundCount == fromKey.size()) {
 	
 store.close()
 
+if(!GlobalVariable.testSuiteRunning) {
+	frame.dispose()
+}
+
+return retValue

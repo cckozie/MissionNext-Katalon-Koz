@@ -142,12 +142,12 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
 object = 'Journey Candidate Profile/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-outText = 'Verifying the required field messages.\n'
-
-outFile.append(outText)
-
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Email', 'Password']
+
+outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+
+outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
@@ -169,6 +169,10 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 
 // Test for first name, last name, and phone number required messages
 fieldList = ['First Name', 'Last Name', 'Country', 'Phone Number', 'Terms and Conditions']
+
+outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+
+outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
@@ -212,6 +216,10 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 
 // Test for terms and conditions required messages
 fieldList = ['Terms and Conditions']
+
+outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+
+outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)

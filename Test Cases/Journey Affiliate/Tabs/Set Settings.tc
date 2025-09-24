@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Settings</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>568bb27e-3cd3-4ff8-99e2-393ad3ad8fd8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>98be795a-0dcd-4027-a280-c999bfde49b4</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>98be795a-0dcd-4027-a280-c999bfde49b4</id>
+      <masked>false</masked>
+      <name>varSettings</name>
+   </variable>
+</TestCaseEntity>

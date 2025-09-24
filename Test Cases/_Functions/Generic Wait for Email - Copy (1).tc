@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Generic Wait for Email - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7a8f53b8-1851-4553-99bf-e0544caeac0d</testCaseGuid>
+</TestCaseEntity>

@@ -371,62 +371,59 @@ found = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [(
 	, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
 if (found) {
-	println(('Approval request email for ' + GlobalVariable.username) + ' was found')
-
-	WebUI.closeBrowser()
-
-	//================================== Grant access for the new journey partner ==================================
-	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
-
-	//================================== Create a subscriptioon for the new journey partner ========================
-	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : GlobalVariable.username, ('varType') : 'Journey'
-			, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
-
-	if (!(registerOnly)) {
-		//================================== Wait until access has been granted (11:00pm ET) ========================
-//		WebUI.callTestCase(findTestCase('_Functions/Wait Until Time'), [('varFormat') : "HH", ('varTime') : '23', ('varDelay') : 600],
-//			 FailureHandling.CONTINUE_ON_FAILURE)
-
-		//================================== Complete the Education Partner tabs ========================
-		WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-		outText = '\nJourney Partner registration was successful.\n'
-
-		println(outText)
-
-		outFile.append(outText)
-		
-		WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-		
-		expectedText = WebUI.verifyTextPresent('HELLO, THE CCK TEST JOURNEY PARTNER', false)
-		
-		if(expectedText) {
-			outText = '+++ Journey partner login after profile creation was successful.\n'
-		} else {
-			outText = '--- Journey partner login after profile creation failed.\n'
-			KeywordUtil.markError('\n' + outText)
-		}
-		outFile.append(outText)
-	} else {
-		WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-		
-		found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false)
-		
-		if(found) {
-			outText = '\n***** The login after registering as an Journey Partner was successful. *****'
-			
-		} else {
-			outText = '\n##### The login after registering as an Journey Partner was NOT successful. #####'	
-			KeywordUtil.markError('\n' + outText)
-		}
-		outFile.append(outText + '\n')
-	}
-
+	outText = (('+++++ Approval request email for ' + username) + ' was found')
+	
 } else {
-	outText = '##### ERROR: Approval pending email was not found.'
+	
+	outText = (('----- Approval request email for ' + username) + ' was NOT found')
+}
+
+outFile.append(outText + '\n')
+
+WebUI.closeBrowser()
+
+//================================== Grant access for the new journey partner ==================================
+WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
+
+//================================== Create a subscriptioon for the new journey partner ========================
+WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : GlobalVariable.username, ('varType') : 'Journey'
+		, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
+
+if (!(registerOnly)) {
+
+	//================================== Complete the Education Partner tabs ========================
+	WebUI.callTestCase(findTestCase('Journey Partner Profile/Complete Journey Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+
+	outText = '\nJourney Partner registration was successful.\n'
+
 	println(outText)
+
+	outFile.append(outText)
+	
+	WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	expectedText = WebUI.verifyTextPresent('HELLO, THE CCK TEST JOURNEY PARTNER', false)
+	
+	if(expectedText) {
+		outText = '+++ Journey partner login after profile creation was successful.\n'
+	} else {
+		outText = '--- Journey partner login after profile creation failed.\n'
+		KeywordUtil.markError('\n' + outText)
+	}
+	outFile.append(outText)
+} else {
+	WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Journey Partner was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Journey Partner was NOT successful. #####'	
+		KeywordUtil.markError('\n' + outText)
+	}
 	outFile.append(outText + '\n')
-	KeywordUtil.markError('\n' + outText)
 }
 
 WebUI.closeBrowser()

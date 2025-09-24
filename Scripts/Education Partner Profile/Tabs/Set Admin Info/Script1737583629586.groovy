@@ -131,15 +131,15 @@ WebUI.click(findTestObject('Education Partner Profile/Tabs/Admin Info/btn_Comple
 WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Admin Info'))
 
 // Test for all required field error messages
-outText = 'Verifying the required field messages.\n'
-
-outFile.append(outText)
-
 fieldList = []
 
 requiredFieldMsgs.each({
 		fieldList.add(it.key)
 	})
+
+outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+
+outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs],
 	FailureHandling.CONTINUE_ON_FAILURE)

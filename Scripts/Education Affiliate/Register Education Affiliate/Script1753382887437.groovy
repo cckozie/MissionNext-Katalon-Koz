@@ -21,6 +21,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.io.File as File
 
 
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 println(username[-3..-1])
@@ -121,13 +122,13 @@ requiredFieldMsgs = [
 ('Partnership Agreement') : 'The partnership agreement field is required.',
 ('Terms and Conditions') : 'The agree with terms field is required.']
 
-/*
+
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
 //================================== Delete any existing MN emails ====================================
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
-*/
+
 //================================== Create the education partner ==================================
 WebUI.openBrowser(url)
 
@@ -305,35 +306,38 @@ emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'
 		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
 if (emailFound) {
-	outText = (('Approval request email for ' + username) + ' was found')
-
-	println(outText)
-
-	outFile.append(outText)
-
-	WebUI.closeBrowser()
-
-	//================================== Grant access for the new education partner ==================================
-	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	outText = (('+++++ Approval request email for ' + username) + ' was found')
 	
-	//================================== Create a subscriptioon for the new education partner ========================
-	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
-			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+} else {
 	
-	found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
-	
-	if(found) {
-		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
-		
-	} else {
-		outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
-		KeywordUtil.markError('\n' + outText)
-	}
-	
-	outFile.append(outText + '\n')
-
+	outText = (('----- Approval request email for ' + username) + ' was NOT found')
 }
 
+outFile.append(outText + '\n')
+
 WebUI.closeBrowser()
+
+WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+
+found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+
+if(found) {
+	outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
+	
+} else {
+	outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
+	KeywordUtil.markError('\n' + outText)
+}
+
+outFile.append(outText + '\n')
+
+WebUI.closeBrowser()
+
+//================================== Grant access for the new education partner ==================================
+WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+
+//================================== Create a subscriptioon for the new education partner ========================
+WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+		, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
+
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Contact Information</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>5c9e3c9f-9980-4657-83e5-44c5c6687be3</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5e7f2870-e7a1-4ec7-b1a8-59e09550facd</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>5e7f2870-e7a1-4ec7-b1a8-59e09550facd</id>
+      <masked>false</masked>
+      <name>varMailing_address</name>
+   </variable>
+</TestCaseEntity>

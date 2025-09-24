@@ -21,7 +21,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Contact Info', 'Availability']
+pages = ['Contact Info','Situation']
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []

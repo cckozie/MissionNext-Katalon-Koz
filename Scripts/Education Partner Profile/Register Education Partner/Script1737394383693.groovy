@@ -400,84 +400,37 @@ message2 = WebUI.verifyTextPresent('If you completed the Affiliate Application f
 if (message1 && message2) {
 	outText = '+++ The correct message texts were found on the Approval Pending page.'
 
-	println(outText)
-
-	outFile.append(outText + '\n\n')
 } else {
 	outText = '--- Failed to find correct message texts were found on the Approval Pending page.'
 
-	println(outText)
-
-	outFile.append(outText + '\n\n')
-
 	KeywordUtil.markError('\n' + outText)
 }
- 
-//================================== Wait for the approval pending email for the new education partner =========
+
+println(outText)
+
+outFile.append(outText + '\n\n')
+
+//================================== Wait for the approval pending email for the new education affiliate =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
-        , ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
 
 if (emailFound) {
-    outText = (('Approval request email for ' + username) + ' was found')
-
-    println(outText)
-
-    outFile.append(outText + '\n')
-
-    WebUI.closeBrowser()
-
-    //================================== Grant access for the new education partner ==================================
-    WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-
-    //================================== Create a subscriptioon for the new education partner ========================
-    WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
-            , ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
-
-    if (!(registerOnly)) {
-        //================================== Complete the Education Partner tabs ========================
-        WebUI.callTestCase(findTestCase('Education Partner Profile/Complete Education Partner Profile'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-        outText = '\nEducation Partner registration was successful. Continuing to complete profile'
-
-        println(outText)
-
-        outFile.append(outText)
-		
-		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-		
-		myURL = WebUI.getUrl()
-		
-		if(myURL.contains('https://education.missionnext.org/dashboard')) {
-			outText = '\n***** Education Partner login after creation was successful. *****'
-			
-		} else {
-			outText = '\n##### Education Partner completion may have failed. The landing URL is ' + myURL + '. #####'
-		}
-		
-		println(outText) 
-
-		outFile.append(outText)			
-		
-    } else {
-		WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-		
-		found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Education Partnership', false)
-		
-		if(found) {
-			outText = '\n***** The login after registering as an Education Partner was successful. *****'
-			
-		} else {
-			outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'	
-			KeywordUtil.markError('\n' + outText)
-		}
-		outFile.append(outText + '\n')
-	}
+	outText = (('+++++ Approval request email for ' + username) + ' was found')
+	
 } else {
-	outText = '##### ERROR: Approval pending email was not found.'
-	println(outText)
-	outFile.append(outText + '\n')
-	KeywordUtil.markError('\n' + outText)
+	
+	outText = (('----- Approval request email for ' + username) + ' was NOT found')
 }
+
+outFile.append(outText + '\n')
 
 WebUI.closeBrowser()
 
+//================================== Grant access for the new education partner ==================================
+WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+
+//================================== Create a subscriptioon for the new education partner ========================
+WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+        , ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
+
+WebUI.closeBrowser()

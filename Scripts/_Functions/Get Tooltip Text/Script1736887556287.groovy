@@ -66,6 +66,8 @@ if(debug) {
 if (fieldTooltips.size() > 0) {
 	
 	rightBorder = xLocation
+	
+	println('rightBorder is ' + rightBorder)
 
 	fieldLabels = [:]
 	
@@ -90,6 +92,8 @@ if (fieldTooltips.size() > 0) {
 			labelLocation = it.getLocation()
 	
 			xLocation = labelLocation.getX()
+			
+//			println('xLocation of ' + label + ' is ' + xLocation)
 			
 			if (xLocation < rightBorder) {
 				yLocation = labelLocation.getY()
@@ -116,30 +120,37 @@ if (fieldTooltips.size() > 0) {
 	i = 0
 	println('Count is ' + fieldTooltips.size())
 //	fieldTooltips.each{
-	println(label + ':' + ttText)
-	if(fieldTooltips.size() == 1) {
+	println(myLabel + ':' + ttText)
+	if(fieldTooltips.size() == 1 && fieldLabels.size() == 1) {
 		tooltipMap.put(myLabel,ttText)
 	} else {
 		for(it in fieldTooltips) {
+			println('it is ' + it)
+			println('labels Y is ' + labelsY)
 			kY = it.key
 			tY = it.value
 			tYi = tY.toInteger() + 4
 			if(fieldLabels.size() > 1) {
-		//		println('tYi is ' + tYi)
-				lY = labelsY[i+1]
+				println('tYi is ' + tYi)
+//				lY = labelsY[i+1]
+				lY = labelsY[i]
 				lYi = lY.toInteger()
-		//		println('lYi is ' + lYi)
-				while(tYi > lYi) {
-					i = i + 1
-					println('i is ' + i)
-					if(i+1 >= fieldLabels.size()) {
-						break
+				println('lYi is ' + lYi)
+				if(Math.abs(tYi - lYi) > 5) {
+					while(tYi > lYi) {
+						i = i + 1
+						println('i is ' + i)
+						if(i+1 >= fieldLabels.size()) {
+							break
+						}
+//						lY = labelsY[i+1]
+						lY = labelsY[i]
+						lYi = lY.toInteger()
+						println('lYi is ' + lYi)
 					}
-					lY = labelsY[i+1]
-					lYi = lY.toInteger()
-		//			println('lYi is ' + lYi)
 				}
 				lY = labelsY[i]
+				println('lY is ' + lY)
 				myKey = fieldLabels.find{ it.value == lY }?.key
 			} else {
 				myKey = label

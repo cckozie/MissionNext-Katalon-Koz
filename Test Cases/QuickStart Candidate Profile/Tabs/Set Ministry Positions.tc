@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Ministry Positions</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e9cfd26a-a6a5-48ff-bf9e-b16de0e9ac64</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0c1edb1c-5994-4bbc-999f-142d2b7a9049</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f131ffc9-c947-4088-8eb5-b8f6f17c1057</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>0c1edb1c-5994-4bbc-999f-142d2b7a9049</id>
+      <masked>false</masked>
+      <name>varPositions</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>f131ffc9-c947-4088-8eb5-b8f6f17c1057</id>
+      <masked>false</masked>
+      <name>varExperiences</name>
+   </variable>
+</TestCaseEntity>

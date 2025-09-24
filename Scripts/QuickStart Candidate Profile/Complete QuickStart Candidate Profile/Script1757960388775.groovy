@@ -22,7 +22,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Set to page(s) to run, or empty or 'All' to run all pages
 //pages = ['Experience','IT Skills and Interest']
-pages = ['Name & Preferences']
+pages = []
 
 
 if(GlobalVariable.testSuiteRunning) {
@@ -83,213 +83,40 @@ if(pages.size() == 0 || 'All' in pages || 'Name & Preferences' in pages) {
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Contact Info' in pages) {
 	// Complete the Contact Info tab
-	gender = 'Male'
-	
-	state = 'Minnesota'
-	
 	country = 'United States'
 	
 	country_of_citizenship = 'United States'
 	
-	birth_year = '1949'
-	
-	marital_status = 'Married'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Contact Info'), [('varGender') : gender
-	        , ('varState') : state, ('varCountry') : country, ('varCountry_of_Citizenship') : country_of_citizenship
-			, ('varBirth_year') : birth_year, ('varMarital_status') : marital_status], FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'Experience' in pages) {
-	// Complete the Experience tab
-	highest_degree = 'Bachelor of Science (BS)'
-	
-	degree_field = 'Electrical Engineering'
-	
-	occupation = 'Business Analyst'
-	
-	cross_cultural = 'Occasionally served in cultures other than my own'
-	
-	life_experience = "I've been a believer for 23 years. I went on a mission trip to train Vietnamese in Bible translation"
-	
-	it_professional = 'Yes'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Experience'), [('varHighest_degree') : highest_degree
-			, ('varDegree_field') : degree_field, ('varOccupation') : occupation, ('varCross_cultural') : cross_cultural
-			, ('varLife_experience') : life_experience, ('varIT_professional') : it_professional],
-		FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'Situation' in pages) {
-	// Complete the Situation tab
-	process_stage = 'I am actively investigating missions'
-	
-	bible_training = 'Some Bible school classes'
-	
-	describe_training = 'I audited some classes at Crown College'
-	
-	perspectives = 'I am planning to take the Perspectives Course'
-	
-	missions_experience = 'I have attended a missions event'
-	
-	interest_in_missionary_training = 'Maybe, need more information'
-	
-	church_affiliated = 'Yes'
-	
-	church_name = 'Parkside Church of the C&MA'
-	
-	church_involvement = 'I am serving in my local church'
-	
-	journey_guide = 'Maybe at a later time'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Situation'), [('varProcess_stage') : process_stage
-			, ('varBible_training') : bible_training, ('varDescribe_training') : describe_training
-			, ('varPerspectives') : perspectives, ('varMissions_experience') : missions_experience
-			, ('varInterest_in_missionary_training') : interest_in_missionary_training, ('varChurch_affiliated') : church_affiliated
-			, ('varChurch_name') : church_name, ('varChurch_involvement') : church_involvement
-			, ('varJourney_guide') : journey_guide], FailureHandling.CONTINUE_ON_FAILURE)
-}
-	
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'Service/Comment' in pages) {
-	// Complete the Service/Comment tab
-	preferred_regions = ['Caribbean', 'Central America', 'Europe, West', 'North America']
-	
-	languages = ['English is a native language']
-	
-	additional_languages = 'Rudementary French'
-	
-	vision_trip = 'Yes'
-	
-	awareness_trip = 'No'
-	
-	comments = 'I did a vision trip to Viet Nam in 2015'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Service-Comment'), [('varPreferred_regions') : preferred_regions
-	        , ('varLanguages') : languages,  ('varAdditional_languages') : additional_languages, ('varVision_trip') : vision_trip
-			, ('varAwareness_trip') : awareness_trip, ('varComments') : comments], FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'IT Skills and Interest' in pages) {
-	
-	// Complete the IT Skills and Interests tab
-	if(!GlobalVariable.fastPath) {
+	comments = 'I am looking forward to finding a good mission opportunity'
 		
-		WebUI.click(findTestObject('Object Repository/QuickStart Candidate Profile/Tabs/a_IT Skills and Interest'))
-		
-		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/QuickStart Candidate Forms/Your Ministry Prefs.csv
-		categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-		[('varFileName') : 'QuickStart Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Job Categories'], FailureHandling.STOP_ON_FAILURE)
-		
-		proficiencies = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-		[('varFileName') : 'QuickStart Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'IT Proficiencies'], FailureHandling.STOP_ON_FAILURE)
-		
-		languages = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-		[('varFileName') : 'QuickStart Candidate Forms/IT Skills and Interest.csv', ('varSelections') : 'Computer Languages'], FailureHandling.STOP_ON_FAILURE)
-	} else {
-		categories = ''
-		proficiencies = ''
-		languages = ''
-	}
-	
-	it_comments = 'My strongest language skills are in Python'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set IT Skills and Interest'), [('varIT_job_categories') : categories
-		, ('varIT_proficiencies') : proficiencies, ('varComputer_languages') : languages, 
-		('varIT_comments') : it_comments], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Contact Info'), [('varCountry') : country, ('varComments') : comments],
+		 FailureHandling.CONTINUE_ON_FAILURE)
 }
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
-	// Complete the Contact Info tab
-	spouse_first_name = 'Jennifer'
-
-	spouse_birth_year = '1951'
-
-	spouse_citizenship_country = 'United States'
-
-	spouse_ethnicity = 'WHITE/CAUCASIAN'
-
-	spouse_serving_with_you = 'Yes'
-
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Spouse Info'), [('varSpouse_first_name') : spouse_first_name
-			, ('varSpouse_birth_year') : spouse_birth_year, ('varSpouse_citizenship_country') : spouse_citizenship_country
-			, ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages)) {
-	// Complete the Contact Info tab
-	spouse_highest_degree_earned = 'Bachelor of Arts (BA)'
-
-	spouse_degree_field = 'Music'
-
-	spouse_occupation = 'At home mom'
-	
-	spouse_bible_training = 'Some Bible school classes'
-	
-	spouse_describe_bible_training = 'Online classes from Hillsdale'
-	
-	spouse_cross_cultural_experience = 'Not served in a culture other than my own'
-	
-	spouse_missions_experience = 'I have attended a missions event'
-	
-	spouse_attended_perspectives = 'I am planning to take the Perspectives Course'
-	
-	spouse_experience = 'Sunday School teacher'
-
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Spouse Experience'), [('varSpouse_highest_degree_earned') : spouse_highest_degree_earned
-		, ('varSpouse_degree_field') : spouse_degree_field, ('varSpouse_occupation') : spouse_occupation
-		, ('varSpouse_bible_training') : spouse_bible_training, ('varSpouse_describe_bible_training') : spouse_describe_bible_training
-		, ('varSpouse_cross_cultural_experience') : spouse_cross_cultural_experience, ('varSpouse_missions_experience') : spouse_missions_experience
-		, ('varSpouse_attended_perspectives') : spouse_attended_perspectives, ('varSpouse_experience') : spouse_experience]
-		, FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Ministry Prefs' in pages)) {
-// Complete the Spouse Service Prefs tab
-	if(!GlobalVariable.fastPath) {
-		// Get the positions preferences from /Users/cckozie/Documents/MissionNext/Education Candidate Forms/spouse service prefs.csv
-		WebUI.click(findTestObject('Object Repository/QuickStart Candidate Profile/Tabs/a_Spouse Ministry Prefs'))
-	
-		positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'), [('varFileName') : 'QuickStart Candidate Forms/spouse ministry prefs.csv'
-				, ('varSelections') : 'Spouse Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
-	} else {
-		positions = ''
-	}
-	
-	spouse_preferences_comment = 'Willing to consider other opportunities'
-
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Spouse Ministry Prefs'), [('varSpouse_preferred_prefs') : positions
-			, ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'Your Ministry Prefs' in pages) {
+if(pages.size() == 0 || 'All' in pages || 'Ministry Positions' in pages) {
 	if(!GlobalVariable.fastPath) {
 		// Complete the Your Ministry Prefs tab
-		WebUI.click(findTestObject('Object Repository/QuickStart Candidate Profile/Tabs/a_Your Ministry Prefs'))
+		WebUI.click(findTestObject('Object Repository/QuickStart Candidate Profile/Tabs/a_Ministry Positions'))
 		
-		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/QuickStart Candidate Forms/Your Ministry Prefs.csv
+		// Get the job categories and preferences from /Users/cckozie/Documents/MissionNext/QuickStart Candidate Forms/Ministry Positions.csv
 		categories = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-		[('varFileName') : 'QuickStart Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Job Categories'], FailureHandling.STOP_ON_FAILURE)
+		[('varFileName') : 'QuickStart Candidate Forms/Ministry Positions.csv', ('varSelections') : 'Job Categories'], FailureHandling.STOP_ON_FAILURE)
 		
 		positions = WebUI.callTestCase(findTestCase('_Functions/Get Selections from CSV File'),
-			[('varFileName') : 'QuickStart Candidate Forms/Your Ministry Prefs.csv', ('varSelections') : 'Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
+			[('varFileName') : 'QuickStart Candidate Forms/Ministry Positions.csv', ('varSelections') : 'Preferred Position(s)'], FailureHandling.STOP_ON_FAILURE)
 		
 	} else {
 		categories = ''
 		positions = ''
 	}
 	
-	other_people_group = 'None'
-	
-	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Your Ministry Prefs'), [('varJob_categories') : categories
-		, ('varPreferred_positions') : positions, ('varOther_people_group') : other_people_group], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('QuickStart Candidate Profile/Tabs/Set Ministry Positions'), [('varJob_categories') : categories
+		, ('varPreferred_positions') : positions], FailureHandling.CONTINUE_ON_FAILURE)
+}
+
+if(pages == null || pages.size() == 0 || pages == 'All') {
+	verifyCategories()
 }
 
 WebUI.closeBrowser()
@@ -301,12 +128,43 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	
 	myURL = WebUI.getUrl()
 	
-	if(myURL.contains('journey.missionnext.org/dashboard')) {
+	println(myURL)
+	
+	userCaps = username.toUpperCase()
+	
+	found = WebUI.verifyTextPresent('HELLO, ' + userCaps + ' TEST KOSIERACKI', false, FailureHandling.OPTIONAL)
+	
+//	if(myURL.contains('quickstart.missionnext.org/profile?requestUri=/dashboard')) {
+	if(found) {
 		outText = '\n+++ QuickStart Candidate login after profile creation was successful.\n'
+		
+		outFile.append(outText)
+		
+		verifyCategories()
+		
 	} else {
 		outText = '\n--- QuickStart Candidate login after profile creation failed.\n'
+		
+		outFile.append(outText)
 	}
-	outFile.append(outText)
 }
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
+
+def verifyCategories() {
+	categories = ['ADD: SUPPORT PROFESSIONAL', 'ADD: BUSINESS AS MISSION', 'ADD: RELIEF AND DEVELOPMENT']
+	
+	for(category in categories) {
+		
+		found = WebUI.verifyTextPresent(category, false, FailureHandling.OPTIONAL)
+		
+		if(found) {
+			outText = '+++ The text ' + category + ' was found on the dashboard.'
+		} else {
+			outText = '--- The text ' + category + ' was NOT found on the dashboard.'
+		}
+		
+		outFile.append(outText + '\n')
+	}
+
+}

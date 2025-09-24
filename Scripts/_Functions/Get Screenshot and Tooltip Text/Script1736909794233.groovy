@@ -54,16 +54,6 @@ if(!GlobalVariable.testSuiteRunning) {
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-/*
-if (WebUI.verifyTextPresent('Partnership Application', false, FailureHandling.OPTIONAL)) {
-    user = 'Partner'
-} else if(WebUI.verifyTextPresent('Positions Needed', false, FailureHandling.OPTIONAL)) {
-   user = 'Partner'
-} else {
-    user = 'Candidate'
-}
-println('User type is ' + user)
-*/
 path = '/Users/cckozie/Documents/MissionNext/Screenshots and Tooltip Text/'
 
 // Set the calling parameter values or defaults
@@ -74,11 +64,6 @@ if (binding.hasVariable('varExtension')) {
 } else {
     extension = ''
 }
-/*
-title = (WebUI.getWindowTitle() + extension)
-
-title = title.replace('/', '_')
-*/
 
 fileBase = path + extension
 

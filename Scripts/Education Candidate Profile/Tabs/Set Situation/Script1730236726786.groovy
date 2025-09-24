@@ -89,7 +89,7 @@ tooltipText = [
 ('Affiliated with a church') : 'This would be a church with a staff member that can provide a reference, if requested.']
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = []	/*	//THE SUBMIT KEY ON ANY TAB WILL CAUSE THESE MESSAGES TO DISAPPEAR
+requiredFieldMsgs = [('Church Involvement') : 'The church involvement field is required.']	/*	//THE SUBMIT KEY ON ANY TAB WILL CAUSE THE OTHER MESSAGES TO DISAPPEAR
 ('Process Stage') : 'The process stage field is required.',
 ('Attended Perspectives?') : 'The attended perspectives field is required.',
 ('Affiliated with a church?') : 'The affiliated with church field is required.'] */
@@ -110,13 +110,15 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
 // Test for all required field error messages
 outText = 'Verifying the required field messages.\n'
 
-outFile.append(outText)
-
 fieldList = []
 
 requiredFieldMsgs.each {
 	fieldList.add(it.key)
 }
+
+outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+
+outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)

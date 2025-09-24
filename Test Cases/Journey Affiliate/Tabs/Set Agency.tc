@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Agency</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>bc79e115-821b-4de1-be03-e0d377956137</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3a4a1532-fe67-49b1-9512-30638771623c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>3a4a1532-fe67-49b1-9512-30638771623c</id>
+      <masked>false</masked>
+      <name>varSettings</name>
+   </variable>
+</TestCaseEntity>

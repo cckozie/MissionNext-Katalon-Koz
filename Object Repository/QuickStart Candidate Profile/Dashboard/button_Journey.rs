@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Journey</name>
+   <tag></tag>
+   <elementGuidId>18711cf7-a0f6-4717-83f4-d3d60607bb38</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;main&quot;]/div/div/div/div[2]/div[2]/div/table[2]/tr[1]/td[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>table.subscriptions-table > tr > td</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>td</value>
+      <webElementGuid>e7dcf347-ee58-4e49-83c1-488e7ac1743d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Journey</value>
+      <webElementGuid>c1634ab8-b6b3-4e68-910e-42119eb1757e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;dashboard-applications&quot;]/div[@class=&quot;col-md-12&quot;]/table[@class=&quot;subscriptions-table&quot;]/tr[1]/td[1]</value>
+      <webElementGuid>ad964626-bcc1-4e1b-a834-19da6009a1ce</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div[2]/div[2]/div/table[2]/tr/td</value>
+      <webElementGuid>8b8d3b8c-1a3e-4f99-ac52-6c252f9289db</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='QuickStart'])[4]/following::td[1]</value>
+      <webElementGuid>43f6b67e-98b7-46c2-b516-a5a4167a2dc5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hello, cktest12qs TEST Kosieracki'])[1]/following::td[3]</value>
+      <webElementGuid>cf37756d-2569-4b52-8ef4-c404f0fd22c6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='More Opportunities'])[1]/preceding::td[1]</value>
+      <webElementGuid>11424072-9a42-48df-9972-d27cbd3c1b79</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//table[2]/tr/td</value>
+      <webElementGuid>c1510039-bab9-461f-ab4b-79226835baff</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//td[(text() = 'Journey' or . = 'Journey')]</value>
+      <webElementGuid>19f29cdc-b58b-465b-9b0c-53747e61a7af</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

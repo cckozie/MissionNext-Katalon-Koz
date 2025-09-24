@@ -245,16 +245,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 's
 object = 'QuickStart Candidate Profile/Register/input_Best Phone Number'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
 	('varObject') : object, ('varParm1') : GlobalVariable.phone_number], FailureHandling.STOP_ON_FAILURE)
-/*
-object = 'QuickStart Candidate Profile/Register/button_Next'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-// Test for terms and conditions required messages
-fieldList = ['Terms and Conditions']
-
-WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
-*/
 //Set the checkboxes and radio buttons
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
@@ -274,6 +265,10 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 
 object = 'Object Repository/QuickStart Candidate Profile/Register/button_Next'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
+
+WebUI.callTestCase(findTestCase('_Functions/QuickStart Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 found = WebUI.verifyTextPresent('Your QuickStart Profile will allow you to view ministry opportunities', false, FailureHandling.OPTIONAL)
 
@@ -308,7 +303,7 @@ if(found) {
 					outText = '--- Journey candidate login after profile creation failed.\n'				
 				}
 				outFile.append(outText)
-				
+								
 	        } else {
 				outText = '\n--- Journey candidate registration FAILED. Thank you page was NOT found.\n'
 				
@@ -325,5 +320,6 @@ if(found) {
 	
 	outFile.append(outText + '\n')
 }
-//WebUI.closeBrowser()
+
+WebUI.closeBrowser()
 
