@@ -6,12 +6,12 @@
    <elementGuidId>65ab0cc8-f2aa-4ea4-b9bc-aad14d7de90c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>p:nth-of-type(4) > table</value>
+         <key>XPATH</key>
+         <value>/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/p[3]/table</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//p[4]/table</value>
+         <key>CSS</key>
+         <value>p:nth-of-type(4) > table</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>table</value>
-      <webElementGuid>fe6eb661-4cfe-41d6-a31a-c1be7275737a</webElementGuid>
+      <webElementGuid>29f68972-6f88-4746-852d-ec5554f8f626</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>cellpadding</name>
       <type>Main</type>
       <value>2</value>
-      <webElementGuid>f96d67b0-c36d-4339-b349-39ad8cd6756d</webElementGuid>
+      <webElementGuid>376802c6-8666-4a60-9501-2ab41d57e740</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -235,7 +235,7 @@
 				None
 				2019-05-30OKmoc_test1
 				27</value>
-      <webElementGuid>169f1b71-a0c8-47d8-8da6-ecd303e5c4ed</webElementGuid>
+      <webElementGuid>6357bea8-6036-4359-bfa0-03e672df55b0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -243,7 +243,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/p[4]/table[1]</value>
-      <webElementGuid>10a29a81-40d2-476b-b046-52aae25d6995</webElementGuid>
+      <webElementGuid>4d593840-1bd4-46db-bf4d-fb75cfef070e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -251,7 +251,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='jbbtest30agcy'])[1]/following::table[1]</value>
-      <webElementGuid>ca3fc8fc-2071-417c-908c-f0bf27016922</webElementGuid>
+      <webElementGuid>1c4e3ec7-d9d8-4d8e-b516-61b574702464</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -259,7 +259,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='OK'])[174]/following::table[1]</value>
-      <webElementGuid>762ffb1e-7a37-4971-8064-db7e7a24acf7</webElementGuid>
+      <webElementGuid>41daf7d0-4a95-48b8-a57b-c71819f3a477</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -267,7 +267,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//p[4]/table</value>
-      <webElementGuid>0f20d54d-902e-478a-ba57-a201103fe109</webElementGuid>
+      <webElementGuid>c811ae46-00da-4422-86dd-a833cc52756b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -667,6 +667,6 @@
 				None
 				2019-05-30OKmoc_test1
 				27')]</value>
-      <webElementGuid>a3b166cc-1f88-42d3-b06e-4836718002d1</webElementGuid>
+      <webElementGuid>d31b97c1-a1e6-4cc2-a31d-fffa4103f128</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -258,20 +258,6 @@ if(found) {
 
 outFile.append(outText + '\n')
 
-//================================== Wait for the approval pending email for the new Journey affiliate =========
-emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
-		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
-
-if (emailFound) {
-	outText = (('Approval request email for ' + username) + ' was found\n')
-
-	println(outText)
-
-	outFile.append(outText)
-
-	WebUI.closeBrowser()
-}
-
 //================================== Grant access for the new Journey partner ==================================
 WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
 
@@ -292,6 +278,21 @@ if(found) {
 }
 
 outFile.append(outText + '\n')
+
+//================================== Wait for the approval pending email for the new Journey affiliate =========
+emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
+		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+
+if (emailFound) {
+	outText = (('Approval request email for ' + username) + ' was found\n')
+
+	println(outText)
+
+	outFile.append(outText)
+
+	WebUI.closeBrowser()
+}
+
 
 
 

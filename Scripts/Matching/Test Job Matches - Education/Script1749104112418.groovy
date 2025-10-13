@@ -33,12 +33,15 @@ import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
 import java.time.Instant as Instant
+import org.openqa.selenium.interactions.Actions
 
 /*	TO DO:
  * Need to save list of recruiting countries and verify all listed candidates have Country of Residence matching the list
  * 	(Maybe force add 'Your Country of Citizenship   Recruit From Countries	5' to the matching scheme) Why isn't it there?
  * Add education jobs to the education profiles and use my education profile(s) for match testing instead of scmnschool
 */
+maxMatches = 100
+
 bypass = false
 
 debug = true
@@ -96,8 +99,6 @@ jobFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/jobprofile.txt'
 
 lastEmailAddress = ''
 
-apiTab = null
-
 if (!(updateWildcards)) {
     candidateWildcards = evaluate(new File((filePath + site) + ' Candidate Wildcards.txt'))
 
@@ -133,8 +134,6 @@ jobMatchFields = []
 // Need to add Recruiting Countries to the match scheme
 matchValues = [:]
 
-//Your Country of Citizenship=[Recruit From Countries, 5, , ]
-//matchValues.put('Your Country of Citizenship', ['Recruit From Countries', '5', '', ''])
 matchValues.put('Recruit From Countries', ['Your Country of Citizenship', '5', '', ''])
 
 matchValuesA = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : matchType], 
@@ -150,7 +149,6 @@ matchValues.each({
         println('\n')
     })
 
-//System.exit(0)
 matchValues.each({ 
         outText = ((((((((it.key + tab) + (it.value[0])) + tab) + (it.value[1])) + tab) + (it.value[2])) + tab) + (it.value[
         3]))
@@ -169,36 +167,17 @@ WebUI.delay(2)
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : null], FailureHandling.STOP_ON_FAILURE)
 
-WebDriver driver = DriverFactory.getWebDriver()
+//WebDriver driver = DriverFactory.getWebDriver()
 
 apiTab = WebUI.getWindowIndex()
 
-println('1:' + driver.getWindowHandles().size())
-
 WebUI.executeJavaScript('window.open();', [])
-
-println('2:' + driver.getWindowHandles().size())
 
 orgTab = (WebUI.getWindowIndex() + 1)
 
 WebUI.switchToWindowIndex(orgTab)
 
-println('3:' + driver.getWindowHandles().size())
-
-println('4:' + driver.getWindowHandles().size())
-
-//WebDriver driver = DriverFactory.getWebDriver()
-println('5:' + driver.getWindowHandles().size())
-
-Screen s = new Screen()
-
-println(apiTab)
-
-println(orgTab)
-
-imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Matching/'
-
-myImage = '/Users/cckozie/Documents/Sikuli/Missionnext/Education Candidate Matches/myFile.png'
+WebUI.closeWindowIndex(apiTab)
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
@@ -212,331 +191,292 @@ if (userMN) {
 
 driver = DriverFactory.getWebDriver()
 
-println('6:' + driver.getWindowHandles().size())
+allCountries = [false, true]
 
-// Click (My Profile)
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
-
-// Click (Recruiting Countries)
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Recruiting Countries'))
-
-// Call (Get Status of Group Elements)
-//xpath of the Recruiting Countries group
-recruiting_countries = "//input[@id='profile_group-1744301635.194_recruit_countries']"
-
-element_list = [] //All elements
-
-checked_only = true
-
-countries = WebUI.callTestCase(findTestCase('_Functions/Get Status of Group Elements'), [varXpath:recruiting_countries, varList: element_list,
-	varCheckedOnly: checked_only], FailureHandling.STOP_ON_FAILURE)
-
-myCountries = []
-
-countries.each{
-	if(debug) {
-		println(it.value)
+for(all in allCountries) {
+		
+	// Click (My Profile)
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
+	
+	// Click (Recruiting Countries)
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Recruiting Countries'))
+	
+	//Scroll to  ALL countries checkbox
+	object = 'Object Repository/Education Partner Profile/Matching/checkbox_All Countries'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'scroll', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	if(all) {
+		WebUI.check(findTestObject('Object Repository/Education Partner Profile/Matching/checkbox_All Countries'))
+		matchValues.put('Recruit From Countries', ['Your Country of Citizenship', '0', '', ''])
+	} else {
+		WebUI.uncheck(findTestObject('Object Repository/Education Partner Profile/Matching/checkbox_All Countries'))
 	}
 	
-	myCountries.add(it.value[0])
+	// Call (Get Status of Group Elements)
+	//xpath of the Recruiting Countries group
+	recruiting_countries = "//input[@id='profile_group-1744301635.194_recruit_countries']"
+	
+	element_list = [] //All elements
+	
+	checked_only = true
+	
+	countries = WebUI.callTestCase(findTestCase('_Functions/Get Status of Group Elements'), [varXpath:recruiting_countries, varList: element_list,
+		varCheckedOnly: checked_only], FailureHandling.STOP_ON_FAILURE)
+	
+	myCountries = []
+	
+	countries.each{
+		if(debug) {
+			println(it.value)
+		}
+		
+		myCountries.add(it.value[0])
+	}
+	
+	outText = 'Recruiting Countries:'
+	
+	println(outText)
+	
+	outFile.append('\n' + outText + '\n')
+	
+	resultsFile.append('\n' + outText + '\n')
+	
+	errorFile.append('\n' + outText + '\n')
+	
+	if(all) {
+		outText = 'ALL'
+	} else {
+		outText = myCountries
+	}
+	
+	println(outText)
+	
+	outFile.append(outText + '\n\n')
+	
+	resultsFile.append(outText + '\n\n')
+	
+	errorFile.append(outText + '\n\n')
+	
+	// Add recruiting countries to selections[:]
+	selections = ['Recruit From Countries' : myCountries]
+	
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/button_Submit'))
+	
+	WebUI.waitForPageLoad(30)
+	
+	WebUI.refresh()
+	
+	WebUI.delay(3)
+	
+//	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Job Matches'))
+	
+	object = 'Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.switchToWindowIndex(1)
+	
+	WebUI.waitForPageLoad(30)
+	
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/a_Matching Category 1'))
+	
+	WebUI.switchToWindowIndex(2)
+	
+	WebUI.waitForPageLoad(30)
+	
+	Robot robot = new Robot()
+	
+	//Select All
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Copy
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	jobProfileFile = new File(jobFile)
+	
+	Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard()
+	
+	String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString()
+	
+	println(data)
+	
+	jobProfileFile.write(data)
+	
+	jobSelections = formatProfile(jobProfileFile, matchValues)
+	
+	outText = '\n\n Job Selections'
+	
+	println(outText)
+	
+	outFile.append(outText + '\n')
+	
+	jobSelections.each({
+			outText = it
+	
+			println(outText)
+	
+			outFile.append(((it.key + ':') + it.value) + '\n')
+		})
+	
+	WebUI.closeWindowIndex(2)
+	
+	WebUI.switchToWindowIndex(1)
+	
+	WebUI.waitForPageLoad(30)
+	
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/button_Matches 1'))
+	
+	WebUI.waitForPageLoad(30)
+	
+	matchTableWindowTitle = WebUI.getWindowTitle()
+	
+	matchTableURL = WebUI.getUrl()
+	
+	myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
+	
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	WebElement Table = driver.findElement(By.xpath(myTable))
+	
+	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+	
+	int row_count = Rows.size() - 6
+	
+	if(maxMatches < row_count) {
+		row_count = maxMatches
+	}
+	
+	found = false
+		
+	if(row_count > 0) {
+		
+		for (row = 3; row < row_count + 3; row++) {
+			
+			println('row is ' + row)
+			
+			List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+		
+			line = Columns.get(0).getText()
+			
+			println('line is ' + line)
+			
+			firstName = Columns.get(2).getText()
+			
+			println('firstName is ' + firstName)
+			
+			lastName = Columns.get(1).getText()
+			
+			println('lastName is ' + lastName)
+			
+			pct = Columns.get(8).getText()
+			
+			println('Table pct is ' + pct)
+			
+			tablePct = pct.toInteger()
+			
+			println('Table percent is ' + tablePct)
+			
+			spyGlass = Columns.get(9)
+			
+			myRow = row + 1
+			
+			element = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody/tr[' + myRow + ']/td[10]/a/img'
+			
+			driver.findElement(By.xpath(element)).click()
+			
+			WebUI.switchToWindowIndex(2)
+			
+			poputWindowTitle = WebUI.getWindowTitle()
+			
+			popupPercent = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/text_Match Percent'))
+			
+			popupPercent = popupPercent.replace('%', '')
+			
+			popupPct = popupPercent.replace(' ', '').toInteger()
+			
+			println('PopupPct percent is ' + popupPct)
+			
+			WebUI.closeWindowTitle(poputWindowTitle)
+			
+			WebUI.switchToWindowIndex(1)
+			
+			WebUI.delay(1)
+	
+			Table = driver.findElement(By.xpath(myTable))
+	
+			Rows = Table.findElements(By.tagName('tr'))
+			
+			Columns = Rows.get(row).findElements(By.tagName('td'))
+			
+			myRow = row + 1
+	
+			element = '//tr[' + myRow + ']/td[2]/a'
+			
+			println(element)
+			
+			driver.findElement(By.xpath(element)).click()
+				
+			WebUI.switchToWindowIndex(2)
+			
+			WebUI.waitForPageLoad(30)
+	
+	        candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Education Profile from Web'), 
+	            [('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
+	
+	        println(candidateFieldValues)
+	
+	        maritalStatus = (candidateFieldValues.get('Marital status')[0])
+	
+	        outText = (((((' \n\nCandidate selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+	
+	        outFile.append(outText + '\n')
+	
+	        println(outText)
+	
+	        candidateFieldValues.each({ 
+	                outText = ((it.key + ':') + it.value)
+	
+	                outFile.append(outText + '\n')
+	
+	                println(outText)
+	            })
+	
+	        if (maritalStatus == 'Married') {
+	            married = true
+	        } else {
+	            married = false
+	        }
+	        
+	        spouseServing = false
+	
+	        doMatching(candidateFieldValues, jobSelections)
+	
+	        WebUI.closeWindowIndex(2)
+			
+			WebUI.switchToWindowIndex(1)
+			
+			WebUI.waitForPageLoad(10)
+	    }
+	}
+	    
+	//Switch to partner dashboard
+	WebUI.closeWindowIndex(1)
+	
+	WebUI.switchToWindowIndex(0)
 }
-
-println(myCountries)
-
-// Add recruiting countries to selections[:]
-selections = ['Recruit From Countries' : myCountries]
-
-WebUI.click(findTestObject(('Object Repository/' + site) + ' Partner Profile/Dashboard/a_Job Matches'))
-
-s.wait(imagePath + 'Add Jobs Button.png', 30)
-
-regButtons = s.find(imagePath + 'Add Jobs Button.png')
-
-regButtons.setH(120)
-
-regButtons.setX(regButtons.getX() - 15)
-
-if (highlight) {
-    regButtons.highlight(2)
-}
-
-img = (imagePath + 'Delete X.png')
-
-s.wait(img, 30)
-
-s.click(img)
-
-WebUI.delay(1)
-
-jobsReg = s.find(imagePath + 'Matching Category.png')
-
-job = new Location(jobsReg.getX() + 10, jobsReg.getY())
-
-println(job.getY())
-
-button = regButtons.find(imagePath + 'Matches Button.png')
-
-//button.setY(button.getY() + 40)
-button.setY(button.getY() // First "Matches" button
-    )
-
-if (highlight) {
-    button.highlight(1)
-}
-
-myButton = button
-
-myY = button.getY()
-
-println('myY is ' + myY)
-
-job.setY(myY + 2)
-
-s.click(job)
-
-s.wait(imagePath + 'Job Close Button', 30)
-
-Robot robot = new Robot()
-
-//Select All
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-WebUI.delay(1)
-
-//Copy
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-jobProfileFile = new File(jobFile)
-
-Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard()
-
-String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString()
-
-println(data)
-
-jobProfileFile.write(data)
-
-jobSelections = formatProfile(jobProfileFile, matchValues)
-
-outText = '\n\n Job Selections'
-
-println(outText)
-
-outFile.append(outText + '\n')
-
-jobSelections.each({ 
-        outText = it
-
-        println(outText)
-
-        outFile.append(((it.key + ':') + it.value) + '\n')
-    })
-
-s.click(imagePath + 'Job Close Button.png')
-
-if (highlight) {
-    myButton.highlight(1)
-}
-
-buttonLoc = new Location(myButton.getX() + 10, myButton.getY() + 10)
-
-s.click(buttonLoc)
-
-matchTableWindowTitle = WebUI.getWindowTitle()
-
-matchTableURL = WebUI.getUrl()
-
-s.wait(imagePath + 'What Matched.png', 30)
-
-regLastName = s.find(imagePath + 'Last Name.png')
-
-regLastName.setW(30)
-
-if (highlight) {
-    regLastName.highlight(1)
-}
-
-regPct = s.find(imagePath + 'Match Percent.png')
-
-regPct.setX(regPct.getX() + 6)
-
-regPct.setH(16)
-
-regPct.setW(regPct.getW() - 8)
-
-if (highlight) {
-    regPct.highlight(1)
-}
-
-//This is the spy glass icon lane
-regMatch = s.find(imagePath + 'What Matched.png')
-
-regMatch.setY(160)
-
-regMatch.setH(810)
-
-wheelCount = 14
-
-wheelCountMax = 18
-
-pageCount = 1
-
-first = true
-
-while (pageCount <= pages) {
-    s.hover(regMatch)
-
-    s.wheel(Mouse.WHEEL_UP, wheelCount)
-
-    WebUI.delay(1)
-
-    wheelCount = wheelCountMax
-
-    WebUI.delay(1)
-
-    if (!(bypass)) {
-        if (highlight) {
-            regMatch.highlight(1)
-        }
-        
-        icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
-
-        iconLocs = [:]
-
-        //Don't know how to sort regions in groovy
-        for (def rg : icons) {
-            iconLocs.put(rg.getY(), rg.getX())
-        }
-        
-        iconLocs = iconLocs.sort()
-
-        for (def it : iconLocs) {
-            rg = new Region(it.value - 5, it.key - 12, 30, 40)
-
-            regPct.setY(it.key + 3)
-
-            if (highlight) {
-                regPct.highlight(3)
-            }
-            
-            tablePct = getRegionText(regPct)
-
-            print('Table percent match is ' + tablePct)
-
-            rg.click()
-
-            s.wait(imagePath + 'What Matched Popup Text.png', 30)
-
-            what = s.find(imagePath + 'What Matched Popup Text.png')
-
-            scrolled = false
-
-            scrollCount = 0
-
-            while (!(s.exists(imagePath + 'Popup Percent Text.png', 1))) {
-                s.hover(imagePath + 'What Matched Popup Text.png')
-
-                s.wheel(Mouse.WHEEL_UP, 2)
-
-                scrollCount = (scrollCount + 2)
-
-                scrolled = true
-            }
-            
-            Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
-
-            pct = s.exists(icn)
-
-            pct.setX(what.getX() + 7)
-
-            pct.setW(50)
-
-            if (highlight) {
-                pct.highlight(1)
-            }
-            
-            popupPct = getRegionText(pct)
-
-            print('Popup percent match is ' + popupPct)
-
-            space = popupPct.indexOf(' ')
-
-            if (space > 0) {
-                popupPct = popupPct.substring(0, space)
-            }
-            
-            print('Popup percent match is ' + popupPct)
-
-            if (scrolled) {
-                s.wheel(Mouse.WHEEL_DOWN, scrollCount)
-            }
-            
-            s.click(imagePath + 'Popup Close Window Button.png')
-
-            name = new Location(regLastName.getX() + 5, regPct.getY() + 3)
-
-            s.click(name)
-
-            s.wait(imagePath + 'Candidate Profile Close Button.png', 30)
-
-            candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Education Profile from Web'), 
-                [('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
-
-            println(candidateFieldValues)
-
-            firstName = (candidateFieldValues.get('First Name')[0])
-
-            lastName = (candidateFieldValues.get('Last Name')[0])
-
-            maritalStatus = (candidateFieldValues.get('Marital status')[0])
-
-            outText = (((((' \n\nCandidate selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
-
-            outFile.append(outText + '\n')
-
-            println(outText)
-
-            candidateFieldValues.each({ 
-                    outText = ((it.key + ':') + it.value)
-
-                    outFile.append(outText + '\n')
-
-                    println(outText)
-                })
-
-            if (maritalStatus == 'Married') {
-                married = true
-            } else {
-                married = false
-            }
-            
-            spouseServing = false
-
-            doMatching(candidateFieldValues, jobSelections)
-
-            s.click(imagePath + 'Candidate Profile Close Button.png')
-        }
-    }
-    
-    pageCount++
-}
-
-//Switch to partner dashboard
-allWindows = driver.getWindowHandles()
-
-driver.switchTo().window(allWindows[1])
 
 if(user != 'cktest16ep') {
 	// Log out of office
@@ -553,59 +493,6 @@ def ifPrint(def msg) {
     }
 }
 
-def getRegionText(def region) {
-    Screen s = new Screen()
-
-    myPct = ''
-
-    loops = 5
-
-    loop = 0
-
-    while ((myPct == '') && (loop < loops)) {
-        capturedFile = s.capture(region).getFile()
-
-        FileUtils.copyFile(new File(capturedFile), new File(myImage))
-
-        sout = new StringBuffer()
-
-        serr = new StringBuffer()
-
-        command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
-
-        command.consumeProcessOutput(sout, serr)
-
-        command.waitForOrKill(2000)
-
-        println('sout is ' + sout)
-
-        println('serr is ' + serr)
-
-        String strSout = sout
-
-        strSout = strSout.replace('%', '')
-
-        if (strSout.isNumber() && (strSout.length() > 0)) {
-            pctMatch = strSout
-
-            break
-        } else {
-            pctMatch = 999
-        }
-        
-        loop++
-
-        WebUI.delay(1)
-
-        myInstant = Instant.now()
-
-        errFile = (('/Users/cckozie/Documents/MissionNext/Fail Screenshots/' + myInstant) + '.png')
-
-        FileUtils.copyFile(new File(capturedFile), new File(errFile))
-    }
-    
-    return pctMatch
-}
 
 def formatProfile(def file, def matchFields) {
     reader = new BufferedReader(new FileReader(file))

@@ -53,7 +53,10 @@ try {
 	    WebUI.delay(1)
 	}
 	
-	if (action == 'click') {
+	if (action == 'scroll') {
+	    println('scrolling')
+		
+	} else if (action == 'click') {
 	    println('clicking')
 	    WebUI.click(findTestObject(testObject))
 		

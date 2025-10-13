@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.29
 
-Date: 2025-09-04
+Date: 2025-10-10
 
 
 
@@ -37,8 +37,8 @@ Email Webmaster
   mission_next_prod
 
  Created	2025-05-08
- Updated	2025-07-10
- Last Login	2025-09-03
+ Updated	2025-10-01
+ Last Login	2025-10-10
  
 	
 	
@@ -118,7 +118,6 @@ Position requires raising your support
 Position requires raising some support
 Recruiting Countries
 108	Recruit From Countries	Canada
-United States
 Belize
 Costa Rica
 El Salvador
@@ -139,7 +138,6 @@ Match Filters
 162	Profile Years	All
 Recruiting Countries
 108	Recruit From Countries	Canada
-United States
 Belize
 Costa Rica
 El Salvador
@@ -155,12 +153,12 @@ Select another profile
 Show records for this user: user_id = 16450:
 Table: users
 ID	username	email	created	updated	last login	Active
-16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-07-10	2025-09-03	Yes
-Days ago: 	119  	56  	1  	 
+16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-10-01	2025-10-10	Yes
+Days ago: 	155  	9  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-16450	2	Organization	90
+16450	2	Organization	89
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
@@ -176,7 +174,7 @@ ID	App ID	Application	Active ?	Records
 16450	9	Mission Next	Yes	
 16450	4	JourneyGuide	Yes	
 16450	10	Canada	Yes	
-16450	3	Journey	Yes	90
+16450	3	Journey	Yes	89
 16450	6	Education	Yes	90
 16450	2	Short-Term	Yes	
 16450	11	IT-Technology	Yes	

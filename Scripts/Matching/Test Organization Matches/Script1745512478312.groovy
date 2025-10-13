@@ -21,8 +21,6 @@ import java.io.FileReader as FileReader
 import java.io.IOException as IOException
 //import org.apache.commons.lang3.StringUtils as StringUtils
 import javax.swing.*
-import org.sikuli.script.*
-import org.sikuli.script.SikulixForJython as SikulixForJython
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 import java.io.File as File
@@ -36,8 +34,14 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 import java.time.Instant
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By as By
+//import org.openqa.selenium.Actions
+import org.openqa.selenium.interactions.Actions
 
-highlight = false
+// NEED TO ADD TEST FOR CHECKING 'ALL' FOR RECRUITING COUNTRIES
+
+maxMatches = 100
 
 updateWildcards = false	
 
@@ -46,7 +50,7 @@ debug = false
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Journey' // Journey or Education
+	site = 'Education' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job
@@ -94,12 +98,6 @@ outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Matching D
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
-// Path for Sikulix script images
-imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education partner/Matching/'
-
-// File used for capturing region images that will have the text extracted from. (Can't get tesseract to work within this app)
-myImage = '/Users/cckozie/Documents/Sikuli/Missionnext/Education Candidate Matches/myFile.png'
-
 profileFile = (filePath + 'userprofile.txt')
 
 // Entries in AD organization profile page that need to be ignored
@@ -136,11 +134,6 @@ outFile.append('Partner Wildcards\n')
 
 outFile.append(partnerWildcards.toString() + '\n\n')
 
-//myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
-//        '/') + 1)
-
-//myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
-
 resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
 
 resultsFile.write(('Running ' + myTestCase) + '\n')
@@ -156,10 +149,6 @@ lastEmailAddress = ''
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : matchType], 
     FailureHandling.STOP_ON_FAILURE)
 
-// One tab at this point on ad menu page
-Screen s = new Screen()
-
-//Settings.MoveMouseDelay = 0
 tab = '\t'
 
 outText = 'Matching Rules'
@@ -232,13 +221,11 @@ organizationSelections.each({
 
 WebUI.delay(2)
 
-//WebUI.newTab('')
+WebUI.openBrowser(null)
 
-WebUI.executeJavaScript('window.open();', [])
+orgTab = WebUI.getWindowIndex()
 
-orgTab = WebUI.getWindowIndex() + 1
-
-WebUI.switchToWindowIndex(orgTab)
+orgWindowTitle = WebUI.getWindowTitle()
 
 WebUI.maximizeWindow()
 
@@ -246,195 +233,110 @@ WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '
         , ('varSite') : site], FailureHandling.STOP_ON_FAILURE //***
     )
 
-//WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))	//***
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Candidate Matches'))
+
+tableWindowTitle = WebUI.getWindowTitle()
 
 tableTab = (orgTab + 1)
 
-// Now at the match table page
-//WebUI.waitForPageLoad(10)
-img = (imagePath + 'What Matched Edu Table.png')
+matchTab = tableTab + 1
 
-s.wait(img, 30)
+userTab = tableTab + 1
 
-WebUI.delay(1)
+WebUI.switchToWindowIndex(tableTab)
 
-regMatch = s.find(img)
+WebUI.waitForPageLoad(60)
 
-if (highlight) {
-    regMatch.highlight(1)
+WebDriver driver = DriverFactory.getWebDriver()
+
+WebElement Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
+
+List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+
+int row_count = Rows.size() - 5
+
+if(maxMatches < row_count) {
+	row_count = maxMatches
 }
 
-s.click(img)
-
-regLastName = s.find(imagePath + 'Last Name Header.png')
-
-regLastName.setH(regMatch.getH())
-
-regLastName.setW(30)
-
-regPct = s.find(imagePath + 'Match Percent Header.png')
-
-if (highlight) {
-    regPct.highlight(1)
-}
-
-//This is the spy glass icon lane
-regMatch.setY(165)
-
-regMatch.setH(750)
-
-if(site == 'Journey') {
-
-	wheelCount = 13
+found = false
 	
-	wheelCountMax = 18
+if(row_count > 0) {
+
+	for (row = 3; row < row_count + 3; row++) {
+		
+		println('row is ' + row)
+		
+		List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 	
-} else {
-	
-	wheelCount = 11
-	
-	wheelCountMax = 18
-}
+		line = Columns.get(0).getText()
+		
+		println('line is ' + line)
+		
+		firstName = Columns.get(1).getText()
+		
+		println('firstName is ' + firstName)
+		
+		lastName = Columns.get(2).getText()
+		
+		println('lastName is ' + lastName)
+		
+		pct = Columns.get(8).getText()
+		
+		println('Table pct is ' + pct)
+		
+		tablePct = pct.toInteger()
+		
+		println('Table percent is ' + tablePct)
+		
+		spyGlass = Columns.get(9)
+		
+		myRow = row + 1
+		
+		element = '/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class="body"]/form[1]/p[1]/table[1]/tbody[1]/tr[' + myRow + ']/td[10]/a[1]/img[1]'
+		
+		println(element)
+		
+		driver.findElement(By.xpath(element)).click()
+		
+		WebUI.switchToWindowIndex(matchTab)
+		
+		poputWindowTitle = WebUI.getWindowTitle()
+		
+		popupPercent = WebUI.getText(findTestObject('Object Repository/Journey Partner Profile/Matching/text_Match Percent'))
+		
+		popupPercent = popupPercent.replace('%', '')
+		
+		popupPct = popupPercent.replace(' ', '').toInteger()
+		
+		println('PopupPct percent is ' + popupPct)
+		
+		WebUI.closeWindowTitle(poputWindowTitle)
+		
+		WebUI.switchToWindowIndex(tableTab)
+		
+		WebUI.delay(1)
 
-pageCount = 1
+		Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
 
-first = true
-
-folder = false
-
-done = false
-
-//while (pageCount <= pages || folder) {
-while(!done) {
-	s.hover(regMatch)
-	
-    s.wheel(Mouse.WHEEL_UP, wheelCount)
-
-    WebUI.delay(1)
-
-    if (highlight) {
-		regMatch.highlight(2)
-    }
-	
-    icons = regMatch.findAll(new Pattern(imagePath + 'Spy Glass.png').similar(0.50))
-
-    iconLocs = [:]
-
-    //Don't know how to sort regions in groovy
-    for (def rg : icons) {
-        iconLocs.put(rg.getY(), rg.getX())
-    }
-    
-    iconLocs = iconLocs.sort()
-
-    for (def it : iconLocs) {
-        rg = new Region(it.value - 5, it.key - 12, 30, 40)
-
-        regPct.setY(it.key)
-
-        regPct.setH(22)
-
-        regPct.setW(regPct.getW())
-
-        if (highlight) {
-            regPct.highlight(1)
-        }
-        
-//        capturedFile = s.capture(regPct).getFile()
-
-//        tablePct = getRegionText(capturedFile)
-		tablePct = getRegionText(regPct)
-/*		
-        if (tablePct.length() < 2) {
+		Rows = Table.findElements(By.tagName('tr'))
+		
+		Columns = Rows.get(row).findElements(By.tagName('td'))
+		
+		myRow = row + 1
+		
+		element = '//tr[' + myRow + ']/td[3]/a'
+		
+		println(element)
+		
+		driver.findElement(By.xpath(element)).click()
 			
-            tablePct = 0
-			
-			capturedFile = s.capture(regPct).getFile()
-			
-			tablePct = getRegionText(capturedFile)
-        }
+		WebUI.switchToWindowIndex(userTab)
 		
-		if (tablePct.length() < 2) {
-			
-			tablePct = 0
-		}
-*/		
-        print('Table percent match is ' + tablePct)
+		WebUI
 		
-		popup = false
-		
-		popupCnt = 0
+		WebUI.waitForPageLoad(30)
 
-        rg.click()
-
-//        s.wait(imagePath + 'What Matched Popup Text.png', 30)
-		while(!popup) {
-			if(s.exists(imagePath + 'What Matched Popup Text.png',10)) {
-				popup = true
-			} else {
-				popupCnt += 1
-				if(popupCnt > 2) {
-					rg.click()
-					popupCnt = 0
-				}
-				WebUI.delay(1)
-			}
-		}
-
-        what = s.find(imagePath + 'What Matched Popup Text.png')
-
-        scrolled = false
-
-        scrollCount = 0
-
-		s.hover(imagePath + 'What Matched Popup Text.png')
-		
-        while (!(s.exists(imagePath + 'Popup Percent Text.png'))) {
-
-            s.wheel(Mouse.WHEEL_UP, 2)
-
-            scrollCount = (scrollCount + 2)
-
-            scrolled = true
-
-            WebUI.delay(1)
-        }
-        
-        Pattern icn = new Pattern(imagePath + 'Popup Percent Text.png').similar(0.50)
-
-        pct = s.exists(icn)
-
-        //println(pct)
-        pct.setX(what.getX() - 10)
-
-        pct.setW(50)
-
-        if (highlight) {
-            pct.highlight(1)
-        }
-        
-//        capturedFile = s.capture(pct).getFile()
-
-//        popupPct = getRegionText(capturedFile)
-		popupPct = getRegionText(pct)
-		
-        print('Popup percent match is ' + popupPct)
-
-        if (scrolled) {
-            s.wheel(Mouse.WHEEL_DOWN, scrollCount)
-        }
-        
-        s.click(imagePath + 'Popup Close Window Button.png')
-
-//        WebUI.delay(1)
-
-        name = new Location(regLastName.getX() + 7, regPct.getY() + 5)
-
-        s.click(name)
-				
-		s.wait(imagePath + 'Candidate Profile Close Button.png', 30)
-		
 		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
 			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
 		
@@ -442,12 +344,6 @@ while(!done) {
 
 		println(candidateFieldValues)
 		
-//		System.exit(0)
-
-		firstName = (candidateFieldValues.get('First Name')[0])
-
-		lastName = (candidateFieldValues.get('Last Name')[0])
-
 		maritalStatus = (candidateFieldValues.get('Marital status')[0])
 
 		spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
@@ -493,10 +389,6 @@ while(!done) {
 				spouseServing = false
 			}
 			
-			firstName = (candidateFieldValues.getAt('First Name')[0])
-
-			lastName = (candidateFieldValues.getAt('Last Name')[0])
-
 			outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
 
 			outFile.append(outText + '\n')
@@ -522,50 +414,29 @@ while(!done) {
 			outFile.append(outText + '\n')
 			
 			maritalStatusText = outText
-/*
-				candidateSelections.each({
-						outText = ((it.key + ':') + it.value)
-						if(it.key != 'Spouse Serving with You?' && it.key != 'Preferences Comment') {
-							outFile.append(outText + '\n')
-						}
-					})
-*/
+
 			doMatching(candidateSelections, organizationSelections) 
 				
 		}
 		
-		s.click(imagePath + 'Candidate Profile Close Button.png')
+		WebUI.closeWindowIndex(userTab)
 		
-		WebUI.delay(1)
-	}
-//	}
-	pageCount += 1
-	 
-	wheelCount = wheelCountMax
-	
-//	if(pages.isNumber() && pageCount >= pages) {
-	if(pages.getClass() == java.lang.Integer && pageCount >= pages) {
-		 done = true
-		 
-	} else { 
+		WebUI.switchToWindowIndex(tableTab)
 		
-		if(folder && s.exists(imagePath + 'Set Folders Button.png',1)) {
-			done = true
-		}
+		WebUI.waitForPageLoad(10)
 		
-		if(!s.exists(imagePath + 'Red Arrow.png',1) && s.exists(imagePath + 'Set Folders Button.png',1)) {
-			done = true
-		}
+		Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
 
-		if(s.exists(imagePath + 'Red Arrow.png',1)) {
-			s.click(imagePath + 'Red Arrow.png')
-			folder = true
-			WebUI.delay(1)
-			fldrBtn = s.find(imagePath + 'Opened Folder.png')
-			regMatch.setY(fldrBtn.getY())
-			outText = '\n\n>>>>> Processing Folder Candidates <<<<<\n'
-			outFile.append(outText)
-		}
+		Rows = Table.findElements(By.tagName('tr'))
+		
+		Columns = Rows.get(row).findElements(By.tagName('td'))
+	
+		line = Columns.get(0).getText()
+		
+		firstName = Columns.get(1).getText()
+		
+		lastName = Columns.get(2).getText()
+		
 	}
 }
 
@@ -638,12 +509,6 @@ def doMatching(def candidateSelections, def organizationSelections) {
             println(cWC)
 
             println(candidateValues)
-/*			
-			outFile.append('For match field ' + it + '\n')
-			outFile.append('candidateValues : ' + candidateValues + '\n')
-			outFile.append('organiztionValues : ' + organizationValues + '\n')
-			outFile.append('Intersect at : ' + candidateValues.intersect(organizationValues) + '\n')
-*/			
 
             if ((cWC != null) && (candidateValues != null)) {
                 if (cWC.intersect(candidateValues).size() > 0) {
@@ -729,30 +594,26 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     error = false
 
-//    popPct = popupPct.toString().replace('\n', '')
-
-//    popPct = popPct.replace('%', '')
+	popupPct = popupPct.toString().replace('\n', '')
 	
-	popPct = popupPct.toString().replace('\n', '')
-	
-	popPct = popPct.replace('%', '')
+	popupPct = popupPct.replace('%', '')
 
-	popPct = popPct.toInteger()
+	popupPct = popupPct.toInteger()
 
 	tablePct = tablePct.toInteger()
 
 	code = ''
 	
-    if (((addedPct - tablePct) > 1) || ((tablePct - popPct) > 1)) {
+    if (((addedPct - tablePct) > 1) || ((tablePct - popupPct) > 1)) {
         error = true
 		
 		if(Math.abs(addedPct - tablePct) > 1) {	
 			code = '12 '
 		}
-		if(Math.abs(addedPct - popPct) > 1) {
+		if(Math.abs(addedPct - popupPct) > 1) {
 			code = code + '13 '
 		}
-		if(Math.abs(tablePct - popPct) > 1) {
+		if(Math.abs(tablePct - popupPct) > 1) {
 			code = code + '23'
 		}
     }
@@ -769,15 +630,11 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     outFile.append(outText + '\n')
 
-//    outText = ('Popup match percentage is ' + popupPct)
-	outText = (('Popup match percentage is ' + popPct) + '%.')
+	outText = (('Popup match percentage is ' + popupPct) + '%.')
 	
     outFile.append(outText + '\n')
 
-//    popupPct = popupPct.toString().replace('\n', '')
-
     if (error) {
-//        outText = '##### ERRORS FOUND #####'
 		outText = '##### ERRORS ' + code + ' FOUND #####'
 		
         outFile.append(outText + '\n')
@@ -786,13 +643,10 @@ def doMatching(def candidateSelections, def organizationSelections) {
     
     outFile.append('\n\n')
 
-//    outText = (((((('Match percentages: Calculated = ' + addedPct) + ' %, Table = ') + tblPct) + '%, Popup = ') + popupPct) + 
-//    '.\n\n')
-	outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popPct) +
+	outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popupPct) +
 		'%.\n\n')
 
     if (error) {
-//        outText = ('##### ERROR: ' + outText)
         outText = ('##### ERRORS ' + code + ': ' + outText)
     }
     
@@ -835,7 +689,6 @@ def formatProfile(def file, def categories, def matchFields) { //education
         line = getNextLine(reader, categories)
 
         while (line != 'end') {
-//            if (line.substring(1, 4).contains('\t')) {
             if (line.length() > 3 && line.substring(1, 4).contains('\t')) {
                 values = []
 
@@ -921,81 +774,9 @@ def formatProfile(def file, def categories, def matchFields) { //education
     }
     
     reader.close()
+	
 	println(selections)
-//    return [selections, married, spouseServing, firstName, lastName]
+	
     return [selections, married, spouseServing]
-}
-
-def getRegionTextI(def imageFile) {		//Get text from image file
-    FileUtils.copyFile(new File(imageFile), new File(myImage))
-
-    sout = new StringBuffer()
-
-    serr = new StringBuffer()
-
-    command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
-
-    command.consumeProcessOutput(sout, serr)
-
-    command.waitForOrKill(1000)
-	
-	if(debug) {println('serr is ' + serr)}
-
-	if(debug) {println('sout is ' + sout)}
-
-    return sout
-}
-
-def getRegionText(def region) {	//Get text from region
-	Screen s = new Screen()
-	
-	myPct = ''
-	
-	loops = 5
-	
-	loop = 0
-	
-	while(myPct == '' && loop < loops) {
-	
-		capturedFile = s.capture(region).getFile()
-			
-		FileUtils.copyFile(new File(capturedFile), new File(myImage))
-	
-		sout = new StringBuffer()
-	
-		serr = new StringBuffer()
-	
-		command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
-	
-		command.consumeProcessOutput(sout, serr)
-	
-		command.waitForOrKill(2000)
-	
-		println('sout is ' + sout)
-	
-		println('serr is ' + serr)
-	
-		String strSout = sout
-		
-		strSout = strSout.replace('%', '')
-		
-		if(strSout.isNumber() && strSout.length() > 0) {
-			pctMatch = strSout
-			break
-		} else {
-			pctMatch = 999
-		}
-		
-		loop++
-		
-		WebUI.delay(1)
-		myInstant = Instant.now()
-		errFile = '/Users/cckozie/Documents/MissionNext/Fail Screenshots/' + myInstant + '.png'
-		FileUtils.copyFile(new File(capturedFile), new File(errFile))
-		
-	}
-
-	if(debug) {println('% match is ' + pctMatch)}
-	return pctMatch
 }
 

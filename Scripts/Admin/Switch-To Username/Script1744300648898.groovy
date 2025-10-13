@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
 
-varUsername = 'cktest05jc'
+//varUsername = 'cktest05jc'
 
 Screen s = new Screen()
 
@@ -35,7 +35,7 @@ if(index < 0) {
 
 WebUI.navigateToUrl('https://missionnext.org/managerlogin/')
 
-WebUI.waitForPageLoad(20)
+WebUI.waitForPageLoad(30)
 
 WebUI.delay(2)
 
@@ -84,7 +84,7 @@ if(varUsername != null && varUsername != '') {
 	
 	WebUI.click(findTestObject('Object Repository/Manager/input_Search Users Submit'))
 	
-	WebUI.waitForPageLoad(20)
+	WebUI.waitForPageLoad(60)
 	
 	WebUI.delay(1)
 	
