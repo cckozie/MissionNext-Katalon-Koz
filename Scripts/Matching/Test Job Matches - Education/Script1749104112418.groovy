@@ -48,7 +48,7 @@ debug = true
 
 highlight = false
 
-updateWildcards = false
+updateWildcards = true
 
 pages = GlobalVariable.matchPages
 

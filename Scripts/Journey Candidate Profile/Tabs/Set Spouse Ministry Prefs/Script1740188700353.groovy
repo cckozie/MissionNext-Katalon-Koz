@@ -121,6 +121,8 @@ if(!myClass.contains('error')) {
 } else {
 	outText = 'Unable to successfully complete ' + testName + '.\n'
 	KeywordUtil.markError(outText)
+		
+	GlobalVariable.testCaseErrorFlag = true
 }
 println(outText)
 outFile.append(outText)

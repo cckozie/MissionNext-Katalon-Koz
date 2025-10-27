@@ -308,36 +308,39 @@ emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'
 if (emailFound) {
 	outText = (('+++++ Approval request email for ' + username) + ' was found')
 	
+	outFile.append(outText + '\n')
+	
+	WebUI.closeBrowser()
+	
+	//================================== Grant access for the new education partner ==================================
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	//================================== Create a subscriptioon for the new education partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
+
+	WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
+		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
+	}
+	
+	outFile.append(outText + '\n')
+	
+	WebUI.closeBrowser()
+	
 } else {
 	
 	outText = (('----- Approval request email for ' + username) + ' was NOT found')
-}
-
-outFile.append(outText + '\n')
-
-WebUI.closeBrowser()
-
-WebUI.callTestCase(findTestCase('_Functions/Education Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
-
-if(found) {
-	outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
 	
-} else {
-	outText = '\n##### The login after registering as an Education Affiliage was NOT successful. #####'
-	KeywordUtil.markError('\n' + outText)
+	outFile.append(outText + '\n\n')
+	GlobalVariable.testCaseErrorFlag = true
 }
-
-outFile.append(outText + '\n')
-
-WebUI.closeBrowser()
-
-//================================== Grant access for the new education partner ==================================
-WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-
-//================================== Create a subscriptioon for the new education partner ========================
-WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
-		, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
-
 

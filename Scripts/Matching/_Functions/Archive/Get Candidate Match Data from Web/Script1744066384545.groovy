@@ -36,7 +36,7 @@ WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : '
 imagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/'
 
 if (!(bypass)) {
-    WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'cktest06ep', ('varSite') : 'Education'], 
+    WebUI.callTestCase(findTestCase('Admin/Switch-To Username - Sikuli'), [('varUsername') : 'cktest06ep', ('varSite') : 'Education'], 
         FailureHandling.STOP_ON_FAILURE)
 
     WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))

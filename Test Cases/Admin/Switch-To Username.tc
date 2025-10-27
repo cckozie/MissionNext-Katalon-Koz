@@ -5,18 +5,31 @@
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>91f6fd61-f419-4a63-a4e0-0596905e7ccb</testCaseGuid>
+   <testCaseGuid>5ea4ee95-6d19-4d09-a683-752c041bae21</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>f728a37d-fd16-46dc-b408-c505eff877dd</variableId>
+      <variableId>3df04c4f-5437-4408-b382-cc453616f9d5</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>78d7e0f7-726c-4267-bcd4-f62e55ce9acf</variableId>
    </variableLinks>
    <variable>
-      <defaultValue>'null'</defaultValue>
+      <defaultValue>null</defaultValue>
       <description></description>
-      <id>f728a37d-fd16-46dc-b408-c505eff877dd</id>
+      <id>3df04c4f-5437-4408-b382-cc453616f9d5</id>
       <masked>false</masked>
       <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>78d7e0f7-726c-4267-bcd4-f62e55ce9acf</id>
+      <masked>false</masked>
+      <name>varSite</name>
    </variable>
 </TestCaseEntity>

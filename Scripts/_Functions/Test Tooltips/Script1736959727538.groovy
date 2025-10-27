@@ -39,9 +39,15 @@ tooltipImagePath = varTooltipImagePath
 // Define the names of the tooltip fields and the unique part of the related test object
 // (header is a dummy because Sikulix does not do an image compare correctly on the first element tested)
 tooltips = varTooltips
+tooltips.each {
+	println(it)
+}
 
 // Define the expected tooltip texts
 tooltipText = varTooltipText
+tooltipText.each {
+	println(it)
+}
 
 // Define the tooltip test object folder for the calling page
 testObjectFolder = varTestObjectFolder
@@ -72,8 +78,6 @@ outText = 'Verifying the tooltips can be displayed.\n'
 
 outFile.append(outText)
 
-// Use Sikulix to verify the tooltip messages are displayed. % match numbers are sent to output file
-//	tooltips.each({
 first = true
 
 for (def it : tooltips) {
@@ -88,69 +92,49 @@ for (def it : tooltips) {
 	if(myKey != 'dummy') {	//A dummy first element is necessary because Sikulix is not correctly matching on the first element tested
 	
 	    tObj = (testObjectFolder + myValue)
-	
-	    click(tObj)
-	    
+		
+		tText = tooltipText.get(myKey)
+		
+		println('myKey is ' + myKey + ' and tText is ' + tText + '.')
+		
+		Actions actions = new Actions(DriverFactory.getWebDriver());
+		
+		WebElement element = WebUiCommonHelper.findWebElement(findTestObject(tObj), 1)
+		
+//		scrollToElement(element)
+		
+		actions.clickAndHold(element).perform();
+		
 	    WebUI.delay(1)
+				
+		visible = WebUI.verifyTextPresent(tText, false, FailureHandling.OPTIONAL)
 		
-	    myImage = ((tooltipImagePath + myKey) + '.png')
+		println('Visibility for ' + myKey  + ' tooltip is ' + visible)
 		
-	} else {
-		myImage = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/dummy.png'
-	}
-	
-	f = new File(myImage)
+        if (visible) {
 
-    if (f.exists()) {
-        println('Looking for ' + myImage)
-
-        Pattern icn = new Pattern(myImage).similar(0.10)
-
-        found = s.exists(icn)
-
-        println(found)
-
-        if (found != null && myKey != 'dummy') {
-			pctF = WebUI.callTestCase(findTestCase('_Functions/Find Image Percent Match'), [('varFound') : found], 
-				FailureHandling.OPTIONAL)
-
-			outText = (((('+++ Tooltip match value for ' + myKey) + ' is ') + pctF) + '%')
+			outText = '+++ Tooltip for ' + myKey + ' was found.'
 			
-			min = 80
+            println(outText)
+
+            outFile.append(outText + '\n')
 			
-			if(pctF.toFloat() < min.toFloat()) {
-				outText = '>>>>> ' + outText + ' <<<<<'
-				KeywordUtil.markError('Tooltip match value for ' + myKey + ' is less than ' + min + '%')
-			}
+        } else {
+            outText = ('--- Unable to find tooltip text "' + tText + ' for ' + myKey)
 
             println(outText)
 
             outFile.append(outText + '\n')
-
-        } else {
-			if(myKey != 'dummy') {
-	            outText = ('--- Unable to find tooltip text for ' + myKey)
-	
-	            println(outText)
-	
-	            outFile.append(outText + '\n')
-				
-				KeywordUtil.markError(outText)
-			}
+			
+			KeywordUtil.markError(outText)
+			
+			GlobalVariable.testCaseErrorFlag = true
+			
 		}
-    } else {
-        outText = ('--- Unable to find image file ' + myImage)
-
-        outFile.append(outText + '\n')
-
-        println(outText)
-
-//        KeywordUtil.markError('\n' + outText)
-		KeywordUtil.markError(outText)
 		
     }
 }
-
+/*
 // Verify the tooltip text found in the call to Get Screenshot and Tooltip Text against what we expected in tooltipText[]
 outText = 'Verifying the tooltip text on the page is what was expected.\n'
 
@@ -187,8 +171,11 @@ for (def it : tooltipText) {
 		println(outText)
 
 		outFile.append(outText + '\n')
+		
 		KeywordUtil.markError(outText)
 		
+		GlobalVariable.testCaseErrorFlag = true
+	
 		
 /* FOR DEBUGGING
 		println('Expected length is ' + myText.length())
@@ -203,28 +190,27 @@ for (def it : tooltipText) {
 			str = str + (int)chr + ' '
 		}
 		println(str)
-*/
+
 	}
 }
-
-def scrollToObject(def object) {
-    println(('Converting ' + object) + ' to web element')
-	
+*/
+def scrollToElement(def element) {
 	try {
 
-	    element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
-	
 	    loc = element.getLocation()
 		
 		x = loc.getX()
 		
-		if(x >= 560) {
+		if(x >= GlobalVariable.tooltipMaxX) {
 			outText = '####### ERROR: The tooltip for ' + myKey + ' is not positioned near its label.'
 		
 			println(outText)
 	
 			outFile.append(outText + '\n')
 			KeywordUtil.markError(outText)
+			
+			GlobalVariable.testCaseErrorFlag = true
+			
 			
 		}
 	
@@ -249,6 +235,9 @@ def scrollToObject(def object) {
 		println(outText)
 		
 		outFile.append(outText + '\n')
+		
+		GlobalVariable.testCaseErrorFlag = true
+		
 	}
 }
 

@@ -75,9 +75,9 @@ tooltipText = [('Time Commitment(s)') : 'Check commitments you would consider.',
 requiredFieldMsgs = [ //('I/We can be Available') : 'The approximate availability field is required.',  ##### NEVER DISPLAYED
     ('Time Commitment(s)') : 'The time commitment field is required.']
 
-//('Relocation Option(s)') : 'The relocation possibilities field is required.']   ##### NEVER DISPLAYED
 //Go to the Availability tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Availability'))
+myTab = 'Object Repository/Education Candidate Profile/Tabs/a_Availability'
+WebUI.click(findTestObject(myTab))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
@@ -126,14 +126,10 @@ if (varRelocation_options != null) {
 object = ('Education Candidate Profile/Tabs/Availability/btn_Submit')
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
-myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Availability'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+// Test to see if the tab is complete (not colored red)
+WebUI.waitForPageLoad(10)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

@@ -76,7 +76,9 @@ if (binding.hasVariable('varSubjectKey')) {
 }
 
 if (binding.hasVariable('varFromKey')) {
-    fromKey = varFromKey.toLowerCase()
+	println('varFromKey is ' + varFromKey)
+//    fromKey = varFromKey.toLowerCase()
+    fromKey = varFromKey
 } else {
     fromKey = 'Chris.Kosieracki@missionnext.org'.toLowerCase()
 }

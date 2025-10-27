@@ -85,7 +85,6 @@ tooltips = [
 ('Tier Level') : 'img_Tier Level_field-tooltip',
 ('Mailing Address') : 'img_Mailing Address_field-tooltip',
 ('Organization City') : 'img_Organization City_field-tooltip',
-('PostZip Code') : 'img_PostZip Code_field-tooltip',
 ('Description') : 'img_Description_field-tooltip',
 ('Website Address') : 'img_Website Address_field-tooltip',
 ('Mission Statement') : 'img_Mission Statement_field-tooltip',
@@ -102,8 +101,8 @@ tooltipText = [
 ('Key Contact Email') : 'Email address must be unique. Use another for a different MissionNext account.',
 ('Tier Level') : "Select Tier level based on size of your organization's Annual Revenue.",
 ('Mailing Address') : 'Organization mailing address is required',
-('Organization City ') : 'Organization city field is required',
-('Post/Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.',
+('Organization City') : 'Organization city field is required',
+//('Post/Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.',
 ('Description') : 'Hint: Take a paragraph or two from your website. If copying & pasting, you must manually type in any special characters, i.e, quotation marks, apostrophe, ampersand, etc.',
 ('Website Address') : 'Must start with https://',
 ('Mission Statement') : 'Add web address from website where the mission statement is displayed.',
@@ -364,6 +363,8 @@ if (pending) {
 	outFile.append(outText + '\n')
 
 	KeywordUtil.markError('\n' + outText)
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 
 //================================== Wait for the approval pending email for the new journey partner =========
@@ -373,21 +374,26 @@ found = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [(
 if (found) {
 	outText = (('+++++ Approval request email for ' + username) + ' was found')
 	
+	outFile.append(outText + '\n')
+	
+	WebUI.closeBrowser()
+	
+	//================================== Grant access for the new journey partner ==================================
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
+	
+	//================================== Create a subscriptioon for the new journey partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : GlobalVariable.username, ('varType') : 'Journey'
+			, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
+	
 } else {
 	
 	outText = (('----- Approval request email for ' + username) + ' was NOT found')
+	
+	outFile.append(outText + '\n')
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 
-outFile.append(outText + '\n')
-
-WebUI.closeBrowser()
-
-//================================== Grant access for the new journey partner ==================================
-WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
-
-//================================== Create a subscriptioon for the new journey partner ========================
-WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : GlobalVariable.username, ('varType') : 'Journey'
-		, ('varRole') : 'Organization'], FailureHandling.STOP_ON_FAILURE)
 
 if (!(registerOnly)) {
 
@@ -409,6 +415,7 @@ if (!(registerOnly)) {
 	} else {
 		outText = '--- Journey partner login after profile creation failed.\n'
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText)
 } else {
@@ -422,6 +429,7 @@ if (!(registerOnly)) {
 	} else {
 		outText = '\n##### The login after registering as an Journey Partner was NOT successful. #####'	
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText + '\n')
 }

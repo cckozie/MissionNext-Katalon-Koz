@@ -76,7 +76,8 @@ tooltipText = [('Spouse Additional Language(s)') : 'Other language in which you 
 requiredFieldMsgs = [('Spouse Previous Experience') : 'The spouse teaching experience field is required.']
 
 //Go to the Education tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Spouse Education'))
+myTab = 'Object Repository/Education Candidate Profile/Tabs/a_Spouse Education'
+WebUI.click(findTestObject(myTab))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
     FailureHandling.STOP_ON_FAILURE)
@@ -138,22 +139,11 @@ object = 'Education Candidate Profile/Tabs/btn_Submit'
 
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
-// The tab may not be found since this is typically the last tab. In that case, test for the Thank You page
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
 
-profile = WebUI.verifyElementVisible(findTestObject('Education Candidate Profile/Tabs/a_Contact Info'), FailureHandling.OPTIONAL)
+testObject = myTab
 
-dashboard = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_My Profile'), FailureHandling.OPTIONAL)
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 
-if (profile || dashboard) {
-    outText = (testName + ' was successfully completed.\n')
-} else {
-    outText = (('Unable to successfully complete ' + testName) + '.\n')
-	KeywordUtil.markError(outText)
-}
-
-println(outText)
-
-outFile.append(outText)
 

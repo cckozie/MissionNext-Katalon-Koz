@@ -37,7 +37,7 @@ dashboardLinks = ['a_Jobs List Beta'] //, 'a_Candidate Matches', 'a_Jobs List Be
 
 if(!bypass) {
 
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Username - Sikuli'), [:], FailureHandling.STOP_ON_FAILURE)
 	
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Jobs List Beta'))
 	

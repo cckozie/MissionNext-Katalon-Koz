@@ -199,7 +199,7 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 jobFile = (filePath + 'jobprofile.txt')
 
 if (userMN) {
-    WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+    WebUI.callTestCase(findTestCase('Admin/Switch-To Username - Sikuli'), [('varUsername') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 } else {
 	WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : userProfile], FailureHandling.STOP_ON_FAILURE)
 }

@@ -19,6 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
 println(varProfile)
+
 if(varProfile != '') {
 	new ExecutionProfilesLoader().loadProfile(varProfile)
 	

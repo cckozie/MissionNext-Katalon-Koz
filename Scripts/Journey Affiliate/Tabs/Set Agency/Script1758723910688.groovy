@@ -18,62 +18,55 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if(username[-3..-1] != '9ea') {
-    println('The Execution Profile must be set to "Education Affiliate"')
+domain = GlobalVariable.domain
+
+if(username[-3..-1] != '3ja') {
+    println('The Execution Profile must be set to "Journey Affiliate"')
 
     System.exit(0)
 }
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-writeFile = false
+outFile = GlobalVariable.outFile
 
-// Set output file
-testName = 'Education Affiliate Account Information Tab'
-
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education Affiliate/tabs/Account Information/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education affiliate/'
 
 // Define the folder where the tooltip test objects live
-testObjectFolder = 'Education Affiliate/Tabs/Account Information/'
+testObjectFolder = 'Journey Affiliate/Tabs/Agency/'
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
 tooltips = [
 ('dummy') : 'dummy',
 ('Abbreviation') : 'img_Abbreviation_field-tooltip',
-('Description') : 'img_Description_field-tooltip',
-('Board of Directors') : 'img_Board of Directors_field-tooltip',
-('Statement of Faith') : 'img_Statement of Faith_field-tooltip',
-('Web Address') : 'img_Web Address_field-tooltip',
 ('Settings') : 'img_Settings_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
 ('Abbreviation') : 'Used in some displays.',
-('Description') : 'Hint: Take a paragraph or two from your website.',
-('Statement of Faith') : 'Give web address where this can be found.',
-('Web Address') : 'Must be a full web address and  begin with https://',
 ('Settings') : 'Open up Settings tab']
 
 // Define the required field missing error message test objects
-requiredFieldMsgs = [('Mailing Address') : 'The srvc agency mailing address field is required.']
+requiredFieldMsgs = [('Abbreviation') : 'The abbreviation field is required.']
 
 // Define the page's links and the text to search for on the linked page
 pageLinks = []
 
-//Go to the Account Information tab
-WebUI.click(findTestObject('Education Affiliate/Tabs/a_Account Information'))
+//Go to the Set Agency tab
+myTab ='Object Repository/Journey Affiliate/Tabs/a_Agency'
+WebUI.click(findTestObject(myTab))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], 
@@ -81,6 +74,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -111,29 +105,26 @@ outFile.append(outText)
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
+WebUI.setText(findTestObject('Object Repository/Journey Affiliate/Tabs/Agency/input_Abbreviation'), 'CKO3JA')
+
 //Set the settings checkbox
 if (varSettings != null) {
-	checked = WebUI.verifyElementChecked(findTestObject('Object Repository/Education Affiliate/Tabs/Account Information/checkbox_Settings'), 1, FailureHandling.OPTIONAL)
+	checked = WebUI.verifyElementChecked(findTestObject('Object Repository/Journey Affiliate/Tabs/Agency/checkbox_Settings'), 1, FailureHandling.OPTIONAL)
 	
 	if((varSettings == 'Yes' && !checked) || (varSettings == 'No' && checked)) {
 		
-	    object = 'Object Repository/Education Affiliate/Tabs/Account Information/checkbox_Settings'
+	    object = 'Object Repository/Journey Affiliate/Tabs/Agency/checkbox_Settings'
 	    WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object, ('varParm1') : null], 
 	        FailureHandling.STOP_ON_FAILURE)
 	}
 }
 
-WebUI.click(findTestObject('Education Affiliate/Tabs/input_Submit'))
+WebUI.click(findTestObject('Journey Affiliate/Tabs/input_Submit'))
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Affiliate/a_Account Information'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

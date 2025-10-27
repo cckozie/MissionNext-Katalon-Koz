@@ -95,7 +95,8 @@ requiredFieldMsgs = [('Church Involvement') : 'The church involvement field is r
 ('Affiliated with a church?') : 'The affiliated with church field is required.'] */
 
 //Go to the Situation tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Situation'))
+myTab = 'Object Repository/Education Candidate Profile/Tabs/a_Situation'
+WebUI.click(findTestObject(myTab))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
 
@@ -154,15 +155,10 @@ WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpa
 object = 'Education Candidate Profile/Tabs/Situation/btn_Complete Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Situation'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

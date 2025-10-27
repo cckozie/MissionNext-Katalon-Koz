@@ -42,7 +42,7 @@ import java.lang.Math as Math
 //	TO DO:
 //	Add spouse job preferences to matching
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
-maxMatches = 5
+maxMatches = 100
 
 bypass = false
 
@@ -98,7 +98,8 @@ apiTab = null
 if (!(updateWildcards)) {
     candidateWildcards = evaluate(new File((filePath + site) + ' Candidate Wildcards.txt'))
 
-    jobWildcards = evaluate(new File(filePath + 'Job Wildcards.txt'))
+    jobWildcards = evaluate(new File(filePath + 'Journey Job Wildcards.txt'))
+	
 } else {
     wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site, 
 		('varType') : matchType], FailureHandling.STOP_ON_FAILURE)
@@ -158,7 +159,8 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 jobFile = (filePath + 'jobprofile.txt')
 
-WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'office', ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(60)
 
@@ -382,7 +384,7 @@ if(row_count > 0) {
 
             outFile.append(outText + '\n')
 
-            outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
+            outText = ((('\n Results for line ' + line + ', candidate ' + firstName) + ' ') + lastName)
 
             resultsFile.append(outText + '\n')
 			
@@ -852,15 +854,15 @@ def doMatching(def candidateSelections, def jobSelections) {
 
 		code = ''
 		
-        if ((Math.abs(addedPct - tablePct) > 1) || (Math.abs(tablePct - popPct) > 1)) {
+        if ((Math.abs(addedPct - tablePct) > 2) || (Math.abs(tablePct - popPct) > 1)) {
             error = true
-			if(Math.abs(addedPct - tablePct) > 1) {	
+			if(Math.abs(addedPct - tablePct) > 2) {	
 				code = '12 '
 			}
-			if(Math.abs(addedPct - popPct) > 1) {
+			if(Math.abs(addedPct - popPct) > 2) {
 				code = code + '13 '
 			}
-			if(Math.abs(tablePct - popPct) > 1) {
+			if(Math.abs(tablePct - popPct) > 2) {
 				code = code + '23'
 			}
         }

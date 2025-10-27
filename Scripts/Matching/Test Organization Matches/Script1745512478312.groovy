@@ -43,14 +43,14 @@ import org.openqa.selenium.interactions.Actions
 
 maxMatches = 100
 
-updateWildcards = false	
+updateWildcards = true	
 
 debug = false
 
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Education' // Journey or Education
+	site = 'Journey' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job
@@ -229,7 +229,7 @@ orgWindowTitle = WebUI.getWindowTitle()
 
 WebUI.maximizeWindow()
 
-WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : orgUsername, ('varPassword') : orgPassword
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : user, ('varUsername') : orgUsername, ('varPassword') : orgPassword
         , ('varSite') : site], FailureHandling.STOP_ON_FAILURE //***
     )
 

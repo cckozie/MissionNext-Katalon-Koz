@@ -264,6 +264,7 @@ if (!(registerOnly)) {
 			outText = '\n+++ Journey candidate login after profile creation was successful.\n'
 		} else {
 			outText = '\n--- Journey candidate login after profile creation failed.\n'				
+			GlobalVariable.testCaseErrorFlag = true
 		}
 		outFile.append(outText)
 	}
@@ -274,7 +275,18 @@ if (!(registerOnly)) {
 		outText = '\n+++ Education candidate registration successful. Profile tabs page was found.\n'
 		
 		outFile.append(outText)
+	} else {
+		outText = '\n--- Education candidate registration was not successful. Profile tabs page was not found.\n'
+		
+		outFile.append(outText)
+		
+		GlobalVariable.testCaseErrorFlag = true
+		
 	}
+}
+
+if (GlobalVariable.testSuiteRunning) {
+	WebUI.delay(1)
 }
 
 

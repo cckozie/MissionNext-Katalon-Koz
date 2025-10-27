@@ -99,10 +99,10 @@ if(granted == false || granted == null) {
 	
 	outFile.append(outText + '\n')
 	
+	GlobalVariable.testCaseErrorFlag = true
+	
 	System.exit(0)
 }
-
-
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -305,6 +305,8 @@ if(found) {
 } else {
 	outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'
 	KeywordUtil.markError('\n' + outText)
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 outFile.append(outText + '\n')
 

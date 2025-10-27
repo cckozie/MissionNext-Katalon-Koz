@@ -6,12 +6,12 @@
    <elementGuidId>453574c5-4c17-4c4e-970b-35e32d3a55cd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//select[@id='profile_group-1494759117.185_match_rate']</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1494759117.185_match_rate']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>cd3b61bf-2903-435d-8f7e-ca067e1f1468</webElementGuid>
+      <webElementGuid>9f61d22b-fe8f-4f16-8554-615858c5f6a7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>data-key</name>
       <type>Main</type>
       <value>match_rate</value>
-      <webElementGuid>6a5425ec-7372-4bfa-bc0b-9d11555b9a0a</webElementGuid>
+      <webElementGuid>b1b01790-13c1-4fa0-a996-60583c780903</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>data-id</name>
       <type>Main</type>
       <value>48</value>
-      <webElementGuid>8305613f-c14e-4943-aa14-e7d9162aedb0</webElementGuid>
+      <webElementGuid>8caabca7-7586-489a-9552-bd5bf8a281fc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>profile[group-1494759117.185][match_rate]</value>
-      <webElementGuid>03bc8a46-14a3-4a6c-85e8-d2a4d9cfd6dd</webElementGuid>
+      <webElementGuid>4519bb69-1dbc-45d4-937a-5896dbc88043</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>profile_group-1494759117.185_match_rate</value>
-      <webElementGuid>587e4fc6-8537-4685-8f9d-54ca6ee5d8d0</webElementGuid>
+      <webElementGuid>47781ca3-ace8-43a8-a5d5-a1a1807bdc06</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -73,7 +73,7 @@
 80
 90
 </value>
-      <webElementGuid>4203a479-400e-45c6-b579-41ffc8c4c56b</webElementGuid>
+      <webElementGuid>ffb91b0f-cfdb-4e6c-af51-3963871ca323</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -81,7 +81,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;profile_group-1494759117.185_match_rate&quot;)</value>
-      <webElementGuid>c8afe80d-2966-4c48-b6e0-3d902ebebd00</webElementGuid>
+      <webElementGuid>357c8f34-85e9-47b9-84b6-8f0e5ebfc888</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -89,7 +89,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@id='profile_group-1494759117.185_match_rate']</value>
-      <webElementGuid>efc189f0-ebd9-4b09-b3c6-2e88ecfccc5b</webElementGuid>
+      <webElementGuid>25286370-69e7-4b71-97e9-2a5535b462e8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -97,7 +97,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='group-1494759117.185']/div/div[3]/select</value>
-      <webElementGuid>01539440-952a-47d4-9aba-5b9520593d4b</webElementGuid>
+      <webElementGuid>55f444a6-5c4d-43ea-b841-3d021fa615d8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -105,7 +105,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Match Rate'])[1]/following::select[1]</value>
-      <webElementGuid>2af87e29-14af-4573-bc8c-f668a019f8e6</webElementGuid>
+      <webElementGuid>596dd620-65e4-4c78-9a75-ae92d2cb1831</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -113,7 +113,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Information on this Settings tab is not seen by candidates.'])[1]/following::select[1]</value>
-      <webElementGuid>bc90297f-a400-40db-9121-72f7fce4d14c</webElementGuid>
+      <webElementGuid>14867ef1-2906-4b80-b166-fb2494584c4b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -121,7 +121,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Profile Years'])[1]/preceding::select[1]</value>
-      <webElementGuid>723ef9fb-42b0-4ec7-8938-1021196cd800</webElementGuid>
+      <webElementGuid>3046007a-d93a-42a0-b463-3dde83752ea7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -129,7 +129,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='All'])[1]/preceding::select[1]</value>
-      <webElementGuid>74246d2f-40fd-433c-974e-f16368294bd0</webElementGuid>
+      <webElementGuid>eb03789e-7149-4a56-a91c-9acb91408f53</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -137,7 +137,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[3]/select</value>
-      <webElementGuid>bc51950f-e9d1-4146-9a32-405fc95e9558</webElementGuid>
+      <webElementGuid>4ee031ee-e305-4d85-998d-123599e70a5b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -165,6 +165,6 @@
 80
 90
 ')]</value>
-      <webElementGuid>a01f6742-1796-4f47-98ab-c0e6457c318c</webElementGuid>
+      <webElementGuid>0604d846-3164-49df-bd5d-6a8744955377</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -114,10 +114,13 @@ tooltips = [
 // Define the expected tooltip texts
 tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.'
     , ('Email') : 'Your primary email address and must be unique in our database.'
-	,('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
-    , ('First Name') : 'May include your middle initial; enter last name below.', ('Last Name') : 'Family Name', ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
-    , ('Age Bracket') : 'Required to help us help you.', ('Job Cagtegories') : 'Select at least one that is the most appropriate. These categories are used in job matching.'
-	,('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
+	, ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
+    , ('First Name') : 'May include your middle initial; enter last name below.'
+	, ('Last Name') : 'Family Name'
+	, ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
+    , ('Age Bracket') : 'Required to help us help you.'
+	, ('Job Categories') : 'Select at least one that is the most appropriate. These categories are used in job matching.'
+	, ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 
 // Define the page's links and the text to search for on the linked page
 //ministry positions links to a pdf so the text cannot be examined. ministry positions link is tested by the url
@@ -322,4 +325,8 @@ if(found) {
 }
 
 WebUI.closeBrowser()
+
+if (GlobalVariable.testSuiteRunning) {
+	WebUI.delay(60)
+}
 

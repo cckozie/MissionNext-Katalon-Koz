@@ -13,7 +13,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword as WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import groovy.console.ui.SystemOutputInterceptor as SystemOutputInterceptor
 import internal.GlobalVariable as GlobalVariable
@@ -27,29 +27,33 @@ import org.sikuli.script.*
 import java.io.File as File
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import javax.swing.*;
+import javax.swing.*
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+GlobalVariable.testCaseErrorFlag = false
 
+//WebUI.callTestCase(findTestCase('_Functions/Set Test Suite Collection Running Flag'), [:], FailureHandling.STOP_ON_FAILURE)
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if(username[-3..-1] != '4ec') {
+if ((username[(-3..-1)]) != '4ec') {
     println('The Execution Profile must be set to "Education Candidate"')
 
     System.exit(0)
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
-if(GlobalVariable.testSuiteRunning) {
-	registerOnly = true
-}
-//######################################################################################################
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 
+if (GlobalVariable.testSuiteRunning) {
+    registerOnly = true
+}
+
+//######################################################################################################
 suffix = '-Register Only'
-if(!registerOnly) {
-	suffix = '-Full Profile'
+
+if (!(registerOnly)) {
+    suffix = '-Full Profile'
 }
 
 domain = GlobalVariable.domain
@@ -59,20 +63,23 @@ username = GlobalVariable.username
 url = (('https://education.' + domain) + '/signup/candidate')
 
 // Write results to text file
-testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+testName = RunConfiguration.getExecutionProperties().get('current_testcase').toString().substring(RunConfiguration.getExecutionProperties().get(
+        'current_testcase').toString().lastIndexOf('/') + 1)
 
-
-if(1 == 2) { //GlobalVariable.testSuiteRunning) {
-	myTestCase = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+if (1 == 2) {
+    //GlobalVariable.testSuiteRunning) {
+    myTestCase = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 } else {
-	myTestCase = testName
+    myTestCase = testName
 }
 
-outFile = new File(GlobalVariable.reportPath + myTestCase + suffix + ' on ' + domain + '.txt')
+outFile = new File(((((GlobalVariable.reportPath + myTestCase) + suffix) + ' on ') + domain) + '.txt')
 
 GlobalVariable.outFile = outFile
 
-outFile.write(('Testing ' + myTestCase + ' on ' + domain) + '.\n')
+outFile.write(((('Testing ' + myTestCase) + ' on ') + domain) + '.\n')
+
+outFile.append('The test case error flag is ' + GlobalVariable.testCaseErrorFlag + '\n')
 
 //================================== Delete the user ===============================================
 WebUI.callTestCase(findTestCase('Admin/Delete User'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
@@ -109,11 +116,10 @@ WebUI.openBrowser('')
 
 WebUI.maximizeWindow()
 
-if(GlobalVariable.mobileScreen) {
+if (GlobalVariable.mobileScreen) {
+    WebUI.setViewPortSize(600, 1200)
 
-	WebUI.setViewPortSize(600, 1200)
-	
-	WebUI.delay(1)
+    WebUI.delay(1)
 }
 
 WebUI.navigateToUrl(url)
@@ -134,100 +140,113 @@ WebUI.callTestCase(findTestCase('_Functions/Test Tooltips'), [('varTooltipImageP
 
 //For script setup only - finds the required field error messages
 //WebUI.callTestCase(findTestCase('Utilities/Find error messages'), [:], FailureHandling.STOP_ON_FAILURE)
-
 // Submit the empty page
 object = 'Education Candidate Profile/Register/button_Sign up'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for username, email, and password required messages
 fieldList = ['Username', 'Email', 'Password']
 
-outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+outText = (('Verifying the required field messages for ' + fieldList) + '.\n')
 
 outFile.append(outText)
 
-WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Username'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.username], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.username], 
+    FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Email'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.email], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.email], 
+    FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
-	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setEncryptedText', ('varObject') : object
+        , ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/button_Sign up'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for first name, last name, and phone number required messages
 fieldList = ['First Name', 'Last Name', 'Country', 'Phone Number', 'Terms and Conditions']
 
-outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+outText = (('Verifying the required field messages for ' + fieldList) + '.\n')
 
 outFile.append(outText)
 
-WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
-	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setEncryptedText', ('varObject') : object
+        , ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_First Name'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.first_name], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.first_name], 
+    FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Last Name'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.last_name], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.last_name], 
+    FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/select_Country'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
-	('varObject') : object, ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
+        , ('varParm1') : GlobalVariable.country], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/input_Best Phone Number'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.phone_number], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.phone_number], 
+    FailureHandling.STOP_ON_FAILURE)
 
 if (GlobalVariable.prefer_text) {
-	object = 'Education Candidate Profile/Register/checkbox_Prefer Text Message'
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+    object = 'Education Candidate Profile/Register/checkbox_Prefer Text Message'
+
+    WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 }
 
-object = 'Education Candidate Profile/Register/select_Learn About Us' 
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'selectOptionByValue',
-	('varObject') : object, ('varParm1') : GlobalVariable.learn_about], FailureHandling.STOP_ON_FAILURE)
+object = 'Education Candidate Profile/Register/select_Learn About Us'
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'selectOptionByValue', ('varObject') : object
+        , ('varParm1') : GlobalVariable.learn_about], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/textarea_Other Comment'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setText',
-	('varObject') : object, ('varParm1') : GlobalVariable.other_comment], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setText', ('varObject') : object, ('varParm1') : GlobalVariable.other_comment], 
+    FailureHandling.STOP_ON_FAILURE)
 
 object = 'Education Candidate Profile/Register/button_Sign up'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for terms and conditions required messages
 fieldList = ['Terms and Conditions']
 
-outText = 'Verifying the required field messages for ' + fieldList + '.\n'
+outText = (('Verifying the required field messages for ' + fieldList) + '.\n')
 
 outFile.append(outText)
 
-WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
-	('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 outText = 'Verifying the links to other pages.\n'
 
 outFile.append(outText)
 
 // Click the other hyperlinks and verify pages opened
-WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'],
-	FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks') : pageLinks, ('varObjectPath') : 'Object Repository/Education Partner Profile/Register/'], 
+    FailureHandling.CONTINUE_ON_FAILURE)
 
 outText = 'Submitting the finished page.\n'
 
@@ -235,50 +254,66 @@ outFile.append(outText)
 
 //Complete and submit the registration
 object = 'Education Candidate Profile/Register/input_Password'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'setEncryptedText',
-	('varObject') : object, ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'setEncryptedText', ('varObject') : object
+        , ('varParm1') : GlobalVariable.password], FailureHandling.STOP_ON_FAILURE)
 
 //WebUI.delay(10)
-
 object = 'Object Repository/Education Candidate Profile/Register/checkbox_Terms and Conditions'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 object = 'Object Repository/Education Candidate Profile/Register/button_Sign up'
-WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-System.exit(0)
+
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
 if (!(registerOnly)) {
-	WebUI.delay(5)
-	
+    WebUI.delay(5)
+
     pages = WebUI.callTestCase(findTestCase('Education Candidate Profile/Complete Education Candidate Profile'), [('varCalled') : true], 
         FailureHandling.CONTINUE_ON_FAILURE)
-	
-	println(pages)
-	
-	if(pages == null || pages.size() == 0 || pages == 'All') {
 
-		WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
-		
-		WebUI.waitForPageLoad(10)
-		
-		myURL = WebUI.getUrl()
-		
-		if(myURL.contains('https://education.missionnext.org/dashboard')) {
-			outText = '\n+++ Education login after profile creation was successful.\n'
-		} else {
-			outText = '\n--- Education login after profile creation failed.\n'				
-		}
-		outFile.append(outText)
-			
-	}	
+    println(pages)
+
+    if (((pages == null) || (pages.size() == 0)) || (pages == 'All')) {
+        WebUI.callTestCase(findTestCase('_Functions/Education Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
+
+        WebUI.waitForPageLoad(10)
+
+        myURL = WebUI.getUrl()
+
+        if (myURL.contains('https://education.missionnext.org/dashboard')) {
+            outText = '\n+++ Education login after profile creation was successful.\n'
+        } else {
+            outText = '\n--- Education login after profile creation failed.\n'
+
+            GlobalVariable.testCaseErrorFlag = true
+        }
+        
+        outFile.append(outText)
+    }
 } else {
-	success = WebUI.verifyTextPresent('Complete your profile by answering required questions on each tab', false)
+    success = WebUI.verifyTextPresent('Complete your profile by answering required questions on each tab', false)
+
+    if (success) {
+        outText = '\n+++ Education candidate registration successful. Profile tabs page was found.\n'
+
+        outFile.append(outText)
+    }
 	
-	if (success) {
-		outText = '\n+++ Education candidate registration successful. Profile tabs page was found.\n'
-		
-		outFile.append(outText)
-	}
 }
 
+println('Test case error flag is ' + GlobalVariable.testCaseErrorFlag)
+
+outFile.append(('Test case error flag is ' + GlobalVariable.testCaseErrorFlag) + '\n')
+
+println('Test Suite Running flag is ' + GlobalVariable.testSuiteRunning)
+
+outFile.append(('Test Suite Running flag is ' + GlobalVariable.testSuiteRunning) + '\n')
+
 WebUI.closeBrowser()
+
+if (GlobalVariable.testSuiteRunning) {
+	WebUI.delay(60)
+}
 

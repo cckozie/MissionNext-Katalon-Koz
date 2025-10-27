@@ -131,12 +131,27 @@ if (fieldTooltips.size() > 0) {
 			tY = it.value
 			tYi = tY.toInteger() + 4
 			if(fieldLabels.size() > 1) {
+				closest = 9999
+				for(label in fieldLabels) {
+					println('testing label ' + label.key +' at ' + label.value)
+					diff = Math.abs(label.value - tY)
+					if(diff < closest) {
+						closest = diff
+						closestKey = label.key
+						println('closest is now ' + label.key +' at ' + label.value + ' and text is ' + ttText)
+					}
+				}
+				println('the smallest diff is ' + closest)
+/*				
 				println('tYi is ' + tYi)
 //				lY = labelsY[i+1]
 				lY = labelsY[i]
 				lYi = lY.toInteger()
 				println('lYi is ' + lYi)
-				if(Math.abs(tYi - lYi) > 5) {
+				
+				diff = Math.abs(tYi - lYi)
+				println('diff Y is ' + diff)
+				if(diff > 5) {
 					while(tYi > lYi) {
 						i = i + 1
 						println('i is ' + i)
@@ -149,17 +164,23 @@ if (fieldTooltips.size() > 0) {
 						println('lYi is ' + lYi)
 					}
 				}
+
 				lY = labelsY[i]
 				println('lY is ' + lY)
-				myKey = fieldLabels.find{ it.value == lY }?.key
+*/
+//				myKey = fieldLabels.find{ it.value == lY }?.key
+
+				myKey = closestKey				
 			} else {
 				myKey = label
 				lYi = tYi - 4
 			}
 			if(debug) {	
-				println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
+//				println('tooltip ' + kY + ' is at ' + tY + ' and label ' + myKey + ' is at ' + lYi)
+				println('tooltip ' + kY + ' is at ' + tY + ' and label ' + closestKey + ' is at ' + fieldLabels.get(closestKey))
 			}
-			tooltipMap.put(myKey,kY)
+//			tooltipMap.put(myKey,kY)
+			tooltipMap.put(closestKey,kY)
 		}
 	}
 }

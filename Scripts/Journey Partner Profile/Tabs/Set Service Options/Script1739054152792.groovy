@@ -106,13 +106,13 @@ tooltips = [
 //('Short-Term Availability') : 'img_Short-Term Availability_field-tooltip',
 //('Short-Term Objective') : 'img_Short-Term Objective_field-tooltip',
 //('Short-Term Statement') : 'img_Short-Term Statement_field-tooltip',
-('Preferred Regions') : 'img_Preferred Region(s)_field-tooltip',
+('Preferred Region(s)') : 'img_Preferred Region(s)_field-tooltip',
 ('Languages') : 'img_Languages_field-tooltip']
 
 // Define the expected tooltip texts
 tooltipText = [
 ('Time Commitments') : 'Check all that generally apply. Open will match all candidates.',
-('Time/Hours Needed') : 'Check all that generally apply for your assignments.',
+('TimeHours Needed') : 'Check all that generally apply for your assignments.',
 ('Awareness Trip') : 'Does your organization accommodate mission Awareness Trips?',
 ('Vision Trip') : 'Does your organization offer Vision Trips?',
 //('Short-Term Trip Lengths') : 'The Open selection will match all short-term candidates',
@@ -154,6 +154,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -243,6 +244,7 @@ if(!myClass.contains('error')) {
 } else {
 	outText = 'Unable to successfully complete ' + testName + '.\n'
 	KeywordUtil.markError(outText)
+	GlobalVariable.testCaseErrorFlag = true
 }
 println(outText)
 outFile.append(outText)

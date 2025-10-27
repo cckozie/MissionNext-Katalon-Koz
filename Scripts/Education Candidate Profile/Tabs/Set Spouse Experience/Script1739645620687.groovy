@@ -69,7 +69,8 @@ requiredFieldMsgs = []
 pageLinks = [('Terms and Conditions') : 'Terms and Conditions']
 
 //Go to the Spouse Experience tab
-WebUI.click(findTestObject('Education Candidate Profile/Tabs/a_Spouse Experience'))
+myTab = 'Education Candidate Profile/Tabs/a_Spouse Experience'
+WebUI.click(findTestObject(myTab))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -133,15 +134,10 @@ object = 'Education Candidate Profile/Tabs/btn_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Spouse Experience'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

@@ -6,4 +6,17 @@
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>3a28a13a-9ad4-45b5-b272-4005a5182245</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>10855d83-47e7-43c1-802b-740d27b863dd</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>10855d83-47e7-43c1-802b-740d27b863dd</id>
+      <masked>false</masked>
+      <name>varSleepMinutes</name>
+   </variable>
 </TestCaseEntity>

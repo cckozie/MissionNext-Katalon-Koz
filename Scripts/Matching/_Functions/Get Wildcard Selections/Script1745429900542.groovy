@@ -32,10 +32,10 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 //varType = 'Job'
 //varType = 'Org'
 
-varMap = ['Journey_Job' : ['Journey Partner Profile', 'Journey Candidate 05', 'Journey Partner 07', 'a_My Agency Jobs'],
-	'Journey_Org' : ['Journey Candidate Profile', 'Journey Candidate 05', 'Journey Partner 07'],
-	'Education_Job' : ['Education Partner Profile', 'Education Candidate 04', 'Education Partner 06', 'a_My School Jobs'],
-	'Education_Org' : ['Education Candidate Profile', 'Education Candidate 04', 'Education Partner 06']]
+varMap = ['Journey_Job' : ['Journey Partner Profile', 'Journey Candidate 15', 'Journey Partner 17', 'a_Job Matches'],
+	'Journey_Org' : ['Journey Candidate Profile', 'Journey Candidate 15', 'Journey Partner 17'],
+	'Education_Job' : ['Education Partner Profile', 'Education Candidate 14', 'Education Partner 16', 'a_My School Jobs'],
+	'Education_Org' : ['Education Candidate Profile', 'Education Candidate 14', 'Education Partner 16']]
 
 mapKey = varSite + '_' + varType
 
@@ -59,9 +59,13 @@ for(username in [varValues[1],varValues[2]]) {
 		
 			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Dashboard/' + varValues[3]))
 			
+			WebUI.switchToWindowIndex(1)
+			
 			WebUI.waitForPageLoad(10)
 			
-			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Matching/btn_New Job'))
+			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Matching/button_Add Jobs'))
+			
+			WebUI.switchToWindowIndex(2)
 		}
 	}
 			
@@ -209,6 +213,8 @@ if(debug) {
 }
 outFile = new File(filePath + varSite + ' Candidate Wildcards.txt')
 outFile.write(wcCS)
+
+WebUI.closeBrowser()
 
 return [wcCandidates, wcPartners]
 

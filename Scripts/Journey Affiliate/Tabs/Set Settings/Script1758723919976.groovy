@@ -18,25 +18,24 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
-if(username[-3..-1] != '9ea') {
-    println('The Execution Profile must be set to "Education Affiliate"')
+domain = GlobalVariable.domain
+
+if(username[-3..-1] != '3ja') {
+    println('The Execution Profile must be set to "journey Affiliate"')
 
     System.exit(0)
 }
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-writeFile = false
+outFile = GlobalVariable.outFile
 
-// Set output file
-testName = 'Education Affiliate Settings Tab'
-
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -44,18 +43,18 @@ outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varT
 parms = [varProfile_years, varVisible_to_public]
 
 //xpath of the Profile Years group
-profile_years = "//input[@id='profile_group-1499020076.88_profile_years']"
+profile_years = "//input[@id='profile_group-1494759117.185_profile_years']"
 
 //xpath of the Visible to Public group
-visible_to_public = "//input[@name='profile[group-1499020076.88][visible_to_public]']"
+visible_to_public = "//input[@name='profile[group-1494759117.185][visible_to_public]']"
 
 xpaths = [profile_years, visible_to_public]
 
 // Define path to tooltip text images
-tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/education Affiliate/tabs/Settings/'
+tooltipImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/Education Affiliate/Settings/'
 
 // Define the folder where the tooltip test objects live
-testObjectFolder = 'Education Affiliate/Tabs/Settings/'
+testObjectFolder = 'journey Affiliate/Tabs/Settings/'
 
 // Define the names of the tooltip fields and the unique part of the related test object
 // ('dummy' is a necessary fake 'element' because Sikulix does not do an image compare correctly on the first element tested)
@@ -78,7 +77,8 @@ requiredFieldMsgs = []
 pageLinks = []
 
 //Go to the Settings tab
-WebUI.click(findTestObject('Education Affiliate/Tabs/a_Settings'))
+myTab = 'journey Affiliate/Tabs/a_Settings'
+WebUI.click(findTestObject(myTab))
 
 
 //Get the actual tooltip text
@@ -87,6 +87,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -117,20 +118,17 @@ outFile.append(outText)
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
+//Set the match rate
+WebUI.selectOptionByValue(findTestObject('Object Repository/Journey Affiliate/Tabs/Settings/select_Match Rate'), varMatch_rate, false)
+
 //Set the group options
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Education Affiliate/Tabs/input_Submit'))
+WebUI.click(findTestObject('journey Affiliate/Tabs/input_Submit'))
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Affiliate/a_Settings'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
 
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : myTab ], FailureHandling.STOP_ON_FAILURE)

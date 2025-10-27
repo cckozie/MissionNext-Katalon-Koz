@@ -60,7 +60,7 @@ Screen s = new Screen()
 
  */
 if (!(bypass)) {
-    WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername'):username, ('varSite'):site], FailureHandling.STOP_ON_FAILURE)
+    WebUI.callTestCase(findTestCase('Admin/Switch-To Username - Sikuli'), [('varUsername'):username, ('varSite'):site], FailureHandling.STOP_ON_FAILURE)
 
     WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/' + link))
 

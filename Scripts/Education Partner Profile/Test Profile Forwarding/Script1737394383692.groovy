@@ -21,7 +21,19 @@ import org.openqa.selenium.Keys as Keys
 // Remove the loop and look for both emails after forwarding it	- Completed 10/21/24
 // Verify education partner exists and create profile is not
 //////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+// Ensure that we are using the correct execution profile
+username = GlobalVariable.username
+println(username[-3..-1])
+if(username[-3..-1] != '6ep') {
+	println('The Execution Profile must be set to "Education Affiliate"')
+
+	System.exit(0)
+}
+
+
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Test Forward Candidate Profile: Issues 52 and 91 on ' + 
+
 GlobalVariable.domain) + '.txt')
 
 GlobalVariable.outFile = outFile
@@ -99,6 +111,7 @@ if (msgFound) {
         outText = (('An email with the candidate profile was found. Wait time was ' + duration.toString()) + ' seconds.\n TEST PASSED')
     } else {
         outText = (('An email with the candidate profile was NOT found after waiting ' + duration.toString()) + ' seconds.\n TEST FAILED')
+		GlobalVariable.testCaseErrorFlag = true
     }
     
     println(outText)
@@ -110,9 +123,11 @@ if (msgFound) {
     println(outText)
 
     outFile.append(outText + '\n')
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 
 WebUI.closeBrowser()
 
-WebUI.closeBrowser()
+
 

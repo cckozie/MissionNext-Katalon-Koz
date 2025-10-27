@@ -22,21 +22,19 @@ import com.kms.katalon.core.util.KeywordUtil
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
+domain = GlobalVariable.domain
+
 if(username[-3..-1] != '9ea') {
     println('The Execution Profile must be set to "Education Affiliate"')
 
     System.exit(0)
 }
 
-//Check to see if we're writing printed output to a file
-domain = GlobalVariable.domain
+testName = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
-writeFile = false
+outFile = GlobalVariable.outFile
 
-// Set output file
-testName = 'Education Affiliate Settings Tab'
-
-outFile = WebUI.callTestCase(findTestCase('_Functions/Set Output File'), [('varTestName') : testName], FailureHandling.STOP_ON_FAILURE)
+outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
@@ -78,7 +76,8 @@ requiredFieldMsgs = []
 pageLinks = []
 
 //Go to the Settings tab
-WebUI.click(findTestObject('Education Affiliate/Tabs/a_Settings'))
+myTab = 'Education Affiliate/Tabs/a_Settings'
+WebUI.click(findTestObject(myTab))
 
 
 //Get the actual tooltip text
@@ -87,6 +86,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -117,20 +117,18 @@ outFile.append(outText)
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
+//Set the match rate
+WebUI.selectOptionByValue(findTestObject('Object Repository/Journey Affiliate/Tabs/Settings/select_Match Rate'), varMatch_rate, false)
+
 //Set the group options
 WebUI.callTestCase(findTestCase('_Functions/Click on Group Elements'), [('varXpaths') : xpaths, ('varParms') : parms], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Education Affiliate/Tabs/input_Submit'))
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Affiliate/a_Settings'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

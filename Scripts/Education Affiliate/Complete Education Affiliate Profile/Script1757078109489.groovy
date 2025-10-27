@@ -76,6 +76,8 @@ if(granted == false || granted == null) {
 	
 	outFile.append(outText + '\n')
 	
+	GlobalVariable.testCaseErrorFlag = true
+	
 	WebUI.closeBrowser()
 	 
 	System.exit(0)
@@ -134,13 +136,15 @@ if(settingsVisible && (pages.size() == 0 || 'All' in pages || 'Settings' in page
 			WebUI.click(findTestObject('Object Repository/Education Affiliate/Dashboard/a_My Profile'))
 	}
 	
+	match_rate = '70'
+	
 	//Complete the Service Options tab
 	profile_years = ['2024', '2025', '2026']
 	
 	visible_to_public = ['No']
 	
 	WebUI.callTestCase(findTestCase('Education Affiliate/Tabs/Set Settings'), 
-		[('varProfile_years') : profile_years, ('varVisible_to_public') : visible_to_public], FailureHandling.CONTINUE_ON_FAILURE)
+		[('varMatch_rate') : match_rate, ('varProfile_years') : profile_years, ('varVisible_to_public') : visible_to_public], FailureHandling.CONTINUE_ON_FAILURE)
 }	
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -162,6 +166,7 @@ if(1 == 1 || pages == null || pages.size() == 0 || pages == 'All') {
 	} else {
 		outText = '\n##### The login after registering as an Education Affiliate was NOT successful. #####'
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText + '\n')
 		

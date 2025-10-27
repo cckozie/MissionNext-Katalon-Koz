@@ -124,9 +124,11 @@ if(found) {
 	
 	WebUI.waitForPageLoad(10)
 	
-	deletedUser = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/p_The missionnext Candidate account username'))	
+//	deletedUser = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/p_The missionnext Candidate account username'))	
 	
-	if(deletedUser.indexOf(username) >= 0) {
+	deletedUser = WebUI.verifyTextPresent('ALL RECORDS FOR THIS USER ARE DELETED.', false, FailureHandling.OPTIONAL)
+	
+	if(deletedUser) {
 		
 		outText = ('User ' + username + ' was successfully deleted.')
 		
@@ -142,6 +144,7 @@ if(found) {
 	
 		outFile.append(outText + '\n')
 	
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	
 } else {
@@ -152,6 +155,8 @@ if(found) {
 	
 //	if(writeFile) {
 		outFile.append(outText + '\n')
+		
+		GlobalVariable.testCaseErrorFlag = true
 //	}
 
 }

@@ -22,28 +22,19 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.text.SimpleDateFormat
 
-if (binding.hasVariable('varUsername')) {
-	username = varUsername
-} else {
-	username = GlobalVariable.username
-}
+// MODIFIED 10-14-25 TO USE USER INFO INSTEAD OF SUBSCRIPTION INFORMATION BECAUSE OF THE NEW PROCESSING OF TEST ACCOUNTS
+// TURNS OUT IT'S NOT A TEST ACCOUNT ISSUE. NEED TO MODIFY SCRIPT TO TEST FOR UNASSIGNED APP.
 
-if (binding.hasVariable('varType')) {
-	type = varType	//Education or Journey (for now)
-} else {
-	type = 'Education'
-}
+username = varUsername
 
-if (binding.hasVariable('varRole')) {
-	role = varRole	//Candidate, Organization, or Agency
-} else {
-	role = 'Organization'
-}
+type = varType
+
+role = varRole
+
 
 println('username is ' + username)
 println('type is ' + type)
-println('role is ' + role)
-
+println(('role is ' + role))
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
@@ -68,130 +59,170 @@ WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_Password'), 'fAJOXt1
 
 WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
 
-WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Subscription Information  Administration'))
+WebUI.waitForPageLoad(30)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Website'))
+//WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Admin Section Home'))
 
-WebUI.delay(1)
+WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
 
-WebUI.selectOptionByLabel(findTestObject('Object Repository/Admin/Ad Subscription Utility/select_Website'), type, false)
-
-WebUI.selectOptionByLabel(findTestObject('Object Repository/Admin/Ad Subscription Utility/select_Role'), role, false)
+WebUI.setText(findTestObject('Admin/Ad User Viewer Utility/input_Find account by Username'), username)
 
 WebUI.delay(1)
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/option_' + role))
+WebUI.click(findTestObject('Admin/Ad User Viewer Utility/button_Find account by Username'))
 
-WebUI.click(findTestObject('Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
-
-WebUI.delay(2)
+WebUI.delay(1)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement Table = driver.findElement(By.xpath('//p[4]/table'))
+WebElement Table = driver.findElement(By.xpath('//table[2]'))
+//	Table = driver.findElement(By.xpath('//table[2]'))
 
 List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+//	Rows = Table.findElements(By.tagName('tr'))
 
-int row_count = Rows.size()
+row_count = Rows.size()
 
 found = false
+	
+if(row_count > 0) {
 
-for (row = 1; row < row_count; row++) {
-    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-
-    user = Columns.get(8).getText()
-
-    if (user.indexOf(username) >= 0) {
+	for (row = 1; row < row_count; row++) {
+		List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+	
+		user = Columns.get(2).getText()
 		
-		found = true
+		email = Columns.get(3).getText()
 		
-        outText = 'Creating subscription for ' + username
+		lastLogin = Columns.get(6).getText()
+	
+		if (user.indexOf(username) >= 0) {
+			
+			found = true
+			
+			outText = 'User ' + username + ' was found. Attempting to assign app.'
+			
+			println(outText)
+			
+//				if(writeFile) {
+//					outFile.append(outText + '\n')
+//				}
+	
+			link = Columns.get(2).findElement(By.tagName('a'))
+			
+			link.click()
+		
+			WebUI.delay(2)
+	
+			break
+			
+		}
+	}
+}
 
+if(found) {
+	
+	WebUI.delay(1)
+	
+	WebUI.switchToWindowIndex(1)
+	
+	WebUI.delay(1)
+//		WebUI.waitForPageLoad(10)
+	
+	object = 'Admin/Ad Subscription Utility/a_Add subscription record'
+	
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.delay(1)
+	
+	// TEST FOR EXISTING APP DESIGNATION HERE
+	apps = ['Journey', 'Education', 'Journey Guide', 'Canada', 'Urbana', 'QuickStart']
+	
+	assigned = false
+	for(app in apps) {
+		if(WebUI.verifyElementChecked(findTestObject('Object Repository/Admin/Ad Subscription Utility/radio_Journey'), 1, FailureHandling.OPTIONAL)) {
+			outText = app + ' has been assigned.'
+			
+			assigned = true
+			
+			break
+		}
+	} 
+	
+	if(!assigned) {
+		outText = '##### ERROR: No app has been assigned. Now assigning ' + type + '.'
+
+		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/radio_' + type))		
+	}
+	
+	println(outText)
+	
+	outFile.append(outText + '\n')
+	
+	//Calculate and set start and end dates
+	date = new Date()
+	
+	start = date.format("yyyy-MM-dd")
+	
+	year = start.substring(0,4)
+	
+	month = start.substring(5,7)
+	
+	day = start.substring(8,)
+	
+	if(role == 'Candidate') {
+		endYear = year.toInteger() + 5
+		end = endYear + '-12-31'
+	} else {
+		endYear = year.toInteger() + 1
+		end = endYear + '-' + month + '-' + day
+	}
+	
+	outText = 'Setting Start Date to ' + start + ', and End Date to ' + end + '.'
+	
+	println(outText)
+	
+	outFile.append(outText + '\n')
+	
+	WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_Start Date'),start)
+	
+	WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_End Date'), end)
+	
+	WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/button_Add Subscription Entry'))
+	
+	WebUI.delay(2)
+	
+	created = WebUI.verifyElementVisible(findTestObject('Object Repository/Admin/Ad Subscription Utility/li_Record is successfully added'), FailureHandling.STOP_ON_FAILURE)
+
+	println(created)
+	
+	if(created) {
+		
+		outText = 'Subscription created for ' + username
+		
 		println('=====> '+ outText)
 		
 		if(writeFile) {
 			outFile.append(outText + '\n')
 		}
 		
-        Columns.get(4).click()
+	} else {
+		outText = 'Failed to verify that a subscription was created for ' + username
 		
-		WebUI.delay(2)
+		println('=====> '+ outText)
 		
-		WebUI.click(findTestObject('Admin/Ad Subscription Utility/a_Add a subscription record'))
-
-		WebUI.delay(2)
-		
-		if(type == 'Education') {
-			
-			WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/Subscription Edit/radio_Education app'))
-			
-		} else {
-			
-			if(type == 'Journey') {
-			
-			WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/Subscription Edit/radio_Journey app'))
-			
-			}
-			
+		if(writeFile) {
+			outFile.append(outText + '\n')
 		}
-		//Calculate and set start and end dates
-		date = new Date()
-		
-		start = date.format("yyyy-MM-dd")
-		
-		year = start.substring(0,4)
-		
-		month = start.substring(5,7)
-		
-		day = start.substring(8,)
-		
-		if(role == 'Candidate') {
-			endYear = year.toInteger() + 5
-			end = endYear + '-12-31'
-		} else {
-			endYear = year.toInteger() + 1
-			end = endYear + '-' + month + '-' + day
-		}
-		
-		WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_YYYY-MM-DD_start_date'),start)
-		
-		WebUI.setText(findTestObject('Object Repository/Admin/Ad Subscription Utility/input_YYYY-MM-DD_end_date'), end)
-		
-		WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/btn_Add Subscription Entry'))
-		
-		WebUI.delay(2)
-		
-		created = WebUI.verifyElementVisible(findTestObject('Object Repository/Admin/Ad Subscription Utility/li_Record is successfully added'), FailureHandling.STOP_ON_FAILURE)
-
-		if(created) {
-			
-			outText = 'Subscription created for ' + username
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-			
-		} else {
-			outText = 'Failed to verify that a subscription was created for ' + username
-			
-			println('=====> '+ outText)
-			
-			if(writeFile) {
-				outFile.append(outText + '\n')
-			}
-		}
-					
-		break
-		
-    }
-	
+	}
+				
 }
+	
+
 
 if(!found) {
 	
-	outText = 'Failed to find user ' + username + ' in the unassigned subscriptions area of the subscriptions page.'
+	outText = 'Failed to find user ' + username + ' in the user list.'
 	
 	println('=====> '+ outText)
 	

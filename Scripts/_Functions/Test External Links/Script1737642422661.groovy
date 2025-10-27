@@ -92,13 +92,15 @@ for(it in pageLinks) {
 		outFile.append(outText + '\n')
 		log.logFailed(outText)
 		
+		GlobalVariable.testCaseErrorFlag = true
+		
 //		KeywordUtil.markError('\n' + outText)
 		
 //		textFound = false
 		
 	} else {
 		
-		WebUI.waitForPageLoad(10)
+		WebUI.waitForPageLoad(30)
 	
 		WebUI.delay(2)
 		
@@ -130,6 +132,9 @@ for(it in pageLinks) {
 
 		outFile.append(outText + '\n')
 		log.logFailed(outText)
+		
+		GlobalVariable.testCaseErrorFlag = true
+		
 //		KeywordUtil.markError('\n' + outText)
 	}
 	
@@ -151,6 +156,8 @@ for(it in pageLinks) {
 
 		outFile.append(outText + '\n')
 
+		GlobalVariable.testCaseErrorFlag = true
+		
 //		KeywordUtil.markError('\n' + outText)
 		WebUI.back()
 		

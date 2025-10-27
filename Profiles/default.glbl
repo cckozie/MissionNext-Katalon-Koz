@@ -26,8 +26,28 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>false</initValue>
+      <name>testSuiteCollectionRunning</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>testSuiteCollectionName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>''</initValue>
       <name>testCaseName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>testCaseErrorFlag</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>testSuiteCollectionsFile</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -108,5 +128,10 @@
       <description>Wait time in minutes</description>
       <initValue>5</initValue>
       <name>emailWaitTime</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>700</initValue>
+      <name>tooltipMaxX</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

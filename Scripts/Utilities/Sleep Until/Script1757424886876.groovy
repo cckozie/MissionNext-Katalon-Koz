@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import java.time.*
 import java.io.File as File
 
-delay = 1 * 60
+delay = varSleepMinutes * 60
 
 outFile = new File(GlobalVariable.reportPath + 'Sleeping Now.txt')
 
@@ -35,7 +35,7 @@ outFile.write(outText + '\n\n')
 
 int seconds = myTime.toSecondOfDay()
 
-outText = 'Going to sleep now for ' + delay + ' seconds.'
+outText = 'Going to sleep at ' + myTime + ' for ' + delay + ' seconds.'
 
 println(outText)
 

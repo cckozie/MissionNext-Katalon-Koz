@@ -17,5 +17,11 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Utilities/Sleep Until</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>10855d83-47e7-43c1-802b-740d27b863dd</variableId>
+      </variableLink>
    </testCaseLink>
 </TestSuiteEntity>

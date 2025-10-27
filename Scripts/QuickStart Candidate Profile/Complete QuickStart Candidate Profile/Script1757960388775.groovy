@@ -149,7 +149,7 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	}
 }
 
-//WebUI.closeBrowser()
+WebUI.closeBrowser()
 
 def verifyCategories() {
 	categories = ['ADD: SUPPORT PROFESSIONAL', 'ADD: BUSINESS AS MISSION', 'ADD: RELIEF AND DEVELOPMENT']

@@ -334,6 +334,8 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 		outText = '\n--- Journey candidate login after profile creation failed.\n'
 		
 		outFile.append(outText)
+		
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	
 }
@@ -351,9 +353,13 @@ def verifyCategories() {
 			outText = '+++ The text ' + category + ' was found on the dashboard.'
 		} else {
 			outText = '--- The text ' + category + ' was NOT found on the dashboard.'
+		
+			GlobalVariable.testCaseErrorFlag = true
 		}
 		
 		outFile.append(outText + '\n')
+		
+		GlobalVariable.testCaseErrorFlag = true
 	}
 
 }

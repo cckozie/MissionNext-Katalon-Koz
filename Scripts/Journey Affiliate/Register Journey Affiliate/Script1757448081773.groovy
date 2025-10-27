@@ -19,6 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.io.File as File
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
 // Ensure that we are using the correct execution profile
@@ -78,7 +79,7 @@ tooltips = [
 // Define the expected tooltip texts
 tooltipText = [
 ('Username') : 'Must be unique; at least 6 characters; contain only lowercase letters; allowable characters: numbers, @, dash, underscore or period, and can be an email address.',
-('Email') : 'Your primary email address and must be unique in our database.',
+('Contact Email') : 'Your primary email address and must be unique in our database.',
 ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.',
 ('Contact Last Name') : 'Person working the website to recruit candidates.']
 
@@ -246,7 +247,7 @@ object = 'Object Repository/Journey Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 //Verify that the correct Approval Pending page is displayed
-found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
+found = WebUI.verifyTextPresent('If this Application is for an Affiliation', false, FailureHandling.OPTIONAL)
 
 if(found) {
 	outText = '\nThe appropriate Approval Pending page was displayed'
@@ -254,30 +255,11 @@ if(found) {
 } else {
 	outText = '\n##### The appropriate Approval Pending page was NOT displayed #####'
 	KeywordUtil.markError('\n' + outText)
+	GlobalVariable.testCaseErrorFlag = true
 }
 
 outFile.append(outText + '\n')
 
-//================================== Grant access for the new Journey partner ==================================
-WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-
-//================================== Create a subscriptioon for the new Journey partner ========================
-WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Journey'
-		, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
-
-found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
-
-if(found) {
-	outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
-	
-} else {
-	outText = '\n##### The login after registering as an Journey Affiliage was NOT successful. #####'
-	KeywordUtil.markError('\n' + outText)
-}
-
-outFile.append(outText + '\n')
 
 //================================== Wait for the approval pending email for the new Journey affiliate =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
@@ -291,9 +273,36 @@ if (emailFound) {
 	outFile.append(outText)
 
 	WebUI.closeBrowser()
+	
+	//================================== Grant access for the new Journey partner ==================================
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	//================================== Create a subscriptioon for the new Journey partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Journey'
+			, ('varRole') : 'Agency'], FailureHandling.CONTINUE_ON_FAILURE)
+
+	WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	
+	found = WebUI.verifyTextPresent('Thank You for Applying for a MissionNext Journey Partnership', false, FailureHandling.OPTIONAL)
+	
+	if(found) {
+		outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
+		
+	} else {
+		outText = '\n##### The login after registering as an Journey Affiliage was NOT successful. #####'
+		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
+	}
+	
+	outFile.append(outText + '\n')
+	
+} else {
+	outText = (('----- Approval request email for ' + username) + ' was NOT found')
+
+	outFile.append(outText + '\n')
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
-
-
 
 
 WebUI.closeBrowser()

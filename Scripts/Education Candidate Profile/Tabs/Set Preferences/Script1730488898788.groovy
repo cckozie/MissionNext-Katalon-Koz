@@ -84,7 +84,8 @@ requiredFieldMsgs = [
 pageLinks = [('countries by region') : 'Countries by Region']
 
 //Go to the Preferences tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Preferences'))
+myTab = 'Object Repository/Education Candidate Profile/Tabs/a_Preferences'
+WebUI.click(findTestObject(myTab))
 
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName], FailureHandling.STOP_ON_FAILURE)
 
@@ -116,6 +117,8 @@ if(positionText != preferredPositions) {
 	outText = "##### The expected text for the Preferred Positions section was found to be '" + positionText + "', but should be '" + preferredPositions + "'."
 	println(outText)
 	outFile.append(outText + '\n')
+	GlobalVariable.testCaseErrorFlag = true
+	
 }
 
 regionText = WebUI.getText(findTestObject('Object Repository/Education Candidate Profile/Tabs/Preferences/text_Preferred Region(s) is a required field'))
@@ -124,6 +127,8 @@ if(regionText != preferredRegions) {
 	outText = "##### The expected text for the Preferred Regions section was found to be '" regionText + "', but should be '" + preferredRegions + "'."
 	println(outText)
 	outFile.append(outText + '\n')
+	GlobalVariable.testCaseErrorFlag = true
+	
 }
 
 if(!GlobalVariable.fastPath) {
@@ -143,17 +148,10 @@ WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLin
 object = 'Education Candidate Profile/Tabs/Preferences/input_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Preferences'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
 
+testObject = myTab
 
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

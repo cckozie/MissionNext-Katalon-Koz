@@ -71,7 +71,8 @@ tooltipText = [('Life Experience') : 'May include your testimony or other experi
 requiredFieldMsgs = [('Life Experience') : 'The missions experience field is required.']
 	
 //Go to the Experience tab
-WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Tabs/a_Experience'))
+myTab = 'Object Repository/Education Candidate Profile/Tabs/a_Experience'
+WebUI.click(findTestObject(myTab))
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -142,15 +143,10 @@ object = 'Education Candidate Profile/Tabs/Experience/btn_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 
-// Test to see if the tab is complete (not colored red, class does not contain 'error')
+// Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
-myClass = WebUI.getAttribute(findTestObject('Education Candidate Profile/Tabs/a_Experience'), 'class', FailureHandling.OPTIONAL)
-if(!myClass.contains('error')) {
-	outText = testName + ' was successfully completed.\n'
-} else {
-	outText = 'Unable to successfully complete ' + testName + '.\n'
-	KeywordUtil.markError(outText)
-}
-println(outText)
-outFile.append(outText)
+
+testObject = myTab
+
+WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
 

@@ -66,7 +66,7 @@ tooltipText = [
 ('Abbreviation') : 'Generally, the first initials of your organization name; this is used in some displays.',
 ('Mailing Address') : 'Organization mailing address is required',
 ('Organization City') : 'Organization city field is required',
-('Post/Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.',
+('PostZip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.',
 ('Key Contact Email') : 'Email address must be unique. Use another for a different MissionNext account.',
 ('Website Address') : 'Must start with https://',
 ('Description') : 'Hint: Take a paragraph or two from your website. If copying & pasting, you must manually type in any special characters, i.e, quotation marks, apostrophe, ampersand, etc.']
@@ -87,6 +87,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -174,6 +175,7 @@ if(!myClass.contains('error')) {
 } else {
 	outText = 'Unable to successfully complete ' + testName + '.\n'
 	KeywordUtil.markError(outText)
+	GlobalVariable.testCaseErrorFlag = true
 }
 println(outText)
 outFile.append(outText)

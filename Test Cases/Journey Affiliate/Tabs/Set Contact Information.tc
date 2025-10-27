@@ -12,11 +12,63 @@
       <value></value>
       <variableId>5e7f2870-e7a1-4ec7-b1a8-59e09550facd</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3460ea6f-a19b-4cc5-8573-277dbc7e6443</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3b7611cb-d35f-4a61-b3b9-c3abd71bae77</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>195d5fff-e003-42f6-8d99-bcd101ce87ed</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>82aa3144-8993-4222-a063-f9fc2fbac382</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
       <id>5e7f2870-e7a1-4ec7-b1a8-59e09550facd</id>
       <masked>false</masked>
       <name>varMailing_address</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>3460ea6f-a19b-4cc5-8573-277dbc7e6443</id>
+      <masked>false</masked>
+      <name>varContact_phone</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>3b7611cb-d35f-4a61-b3b9-c3abd71bae77</id>
+      <masked>false</masked>
+      <name>varCity</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>195d5fff-e003-42f6-8d99-bcd101ce87ed</id>
+      <masked>false</masked>
+      <name>varState</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>82aa3144-8993-4222-a063-f9fc2fbac382</id>
+      <masked>false</masked>
+      <name>varZip</name>
    </variable>
 </TestCaseEntity>

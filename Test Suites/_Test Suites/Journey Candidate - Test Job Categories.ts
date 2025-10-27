@@ -15,7 +15,7 @@
       <guid>c74c2182-6bf4-4eca-9017-68526f776bdd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Journey Candidate Profile/Test Job Category Selections</testCaseId>
+      <testCaseId>Test Cases/Journey Candidate Profile/Test Journey Candidate Job Category Selections</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

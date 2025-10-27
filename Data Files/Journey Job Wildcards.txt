@@ -1,5 +1,6 @@
 ['Programming Languages':['Let us know'],
  'Time Commitment':['Open - Will negotiate'],
+ 'Time/Hours Available':['Open'],
  'Cross-Cultural Experience':['Not served in a culture other than my own'],
  'Paid & Volunteer Positions':['No Preference'],
  'Travel Support':['Travel funds provided'],

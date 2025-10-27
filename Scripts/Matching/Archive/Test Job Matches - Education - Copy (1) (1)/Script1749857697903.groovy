@@ -183,7 +183,7 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 jobFile = (filePath + 'jobprofile.txt')
 
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username - Sikuli'), [('varUsername') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
 driver = DriverFactory.getWebDriver()
 

@@ -52,6 +52,8 @@ if(count == 0) {
 	
 	        outFile.append(outText + '\n')
 			log.logFailed(outText)
+			
+			GlobalVariable.testCaseErrorFlag = true
 	    }
 	}
 	

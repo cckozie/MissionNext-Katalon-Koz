@@ -65,6 +65,7 @@ if(granted == false || granted == null) {
 	
 	WebUI.closeBrowser()
 	 
+	GlobalVariable.testCaseErrorFlag = true
 	System.exit(0)
 }
 
@@ -280,6 +281,7 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	} else {
 		outText = '--- Journey partner login after profile completion failed.\n'
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText)
 }

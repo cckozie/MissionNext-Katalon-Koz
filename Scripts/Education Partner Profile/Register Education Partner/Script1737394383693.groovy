@@ -190,11 +190,13 @@ if(!GlobalVariable.fastPath) {
 	        }
 	    } else {
 	        outText = '--- Unable to find image for email to customer support'
+			GlobalVariable.testCaseErrorFlag = true
 	    }
 	    
 	    println(outText)
 	
 	    outFile.append(outText + '\n')
+				
 	} else {
 	    outText = ('Unable to find the image file ' + myImage)
 	
@@ -203,6 +205,8 @@ if(!GlobalVariable.fastPath) {
 	    println(outText)
 	
 	    KeywordUtil.markError('\n' + outText)
+		
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	
 	// Close the email window and app
@@ -390,6 +394,8 @@ if (pending) {
     outFile.append(outText + '\n')
 
     KeywordUtil.markError('\n' + outText)
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 
 // Test the text per issue #364
@@ -417,20 +423,25 @@ emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'
 if (emailFound) {
 	outText = (('+++++ Approval request email for ' + username) + ' was found')
 	
+	outFile.append(outText + '\n')
+	
+	WebUI.closeBrowser()
+	
+	//================================== Grant access for the new education partner ==================================
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	//================================== Create a subscriptioon for the new education partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+	        , ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
+
 } else {
 	
 	outText = (('----- Approval request email for ' + username) + ' was NOT found')
+	
+	outFile.append(outText + '\n\n')
+	
+	GlobalVariable.testCaseErrorFlag = true
 }
 
-outFile.append(outText + '\n')
-
-WebUI.closeBrowser()
-
-//================================== Grant access for the new education partner ==================================
-WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
-
-//================================== Create a subscriptioon for the new education partner ========================
-WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
-        , ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.closeBrowser()

@@ -78,6 +78,8 @@ if(granted == false || granted == null) {
 	
 	WebUI.closeBrowser()
 	 
+	GlobalVariable.testCaseErrorFlag = true
+	
 	System.exit(0)
 }
 
@@ -87,6 +89,7 @@ url = WebUI.getUrl(FailureHandling.OPTIONAL)
 if (url == null) {
 	WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if(pages.size() == 0 || 'All' in pages || 'Contact Information' in pages) {
@@ -100,12 +103,21 @@ if(pages.size() == 0 || 'All' in pages || 'Contact Information' in pages) {
 	// Complete the Contact Info tab
 	mailing_address = '1250 Waconia Pkwy N'
 	
-	WebUI.callTestCase(findTestCase('Journey Affiliate/Tabs/Set Contact Information'), [ ('varMailing_address') : mailing_address], FailureHandling.CONTINUE_ON_FAILURE)
+	contact_phone = '952-442-1703'
+	
+	city = 'Waconia'
+	
+	state = 'Minnesota'
+	
+	zip = '55387'
+	
+	WebUI.callTestCase(findTestCase('Journey Affiliate/Tabs/Set Contact Information'), [ ('varMailing_address') : mailing_address,
+		('varContact_phone') : contact_phone, ('varCity') : city, ('varState') : state, ('varZip') : zip], FailureHandling.CONTINUE_ON_FAILURE)
 }
-System.exit(0)
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-if(pages.size() == 0 || 'All' in pages || 'Agencies' in pages) {
+if(pages.size() == 0 || 'All' in pages || 'Agency' in pages) {
 	dashboard = WebUI.verifyElementPresent(findTestObject('Journey Affiliate/Dashboard/a_My Profile'), 2,
 		FailureHandling.OPTIONAL)
 	
@@ -133,22 +145,22 @@ if(settingsVisible && (pages.size() == 0 || 'All' in pages || 'Settings' in page
 	
 	//Complete the Service Options tab
 	
-	match_rate = 70
+	match_rate = '70'
 	
 	profile_years = ['2024', '2025', '2026']
 	
 	visible_to_public = ['No']
 	
 	WebUI.callTestCase(findTestCase('Journey Affiliate/Tabs/Set Settings'), 
-		[('varProfile_years') : profile_years, ('varVisible_to_public') : visible_to_public], FailureHandling.CONTINUE_ON_FAILURE)
+		[('varMatch_rate') : match_rate, ('varProfile_years') : profile_years, ('varVisible_to_public') : visible_to_public], FailureHandling.CONTINUE_ON_FAILURE)
 }	
-/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+/////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 WebUI.closeBrowser()
 
-if(1 == 1 || pages == null || pages.size() == 0 || pages == 'All') {
+if(pages == null || pages.size() == 0 || pages == 'All') {
 	
-	WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('_Functions/Journey Affiliate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
 	
 	WebUI.delay(2)
 	
@@ -162,6 +174,7 @@ if(1 == 1 || pages == null || pages.size() == 0 || pages == 'All') {
 	} else {
 		outText = '\n##### The login after registering as an Journey Affiliate was NOT successful. #####'
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText + '\n')
 		

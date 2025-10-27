@@ -15,7 +15,7 @@
       <guid>d697ecc2-ad0b-462b-9658-deb1509e4723</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/QuickStart Candidate Profile/Test Job Category Selections</testCaseId>
+      <testCaseId>Test Cases/QuickStart Candidate Profile/Test Quickstart Job Category Selections</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

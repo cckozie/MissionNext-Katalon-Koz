@@ -42,6 +42,7 @@ if(!GlobalVariable.testSuiteRunning) {
 
 WebDriver driver = DriverFactory.getWebDriver()
 println(varParms)
+println(varXpaths)
 
 // For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label 
 // corresponds to one that is in the input parameter (varParms) for that group.

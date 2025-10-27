@@ -22,6 +22,9 @@ import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
 
+import com.kms.katalon.core.configuration.RunConfiguration
+
+
 class Before_Test_Suite {
 	/**
 	 * Executes before every test suite starts.
@@ -31,5 +34,15 @@ class Before_Test_Suite {
 	def sampleBeforeTestSuite(TestSuiteContext testSuiteContext) {
 		GlobalVariable.testSuiteRunning = true
 		GlobalVariable.reportPath = GlobalVariable.reportPath + '_Test Suites/'
+		String executionSource = RunConfiguration.getExecutionSource().toString()
+		println(executionSource)
+		if (executionSource.contains("Test Suites/")) { // Check if it's a Test Suite Collection execution
+			String testSuiteCollectionPath = executionSource.substring(executionSource.indexOf("Test Suites/"))
+			String testSuiteCollectionName = testSuiteCollectionPath.substring(testSuiteCollectionPath.lastIndexOf("/") + 1)
+			println "Currently running Test Suite Collection: " + testSuiteCollectionName
+			// You can store this name in a GlobalVariable for later use if needed
+			GlobalVariable.testSuiteCollectionName = testSuiteCollectionName
+		}
+
 	}
 }

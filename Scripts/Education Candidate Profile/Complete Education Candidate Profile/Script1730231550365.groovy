@@ -21,7 +21,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 // Set to page(s) to run, or empty or 'All' to run all pages
-pages = ['Contact Info','Situation']
+pages = []
 
 if(GlobalVariable.testSuiteRunning) {
 	pages = []
@@ -40,6 +40,11 @@ domain = GlobalVariable.domain
 
 myTestCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
 
+if(binding.hasVariable('varCalled')) {
+	println('called')
+} else {
+	println('not called')
+}
 
 if(1 == 2) { 	//GlobalVariable.testSuiteRunning || binding.hasVariable('varCalled')) {
 	outFile = GlobalVariable.outFile
@@ -49,6 +54,8 @@ if(1 == 2) { 	//GlobalVariable.testSuiteRunning || binding.hasVariable('varCalle
 	outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
 	GlobalVariable.outFile = outFile
 }
+
+outFile.append('The test case error flag is ' + GlobalVariable.testCaseErrorFlag + '\n')
 
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
@@ -81,6 +88,7 @@ if ((((pages.size() == 0) || ('All' in pages)) || ('Contact Info' in pages)) || 
         FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Experience' in pages)) {
     // Complete the Experience tab
@@ -103,6 +111,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Experience' in pages)) {
             , ('varCross_cultural') : cross_cultural, ('varMissions_experience') : missions_experience, ('varLife_experience') : life_experience], 
         FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Education' in pages)) {
@@ -130,6 +140,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Education' in pages)) {
             , ('varProficiency') : proficiency], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Situation' in pages)) {
     // Complete the Situation tab
@@ -155,6 +167,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Situation' in pages)) {
             , ('varChurch_involvement') : church_involvement], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Availability' in pages)) {
     // Complete the Availability tab
@@ -170,6 +184,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Availability' in pages)) {
             , ('varTerm_available') : term_available, ('varTime_commitments') : time_commitments, ('varRelocation_options') : relocation_options], 
         FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Preferences' in pages)) {
@@ -194,6 +210,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Preferences' in pages)) {
         FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Options/Comment' in pages)) {
     // Complete the Options/Comment tab
@@ -206,6 +224,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Options/Comment' in pages)) {
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Options-Comment'), [('varPaid_volunteer') : paid_volunteer
             , ('varTravel_options') : travel_options, ('varComments') : comments], FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
@@ -227,6 +247,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Info' in pages)) {
             , ('varSpouse_ethnicity') : spouse_ethnicity, ('varSpouse_serving_with_you') : spouse_serving_with_you], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages)) {
     // Complete the Contact Info tab
@@ -242,6 +264,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Experience' in pages))
             , ('varSpouse_degree_field') : spouse_degree_field, ('varSpouse_occupation') : spouse_occupation, ('varSpouse_an_educator') : spouse_an_educator], 
         FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in pages)) {
@@ -264,6 +288,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Service Prefs' in page
             , ('varSpouse_preferences_comment') : spouse_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
 
+
+
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pages)) {
 
@@ -284,6 +310,8 @@ if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Teaching Prefs' in pag
     WebUI.callTestCase(findTestCase('Education Candidate Profile/Tabs/Set Spouse Teaching Prefs'), [('varSpouse_preferred_education_positions') : positions
             , ('varSpouse_education_preferences_comment') : spouse_education_preferences_comment], FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+
 
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 if (((pages.size() == 0) || ('All' in pages)) || ('Spouse Education' in pages)) {
@@ -324,9 +352,10 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	} else {
 		outText = '\n##### The login after registering as an Education Partner was NOT successful. #####'	
 		KeywordUtil.markError('\n' + outText)
+		GlobalVariable.testCaseErrorFlag = true
 	}
 	outFile.append(outText + '\n')
-		
+	
 }
 	
 WebUI.closeBrowser()

@@ -102,6 +102,7 @@ tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and 
 
 if(tooltipTextMap.size() != tooltipText.size()) {
 	outText = '----- There were ' + tooltipText.size() + ' tooltips expected, but ' + tooltipTextMap.size() + ' were found.'
+	GlobalVariable.testCaseErrorFlag = true
 } else {
 	outText = 'There were ' + tooltipTextMap.size() + ' tooltips found as expected.'
 }
@@ -176,6 +177,7 @@ if(!myClass.contains('error')) {
 } else {
 	outText = 'Unable to successfully complete ' + testName + '.\n'
 	KeywordUtil.markError(outText)
+	GlobalVariable.testCaseErrorFlag = true
 }
 println(outText)
 outFile.append(outText)
