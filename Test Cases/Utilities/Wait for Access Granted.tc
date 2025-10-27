@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Wait for Access Granted</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a705678c-cf4e-44d4-9094-3de61b3ac8d3</testCaseGuid>
+</TestCaseEntity>

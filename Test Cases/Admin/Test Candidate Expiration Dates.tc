@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Job Category Selections</name>
+   <name>Test Candidate Expiration Dates</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>edcce324-4c7c-4196-a362-c84e8238133a</testCaseGuid>
+   <testCaseGuid>90fe9ded-4a33-4fa5-bae1-6324bb335836</testCaseGuid>
 </TestCaseEntity>

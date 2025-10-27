@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Switch-To Username</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>fa23e754-e920-46f3-b537-5815f09899bc</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>efd95840-be0d-45e0-a738-1faf880ffb55</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'null'</defaultValue>
+      <description></description>
+      <id>efd95840-be0d-45e0-a738-1faf880ffb55</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+</TestCaseEntity>

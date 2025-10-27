@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Match Rate</name>
+   <tag></tag>
+   <elementGuidId>61a0ab47-0347-4200-a9b1-677cce3c09cf</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='profile_group-1499020076.88_match_rate']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>e7759e43-0d42-4b4c-a57f-e5a2bf99b191</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>match_rate</value>
+      <webElementGuid>f8193de8-30b6-4d3c-ac3d-54be70637392</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>48</value>
+      <webElementGuid>8f67f329-9ea8-4700-a6f5-a9d89c4eafbe</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>profile[group-1499020076.88][match_rate]</value>
+      <webElementGuid>41fe0c79-c778-4e77-999c-4efd760006dd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>profile_group-1499020076.88_match_rate</value>
+      <webElementGuid>f707f667-64d8-4781-bfc6-72ed1a238c70</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+10
+20
+30
+40
+50
+60
+70
+80
+90
+</value>
+      <webElementGuid>3932aa81-323d-4c8c-b181-23fad9f6bbcc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;profile_group-1499020076.88_match_rate&quot;)</value>
+      <webElementGuid>d915c20f-c81b-4a4c-b1a0-dcbef39915a2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='profile_group-1499020076.88_match_rate']</value>
+      <webElementGuid>1c1e4807-2a6a-43da-84b4-5c0e9403afd4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1499020076.88']/div/div[3]/select</value>
+      <webElementGuid>533cca70-7eb7-4914-b99d-199b6d172218</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Match Rate'])[1]/following::select[1]</value>
+      <webElementGuid>a0c63d85-e5b9-4802-852d-1c0f7b8e5c77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Information on this Settings tab is not displayed anywhere.'])[1]/following::select[1]</value>
+      <webElementGuid>61731f47-1fc7-464d-b33d-335e55b19352</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Profile Years'])[1]/preceding::select[1]</value>
+      <webElementGuid>d16029b0-5691-4f93-a47a-72e87869bded</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='All'])[1]/preceding::select[1]</value>
+      <webElementGuid>eda8c4fe-a582-4079-94e4-554e35ae2358</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/select</value>
+      <webElementGuid>acf041bc-73d1-45c6-8011-9c6b68c4790e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'profile[group-1499020076.88][match_rate]' and @id = 'profile_group-1499020076.88_match_rate' and (text() = '
+10
+20
+30
+40
+50
+60
+70
+80
+90
+' or . = '
+10
+20
+30
+40
+50
+60
+70
+80
+90
+')]</value>
+      <webElementGuid>fe10c2e8-c532-40d6-9225-6aeba3ddb7cc</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

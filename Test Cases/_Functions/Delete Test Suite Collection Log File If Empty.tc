@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Delete Test Suite Collection Log File If Empty</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7d7a08e7-e5ef-42e0-9d1b-03d1130509b1</testCaseGuid>
+</TestCaseEntity>

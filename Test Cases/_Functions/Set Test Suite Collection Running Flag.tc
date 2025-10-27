@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Set Test Suite Collection Running Flag</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>b5387e5b-02df-49f9-8779-2e32b3ce3f3a</testCaseGuid>
+</TestCaseEntity>

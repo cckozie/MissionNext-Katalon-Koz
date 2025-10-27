@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Write to Test Suite Collection Log</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>422cd8f0-4f82-4544-9f6d-7e5ddb0c1017</testCaseGuid>
+</TestCaseEntity>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_My Agency Jobs</name>
+   <name>a_Job_Matches</name>
    <tag></tag>
    <elementGuidId>c4b9202e-fddb-4b3a-8681-9e595bb41549</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a:nth-of-type(9)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Wait 1 minute</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>3f8ace70-5ee5-4a56-979a-e08c8e61fc2f</testCaseGuid>
+</TestCaseEntity>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Sleep Until Twelve Thirty AM Eastern Time</name>
+   <name>Journey Affiliate - Complete</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
-   <rerunFailedTestCasesOnly>true</rerunFailedTestCasesOnly>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>6f8e26a4-7f15-4ede-bd2f-abae212951a6</testSuiteGuid>
+   <testSuiteGuid>6d60409b-9403-4d7e-b14b-c2aada65aabb</testSuiteGuid>
    <testCaseLink>
-      <guid>b68807b2-7d32-4c00-9a18-9baa77b454e1</guid>
+      <guid>63eb5668-d8e8-48fd-8a4d-f439b54e1469</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Utilities/Sleep Until Twelve Thiry AM Eastern Time</testCaseId>
+      <testCaseId>Test Cases/Journey Affiliate/Complete Journey Affiliate Profile</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
