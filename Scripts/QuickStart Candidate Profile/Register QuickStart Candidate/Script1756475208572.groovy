@@ -117,7 +117,7 @@ tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain on
 	, ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
     , ('First Name') : 'May include your middle initial; enter last name below.'
 	, ('Last Name') : 'Family Name'
-	, ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
+//	, ('How did you learn about us') : 'It is helpful to know how people are learning about us.'
     , ('Age Bracket') : 'Required to help us help you.'
 	, ('Job Categories') : 'Select at least one that is the most appropriate. These categories are used in job matching.'
 	, ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']

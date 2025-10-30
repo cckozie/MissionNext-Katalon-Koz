@@ -87,7 +87,7 @@ tooltipText = [('Username') : 'Must be unique; at least 6 characters; contain on
     , ('Password') : 'The password should be at least twelve characters long; should include numbers, letters, capitals; may have special characters (@, #, *, spaces, etc.) and may include a passphrase.'
     , ('Key Contact Email') : 'Email address must be unique. Use another for a different MissionNext account.', ('Organization') : 'Name of your Organization.(Shorten, if too long to fit in field)'
     , ('Abbreviation') : 'Generally, the first initials of your organization name; this is used in some displays.', ('Description') : 'Hint: Take a paragraph or two from your website. If copying & pasting, you must manually type in any special characters, i.e, quotation marks, apostrophe, ampersand, etc.'
-    , ('Website Address') : 'Must start with https://', ('How did you hear about MissionNext') : 'Please complete this field.  It helps us to know where we should focus our efforts.']
+    , ('Website Address') : 'Must start with https://', ('How did you hear about MissionNext') : 'Please complete this field. It helps us to know where we should focus our efforts.']
 
 // Define the page's links and the text to search for on the linked page
 pageLinks = [('Affiliated Organizations') : 'Affiliated Organizations', ('countries by region') : 'Countries by Region', ('Partnership Agreement') : 'Partnership Agreement'

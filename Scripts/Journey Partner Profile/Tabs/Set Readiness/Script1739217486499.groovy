@@ -93,12 +93,12 @@ tooltips = [
 
 // Define the expected tooltip texts
 tooltipText = [
-('Process Stage') : 'Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates. ',
+('Process Stage') : 'Candidates are asked where they are in the exploration process. The first choice, beginning, matches all candidates.',
 ('Cross-cultural Experience') : 'Select those that would be acceptable for most positions. The first choice will match all candidates.',
 ('Bible Training') : "Select all options that best fit the typical requirements for your positions. 'Not Applicable' will not filter out profiles based on a candidate's Bible Training.",
 ('Attended Perspectives') : 'The first selection, Not taken Perspectives, will match all candidates.',
-('Relocation Option(s)') : "Check all candidate selections you could consider based on your available positions. If  selecting 'Not a match criteria', there's no need to check the others.",
-('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
+('Relocation Option(s)') : "Check all candidate selections you could consider based on your available positions. If selecting 'Not a match criteria', there's no need to check the others.",
+('Paid  Volunteer Positions') : "Select all that apply to your typical assignments. 'No Preference' will not filter out profiles based on a person's financial preference for a position."]
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [

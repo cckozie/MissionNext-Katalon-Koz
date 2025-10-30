@@ -16,10 +16,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+// ** DESIGNATES FINISHED \\
 
-// When running test suites, build an error log file and write the file names into it of test result files that contain errors. Use timestamp in file name.
+// **When running test suites, build an error log file and write the file names into it of test result files that contain errors. Use timestamp in file name.
 // 
 // Need a test to verify consistency between candidate matches and job matches - both Education and Journey
-// Copy matching test cases to match from candidates' perspective
+// Copy matching test cases to match from candidates' perspective.
+//		(Can I create a bunch of candidate profiles without causing undesired statistics of new users?)
+//		(If I delete and recreate a profile does that go into the stats?. Other wise I need to do maintenance on the profile and wait for the hour to change)
+//		IDEA: Capture candidates' profile entries and store in csv files, then create or edit test candidate profiles to mimic them.
+//		Maybe create a script to capture job definitions from a real user and recreate them for my test user
 //
-// Need to retest matching now that the job's profile has had Time/Hours added
+// **(Seems to be more rounding errors now, but overall it's good) Need to retest matching now that the job's profile has had Time/Hours added. (Issue 424)
+//
+// Add a test to verify that the correct app is assigned to both Journey and Education candidates at the time they complete their profile.
+//
+// Add creating jobs to Journey and Education partners
+//
+// Add tests to verify that designed matches are actually occuring in Journey and Education (known candidates and jobs)
+//
+//

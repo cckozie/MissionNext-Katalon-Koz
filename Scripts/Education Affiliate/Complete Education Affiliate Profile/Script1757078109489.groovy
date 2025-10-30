@@ -156,11 +156,9 @@ if(1 == 1 || pages == null || pages.size() == 0 || pages == 'All') {
 	
 	WebUI.delay(2)
 	
-	found = WebUI.verifyTextPresent('HELLO, THE CCK TEST09 EDUCATION AFFILATE', false, FailureHandling.OPTIONAL)
+	myURL = WebUI.getUrl()
 	
-	println(found)
-	
-	if(found) {
+	if(myURL.contains('education.missionnext.org/dashboard')) {
 		outText = '\n***** The login after registering as an Education Affiliate was successful. *****'
 		
 	} else {

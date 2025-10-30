@@ -75,7 +75,7 @@ tooltips = [('dummy') : 'dummy', ('Organization') : 'img_Organization_field-tool
 // Define the expected tooltip texts
 tooltipText = [('Organization') : 'Name of your Organization.(Shorten, if too long to fit in field)', ('Abbreviation') : 'Generally, the first initials of your organization name; this is used in some displays.'
     , ('Key Contact Email') : 'Email address must be unique. Use another for a different MissionNext account.', ('Mailing Address') : 'Organization mailing address is required'
-    , ('Organization City ') : 'Organization city field is required', ('Post_Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.']
+    , ('Organization City') : 'Organization city field is required', ('Post_Zip Code') : 'Enter 00000 if not from the U.S. and post code is unknown.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [('Key Contact Phone') : 'The key contact phone field is required.', ('Organization') : 'The phone field is required.'

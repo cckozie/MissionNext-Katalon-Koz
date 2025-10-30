@@ -25,16 +25,159 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 import org.sikuli.script.SikulixForJython as SikulixForJython
+import java.io.File as File
+import groovy.json.JsonSlurper
 
-WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.OPTIONAL)
+def today = new Date()
+println "Today: ${today.format('yyyy-MM-dd')}"
 
-expectedText = WebUI.verifyTextPresent('HELLO, THE WACONIA TEST JOURNEY PARTNER ORGANIZATION', false,FailureHandling.OPTIONAL)
-//Hello, The Waconia TEST Journey Partner Organiation
-//HELLO, THE WACONIA TEST JOURNEY PARTNER ORGANIZATION
-if(expectedText) {
-	outText = '+++ Journey partner login after profile completion was successful.\n'
-} else {
-	outText = '--- Journey partner login after profile completion failed.\n'
-	KeywordUtil.markError('\n' + outText)
+// Add 5 days using plus()
+def futureDate1 = today.plus(180)
+println "180 days from now (plus()): ${futureDate1.format('yyyy-MM-dd')}"
+println(futureDate1.format('yyyy-MM-dd'))
+
+System.exit(0)
+newJobsFilePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/'	// Path to new jobs data files
+
+//myDir = "/Users/cckozie/git/MissionNext-Katalon-Koz/Scripts"
+
+files = new File(newJobsFilePath)
+
+capturedJobs = []
+
+files.eachFileRecurse {
+	path = it.absolutePath
+	if(path.substring(path.length() - 4) == '.txt') {
+		capturedJobs.add(path)
+	}
 }
-println(outText)
+
+newJobs = []
+i = 0
+capturedJobs.each {
+	values = []
+	println(it)
+	file = it.substring(newJobsFilePath.length())
+	uBar = file.indexOf('_')
+	category = file.substring(0,uBar)
+	println(category)
+	title = file.substring(uBar + 1, file.length() - 4)
+	println(title)
+	values.add(category)
+	values.add(title)
+	values.add(it)
+	newJobs.add(values)
+}
+
+newJobs.each {
+	println(it)
+}
+System.exit(0)
+
+
+tabs = [
+	'Job Category':[['select_Category'], ['checkboxes- BUSINESS AS MISSION', 'checkboxes- CHURCH DEVELOPMENT', 'checkboxes- COMMUNICATIONS', 'checkboxes- COMMUNITY DEVELOPMENT', 'checkboxes- CONSTRUCT/MAINTAIN', 'checkboxes- DISCIPLESHIP', 'checkboxes- DISCIPLE YOUTH', 'checkboxes- EDUCATION', 'checkboxes- ESLTESOL', 'checkboxes- ENGINEERING', 'checkboxes- EVANGELISM', 'checkboxes- EVANGELISM SUPPORT', 'checkboxes- HEALTH CARE', 'checkboxes- INFORMATION TECHNOLOGY', 'checkboxes- JUSTICE/ADVOCACY', 'checkboxes- RELIEF AND DEVELOPMENT', 'checkboxes- RESOURCE MANAGEMENT', 'checkboxes- SUPPORT HELPS', 'checkboxes- SUPPORT PROFESSIONAL']],
+	'Job Classification':['input_Alternate Job Title', 'select_World Region'],
+	'Assignment Detail':['select_Start_Requested', 'checkboxes_Time Commitment', 'checkboxes_TimeHours Available', 'checkboxes_Cross-Cultural Experience', 'checkboxes_Languages'],
+	'Logistics':['checkboxes_Paid and Volunteer Positions', 'checkboxes_Travel Support', 'checkboxes_Relocation Question'],
+	'Contact Details':['input_Contact Name', 'input_Contact Email'],
+	'Other Criteria':['checkboxes_Ministry Preferences']
+	]
+
+values = tabs.get('Job Category')
+
+println(values[0])
+
+println(values[1][3])
+/*
+newJobsPath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Object Repository/Journey Partner Profile/New Jobs/'
+
+newJobsTabsPath = newJobsPath + 'Tabs/'
+
+// tabs map key = tab name, value = [required test object1 name, required test object2 name, etc]
+tabs = [
+	'Job Category':['select_Category', 'checkboxes_Ministry Preferences'],
+	'Job Classification':['input_Altername Job Title', 'select_World Region'],
+	'Assignment Detail':['select_Start Requested', 'checkboxes_Time Commitment', 'checkboxes_Time Hours Available', 'checkboxes_Cross-Cultural Experience', 'checkboxes_Languages'],
+	'Logistics':['checkboxes_Paid and Volunteer Positions', 'checkboxes_Travel Support', 'checkboxes_Relocation Question'],
+	'Contact Details':['input_Contact Name', 'input_Contact Email'],
+	'Other Criteria':['checkboxes_Ministry Preferences']
+	]
+
+def myFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/COMMUNICATIONS_Writer.txt' // Replace with your file path
+
+// Define the file path
+def filePath = myFile
+
+// Read the file's text content
+def jsonText = new File(filePath).text
+
+// Create a new JsonSlurper to parse the JSON text
+def slurper = new JsonSlurper()
+
+// Parse the text into a map
+def restoredMap = slurper.parseText(jsonText)
+
+// Print the restored map
+println "Map restored from file:"
+println restoredMap
+
+
+restoredMap.each {
+	println it.key
+	println it.value
+	
+//	for(option in it.value) {
+//		println(option)
+//	}
+	
+}
+println(restoredMap.get('Ministry Preferences'))
+
+values = restoredMap.get('Ministry Preferences')
+
+println(values[2])
+
+println(restoredMap.getAt('Category'))
+
+System.exit(0)
+
+capturedJobs = ['/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/COMMUNICATIONS_Writer.txt']
+
+for(job in capturedJobs) {
+	
+	for(myTab in tabs) {
+		tObj = newJobsPath + myTab.key
+		
+		println('tObj is ' + tObj)
+		
+		fields = tabs.get(myTab.key)
+		
+		println(fields)
+		
+		for(field in fields) {
+			println(field)
+			
+			uBar = field.indexOf('_')
+			
+			prefix = field.substring(0,uBar)
+			
+			println(prefix)
+			
+			myField = field.substring(uBar + 1)	
+			
+			println(myField)
+			
+			myValue = myMap.get(myField)
+			
+			println(myValue)
+			
+			for(value in myValue) {
+				println(value)
+			}
+		}
+		
+		System.exit(0)
+	}
+}
+*/

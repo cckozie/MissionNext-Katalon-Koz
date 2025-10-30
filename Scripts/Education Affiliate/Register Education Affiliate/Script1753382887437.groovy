@@ -92,8 +92,9 @@ tooltipText = [
 ('Contact Last Name') : 'Person working the website to recruit candidates.',
 ('Contact Email') : 'Email address must be unique.',
 ('Abbreviation') : 'Used in some displays.',
-('Web Address') : 'Must be a full web address and  begin with https://',
+('Web Address') : 'Must be a full web address and begin with https://',
 ('Description') : 'Hint: Take a paragraph or two from your website.',
+('Board of Directors') : 'Give web address where this can be found.',
 ('Statement of Faith') : 'Give web address where this can be found.',
 ('References') : 'Name and contact info of third-party references or send by email.']
 

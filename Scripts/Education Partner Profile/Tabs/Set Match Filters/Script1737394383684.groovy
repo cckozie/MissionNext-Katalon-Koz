@@ -111,9 +111,9 @@ tooltips = [
 tooltipText = [
 ('Formal Education Degree') : 'No will match all candidates',
 ('Classroom Experience') : 'No will match all candidates.',
-('Formal Teaching Credentials') : 'No will match all candidates. ',
+('Formal Teaching Credentials') : 'No will match all candidates.',
 ('English Proficiency') : 'Select all options that best fit job requirements',
-('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference. "]
+('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference."]
 //('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position."]
 
 // Define the required field missing error message test objects

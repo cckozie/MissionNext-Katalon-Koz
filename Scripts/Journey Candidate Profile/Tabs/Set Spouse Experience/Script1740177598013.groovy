@@ -77,7 +77,7 @@ tooltips = [
 // Define the expected tooltip texts
 tooltipText = [
 ('Spouse Degree Field') : 'Spouse Earned Degree Field',
-('Spouse Bible Training') : 'If you have attended Sunday School classes for years, select Informal Training. If you have attended or taught Bible classes, select Some Bible School Classes.If your preferred assignments do not require Bible training, you can select Not Applicable.']
+('Spouse Bible Training') : 'If you have attended Sunday School classes for years, select Informal Training. If you have attended or taught Bible classes, select Some Bible School Classes. If your preferred assignments do not require Bible training, you can select Not Applicable.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []

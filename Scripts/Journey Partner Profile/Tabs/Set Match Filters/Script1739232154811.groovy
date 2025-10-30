@@ -75,7 +75,7 @@ tooltips = [
 tooltipText = [
 ('Affiliated with a Church') : "Select 'Yes' for candidates who indicate they are affiliated with a church and could get a church staff reference.",
 //('Paid & Volunteer Positions') : "Select all that apply to your typical assignments.  'No Preference' will not filter out profiles based on a person's financial preference for a position.",
-('Match Percent Rate') : 'Candidates with a match percentage rate below the level selected will be hidden. ']
+('Match Percent Rate') : 'Candidates with a match percentage rate below the level selected will be hidden.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []

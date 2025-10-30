@@ -129,6 +129,7 @@ for (def it : tooltips) {
 			KeywordUtil.markError(outText)
 			
 			GlobalVariable.testCaseErrorFlag = true
+//			System.exit(0)
 			
 		}
 		

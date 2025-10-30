@@ -69,7 +69,7 @@ tooltips = [
 
 // Define the expected tooltip texts
 tooltipText = [
-('Computer Languages') : 'Check at least one to match candidate selections. ']
+('Computer Languages') : 'Check at least one to match candidate selections.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []

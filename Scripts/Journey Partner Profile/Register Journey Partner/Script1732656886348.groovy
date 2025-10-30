@@ -30,6 +30,8 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
+println(username)
+
 if(username[-3..-1] != '7jp') {
     println('The Execution Profile must be set to "Journey Partner"')
 
@@ -108,7 +110,7 @@ tooltipText = [
 ('Mission Statement') : 'Add web address from website where the mission statement is displayed.',
 ('Board of Directors') : 'Add web address from website where the Board of Directors is displayed.',
 ('Statement of Faith') : 'Add web address from website where the Statement of Faith is displayed.',
-('How did you hear about MissionNext') : 'Please complete this field.  It helps us to know where we should focus our efforts.']
+('How did you hear about MissionNext') : 'Please complete this field. It helps us to know where we should focus our efforts.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [

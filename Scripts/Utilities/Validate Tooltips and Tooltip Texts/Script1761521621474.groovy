@@ -19,6 +19,8 @@ import org.openqa.selenium.Keys as Keys
 import java.io.File as File
 import groovy.io.FileType
 
+// THIS SCRIPT VALIDATES THAT ALL OF THE PROFILE TOOLTIP TEXT MAPS HAVE CORRESPONDING TOOLTIP MAPS (tooltip image test objects are keyed to tooltip maps)
+
 profiles = ['Education Affiliate',
 'Education Candidate Profile',
 'Education Partner Profile',
@@ -35,53 +37,37 @@ for(profile in profiles) {
 	dir = new File(path + profile)
 	dir.eachFileRecurse(FileType.FILES) { file ->
 		myFile = file.absolutePath
-		//println(myFile)
-		if(myFile.contains('.groovy') && !myFile.contains('Copy')) {
-			println "Processing file: ${file.absolutePath}"
+		if(myFile.contains('.groovy') && !myFile.contains('Copy') && !myFile.contains('Archive')) {
+			println "Processing file: " + myFile
 			File scriptFile = new File(myFile)
 			String fileContent = scriptFile.text
-			String fileContent2 = fileContent
+			String fileContent2 = fileContent 
 			tooltipsMapLoc = fileContent.indexOf('tooltips = [')
 			if(tooltipsMapLoc > 0) {
-				fileContent = fileContent.substring(tooltipsMapLoc + 13)
-				// println(fileContent)
+				fileContent = fileContent.substring(tooltipsMapLoc + 10)
 				tooltipsMapEnd = fileContent.indexOf(']')
-				myMap = fileContent.substring(0,tooltipsMapEnd)
-				elements = myMap.split(',')
-				if(elements.size() > 1) {
-					//println('Tooltips:' + elements)
-					
+				myMap = fileContent.substring(0,tooltipsMapEnd + 1)
+				newMap = Eval.me(myMap)
+				if(newMap.size() > 1) {
 					tooltips = []
-					for(element in elements) {
-						//println('element:' + element)
-						element = element.substring(3,element.indexOf("')" - 1))
-						//println('element:' + element)
-						tooltips.add(element)
+					newMap.each { 
+						tooltips.add(it.key)
 					}
 					
 					tooltipTextMapLoc = fileContent2.indexOf('tooltipText = [')
-					fileContent2 = fileContent2.substring(tooltipTextMapLoc + 15)
-					//println(fileContent2)
+					fileContent2 = fileContent2.substring(tooltipTextMapLoc + 12)
 					tooltipTextMapEnd = fileContent2.indexOf(']')
-					myMap = fileContent2.substring(2,tooltipTextMapEnd)
-					elements = myMap.split("',\n")
-					//println('TooltipTexts:' + elements)
-					
+					myMap = fileContent2.substring(2,tooltipTextMapEnd + 1)
+					newMap = Eval.me(myMap)
 					tooltipText = []
-					for(element in elements) {
-						//println('element:' + element)
-						end = element.indexOf("')")
-						element = element.substring(0,end)
-						element = element.replace("('", '')
-						element = element.replace("'","")
-						//println('element:' + element)
-						tooltipText.add(element)
+					newMap.each { 
+						tooltipText.add(it.key)
 					}
 					
 					println('TOOLTIPS:' + tooltips)
 					
 					println('TOOLTIPTEXT:' + tooltipText)
-					
+
 					errors = 0
 					for (tooltip in tooltipText) {
 						if(!tooltip.contains('//')) {
@@ -89,7 +75,7 @@ for(profile in profiles) {
 								println(tooltip + ' is not in the tooltips element list.')
 								errors++
 								totalErrors++
-								System.exit(0)
+//								System.exit(0)
 							}
 						}
 					}

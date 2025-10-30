@@ -83,7 +83,7 @@ tooltipText = [
 ('Vision Trip') : 'Does your organization offer Vision Trips?',
 ('School Year Starts') : 'For Candidate information only',
 ('Website Address') : 'Must start with https://',
-('Hide Listing') : 'Hide listing from public view for security purposes.(This choice can always be changed later.)']
+('Hide Listing') : 'Hide listing from public view for security purposes. (This choice can always be changed later.)']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []

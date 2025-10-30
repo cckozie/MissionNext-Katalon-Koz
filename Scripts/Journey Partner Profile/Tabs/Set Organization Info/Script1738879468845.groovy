@@ -73,7 +73,7 @@ tooltipText = [
 ('Year Founded') : 'Format: YYYY',
 ('Upload Brochure') : 'Can upload a preliminary application or a brochure. Must be a PDF file.',
 ('Link back URL') : 'Where on your website is there a link back to MissionNext? (Include the http:// or https://)',
-('Hide Listing') : 'Hide listing from public view for security purposes.(This choice can always be changed later.)']
+('Hide Listing') : 'Hide listing from public view for security purposes. (This choice can always be changed later.)']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [:]

@@ -44,13 +44,15 @@ WebDriver driver = DriverFactory.getWebDriver()
 println(varParms)
 println(varXpaths)
 
-// For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label 
+// For each group of elements (checkboxes or radio buttons), click each of the elements whose text/label
 // corresponds to one that is in the input parameter (varParms) for that group.
 //
 // We have to do this by group in case of identicle labels in multiple groups
 for(i = 0; i < varXpaths.size(); i++) {
 	
 	if(debug) {println('Desired label is "' + varParms[i] + '"')}
+	
+	println(varParms.size())
 //	if(varParms[i].indexOf('Europe') >= 0) {
 //		println('#############   Europe : ' + varParms[i])
 //	}

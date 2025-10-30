@@ -1,0 +1,58 @@
+{
+    "- COMMUNICATIONS": [
+        "Dance",
+        "Drama",
+        "Graphic Arts Design",
+        "Photographer",
+        "Visual Arts",
+        "Writers"
+    ],
+    "Ministry Preferences": [
+        "Dance",
+        "Drama",
+        "Graphic Arts Design",
+        "Photographer",
+        "Visual Arts",
+        "Writers"
+    ],
+    "Alternate Job Title": [
+        "Writer"
+    ],
+    "World Region": [
+        "Central America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Open - Will negotiate"
+    ],
+    "Time/Hours Available": [
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own",
+        "Occasionally served in cultures other than my own",
+        "Extensive experience serving in cultures other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language",
+        "Spanish"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Chris Kosieracki"
+    ],
+    "Contact Email": "chris.kosieracki@missionnext.org",
+    "Category": "COMMUNICATIONS",
+    "Title": "Writer"
+}

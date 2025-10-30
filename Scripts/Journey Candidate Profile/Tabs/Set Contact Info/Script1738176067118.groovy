@@ -72,7 +72,7 @@ tooltipText = [
 ('Last Name') : 'Family Name',
 ('Your Email') : 'Your primary email address',
 ('State') : 'List is country-specific. Selection is required.',
-('Your Country of Citizenship') : 'If you hold dual citizenship, select the country where you normally reside. ',
+('Your Country of Citizenship') : 'If you hold dual citizenship, select the country where you normally reside.',
 ('Birth Year') : 'Four Digit Year',
 ('Terms and Conditions') : 'Please read and agree with MissionNext Terms and Conditions to continue']
 

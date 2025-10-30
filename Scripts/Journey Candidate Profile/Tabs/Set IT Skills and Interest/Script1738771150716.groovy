@@ -77,7 +77,7 @@ tooltips = [
 
 // Define the expected tooltip texts
 tooltipText = [
-('Computer Languages') : 'Programming languages that you know. Some not on the list? Add those in a comment area below. Not a programmer? Indicate below. ']
+('Computer Languages') : 'Programming languages that you know. Some not on the list? Add those in a comment area below. Not a programmer? Indicate below.']
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = []

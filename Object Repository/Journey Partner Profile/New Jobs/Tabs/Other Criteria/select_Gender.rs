@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Gender</name>
+   <tag></tag>
+   <elementGuidId>375d6912-8edb-4550-afb3-2439065b4f01</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='job_group-1613449251.023_preferred_gender']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>dbfd5bec-426b-4cc6-8699-2341069cf4a4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>preferred_gender</value>
+      <webElementGuid>5df2c9f5-c6b2-4c56-80a7-08a353887727</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>104</value>
+      <webElementGuid>94018dfc-aa6a-45f1-bf68-5bce51fda9c6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>job[group-1613449251.023][preferred_gender]</value>
+      <webElementGuid>985bfd0c-36f9-4a2a-974c-5f3d8b5adb27</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>job_group-1613449251.023_preferred_gender</value>
+      <webElementGuid>e4d496ef-ea67-467c-a7f9-981544480ccc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+ No Preference
+Male
+Female
+</value>
+      <webElementGuid>9b6b3fa5-fef9-41be-8677-bf11cbc95392</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;job_group-1613449251.023_preferred_gender&quot;)</value>
+      <webElementGuid>720dc8d2-809e-4651-8c29-07bea73a38a3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='job_group-1613449251.023_preferred_gender']</value>
+      <webElementGuid>559e1453-3503-47a6-ba4e-ce8a81976160</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1613449251.023']/div[2]/div[2]/select</value>
+      <webElementGuid>ad0c7b68-863c-4b58-8ee1-fe79394b57fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Preferred Gender'])[1]/following::select[1]</value>
+      <webElementGuid>b7e2d05b-a142-4678-96ae-b43f5aab0dd7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='No'])[1]/following::select[1]</value>
+      <webElementGuid>27f1d84e-d788-4c52-a703-9318f12357e2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Ministry Preferences*'])[1]/preceding::select[1]</value>
+      <webElementGuid>dc092075-ca88-4e08-a826-3e63777c51a8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Accounting'])[2]/preceding::select[1]</value>
+      <webElementGuid>56a5307e-cd64-4135-b3b1-4df9308c3047</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[38]/div[2]/div[2]/select</value>
+      <webElementGuid>359aec4e-485a-45e1-892c-ab66434c7ce8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'job[group-1613449251.023][preferred_gender]' and @id = 'job_group-1613449251.023_preferred_gender' and (text() = '
+ No Preference
+Male
+Female
+' or . = '
+ No Preference
+Male
+Female
+')]</value>
+      <webElementGuid>d7296c5d-a73b-4ae5-ba9a-a3bf25ecd344</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

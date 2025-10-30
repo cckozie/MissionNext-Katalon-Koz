@@ -164,11 +164,9 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 	
 	WebUI.delay(2)
 	
-	found = WebUI.verifyTextPresent('HELLO, THE CCK TEST09 Journey AFFILATE', false, FailureHandling.OPTIONAL)
+	myURL = WebUI.getUrl()
 	
-	println(found)
-	
-	if(found) {
+	if(myURL.contains('journey.missionnext.org/dashboard')) {
 		outText = '\n***** The login after registering as an Journey Affiliate was successful. *****'
 		
 	} else {
