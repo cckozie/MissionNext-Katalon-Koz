@@ -31,8 +31,8 @@ import org.openqa.selenium.Keys as Keys
 //
 // Add a test to verify that the correct app is assigned to both Journey and Education candidates at the time they complete their profile.
 //
-// Add creating jobs to Journey and Education partners
+// Add creating jobs to Journey and Education partners. Force contact and email to me.
 //
 // Add tests to verify that designed matches are actually occuring in Journey and Education (known candidates and jobs)
 //
-//
+// Rewrite test for profile creation success to account for the immediate grandting of access

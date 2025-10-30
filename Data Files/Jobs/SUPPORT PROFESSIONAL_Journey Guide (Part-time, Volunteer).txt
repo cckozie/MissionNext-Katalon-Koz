@@ -1,0 +1,51 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Admin/Management",
+        "Mission Representative",
+        "Recruiter/Mobilizer",
+        "Volunteer Coordinator"
+    ],
+    "Ministry Preferences": [
+        "Admin/Management",
+        "Mission Representative",
+        "Recruiter/Mobilizer",
+        "Volunteer Coordinator"
+    ],
+    "Alternate Job Title": [
+        "National Director of Mobilization (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "No Preference"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "vicky.warren@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Journey Guide (Part-time, Volunteer)"
+}
