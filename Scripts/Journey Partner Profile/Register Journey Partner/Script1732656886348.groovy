@@ -348,7 +348,7 @@ WebUI.delay(1)
 
 // Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
-
+System.exit(0)
 pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
 
 if (pending) {

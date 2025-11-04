@@ -3,6 +3,7 @@
  'School Term(s) Available':['Open'],
  'Process Stage':['I am just beginning to look at missions'],
  'Cross-cultural Experience':['Not served in a culture other than my own'],
+ 'Paid & Volunteer Positions':['No Preference'],
  'Bible Training':['Not Applicable'],
  'Attended Perspectives?':['I have not taken the Perspectives Course'],
  'Relocation Option(s)':['Not a Match criterion'],
@@ -10,6 +11,5 @@
  'Classroom Experience':['No'],
  'Formal Teaching Credentials':['No'],
  'English Proficiency':['Not Applicable'],
- 'Paid & Volunteer Positions':['No Preference'],
  'Recruit From Countries':['All'],
  'Affiliated with a Church?':['No']]

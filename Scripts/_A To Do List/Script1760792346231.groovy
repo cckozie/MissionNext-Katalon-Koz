@@ -31,8 +31,23 @@ import org.openqa.selenium.Keys as Keys
 //
 // Add a test to verify that the correct app is assigned to both Journey and Education candidates at the time they complete their profile.
 //
+// COMPLETED 10/30/25 Force contact and email to me when runnint Create Parner Jobs
+//
 // Add creating jobs to Journey and Education partners. Force contact and email to me.
 //
 // Add tests to verify that designed matches are actually occuring in Journey and Education (known candidates and jobs)
 //
-// Rewrite test for profile creation success to account for the immediate grandting of access
+// Rewrite test for profile creation success to account for the immediate grandting of access (Probably should be a function!)
+//
+// Add test script to create Journey Guide profile
+// 
+// Add test script to complte Journey Guide profile
+// 
+// Add Journey Guide profile creation to Scheduled Profiles Test Suite Collection
+//
+// Modify Complete Journey Candidate Profile to add testing for app assigned and correct expiration date.
+//
+// Modify Complete Education Candidate Profile to add testing for app assigned and correct expiration date.
+//
+// Modify Complete QuickStart Candidate Profile to add testing for app assigned and correct expiration date.
+//

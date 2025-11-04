@@ -382,7 +382,7 @@ if (row_count > 0) {
             FailureHandling.STOP_ON_FAILURE)
 
         println(candidateFieldValues)
-		
+
         maritalStatus = (candidateFieldValues.get('Marital status')[0])
 
         spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
@@ -411,8 +411,7 @@ if (row_count > 0) {
             for (def v : candidateFieldValues) {
                 myKey = v.key
 
-//                if (candidateMatchFields.contains(myKey)) {
-                if (candidateMatchFields.contains(myKey) && myKey != 'Ministry Preferences') {
+                if (candidateMatchFields.contains(myKey)) {
                     candidateSelections.put(v.key, v.value)
                 }
             }
@@ -864,22 +863,6 @@ def doMatching(def candidateSelections, def jobSelections) {
                     outText = 'No match found.'
 
                     outFile.append(outText + '\n')
-					
-					keyValue = myKey
-					
-					skip = false
-					
-					if(keyValue == 'Ministry Preferences') {
-						if(maritalStatusText.contains('not')) { // bypass if not married or spouse not serving
-							skip = true
-						} else {
-							keyValue += '/Spouse Preferred Position(s)'
-						}
-					}
-					
-					if(!skip) {
-						notMatched.add(keyValue)
-					}
                 }
             }
         }

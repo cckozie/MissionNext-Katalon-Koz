@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Parameterized Job Matches - Journey - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>20ccea9b-9cca-4b8f-9a81-78bd44bcfb2d</testCaseGuid>
+</TestCaseEntity>

@@ -378,6 +378,8 @@ WebUI.delay(1)
 // Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
 
+//System.exit(0) // Replace this section with a generic test for successful profile creationg (test by URL, text, or both
+
 pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
 
 if (pending) {
@@ -429,6 +431,10 @@ if (emailFound) {
 	
 	//================================== Grant access for the new education partner ==================================
 	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	// Add call to test for app assigned and correct expiration dates function
+	WebUI.callTestCase(findTestCase('_Functions/Test for App Assigned and Correct Expiration Date'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
 	
 	//================================== Create a subscriptioon for the new education partner ========================
 	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'

@@ -64,13 +64,15 @@ Actions act = new Actions(driver);
 
 JavascriptExecutor js =(JavascriptExecutor)driver;
 
-WebUI.waitForPageLoad(10)
+//WebUI.waitForPageLoad(10)
+
+WebUI.delay(2)
 
 WebElement Table = driver.findElement(By.xpath('//*[@id="default-rezult"]/table'))
  
 List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
-println(Rows.size())
+println(Rows.size() + ' rows found.')
 
 loopMax = 15
 
@@ -78,7 +80,7 @@ loop = 1
 
 while(Rows.size() < 2 && loop <= loopMax) {
 	
-	WebUI.delay(1)
+//	WebUI.delay(1)
 	
 	Rows = Table.findElements(By.tagName('tr'))
 	
@@ -86,6 +88,8 @@ while(Rows.size() < 2 && loop <= loopMax) {
 }
 
 startRows = Rows.size()
+
+println(startRows + ' startRows found.')
 
 WebUI.setText(findTestObject('Object Repository/Admin/API Dashboard/input_User_search'), searchKey)
 

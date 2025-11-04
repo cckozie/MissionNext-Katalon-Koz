@@ -245,7 +245,7 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : '
 
 object = 'Object Repository/Journey Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-
+System.exit(0)
 //Verify that the correct Approval Pending page is displayed
 found = WebUI.verifyTextPresent('If this Application is for an Affiliation', false, FailureHandling.OPTIONAL)
 

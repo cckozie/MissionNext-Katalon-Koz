@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Plain text or HTML</name>
+   <tag></tag>
+   <elementGuidId>0c90335d-f1f6-4ed1-9fbc-561965cf749b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='text_mode']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;text_mode&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>7548b8b9-c7d5-4888-9434-4bdea1cc14d9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>text_mode</value>
+      <webElementGuid>fef28568-b5d4-496d-923d-04e3aa41a821</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+			Plain text
+		HTML
+	</value>
+      <webElementGuid>f112f48d-0124-4aa5-8955-ed67a1fa8d8c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main_form&quot;)/select[1]</value>
+      <webElementGuid>7f6491fe-2b32-4593-a7c9-438679f4d355</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='text_mode']</value>
+      <webElementGuid>deae8231-9217-43bd-bf51-e64834ada32a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='main_form']/select</value>
+      <webElementGuid>8e4b238d-9b82-4f57-a51b-ec2fba4914c7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RandomTextGenerator'])[1]/following::select[1]</value>
+      <webElementGuid>90418395-5620-4531-a79e-4cbe28eb3577</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='English'])[2]/preceding::select[2]</value>
+      <webElementGuid>670f8606-9eb5-425c-9da8-f7dc60b5f6b5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='What does the Lorem Ipsum text mean?'])[1]/preceding::select[2]</value>
+      <webElementGuid>a6f4301f-7874-4dfe-97b3-dde67586dea4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select</value>
+      <webElementGuid>7cb65207-ccd2-405c-aa71-384597a9e6dd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'text_mode' and (text() = '
+			Plain text
+		HTML
+	' or . = '
+			Plain text
+		HTML
+	')]</value>
+      <webElementGuid>44798612-f28b-4eab-9b19-a979ff65f2d9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

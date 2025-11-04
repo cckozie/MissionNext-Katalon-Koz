@@ -1,0 +1,51 @@
+{
+    "Alternate Job Title": [
+        "High school sciences and/or math"
+    ],
+    "Time Commitment": [
+        "One year",
+        "One year to two years",
+        "Long Term"
+    ],
+    "World Region": [
+        "Europe, East"
+    ],
+    "Subject Speciality": [
+        "High School"
+    ],
+    "Contact Name": [
+        "William Treat"
+    ],
+    "Contact Email": "william.treat@kla.education",
+    "Bible Training Preferred": [
+        "Not Applicable"
+    ],
+    "Credentials Required": [
+        "No"
+    ],
+    "Teaching Degree Required": [
+        "No"
+    ],
+    "Teaching Experience Required": [
+        "No"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Start Requested": [
+        "Open"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising some support"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "English Skill": [
+        "Advanced"
+    ],
+    "Category": "High School Teacher",
+    "Title": "High school sciences and/or math"
+}

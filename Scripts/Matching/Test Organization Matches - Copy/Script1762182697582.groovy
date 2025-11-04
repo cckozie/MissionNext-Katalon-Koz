@@ -50,7 +50,7 @@ debug = false
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Education' // Journey or Education
+	site = 'Journey' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job
@@ -337,8 +337,6 @@ if(row_count > 0) {
 		
 		WebUI.waitForPageLoad(30)
 
-        notMatched = []
-
 		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
 			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
 		
@@ -395,9 +393,8 @@ if(row_count > 0) {
 
 			outFile.append(outText + '\n')
 
-//			outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
-			outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
-			
+			outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
+
 			resultsFile.append(outText + '\n')
 			
 			candidateText = outText
@@ -467,8 +464,6 @@ def doMatching(def candidateSelections, def organizationSelections) {
     for (def it : matchValues) {
         match = false
 
-		myKey = it.key
-		
         if (!(excluded)) {
 			match = false
             candidateValues = candidateSelections.get(it.key)
@@ -586,21 +581,6 @@ def doMatching(def candidateSelections, def organizationSelections) {
             outText = 'No match found.'
 
             outFile.append(outText + '\n')
-			keyValue = myKey
-			
-			skip = false
-			
-			if(keyValue == 'Spouse Preferred Position(s)') {
-				if(maritalStatusText.contains('not')) { // bypass if not married or spouse not serving
-					skip = true
-//				} else {
-//					keyValue += '/Spouse Preferred Position(s)'
-				}
-			}
-			
-			if(!skip) {
-				notMatched.add(keyValue)
-			}
         }
     }
     
@@ -661,12 +641,10 @@ def doMatching(def candidateSelections, def organizationSelections) {
 		
     }
     
-    outFile.append('\n')
+    outFile.append('\n\n')
 
 	outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popupPct) +
-		'%.\n')
-
-    resultsText = outText
+		'%.\n\n')
 
     if (error) {
         outText = ('##### ERRORS ' + code + ': ' + outText)
@@ -674,19 +652,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
     
     resultsFile.append(outText)
 
-    if (error) {
-        errorFile.append(((candidateText + '. ') + maritalStatusText) + '\n')
-
-        if (notMatched.size() > 0) {
-            outText = ('No match on ' + notMatched)
-        } else {
-            outText = 'No non-matches displayed.'
-        }
-        
-        errorFile.append(outText + '\n')
-
-        errorFile.append(resultsText + '\n')
-    }
+	errorFile.append(outText)
 	
 }
 

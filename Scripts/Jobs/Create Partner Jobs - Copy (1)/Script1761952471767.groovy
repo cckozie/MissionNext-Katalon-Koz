@@ -26,6 +26,7 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Create previously captured jobs for a partner
+// 10/30/25 - Modified to force me as the contact and email
 
 username = GlobalVariable.username
 
@@ -116,7 +117,7 @@ files = new File(newJobsFilePath)
 
 capturedJobs = []
 
-files.eachFileRecurse {
+files.eachFile {
 	path = it.absolutePath
 	if(path.substring(path.length() - 4) == '.txt') {
 		capturedJobs.add(path)
@@ -206,7 +207,7 @@ for(job in capturedJobs) {
 	
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Add Jobs'))
 	
-	WebUI.switchToWindowIndex(2)
+	//WebUI.switchToWindowIndex(2)
 	
 	WebUI.waitForPageLoad(30)
 		
@@ -275,7 +276,15 @@ for(job in capturedJobs) {
 			
 			print(object)
 			
-			value = myMap.get(object)
+			if(myTab.key == 'Contact Details') {
+				if(object == 'Contact Name') {
+					value = 'Chris Kosieracki'
+				} else if(object == 'Contact Email') { 
+					value = 'chris.kosieracki@missionnext.org'
+				}
+			} else {
+				value = myMap.get(object)
+			}
 			
 			println(value)
 			
@@ -355,9 +364,9 @@ for(job in capturedJobs) {
 	
 	println('Window index is ' + WebUI.getWindowIndex())
 	
-	WebUI.closeWindowIndex(2)
+//	WebUI.closeWindowIndex(2)
 	
-	WebUI.switchToWindowIndex(1)
+//	WebUI.switchToWindowIndex(1)
 	
 	WebUI.refresh()
 	

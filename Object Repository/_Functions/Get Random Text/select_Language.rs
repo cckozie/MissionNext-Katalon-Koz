@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Language</name>
+   <tag></tag>
+   <elementGuidId>bbaa8971-c167-4363-82bc-18e6399c4543</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='language']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;language&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>40082709-c818-4f95-9d4d-94eb97a7fad1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>language</value>
+      <webElementGuid>cbeb2978-39e8-4188-b982-af5f2268c8f6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+	Please select a languageChinese (Han)DutchEnglishFinnishFrenchGermanGreekHebrewItalianJapaneseLatinPolishPortugeseRussianSerbianSpanish	</value>
+      <webElementGuid>ab889f4c-ee17-4c19-bb33-0a432fc1425f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main_form&quot;)/select[2]</value>
+      <webElementGuid>6a311b65-de7c-4f89-9f75-3434161b047b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='language']</value>
+      <webElementGuid>06a9c6ee-d0ae-4b32-9903-00bb77bd3d48</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//form[@id='main_form']/select[2]</value>
+      <webElementGuid>1ffcfb54-faf5-49cc-8ba0-8ff947739902</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='RandomTextGenerator'])[1]/following::select[2]</value>
+      <webElementGuid>37c3b06a-824a-483f-bf75-d3c31fd756a7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='English'])[2]/preceding::select[1]</value>
+      <webElementGuid>cc772b26-33f8-4224-b8ad-6b8d2792e87f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='What does the Lorem Ipsum text mean?'])[1]/preceding::select[1]</value>
+      <webElementGuid>dac13f11-e77a-4781-82ce-8d7ec0eaaa55</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select[2]</value>
+      <webElementGuid>0d399566-d26e-438b-8891-fd3a07c89817</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'language' and (text() = '
+	Please select a languageChinese (Han)DutchEnglishFinnishFrenchGermanGreekHebrewItalianJapaneseLatinPolishPortugeseRussianSerbianSpanish	' or . = '
+	Please select a languageChinese (Han)DutchEnglishFinnishFrenchGermanGreekHebrewItalianJapaneseLatinPolishPortugeseRussianSerbianSpanish	')]</value>
+      <webElementGuid>073d611a-38c8-4dfa-9052-974433f41d39</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
