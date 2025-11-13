@@ -20,24 +20,29 @@ import org.openqa.selenium.By as By
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import java.io.*
+import java.io.File as File
 
 username = varUsername
 
 appAssigned = false
 
-retArray = []	// Return array [app assigned (null if none), role, correct end date T/F]
+retArray = []	// Return array [app assigned (null if none), role, correct end date T/F (candidates only)]
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [('varUsername') : 'username', ('varNewBrowser') : true], FailureHandling.STOP_ON_FAILURE)
 
 //Check to see if we're writing printed output also to a file
 writeFile = false
 
-if(GlobalVariable.outFile != '') {
-	myFile = GlobalVariable.outFile
-	outFile = new java.io.File(myFile)
+if (GlobalVariable.outFile != '') {
+	String myFile = GlobalVariable.outFile
+
+	println(myFile)
+
+	outFile = new File(myFile)
+
 	writeFile = true
 }
+
 
 WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
 
@@ -136,9 +141,24 @@ if(found) {
 	retArray.add(role)
 	
 	if(role == 'Candidate' && appAssigned) {
-		start = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/text_User Start Date'))
 		
-		end = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/text_User End Date'))
+//		start = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/text_User Start Date'))
+		
+//		end = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/text_User End Date'))
+		
+		subscriptionsTableXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/p[7]/table/tbody'
+
+		Table = driver.findElement(By.xpath(subscriptionsTableXpath))
+		
+		Rows = Table.findElements(By.tagName('tr'))
+		
+		Columns = Rows.get(1).findElements(By.tagName('td'))
+	
+		start = Columns.get(3).getText()
+		
+		end = Columns.get(4).getText()
+		
+		retArray.add(end)
 		
 		yyyy = start.substring(0,4).toInteger()
 		
@@ -164,3 +184,5 @@ if(found) {
 }
 
 return retArray
+
+WebUI.closeBrowser()

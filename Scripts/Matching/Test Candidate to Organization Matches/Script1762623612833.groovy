@@ -16,10 +16,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-//import java.io.BufferedReader as BufferedReader
 import java.io.FileReader as FileReader
 import java.io.IOException as IOException
-//import org.apache.commons.lang3.StringUtils as StringUtils
 import javax.swing.*
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
@@ -32,48 +30,42 @@ import org.apache.commons.io.FileUtils as FileUtils
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-import java.time.Instant
-import org.openqa.selenium.Keys as Keys
+import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader as ExecutionProfilesLoader
+import java.time.Instant as Instant
 import org.openqa.selenium.By as By
-//import org.openqa.selenium.Actions
-import org.openqa.selenium.interactions.Actions
-
-// Waiting to see what we want to do about candidate matching in general. 
-// Currently it is much different and less functional/usfull as viewing it from the parther side.
-
+import org.openqa.selenium.interactions.Actions as Actions
 
 maxMatches = 100
 
-updateWildcards = false	
+updateWildcards = false
 
 debug = false
 
-if(varSite != null) {
-	site = varSite
+if (varSite != null) {
+    site = varSite // Journey or Education
 } else {
-	site = 'Journey' // Journey or Education
+    site = 'Journey'
 }
 
-matchType = 'Org'	// Org or Job
+matchType = 'Org' // Org or Job
 
 pages = GlobalVariable.matchPages //How many match table pages to test, actual number of pages to process or 'ALL'
 
-if(site == 'Journey') {
-	user = 'Journey Candidate 15'
+if (site == 'Journey') {
+    user = 'Journey Candidate 15'
 }
 
-if(site == 'Education') {
-	user = 'Education Partner 16'
+if (site == 'Education') {
+    user = 'Education Candidate 14'
 }
 
 new ExecutionProfilesLoader().loadProfile(user)
 
-orgUsername = GlobalVariable.username
+candidateUsername = GlobalVariable.username
 
-orgPassword = GlobalVariable.password
+candidatePassword = GlobalVariable.password
 
-orgEmail = GlobalVariable.email
+candidateEmail = GlobalVariable.email
 
 firstName = ''
 
@@ -82,21 +74,19 @@ lastName = ''
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
-if(GlobalVariable.testSuiteRunning) {
-	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
-	
-	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName + '-' + site
-	
-} else {
+if (GlobalVariable.testSuiteRunning) {
+    testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 
-	myTestCase = myTestCase.substring(0, myTestCase.length() - 3) + '-' + site
+    myTestCase = ((((myTestCase.substring(0, myTestCase.length() - 3) + ' - ') + testCaseName) + '-') + site)
+} else {
+    myTestCase = ((myTestCase.substring(0, myTestCase.length() - 3) + '-') + site)
 }
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 filePathDetails = '/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/'
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '.txt')
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
@@ -112,15 +102,12 @@ categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions
     , 'Options/Comment']
 
 if (!(updateWildcards)) {
-	
-	candidateWildcards = evaluate(new File(filePath + site + ' Candidate Wildcards.txt'))
-	
-	partnerWildcards = evaluate(new File(filePath + site + ' Partner Wildcards.txt'))
-	
+    candidateWildcards = evaluate(new File((filePath + site) + ' Candidate Wildcards.txt'))
+
+    partnerWildcards = evaluate(new File((filePath + site) + ' Partner Wildcards.txt'))
 } else {
-//    wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
-	wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site,
-		('varType') : matchType], FailureHandling.STOP_ON_FAILURE)
+    wildcards = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Wildcard Selections'), [('varSite') : site, ('varType') : matchType], 
+        FailureHandling.STOP_ON_FAILURE)
 
     candidateWildcards = (wildcards[0])
 
@@ -148,6 +135,16 @@ GlobalVariable.outFile = outFile
 
 lastEmailAddress = ''
 
+if(site == 'Education') {
+	myFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from API'), [('varEmail') : candidateEmail, ('varSite') : site, ('varFile') : ''],
+		FailureHandling.STOP_ON_FAILURE)
+	
+	println(myFieldValues.get('Your Country of Citizenship'))
+
+}
+
+WebUI.closeBrowser()
+
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : matchType], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -162,7 +159,8 @@ candidateMatchFields = []
 organizationMatchFields = []
 
 matchValues.each({ 
-        outText = ((((((((it.key + tab) + (it.value[0])) + tab) + (it.value[1])) + tab) + (it.value[2])) + tab) + (it.value[3]))
+        outText = ((((((((it.key + tab) + (it.value[0])) + tab) + (it.value[1])) + tab) + (it.value[2])) + tab) + (it.value[
+        3]))
 
         //println(outText)
         outFile.append(outText + '\n')
@@ -172,50 +170,105 @@ matchValues.each({
         organizationMatchFields.add(it.value[0])
     })
 
+candidateMatchFields.each({ 
+        println(it)
+    })
+
+organizationMatchFields.each({ 
+        println(it)
+    })
+
 BufferedReader reader
 
-if (site == 'Journey') {	
-    organizationSelections = [:]
+orgFieldValues = [:]
 
-	orgFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from API'), [('varEmail') : orgEmail, ('varSite') : site], 
-	    FailureHandling.STOP_ON_FAILURE)
-	orgFieldValues.each {
-		println(it)
-	}
+if (site == 'Journey') {
+    candidateSelections = [:]
 
-	for(it in orgFieldValues){ 
-        if (it.key in organizationMatchFields) {
-            organizationSelections.put(it.key, it.value)
+    candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from API'), [('varEmail') : candidateEmail
+            , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+
+    candidateFieldValues.each({ 
+            println(it)
+        })
+
+    for (def it : candidateFieldValues) {
+        if (it.key in candidateMatchFields) {
+            candidateSelections.put(it.key, it.value)
+
+            println(it)
         }
     }
-	
-	apiTab = WebUI.getWindowIndex()
-	
-} else { //Education
-	
-	adTab = WebUI.getWindowIndex()
-	
-    WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varUsername') : orgUsername, ('varFile') : profileFile
+    
+    apiTab = WebUI.getWindowIndex() //Education
+    
+} else {
+
+    adTab = WebUI.getWindowIndex()
+
+    WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varUsername') : candidateUsername, ('varFile') : profileFile
             , ('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
 
-    returnValues = formatProfile(profileFile, categoriesOrganization, organizationMatchFields)
+    returnValues = formatProfile(profileFile, categoriesCandidate, candidateMatchFields)
 
-    organizationSelections = (returnValues[0])
-	
-	organizationSelections.each {
-		println(it)
-	}
-	
-	WebUI.closeWindowIndex(1)
-	
-	WebUI.switchToWindowIndex(adTab)
+    candidateSelections = (returnValues[0])
+
+    candidateSelections.put('Your Country of Citizenship', myFieldValues.get('Your Country of Citizenship'))
+
+    candidateSelections.each({ 
+            println(it)
+        })
+
+    WebUI.closeWindowIndex(1)
+
+    WebUI.switchToWindowIndex(adTab)
 }
 
-outText = '\n\n Organization Selections'
+if (site == 'Journey') {
+    maritalStatus = (candidateFieldValues.get('Marital status')[0])
+
+    spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
+
+    firstName = (candidateFieldValues.get('First Name')[0])
+
+    lastName = (candidateFieldValues.get('Last Name')[0])
+
+    if ('Married' in candidateFieldValues.get('Marital status')) {
+        married = true
+    } else {
+        married = false
+    }
+    
+    if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
+        spouseServing = true
+    } else {
+        spouseServing = false
+    }
+} else {
+    married = (returnValues[1])
+
+    spouseServing = (returnValues[2])
+
+    if (married) {
+        maritalStatus = 'Married'
+    } else {
+        maritalStatus = 'Single'
+    }
+}
+
+outText = ((((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+
+if (married) {
+    if (spouseServing) {
+        outText += ', spouse is serving.'
+    } else {
+        outText += ', spouse is not serving.'
+    }
+}
 
 outFile.append(outText + '\n')
 
-organizationSelections.each({ 
+candidateSelections.each({ 
         outText = ((it.key + ':') + it.value)
 
         outFile.append(outText + '\n')
@@ -223,230 +276,189 @@ organizationSelections.each({
 
 WebUI.delay(2)
 
-WebUI.openBrowser(null)
+//WebUI.openBrowser(null)
+WebUI.executeJavaScript('window.open();', [])
+
+WebUI.switchToWindowIndex(1)
 
 orgTab = WebUI.getWindowIndex()
 
-orgWindowTitle = WebUI.getWindowTitle()
-
 WebUI.maximizeWindow()
 
-WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : orgUsername, ('varPassword') : orgPassword
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : candidateUsername, ('varPassword') : candidatePassword
         , ('varSite') : site], FailureHandling.STOP_ON_FAILURE //***
     )
 
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Candidate Matches'))
+if (site == 'Journey') {
+    WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_View Agency Matches'))
+} else {
+    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_View School Matches'))
+}
 
-tableWindowTitle = WebUI.getWindowTitle()
-
-tableTab = (orgTab + 1)
-
-matchTab = tableTab + 1
-
-userTab = tableTab + 1
-
-WebUI.switchToWindowIndex(tableTab)
+educationTab = WebUI.getWindowIndex()
 
 WebUI.waitForPageLoad(60)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
-WebElement Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
+tableXpath = '//*[@id="main"]/div/div/div[2]/div[3]/div/div[1]/table/tbody'
+
+WebElement Table = driver.findElement(By.xpath(tableXpath))
 
 List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
-int row_count = Rows.size() - 5
+println(Rows.size())
 
-if(maxMatches < row_count) {
-	row_count = maxMatches
+int row_count = Rows.size() - 1
+
+if (maxMatches < row_count) {
+    row_count = maxMatches
 }
 
 found = false
-	
-if(row_count > 0) {
 
-	for (row = 3; row < row_count + 3; row++) {
+if (row_count > 0) {
+    for (row = 1; row < row_count; row++) {
+        println('row is ' + row)
 		
-		println('row is ' + row)
+		rowClass = Rows.get(row).getAttribute("class")
 		
-		List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-	
-		line = Columns.get(0).getText()
-		
-		println('line is ' + line)
-		
-		firstName = Columns.get(1).getText()
-		
-		println('firstName is ' + firstName)
-		
-		lastName = Columns.get(2).getText()
-		
-		println('lastName is ' + lastName)
-		
-		pct = Columns.get(8).getText()
-		
-		println('Table pct is ' + pct)
-		
-		tablePct = pct.toInteger()
-		
-		println('Table percent is ' + tablePct)
-		
-		spyGlass = Columns.get(9)
-		
-		myRow = row + 1
-		
-		element = '/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class="body"]/form[1]/p[1]/table[1]/tbody[1]/tr[' + myRow + ']/td[10]/a[1]/img[1]'
-		
-		println(element)
-		
-		driver.findElement(By.xpath(element)).click()
-		
-		WebUI.switchToWindowIndex(matchTab)
-		
-		poputWindowTitle = WebUI.getWindowTitle()
-		
-		popupPercent = WebUI.getText(findTestObject('Object Repository/Journey Partner Profile/Matching/text_Match Percent'))
-		
-		popupPercent = popupPercent.replace('%', '')
-		
-		popupPct = popupPercent.replace(' ', '').toInteger()
-		
-		println('PopupPct percent is ' + popupPct)
-		
-		WebUI.closeWindowTitle(poputWindowTitle)
-		
-		WebUI.switchToWindowIndex(tableTab)
-		
-		WebUI.delay(1)
-
-		Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
-
-		Rows = Table.findElements(By.tagName('tr'))
-		
-		Columns = Rows.get(row).findElements(By.tagName('td'))
-		
-		myRow = row + 1
-		
-		element = '//tr[' + myRow + ']/td[3]/a'
-		
-		println(element)
-		
-		driver.findElement(By.xpath(element)).click()
-			
-		WebUI.switchToWindowIndex(userTab)
-		
-		WebUI
-		
-		WebUI.waitForPageLoad(30)
-
-		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
-			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
-		
-		println(candidateMatchFields)
-
-		println(candidateFieldValues)
-		
-		maritalStatus = (candidateFieldValues.get('Marital status')[0])
-
-		spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
-
-		outText = (((((' \n\nCandidate profile for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
-
-		outFile.append(outText + '\n')
-
-		println(outText)
-
-		candidateFieldValues.each({
-				outText = ((it.key + ':') + it.value)
-
-				outFile.append(outText + '\n')
-
-				println(outText)
-			})
-
-		candidateSelections = [:]
-		
-		if (candidateFieldValues != null) {
-			candidateFieldValues.each({
-					println(it)
-				})
-
-			for (def v : candidateFieldValues) {
-				myKey = v.key
-
-				if (candidateMatchFields.contains(myKey)) {
-					candidateSelections.put(v.key, v.value)
-				}
-			}
-			
-			if ('Married' in candidateFieldValues.get('Marital status')) {
-				married = true
-			} else {
-				married = false
-			}
-			
-			if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
-				spouseServing = true
-			} else {
-				spouseServing = false
-			}
-			
-			outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
-
-			outFile.append(outText + '\n')
-
-			outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
-
-			resultsFile.append(outText + '\n')
-			
-			candidateText = outText
-
-			if (!(married)) {
-				outText = 'Candidate is not married.'
-			} else {
-				outText = 'Candidate is married and spouse is '
-
-				if (!(spouseServing)) {
-					outText += 'not '
-				}
+		if(rowClass.contains('item')) {
 				
-				outText += 'serving.'
-			}
-			
-			outFile.append(outText + '\n')
-			
-			maritalStatusText = outText
-
-			doMatching(candidateSelections, organizationSelections) 
-				
+	        List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+	
+	        line = Columns.get(0).getText()
+	
+	        println('line is ' + line)
+	
+	        organization = Columns.get(1).getText()
+	
+	        println('organization is ' + organization)
+	
+	        pct = Columns.get(2).getText()
+	
+	        println('Table pct is ' + pct)
+	
+	        tablePct = pct.toInteger()
+	
+	        println('Table percent is ' + tablePct)
+	
+	        myRow = (row + 1)
+	
+	        elementXpath = (('//*[@id="main"]/div/div/div[2]/div[3]/div/div[1]/table/tbody/tr[' + myRow) + ']/td[2]/a')
+	
+	        element = driver.findElement(By.xpath(elementXpath))
+	
+	        println(element)
+	
+	        Actions actions = new Actions(driver)
+	
+	        actions.moveToElement(element)
+	
+	        actions.perform()
+	
+	        element.click()
+	
+	        WebUI.switchToWindowIndex(educationTab + 1)
+	
+	        WebUI.waitForPageLoad(30)
+	
+	        element = driver.findElement(By.xpath('//*[text()=\'Key Contact Email:\']'))
+	
+	        email = element.findElement(By.xpath('following-sibling::*')).getText().trim()
+	
+	        println(email)
+	
+	        WebUI.closeWindowIndex(educationTab + 1)
+	
+	        WebUI.switchToWindowIndex(0)
+	
+	        orgFieldValues = [:]
+	
+	        if (site == 'Journey') {
+	            orgFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email'
+	                    , ('varEmail') : email, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+	        } else {
+	            WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varEmail') : email, ('varFile') : profileFile
+	                    , ('varSearchType') : 'email'], FailureHandling.STOP_ON_FAILURE)
+	
+	            returnValues = formatProfile(profileFile, categoriesOrganization, candidateMatchFields)
+	
+	            organizationSelections = (returnValues[0])
+	
+	            organizationSelections.each({ 
+	                    println(it)
+	                })
+	
+	            WebUI.closeWindowIndex(2)
+	        }
+	        
+	        organization = (orgFieldValues.get('Organization')[0])
+	
+	        outText = (' \n\n>>>>> Organization Field Values for ' + organization)
+	
+	        outFile.append(outText + '\n')
+	
+	        println(outText)
+	
+	        orgFieldValues.each({ 
+	                outText = ((it.key + ':') + it.value)
+	
+	                outFile.append(outText + '\n')
+	
+	                println(outText)
+	            })
+	
+	        organizationSelections = [:]
+	
+	        if (orgFieldValues != null) {
+	            orgFieldValues.each({ 
+	                    println(it)
+	                })
+	
+	            for (def v : orgFieldValues) {
+	                myKey = v.key
+	
+	                if (organizationMatchFields.contains(myKey)) {
+	                    organizationSelections.put(v.key, v.value)
+	                }
+	            }
+	            
+	            outText = ('\n\n Organization Selection Matches for ' + organization)
+	
+	            outFile.append(outText + '\n')
+	
+	            outText = ('\n Results for organization ' + organization)
+	
+	            resultsFile.append(outText + '\n')
+	
+	            candidateSelections.each({ 
+	                    println(it)
+	                })
+	
+	            organizationSelections.each({ 
+	                    println(it)
+	                })
+	
+	            doMatching(candidateSelections, organizationSelections)
+	        }
+	        
+	        WebUI.switchToWindowIndex(1)
+	
+	        WebUI.waitForPageLoad(10)
+	
+	        Table = driver.findElement(By.xpath(tableXpath))
+	
+	        Rows = Table.findElements(By.tagName('tr'))
 		}
-		
-		WebUI.closeWindowIndex(userTab)
-		
-		WebUI.switchToWindowIndex(tableTab)
-		
-		WebUI.waitForPageLoad(10)
-		
-		Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
-
-		Rows = Table.findElements(By.tagName('tr'))
-		
-		Columns = Rows.get(row).findElements(By.tagName('td'))
-	
-		line = Columns.get(0).getText()
-		
-		firstName = Columns.get(1).getText()
-		
-		lastName = Columns.get(2).getText()
-		
-	}
+    }
 }
 
 WebUI.closeBrowser()
 
-WebUI.delay(5)
-
 def doMatching(def candidateSelections, def organizationSelections) {
+	error = false
+	
     if (married && !(spouseServing)) {
         married = false
     }
@@ -467,7 +479,8 @@ def doMatching(def candidateSelections, def organizationSelections) {
         match = false
 
         if (!(excluded)) {
-			match = false
+            match = false
+
             candidateValues = candidateSelections.get(it.key)
 
             values = matchValues.get(it.key)
@@ -500,7 +513,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
             println(matchValue)
 
-            if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
+            if (((matchValue != 5) && !((values[pointValue]).contains('-'))) && ((values[pointValue]).length() > 0)) {
                 newPoints = (values[pointValue]).toFloat().round(1)
             } else {
                 newPoints = 0
@@ -523,9 +536,9 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
                     match = true
                 }
-            
             }
-			if (!(match)) {
+            
+            if (!(match)) {
                 oWC = partnerWildcards.get(orgSelectionKey)
 
                 println('partner wildcards = ' + oWC)
@@ -533,9 +546,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
                 println('partner selections =' + organizationValues)
 
                 if ((oWC != null) && (organizationValues != null)) {
-					
                     if (oWC.intersect(organizationValues).size() > 0) {
-						
                         outText = (((('Organization wildcard match on ' + oWC.intersect(organizationValues)) + '. Adding ') + 
                         newPoints) + ' points.')
 
@@ -546,8 +557,10 @@ def doMatching(def candidateSelections, def organizationSelections) {
                         match = true
                     }
                 }
-				if ((!(match) && (candidateValues != null)) && (organizationValues != null)) {
+                
+                if ((!(match) && (candidateValues != null)) && (organizationValues != null)) {
                     matches = candidateValues.intersect(organizationValues)
+
                     if (matches.size() > 0) {
                         outText = (((('Found match on ' + candidateValues.intersect(organizationValues)) + '. Adding ') + 
                         newPoints) + ' points.')
@@ -560,7 +573,6 @@ def doMatching(def candidateSelections, def organizationSelections) {
                     }
                 }
             }
-            
         }
         
         if (match) {
@@ -590,34 +602,16 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     println('addedPct=' + addedPct)
 
-    println('popupPct=' + popupPct)
-
     println('tablePct=' + tablePct)
 
     error = false
 
-	popupPct = popupPct.toString().replace('\n', '')
-	
-	popupPct = popupPct.replace('%', '')
+    tablePct = tablePct.toInteger()
 
-	popupPct = popupPct.toInteger()
+    code = ''
 
-	tablePct = tablePct.toInteger()
-
-	code = ''
-	
-    if (((addedPct - tablePct) > 1) || ((tablePct - popupPct) > 1)) {
+    if ((addedPct - tablePct) > 1) {
         error = true
-		
-		if(Math.abs(addedPct - tablePct) > 1) {	
-			code = '12 '
-		}
-		if(Math.abs(addedPct - popupPct) > 1) {
-			code = code + '13 '
-		}
-		if(Math.abs(tablePct - popupPct) > 1) {
-			code = code + '23'
-		}
     }
     
     outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
@@ -632,30 +626,23 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     outFile.append(outText + '\n')
 
-	outText = (('Popup match percentage is ' + popupPct) + '%.')
-	
-    outFile.append(outText + '\n')
-
     if (error) {
-		outText = '##### ERRORS ' + code + ' FOUND #####'
-		
+        outText = (('##### ERRORS ' + code) + ' FOUND #####')
+
         outFile.append(outText + '\n')
-		
     }
     
     outFile.append('\n\n')
 
-	outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popupPct) +
-		'%.\n\n')
+    outText = (((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%.\n\n')
 
     if (error) {
-        outText = ('##### ERRORS ' + code + ': ' + outText)
+        outText = ((('##### ERRORS ' + code) + ': ') + outText)
+
+        errorFile.append(outText + '\n')
     }
     
     resultsFile.append(outText)
-
-	errorFile.append(outText)
-	
 }
 
 def getNextLine(def reader, def categories) {
@@ -672,7 +659,7 @@ def getNextLine(def reader, def categories) {
     }
 }
 
-def formatProfile(def file, def categories, def matchFields) { //education
+def formatProfile(def file, def categories, def matchFields) {
     reader = new BufferedReader(new FileReader(file))
 
     selections = [:]
@@ -691,7 +678,7 @@ def formatProfile(def file, def categories, def matchFields) { //education
         line = getNextLine(reader, categories)
 
         while (line != 'end') {
-            if (line.length() > 3 && line.substring(1, 4).contains('\t')) {
+            if ((line.length() > 3) && line.substring(1, 4).contains('\t')) {
                 values = []
 
                 tab = line.indexOf('\t')
@@ -732,6 +719,10 @@ def formatProfile(def file, def categories, def matchFields) { //education
                             selections.put(field, values)
                         }
                         
+                        if (site == 'Education') {
+                            orgFieldValues.put(field, values)
+                        }
+                        
                         if (field == 'Marital status') {
                             if ('Married' in values) {
                                 married = true
@@ -744,6 +735,10 @@ def formatProfile(def file, def categories, def matchFields) { //education
                         
                         if (field == 'Last Name') {
                             lastName = value
+                        }
+                        
+                        if (field == 'Organization') {
+                            organizationName = value
                         }
                         
                         if (field == 'Spouse Serving with You?') {
@@ -776,9 +771,9 @@ def formatProfile(def file, def categories, def matchFields) { //education
     }
     
     reader.close()
-	
-	println(selections)
-	
+
+    println(selections)
+
     return [selections, married, spouseServing]
 }
 

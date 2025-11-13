@@ -6,12 +6,12 @@
    <elementGuidId>9c416638-d42a-4102-9f19-3a482a6ef65e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[10]</value>
+         <key>CSS</key>
+         <value>a:nth-of-type(9)</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>a:nth-of-type(10)</value>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>ad043f19-06c3-482f-be48-bfd78702620d</webElementGuid>
+      <webElementGuid>c91422d7-0268-4b81-a652-1110ff6cceeb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/favorite</value>
-      <webElementGuid>036e09e6-b204-4722-9c2e-016512d718f6</webElementGuid>
+      <webElementGuid>0184f6ae-ec25-49dd-8517-b9d8851dbaf8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,23 +39,23 @@
       <name>text</name>
       <type>Main</type>
       <value>My Favorites</value>
-      <webElementGuid>b22cbf1b-96ac-4420-b1e7-0005685430a8</webElementGuid>
+      <webElementGuid>d0358c38-2bc6-47d2-b56b-129911bcc832</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[10]</value>
-      <webElementGuid>1ec2c70d-e7d1-4b26-abee-bbae99b3060b</webElementGuid>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[9]</value>
+      <webElementGuid>b4cca925-df99-4fe2-9889-11ffe6b2c8a3</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[10]</value>
-      <webElementGuid>8b1f1720-5c22-4b97-bd80-b27f46b4da29</webElementGuid>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
+      <webElementGuid>655bbf4b-5050-47ba-b966-50fbbcdce413</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'My Favorites')]</value>
-      <webElementGuid>89b11be4-711c-477a-9dd4-0311caf9834b</webElementGuid>
+      <webElementGuid>115a72a7-65fd-4d7c-b6c7-86e1df9ad57e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Inquiry List'])[1]/following::a[1]</value>
-      <webElementGuid>9fda7897-a29e-427e-ae7e-841c7873986b</webElementGuid>
+      <webElementGuid>0d06245e-6117-417d-ab18-da2686471f7e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Schools'])[1]/following::a[2]</value>
-      <webElementGuid>40f8f7d2-a35c-4086-880c-304c3d84a19d</webElementGuid>
+      <webElementGuid>22b0c23f-95b3-43e1-ae73-2be8b8539e85</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,15 +87,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/preceding::a[1]</value>
-      <webElementGuid>32280b3c-ac7c-4f80-86fa-92614309cb1e</webElementGuid>
+      <webElementGuid>bdff0cf5-915d-47ea-b5c6-9ed831c3331b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hello, cktest04ec Kosieracki'])[1]/preceding::a[2]</value>
-      <webElementGuid>73e16ecd-6b06-4225-acc8-68087a2dfc01</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hello, CKTEST14EC TEST Kosieracki'])[1]/preceding::a[2]</value>
+      <webElementGuid>63821f9b-bdc2-4bc2-a6ee-7c6bb2c632e1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='My Favorites']/parent::*</value>
-      <webElementGuid>eb6796ce-efcf-4e89-a000-94a75eb4c288</webElementGuid>
+      <webElementGuid>a2d161b1-7dfe-4ec9-8cc6-c80be910dfb4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,15 +111,15 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/favorite')]</value>
-      <webElementGuid>7cc424f0-9cea-4779-a8c3-970e53a48deb</webElementGuid>
+      <webElementGuid>f31528bb-f7aa-47d6-bb1e-ca2932250af3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//a[10]</value>
-      <webElementGuid>77592633-ca0c-4a7e-baf5-8bd4de01bcc1</webElementGuid>
+      <value>//a[9]</value>
+      <webElementGuid>106a5297-ce95-484b-a30e-147e3f4e5c1a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/favorite' and (text() = 'My Favorites' or . = 'My Favorites')]</value>
-      <webElementGuid>580fd9ff-c17f-453e-8d8b-9597da4a153d</webElementGuid>
+      <webElementGuid>7f57eb4e-839e-4a92-992c-4763db7c2405</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -33,7 +33,7 @@ class After_Test_Case {
 	def sampleAfterTestCase(TestCaseContext testCaseContext) {
 //		println testCaseContext.getTestCaseId()
 //		println testCaseContext.getTestCaseStatus()
-		println('After Test Case Listener')
+//		println('After Test Case Listener')
 		WebUI.callTestCase(findTestCase('_Functions/Write to Test Suite Collection Log'), [:], FailureHandling.STOP_ON_FAILURE)
 	}
 }

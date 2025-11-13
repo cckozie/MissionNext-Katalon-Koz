@@ -28,6 +28,27 @@ import org.sikuli.script.SikulixForJython as SikulixForJython
 import java.io.File as File
 import groovy.json.JsonSlurper as JsonSlurper
 
+varFormat = "YY-MM-dd.HH-mm"
+//varTime = "17:33"
+//varDelay = 20
+
+now = new Date().format(varFormat)
+println(now)
+
+System.exit(0)
+retArray = WebUI.callTestCase(findTestCase('_Functions/Test for App Assigned and Correct Expiration Date'), [('varUsername') : 'cktest05jc'], FailureHandling.STOP_ON_FAILURE)
+println(retArray)
+if(retArray[0] == 'Journey' && retArray[1] == 'Candidate' && retArray[3] == true) {
+	prefix = '+++++ '
+	suffix = ' as expected.'
+} else {
+	prefix = '##### ERROR:'
+	suffix = '.'
+}
+println(prefix + 'Site is ' + retArray[0] + ', role is ' + retArray[1] + ', end date is ' + retArray[2] + suffix)
+
+
+System.exit(0)
 WebUI.openBrowser('missionnext.org')
 
 //myWindow = WebUI.getWindowIndex()

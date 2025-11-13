@@ -316,7 +316,6 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 
 WebUI.closeBrowser()
 
-
 if(pages == null || pages.size() == 0 || pages == 'All') {
 	
 	WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.CONTINUE_ON_FAILURE)
@@ -338,6 +337,16 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 		GlobalVariable.testCaseErrorFlag = true
 	}
 	
+	retArray = WebUI.callTestCase(findTestCase('_Functions/Test for App Assigned and Correct Expiration Date'), [('varUsername') : 'cktest05jc'], FailureHandling.STOP_ON_FAILURE)
+	println(retArray)
+	if(retArray[0] == 'Journey' && retArray[1] == 'Candidate' && retArray[3] == true) {
+		prefix = '+++++ '
+		suffix = ' as expected.'
+	} else {
+		prefix = '##### ERROR:'
+		suffix = '.'
+	}
+	println(prefix + 'Site is ' + retArray[0] + ', role is ' + retArray[1] + ', end date is ' + retArray[2] + suffix)
 }
 
 WebUI.closeBrowser()

@@ -61,9 +61,13 @@ try {
 }
 */
 
-WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
+mainPage = WebUI.verifyElementPresent(findTestObject('Admin/Ad Main/a_User Information  Administration'), 1, FailureHandling.OPTIONAL)
 
-WebUI.waitForPageLoad(10)
+if(mainPage) {
+	WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
+
+	WebUI.waitForPageLoad(10)
+}
 
 if(searchType == 'username') {
 	

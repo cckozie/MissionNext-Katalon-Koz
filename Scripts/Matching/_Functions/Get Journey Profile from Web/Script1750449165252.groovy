@@ -333,7 +333,7 @@ def getNextLine(reader) {
 
 	if(line.contains('Copyright')) {
 		if(!spouseFound) {
-			field = '- ' + field
+//			field = '- ' + field
 			fields.put("Spouse Serving with You?","No")
 		}
 		if(positions) {

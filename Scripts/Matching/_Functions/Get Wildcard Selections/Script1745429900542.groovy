@@ -65,7 +65,7 @@ for(username in [varValues[1],varValues[2]]) {
 			
 			WebUI.click(findTestObject('Object Repository/'+ varValues[0] + '/Matching/button_Add Jobs'))
 			
-			WebUI.switchToWindowIndex(2)
+//			WebUI.switchToWindowIndex(2)
 		}
 	}
 			

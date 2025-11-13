@@ -25,6 +25,8 @@ outFile = new File(GlobalVariable.reportPath + 'Sleeping Now.txt')
 
 LocalDateTime now = LocalDateTime.now()
 
+println(now)
+
 myTime = now.toLocalTime()
 
 outText = 'The time now is ' + myTime

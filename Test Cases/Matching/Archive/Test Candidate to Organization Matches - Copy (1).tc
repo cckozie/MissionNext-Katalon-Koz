@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Organization Matches - Copy</name>
+   <name>Test Candidate to Organization Matches - Copy (1)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>b3d89575-77c8-43ec-baee-9e49058e925a</testCaseGuid>
+   <testCaseGuid>d9b9a84a-7ec7-416c-b4c6-2a5ea1037fc9</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>5d37ef1d-f047-471e-b46a-bc1ee30c5913</variableId>
+      <variableId>6ea16cd6-48d2-4c6f-8614-8e8aad0ede68</variableId>
    </variableLinks>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>e6a6e9ab-9377-4d56-b331-adc4d2f4e04a</variableId>
+      <variableId>f5ad964b-4d1d-42c0-9bcd-82e365dd4e2f</variableId>
    </variableLinks>
    <variable>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>5d37ef1d-f047-471e-b46a-bc1ee30c5913</id>
+      <id>6ea16cd6-48d2-4c6f-8614-8e8aad0ede68</id>
       <masked>false</masked>
       <name>varUsername</name>
    </variable>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>e6a6e9ab-9377-4d56-b331-adc4d2f4e04a</id>
+      <id>f5ad964b-4d1d-42c0-9bcd-82e365dd4e2f</id>
       <masked>false</masked>
       <name>varSite</name>
    </variable>

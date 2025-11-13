@@ -25,13 +25,24 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+errorsOnly = true
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
 myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.csv')
+varFormat = "YY-MM-dd.HH-mm"
+
+now = new Date().format(varFormat)
+
+txt = ''
+
+if(errorsOnly) {
+	txt = '_Errors'
+}
+
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + txt + '_' + now + '.csv')
 //outFile2 = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '2.csv')
 //outFile1 = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
 
@@ -53,93 +64,101 @@ WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_Password'), 'fAJOXt1
 
 WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
 
-WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
+sites = ['Journey', 'Education', 'QuickStart']
 
-WebUI.waitForPageLoad(10)
-
-//WebUI.selectOptionByValue(findTestObject('Object Repository/Admin/Ad User Viewer Utility/select_Website'), 'Journey', false)
+for(site in sites) {
 	
-WebUI.selectOptionByValue(findTestObject('Object Repository/Admin/Ad User Viewer Utility/select_Role'), 'Candidate', false)
+	outFile.append('\n>>>>> ' + site + ' candidates.\n')
 
-WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/button_Go'))
-
-WebUI.delay(1)
-
-WebUI.click(findTestObject('Object Repository/Admin/Ad User Viewer Utility/button_Search'))
-
-WebUI.waitForPageLoad(60)
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-tableXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody'
-WebElement Table = driver.findElement(By.xpath(tableXpath))
-
-List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-
-int row_count = Rows.size()
-
-candidates = [:]
-
-print('There are ' + row_count + ' candidates.')
-
-for (row = 1; row < row_count; row++) {
+	WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
+	
+	WebUI.waitForPageLoad(30)
+	
+	WebUI.selectOptionByLabel(findTestObject('Object Repository/Admin/Ad User Viewer Utility/select_Website'), site, false)
+	
+	WebUI.selectOptionByValue(findTestObject('Object Repository/Admin/Ad User Viewer Utility/select_Role'), 'Candidate', false)
+	
+	WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/button_Go'))
+	
+	WebUI.delay(1)
+	
+	WebUI.click(findTestObject('Object Repository/Admin/Ad User Viewer Utility/button_Search'))
+	
+	WebUI.waitForPageLoad(60)
+	
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	tableXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody'
+	WebElement Table = driver.findElement(By.xpath(tableXpath))
+	
+	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+	
+	int row_count = Rows.size()
+	
+	candidates = [:]
+	
+	print('There are ' + row_count + ' candidates.')
+	
+	for (row = 1; row < row_count; row++) {
+			
+		List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 		
-	List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-	
-	userID = Columns.get(1).getText()
-	
-	lastName = Columns.get(3).getText()
-	
-	firstName = Columns.get(4).getText()
-	
-	username = Columns.get(11).getText()
-	
-	email = Columns.get(12).getText()
-	
-	values = [username,firstName,lastName,email]
-	
-	candidates.put(userID,values)
-}
-
-WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Admin Section Home'))
-
-WebUI.delay(2)
-
-WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Subscription Information  Administration'))
-
-WebUI.waitForPageLoad(30)
-
-count = 1
-
-for(it in candidates) {
-	
-	myKey = it.key
-	
-	myValue = it.value
+		userID = Columns.get(1).getText()
 		
+		lastName = Columns.get(3).getText()
+		
+		firstName = Columns.get(4).getText()
+		
+		username = Columns.get(11).getText()
+		
+		email = Columns.get(12).getText()
+		
+		values = [username,firstName,lastName,email]
+		
+	//	println(values)
+		
+		candidates.put(userID,values)
+		
+		if(userID.indexOf('325') > 0) { 
+			println(userID + ':' + values)
+		}
+	}
+
+	WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Admin Section Home'))
+	
+	WebUI.delay(2)
+	
+	WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Subscription Information  Administration'))
+	
+	WebUI.waitForPageLoad(30)
+	
+	count = 1
+	
 	tableXpath = '/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table[3]/tbody'
 	
 	Table = driver.findElement(By.xpath(tableXpath))
 	
 	Rows = Table.findElements(By.tagName('tr'))
 	
-	row_count = Rows.size()
+	row_count = Rows.size() - 2
 	
 	found = false
 		
 	if(row_count > 0) {
 	
-		for (row = 1; row < row_count; row++) {
+		for (row = 2; row < row_count; row++) {
 		    List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 			
 			userID = Columns.get(0).getText()
+			
+			println(userID)
 			
 			values = candidates.get(userID, null)
 			
 			if(values != null) {
 				
 				println(values)
-		
+
 				lastLogin = Columns.get(9).getText().substring(0,10)
 				
 				endDate = Columns.get(12).getText().substring(0,10)
@@ -172,15 +191,16 @@ for(it in candidates) {
 				
 				email = values[3]
 				
-				outFile.append(userID + ",'" + user + ",'" + email + ",'" + firstName + ",'" + lastName + "','"+ lastLogin + "','" + endDate + "','" + expires + "'," + status + "\n")
-/*				
-				count++
-				if(count > 5 ) {
-					System.exit(0)
+				if(status == 'ERROR' || !errorsOnly) {
+					outFile.append(userID + ",'" + user + ",'" + email + ",'" + firstName + ",'" + lastName + "','"+ lastLogin + "','" + endDate + "','" + expires + "'," + status + "\n")
 				}
-*/
 			}
 		}
+	}
+	if(site != 'QuickStart') {
+		WebUI.back()
+		
+		WebUI.waitForPageLoad(30)
 	}
 }
 WebUI.closeBrowser()

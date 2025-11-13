@@ -6,12 +6,12 @@
    <elementGuidId>9ba963b8-2578-4820-bacd-47f604bb684f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[3]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a:nth-of-type(3)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>4f4c98b4-d340-45ba-b2c4-55f6d3f24dc1</webElementGuid>
+      <webElementGuid>72c71a9a-9e61-44ee-9b27-ac5d082ec898</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/user/account</value>
-      <webElementGuid>34814274-3fed-4d44-a24c-9d7907b9b486</webElementGuid>
+      <webElementGuid>ae1f789a-35a2-4b77-a9f2-9f275a9ad2db</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Change Password</value>
-      <webElementGuid>b9e788e1-8e28-4edc-b6bd-52e8acc01b78</webElementGuid>
+      <webElementGuid>570b1622-9cb9-4537-a2af-ca471f0a3405</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[3]</value>
-      <webElementGuid>7d24f3af-eee1-4b5f-9876-2329c6530f82</webElementGuid>
+      <webElementGuid>ba7cbbfd-ede4-4bcf-8cee-ce23723edeb1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/div/div/div[2]/a[3]</value>
-      <webElementGuid>95687f33-c6ea-4afa-b9d6-20cabf5c3e39</webElementGuid>
+      <webElementGuid>637dfa77-8332-48e5-9593-45ea089f0bd0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Change Password')]</value>
-      <webElementGuid>a54bb77a-a4d4-485f-aa89-8da6792e611f</webElementGuid>
+      <webElementGuid>17c590dd-db69-4bc2-8d7a-dc1ccd7b8280</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::a[1]</value>
-      <webElementGuid>b9b47365-9395-474c-a5b4-9827cc06f57a</webElementGuid>
+      <webElementGuid>85c97d0a-cc5c-401a-9998-11152f29d375</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Dashboard'])[1]/following::a[2]</value>
-      <webElementGuid>4f573361-f01d-4a9f-a7d4-858832df4148</webElementGuid>
+      <webElementGuid>7c31e876-b60d-44e1-8c59-16fd2bee269c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='View Job Matches'])[1]/preceding::a[1]</value>
-      <webElementGuid>7c3fb8d4-82b5-4183-8b2d-0fe731033004</webElementGuid>
+      <webElementGuid>ba43d056-ccd0-46e5-96ca-f836effb779b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Search School Jobs'])[1]/preceding::a[2]</value>
-      <webElementGuid>78aeadcd-b971-4588-9f05-6ad001a00482</webElementGuid>
+      <webElementGuid>8322ef38-e2e0-4d3c-b535-5a724f328d3f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Change Password']/parent::*</value>
-      <webElementGuid>853ff389-9a96-476b-a276-67cf54551297</webElementGuid>
+      <webElementGuid>8e8d158f-cf2d-4135-a7bf-4f444c034824</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/user/account')]</value>
-      <webElementGuid>0c1ab2d1-ec38-4c25-b142-f7b86f20e402</webElementGuid>
+      <webElementGuid>17694dfd-d13a-4680-8271-c30aeb07e411</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//a[3]</value>
-      <webElementGuid>2eeec283-80cc-4275-998d-eca3962b08ae</webElementGuid>
+      <webElementGuid>98162cbd-03b1-430c-a9b5-e8e470770661</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/user/account' and (text() = 'Change Password' or . = 'Change Password')]</value>
-      <webElementGuid>336f9a44-5f0f-426d-841b-7e94bc437263</webElementGuid>
+      <webElementGuid>711826bd-456f-4f66-a1a4-33cf398c9a39</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

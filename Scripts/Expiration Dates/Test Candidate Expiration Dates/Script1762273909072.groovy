@@ -23,6 +23,10 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import org.openqa.selenium.By as By
 import java.text.SimpleDateFormat
 
+date = new Date()
+
+today = date.format("yyyy-MM-dd")
+
 ignoreBefore = '2025-10'
 
 ignoreBeforeYear = ignoreBefore.substring(0,4).toInteger()
@@ -47,9 +51,15 @@ outFile = new File(((((GlobalVariable.reportPath + myTestCase) + suffix) + ' on 
 
 GlobalVariable.outFile = outFile
 
-outFile.write(((('Testing ' + myTestCase) + ' on ') + domain) + '.\n')
+if(outFile.exists()) {
+	outFile.append('\n\nRunning ' + myTestCase + ' on ' + domain + ', ' + today + '.\n')
+} else {
+	outFile.write('Running ' + myTestCase + ' on ' + domain + ', ' + today + '.\n')
+}
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to AD'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.waitForPageLoad(10)
 
 // Load list 'noProfiles' with the user ID of candidates who do not have a profile
 WebUI.click(findTestObject('Object Repository/Admin/Ad Main/a_View Candidates wo Profile'))
@@ -145,10 +155,6 @@ row_count = Rows.size()
 
 println(row_count + ' rows found in table.')
 
-date = new Date()
-
-today = date.format("yyyy-MM-dd")
-
 myYear = today.substring(0,4).toInteger()
 
 expiredYear = myYear - 5
@@ -229,9 +235,9 @@ println(eduUsers)
 println(jnUsers)
 
 
-outFile.append('\n' + errorCount + ' errors encountered.\n')
+outFile.append(errorCount + ' errors encountered.\n')
 
-outFile.append('\n\n------------------------------------------------------------\n\n')
+outFile.append('------------------------------------------------------------\n')
 WebUI.click(findTestObject('Admin/Ad Subscription Utility/select_Website'))
 
 WebUI.delay(1)
@@ -292,7 +298,7 @@ for(site in sites) {
 			}
 		}
 	}
-	outFile.append(siteCount + ' ' + site + ' partners were found.\n\n')
+//	outFile.append(siteCount + ' ' + site + ' partners were found.\n\n')
 	
 	WebUI.back()
 }

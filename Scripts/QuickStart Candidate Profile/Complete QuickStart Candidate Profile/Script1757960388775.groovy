@@ -147,6 +147,17 @@ if(pages == null || pages.size() == 0 || pages == 'All') {
 		
 		outFile.append(outText)
 	}
+	
+	retArray = WebUI.callTestCase(findTestCase('_Functions/Test for App Assigned and Correct Expiration Date'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	println(retArray)
+	if((retArray[0] == 'Journey' || retArray[0] == 'QuickStart') && retArray[1] == 'Candidate' && retArray[3] == true) {
+		prefix = '+++++ '
+		suffix = ' as expected.'
+	} else {
+		prefix = '##### ERROR:'
+		suffix = '.'
+	}
+	println(prefix + 'Site is ' + retArray[0] + ', role is ' + retArray[1] + ', end date is ' + retArray[2] + suffix)
 }
 
 WebUI.closeBrowser()

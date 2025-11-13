@@ -6,12 +6,12 @@
    <elementGuidId>d9ef7ae0-e8cd-4e12-a60d-6829e7c2661d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a.matches</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>2453e75b-f4ca-4695-8572-753215983e3d</webElementGuid>
+      <webElementGuid>bbb6d58f-49ae-455c-8ab7-13adcf56ee17</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/candidate/matches/job</value>
-      <webElementGuid>e399e497-6e4e-41aa-b7d3-3874ea4b5f0b</webElementGuid>
+      <webElementGuid>d0dae019-08cc-4178-bc4b-b560c50e176c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>matches</value>
-      <webElementGuid>0b16fffc-1735-42c5-8fd1-5b89dd938b32</webElementGuid>
+      <webElementGuid>e74f280e-221d-471d-9646-a36b0ae70315</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>View Job Matches</value>
-      <webElementGuid>a3eb7e89-2a8b-433e-8909-7a8799593fab</webElementGuid>
+      <webElementGuid>60ddf920-3f59-48fc-9c80-c4afe7757cfa</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[@class=&quot;matches&quot;]</value>
-      <webElementGuid>321be010-6afd-4db1-81ba-31b0e400fa58</webElementGuid>
+      <webElementGuid>4084a7f8-1000-4c43-be58-d7f84da571f5</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
-      <webElementGuid>c235c915-35f5-4908-8114-40f2415717fe</webElementGuid>
+      <webElementGuid>95e8c65e-1f99-4676-a68b-dab07633a161</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'View Job Matches')]</value>
-      <webElementGuid>21e7dd21-a196-4adf-91ee-cfdcb931ebaf</webElementGuid>
+      <webElementGuid>42f43cb1-9216-49c8-bbd1-d625b35eb072</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Change Password'])[1]/following::a[1]</value>
-      <webElementGuid>9d1a6b2a-9164-4313-bb0f-7ad462cb26fb</webElementGuid>
+      <webElementGuid>be08a00f-f7c4-4ee1-8e93-2a9a527705aa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::a[2]</value>
-      <webElementGuid>52b8587a-e24e-4ebe-8781-acb7d83bd07f</webElementGuid>
+      <webElementGuid>cd012035-a74e-4f56-b7b8-e0c97a83ca45</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,15 +95,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Search School Jobs'])[1]/preceding::a[1]</value>
-      <webElementGuid>f6c1a762-3eb1-47c6-8a7c-1d260346d611</webElementGuid>
+      <webElementGuid>8cef360a-3719-4033-abf1-f0105619726f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Jobs Beta'])[1]/preceding::a[2]</value>
-      <webElementGuid>82901464-37a8-4eaa-9822-404230a9310f</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View School Matches'])[1]/preceding::a[2]</value>
+      <webElementGuid>264d24ee-f583-47a8-82e8-461c8190348f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='View Job Matches']/parent::*</value>
-      <webElementGuid>5fb94947-219d-4f8b-8d32-a0c3c605522d</webElementGuid>
+      <webElementGuid>d11d914c-513a-4274-9837-42428cff98ad</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/candidate/matches/job')]</value>
-      <webElementGuid>abfbb8db-2a25-42cd-afda-fe5f7c20002d</webElementGuid>
+      <webElementGuid>507ce961-e014-4cab-a7dd-280c2048e341</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//a[4]</value>
-      <webElementGuid>3c724a32-3bbd-481a-a8b5-31bbb0cd1783</webElementGuid>
+      <webElementGuid>5bd93923-48d6-494d-a21c-46e8a1f00e38</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/candidate/matches/job' and (text() = 'View Job Matches' or . = 'View Job Matches')]</value>
-      <webElementGuid>f6fe5bca-5c5a-4bf1-8d7b-c87ef6defc2d</webElementGuid>
+      <webElementGuid>7e81a181-85ce-4043-9dab-99202acc9a00</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

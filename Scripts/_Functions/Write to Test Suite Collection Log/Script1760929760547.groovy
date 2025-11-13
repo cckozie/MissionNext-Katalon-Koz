@@ -23,11 +23,11 @@ if (GlobalVariable.outFile != '') {
 	println(myFile)
 
 	outFile = new File(myFile)
-
+/*
 	outFile.append('Running "Write to Test Suite Collection Log" from "After_Test_Case" listener \n')
 	outFile.append('Test case error flag is ' + GlobalVariable.testCaseErrorFlag + '\n')
 	outFile.append('Test Suite Running flag is ' + GlobalVariable.testSuiteRunning + '\n')
-	
+*/
 	if (GlobalVariable.testSuiteRunning && GlobalVariable.testCaseErrorFlag) {
 		
 		outFile.append('Writing to Test Suite Collection Log \n')

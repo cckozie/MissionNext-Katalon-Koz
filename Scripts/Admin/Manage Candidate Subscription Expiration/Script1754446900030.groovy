@@ -22,8 +22,11 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import java.io.File as File
+import java.time.*
 
-printOnly = true
+printOnly = true	//Print only, no edits made to subscriptions
+
+errorsOnly = true 	//If printing only, then only pring errors when true
 
 webSites = ['Journey', 'Education', 'QuickStart']	//
 
@@ -44,13 +47,16 @@ WebUI.click(findTestObject('Object Repository/Admin/Ad Subscription Utility/a_Su
 
 WebUI.waitForPageLoad(10)
 
-for(site in webSites) {
+varFormat = "YY-MM-dd.HH-mm"
 
-	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + 'for ' + site + '.txt')
+for(site in webSites) {
+	now = new Date().format(varFormat)	
 	
-	dataFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription List for ' + site + '.csv')
+	outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + 'for ' + site + now + '.txt')
 	
-	editsFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription Edits for ' + site + '.csv')
+	dataFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription List for ' + site + now + '.csv')
+	
+	editsFile = new File('/Users/cckozie/Documents/MissionNext/Test Data/' + 'Subscription Edits for ' + site + now + '.csv')
 	
 	if(!printOnly) {
 			
@@ -223,12 +229,13 @@ for(site in webSites) {
 		}
 		
 		if(printOnly) {
+			
+			if(newDate != '' || !errorsOnly) {
 		
-			dataFile.append(lineNum + ', ' + id + ', ' + days + ', ' + lastName + ', ' + firstName + ', ' + username + ', ' + lastIn + ', ' + expireDate + ', ' + newDate + ', ' + myApps)
-			
-			dataFile.append('\n')
-		} else {
-			
+				dataFile.append(lineNum + ', ' + id + ', ' + days + ', ' + lastName + ', ' + firstName + ', ' + username + ', ' + lastIn + ', ' + expireDate + ', ' + newDate + ', ' + myApps)
+				
+				dataFile.append('\n')
+			}
 		}
 	}
 	

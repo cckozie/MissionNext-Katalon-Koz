@@ -6,12 +6,12 @@
    <elementGuidId>e38c311f-6dd6-4251-8300-4a5e632bec30</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
+         <key>CSS</key>
+         <value>a:nth-of-type(8)</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>a:nth-of-type(9)</value>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[8]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>549bc688-18e3-44bc-bdfe-796b7394b5f1</webElementGuid>
+      <webElementGuid>502fa7f3-b654-4a80-bcb9-b46f44b51616</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/inquiries</value>
-      <webElementGuid>8a1d26ea-fe53-4917-ae24-0bb14c6e061f</webElementGuid>
+      <webElementGuid>d7e97a0b-fc26-48fd-8c43-e09f5e2f6cbe</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,23 +39,23 @@
       <name>text</name>
       <type>Main</type>
       <value>Job Inquiry List</value>
-      <webElementGuid>4f149621-a803-4b85-8318-5f4e835c5477</webElementGuid>
+      <webElementGuid>1dfd424c-a422-4038-801d-3a14f9900cab</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[9]</value>
-      <webElementGuid>baf08ec8-af34-44d5-abc6-ffb81c725b2d</webElementGuid>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[8]</value>
+      <webElementGuid>bd9768d9-b07d-421a-a88a-04835d8b2f2c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[9]</value>
-      <webElementGuid>aa0017fd-031c-46fc-b905-8db3782316e2</webElementGuid>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[8]</value>
+      <webElementGuid>29b20236-fd0c-4b5a-99ad-b4a73ae8a2db</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Job Inquiry List')]</value>
-      <webElementGuid>a713afcc-4ee6-492b-9e07-0a6e9ce39e95</webElementGuid>
+      <webElementGuid>620d5b7e-27be-409c-bd7a-35c3c9533fce</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Schools'])[1]/following::a[1]</value>
-      <webElementGuid>e3644cd4-75ec-4513-8b3d-c304b3bd8cfc</webElementGuid>
+      <webElementGuid>be1011e6-5f0a-4334-8e4a-52c87b3aa374</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='View School Matches'])[1]/following::a[2]</value>
-      <webElementGuid>6a0ab895-dbb0-442a-b8ed-d53175dc5587</webElementGuid>
+      <webElementGuid>e6e54b9d-97bc-42f0-8062-dbbabdccfa31</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Favorites'])[1]/preceding::a[1]</value>
-      <webElementGuid>fb685bda-ca54-4ffa-bc75-094fb1a18cd9</webElementGuid>
+      <webElementGuid>a717e0c1-d52d-4f4e-baee-cda5e602a11c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[1]/preceding::a[2]</value>
-      <webElementGuid>e4c33038-7c7d-4993-8a3c-d01b1d5a4d52</webElementGuid>
+      <webElementGuid>f472d969-6c0d-411a-acb5-e75a37085f7d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Job Inquiry List']/parent::*</value>
-      <webElementGuid>7a54cdaa-9144-444a-a481-1885b62f6f35</webElementGuid>
+      <webElementGuid>2f4cfc0e-e52a-411c-92f0-a4d23b27d275</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,15 +111,15 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/inquiries')]</value>
-      <webElementGuid>88e439b5-4efa-433b-b602-d1c875b505c7</webElementGuid>
+      <webElementGuid>6f4900e4-3d85-4ddd-9480-78b0b28673d8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//a[9]</value>
-      <webElementGuid>8b75f913-a476-4db9-b3a2-972202e4485e</webElementGuid>
+      <value>//a[8]</value>
+      <webElementGuid>a4944fbf-3d8a-4a6d-87c4-097f3a0ff107</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/inquiries' and (text() = 'Job Inquiry List' or . = 'Job Inquiry List')]</value>
-      <webElementGuid>0894a58c-8950-4981-9c14-b3806b09834b</webElementGuid>
+      <webElementGuid>2a55dcbb-33be-45a5-9524-58095ab32a34</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

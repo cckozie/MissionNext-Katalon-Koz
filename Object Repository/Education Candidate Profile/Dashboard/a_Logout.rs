@@ -6,12 +6,12 @@
    <elementGuidId>69a0832f-987a-41da-b994-85f00699e860</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[11]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a[title=&quot;Logout&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[10]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,15 +23,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>4cd26e85-9881-41c8-804f-2e53bb42d3ae</webElementGuid>
+      <webElementGuid>d0f5de24-313a-43f4-9504-932ee7604217</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
-      <value>https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=6c17dabb37</value>
-      <webElementGuid>1200de3e-0576-4de6-a0bd-ad45bf11e77c</webElementGuid>
+      <value>https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=79e3bae21b</value>
+      <webElementGuid>98aa4737-e08d-48f0-8f86-d01b578e2449</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>title</name>
       <type>Main</type>
       <value>Logout</value>
-      <webElementGuid>8010205f-ec42-4e43-99c2-2bdb376e1e32</webElementGuid>
+      <webElementGuid>f06c8601-04f1-44d8-bbca-8cf85448c44c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,23 +47,23 @@
       <name>text</name>
       <type>Main</type>
       <value>Logout</value>
-      <webElementGuid>99342db6-b6bf-419f-a323-6321943b7ad9</webElementGuid>
+      <webElementGuid>321a00ae-4791-40de-a280-9aba18693518</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[11]</value>
-      <webElementGuid>7eee1417-dd25-433c-aa1b-de0c6fcc2691</webElementGuid>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[10]</value>
+      <webElementGuid>d99db4b6-8dbc-4d2f-841a-ca5999cc5380</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[11]</value>
-      <webElementGuid>da22f7c5-de94-47ce-bd3b-c54862a13c61</webElementGuid>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[10]</value>
+      <webElementGuid>80a785d5-714e-4d69-8924-b2a8244e1e10</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Logout')]</value>
-      <webElementGuid>045864c6-cb70-40ea-bd58-45756c1aa57a</webElementGuid>
+      <webElementGuid>f836129c-d331-490c-9fe3-be14fd9939fe</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Favorites'])[1]/following::a[1]</value>
-      <webElementGuid>09d8d775-367c-4e07-939b-29f8358d6e0f</webElementGuid>
+      <webElementGuid>8e507983-bd34-4bce-a846-d8ed2e184293</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,15 +87,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Inquiry List'])[1]/following::a[2]</value>
-      <webElementGuid>d5aa290f-3592-49fa-b0ef-78f253f1f1c6</webElementGuid>
+      <webElementGuid>df34d377-775b-4516-98e1-96bf445ccc1a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hello, cktest04ec Kosieracki'])[1]/preceding::a[1]</value>
-      <webElementGuid>5cf56dc1-1f16-4b59-a32b-069cc4117b49</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Hello, CKTEST14EC TEST Kosieracki'])[1]/preceding::a[1]</value>
+      <webElementGuid>3f37628e-c3d5-4640-9229-de9c5e285448</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Education'])[3]/preceding::a[1]</value>
-      <webElementGuid>89a99d72-ddec-4f0e-b63c-187116be1950</webElementGuid>
+      <webElementGuid>fb82923f-251b-4c3b-b232-38a25027e4ad</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,30 +111,30 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Logout']/parent::*</value>
-      <webElementGuid>f50d5cd5-f7ee-4fd2-9e41-47b313feed20</webElementGuid>
+      <webElementGuid>9c4970c9-4699-4446-afc9-e22d710c7db5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>//a[contains(@href, 'https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=6c17dabb37')]</value>
-      <webElementGuid>cd7073a7-e058-462b-ba2b-9e279138dd08</webElementGuid>
+      <value>//a[contains(@href, 'https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=79e3bae21b')]</value>
+      <webElementGuid>2251935f-19f6-4eb0-91b2-7dab27c4379b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//a[11]</value>
-      <webElementGuid>50951125-ad24-40f6-a5e4-3ee840f4ee08</webElementGuid>
+      <value>//a[10]</value>
+      <webElementGuid>d7076362-b5ae-4fa9-bb4f-62aec61680db</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//a[@href = 'https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=6c17dabb37' and @title = 'Logout' and (text() = 'Logout' or . = 'Logout')]</value>
-      <webElementGuid>d8d2bc48-9556-4f22-9d1f-6d2be7241f84</webElementGuid>
+      <value>//a[@href = 'https://education.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Feducation.missionnext.org&amp;_wpnonce=79e3bae21b' and @title = 'Logout' and (text() = 'Logout' or . = 'Logout')]</value>
+      <webElementGuid>e1cd5f4b-d50a-4f1d-810f-da6dced8f268</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

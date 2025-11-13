@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.29
 
-Date: 2025-11-03
+Date: 2025-11-08
 
 
 
@@ -36,9 +36,9 @@ Email Webmaster
 
   mission_next_prod
 
- Created	2025-05-08
- Updated	2025-10-27
- Last Login	2025-11-03
+ Created	2024-02-07
+ Updated	2025-11-04
+ Last Login	2025-11-04
  
 	
 	
@@ -51,47 +51,63 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for The CCK TEST 16EP Education Partner MPLS CCK EP as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=16450]
+Profile for Whitman Academy Whitman as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=15375]
 Contact Info
-21	Organization	The CCK TEST 16EP Education Partner MPLS
-20	Abbreviation	CCK EP
-6	Key Contact First Name	cktest16ep TEST
-7	Key Contact Last Name	Kosieracki
-12	Key Contact Email	cktest16@missionnext.org
-22	Key Contact Phone	1234567890
-111	Organization Phone	1234567890
-10	Country	United States
-28	Organization City	Minneapolis
-151	World Region	North America
+21	Organization	Whitman Academy
+20	Abbreviation	Whitman
+6	Key Contact First Name	Jenny
+7	Key Contact Last Name	Schenk
+133	Key Contact Title	Recruitment Coordinator
+12	Key Contact Email	recruiter@whitmanacademy.edu.jo
+22	Key Contact Phone	+962775149707
+114	Key Contact WhatsApp Address	+962790923005
+111	Organization Phone	+96265525094
+26	Mailing Address	PO Box 142011
+10	Country	Jordan
+28	Organization City	Amman
+93	State	Amman
+29	Province/State/Region	Amman
+30	Post/Zip Code	11814
+151	World Region	Mediterranean
 School Info
-66	Description	An education partner ministry
+66	Description	Whitman Academy is a small international Christian school located in Amman, Jordan which serves over 100 families. Our school plays a profoundly fundamental and unique role in supporting Kingdom workers to thrive in Jordan (and the Middle East). We provide an excellent Christian education in English to Third-Culture-Kids. There are scarce schooling alternatives and our school is growing. The need for teachers may increase as regional conflict has resulted in more workers coming to Jordan- a comparatively safe country. Opportunities for ministry, especially among refugees have widened, and Jordan has continued to enjoy a reputation for safety and peace in the midst of a region that has long been in the news for its conflict. We are seeking talented educators with a heart for serving TCKS and a desire to use their gifts to impact kingdom work in the Middle East.
+64	Year Founded	1994
 107	Vision Trip	No
-149	School Year Starts	January
-150	School Accredited	No
-65	Website Address	https://missionnext.org
+149	School Year Starts	Mid August
+150	School Accredited	Yes
+152	Student Capacity	250
+65	Website Address	https://whitmanacademy.org/
+80	Hide Listing?	1
 Vision Trip Description
 Security
+90	Security Explanation	We are in a "red zone" area. We would prefer that our school not be directly publicly linked with an "M" organization.
 Positions Needed
-132	Available Positions	Assistant Principal
-Principal
-Superintendent of Schools
-Teacher's Aide
+132	Available Positions	Elementary School Teacher
+High School Teacher
 Middle School Teacher
-Substitute Teacher
-Science Teacher
-139	Experience Preferred	Administrator
-Elementary
+English Teacher
+Science, Biology
+Science, Chemistry
+131	Other Available Positions	Curriculum Coordinator
+139	Experience Preferred	Elementary
 High School
 Middle School
-Teacher's Aide
-Sciences
+Sciences - Biology
+Sciences - Chemistry
+English
 Service Options
-70	Time Commitments	Open - Will negotiate
-45	Available Start Options	No Preference
-144	School Term(s) Available	Open
+70	Time Commitments	One year
+One year to two years
+Long Term
+45	Available Start Options	Within 12 months
+In one to two years
+In two or more years
+144	School Term(s) Available	Spring Semester
+Fall Semester
 Readiness
 103	Process Stage	I am actively investigating missions
+I am ready to select a ministry
 58	Cross-cultural Experience	Not served in a culture other than my own
 Occasionally served in cultures other than my own
 Extensive experience serving in cultures other than my own
@@ -99,34 +115,88 @@ Extensive experience serving in cultures other than my own
 104	Attended Perspectives?	I have not taken the Perspectives Course
 I am planning to take the Perspectives Course
 I have taken or am taking the Perspectives Course
+121	Missions Experience	None of the above
 105	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Match Filters
 141	Formal Education Degree	Yes
+142	Classroom Experience	No
+Yes
 Pending
-142	Classroom Experience	Yes
-143	Formal Teaching Credentials	Yes
+143	Formal Teaching Credentials	No
+Yes
 Pending
-51	English Proficiency	Proficient
+51	English Proficiency	Advanced
 100	Affiliated with a Church?	No
 59	Travel Options	No travel funding provided
-Some Travel funds available
-Travel funding negotiated
-Travel funds provided
-60	Paid & Volunteer Positions	Volunteer/self-supported position
-Self-supported, need travel and overhead
+60	Paid & Volunteer Positions	Self-supported, need travel and overhead
 Position requires raising your support
 Position requires raising some support
 Recruiting Countries
 108	Recruit From Countries	Canada
-Belize
-Costa Rica
-El Salvador
-Guatemala
-Honduras
-Mexico
-Nicaragua
-Panama
+United States
+South Africa
+Korea-South
+Taiwan
+United Arab Emirates
+Aland Islands
+Channel Islands
+Denmark
+Estonia
+Faroe Islands
+Finland
+Iceland
+Ireland
+Latvia
+Lithuania
+Norway
+Sweden
+United Kingdom
+Belarus
+Czech Republic
+Hungary
+Moldova
+Poland
+Slovakia
+Russian Federation
+Ukraine
+Austria
+Belgium
+France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Algeria
+Bulgaria
+Croatia
+Romania
+Spain
+Australia
+New Zealand
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Paraguay
+Peru
+Venezuela
 Admin Info
+84	Mission Statement	Mission: Whitman Academy exists to support Kingdom work in Jordan by providing an excellent Christian education in English to Third Culture Kids through inspired learning and guided opportunities in servant leadership. VISION Whitman Academy aims to produce well-educated, globally-minded disciples, transformed by the Gospel with a heart for people’s physical and spiritual needs and the ambition to make a difference for the Kingdom of God.
 159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
@@ -134,48 +204,104 @@ Ministry Prefs
 IT Positions
 Match Filters
 100	Affiliated with a Church?	No
-161	Match Percent Rate	50
-162	Profile Years	All
+161	Match Percent Rate	80
+162	Profile Years	2023
+2024
+2025
 Recruiting Countries
 108	Recruit From Countries	Canada
-Belize
-Costa Rica
-El Salvador
-Guatemala
-Honduras
-Mexico
-Nicaragua
-Panama
+United States
+South Africa
+Korea-South
+Taiwan
+United Arab Emirates
+Aland Islands
+Channel Islands
+Denmark
+Estonia
+Faroe Islands
+Finland
+Iceland
+Ireland
+Latvia
+Lithuania
+Norway
+Sweden
+United Kingdom
+Belarus
+Czech Republic
+Hungary
+Moldova
+Poland
+Slovakia
+Russian Federation
+Ukraine
+Austria
+Belgium
+France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Algeria
+Bulgaria
+Croatia
+Romania
+Spain
+Australia
+New Zealand
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Paraguay
+Peru
+Venezuela
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 16450:
+Show records for this user: user_id = 15375:
 Table: users
 ID	username	email	created	updated	last login	Active
-16450	cktest16ep	cktest16@missionnext.org	2025-05-08	2025-10-27	2025-11-03	Yes
-Days ago: 	179  	7  	0  	 
+15375	recruiter@whitmanacademy.edu.jo	recruiter@whitmanacademy.edu.jo	2024-02-07	2025-11-04	2025-11-04	Yes
+Days ago: 	640  	4  	4  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-16450	2	Organization	89
+15375	2	Organization	146
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-16450	6 EDU	No	2025-05-08	2026-05-08	active	Admin Add
+15375	6 EDU	No	2025-01-20	2026-02-12	active	Admin Add
 
 Table: user_apps
 ID	App ID	Application
-16450	6	Education
+15375	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-16450	4	JourneyGuide	Yes	
-16450	3	Journey	Yes	89
-16450	6	Education	Yes	90
-16450	2	Short-Term	Yes	
-16450	11	IT-Technology	Yes	
-16450	14	QuickStart	Yes	
+15375	4	JourneyGuide	Yes	150
+15375	6	Education	Yes	149
+15375	2	Short-Term	Yes	
+15375	11	IT-Technology	Yes	
+15375	14	QuickStart	Yes	
+15375	3	Journey	Yes	149
 
 
 

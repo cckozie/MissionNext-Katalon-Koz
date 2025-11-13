@@ -6,19 +6,19 @@
    <elementGuidId>ffb377d0-9cf2-41bd-8a54-3fab8b449790</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody/tr[1]/td[1]/select</value>
+         <key>CSS</key>
+         <value>select[name=&quot;appid&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/select[1]</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>select[name=&quot;appid&quot;]</value>
+         <key>XPATH</key>
+         <value>/html/body/center/table/tbody/tr[2]/td[2]/table/tbody/tr[3]/td/table/tbody/tr/td[3]/table/tbody/tr/td[2]/span/div/form/table/tbody/tr[1]/td[1]/select</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
@@ -27,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>select</value>
-      <webElementGuid>05207f1a-0bd2-4da7-9391-6fb4c840fd3f</webElementGuid>
+      <webElementGuid>19271840-e8ab-41c2-a420-2528831da1a8</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -35,7 +35,7 @@
       <name>name</name>
       <type>Main</type>
       <value>appid</value>
-      <webElementGuid>5de68120-d5fa-4bf9-83b3-66f3e312074e</webElementGuid>
+      <webElementGuid>8c298894-78b6-4bda-a0c9-82522cae5d6d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -43,7 +43,7 @@
       <name>text</name>
       <type>Main</type>
       <value>JourneyEducationQuickStartAll</value>
-      <webElementGuid>6ec1d3d2-faf6-4917-aa9f-0d0afb98aee1</webElementGuid>
+      <webElementGuid>12fdc2b8-3ca8-48c8-aeb4-c05b4b4cc417</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -51,7 +51,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/select[1]</value>
-      <webElementGuid>f8c80627-9232-4895-a457-02c78fd8d7f2</webElementGuid>
+      <webElementGuid>e5fea35d-cf9c-43e2-8a63-5d0c9e013b85</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -59,7 +59,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//select[@name='appid']</value>
-      <webElementGuid>81166ee9-de27-4c0c-b89e-5b42cd345a44</webElementGuid>
+      <webElementGuid>d9df98b3-d122-4d11-a006-b51e3df92f36</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -67,7 +67,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Agency (cannot post jobs; assist Sending Organizations such as Agency Rep)'])[1]/following::select[1]</value>
-      <webElementGuid>f4f49757-5cc1-43e4-8419-2159c73c1939</webElementGuid>
+      <webElementGuid>5a9a8dbd-7abb-4244-a250-8bc0c0dab2a3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -75,7 +75,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//select</value>
-      <webElementGuid>e7cdcfc3-1a41-4dbc-bb7b-6814ea4dc1d5</webElementGuid>
+      <webElementGuid>98467886-f2f2-4c24-93b4-48fdace39365</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -83,6 +83,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//select[@name = 'appid' and (text() = 'JourneyEducationQuickStartAll' or . = 'JourneyEducationQuickStartAll')]</value>
-      <webElementGuid>bf945e6f-2b8c-41e3-9656-b2d7b141a464</webElementGuid>
+      <webElementGuid>63bbbe3c-345c-4905-9b19-936cf9dd9f4f</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

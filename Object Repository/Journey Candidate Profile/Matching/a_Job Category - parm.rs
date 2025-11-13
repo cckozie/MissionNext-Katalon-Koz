@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Job Category - parm</name>
+   <tag></tag>
+   <elementGuidId>b92e8ec5-409a-40ea-bcce-a07a1b7ee3f5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>td.name > a</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div[2]/div[3]/div/div/table/tbody/tr[${row}]/td[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>353109af-b623-45dd-839f-d0ea4030b697</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>f07808fd-2179-4323-b75c-90e159c46e8c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/job/3682</value>
+      <webElementGuid>75164a08-33d2-4579-bf05-c4f556504c0b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>INFORMATION TECHNOLOGY</value>
+      <webElementGuid>7004cd3f-12de-4589-8722-c3763ab18bd3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;panel panel-default&quot;]/div[@class=&quot;panel-body&quot;]/div[@class=&quot;table-responsive&quot;]/table[@class=&quot;table table-striped result job-matches&quot;]/tbody[1]/tr[@class=&quot;item&quot;]/td[@class=&quot;name&quot;]/a[1]</value>
+      <webElementGuid>9b159e81-6435-402e-b306-dca5958b29c2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div[2]/div[3]/div/div/table/tbody/tr[2]/td[2]/a</value>
+      <webElementGuid>ad42854c-9d41-4a62-ac9f-bbd4d34b1634</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'INFORMATION TECHNOLOGY')]</value>
+      <webElementGuid>3adcd520-c294-44d3-8035-bd97fe15e93b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Notes'])[1]/following::a[1]</value>
+      <webElementGuid>090ac5e5-0809-4701-bc5e-380b020375df</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Wycliffe Bible Translators USA'])[1]/preceding::a[1]</value>
+      <webElementGuid>44a799c1-20cb-4366-9ac0-20e0a312f3b0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='IT Support Specialist'])[1]/preceding::a[2]</value>
+      <webElementGuid>a84d2a45-8c04-4729-ad82-78760ac7b698</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='INFORMATION TECHNOLOGY']/parent::*</value>
+      <webElementGuid>53b8b3f1-b2ef-4b61-824f-62193d36907a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/job/3682')]</value>
+      <webElementGuid>bbd7dad2-4043-465a-b987-eafc7e840b7a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[2]/a</value>
+      <webElementGuid>c7bca8d9-16f7-46b9-9914-b9d726fb2bac</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/job/3682' and (text() = 'INFORMATION TECHNOLOGY' or . = 'INFORMATION TECHNOLOGY')]</value>
+      <webElementGuid>9b4a41d1-3b20-46c8-9a7a-e55cc82d5abb</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
