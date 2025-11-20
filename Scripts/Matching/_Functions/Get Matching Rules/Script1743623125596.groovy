@@ -56,6 +56,8 @@ WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'c
 object = 'Object Repository/Admin/AD Matching/btn_Go'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.waitForPageLoad(30)
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 WebElement Table = driver.findElement(By.xpath('(.//*[normalize-space(text()) and normalize-space(.)="Start Again"])[1]/following::table[1]'))

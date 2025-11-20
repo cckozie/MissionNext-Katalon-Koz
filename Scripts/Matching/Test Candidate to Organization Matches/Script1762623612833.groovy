@@ -35,7 +35,7 @@ import java.time.Instant as Instant
 import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 
-maxMatches = 100
+maxMatches = 10 //overridden if running test suite
 
 updateWildcards = false
 
@@ -78,6 +78,9 @@ if (GlobalVariable.testSuiteRunning) {
     testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 
     myTestCase = ((((myTestCase.substring(0, myTestCase.length() - 3) + ' - ') + testCaseName) + '-') + site)
+	
+	maxMatches = 100
+	
 } else {
     myTestCase = ((myTestCase.substring(0, myTestCase.length() - 3) + '-') + site)
 }
@@ -258,6 +261,10 @@ if (site == 'Journey') {
 
 outText = ((((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
 
+resultsText = ((((('\n\n' + site + ' Organization Matches for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+
+
+
 if (married) {
     if (spouseServing) {
         outText += ', spouse is serving.'
@@ -267,6 +274,10 @@ if (married) {
 }
 
 outFile.append(outText + '\n')
+
+resultsFile.append(resultsText + '\n')
+
+errorFile.append(resultsText + '\n')
 
 candidateSelections.each({ 
         outText = ((it.key + ':') + it.value)
@@ -316,6 +327,8 @@ if (maxMatches < row_count) {
 }
 
 found = false
+
+noErrors = true
 
 if (row_count > 0) {
     for (row = 1; row < row_count; row++) {
@@ -432,14 +445,8 @@ if (row_count > 0) {
 	
 	            resultsFile.append(outText + '\n')
 	
-	            candidateSelections.each({ 
-	                    println(it)
-	                })
-	
-	            organizationSelections.each({ 
-	                    println(it)
-	                })
-	
+				lineText = outText
+				
 	            doMatching(candidateSelections, organizationSelections)
 	        }
 	        
@@ -454,9 +461,16 @@ if (row_count > 0) {
     }
 }
 
+if(noErrors) {
+	errorFile.delete()
+}
+
 WebUI.closeBrowser()
 
 def doMatching(def candidateSelections, def organizationSelections) {
+	
+	notMatched = []
+	
 	error = false
 	
     if (married && !(spouseServing)) {
@@ -477,6 +491,10 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     for (def it : matchValues) {
         match = false
+		
+		if(it.key == 'Spouse Preferred Position(s)' && !married) { // Bypass spouse preferred positions if candidate is not married or spouse is not serving
+			continue
+		}
 
         if (!(excluded)) {
             match = false
@@ -595,6 +613,8 @@ def doMatching(def candidateSelections, def organizationSelections) {
             outText = 'No match found.'
 
             outFile.append(outText + '\n')
+			
+			notMatched.add(it.key)
         }
     }
     
@@ -612,6 +632,9 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
     if ((addedPct - tablePct) > 1) {
         error = true
+		
+		noErrors = false
+		
     }
     
     outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
@@ -627,22 +650,39 @@ def doMatching(def candidateSelections, def organizationSelections) {
     outFile.append(outText + '\n')
 
     if (error) {
-        outText = (('##### ERRORS ' + code) + ' FOUND #####')
+        outText = ('##### ERRORS: ')
 
         outFile.append(outText + '\n')
     }
     
     outFile.append('\n\n')
 
-    outText = (((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%.\n\n')
+    outText = (((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%.\n')
+
+	resultsText = outText
 
     if (error) {
-        outText = ((('##### ERRORS ' + code) + ': ') + outText)
+		errorFile.append(lineText + '\n')
+			
+        outText = ('##### ERRORS: ' + outText)
 
         errorFile.append(outText + '\n')
     }
     
     resultsFile.append(outText)
+	
+	if(notMatched.size() > 0) {
+		outText = 'No match on ' + notMatched
+	} else {
+		outText = 'No non-matches displayed.'
+	}
+	
+	resultsFile.append(outText + '\n')
+	
+	if(error) {
+		errorFile.append(outText + '\n')
+		errorFile.append(resultsText + '\n')
+	}
 }
 
 def getNextLine(def reader, def categories) {

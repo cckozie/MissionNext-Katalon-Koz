@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions
 
 // NEED TO ADD TEST FOR CHECKING 'ALL' FOR RECRUITING COUNTRIES
 
-maxMatches = 100
+maxMatches = 20 //Overridden if test suite running
 
 updateWildcards = true	
 
@@ -50,7 +50,7 @@ debug = false
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Education' // Journey or Education
+	site = 'Journey' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job
@@ -84,6 +84,8 @@ if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName + '-' + site
+	
+	maxMatches = 100
 	
 } else {
 
@@ -261,6 +263,8 @@ if(maxMatches < row_count) {
 
 found = false
 	
+noErrors = true
+
 if(row_count > 0) {
 
 	for (row = 3; row < row_count + 3; row++) {
@@ -391,22 +395,24 @@ if(row_count > 0) {
 				spouseServing = false
 			}
 			
-			outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
+//			outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
 
-			outFile.append(outText + '\n')
+//			outFile.append(outText + '\n')
 
 //			outText = ((('\n Results for candidate ' + firstName) + ' ') + lastName)
 			outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
 			
-			resultsFile.append(outText + '\n')
+//			resultsFile.append(outText + '\n')
 			
-			candidateText = outText
+///			candidateText = outText
 
 			if (!(married)) {
-				outText = 'Candidate is not married.'
+//				outText = 'Candidate is not married.'
+				outText += ', single.'
 			} else {
-				outText = 'Candidate is married and spouse is '
-
+//				outText = 'Candidate is married and spouse is '
+				outText += ', married and spouse is '
+				
 				if (!(spouseServing)) {
 					outText += 'not '
 				}
@@ -415,6 +421,10 @@ if(row_count > 0) {
 			}
 			
 			outFile.append(outText + '\n')
+			
+			resultsFile.append(outText + '\n')
+			
+			lineText = outText
 			
 			maritalStatusText = outText
 
@@ -443,9 +453,11 @@ if(row_count > 0) {
 	}
 }
 
-WebUI.closeBrowser()
+if(noErrors) {
+	errorFile.delete()
+}
 
-WebUI.delay(5)
+WebUI.closeBrowser()
 
 def doMatching(def candidateSelections, def organizationSelections) {
     if (married && !(spouseServing)) {
@@ -626,6 +638,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
 	
     if (((addedPct - tablePct) > 1) || ((tablePct - popupPct) > 1)) {
         error = true
+		noErrors = false
 		
 		if(Math.abs(addedPct - tablePct) > 1) {	
 			code = '12 '
@@ -655,7 +668,9 @@ def doMatching(def candidateSelections, def organizationSelections) {
     outFile.append(outText + '\n')
 
     if (error) {
-		outText = '##### ERRORS ' + code + ' FOUND #####'
+		errorFile.append(lineText + '\n')
+		
+		outText = '##### ERRORS: '
 		
         outFile.append(outText + '\n')
 		
@@ -669,25 +684,27 @@ def doMatching(def candidateSelections, def organizationSelections) {
     resultsText = outText
 
     if (error) {
-        outText = ('##### ERRORS ' + code + ': ' + outText)
+        outText = ('##### ERRORS: ' + outText)
     }
     
+    resultsText = outText
+
     resultsFile.append(outText)
 
-    if (error) {
-        errorFile.append(((candidateText + '. ') + maritalStatusText) + '\n')
-
-        if (notMatched.size() > 0) {
-            outText = ('No match on ' + notMatched)
-        } else {
-            outText = 'No non-matches displayed.'
-        }
+    if (notMatched.size() > 0) {
+        outText = ('No match on ' + notMatched)
+    } else {
+        outText = 'No non-matches displayed.'
+    }
         
+	resultsFile.append(outText + '\n')
+
+    if (error) {
+				
         errorFile.append(outText + '\n')
 
         errorFile.append(resultsText + '\n')
-    }
-	
+    }	
 }
 
 def getNextLine(def reader, def categories) {

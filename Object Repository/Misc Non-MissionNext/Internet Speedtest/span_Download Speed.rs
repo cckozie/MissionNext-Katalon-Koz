@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Download Speed</name>
+   <tag></tag>
+   <elementGuidId>f606c6e9-3bf3-45dd-80da-4e39ea1f9ffb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.result-data-large.number.result-data-value.download-speed</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='container']/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div/div[1]/div/div[2]/span
+</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>d7b5b61b-1542-4a5a-b820-880c3f9dd8f5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-download-status-value</name>
+      <type>Main</type>
+      <value>0.01</value>
+      <webElementGuid>dac5f8a2-8d39-4202-9e8d-aebec22b667d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>result-data-large number result-data-value download-speed</value>
+      <webElementGuid>1ddd9d1d-e247-463b-8312-fac6bb11e1a8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>5.25</value>
+      <webElementGuid>ef657d81-8ba0-4812-81cb-9e4e983f7d3c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;container&quot;)/div[@class=&quot;pre-fold mobile-test-complete&quot;]/div[@class=&quot;main-content&quot;]/div[@class=&quot;main&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;pure-g&quot;]/div[@class=&quot;pure-u-custom-speedtest&quot;]/div[@class=&quot;speedtest-view&quot;]/div[@class=&quot;speedtest-container main-row&quot;]/div[@class=&quot;main-view&quot;]/div[1]/div[@class=&quot;result-area result-area-test&quot;]/div[1]/div[@class=&quot;result-container clearfix&quot;]/div[@class=&quot;result-container-speed result-container-speed-active&quot;]/div[@class=&quot;result-container-data&quot;]/div[@class=&quot;result-item-container result-item-container-align-center&quot;]/div[@class=&quot;result-item result-item-first-class result-item-download updated test-mode-multi&quot;]/div[@class=&quot;result-data u-align-left&quot;]/span[@class=&quot;result-data-large number result-data-value download-speed&quot;]</value>
+      <webElementGuid>a8f4db46-15fd-471d-af75-dc1fa72cf898</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='container']/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[3]/div/div/div[2]/div/div/div/div[2]/span</value>
+      <webElementGuid>4bc18696-56a5-402f-9b62-e8b99b1dea28</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mbps'])[1]/following::span[1]</value>
+      <webElementGuid>f1174550-8885-483c-8b60-06af9eb03dee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mbps'])[2]/preceding::span[1]</value>
+      <webElementGuid>1300f4b0-704e-4f58-a79c-5b765458fccf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='5.25']/parent::*</value>
+      <webElementGuid>4c225a46-3951-413b-a8cb-6a3f2e05d76e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div[2]/span</value>
+      <webElementGuid>3bde6795-a4d7-49bd-8e78-02ac5f0ef2ed</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = '5.25' or . = '5.25')]</value>
+      <webElementGuid>717121f6-6cf9-4b2c-8b02-5bd7a7fcc1a2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -25,30 +25,49 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-errorsOnly = true
+testBy = 'date'
+
+dateRange = 90 // How many days in the past to consider as being 'recent'
+
+startDate = '2025-10-09'
+
+println(startDate)
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
 myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 
-varFormat = "YY-MM-dd.HH-mm"
+dateTimeFormat = "YY-MM-dd.HH-mm"
 
-now = new Date().format(varFormat)
+dateFormat = "YYYY-MM-dd"
+
+now = new Date()
+
+timeStamp = now.format(dateTimeFormat)
+
+dateStamp = now.format(dateFormat)
+
+if(testBy == 'date') {
+	
+	beginDate = startDate
+	
+} else {
+
+	begin = now - dateRange
+	
+	beginDate = begin.format(dateFormat)
+}
 
 txt = '_All'
 
-if(errorsOnly) {
-	txt = '_Errors'
-}
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '_' + dateStamp + '.csv')
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + txt + '_' + now + '.csv')
-//outFile2 = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '2.csv')
-//outFile1 = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+errorFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '_' + dateStamp + '_ERRORS.csv')
 
-outFile.write('User ID,Username,Email,First Name,Last Name,Last Login,End Date,Calculated,Errors\n')
-//outFile1.write('User ID,Username,Email,Created,Updated,Last Login,End Date,Calculated,Errors\n')
-//outFile2.write('User ID,Username,Email,Created,Updated,Last Login,End Date,Calculated,Errors\n')
+outFile.write('Candidates who have logged after ' + beginDate + '.\n\n')
+
+outFile.append('User ID,Username,Email,First Name,Last Name,Created,Last Login,End Date,Calculated,Errors\n')
 
 domain = GlobalVariable.domain
 
@@ -65,6 +84,8 @@ WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_Password'), 'fAJOXt1
 WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
 
 sites = ['Journey', 'Education', 'QuickStart']
+
+errorFlag = false
 
 for(site in sites) {
 	
@@ -161,39 +182,46 @@ for(site in sites) {
 
 				lastLogin = Columns.get(9).getText().substring(0,10)
 				
-				endDate = Columns.get(12).getText().substring(0,10)
+				if(lastLogin > beginDate) {
 				
-				println(endDate)
-			
-				parts = lastLogin.split('-')
+					created = Columns.get(7).getText().substring(0,10)
+					
+					createdD = created.substring(0,5) + created.substring(5,8) + created.substring(8,10)
 		
-				year = parts[0]
+					endDate = Columns.get(12).getText().substring(0,10)
+					
+					println(endDate)
 				
-				println(year)
-				
-				year =  year.toInteger() + 5
-				
-				println(year)
-				
-				String expires = year + '-12-31'
-				
-				if(expires == endDate) {
-					status = ''
-				} else {
-					status = 'ERROR'
-				}
-				
-				user = values[0]
-				
-				firstName = values[1]
-				
-				lastName = values[2]
-				
-				email = values[3]
-				
-				if(status == 'ERROR' || !errorsOnly) {
-					outFile.append(userID + ",'" + user + "','" + email + "','" + firstName + "','" + lastName + "','"+ lastLogin + "','" + endDate + "','" + expires + "'," + status + "\n")
-//					outFile.append(userID + ',"' + user + '","' + email + '","' + firstName + '","' + lastName + '","'+ lastLogin + '","' + endDate + '","' + expires + '","' + status + '"\n' )
+					parts = lastLogin.split('-')
+			
+					year = parts[0]
+					
+					println(year)
+					
+					year =  year.toInteger() + 5
+					
+					println(year)
+					
+					String expires = year + '-12-31'
+					
+					if(expires == endDate) {
+						status = ''
+					} else {
+						status = 'ERROR'
+						errorFlag = true
+					}
+					
+					user = values[0]
+					
+					firstName = values[1]
+					
+					lastName = values[2]
+					
+					email = values[3]
+					
+					if(status == 'ERROR' || 1 == 1) {
+						outFile.append(userID + ',"' + user + '","' + email + '","' + firstName + '","' + lastName + '"," '+ createdD + '"," ' + lastLogin + '"," ' + endDate + '"," ' + expires + '","' + status + '"\n' )
+					}
 				}
 			}
 		}
@@ -203,6 +231,10 @@ for(site in sites) {
 		
 		WebUI.waitForPageLoad(30)
 	}
+}
+
+if(errorFlag) {
+	outFile.renameTo(errorFile)
 }
 WebUI.closeBrowser()
 

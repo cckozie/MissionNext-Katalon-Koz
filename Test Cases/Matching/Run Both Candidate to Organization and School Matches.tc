@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Run Both Candidate to Organization and School Matches</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>28c8c2a7-5729-4b65-acd9-f3ea811b4691</testCaseGuid>
+</TestCaseEntity>

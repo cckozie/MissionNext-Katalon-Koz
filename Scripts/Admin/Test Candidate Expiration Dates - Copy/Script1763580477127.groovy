@@ -25,7 +25,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-errorsOnly = true
+errorsOnly = false
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -193,7 +193,6 @@ for(site in sites) {
 				
 				if(status == 'ERROR' || !errorsOnly) {
 					outFile.append(userID + ",'" + user + "','" + email + "','" + firstName + "','" + lastName + "','"+ lastLogin + "','" + endDate + "','" + expires + "'," + status + "\n")
-//					outFile.append(userID + ',"' + user + '","' + email + '","' + firstName + '","' + lastName + '","'+ lastLogin + '","' + endDate + '","' + expires + '","' + status + '"\n' )
 				}
 			}
 		}

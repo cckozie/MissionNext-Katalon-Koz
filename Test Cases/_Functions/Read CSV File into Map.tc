@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Read CSV File into Map</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>85b896a7-ade6-41b1-8e25-b759ed582d4e</testCaseGuid>
+</TestCaseEntity>

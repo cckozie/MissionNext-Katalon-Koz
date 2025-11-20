@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>table_Profile</name>
+   <tag></tag>
+   <elementGuidId>80b6849d-964b-4c4f-84e9-a2ebc021472c</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Edit this profile'])[1]/following::table[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div > table</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorCollection>
+      <entry>
+         <key>SMART_LOCATOR</key>
+         <value>table >> internal:has-text=&quot;Profile for CKTEST14EC TEST Kosieracki as Candidate on Education Field IDField N&quot;i >> nth=4</value>
+      </entry>
+   </smartLocatorCollection>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>table</value>
+      <webElementGuid>3eb4e5c6-0cf1-467c-b58e-5ebbb20d68cd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>border</name>
+      <type>Main</type>
+      <value>1</value>
+      <webElementGuid>f385edac-45d4-451e-aa81-d0165bef0c46</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>cellpadding</name>
+      <type>Main</type>
+      <value>2</value>
+      <webElementGuid>d257e50a-7f81-4407-99cf-8ab389884ec4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Profile for CKTEST14EC TEST Kosieracki as Candidate on Education Field IDField Name  User Value(s) [User ID=16531]Name &amp; Preferences19First Name CKTEST14EC TEST21Last Name Kosieracki24Email cktest14@missionnext.org104Time Commitment(s) Open - Will negotiate304I/We can be Available Within 12 months126Paid &amp; Volunteer Positions A salary provided; enough to live locallyContact Info30Country United States34Best Phone Number 1234567890Ministry PositionsEligible for Journey Guide?112Journey Guide Option Maybe at a later timeEnter other EthnicityEnter Family Status229Dependent Children NoneExperience113Highest Earned Degree Bachelor of Science (BS)163Degree Field EE334Classroom Experience No58Occupation Software Engineer129Cross-Cultural Experience Not served in a culture other than my own303Missions Experience I have taken a short-term missions tripEducation233Formal Education Degree No234Formal Teaching Credentials No264Previous Experience SupportTechnology128English Proficiency AdvancedAdditional Language ProficiencyGroupSituation100Process Stage I am actively investigating missions312Attended Perspectives? I have not taken the Perspectives Course284Bible Training Not Applicable307Affiliated with a church? YesChurch302Church Involvement I am serving in my local churchAvailability304I/We can be Available Within 12 months326School Term Available Open - Will negotiate104Time Commitment(s) Open - Will negotiate260Relocation Option(s) I am willing to relocate within North AmericaPreferences287Preferred School Positions Business Education TeacherComputer Teacher (School)IT Coordinator339Preferred Region(s) No PreferenceOptions/Comment126Paid &amp; Volunteer Positions A salary provided; enough to live locally127Travel Options Travel funding negotiated68Spouse First Name Colleen169Spouse Birth Year 1951192Spouse Citizenship Country United States376Spouse Ethnicity Select your Ethnicity227Spouse Serving with You? Yes117Spouse Highest Earned Degree Bachelor of Arts (BA)194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism268Spouse Formal Education Degree No266Spouse Education Credentials No270Spouse Previous Experience TutoringCounselingTeacher's Aide288Spouse Preferred Education Positions TutorSchool CounselorTeacher's Aide194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism</value>
+      <webElementGuid>05eb29a4-596c-4577-9465-ff62b4dcade5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[2]/td[2]/table[1]/tbody[1]/tr[3]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/table[1]/tbody[1]/tr[1]/td[2]/span[@class=&quot;body&quot;]/div[1]/table[1]</value>
+      <webElementGuid>61db353a-6cbf-4a18-97fc-d554fb34441a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Edit this profile'])[1]/following::table[1]</value>
+      <webElementGuid>19736275-0bcc-4b2a-b169-b94e3f8a5d24</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='USER PROFILE VIEWER UTILITY'])[1]/following::table[1]</value>
+      <webElementGuid>27367c5c-98e2-4316-a253-4bb53398355a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/table</value>
+      <webElementGuid>969bf880-625b-42cf-b9c5-09073250275f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//table[(text() = concat(&quot;Profile for CKTEST14EC TEST Kosieracki as Candidate on Education Field IDField Name  User Value(s) [User ID=16531]Name &amp; Preferences19First Name CKTEST14EC TEST21Last Name Kosieracki24Email cktest14@missionnext.org104Time Commitment(s) Open - Will negotiate304I/We can be Available Within 12 months126Paid &amp; Volunteer Positions A salary provided; enough to live locallyContact Info30Country United States34Best Phone Number 1234567890Ministry PositionsEligible for Journey Guide?112Journey Guide Option Maybe at a later timeEnter other EthnicityEnter Family Status229Dependent Children NoneExperience113Highest Earned Degree Bachelor of Science (BS)163Degree Field EE334Classroom Experience No58Occupation Software Engineer129Cross-Cultural Experience Not served in a culture other than my own303Missions Experience I have taken a short-term missions tripEducation233Formal Education Degree No234Formal Teaching Credentials No264Previous Experience SupportTechnology128English Proficiency AdvancedAdditional Language ProficiencyGroupSituation100Process Stage I am actively investigating missions312Attended Perspectives? I have not taken the Perspectives Course284Bible Training Not Applicable307Affiliated with a church? YesChurch302Church Involvement I am serving in my local churchAvailability304I/We can be Available Within 12 months326School Term Available Open - Will negotiate104Time Commitment(s) Open - Will negotiate260Relocation Option(s) I am willing to relocate within North AmericaPreferences287Preferred School Positions Business Education TeacherComputer Teacher (School)IT Coordinator339Preferred Region(s) No PreferenceOptions/Comment126Paid &amp; Volunteer Positions A salary provided; enough to live locally127Travel Options Travel funding negotiated68Spouse First Name Colleen169Spouse Birth Year 1951192Spouse Citizenship Country United States376Spouse Ethnicity Select your Ethnicity227Spouse Serving with You? Yes117Spouse Highest Earned Degree Bachelor of Arts (BA)194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism268Spouse Formal Education Degree No266Spouse Education Credentials No270Spouse Previous Experience TutoringCounselingTeacher&quot; , &quot;'&quot; , &quot;s Aide288Spouse Preferred Education Positions TutorSchool CounselorTeacher&quot; , &quot;'&quot; , &quot;s Aide194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism&quot;) or . = concat(&quot;Profile for CKTEST14EC TEST Kosieracki as Candidate on Education Field IDField Name  User Value(s) [User ID=16531]Name &amp; Preferences19First Name CKTEST14EC TEST21Last Name Kosieracki24Email cktest14@missionnext.org104Time Commitment(s) Open - Will negotiate304I/We can be Available Within 12 months126Paid &amp; Volunteer Positions A salary provided; enough to live locallyContact Info30Country United States34Best Phone Number 1234567890Ministry PositionsEligible for Journey Guide?112Journey Guide Option Maybe at a later timeEnter other EthnicityEnter Family Status229Dependent Children NoneExperience113Highest Earned Degree Bachelor of Science (BS)163Degree Field EE334Classroom Experience No58Occupation Software Engineer129Cross-Cultural Experience Not served in a culture other than my own303Missions Experience I have taken a short-term missions tripEducation233Formal Education Degree No234Formal Teaching Credentials No264Previous Experience SupportTechnology128English Proficiency AdvancedAdditional Language ProficiencyGroupSituation100Process Stage I am actively investigating missions312Attended Perspectives? I have not taken the Perspectives Course284Bible Training Not Applicable307Affiliated with a church? YesChurch302Church Involvement I am serving in my local churchAvailability304I/We can be Available Within 12 months326School Term Available Open - Will negotiate104Time Commitment(s) Open - Will negotiate260Relocation Option(s) I am willing to relocate within North AmericaPreferences287Preferred School Positions Business Education TeacherComputer Teacher (School)IT Coordinator339Preferred Region(s) No PreferenceOptions/Comment126Paid &amp; Volunteer Positions A salary provided; enough to live locally127Travel Options Travel funding negotiated68Spouse First Name Colleen169Spouse Birth Year 1951192Spouse Citizenship Country United States376Spouse Ethnicity Select your Ethnicity227Spouse Serving with You? Yes117Spouse Highest Earned Degree Bachelor of Arts (BA)194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism268Spouse Formal Education Degree No266Spouse Education Credentials No270Spouse Previous Experience TutoringCounselingTeacher&quot; , &quot;'&quot; , &quot;s Aide288Spouse Preferred Education Positions TutorSchool CounselorTeacher&quot; , &quot;'&quot; , &quot;s Aide194Spouse Preferred Position(s) Adult WomenDiscipleshipMentoringPersonal/Group Evangelism&quot;))]</value>
+      <webElementGuid>1d072a4c-1c99-4899-8bcf-397d03c9093c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

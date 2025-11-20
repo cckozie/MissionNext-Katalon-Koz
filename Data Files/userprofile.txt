@@ -8,7 +8,7 @@ missionnext site administration
 
 PHP version: 8.2.29
 
-Date: 2025-11-08
+Date: 2025-11-18
 
 
 
@@ -38,7 +38,7 @@ Email Webmaster
 
  Created	2024-02-07
  Updated	2025-11-04
- Last Login	2025-11-04
+ Last Login	2025-11-18
  
 	
 	
@@ -279,8 +279,8 @@ Select another profile
 Show records for this user: user_id = 15375:
 Table: users
 ID	username	email	created	updated	last login	Active
-15375	recruiter@whitmanacademy.edu.jo	recruiter@whitmanacademy.edu.jo	2024-02-07	2025-11-04	2025-11-04	Yes
-Days ago: 	640  	4  	4  	 
+15375	recruiter@whitmanacademy.edu.jo	recruiter@whitmanacademy.edu.jo	2024-02-07	2025-11-04	2025-11-18	Yes
+Days ago: 	650  	14  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records

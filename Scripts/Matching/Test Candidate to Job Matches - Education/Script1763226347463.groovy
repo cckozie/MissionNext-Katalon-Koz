@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions;
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
 
 
-maxMatches = 100
+maxMatches = 10 //overridden if running test suite
 
 bypass = false
 
@@ -49,11 +49,11 @@ debug = true
 
 pages = GlobalVariable.matchPages
 
-site = 'Journey'
+site = 'Education'
 
 matchType = 'Job' // Org or Job
 
-user = 'Journey Candidate 15'
+user = 'Education Candidate 14'
 
 highlight = false
 
@@ -61,16 +61,27 @@ updateWildcards = true //Must leave as true because reading from file causes som
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
+println(myTestCase)
+
 
 if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+	println(myTestCase)
+	
+	maxMatches = 100
 	
 } else {
 
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
+
+// Entries in AD candidate profile page that need to be ignored
+categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions', 'Enter other Ethnicity', 'Enter Family Status'
+	, 'Experience', 'Education', 'Additional Language ProficiencyGroup', 'Situation', 'Church', 'Availability', 'Preferences'
+	, 'Options/Comment']
+
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
@@ -87,6 +98,8 @@ errorFile.write('Running ' + myTestCase + ' - Listing Errors Only\n')
 GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
+
+WebUI.delay(5)
 
 jobFile = (filePath + 'jobprofile.txt')
 
@@ -136,6 +149,17 @@ candidateMatchFields = []
 
 jobMatchFields = []
 
+if(site == 'Education') {
+	myFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from API'), [('varEmail') : candidateEmail, ('varSite') : site, ('varFile') : ''],
+		FailureHandling.STOP_ON_FAILURE)
+	
+	println(myFieldValues.get('Your Country of Citizenship'))
+	myFieldValues.each{
+		println(it)
+	}
+
+}
+
 matchValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Matching Rules'), [('varSite') : site, ('varMatchType') : matchType], 
     FailureHandling.STOP_ON_FAILURE)
 
@@ -150,22 +174,20 @@ matchValues.each({
         //println(outText)
         outFile.append(outText + '\n')
 
-//        candidateMatchFields.add(it.key)
 		jobMatchFields.add(it.key)
 		if (it.key.substring(0, 2) == '- ')
 			jobMatchFields.add('Ministry Preferences')
 		
-//        jobMatchFields.add(it.value[0])
         candidateMatchFields.add(it.value[0])
     })
 
 WebUI.delay(2)
 
-//Screen s = new Screen()	
-
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 jobFile = (filePath + 'jobprofile.txt')
+
+profileFile = (filePath + 'userprofile.txt')
 
 if (site == 'Journey') {
     candidateSelections = [:]
@@ -212,25 +234,21 @@ if (site == 'Journey') {
     apiTab = WebUI.getWindowIndex() //Education
     
 } else {
-
-    adTab = WebUI.getWindowIndex()
-
-    WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile from AD'), [('varUsername') : candidateUsername, ('varFile') : profileFile
-            , ('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
-
-    returnValues = formatProfile(profileFile, categoriesCandidate, candidateMatchFields)
-
-    candidateSelections = (returnValues[0])
-
-    candidateSelections.put('Your Country of Citizenship', myFieldValues.get('Your Country of Citizenship'))
-
-    candidateSelections.each({ 
-            println(it)
-        })
-
-    WebUI.closeWindowIndex(1)
-
-    WebUI.switchToWindowIndex(adTab)
+	
+	candidateSelections = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile as Map from AD'), [('varUsername') : candidateUsername, 
+		('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
+	
+	candidateSelections.each {
+		println(it)
+	}
+	
+	candidateSelections.put('Your Country of Citizenship', myFieldValues.get('Your Country of Citizenship'))
+	
+	candidateSelections.put('Marital Status', myFieldValues.get('Marital Status'))
+	
+	candidateSelections.put('Spouse Serving with You?', myFieldValues.get('Spouse Serving with You?'))
+	
+	candidateFieldValues = candidateSelections
 }
 
 if (site == 'Journey') {
@@ -254,18 +272,26 @@ if (site == 'Journey') {
         spouseServing = false
     }
 } else {
-    married = (returnValues[1])
 
-    spouseServing = (returnValues[2])
+	married = candidateSelections.get('Marital Status')
+	
+	spouseServing = candidateSelections.get('Spouse Serving with You?')
 
     if (married) {
         maritalStatus = 'Married'
     } else {
         maritalStatus = 'Single'
     }
+	
+	firstName = candidateSelections.get('First Name')[0]
+
+	lastName = candidateSelections.get('Last Name')[0]
+	
 }
 
 outText = ((((('\n\n Candidate Selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+
+resultsText = ((((('\n\n Education Job Matches for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
 
 if (married) {
     if (spouseServing) {
@@ -277,6 +303,10 @@ if (married) {
 
 outFile.append(outText + '\n')
 
+resultsFile.append(resultsText + '\n')
+
+errorFile.append(resultsText + '\n')
+
 candidateSelections.each({ 
         outText = ((it.key + ':') + it.value)
 
@@ -285,8 +315,9 @@ candidateSelections.each({
 
 WebUI.delay(2)
 
-//WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Journey Candidate 15', ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+WebUI.closeBrowser()
+
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(60)
 
@@ -312,6 +343,8 @@ if (maxMatches < row_count) {
 println(row_count)
 
 jobFound = false
+
+noErrors = true
 
 if (row_count > 0) {
 	for (row = 1; row < row_count; row++) {
@@ -343,13 +376,9 @@ if (row_count > 0) {
 			
 			tablePct = Columns.get(5).getText().toInteger()
 			
-//			linkXpath = "//div[@id='main']/div/div/div[2]/div[3]/div/div/table/tbody/tr[" + row + 1 + "]/td[2]/a"
-			
 			link = Columns.get(1)
 			
 			element = link.findElement(By.xpath("./a"))
-			
-//			element = findElement(By.xpath(linkXpath))
 			
 			Actions actions = new Actions(driver);
 			
@@ -359,12 +388,6 @@ if (row_count > 0) {
 						
 			element.click()
 
-//			WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Matching/a_Job Category - parm', [('row') : row + 1]))
-			
-//			object = "Object Repository/Journey Candidate Profile/Matching/a_Job Category - parm, [('row') : 2]"
-			
-//			WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-			
 			jobFound = true
 			
 			WebUI.switchToWindowIndex(1)
@@ -436,9 +459,9 @@ if (row_count > 0) {
                 spouseServing = false
             }
             
-            firstName = (candidateFieldValues.getAt('First Name')[0])
+            firstName = (candidateFieldValues.get('First Name')[0])
 
-            lastName = (candidateFieldValues.getAt('Last Name')[0])
+            lastName = (candidateFieldValues.get('Last Name')[0])
 
             outText = '\n\n Job Selection Matches for ' + agency + ' / ' + jobTitle
 
@@ -450,11 +473,17 @@ if (row_count > 0) {
 			
 			candidateText = outText
 			
+			lineText = outText
+			
             doMatching(candidateFieldValues, jobSelections)
 			
         }
 		
     }
+}
+
+if(noErrors) {
+	errorFile.delete()
 }
 
 WebUI.closeBrowser()
@@ -466,29 +495,7 @@ def ifPrint(def msg) {
         println(msg)
     }
 }
-/*
-def getRegionText(def imageFile) {
-    FileUtils.copyFile(new File(imageFile), new File(myImage))
 
-    sout = new StringBuffer()
-
-    serr = new StringBuffer()
-
-    command = ['/Users/cckozie/Documents/Scripts/MissionNext/ocr.sh'].execute()
-
-    command.consumeProcessOutput(sout, serr)
-
-    command.waitForOrKill(1000)
-
-    println('sout is ' + sout)
-
-    println('serr is ' + serr)
-
-    String strSout = sout
-	
-    return strSout
-}
-*/
 def formatProfile(def file, def matchFields) {
 	println('matchFields in formatProfile:')
 	println(matchFields)
@@ -571,8 +578,13 @@ def formatProfile(def file, def matchFields) {
                             println('3>' + line)
                         }
                     }
-                    
-                    keyFound = matchFields.containsKey(field)
+                    println(matchFields)
+					println(field)
+					keyFound = false
+					if(matchFields.containsKey(field)) {
+						keyFound = true
+					}
+//                    keyFound = matchFields.containsKey(field)
 
                     if (debug) {
                         println((('field is ' + field) + ' and keyFound is ') + keyFound)
@@ -620,17 +632,15 @@ def formatProfile(def file, def matchFields) {
 	selections.each{
 		println(it)
 	}
+	
     return selections
+	
 }
 
 def doMatching(def candidateSelections, def jobSelections) {
 	
-//  The candidateSelections and jobSelections map are swapped (borrowed code and too many changes to make, prints are fixed)
+	notMatched = []
 		
-//	Need to compensate for candidate's profile not containing category/job relationships
-//	Match candidate's categories to parnter's category and 
-//	Match Preferred Position(s) and Spouse Preferred Position(s) to Ministry Preferences for partner (priority 5)
-	
 	error = false
 	
 	println('Job Selections:')
@@ -649,49 +659,49 @@ def doMatching(def candidateSelections, def jobSelections) {
 	}
 
 	// NEED TO FIND MATCH ON CATEGORY AND JOB WITHIN CATEGORY
-    if (married && !(spouseServing)) {
-        married = false
-    }
-    
-    if (married) {
-        pointValue = 3
-    } else {
-        pointValue = 2
-    }
-    
-    excluded = false
+	if (married && !(spouseServing)) {
+		married = false
+	}
+	
+	if (married) {
+		pointValue = 3
+	} else {
+		pointValue = 2
+	}
+	
+	excluded = false
 
-    points = 0.0
+	points = 0.0
 
-    lostPoints = 0.0
+	lostPoints = 0.0
 
-    categoryMatch = false
+	categoryMatch = true
 	
 	categoryJobs = [:]
 
-    for (def it : matchValues) {
+	for (def it : matchValues) {
 		testValues = jobSelections.get(it.key)
 		
 		if(testValues == null) {
 			continue
 		}
 		
-        ifPrint('Testing match values ' + it)
+		ifPrint('Testing match values ' + it)
 
-        match = false
+		match = false
 
-        category = false
+		category = false
 
-        myKey = it.key
+		myKey = it.key
 
-        if (myKey.substring(0, 2) == '- ') {
-            category = true
+		if (myKey.substring(0, 2) == '- ') {
+			category = true
 
-            ifPrint((('category is ' + category) + ' and myKey is ') + myKey)
-        }
+			ifPrint((('category is ' + category) + ' and myKey is ') + myKey)
+		}
 
-        if (!(excluded)) {
-            match = false
+		if (!(excluded)) {
+			match = false
 			
 			prefix = myKey.substring(0,2)
 			
@@ -706,34 +716,34 @@ def doMatching(def candidateSelections, def jobSelections) {
 				candidateKey = myKey
 			}
 
-            ifPrint('jobSelections key is ' + candidateKey)
+			ifPrint('jobSelections key is ' + candidateKey)
 
-            candidateValues = candidateSelections.get(candidateKey)
+			candidateValues = candidateSelections.get(candidateKey)
 
-            ifPrint('jobValues = ' + candidateValues)
+			ifPrint('jobValues = ' + candidateValues)
 
-            values = matchValues.get(it.key)
+			values = matchValues.get(it.key)
 
-            ifPrint('values = ' + values)
+			ifPrint('values = ' + values)
 
-            jobSelectionKey = it.key
+			jobSelectionKey = it.key
 
-            matchValue = (values[1])
+			matchValue = (values[1])
 
-            matchValue = (values[1]).toInteger()
+			matchValue = (values[1]).toInteger()
 
-            pointsSingle = (values[2])
+			pointsSingle = (values[2])
 
-            pointsMarried = (values[3])
+			pointsMarried = (values[3])
 
-            jobValues = jobSelections.get(jobSelectionKey)
+			jobValues = jobSelections.get(jobSelectionKey)
 
-            ifPrint('jobValues = ' + jobValues)
+			ifPrint('jobValues = ' + jobValues)
 
-            if (!(category) || (jobValues != null)) {
-                outText = ('\nFor ' + myKey)
+			if (!(category) || (jobValues != null)) {
+				outText = ('\nFor ' + myKey)
 
-                outFile.append(outText + '\n')
+				outFile.append(outText + '\n')
 				
 				if(myKey == 'Ministry Preferences' && categoryMatch) {
 					
@@ -741,72 +751,72 @@ def doMatching(def candidateSelections, def jobSelections) {
 					
 				}
 
-                outText = ('Job selections = ' + jobValues)
+				outText = ('Job selections = ' + jobValues)
 
-                outFile.append(outText + '\n')
+				outFile.append(outText + '\n')
 
-                outText = ('Candidate selections = ' + candidateValues)
+				outText = ('Candidate selections = ' + candidateValues)
 
-                outFile.append(outText + '\n')
+				outFile.append(outText + '\n')
 
-                ifPrint('matchValue = ' + matchValue)
+				ifPrint('matchValue = ' + matchValue)
 
-                if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
-                    newPoints = (values[pointValue]).toFloat().round(1)
-                } else {
-                    newPoints = 0
-                }
-                
-                cWC = candidateWildcards.get(candidateKey)
+				if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
+					newPoints = (values[pointValue]).toFloat().round(1)
+				} else {
+					newPoints = 0
+				}
+				
+				cWC = candidateWildcards.get(candidateKey)
 
-                ifPrint('cWC = ' + cWC + ' candidateKey is ' + candidateKey)
+				ifPrint('cWC = ' + cWC + ' candidateKey is ' + candidateKey)
 
-                if ((cWC != null) && (candidateValues != null)) {
-                    if (cWC.intersect(candidateValues).size() > 0) {
-                        outText = (((('Candidate wildcard match on ' + cWC.intersect(candidateValues)) + '. Adding ') + 
-                        newPoints) + ' points.')
+				if ((cWC != null) && (candidateValues != null)) {
+					if (cWC.intersect(candidateValues).size() > 0) {
+						outText = (((('Candidate wildcard match on ' + cWC.intersect(candidateValues)) + '. Adding ') +
+						newPoints) + ' points.')
 
-                        outFile.append(outText + '\n')
+						outFile.append(outText + '\n')
 
-                        points = (points + newPoints)
+						points = (points + newPoints)
 
-                        match = true
-                    }
-                }
-                
-                if (!(match)) {
-                    jWC = jobWildcards.get(jobSelectionKey)
+						match = true
+					}
+				}
+				
+				if (!(match)) {
+					jWC = jobWildcards.get(jobSelectionKey)
 
-                    ifPrint('jWC = ' + jWC + ' jobSelectiionKey is ' + jobSelectionKey)
+					ifPrint('jWC = ' + jWC + ' jobSelectiionKey is ' + jobSelectionKey)
 
-                    if ((jWC != null) && (jobValues != null)) {
-                        if (jWC.intersect(jobValues).size() > 0) {
-                            outText = (((('Job wildcard match on ' + jWC.intersect(jobValues)) + '. Adding ') + newPoints) + 
-                            ' points.')
+					if ((jWC != null) && (jobValues != null)) {
+						if (jWC.intersect(jobValues).size() > 0) {
+							outText = (((('Job wildcard match on ' + jWC.intersect(jobValues)) + '. Adding ') + newPoints) +
+							' points.')
 
-                            outFile.append(outText + '\n')
+							outFile.append(outText + '\n')
 
-                            points = (points + newPoints)
+							points = (points + newPoints)
 
-                            match = true
-                        }
-                    }
-                    
-                    if ((!(match) && (candidateValues != null)) && (jobValues != null)) {
-                        matches = candidateValues.intersect(jobValues)
+							match = true
+						}
+					}
+					
+					if ((!(match) && (candidateValues != null)) && (jobValues != null)) {
+						matches = candidateValues.intersect(jobValues)
 
-                        if (matches.size() > 0) {
-                            outText = (((('Found match on ' + candidateValues.intersect(jobValues)) + '. Adding ') + newPoints) + 
-                            ' points.')
+						if (matches.size() > 0) {
+							outText = (((('Found match on ' + candidateValues.intersect(jobValues)) + '. Adding ') + newPoints) +
+							' points.')
 
-                            outFile.append(outText + '\n')
+							outFile.append(outText + '\n')
 
-                            points = (points + newPoints)
+							points = (points + newPoints)
 
-                            match = true
+							match = true
 
-                            if (category) {
-                                categoryMatch = true
+							if (category) {
+								categoryMatch = true
 								
 								if(categoryJobs.size() == 0) {
 								
@@ -816,146 +826,115 @@ def doMatching(def candidateSelections, def jobSelections) {
 									
 									outFile.append('*** ' + myKey + ':' + jobValues + '\n')
 								
-	                            }
-                            }
-                        }
-                    }
-                }
-                
-                if (match) {
-                    outText = (('Add match is now ' + points.round(1)) + '%.')
-
-                    outFile.append(outText + '\n')
-/*
-                    if (category) {
-						
-                        categoryMatch = true
-						
-						matchedCategory = myKey
-						
-						if(categoryJobs.size() == 0) {
-						
-							matchedCategory = myKey
-							
-							categoryJobs.put(myKey,jobValues)
-							
-							outFile.append('*** ' + myKey + ':' + jobValues + '\n')
+								}
+							}
 						}
-                    }
-*/
-                } else {
-                    if (matchValue == 5) {
-                        if (!(category) || (jobValues != null)) {
-                            excluded = true
+					}
+				}
+				
+				if (match) {
+					outText = (('Add match is now ' + points.round(1)) + '%.')
 
-                            outText = 'This is a must match field. Candidate is excluded.'
+					outFile.append(outText + '\n')
+					
+				} else {
+					if (matchValue == 5) {
+						if (!(category) || (jobValues != null)) {
+							excluded = true
 
-                            outFile.append(outText + '\n')
+							outText = 'This is a must match field. Candidate is excluded.'
 
-                            resultsFile.append(outText)
+							outFile.append(outText + '\n')
 
-                            break
-                        }
-                    }
-                    
-                    outText = 'No match found.'
+							resultsFile.append(outText)
 
-                    outFile.append(outText + '\n')
-                }
-            }
-        }
-    }
-    
-    if (!(categoryMatch)) {
-        outText = '##### ERROR: No category/job match found. Candidate should be excluded.'
+							break
+						}
+					}
+					
+					outText = 'No match found.'
 
-        outFile.append(outText + '\n')
+					outFile.append(outText + '\n')
+					
+					notMatched.add(myKey)
+				}
+			}
+		}
+	}
 
-        resultsFile.append(outText)
-    } else {
-        addedPct = points.round(0).toInteger()
+	if (!(categoryMatch)) {
+		outText = '##### ERROR: No category/job match found. Candidate should be excluded.'
 
-        println('addedPct=' + addedPct)
+		outFile.append(outText + '\n')
 
-//        println('popupPct=' + popupPct)
+		resultsFile.append(outText)
+	} else {
+		addedPct = points.round(0).toInteger()
 
-        println('tablePct=' + tablePct)
+		println('addedPct=' + addedPct)
 
-        error = false
+		println('tablePct=' + tablePct)
 
-//        popPct = popupPct.toString().replace('\n', '')
+		error = false
 
-//        popPct = popPct.replace('%', '')
-
-//        popPct = popPct.toInteger()
-
-        tablePct = tablePct.toInteger()
+		tablePct = tablePct.toInteger()
 
 		code = ''
 		
-        if ((Math.abs(addedPct - tablePct) > 1)) { //|| (Math.abs(tablePct - popPct) > 1)) {
-            error = true
-			if(Math.abs(addedPct - tablePct) > 1) {	
+		if ((Math.abs(addedPct - tablePct) > 2)) { //|| (Math.abs(tablePct - popPct) > 1)) {
+			error = true
+			
+			noErrors = false
+			
+			if(Math.abs(addedPct - tablePct) > 2) {
 				code = '12 '
 			}
-//			if(Math.abs(addedPct - popPct) > 1) {
-//				code = code + '13 '
-//			}
-//			if(Math.abs(tablePct - popPct) > 1) {
-//				code = code + '23'
-//			}
-        }
-        
-        outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
-
-        outFile.append(outText + '\n')
-
-        tblPct = tablePct.toString()
-
-        tblPct = tblPct.replace('\n', '')
-
-        outText = (('Table match percentage is ' + tblPct) + '%.')
-
-        outFile.append(outText + '\n')
-
-//        outText = (('Popup match percentage is ' + popPct) + '%.')
-
-//        outFile.append(outText + '\n')
-
-        if (error) {
-            outText = '##### ERRORS ' + code + ' FOUND #####'
-
-            outFile.append(outText + '\n')
-        }
-        
-        outFile.append('\n\n')
+		}
 		
-//		outText = 'No match on ' + notMatched
-		
-//		outFile.append(outText + '\n')
+		outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
 
-        outText = 'Match percentages: Calculated = ' + addedPct + '%, Table = ' + tblPct + '%.\n' //'%, Popup = ') + popPct) + 
-        
+		outFile.append(outText + '\n')
+
+		tblPct = tablePct.toString()
+
+		tblPct = tblPct.replace('\n', '')
+
+		outText = (('Table match percentage is ' + tblPct) + '%.')
+
+		outFile.append(outText + '\n')
+
+		if (error) {
+			errorFile.append(lineText + '\n')
+			
+			outText = '##### ERRORS: '
+
+			outFile.append(outText + '\n')
+		}
+		
+		outFile.append('\n\n')
+		
+		outText = 'Match percentages: Calculated = ' + addedPct + '%, Table = ' + tblPct + '%.\n' //'%, Popup = ') + popPct) +
+		
 		resultsText = outText
 
-        if (error) {
-            outText = ('##### ERRORS ' + code + ': ' + outText)
-        }
-    }
-    
-    resultsFile.append(outText)
+		if (error) {
+			outText = ('##### ERRORS: ' + outText)
+		}
+	}
+		
+	resultsFile.append(outText)
+		
+	if(notMatched.size() > 0) {
+		outText = 'No match on ' + notMatched
+	} else {
+		outText = 'No non-matches displayed.'
+	}
+	
+	resultsFile.append(outText + '\n')
 	
 	if(error) {
-/*		errorFile.append(candidateText + '. ' + maritalStatusText + '\n')
-		if(notMatched.size() > 0) {
-			outText = 'No match on ' + notMatched	
-		} else {
-			outText = 'No non-matches displayed.'
-		}
 		errorFile.append(outText + '\n')
-*/
 		errorFile.append(resultsText + '\n')
 	}
-
 }
 

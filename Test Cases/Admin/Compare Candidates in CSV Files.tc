@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Compare Candidates in CSV Files</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f9ab381f-b7d4-44c3-a767-21974aae82c7</testCaseGuid>
+</TestCaseEntity>

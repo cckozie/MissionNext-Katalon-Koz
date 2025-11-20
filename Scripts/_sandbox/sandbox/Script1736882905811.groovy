@@ -28,6 +28,15 @@ import org.sikuli.script.SikulixForJython as SikulixForJython
 import java.io.File as File
 import groovy.json.JsonSlurper as JsonSlurper
 
+
+candidateSelections = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Profile as Map from AD'), [('varUsername') : 'cktest14ec',
+	('varSearchType') : 'username'], FailureHandling.STOP_ON_FAILURE)
+
+candidateSelections.each {
+	println(it)
+}
+System.exit(0)
+
 varFormat = "YY-MM-dd.HH-mm"
 //varTime = "17:33"
 //varDelay = 20

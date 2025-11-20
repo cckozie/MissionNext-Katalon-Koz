@@ -32,16 +32,17 @@ import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
 
+///////////////////////////////////// Mod Log \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//
+//	07/08/25	Look for % sign on popup instead of 'Match Percent:' because of changes with debug data displayed
 
-/* Results for line 2, candidate Natalie Lopez, single.
-Match percentages: Calculated = 100%, Table = 100%, Popup = 100%.
 
-No match on [Ministry Preferences]
-*/
 
-maxMatches = 20 //overridden if test suite running
 
-fudgeFactor = 3 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
+//	TO DO:
+//	Add spouse job preferences to matching
+//		During matching for job preferences, also compare spouse's preference if married and spouse is serving
+maxMatches = 5
 
 bypass = false
 
@@ -52,8 +53,6 @@ pages = GlobalVariable.matchPages
 site = 'Journey'
 
 matchType = 'Job' // Org or Job
-
-user = 'cktest17jp' // office or Journey 17
 
 highlight = false
 
@@ -66,8 +65,6 @@ if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
-	
-	maxMatches = 100
 	
 } else {
 
@@ -86,11 +83,6 @@ errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matchin
 
 errorFile.write('Running ' + myTestCase + ' - Listing Errors Only\n')
 
-if(debug) {
-	debugFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-DEBUG.txt')
-	
-	debugFile.write('Running ' + myTestCase + ' - Debug Data\n')
-}
 GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
@@ -168,7 +160,7 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 jobFile = (filePath + 'jobprofile.txt')
 
 //WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : 'office', ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.waitForPageLoad(60)
 
@@ -280,10 +272,6 @@ if(row_count > 0) {
 		
 		println('lastName is ' + lastName)
 		
-//		if(lastName != 'Knolle') {
-//			continue
-//		}
-		
 		pct = Columns.get(8).getText()
 		
 		println('Table pct is ' + pct)
@@ -340,19 +328,10 @@ if(row_count > 0) {
 		
 		notMatched = []
 
-		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web - Job Matches'),
+		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
 			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
 
 		println(candidateFieldValues)
-		
-		if(debug) {
-			debugFile.append('\nCandidate Field Values:\n')
-			candidateFieldValues.each {
-				println(it)
-				debugFile.append(it)
-				debugFile.append('\n')
-			}
-		}
 
 		maritalStatus = (candidateFieldValues.get('Marital status')[0])
 
@@ -403,25 +382,29 @@ if(row_count > 0) {
 
             lastName = (candidateFieldValues.getAt('Last Name')[0])
 
-			outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
-			
-			if (!(married)) {
-				outText += ', single.'
-			} else {
-				outText += ', married and spouse is '
-				
-				if (!(spouseServing)) {
-					outText += 'not '
-				}
-				
-				outText += 'serving.'
-			}
+            outText = ((('\n\n Candidate Selection Matches for ' + firstName) + ' ') + lastName)
 
             outFile.append(outText + '\n')
+
+            outText = ((('\n Results for line ' + line + ', candidate ' + firstName) + ' ') + lastName)
+
+            resultsFile.append(outText + '\n')
 			
-			resultsFile.append(outText + '\n')
-			
-			lineText = outText
+			candidateText = outText
+
+            if (!(married)) {
+                outText = 'Candidate is not married.'
+            } else {
+                outText = 'Candidate is married and spouse is '
+
+                if (!(spouseServing)) {
+                    outText += 'not '
+                }
+                
+                outText += 'serving.'
+            }
+            
+            outFile.append(outText + '\n')
 			
 			maritalStatusText = outText
 
@@ -814,7 +797,7 @@ def doMatching(def candidateSelections, def jobSelections) {
                             outFile.append(outText + '\n')
 
                             resultsFile.append(outText)
-							
+							System.exit(0)
                             break
                         }
                     }
@@ -822,8 +805,6 @@ def doMatching(def candidateSelections, def jobSelections) {
                     outText = 'No match found.'
 
                     outFile.append(outText + '\n')
-					
-					notMatched.add(myKey)
                 }
             }
         }
@@ -856,18 +837,18 @@ def doMatching(def candidateSelections, def jobSelections) {
 
 		code = ''
 		
-        if ((Math.abs(addedPct - tablePct) > fudgeFactor) || (Math.abs(tablePct - popPct) > fudgeFactor)) {
+        if ((Math.abs(addedPct - tablePct) > 2) || (Math.abs(tablePct - popPct) > 1)) {
             error = true
 			
 			noErrors = false
 			
-			if(Math.abs(addedPct - tablePct) > fudgeFactor) {	
+			if(Math.abs(addedPct - tablePct) > 2) {	
 				code = '12 '
 			}
-			if(Math.abs(addedPct - popPct) > fudgeFactor) {
+			if(Math.abs(addedPct - popPct) > 2) {
 				code = code + '13 '
 			}
-			if(Math.abs(tablePct - popPct) > fudgeFactor) {
+			if(Math.abs(tablePct - popPct) > 2) {
 				code = code + '23'
 			}
         }
@@ -889,38 +870,39 @@ def doMatching(def candidateSelections, def jobSelections) {
         outFile.append(outText + '\n')
 
         if (error) {
-			errorFile.append(lineText + '\n')
-			
-            outText = '##### ERRORS: '
+            outText = '##### ERRORS ' + code + ' FOUND #####'
 
             outFile.append(outText + '\n')
         }
         
         outFile.append('\n\n')
 		
+//		outText = 'No match on ' + notMatched
+		
+//		outFile.append(outText + '\n')
+
         outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popPct) + 
         '%.\n')
 		
 		resultsText = outText
 
         if (error) {
-            outText = ('##### ERRORS' + outText)
+            outText = ('##### ERRORS ' + code + ': ' + outText)
         }
     }
     
     resultsFile.append(outText)
 	
-	if(notMatched.size() > 0) {
-		outText = 'No match on ' + notMatched
-	} else {
-		outText = 'No non-matches displayed.'
-	}
-
-	resultsFile.append(outText + '\n')
-	
-	if(error) {
+	if(error || 1 == 1) {
+		if(notMatched.size() > 0) {
+			outText = 'No match on ' + notMatched
+		} else {
+			outText = 'No non-matches displayed.'
+		}
 		errorFile.append(outText + '\n')
 		errorFile.append(resultsText + '\n')
+		resultsFile.append(outText + '\n')
 	}
 
 }
+

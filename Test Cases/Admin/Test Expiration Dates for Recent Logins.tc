@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Expiration Dates for Recent Logins</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8a098b47-c4b1-4e32-977f-bf912ca25d52</testCaseGuid>
+</TestCaseEntity>

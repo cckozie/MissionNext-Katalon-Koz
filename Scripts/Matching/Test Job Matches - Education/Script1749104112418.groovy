@@ -40,7 +40,7 @@ import org.openqa.selenium.interactions.Actions
  * 	(Maybe force add 'Your Country of Citizenship   Recruit From Countries	5' to the matching scheme) Why isn't it there?
  * Add education jobs to the education profiles and use my education profile(s) for match testing instead of scmnschool
 */
-maxMatches = 100
+maxMatches = 20 //overridden if running test suite
 
 bypass = false
 
@@ -73,6 +73,7 @@ myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfi
 if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
+	maxMatches = 100
 } else {
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
@@ -246,11 +247,11 @@ for(all in allCountries) {
 	if(all) {
 		outText = 'ALL'
 	} else {
-		outText = myCountries
+		outText = myCountries.join(', ')
 	}
 	
 	println(outText)
-	
+
 	outFile.append(outText + '\n\n')
 	
 	resultsFile.append(outText + '\n\n')
@@ -361,6 +362,8 @@ for(all in allCountries) {
 	
 	found = false
 		
+	noErrors = true
+
 	if(row_count > 0) {
 		
 		for (row = 3; row < row_count + 3; row++) {
@@ -438,14 +441,49 @@ for(all in allCountries) {
 	
 	        println(candidateFieldValues)
 	
-	        maritalStatus = (candidateFieldValues.get('Marital status')[0])
-	
-	        outText = (((((' \n\nCandidate selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
-	
+//	        maritalStatus = (candidateFieldValues.get('Marital status')[0])
+			
+//			spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
+			
+            if ('Married' in candidateFieldValues.get('Marital status')) {
+                married = true
+            } else {
+                married = false
+            }
+            
+            if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
+                spouseServing = true
+            } else {
+                spouseServing = false
+            }
+/*            
+			if(maritalStatus == 'Married') {
+				married = true
+			} else {
+				married = false
+			}
+*/	
+//	        outText = (((((' \n\nCandidate selections for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+			outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
+			
+			if (!(married)) {
+				outText += ', single.'
+			} else {
+				outText += ', married and spouse is '
+				
+				if (!(spouseServing)) {
+					outText += 'not '
+				}
+				
+				outText += 'serving.'
+			}
+			
 	        outFile.append(outText + '\n')
 	
-	        println(outText)
-	
+			resultsFile.append(outText + '\n')
+			
+			lineText = outText
+			
 	        candidateFieldValues.each({ 
 	                outText = ((it.key + ':') + it.value)
 	
@@ -453,14 +491,14 @@ for(all in allCountries) {
 	
 	                println(outText)
 	            })
-	
+/*	
 	        if (maritalStatus == 'Married') {
 	            married = true
 	        } else {
 	            married = false
 	        }
-	        
-	        spouseServing = false
+*/	        
+//	        spouseServing = false
 	
 	        doMatching(candidateFieldValues, jobSelections)
 	
@@ -481,6 +519,10 @@ for(all in allCountries) {
 if(user != 'cktest16ep') {
 	// Log out of office
 	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+}
+
+if(noErrors) {
+	errorFile.delete()
 }
 
 WebUI.closeBrowser()
@@ -599,6 +641,9 @@ def formatProfile(def file, def matchFields) {
 }
 
 def doMatching(def candidateSelections, def jobSelections) {
+	
+	notMatched = []
+	
     if (married && !(spouseServing)) {
         married = false
     }
@@ -745,6 +790,8 @@ def doMatching(def candidateSelections, def jobSelections) {
                     outText = 'No match found.'
 
                     outFile.append(outText + '\n')
+					
+					notMatched.add(myKey)
                 }
             }
         }
@@ -779,6 +826,8 @@ def doMatching(def candidateSelections, def jobSelections) {
 
         if ((Math.abs(addedPct - tablePct) > 1) || (Math.abs(tablePct - popPct) > 1)) {
             error = true
+			
+			noErrors = false
 
             if (Math.abs(addedPct - tablePct) > 1) {
                 code = '12 '
@@ -810,7 +859,9 @@ def doMatching(def candidateSelections, def jobSelections) {
         outFile.append(outText + '\n')
 
         if (error) {
-            outText = (('##### ERRORS ' + code) + ' FOUND #####')
+			errorFile.append(lineText + '\n')
+			
+            outText = '##### ERRORS: '
 
             outFile.append(outText + '\n')
         }
@@ -818,15 +869,31 @@ def doMatching(def candidateSelections, def jobSelections) {
         outFile.append('\n\n')
 
         outText = (((((('Match percentages: Calculated = ' + addedPct) + '%, Table = ') + tblPct) + '%, Popup = ') + popPct) + 
-        '%.\n\n')
+        '%.\n')
+		
+		resultsText = outText
 
         if (error) {
-            outText = ((('##### ERRORS ' + code) + ': ') + outText)
+            outText = ('##### ERRORS: ' + outText)
         }
     }
     
-	resultsFile.append(' Candidate Selection Matches for ' + firstName + ' ' + lastName + '\n')
+//	resultsFile.append(' Candidate Selection Matches for ' + firstName + ' ' + lastName + '\n')
 	
     resultsFile.append(outText)
+	
+	if(notMatched.size() > 0) {
+		outText = 'No match on ' + notMatched
+	} else {
+		outText = 'No non-matches displayed.'
+	}
+
+	resultsFile.append(outText + '\n')
+	
+	if(error) {
+		errorFile.append(outText + '\n')
+		errorFile.append(resultsText + '\n')
+	}
+
 }
 

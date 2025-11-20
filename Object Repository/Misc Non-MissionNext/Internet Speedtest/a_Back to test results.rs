@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Back to test results</name>
+   <tag></tag>
+   <elementGuidId>20d71d19-4751-4df1-a114-6ee87f834070</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>div:nth-of-type(2) > a.close-btn</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='container']/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[8]/div/div/div[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>ed754600-ec05-4745-a511-c89ac2a342d7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>#</value>
+      <webElementGuid>009caa85-2aee-454d-8ecf-883f4f1df26d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>close-btn</value>
+      <webElementGuid>bf88dd47-7316-49cc-8ab1-d086069b8fa5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Back to test results</value>
+      <webElementGuid>c14bcd90-67ef-49c7-ad76-9311a63ae573</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;container&quot;)/div[@class=&quot;pre-fold mobile-test-complete&quot;]/div[@class=&quot;main-content&quot;]/div[@class=&quot;main&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;pure-g&quot;]/div[@class=&quot;pure-u-custom-speedtest&quot;]/div[@class=&quot;speedtest-view&quot;]/div[@class=&quot;speedtest-container main-row&quot;]/div[@class=&quot;main-view&quot;]/div[1]/div[@class=&quot;desktop-app-prompt-modal&quot;]/div[@class=&quot;modal modal-in-place notification prompt-modal&quot;]/div[@class=&quot;pure-u-1 u-align-center u-c&quot;]/div[2]/a[@class=&quot;close-btn&quot;]</value>
+      <webElementGuid>93519e49-f7d6-4d0c-bec0-daa348353afc</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='container']/div/div[3]/div/div/div/div[2]/div[2]/div/div[4]/div/div[8]/div/div/div[2]/a</value>
+      <webElementGuid>2fda1f0e-9e28-4eb7-a8b8-b704235574a9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Back to test results')]</value>
+      <webElementGuid>87a56138-d94a-4a72-8779-5826a80c0cf1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Try Speedtest for Mac'])[1]/following::a[2]</value>
+      <webElementGuid>6acb58e2-9ef2-4c6d-974e-1a2785f21988</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Up'])[1]/following::a[3]</value>
+      <webElementGuid>a70a0bdb-adb8-4370-82db-191a52e40827</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Remove ads on Speedtest.net for life'])[1]/preceding::a[2]</value>
+      <webElementGuid>832dda65-8952-4443-99fa-1934238df302</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Remove Ads'])[1]/preceding::a[2]</value>
+      <webElementGuid>94416ed7-4677-4d11-845c-5eab567ad086</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Back to test results']/parent::*</value>
+      <webElementGuid>8ab06c19-4cba-448a-b8c5-f0aa114ee345</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, '#')])[38]</value>
+      <webElementGuid>987dac0c-3f99-4737-86c1-105a1ca0afee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[8]/div/div/div[2]/a</value>
+      <webElementGuid>08035271-6d47-47d0-8dce-2105ee49745b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '#' and (text() = 'Back to test results' or . = 'Back to test results')]</value>
+      <webElementGuid>c16fb018-7a9d-4578-9e88-3bf345dceab4</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
