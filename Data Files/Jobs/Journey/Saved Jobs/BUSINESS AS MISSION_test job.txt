@@ -1,0 +1,44 @@
+{
+    "- BUSINESS AS MISSION": [
+        "Health"
+    ],
+    "Alternate Job Title": [
+        "test job"
+    ],
+    "World Region": [
+        "Asia, Southeast"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Extensive experience serving in cultures other than my own"
+    ],
+    "Languages": [
+        "Russian"
+    ],
+    "Paid & Volunteer Positions": [
+        "Only envision serving in paid positions"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "I am not able to relocate for the foreseeable future"
+    ],
+    "Contact Name": [
+        "Chris Kosieracki"
+    ],
+    "Contact Email": "chris.kosieracki@missionnext.org",
+    "Ministry Preferences": [
+        "Health"
+    ],
+    "Category": "BUSINESS AS MISSION",
+    "Title": "test job"
+}

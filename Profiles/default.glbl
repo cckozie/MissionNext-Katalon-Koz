@@ -134,4 +134,14 @@
       <initValue>700</initValue>
       <name>tooltipMaxX</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Users/cckozie/git/MissionNext-Katalon-Koz'</initValue>
+      <name>projectPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>host</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

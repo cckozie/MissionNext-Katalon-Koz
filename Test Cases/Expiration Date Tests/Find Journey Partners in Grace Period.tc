@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Find Journey Partners in Grace Period</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>e5ca8c54-851e-4119-b2f7-864a7350a3c8</testCaseGuid>
+</TestCaseEntity>

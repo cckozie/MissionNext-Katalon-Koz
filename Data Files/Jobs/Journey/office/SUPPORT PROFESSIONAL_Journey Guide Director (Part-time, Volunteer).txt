@@ -1,0 +1,40 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Mission Representative",
+        "Missionary Member Care",
+        "Recruiter/Mobilizer",
+        "Volunteer Coordinator"
+    ],
+    "Alternate Job Title": [
+        "Journey Guide Director (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Time Commitment": [
+        "One year",
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "Vicky.Warren@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Journey Guide Director (Part-time, Volunteer)"
+}

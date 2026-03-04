@@ -21,6 +21,7 @@ import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
+import java.io.File as File
 
 class Before_Test_Case {
 	/**
@@ -37,5 +38,9 @@ class Before_Test_Case {
 		if(GlobalVariable.killAvast) {
 			WebUI.callTestCase(findTestCase('_Functions/Manage Avast VPN'), [('varDesiredState') : 'off'], FailureHandling.OPTIONAL)
 		}
+		// Set Global Variables based on stored parameters file
+		WebUI.callTestCase(findTestCase('Utilities/Update Global Variables from Parameters File'), [:], FailureHandling.OPTIONAL)
+		// Set host server name
+		WebUI.callTestCase(findTestCase('Utilities/Get Host'), [:], FailureHandling.OPTIONAL)
 	}
 }

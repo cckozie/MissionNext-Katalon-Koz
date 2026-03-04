@@ -1,0 +1,51 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Admin/Management",
+        "Mission Representative",
+        "Recruiter/Mobilizer",
+        "Volunteer Coordinator"
+    ],
+    "Alternate Job Title": [
+        "National Director of Mobilization (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Chris Kosieracki"
+    ],
+    "Contact Email": "chris.kosieracki@missionnext.org",
+    "Ministry Preferences": [
+        "Admin/Management",
+        "Mission Representative",
+        "Recruiter/Mobilizer",
+        "Volunteer Coordinator"
+    ],
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "National Director of Mobilization (Part-time, Volunteer)"
+}

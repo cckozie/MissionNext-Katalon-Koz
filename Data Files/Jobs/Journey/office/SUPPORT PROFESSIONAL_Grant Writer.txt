@@ -1,0 +1,45 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Fund Development",
+        "Grant Writing"
+    ],
+    "Alternate Job Title": [
+        "Grant Writer"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year",
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position"
+    ],
+    "Travel Support": [
+        "No travel funding provided",
+        "Travel funding negotiated"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "Vicky.Warren@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Grant Writer"
+}

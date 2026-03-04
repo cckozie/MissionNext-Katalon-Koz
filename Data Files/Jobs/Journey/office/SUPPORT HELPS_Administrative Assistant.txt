@@ -1,0 +1,45 @@
+{
+    "- SUPPORT HELPS": [
+        "Administrative Assistant",
+        "Data Entry"
+    ],
+    "Alternate Job Title": [
+        "Administrative Assistant"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year to two years",
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Palette Fitch"
+    ],
+    "Contact Email": "paulettef@missionnext.org",
+    "Category": "SUPPORT HELPS",
+    "Title": "Administrative Assistant"
+}

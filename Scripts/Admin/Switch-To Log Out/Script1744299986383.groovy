@@ -29,10 +29,18 @@ WebUI.click(findTestObject('Object Repository/Switch To/a_Switch back to Chris K
 
 WebUI.waitForPageLoad(15)
 
+WebUI.navigateToUrl("https://missionnext.org/managerlogin/?action=logout&amp")
+
+WebUI.waitForPageLoad(15)
+
+WebUI.click(findTestObject('Object Repository/Switch To/a_log out (you are attempting to)'))
+
 WebUI.click(findTestObject('Object Repository/Switch To/a_Logout in Parenthesis'))
 
 WebUI.waitForPageLoad(15)
 
+
+// REPLACED ALL OF THIS WITH THE NAVIGATE COMMAND ABOVE DUE TO UPDATE IN SWITCH-TO PLUGIN
 while(s.exists(imageFile)) {
 
 	WebUI.delay(2)
@@ -40,7 +48,7 @@ while(s.exists(imageFile)) {
 	s.click(imageFile)
 }
 
-//WebUI.click(findTestObject('Object Repository/Switch To/a_log out (you are attempting to)'))
+WebUI.click(findTestObject('Object Repository/Switch To/a_log out (you are attempting to)'))
 
 WebUI.waitForPageLoad(15)
 

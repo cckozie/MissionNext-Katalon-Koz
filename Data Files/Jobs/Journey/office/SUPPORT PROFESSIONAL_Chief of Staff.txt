@@ -1,0 +1,38 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Admin/Management",
+        "COO",
+        "Project Management"
+    ],
+    "Alternate Job Title": [
+        "Chief of Staff"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Time Commitment": [
+        "Open - Will negotiate"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Darla Clark"
+    ],
+    "Contact Email": "darla.clark@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Chief of Staff"
+}

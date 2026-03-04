@@ -26,13 +26,19 @@ import org.openqa.selenium.By as By
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 
 // Create previously captured jobs for a partner
+
 // 10/30/25 - Modified to force me as the contact and email
+
+// Add option to force all jobs to Volunteer/Self-supporting only
+volunteerOnly = true
 
 username = GlobalVariable.username
 
-partnerUser = 'billtreat'
+partnerUser = 'office' //'joshua.r@jesusfilm.org' //Partner from whom we captured jobs (Set the Profile to the user to receive the jobs)
 
-site = 'Education'
+site = 'Journey'
+
+lf = '\n'
 
 if(site == 'Education') {
 	suffix = '6ep'
@@ -55,38 +61,27 @@ outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.
 outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
 
 GlobalVariable.outFile = outFile
-/*
-//.First check to see if access has been granted to the user
-granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
 
-if(granted == false || granted == null) {
-	outText = '##### - ' + username + ' has NOT been granted access. Complete profile script is terminated.'
-	
-	outFile.append(outText + '\n')
-	
-	WebUI.closeBrowser()
-	 
-	GlobalVariable.testCaseErrorFlag = true
-	System.exit(0)
-}
-*/
-newJobsFilePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/'	// Path to new jobs data files
+newJobsFilePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/'	+ site + '/' + partnerUser // Path to new jobs data files
+//				  '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/Journey/joshua.r@jesusfilm.org'
 
-newJobsPath = 'Object Repository/' + site + 'Partner Profile/New Jobs/'	// Test Object base path
+newJobsPath = 'Object Repository/' + site + ' Partner Profile/New Jobs/'	// Test Object base path
 
 newJobsTabsPath = newJobsPath + 'Tabs/'
 
 // tabs map key = tab name, value = [required test object1 name, required test object2 name, etc]
 tabs = [
 	'Job Category':['select_Category'],// ['checkboxes- BUSINESS AS MISSION', 'checkboxes- CHURCH DEVELOPMENT', 'checkboxes- COMMUNICATIONS', 'checkboxes- COMMUNITY DEVELOPMENT', 'checkboxes- CONSTRUCT/MAINTAIN', 'checkboxes- DISCIPLESHIP', 'checkboxes- DISCIPLE YOUTH', 'checkboxes- EDUCATION', 'checkboxes- ESLTESOL', 'checkboxes- ENGINEERING', 'checkboxes- EVANGELISM', 'checkboxes- EVANGELISM SUPPORT', 'checkboxes- HEALTH CARE', 'checkboxes- INFORMATION TECHNOLOGY', 'checkboxes- JUSTICE/ADVOCACY', 'checkboxes- RELIEF AND DEVELOPMENT', 'checkboxes- RESOURCE MANAGEMENT', 'checkboxes- SUPPORT HELPS', 'checkboxes- SUPPORT PROFESSIONAL']],
+	'IT Job Category':['select_IT Job Category'],
 	'Job Classification':['input_Alternate Job Title', 'select_World Region'],
-	'Assignment Detail':['select_Start_Requested', 'checkboxes_Time Commitment', 'checkboxes_TimeHours Available', 'checkboxes_Cross-Cultural Experience', 'checkboxes_Languages'],
+	'Assignment Detail':['select_Start_Requested', 'checkboxes_Time Commitment', 'checkboxes_Time/Hours Available', 'checkboxes_Cross-Cultural Experience', 'checkboxes_Languages'],
 	'Logistics':['checkboxes_Paid and Volunteer Positions', 'checkboxes_Travel Support', 'checkboxes_Relocation Question'],
 	'Contact Details':['input_Contact Name', 'input_Contact Email'],
 	'Other Criteria':['checkboxes_Ministry Preferences']
 	]
 
 elementXpaths = [
+	// Job Category
 	'- BUSINESS AS MISSION' : "//input[@id='job_group-1613486301.149_subset_business_as_mission']",
 	'- CHURCH DEVELOPMENT' : "//input[@id='job_group-1613487025.929_subset_church_development']",
 	'- COMMUNICATIONS' : "//input[@id='job_group-1613487009.143_subset_communications']",
@@ -106,8 +101,20 @@ elementXpaths = [
 	'- RESOURCE MANAGEMENT' : "//input[@id='job_group-1613487353.674_subset_resource_management']",
 	'- SUPPORT HELPS' : "//input[@id='job_group-1613487293.775_subset_support_helps']",
 	'- SUPPORT PROFESSIONAL' : "//input[@id='job_group-1613487316.232_subset_support_professional']",
+	// IT Job Category
+	'- TECHNICAL' : "//input[@id='job_group-1710517746.856_subset_technical']",
+//	'- IT ENGINEERING/ANALYST' : "//input[@id='job_group-1710517803.592_subset_it_engineering']",
+	'- IT ENGINEERINGANALYST' : "//input[@id='job_group-1710517803.592_subset_it_engineering']",
+	'- ADMINISTRATOR' : "//input[@id='job_group-1710517809.337_subset_administrator']",
+	'- IT COMMUNICATIONS' : "//*[@id='job_group-1710517813.801_subset_it_communications']",
+	'- CONTENT' : '//*[@id="job_group-1710517839.535_subset_content"]',
+	'- DESIGNERS' : '//*[@id="job_group-1710517845.326_subset_designers"]',
+	'- DATABASE' : '//*[@id="job_group-1710517851.357_subset_database"]',
+	'- MANAGEMENT' : '//*[@id="job_group-1710517861.532_subset_management"]',
+	'- SOCIAL MEDIA/MARKETING' : '//*[@id="job_group-1710517866.531_subset_marketing"]',
+	'- WEB' : '//*[@id="job_group-1710517871.906_subset_web"]',
 	'Time Commitment' : "//input[@id='job_group-1613448548.497_time_commitment']",
-	'TimeHours Available' : "//input[@id='job_group-1613448548.497_time_availability']",
+	'Time/Hours Available' : "//input[@id='job_group-1613448548.497_time_availability']",
 	'Cross-Cultural Experience' : "//input[@id='job_group-1613448548.497_cross-cultural_experience']",
 	'Languages' : "//input[@id='job_group-1613448548.497_languages']",
 	'Paid and Volunteer Positions' : "//input[@id='job_group-1613449047.954_financial_support']",
@@ -115,7 +122,7 @@ elementXpaths = [
 	'Travel Support' : "//input[@id='job_group-1613449047.954_travel_support_(to_and_from_school_location)']",
 	'Ministry Preferences' : "//input[@id='job_group-1613449251.023_job_preferences']"
 	]
-
+	
 WebUI.callTestCase(findTestCase('_Functions/Journey Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Job Matches'))
@@ -127,7 +134,7 @@ files = new File(newJobsFilePath)
 
 capturedJobs = []
 
-files.eachFileRecurse {
+files.eachFile {
 	path = it.absolutePath
 	if(path.substring(path.length() - 4) == '.txt') {
 		capturedJobs.add(path)
@@ -144,7 +151,7 @@ newJobs = []
 
 capturedJobs.each {
 	values = []
-	file = it.substring(newJobsFilePath.length())
+	file = it.substring(newJobsFilePath.length() + 1)
 	uBar = file.indexOf('_')
 	category = file.substring(0,uBar)
 	title = file.substring(uBar + 1, file.length() - 4)
@@ -154,8 +161,11 @@ capturedJobs.each {
 	newJobs.add(values)
 }
 
+outFile.append('New Jobs' + '\n')
+println('\n\n >>>> newJobs')
 newJobs.each {
 	println(it)
+	outFile.append(it + lf)
 }
 
 // Ignore the job files that already exist
@@ -169,11 +179,17 @@ List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 
 int row_count = Rows.size()
 
-println(row_count - 2 + 'jobs found.')
+println(row_count - 2 + 'existing jobs found.')
 
 jobFound = false
 
 existingJobs = WebUI.verifyTextNotPresent('There are no Journey Jobs', false, FailureHandling.OPTIONAL)
+
+println('\n\n >>>> Captured Jobs')
+capturedJobs.each {
+	println(it)
+}
+
 
 if (existingJobs && row_count > 2) {
 	for (row = 2; row < row_count; row++) {
@@ -191,7 +207,9 @@ if (existingJobs && row_count > 2) {
 		println('Looking for job ' + jobCategory + '-' + jobTitle)
 		for(values in newJobs) {
 			if(values[0] == jobCategory && values[1] == jobTitle) {
-				println('Found and removing job ' + jobCategory + '-' + jobTitle)
+				outText = 'Found and removing job ' + jobCategory + '-' + jobTitle
+				println(outText)
+				outFile.append(outText + lf)
 				capturedJobs.remove(values[2])
 			}
 		}
@@ -199,30 +217,43 @@ if (existingJobs && row_count > 2) {
 }
 
 // Print list of actually new job files
+println('\n\n >>>> Revised Captured Jobs')
 capturedJobs.each {
 	println(it)
 }
 
-for(job in capturedJobs) {
-	println(job)
+if(capturedJobs.size() < 1) {
+	outText = 'Found no new jobs to be created.'
+	outFile.append('\n' + outText + '\n')
+	println(outText)
+	WebUI.closeBrowser()
+	System.exit(0)
 }
 
+outFile.append('Creating these jobs:' + lf)
+for(job in capturedJobs) {
+	outFile.append(job + lf)
+}
 
-//capturedJobs = ['/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/COMMUNICATIONS_Writer.txt']
-//capturedJobs = ['/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/INFORMATION TECHNOLOGY_AI Expert.txt']
-
+count = 0
 for(job in capturedJobs) {
 	
-	println('Processing new job file ' + job)
+	outText = 'Processing new job file ' + job
 	
+	outFile.append(outText + lf)
+
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Add Jobs'))
 	
-	WebUI.switchToWindowIndex(2)
+//	WebUI.switchToWindowIndex(2)
 	
 	WebUI.waitForPageLoad(30)
+	
+	println(job)
 		
 	// Read the file's text content
 	def jsonText = new File(job).text
+	
+	println(jsonText)
 	
 	// Create a new JsonSlurper to parse the JSON text
 	def slurper = new JsonSlurper()
@@ -230,10 +261,17 @@ for(job in capturedJobs) {
 	// Parse the text into a map
 	def tempMap = slurper.parseText(jsonText)
 	
+	println(tempMap)
+	
 	myMap = [:]
 	
+	tempMap.each {
+		[println(it)]
+	}
+	
+	
 	tempMap.each { key, value ->
-		key = key.replace('/','')
+//		key = key.replace('/','')
 		key = key.replace('&','and')
 		myMap[key] = value
 	}
@@ -241,7 +279,7 @@ for(job in capturedJobs) {
 	myMap.each {
 		println(it)
 	}
-	
+//	System.exit(0)
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/New Jobs/a_Job Description'))
 	
 	today = new Date()
@@ -249,6 +287,8 @@ for(job in capturedJobs) {
 	expiresDate = today.plus(180)
 	
 	WebUI.setText(findTestObject('Object Repository/Journey Partner Profile/New Jobs/Tabs/Job Description/calendar_Listing Expiration'),expiresDate.format('MM/dd/yyyy'))
+	
+	ITJobCategory = false
 	
 	for(myTab in tabs) {
 		
@@ -259,6 +299,10 @@ for(job in capturedJobs) {
 		tObj = newJobsPath + 'a_' + myTab.key
 		
 		println(tObj)
+		
+		if(!ITJobCategory && myTab.key == 'IT Job Category') {
+			continue
+		}
 		
 		// Click on the tab
 		
@@ -282,7 +326,8 @@ for(job in capturedJobs) {
 			
 			println(prefix)
 			
-			object = field.substring(uBar + 1).replace('/', '')
+//			object = field.substring(uBar + 1).replace('/', '')
+			object = field.substring(uBar + 1)
 			
 			print(object)
 			
@@ -296,8 +341,13 @@ for(job in capturedJobs) {
 				value = myMap.get(object)
 			}
 			
-			println(value)
+			print('field is ' + field)
+			println('value is ' + value)
 			
+			if(field.contains('Paid and Volunteer Positions')) {
+				value = ['Volunteer/self-supported position']
+			}
+				
 			valueClass = value.getClass().toString()
 			
 			println(valueClass)
@@ -311,14 +361,21 @@ for(job in capturedJobs) {
 				}
 				
 				println('Selecting ' + myValue + ' for ' + pathToMyTab + field)
-					
-				WebUI.selectOptionByLabel(findTestObject(pathToMyTab + field), myValue, false)
+				
+				if(myValue != null) {
+					WebUI.selectOptionByLabel(findTestObject(pathToMyTab + field), myValue, false)
+				} else {
+					println('***** BYPASSING ' + field)
+				}
 
-				if(myTab.key == 'Job Category') {
+				if(myTab.key == 'Job Category' || myTab.key == 'IT Job Category') {
 					
 					prefix = 'checkboxes'
 					
+//					object = '- ' + myValue.replace('/', '')
 					object = '- ' + myValue
+					
+					println(object)
 					
 					value = myMap.get(object)
 					
@@ -358,12 +415,33 @@ for(job in capturedJobs) {
 			
 				
 			}
-			
+						
 			WebUI.delay(1)
+			
+			println(myTab)
+			
+			if(myTab.key == 'Job Category') {
+				
+				itJob = myMap.get('Need to See Specific IT Jobs?','no')
+				
+				if(itJob[0] == 'Yes') {
+					ITJobCategory = true
+				}
+				
+				if(ITJobCategory) {
+					WebUI.check(findTestObject('Object Repository/Journey Partner Profile/New Jobs/Tabs/Job Category/checkbox_See Specific IT Jobs'))
+				}
+				
+				WebUI.delay(1)
+			}
+		
 //			System.exit(0)
+			
+//			if(myTab.key == 'Assignment Detail') {
+//				System.exit(0)
+//			}
 		}
 	}
-	
 	
 	object = 'Object Repository/Journey Partner Profile/New Jobs/button_Create'
 	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
@@ -372,13 +450,17 @@ for(job in capturedJobs) {
 	
 	WebUI.waitForPageLoad(30)
 	
+	WebUI.delay(2) // Just for viewing
+	
 	println('Window index is ' + WebUI.getWindowIndex())
 	
-	WebUI.closeWindowIndex(2)
-	
-	WebUI.switchToWindowIndex(1)
-	
 	WebUI.refresh()
+	
+	count++
+	
+//	if(count > 1) {
+//		System.exit(0)
+//	}
 	
 }
 

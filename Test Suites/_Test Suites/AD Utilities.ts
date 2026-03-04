@@ -15,7 +15,7 @@
       <guid>5e302f20-e88a-4e90-a3dc-4fc78d7ea3f2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Admin/Fix Last Login Dates</testCaseId>
+      <testCaseId>Test Cases/Expiration Date Tests/Fix Last Login Dates</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

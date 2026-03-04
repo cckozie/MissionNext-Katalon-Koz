@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions;
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
 
 
-maxMatches = 10 //overridden if running test suite
+maxMatches = 50 //overridden if running test suite
 
 bypass = false
 
@@ -76,6 +76,8 @@ if(GlobalVariable.testSuiteRunning) {
 
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
+
+myTestCase += '-' + GlobalVariable.host
 
 // Entries in AD candidate profile page that need to be ignored
 categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions', 'Enter other Ethnicity', 'Enter Family Status'

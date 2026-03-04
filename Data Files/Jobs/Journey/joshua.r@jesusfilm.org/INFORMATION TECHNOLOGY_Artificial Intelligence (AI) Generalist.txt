@@ -1,0 +1,63 @@
+{
+    "- INFORMATION TECHNOLOGY": [
+        "AI Strategist",
+        "Digital Strategist",
+        "IT Application Developer",
+        "IT Training Coordinator",
+        "Software Developer",
+        "Software Systems Integrator"
+    ],
+    "Alternate Job Title": [
+        "Artificial Intelligence (AI) Generalist"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Within 12 months"
+    ],
+    "Time Commitment": [
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Part Time ~ 20 Hours/Week",
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "I am not able to relocate for the foreseeable future",
+        "I am willing to relocate within North America"
+    ],
+    "Contact Name": [
+        "Joshua Reisinger"
+    ],
+    "Contact Email": "joshua.r@jesusfilm.org",
+    "Ministry Preferences": [
+        "Information Technology",
+        "Web Content",
+        "Website Help/Chat",
+        "AI Strategist",
+        "Digital Strategist",
+        "IT Application Developer",
+        "IT Systems Administrator",
+        "IT Training Coordinator",
+        "Software Developer",
+        "Software Systems Integrator"
+    ],
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Artificial Intelligence (AI) Generalist"
+}

@@ -1,0 +1,48 @@
+{
+    "- JUSTICE/ADVOCACY": [
+        "Corporate Attorney",
+        "Legal/Executive Assistant",
+        "Managing Attorney",
+        "Paralegal"
+    ],
+    "Alternate Job Title": [
+        "Corporate Attorney"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Short-term",
+        "Open - Will negotiate"
+    ],
+    "Time/Hours Available": [
+        "Part Time ~ 10 Hours/Week",
+        "Part Time ~ 20 Hours/Week",
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Founder"
+    ],
+    "Contact Email": "founder@missionnext.org",
+    "Category": "JUSTICE/ADVOCACY",
+    "Title": "Corporate Attorney"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Job Matches - Journey - Switch-to</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ac120028-c6e7-452d-a7cd-f682b95fb85e</testCaseGuid>
+</TestCaseEntity>

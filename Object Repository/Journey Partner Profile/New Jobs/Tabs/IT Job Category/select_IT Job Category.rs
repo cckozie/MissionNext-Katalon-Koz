@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_IT Job Category</name>
+   <tag></tag>
+   <elementGuidId>4397fa3e-a4c4-44b1-a23c-7d319447a723</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id='job_group-1697227603.462_job_title_!#it-technology']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+      <webElementGuid>8164ca1b-1761-4d8c-b371-d9ae33353121</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-dependant</name>
+      <type>Main</type>
+      <value>1</value>
+      <webElementGuid>9e9f3d4c-3f7a-4afd-b9b1-3198e9b8c248</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-key</name>
+      <type>Main</type>
+      <value>job_title_!#it-technology</value>
+      <webElementGuid>90f5a4b4-1a7f-47a4-8ffc-973b5ea11fce</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>data-id</name>
+      <type>Main</type>
+      <value>97</value>
+      <webElementGuid>e4afaf2a-392f-4fc3-8737-f0575d328d6c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>job[group-1697227603.462][job_title_!#it-technology]</value>
+      <webElementGuid>b3a22dc5-4a65-4d67-88d2-c323bf22b63b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>id</name>
+      <type>Main</type>
+      <value>job_group-1697227603.462_job_title_!#it-technology</value>
+      <webElementGuid>c9570830-3a5c-4296-b516-9a8aba87ef6d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+TECHNICAL
+IT ENGINEERING/ANALYST
+ADMINISTRATOR
+IT COMMUNICATIONS
+CONTENT
+DESIGNERS
+DATABASE
+MANAGEMENT
+SOCIAL MEDIA/MARKETING
+WEB
+</value>
+      <webElementGuid>05cee23d-b820-437e-bb61-dd6359130dd8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;job_group-1697227603.462_job_title_!#it-technology&quot;)</value>
+      <webElementGuid>a42522b0-b939-492e-b2a7-deea84d5a289</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@id='job_group-1697227603.462_job_title_!#it-technology']</value>
+      <webElementGuid>456a2b94-c947-4c76-b7b7-e1d3ed18a541</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='group-1697227603.462']/div/div[2]/select</value>
+      <webElementGuid>a0079347-2699-4e0f-8c89-bea0fe3c8d7a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='IT Job Category'])[2]/following::select[1]</value>
+      <webElementGuid>84fd4974-2b41-4aad-8433-fd43f39ea365</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Need to See Specific IT Jobs?'])[1]/following::select[1]</value>
+      <webElementGuid>34ce809f-76a2-419e-80bb-faad7ba1af68</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='- TECHNICAL'])[1]/preceding::select[1]</value>
+      <webElementGuid>ba457ada-9aef-476c-8d84-d81715ac0568</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Developer, Applications'])[1]/preceding::select[1]</value>
+      <webElementGuid>da4f09ac-4082-4d70-8e3e-fd89e366d3c4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[21]/div/div[2]/select</value>
+      <webElementGuid>3da9bd57-5219-416e-8160-11df3ed484ff</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//select[@name = 'job[group-1697227603.462][job_title_!#it-technology]' and @id = 'job_group-1697227603.462_job_title_!#it-technology' and (text() = '
+TECHNICAL
+IT ENGINEERING/ANALYST
+ADMINISTRATOR
+IT COMMUNICATIONS
+CONTENT
+DESIGNERS
+DATABASE
+MANAGEMENT
+SOCIAL MEDIA/MARKETING
+WEB
+' or . = '
+TECHNICAL
+IT ENGINEERING/ANALYST
+ADMINISTRATOR
+IT COMMUNICATIONS
+CONTENT
+DESIGNERS
+DATABASE
+MANAGEMENT
+SOCIAL MEDIA/MARKETING
+WEB
+')]</value>
+      <webElementGuid>351da564-3b12-4bf7-8915-4626af969466</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

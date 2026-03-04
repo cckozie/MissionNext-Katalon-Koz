@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Admin Log Out</name>
+   <tag></tag>
+   <elementGuidId>6ed0e991-1a38-4d7b-abc0-a53b3c6fc8ea</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#wp-admin-bar-logout > a.ab-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@id='wp-admin-bar-logout']/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>c51098d5-78e1-43e6-87bf-0f2cfa82c1f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>ab-item</value>
+      <webElementGuid>8d4ca3a6-86ca-4945-a549-ed456769ff60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>menuitem</value>
+      <webElementGuid>d51a2276-e413-4f48-a93f-8521acb50699</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/managerlogin/?action=logout&amp;_wpnonce=1861fc9609</value>
+      <webElementGuid>5e156a72-da80-4491-acd0-e42c99652518</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Log Out</value>
+      <webElementGuid>a6648c6f-0dae-4e01-b0c2-61463d6bdbbf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;wp-admin-bar-logout&quot;)/a[@class=&quot;ab-item&quot;]</value>
+      <webElementGuid>5df39fce-1389-4d7e-ac9f-b0173fad5846</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//li[@id='wp-admin-bar-logout']/a</value>
+      <webElementGuid>d5a4368a-082d-4e5e-9282-cc6a7555f1f3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Log Out')]</value>
+      <webElementGuid>c86b0f5e-90cb-40b6-96bc-84e6a5e14074</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Edit Profile'])[1]/following::a[1]</value>
+      <webElementGuid>c5be78c8-dcbe-4f0a-ad3c-1968e4d05f9d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='chriskosieracki'])[1]/following::a[1]</value>
+      <webElementGuid>63e2d510-4261-497d-86dd-91bf573b5175</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Switch Off'])[1]/preceding::a[1]</value>
+      <webElementGuid>35d3e43b-803e-498f-9ff9-8a7df575e7ad</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Overview'])[1]/preceding::a[2]</value>
+      <webElementGuid>4cf4dce7-003a-4fd0-bdf9-cf5985493a06</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Log Out']/parent::*</value>
+      <webElementGuid>22a3bc03-67b9-4d90-a8a4-fe8a5cac171e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/managerlogin/?action=logout&amp;_wpnonce=1861fc9609')]</value>
+      <webElementGuid>6a98af43-80b7-42c7-97f3-d1087fca66c3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/ul[2]/li/div/ul/li[2]/a</value>
+      <webElementGuid>e3a0f232-af79-4b1e-87d3-b89ce9d6c249</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/managerlogin/?action=logout&amp;_wpnonce=1861fc9609' and (text() = 'Log Out' or . = 'Log Out')]</value>
+      <webElementGuid>4f7b68f7-9571-409a-91eb-27018252ed24</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

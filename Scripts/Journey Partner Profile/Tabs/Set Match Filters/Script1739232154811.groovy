@@ -46,15 +46,15 @@ lastY = -100
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varProfile_years]
+parms = [varAuto_classify, varProfile_years]
 
-//xpath of the Paid & Volunteer Positions group
-//paid_volunteer_position = "//input[@id='profile_group-1446521957.744_financial_support']"
+//xpath of the Auto Classify group
+auto_classify = '//*[@id="group-1446521957.744"]/div[2]/div[3]'
 
 //xpath of Profile Years group
 profile_years = "//input[@id='profile_group-1446521957.744_profile_years']"
 
-xpaths = [profile_years]
+xpaths = [auto_classify ,profile_years]
 
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // Define path to tooltip text images

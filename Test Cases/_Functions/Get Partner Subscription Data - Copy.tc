@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Partner Subscription Data - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>6def6bf2-5abd-4b98-b595-5e488c1edbe2</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,44 @@
+{
+    "- INFORMATION TECHNOLOGY": [
+        "Web Developer",
+        "Web Layout/Design"
+    ],
+    "Alternate Job Title": [
+        "Digital Marketing Manager"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "No Preference"
+    ],
+    "Travel Support": [
+        "No travel funding provided",
+        "Travel funding negotiated"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Brad Benson"
+    ],
+    "Contact Email": "brad.benson@missionnext.org",
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Digital Marketing Manager"
+}

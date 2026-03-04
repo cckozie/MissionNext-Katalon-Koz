@@ -40,7 +40,7 @@ if(index < 0) {
 
 WebUI.navigateToUrl('https://missionnext.org/managerlogin/')
 
-WebUI.waitForPageLoad(30)
+WebUI.waitForPageLoad(60)
 
 WebUI.delay(2)
 
@@ -50,7 +50,9 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Manager/input_Password'
 
 WebUI.click(findTestObject('Object Repository/Manager/input_Log In'))
 
-WebUI.waitForPageLoad(30)
+WebUI.waitForPageLoad(60)
+
+WebUI.delay(2)
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -85,6 +87,8 @@ dashboard.click()
 
 WebUI.waitForPageLoad(60)
 
+WebUI.delay(2)
+
 WebElement users = driver.findElement(By.xpath('//*[@id="menu-users"]/a/div[2]'))
 
 actions.moveToElement(users).perform();
@@ -105,6 +109,8 @@ if(varUsername != null && varUsername != '') {
 	
 	WebUI.waitForPageLoad(60)
 	
+	WebUI.delay(2)
+
 	WebElement Table = driver.findElement(By.xpath('//*[@id="the-list"]'))
 	
 	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
@@ -154,5 +160,3 @@ if(varUsername != null && varUsername != '') {
 		}
 	}
 }
-	
-	

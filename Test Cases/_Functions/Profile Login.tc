@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Profile Login</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>99888e50-db27-4318-880e-397c95f72a68</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>01ade3e2-d7fd-48d8-a510-c648db6a5e5e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>01ade3e2-d7fd-48d8-a510-c648db6a5e5e</id>
+      <masked>false</masked>
+      <name>varProfile</name>
+   </variable>
+</TestCaseEntity>

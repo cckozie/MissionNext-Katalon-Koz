@@ -1,0 +1,48 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Admin/Management",
+        "Marketing",
+        "Mission Representative",
+        "Recruiter/Mobilizer",
+        "Training Coordinator"
+    ],
+    "Alternate Job Title": [
+        "Education Specialist (Part-time Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Immediately"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "Some travel funds available"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "Vicky.Warren@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Education Specialist (Part-time Volunteer)"
+}

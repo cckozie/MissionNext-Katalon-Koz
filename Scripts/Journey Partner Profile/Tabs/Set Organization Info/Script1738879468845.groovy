@@ -82,7 +82,6 @@ requiredFieldMsgs = [:]
 // Define the page's links and the text to search for on the linked page
 pageLinks = [('Partnership Agreement') : 'Partnership Agreement', ('Terms and Conditions') : 'Terms and Conditions']
 
-
 //Go to the Organization Info tab
 WebUI.click(findTestObject('Journey Partner Profile/Tabs/a_Organization Info'))
 

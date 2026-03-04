@@ -38,7 +38,7 @@ WebUI.openBrowser('')
 
 //pages = inFile.readLines()
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test data/ExploreNext Links to MissionNext.csv')
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/ExploreNext Links to MissionNext.csv')
 
 outText = 'FROM PAGE,LINK,LINK URL,VISIBLE\n'
 

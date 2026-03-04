@@ -107,7 +107,6 @@ requiredFieldMsgs = [
 ('Relocation Options') : 'The relocation question field is required.',
 ('Paid & Volunteer Positions') : 'The financial support field is required.']
 
-
 //Go to the Service Options tab
 WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Tabs/a_Readiness'))
 

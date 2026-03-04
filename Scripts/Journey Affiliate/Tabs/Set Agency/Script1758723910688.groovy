@@ -105,7 +105,7 @@ outFile.append(outText)
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
     FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.setText(findTestObject('Object Repository/Journey Affiliate/Tabs/Agency/input_Abbreviation'), 'CKO3JA')
+WebUI.setText(findTestObject('Object Repository/Journey Affiliate/Tabs/Agency/input_Abbreviation'), GlobalVariable.abbreviation)
 
 //Set the settings checkbox
 if (varSettings != null) {

@@ -1,0 +1,41 @@
+{
+    "- INFORMATION TECHNOLOGY": [
+        "Web Developer",
+        "Web Layout/Design",
+        "Web Programming",
+        "Webmaster"
+    ],
+    "Alternate Job Title": [
+        "Web Manager, (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own",
+        "Occasionally served in cultures other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Travel Support": [
+        "No travel funding provided",
+        "Travel funding negotiated"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Brad Benson"
+    ],
+    "Contact Email": "brad.benson@missionnext.org",
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Web Manager, (Part-time, Volunteer)"
+}

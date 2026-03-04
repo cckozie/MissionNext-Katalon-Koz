@@ -35,7 +35,7 @@ import java.time.Instant as Instant
 import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 
-maxMatches = 10 //overridden if running test suite
+maxMatches = 2 //overridden if running test suite
 
 updateWildcards = false
 

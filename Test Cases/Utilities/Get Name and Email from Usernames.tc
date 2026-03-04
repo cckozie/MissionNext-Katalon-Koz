@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Name and Email from Usernames</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>880b06ce-3082-4cf0-8630-dd8a1a58d571</testCaseGuid>
+</TestCaseEntity>

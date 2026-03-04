@@ -191,6 +191,7 @@ outFile.append(outText)
 
 WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList, ('varRequiredFieldMsgs') : requiredFieldMsgs], 
     FailureHandling.CONTINUE_ON_FAILURE)
+System.exit(0)
 
 //Enter the password, first and last names, country, and phone number, and optional fields except Terms and Conditions
 object = 'Education Candidate Profile/Register/input_Password'

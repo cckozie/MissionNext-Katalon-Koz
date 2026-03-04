@@ -93,8 +93,9 @@ requiredFieldMsgs = [
 ('Available Positions') : 'The educational positions field is required.',
 ('Experience Preferred') : 'The teacher experience preferred field is required.']
 
-//Go to the Admin Info tab
-WebUI.click(findTestObject('Education Partner Profile/Tabs/a_Positions Needed'))
+//Go to the Positions Needed tab
+object = 'Education Partner Profile/Tabs/a_Positions Needed'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 //Get the actual tooltip text
 tooltipTextMap = WebUI.callTestCase(findTestCase('_Functions/Get Screenshot and Tooltip Text'), [('varExtension') : testName],
@@ -128,7 +129,8 @@ if (!(url) == (('https://education.' + GlobalVariable.domain) + '/profile?reques
     WebUI.callTestCase(findTestCase('_Functions/Education Partner Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-WebUI.click(findTestObject('Object Repository/Education Partner Profile/Tabs/a_Positions Needed'))
+object = 'Education Partner Profile/Tabs/a_Positions Needed'
+WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 // Test for all required field error messages
 fieldList = []

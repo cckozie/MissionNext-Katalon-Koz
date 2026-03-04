@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Fix Candidate Expiration Dates - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ac4ef5fe-31a9-4450-ac36-2f65a9bd8f19</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,42 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Fund Development"
+    ],
+    "Alternate Job Title": [
+        "Chief Development Officer (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Open - Will negotiate"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "No Preference"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "Vicky.Warren@missionnext.org",
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Chief Development Officer (Part-time, Volunteer)"
+}

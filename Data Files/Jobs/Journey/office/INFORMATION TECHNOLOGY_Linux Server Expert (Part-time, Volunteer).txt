@@ -1,0 +1,47 @@
+{
+    "- INFORMATION TECHNOLOGY": [
+        "Database Administrator",
+        "IT Architect",
+        "IT Support Specialist",
+        "IT Systems Administrator",
+        "IT Systems Analyst"
+    ],
+    "Alternate Job Title": [
+        "Linux Server Expert (Part-time, Volunteer)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Immediately"
+    ],
+    "Time Commitment": [
+        "One year to two years",
+        "Open - Will negotiate"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position"
+    ],
+    "Travel Support": [
+        "Travel funding negotiated"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Brad Benson"
+    ],
+    "Contact Email": "brad.benson@missionnext.org",
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Linux Server Expert (Part-time, Volunteer)"
+}

@@ -1,0 +1,54 @@
+{
+    "- COMMUNICATIONS": [
+        "Graphic Arts Design",
+        "Social Media",
+        "Web Content"
+    ],
+    "Alternate Job Title": [
+        "YouTube Content & Platform Specialist"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Long Term",
+        "Internships"
+    ],
+    "Time/Hours Available": [
+        "Part Time ~ 20 Hours/Week",
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "I am willing to relocate within North America"
+    ],
+    "Contact Name": [
+        "Joshua Reisinger"
+    ],
+    "Contact Email": "joshua.r@jesusfilm.org",
+    "Ministry Preferences": [
+        "Graphic Arts Design",
+        "Social Media",
+        "Web Content",
+        "Social Media Marketing"
+    ],
+    "Category": "COMMUNICATIONS",
+    "Title": "YouTube Content & Platform Specialist"
+}

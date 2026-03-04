@@ -1,0 +1,54 @@
+{
+    "Journey Job Category": [
+        "INFORMATION TECHNOLOGY"
+    ],
+    "- INFORMATION TECHNOLOGY": [
+        "IT Support Specialist",
+        "IT Job Category"
+    ],
+    "Ministry Preferences": [
+        "IT Support Specialist",
+        "IT Job Category"
+    ],
+    "Alternate Job Title": [
+        "Production Equipment Lead"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Within 12 months"
+    ],
+    "Time Commitment": [
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Part Time ~ 20 Hours/Week",
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "I am not able to relocate for the foreseeable future",
+        "I am willing to relocate within North America"
+    ],
+    "Contact Name": [
+        "Joshua Reisinger"
+    ],
+    "Contact Email": "joshua.r@jesusfilm.org",
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Recording Technician"
+}

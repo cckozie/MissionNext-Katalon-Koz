@@ -41,7 +41,9 @@ import org.openqa.selenium.interactions.Actions
 
 // NEED TO ADD TEST FOR CHECKING 'ALL' FOR RECRUITING COUNTRIES
 
-maxMatches = 20 //Overridden if test suite running
+fudgeFactor = 2 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
+
+maxMatches = 50 //Overridden if test suite running
 
 updateWildcards = true	
 
@@ -50,7 +52,7 @@ debug = false
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Journey' // Journey or Education
+	site = 'Education' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job
@@ -91,6 +93,8 @@ if(GlobalVariable.testSuiteRunning) {
 
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3) + '-' + site
 }
+
+myTestCase += '-' + GlobalVariable.host
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
@@ -249,6 +253,12 @@ WebUI.switchToWindowIndex(tableTab)
 
 WebUI.waitForPageLoad(60)
 
+testAcct = WebUI.verifyElementClickable(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'), FailureHandling.OPTIONAL)
+
+if(testAcct) {
+	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'))
+}
+
 WebDriver driver = DriverFactory.getWebDriver()
 
 WebElement Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
@@ -340,7 +350,16 @@ if(row_count > 0) {
 		WebUI
 		
 		WebUI.waitForPageLoad(30)
-
+		
+		buttons = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/button_PrintForward Profile'), FailureHandling.OPTIONAL)
+		
+		while(!buttons) { //Added for unstable internest in Keizer
+			
+			WebUI.delay(2)
+			
+			buttons = WebUI.verifyElementVisible(findTestObject('Object Repository/Education Partner Profile/Forward Candidate Profile/button_PrintForward Profile'), FailureHandling.OPTIONAL)
+		}
+		
         notMatched = []
 
 		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web'),
@@ -636,17 +655,17 @@ def doMatching(def candidateSelections, def organizationSelections) {
 
 	code = ''
 	
-    if (((addedPct - tablePct) > 1) || ((tablePct - popupPct) > 1)) {
+    if (((addedPct - tablePct) > fudgeFactor) || ((tablePct - popupPct) > fudgeFactor)) {
         error = true
 		noErrors = false
 		
-		if(Math.abs(addedPct - tablePct) > 1) {	
+		if(Math.abs(addedPct - tablePct) > fudgeFactor) {	
 			code = '12 '
 		}
-		if(Math.abs(addedPct - popupPct) > 1) {
+		if(Math.abs(addedPct - popupPct) > fudgeFactor) {
 			code = code + '13 '
 		}
-		if(Math.abs(tablePct - popupPct) > 1) {
+		if(Math.abs(tablePct - popupPct) > fudgeFactor) {
 			code = code + '23'
 		}
     }

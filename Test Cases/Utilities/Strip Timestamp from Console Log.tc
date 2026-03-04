@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Strip Timestamp from Console Log</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a92b26ea-7140-450e-a693-c234a4586c03</testCaseGuid>
+</TestCaseEntity>

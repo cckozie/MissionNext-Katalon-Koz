@@ -13,6 +13,10 @@
          <key>CSS</key>
          <value>a:nth-of-type(2)</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@href = '/profile' and (text() = 'My Profile' or . = 'My Profile')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <smartLocatorEnabled>false</smartLocatorEnabled>
@@ -23,7 +27,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>55549867-17fb-4cd9-8951-60acc8583315</webElementGuid>
+      <webElementGuid>54eed766-1b96-4d1e-b522-16267bf96c7b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +35,7 @@
       <name>href</name>
       <type>Main</type>
       <value>/profile</value>
-      <webElementGuid>496d5bde-f99b-41e1-b3ce-081459693296</webElementGuid>
+      <webElementGuid>7905944e-5943-4a1b-8051-d67ba8854d48</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +43,7 @@
       <name>text</name>
       <type>Main</type>
       <value>My Profile</value>
-      <webElementGuid>b7e50307-b808-4749-8a74-21a1b9db2820</webElementGuid>
+      <webElementGuid>c68dcae7-df6b-4ed3-b4e0-6d37a81d7303</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +51,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[2]</value>
-      <webElementGuid>923f42ad-505b-47bf-87a4-af8592f3c52b</webElementGuid>
+      <webElementGuid>dca27033-d015-4edd-adb3-4ad7fd1e8b77</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +59,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//div[@id='main']/div/div/div/div/div/div[2]/a[2]</value>
-      <webElementGuid>6b6afb25-500d-4f12-8299-9e3b53480ffd</webElementGuid>
+      <webElementGuid>cb553946-ae9b-49cd-ba39-48e910277711</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +67,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'My Profile')]</value>
-      <webElementGuid>87dd9503-90a5-4131-acaf-993602a255db</webElementGuid>
+      <webElementGuid>bb889c0a-e1f4-4fed-9de5-6bb88652ea89</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +75,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Dashboard'])[1]/following::a[1]</value>
-      <webElementGuid>66528248-b70a-4b6e-a7c7-a62e1b0854d7</webElementGuid>
+      <webElementGuid>2376e8f4-07c3-4cd1-a318-19fb370ea345</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +83,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Upload'])[1]/following::a[2]</value>
-      <webElementGuid>ef99cdc2-bc72-4199-ac7c-99d7440344bc</webElementGuid>
+      <webElementGuid>539af9ae-46b6-4199-b562-cb8f2e74a997</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +91,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Change Password'])[1]/preceding::a[1]</value>
-      <webElementGuid>1dddd21d-6019-49c3-8552-4471ce8a89f1</webElementGuid>
+      <webElementGuid>3572897b-25c8-4d89-a683-57d2c8bb9b12</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +99,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='My Presentation'])[1]/preceding::a[2]</value>
-      <webElementGuid>12a773e6-0491-4575-8417-73fa9d310d3c</webElementGuid>
+      <webElementGuid>c5e415b8-a911-4c63-bce2-74b34b5de431</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +107,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='My Profile']/parent::*</value>
-      <webElementGuid>327a16f8-0b7f-4b92-acc1-d556c213dc9f</webElementGuid>
+      <webElementGuid>6290461c-4a56-46aa-a05e-cbaf3031e2b6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +115,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, '/profile')]</value>
-      <webElementGuid>c2be3db0-f0ae-442b-afe8-fa4d477b0de3</webElementGuid>
+      <webElementGuid>a928dae8-3da3-4b15-84f8-55a425ec8331</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +123,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//a[2]</value>
-      <webElementGuid>2799bef8-ebc8-4977-91f3-057e477c1cad</webElementGuid>
+      <webElementGuid>c407d0d5-0bb0-41ca-85cc-65f46dfdcc86</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +131,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = '/profile' and (text() = 'My Profile' or . = 'My Profile')]</value>
-      <webElementGuid>e8f1000e-24f3-4eff-960c-e49dc950840d</webElementGuid>
+      <webElementGuid>48f36fb4-0a3f-4788-9da7-4abb0f6a2d7a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

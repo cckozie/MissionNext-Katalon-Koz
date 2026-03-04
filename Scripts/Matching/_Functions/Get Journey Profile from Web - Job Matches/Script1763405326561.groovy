@@ -31,6 +31,8 @@ import java.awt.datatransfer.Clipboard as Clipboard
 
 debug = true
 
+error = false
+
 bypass = false //Clipboard already holds table
 
 if(bypass) {
@@ -113,178 +115,186 @@ if (!(bypass)) {
 	
 	println(data)
 	
+	if(data.length() < 200) {
+		error = true
+	}
+	
 	tempFile.write(data)
 }
 
-BufferedReader reader
-
-reader = new BufferedReader(new FileReader(tempFile))
-
-fields = [:]
-
-values = []
-
-first = true
-
-done = false
-
-valueLine = false
-
-positions = false
-
-positionsEnd = false
-
-spouseFound = false
-
-line = ''
-
-while(!line.contains('First Name:')) { //Ignore all until first name field
-	line = getNextLine(reader)
-	println(line)
-}
-
-while(line != null && !done) {
+if(!error) {
+	BufferedReader reader
 	
-	if(line.contains(':')) { // It's potentially a field
+	reader = new BufferedReader(new FileReader(tempFile))
+	
+	fields = [:]
+	
+	values = []
+	
+	first = true
+	
+	done = false
+	
+	valueLine = false
+	
+	positions = false
+	
+	positionsEnd = false
+	
+	spouseFound = false
+	
+	line = ''
+	
+	while(!line.contains('First Name:')) { //Ignore all until first name field
+		line = getNextLine(reader)
+		println(line)
+	}
+	
+	while(line != null && !done) {
 		
-		if(!first) {
+		if(line.contains(':')) { // It's potentially a field
 			
-			if(debug) {println(field + ':' + values)}
-			
-			if(field in matchFields || field in userFields) {
-			
-				fields.put(field,values)
-				values = []
-			}
-			
-			if(field == 'First Name') {
-				firstName = values[0]
-			}
-			
-			if(field == 'Last Name') {
-				lastName = values[0]
-			}
-			
-			if(field == 'Marital status') {
-				maritalStatus = values[0]
-			}
-		}
-		
-		first = false
-		
-		values = []
-		
-		colon = line.indexOf(':')
-		
-		field = line.substring(0, colon)
-		
-		if(debug) {println('field is ' + field)}
-		
-		if(colon < line.length()) {
-			
-			value = line.substring(colon + 1).trim()
-			
-			if(value.length() > 1) {
-			
-				if(debug) {println('value is ' + value)}
+			if(!first) {
 				
+				if(debug) {println(field + ':' + values)}
+				
+				if(field in matchFields || field in userFields) {
+				
+					fields.put(field,values)
+					values = []
+				}
+				
+				if(field == 'First Name') {
+					firstName = values[0]
+				}
+				
+				if(field == 'Last Name') {
+					lastName = values[0]
+				}
+				
+				if(field == 'Marital status') {
+					maritalStatus = values[0]
+				}
+			}
+			
+			first = false
+			
+			values = []
+			
+			colon = line.indexOf(':')
+			
+			field = line.substring(0, colon)
+			
+			if(debug) {println('field is ' + field)}
+			
+			if(colon < line.length()) {
+				
+				value = line.substring(colon + 1).trim()
+				
+				if(value.length() > 1) {
+				
+					if(debug) {println('value is ' + value)}
+					
+					values.add(value)
+				}
+				
+			} else {
+				
+				value = line.trim()
+				
+				if(debug) {println('value is ' + value)}
+					
 				values.add(value)
+				
 			}
 			
 		} else {
 			
-			value = line.trim()
+			if(!line.contains('Preferred Positions')) {
 			
-			if(debug) {println('value is ' + value)}
+				valueLine = true
 				
-			values.add(value)
-			
-		}
-		
-	} else {
-		
-		if(!line.contains('Preferred Positions')) {
-		
-			valueLine = true
-			
-			value = line.trim()
-				
-			if(debug) {println('value is ' + value)}
-				
-			values.add(value)
-			
-			line = getNextLine(reader)
-		}
-		
-		if(line.contains('Preferred Positions') || positions) {
-			
-			if(line.contains('Preferred Positions')) {
-						fields.put(field,values)
-			}
-			
-			values = []
-			
-			tab = '\t'
-			
-			leader = ' 	 	'
-			
-			positions = true
-			
-			line = getNextLine(reader)
-
-			while(line != null && !positionsEnd && !done) {
-			
-				tab1 = line.indexOf('\t')
-				
-				println('tab at ' + tab1)
-				
-				if(tab1 > 0) {
-					if(values.size() > 0) {
-						field = '- ' + field
-						fields.put(field,values)
-						values = []
-					}
-					field = line.substring(0,tab1)
-					println(field)
-					value = line.substring(tab1 + 1)
-					println(value)
-					values.add(value)
+				value = line.trim()
 					
-				} else {
-					leader1 = line.indexOf(leader)
-					value = line.substring(leader1 + 1)
-					println(value)
-					values.add(value)
-				}
-						
+				if(debug) {println('value is ' + value)}
+					
+				values.add(value)
+				
 				line = getNextLine(reader)
 			}
-		} 
-	}
-
-	if(!valueLine) {
-		line = getNextLine(reader)
+			
+			if(line.contains('Preferred Positions') || positions) {
+				
+				if(line.contains('Preferred Positions')) {
+							fields.put(field,values)
+				}
+				
+				values = []
+				
+				tab = '\t'
+				
+				leader = ' 	 	'
+				
+				positions = true
+				
+				line = getNextLine(reader)
+	
+				while(line != null && !positionsEnd && !done) {
+				
+					tab1 = line.indexOf('\t')
+					
+					println('tab at ' + tab1)
+					
+					if(tab1 > 0) {
+						if(values.size() > 0) {
+							field = '- ' + field
+							fields.put(field,values)
+							values = []
+						}
+						field = line.substring(0,tab1)
+						println(field)
+						value = line.substring(tab1 + 1)
+						println(value)
+						values.add(value)
+						
+					} else {
+						leader1 = line.indexOf(leader)
+						value = line.substring(leader1 + 1)
+						println(value)
+						values.add(value)
+					}
+							
+					line = getNextLine(reader)
+				}
+			} 
+		}
+	
+		if(!valueLine) {
+			line = getNextLine(reader)
+		}
+		
+		valueLine = false
+	
 	}
 	
-	valueLine = false
-
-}
-
-//field = '- ' + field
-
-fields.put(field,values)
-
-if(debug) {println(field + ':' + values)}
-
-reader.close()
-
-if(debug) {
-	fields.each{
-		println(it.key + ':' + it.value)
+	//field = '- ' + field
+	
+	fields.put(field,values)
+	
+	if(debug) {println(field + ':' + values)}
+	
+	reader.close()
+	
+	if(debug) {
+		fields.each{
+			println(it.key + ':' + it.value)
+		}
 	}
+	
+	return fields
+} else {
+	return 'error'
 }
-
-return fields
 
 def getNextLine(reader) {
 	line = reader.readLine()

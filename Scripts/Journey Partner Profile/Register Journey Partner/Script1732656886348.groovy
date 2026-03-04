@@ -27,6 +27,7 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -348,7 +349,7 @@ WebUI.delay(1)
 
 // Delay, then test for the Approval Pending page
 WebUI.waitForPageLoad(10)
-System.exit(0)
+
 pending = WebUI.verifyTextPresent('Approval Pending', false, FailureHandling.OPTIONAL)
 
 if (pending) {

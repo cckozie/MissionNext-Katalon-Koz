@@ -40,7 +40,7 @@ import org.openqa.selenium.interactions.Actions
  * 	(Maybe force add 'Your Country of Citizenship   Recruit From Countries	5' to the matching scheme) Why isn't it there?
  * Add education jobs to the education profiles and use my education profile(s) for match testing instead of scmnschool
 */
-maxMatches = 20 //overridden if running test suite
+maxMatches = 50 //overridden if running test suite
 
 bypass = false
 
@@ -77,6 +77,8 @@ if(GlobalVariable.testSuiteRunning) {
 } else {
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
+
+myTestCase += '-' + GlobalVariable.host
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 

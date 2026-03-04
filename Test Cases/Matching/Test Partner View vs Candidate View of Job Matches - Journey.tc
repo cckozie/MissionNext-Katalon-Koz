@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Partner View vs Candidate View of Job Matches - Journey</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>725d41ad-70f0-41c3-bf91-614512d762c7</testCaseGuid>
+</TestCaseEntity>

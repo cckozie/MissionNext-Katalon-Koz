@@ -1,0 +1,54 @@
+{
+    "- SUPPORT PROFESSIONAL": [
+        "Admin/Management",
+        "Project Management",
+        "Training Coordinator"
+    ],
+    "Alternate Job Title": [
+        "Associate Director of Partner Effectiveness"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Immediately"
+    ],
+    "Time Commitment": [
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Part Time ~ 20 Hours/Week",
+        "Full Time"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead",
+        "Position requires raising your support"
+    ],
+    "Travel Support": [
+        "Travel funds provided"
+    ],
+    "Relocation Question": [
+        "I am willing to relocate within North America"
+    ],
+    "Contact Name": [
+        "Joshua Reisinger"
+    ],
+    "Contact Email": "joshua.r@jesusfilm.org",
+    "Ministry Preferences": [
+        "Develop Executive Leadership",
+        "Management Consulting",
+        "Admin/Management",
+        "Project Management",
+        "Training Coordinator"
+    ],
+    "Category": "SUPPORT PROFESSIONAL",
+    "Title": "Associate Director of Partner Effectiveness"
+}

@@ -1,0 +1,37 @@
+{
+    "- INFORMATION TECHNOLOGY": [
+        "IT Systems Administrator"
+    ],
+    "Alternate Job Title": [
+        "Microsoft 365 Technical Support Administrator"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Time Commitment": [
+        "One year to two years"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Travel Support": [
+        "Travel funding negotiated",
+        "Some travel funds available"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Brad Benson"
+    ],
+    "Contact Email": "brad.benson@missionnext.org",
+    "Category": "INFORMATION TECHNOLOGY",
+    "Title": "Microsoft 365 Technical Support Administrator"
+}

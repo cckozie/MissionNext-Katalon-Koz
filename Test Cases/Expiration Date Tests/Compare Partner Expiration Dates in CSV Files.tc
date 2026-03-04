@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Compare Partner Expiration Dates in CSV Files</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>f86d6f23-e170-454e-b979-14f259c576d6</testCaseGuid>
+</TestCaseEntity>

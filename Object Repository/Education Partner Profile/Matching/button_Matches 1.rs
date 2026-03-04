@@ -6,12 +6,12 @@
    <elementGuidId>46f02c4d-7813-4b7a-9ec7-d755954ec1f5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//tr[3]/td[8]/a/input</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>tr:nth-of-type(4) > td:nth-of-type(8) > a[title=&quot;View Job Matches&quot;] > input[name=&quot;view_matches&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//tr[3]/td[9]/a/input</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
-      <webElementGuid>8c250f4c-09c7-45ca-9d96-1b173083b2cd</webElementGuid>
+      <webElementGuid>83a421e2-61ac-49d7-9111-bad3e37664e5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-      <webElementGuid>ea08ef2a-9b14-4d49-bd3c-5c9901345acd</webElementGuid>
+      <webElementGuid>9d4e8487-8f9b-4cd0-b148-d6237b39fb79</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>button_primary</value>
-      <webElementGuid>38798bbc-8e76-4ca0-b494-419a26d523ad</webElementGuid>
+      <webElementGuid>a43e2b77-9523-4740-b0ef-2b20df53c840</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>name</name>
       <type>Main</type>
       <value>view_matches</value>
-      <webElementGuid>4788da4e-27b2-45d4-aa5d-1ac5bae69796</webElementGuid>
+      <webElementGuid>819f1e0e-824e-4a39-af23-c3b018940fb9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>value</name>
       <type>Main</type>
       <value>Matches</value>
-      <webElementGuid>60fd00b1-d04e-482b-8ab3-f8b9df00707e</webElementGuid>
+      <webElementGuid>a60e17f0-9119-4774-842c-adaaf001983a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[1]/center[1]/table[1]/tbody[1]/tr[4]/td[1]/table[1]/tbody[1]/tr[1]/td[3]/span[@class=&quot;body&quot;]/form[1]/table[1]/tbody[1]/tr[4]/td[8]/a[1]/input[@class=&quot;button_primary&quot;]</value>
-      <webElementGuid>fbdc97dc-47c9-48fd-afe2-1ae6cced3928</webElementGuid>
+      <webElementGuid>d38c03c2-ef8c-46eb-b601-2dd33e3d8a03</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>(//input[@name='view_matches'])[2]</value>
-      <webElementGuid>cb726674-0a82-4405-ab3d-0893c77b787c</webElementGuid>
+      <webElementGuid>a51dc8f7-9c71-4a09-8d9c-3018e36a44d7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//tr[4]/td[8]/a/input</value>
-      <webElementGuid>df36d6aa-be06-4c8b-8728-b5fc2d0b5800</webElementGuid>
+      <webElementGuid>bbecef1b-013f-47d5-a05d-5bb2633aa203</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,6 +87,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//input[@type = 'button' and @name = 'view_matches']</value>
-      <webElementGuid>3c012ff2-4d76-40ce-8a9c-524c446bc80f</webElementGuid>
+      <webElementGuid>d29e88ee-8b31-4dbf-bca9-dc8700956111</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

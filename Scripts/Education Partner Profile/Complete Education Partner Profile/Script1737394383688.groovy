@@ -212,6 +212,9 @@ if(pages.size() == 0 || 'All' in pages || 'Service Options' in pages) {
 	
 	
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+//System.exit(0)
+
 if(pages.size() == 0 || 'All' in pages || 'Readiness' in pages) {
 	//Complete the Readiness tab
 	process_stage = ['I am actively investigating missions', 'I am ready to select a ministry']

@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions;
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
 
 
-maxMatches = 20	//Overridden if test suite running
+maxMatches = 50	//Overridden if test suite running
 
 bypass = false
 
@@ -73,6 +73,8 @@ if(GlobalVariable.testSuiteRunning) {
 
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
+
+myTestCase += '-' + GlobalVariable.host
 
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 

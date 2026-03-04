@@ -31,6 +31,9 @@ import java.awt.Toolkit as Toolkit
 import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
+import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
+import org.openqa.selenium.interactions.Actions
+import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
 
 /* Results for line 2, candidate Natalie Lopez, single.
@@ -39,9 +42,22 @@ Match percentages: Calculated = 100%, Table = 100%, Popup = 100%.
 No match on [Ministry Preferences]
 */
 
-maxMatches = 20 //overridden if test suite running
+// Had to some diddling because of the new column (for the *) on the jobs page.
+// Leaving as is for now because of new issue Paulette has discovered.
 
-fudgeFactor = 3 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
+maxMatches = 5 //overridden if test suite running
+
+fudgeFactor = 2 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
+
+testJobCount = 3
+
+testJobStart = 1
+
+myJobs = testJobStart.toString() + '-' + (testJobStart + testJobCount - 1).toString()
+
+highlight = false
+
+updateWildcards = false
 
 bypass = false
 
@@ -53,11 +69,7 @@ site = 'Journey'
 
 matchType = 'Job' // Org or Job
 
-user = 'cktest17jp' // office or Journey 17
-
-highlight = false
-
-updateWildcards = false
+user = 'cktest17jp' // office or cktest17jp  joshua.r@jesusfilm.org
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -74,20 +86,22 @@ if(GlobalVariable.testSuiteRunning) {
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
 }
 
+myTestCase += '-' + GlobalVariable.host
+
 filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
-outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase + ' Partner-' + user + '-Job#' + myJobs) + '.txt')
 
-resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '-results.txt')
+resultsFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + ' Partner-' + user + '-Job#' + myJobs) + '_results.txt')
 
 resultsFile.write(('Running ' + myTestCase) + '\n')
 
-errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-ERRORS.txt')
+errorFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase + ' Partner-' + user + '-Job#' + myJobs) + '_ERRORS.txt')
 
 errorFile.write('Running ' + myTestCase + ' - Listing Errors Only\n')
 
 if(debug) {
-	debugFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase) + '-DEBUG.txt')
+	debugFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/Matching Details/' + myTestCase + ' Partner-' + user + '-Job#' + myJobs) + '_DEBUG.txt')
 	
 	debugFile.write('Running ' + myTestCase + ' - Debug Data\n')
 }
@@ -167,10 +181,19 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 
 jobFile = (filePath + 'jobprofile.txt')
 
-//WebUI.callTestCase(findTestCase('Admin/Switch to Office'), [:], FailureHandling.STOP_ON_FAILURE)
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+if(user == 'cktest17jp') {
+	myProfile = 'Journey Partner 17'
+	new ExecutionProfilesLoader().loadProfile(myProfile)
+	WebUI.callTestCase(findTestCase('_Functions/Profile Login'), [('varProfile') : myProfile])
+	switchTo = false
+} else {
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+	switchTo = true
+}
 
 WebUI.waitForPageLoad(60)
+
+WebUI.delay(2)
 
 orgTab = WebUI.getWindowIndex()
 
@@ -178,264 +201,334 @@ WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/
 
 WebUI.switchToWindowIndex(1)
 
-WebUI.waitForPageLoad(30)
-
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_Matching Category 2'))
-
-WebUI.switchToWindowIndex(2)
-
-WebUI.waitForPageLoad(30)
-
-Robot robot = new Robot()
-
-//Select All
-robot.keyPress(KeyEvent.VK_META)
-
-robot.keyPress(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_A)
-
-robot.keyRelease(KeyEvent.VK_META)
+WebUI.waitForPageLoad(60)
 
 WebUI.delay(1)
 
-//Copy
-robot.keyPress(KeyEvent.VK_META)
+for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
 
-robot.keyPress(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_C)
-
-robot.keyRelease(KeyEvent.VK_META)
-
-jobProfileFile = new File(jobFile)
-
-Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard()
-
-String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString()
-
-println(data)
-
-jobProfileFile.write(data)
-
-jobSelections = formatProfile(jobProfileFile, matchValues)
-
-outText = '\n\n Job Selections'
-
-println(outText)
-
-outFile.append(outText + '\n')
-
-jobSelections.each({ 
-        outText = it
-
-        println(outText)
-
-        outFile.append(((it.key + ':') + it.value) + '\n')
-    })
-
-WebUI.closeWindowIndex(2)
-
-WebUI.switchToWindowIndex(1)
-
-WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches 2'))
-
-WebUI.waitForPageLoad(30)
-
-myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebElement Table = driver.findElement(By.xpath(myTable))
-
-List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-
-int row_count = Rows.size() - 6
-
-if(maxMatches < row_count) {
-	row_count = maxMatches
-}
-
-found = false
+	println('Object Repository/Journey Partner Profile/Matching/a_Matching Category ' + testJob)
 	
-noErrors = true
-
-if(row_count > 0) {
+	if(testJob != '') {
+//		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_Matching Category ' + testJob))
+		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_Matching Category Parm', [('testJob') : testJob + 2]))
+	}
+	//System.exit(0)
+	WebUI.switchToWindowIndex(2)
 	
-	for (row = 3; row < row_count + 3; row++) {
-		
-		println('row is ' + row)
-		
-		List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+	//WebUI.switchToWindowIndex(1)
 	
-		line = Columns.get(0).getText()
+	WebUI.waitForPageLoad(60)
+	
+	WebUI.delay(1)
+	
+	
+	
+	Robot robot = new Robot()
+	
+	//Select All
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_A)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	WebUI.delay(1)
+	
+	//Copy
+	robot.keyPress(KeyEvent.VK_META)
+	
+	robot.keyPress(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_C)
+	
+	robot.keyRelease(KeyEvent.VK_META)
+	
+	jobProfileFile = new File(jobFile)
+	
+	Clipboard c = Toolkit.getDefaultToolkit().getSystemClipboard()
+	
+	String data = c.getData(java.awt.datatransfer.DataFlavor.stringFlavor).toString()
+	
+	println(data)
+	
+	jobProfileFile.write(data)
+	
+	jobSelections = formatProfile(jobProfileFile, matchValues)
+	
+	outText = '\n\n Job Selections'
+	
+	println(outText)
+	
+	outFile.append(outText + '\n')
+	
+	jobSelections.each({ 
+	        outText = it
+	
+	        println(outText)
+	
+	        outFile.append(((it.key + ':') + it.value) + '\n')
+	    })
+	
+	WebUI.closeWindowIndex(2)
+	
+	WebUI.switchToWindowIndex(1)
+	
+	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
+	
+	WebUI.delay(1)
+	
+	WebUI.waitForPageLoad(60)
+	
+	//WebUI.delay(20)
+	
+	myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
+	
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	WebElement Table = driver.findElement(By.xpath(myTable))
+	
+	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+	
+	int row_count = Rows.size() - 6
+	
+	if(maxMatches < row_count) {
+		row_count = maxMatches
+	}
+	
+	found = false
 		
-		println('line is ' + line)
+	noErrors = true
+	
+	if(row_count > 0) {
 		
-		firstName = Columns.get(2).getText()
-		
-		println('firstName is ' + firstName)
-		
-		lastName = Columns.get(1).getText()
-		
-		println('lastName is ' + lastName)
-		
-//		if(lastName != 'Knolle') {
-//			continue
-//		}
-		
-		pct = Columns.get(8).getText()
-		
-		println('Table pct is ' + pct)
-		
-		tablePct = pct.toInteger()
-		
-		println('Table percent is ' + tablePct)
-		
-		spyGlass = Columns.get(9)
-		
-		myRow = row + 1
-		
-//				   /html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody/tr[4]/td[10]/a/img
-		element = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody/tr[' + myRow + ']/td[10]/a/img'
-		
-		driver.findElement(By.xpath(element)).click()
-		
-		WebUI.switchToWindowIndex(2)
-		
-		poputWindowTitle = WebUI.getWindowTitle()
-		
-		popupPercent = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/text_Match Percent'))
-		
-		popupPercent = popupPercent.replace('%', '')
-		
-		popupPct = popupPercent.replace(' ', '').toInteger()
-		
-		println('PopupPct percent is ' + popupPct)
-		
-		WebUI.closeWindowTitle(poputWindowTitle)
-		
-		WebUI.switchToWindowIndex(1)
-		
-		WebUI.delay(1)
-
-		Table = driver.findElement(By.xpath(myTable))
-
-		Rows = Table.findElements(By.tagName('tr'))
-		
-		Columns = Rows.get(row).findElements(By.tagName('td'))
-		
-		myRow = row + 1
-		
-//				   //tr[4]/td[2]/a
-		element = '//tr[' + myRow + ']/td[2]/a'
-		
-		println(element)
-		
-		driver.findElement(By.xpath(element)).click()
+		for (row = 3; row < row_count + 3; row++) {
 			
-		WebUI.switchToWindowIndex(2)
-		
-		WebUI.waitForPageLoad(30)
-		
-		notMatched = []
-
-		candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web - Job Matches'),
-			[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
-
-		println(candidateFieldValues)
-		
-		if(debug) {
-			debugFile.append('\nCandidate Field Values:\n')
-			candidateFieldValues.each {
-				println(it)
-				debugFile.append(it)
-				debugFile.append('\n')
-			}
-		}
-
-		maritalStatus = (candidateFieldValues.get('Marital status')[0])
-
-		spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
-
-		outText = (((((' \n\nCandidate profile for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
-
-		outFile.append(outText + '\n')
-
-		println(outText)
-
-		candidateFieldValues.each({
-				outText = ((it.key + ':') + it.value)
-
-				outFile.append(outText + '\n')
-
-				println(outText)
-			})
-
-		candidateSelections = [:]
-		
-        if (candidateFieldValues != null) {
-            candidateFieldValues.each({ 
-                    println(it)
-                })
-
-            for (def v : candidateFieldValues) {
-                myKey = v.key
-
-                if (candidateMatchFields.contains(myKey)) {
-                    candidateSelections.put(v.key, v.value)
-                }
-            }
-            
-            if ('Married' in candidateFieldValues.get('Marital status')) {
-                married = true
-            } else {
-                married = false
-            }
-            
-            if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
-                spouseServing = true
-            } else {
-                spouseServing = false
-            }
-            
-            firstName = (candidateFieldValues.getAt('First Name')[0])
-
-            lastName = (candidateFieldValues.getAt('Last Name')[0])
-
-			outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
+			println('row is ' + row)
 			
-			if (!(married)) {
-				outText += ', single.'
+			List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+		
+			line = Columns.get(0).getText()
+			
+			println('line is ' + line)
+			
+			firstName = Columns.get(2).getText()
+			
+			println('firstName is ' + firstName)
+			
+			lastName = Columns.get(1).getText()
+			
+			println('lastName is ' + lastName)
+			
+	//		if(lastName != 'Knolle') {
+	//			continue
+	//		}
+			
+			pct = Columns.get(8).getText()
+			
+			println('Table pct is ' + pct)
+			
+			tablePct = pct.toInteger()
+			
+			println('Table percent is ' + tablePct)
+			
+			spyGlass = Columns.get(9)
+			
+			myRow = row + 1
+			
+	//				   /html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody/tr[4]/td[10]/a/img
+			element = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody/tr[' + myRow + ']/td[10]/a/img'
+			
+			driver.findElement(By.xpath(element)).click()
+			
+			WebUI.switchToWindowIndex(2)
+			
+			popupWindowTitle = WebUI.getWindowTitle()
+			
+			noFatalError = WebUI.verifyTextNotPresent('Fatal error', false, FailureHandling.OPTIONAL)
+			
+			println('>>>>>>> noFatalError is ' + noFatalError)
+			
+			if(noFatalError) {
+			
+				popupPercent = WebUI.getText(findTestObject('Object Repository/Education Partner Profile/Matching/text_Match Percent'))
+				
+				popupPercent = popupPercent.replace('%', '')
+				
+				popupPct = popupPercent.replace(' ', '').toInteger()
+				
+				println('PopupPct percent is ' + popupPct)
+				
 			} else {
-				outText += ', married and spouse is '
-				
-				if (!(spouseServing)) {
-					outText += 'not '
-				}
-				
-				outText += 'serving.'
+				popupPct = '0'
+				println('PopupPct percent is not displayed because of a fatal error on the popup.')
 			}
-
-            outFile.append(outText + '\n')
+				
+	//		WebUI.closeWindowTitle(popupWindowTitle)
 			
-			resultsFile.append(outText + '\n')
+			WebUI.closeWindowIndex(2)
 			
-			lineText = outText
+			WebUI.switchToWindowIndex(1)
 			
-			maritalStatusText = outText
-
-            doMatching(candidateFieldValues, jobSelections)
-        }
+	////		WebUI.delay(1)
+	
+			Table = driver.findElement(By.xpath(myTable))
+	
+			Rows = Table.findElements(By.tagName('tr'))
+			
+			myRow = Rows.get(row)
+			
+			Columns = Rows.get(row).findElements(By.tagName('td'))
+			
+			myRow = row + 1
+			
+	//				   //tr[4]/td[2]/a
+			element = '//tr[' + myRow + ']/td[2]/a'
+			
+			println(element)
+			
+			theRow = Rows.get(row)
+	
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			
+	//		js.executeScript("arguments[0].scrollIntoView(true);", myRow);
+			js.executeScript("arguments[0].scrollIntoView(true);", theRow);
+	//		driver.execute_script("arguments[0].scrollIntoView();", element)
+			
+			driver.findElement(By.xpath(element)).click()
+			
+			goodProfile = false
+			
+			testCount = 0
+				
+			WebUI.switchToWindowIndex(2)
+			
+			while(!goodProfile) {
+			
+				WebUI.waitForPageLoad(30)
+				
+	////			WebUI.delay(1)
+				
+				notMatched = []
 		
-		WebUI.closeWindowIndex(2)
-		
-		WebUI.switchToWindowIndex(1)
-		
-        WebUI.delay(1)
-    }
+				candidateFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get Journey Profile from Web - Job Matches'),
+					[('varMatchFields') : candidateMatchFields], FailureHandling.STOP_ON_FAILURE)
+				
+				if(candidateFieldValues != 'error') {
+					goodProfile = true
+				} else {
+					testCount++
+					WebUI.refresh()
+				}
+			}
+	
+			println(candidateFieldValues)
+			
+			if(testCount > 0) {
+	//			System.exit(0)
+			}
+			
+			if(debug) {
+				debugFile.append('\nCandidate Field Values:\n')
+				candidateFieldValues.each {
+					println(it)
+					debugFile.append(it)
+					debugFile.append('\n')
+				}
+			}
+	
+			maritalStatus = (candidateFieldValues.get('Marital status')[0])
+	
+			spouseServing = (candidateFieldValues.get('Spouse Serving with You?')[0])
+	
+			outText = (((((' \n\nCandidate profile for ' + firstName) + ' ') + lastName) + ', ') + maritalStatus)
+	
+			outFile.append(outText + '\n')
+	
+			println(outText)
+			
+			if(!noFatalError) {
+				outText = '----- Fatal error message on popup.'
+				println(outText)
+				outFile.append(outText + '\n')
+			}
+	
+			candidateFieldValues.each({
+					outText = ((it.key + ':') + it.value)
+	
+					outFile.append(outText + '\n')
+	
+					println(outText)
+				})
+	
+			candidateSelections = [:]
+			
+	        if (candidateFieldValues != null) {
+	            candidateFieldValues.each({ 
+	                    println(it)
+	                })
+	
+	            for (def v : candidateFieldValues) {
+	                myKey = v.key
+	
+	                if (candidateMatchFields.contains(myKey)) {
+	                    candidateSelections.put(v.key, v.value)
+	                }
+	            }
+	            
+	            if ('Married' in candidateFieldValues.get('Marital status')) {
+	                married = true
+	            } else {
+	                married = false
+	            }
+	            
+	            if ('Yes' in candidateFieldValues.get('Spouse Serving with You?')) {
+	                spouseServing = true
+	            } else {
+	                spouseServing = false
+	            }
+	            
+	            firstName = (candidateFieldValues.getAt('First Name')[0])
+	
+	            lastName = (candidateFieldValues.getAt('Last Name')[0])
+	
+				outText = ((((('\n Results for line ' + line) + ', candidate ') + firstName) + ' ') + lastName)
+				
+				if (!(married)) {
+					outText += ', single.'
+				} else {
+					outText += ', married and spouse is '
+					
+					if (!(spouseServing)) {
+						outText += 'not '
+					}
+					
+					outText += 'serving.'
+				}
+	
+	            outFile.append(outText + '\n')
+				
+				resultsFile.append(outText + '\n')
+				
+				lineText = outText
+				
+				maritalStatusText = outText
+	
+	            doMatching(candidateFieldValues, jobSelections)
+				
+	        }
+			
+			WebUI.closeWindowIndex(2)
+			
+			WebUI.switchToWindowIndex(1)
+			
+	////        WebUI.delay(1)
+	    }
+	}
+	WebUI.back()
 }
-
 
 //Switch to partner dashboard
 WebUI.closeWindowIndex(1)
@@ -443,7 +536,11 @@ WebUI.closeWindowIndex(1)
 WebUI.switchToWindowIndex(0)
 
 // Log out of office
-WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+if(switchTo) {
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+} else {
+	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Logout'))
+}
 
 if(noErrors) {
 	errorFile.delete()
@@ -465,6 +562,7 @@ def formatProfile(def file, def matchFields) {
 
 	ignoreRows = [
 		'Job Category',
+		'IT Job Category',
 		'Group',
 		'Job Classification',
 		'Assignment Detail',
@@ -631,202 +729,208 @@ def doMatching(def candidateSelections, def jobSelections) {
 	categoryJobs = [:]
 
     for (def it : matchValues) {
+		error = false
+		
+		mvKey = it.key
+		println('key is ' + mvKey)
+		
 		testValues = jobSelections.get(it.key)
 		
-		if(testValues == null) {
-			continue
-		}
+		println('testValues:' + testValues)
 		
-        ifPrint('Testing match values ' + it)
-
-        match = false
-
-        category = false
-
-        myKey = it.key
-
-        if (myKey.substring(0, 2) == '- ') {
-            category = true
-
-            ifPrint((('category is ' + category) + ' and myKey is ') + myKey)
-        }
-        
-        if (!(excluded)) {
-            match = false
-			
-			prefix = myKey.substring(0,2)
-			
-			ifPrint('myKey prefix is ' + prefix)
-			
-			if(prefix != '- ') {
-
-				candidateKey = (it.value[0])
+		if(testValues != null && !mvKey.contains('Journey Job Category')) {
+		
+	        ifPrint('Testing match values ' + it)
+	
+	        match = false
+	
+	        category = false
+	
+	        myKey = it.key
+	
+	        if (myKey.substring(0, 2) == '- ') {
+	            category = true
+	
+	            ifPrint((('category is ' + category) + ' and myKey is ') + myKey)
+	        }
+	        
+	        if (!(excluded)) {
+	            match = false
 				
-			} else {
+				prefix = myKey.substring(0,2)
 				
-				candidateKey = myKey
-			}
-
-            ifPrint('candidateSelections key is ' + candidateKey)
-
-            candidateValues = candidateSelections.get(candidateKey)
-
-            ifPrint('candidateValues = ' + candidateValues)
-
-            values = matchValues.get(it.key)
-
-            ifPrint('values = ' + values)
-
-            jobSelectionKey = it.key
-
-            matchValue = (values[1])
-
-            matchValue = (values[1]).toInteger()
-
-            pointsSingle = (values[2])
-
-            pointsMarried = (values[3])
-
-            jobValues = jobSelections.get(jobSelectionKey)
-
-            ifPrint('jobValues = ' + jobValues)
-			
-            if (!(category) || (jobValues != null)) {
-                outText = ('\nFor ' + myKey)
-
-                outFile.append(outText + '\n')
+				ifPrint('myKey prefix is ' + prefix)
 				
-				if(myKey == 'Ministry Preferences' && categoryMatch) {
+				if(prefix != '- ') {
+	
+					candidateKey = (it.value[0])
 					
-					jobValues = categoryJobs.get(matchedCategory)
+				} else {
 					
+					candidateKey = myKey
 				}
-
-                outText = ('Job selections = ' + jobValues)
-
-                outFile.append(outText + '\n')
-
-                outText = ('Candidate selections = ' + candidateValues)
-
-                outFile.append(outText + '\n')
-
-                ifPrint('matchValue = ' + matchValue)
-
-                if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
-                    newPoints = (values[pointValue]).toFloat().round(1)
-                } else {
-                    newPoints = 0
-                }
-                
-                cWC = candidateWildcards.get(candidateKey)
-
-                ifPrint('cWC = ' + cWC)
-
-                if ((cWC != null) && (candidateValues != null)) {
-                    if (cWC.intersect(candidateValues).size() > 0) {
-                        outText = (((('Candidate wildcard match on ' + cWC.intersect(candidateValues)) + '. Adding ') + 
-                        newPoints) + ' points.')
-
-                        outFile.append(outText + '\n')
-
-                        points = (points + newPoints)
-
-                        match = true
-                    }
-                }
-                
-                if (!(match)) {
-                    jWC = jobWildcards.get(jobSelectionKey)
-
-                    ifPrint('jWC = ' + jWC)
-
-                    if ((jWC != null) && (jobValues != null)) {
-                        if (jWC.intersect(jobValues).size() > 0) {
-                            outText = (((('Job wildcard match on ' + jWC.intersect(jobValues)) + '. Adding ') + newPoints) + 
-                            ' points.')
-
-                            outFile.append(outText + '\n')
-
-                            points = (points + newPoints)
-
-                            match = true
-                        }
-                    }
-                    
-                    if ((!(match) && (candidateValues != null)) && (jobValues != null)) {
-						println('>>>>>>>>>>>> ' + candidateValues + ' : ' + jobValues)
-                        matches = candidateValues.intersect(jobValues)
-
-                        if (matches.size() > 0) {
-                            outText = (((('Found match on ' + candidateValues.intersect(jobValues)) + '. Adding ') + newPoints) + 
-                            ' points.')
-
-                            outFile.append(outText + '\n')
-
-                            points = (points + newPoints)
-
-                            match = true
-
-                            if (category) {
-                                categoryMatch = true
-								
-								if(categoryJobs.size() == 0) {
-								
-									matchedCategory = myKey
+	
+	            ifPrint('candidateSelections key is ' + candidateKey)
+	
+	            candidateValues = candidateSelections.get(candidateKey)
+	
+	            ifPrint('candidateValues = ' + candidateValues)
+	
+	            values = matchValues.get(it.key)
+	
+	            ifPrint('values = ' + values)
+	
+	            jobSelectionKey = it.key
+	
+	            matchValue = (values[1])
+	
+	            matchValue = (values[1]).toInteger()
+	
+	            pointsSingle = (values[2])
+	
+	            pointsMarried = (values[3])
+	
+	            jobValues = jobSelections.get(jobSelectionKey)
+	
+	            ifPrint('jobValues = ' + jobValues)
+				
+	            if (!(category) || (jobValues != null)) {
+	                outText = ('\nFor ' + myKey)
+	
+	                outFile.append(outText + '\n')
+					
+					if(myKey == 'Ministry Preferences' && categoryMatch) {
+						
+						jobValues = categoryJobs.get(matchedCategory)
+						
+					}
+	
+	                outText = ('Job selections = ' + jobValues)
+	
+	                outFile.append(outText + '\n')
+	
+	                outText = ('Candidate selections = ' + candidateValues)
+	
+	                outFile.append(outText + '\n')
+	
+	                ifPrint('matchValue = ' + matchValue)
+	
+	                if (matchValue != 5 && !values[pointValue].contains('-') && values[pointValue].length() > 0) {
+	                    newPoints = (values[pointValue]).toFloat().round(1)
+	                } else {
+	                    newPoints = 0
+	                }
+	                
+	                cWC = candidateWildcards.get(candidateKey)
+	
+	                ifPrint('cWC = ' + cWC)
+	
+	                if ((cWC != null) && (candidateValues != null)) {
+	                    if (cWC.intersect(candidateValues).size() > 0) {
+	                        outText = (((('Candidate wildcard match on ' + cWC.intersect(candidateValues)) + '. Adding ') + 
+	                        newPoints) + ' points.')
+	
+	                        outFile.append(outText + '\n')
+	
+	                        points = (points + newPoints)
+	
+	                        match = true
+	                    }
+	                }
+	                
+	                if (!(match)) {
+	                    jWC = jobWildcards.get(jobSelectionKey)
+	
+	                    ifPrint('jWC = ' + jWC)
+	
+	                    if ((jWC != null) && (jobValues != null)) {
+	                        if (jWC.intersect(jobValues).size() > 0) {
+	                            outText = (((('Job wildcard match on ' + jWC.intersect(jobValues)) + '. Adding ') + newPoints) + 
+	                            ' points.')
+	
+	                            outFile.append(outText + '\n')
+	
+	                            points = (points + newPoints)
+	
+	                            match = true
+	                        }
+	                    }
+	                    
+	                    if ((!(match) && (candidateValues != null)) && (jobValues != null)) {
+							println('>>>>>>>>>>>> ' + candidateValues + ' : ' + jobValues)
+	                        matches = candidateValues.intersect(jobValues)
+	
+	                        if (matches.size() > 0) {
+	                            outText = (((('Found match on ' + candidateValues.intersect(jobValues)) + '. Adding ') + newPoints) + 
+	                            ' points.')
+	
+	                            outFile.append(outText + '\n')
+	
+	                            points = (points + newPoints)
+	
+	                            match = true
+	
+	                            if (category) {
+	                                categoryMatch = true
 									
-									categoryJobs.put(myKey,jobValues)
+									if(categoryJobs.size() == 0) {
 									
-									outFile.append('*** ' + myKey + ':' + jobValues + '\n')
-								
+										matchedCategory = myKey
+										
+										categoryJobs.put(myKey,jobValues)
+										
+										outFile.append('*** ' + myKey + ':' + jobValues + '\n')
+									
+		                            }
 	                            }
-                            }
-                        }
-                    }
-                }
-                
-                if (match) {
-                    outText = (('Add match is now ' + points.round(1)) + '%.')
-
-                    outFile.append(outText + '\n')
-
-                    if (category) {
-						
-                        categoryMatch = true
-						
-						matchedCategory = myKey
-						
-						if(categoryJobs.size() == 0) {
-						
+	                        }
+	                    }
+	                }
+	                
+	                if (match) {
+	                    outText = (('Add match is now ' + points.round(1)) + '%.')
+	
+	                    outFile.append(outText + '\n')
+	
+	                    if (category) {
+							
+	                        categoryMatch = true
+							
 							matchedCategory = myKey
 							
-							categoryJobs.put(myKey,jobValues)
+							if(categoryJobs.size() == 0) {
 							
-							outFile.append('*** ' + myKey + ':' + jobValues + '\n')
-						}
-                    }
-                } else {
-                    if (matchValue == 5) {
-                        if (!(category) || (jobValues != null)) {
-                            excluded = true
-
-                            outText = 'This is a must match field. Candidate is excluded.'
-
-                            outFile.append(outText + '\n')
-
-                            resultsFile.append(outText)
-							
-                            break
-                        }
-                    }
-                    
-                    outText = 'No match found.'
-
-                    outFile.append(outText + '\n')
-					
-					notMatched.add(myKey)
-                }
-            }
-        }
+								matchedCategory = myKey
+								
+								categoryJobs.put(myKey,jobValues)
+								
+								outFile.append('*** ' + myKey + ':' + jobValues + '\n')
+							}
+	                    }
+	                } else {
+	                    if (matchValue == 5) {
+	                        if (!(category) || (jobValues != null)) {
+	                            excluded = true
+	
+	                            outText = 'This is a must match field. Candidate is excluded.'
+	
+	                            outFile.append(outText + '\n')
+	
+	                            resultsFile.append(outText)
+								
+	                            break
+	                        }
+	                    }
+	                    
+	                    outText = 'No match found.'
+	
+	                    outFile.append(outText + '\n')
+						
+						notMatched.add(myKey)
+	                }
+	            }
+	        }
+		}
     }
     
     if (!(categoryMatch)) {
@@ -904,11 +1008,16 @@ def doMatching(def candidateSelections, def jobSelections) {
 		resultsText = outText
 
         if (error) {
-            outText = ('##### ERRORS' + outText)
-        }
+            outText = ('##### ERRORS: ' + outText)
+        }		
     }
     
     resultsFile.append(outText)
+	
+	if(!noFatalError) {
+		outText = '----- Popup match percent unknown because of fatal error on popup.\n'
+		resultsFile.append(outText)
+	}
 	
 	if(notMatched.size() > 0) {
 		outText = 'No match on ' + notMatched
@@ -922,5 +1031,7 @@ def doMatching(def candidateSelections, def jobSelections) {
 		errorFile.append(outText + '\n')
 		errorFile.append(resultsText + '\n')
 	}
+	
+//	System.exit(0)
 
 }

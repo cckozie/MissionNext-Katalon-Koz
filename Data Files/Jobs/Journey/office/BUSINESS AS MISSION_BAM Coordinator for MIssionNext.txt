@@ -1,0 +1,47 @@
+{
+    "- BUSINESS AS MISSION": [
+        "Business",
+        "Develop Executive Leadership",
+        "Management Consulting",
+        "People Research"
+    ],
+    "Alternate Job Title": [
+        "BAM Coordinator for MIssionNext"
+    ],
+    "World Region": [
+        "No Preference"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language"
+    ],
+    "Paid & Volunteer Positions": [
+        "Volunteer/self-supported position",
+        "Self-supported, need travel and overhead"
+    ],
+    "Travel Support": [
+        "No travel funding provided",
+        "Travel funding negotiated"
+    ],
+    "Relocation Question": [
+        "I am not able to relocate for the foreseeable future",
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Nelson Malwitz"
+    ],
+    "Contact Email": "founder@missionnext.org",
+    "Category": "BUSINESS AS MISSION",
+    "Title": "BAM Coordinator for MIssionNext"
+}

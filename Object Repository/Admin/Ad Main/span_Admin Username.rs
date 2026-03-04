@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Admin Username</name>
+   <tag></tag>
+   <elementGuidId>843aed15-60f1-4027-aec3-3332514c2c55</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.display-name</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@id='wp-admin-bar-my-account']/a/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>ab10ee0b-2d11-409d-9903-651803214eed</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>display-name</value>
+      <webElementGuid>3ac22ccc-892e-4d5c-b118-cfe3f349c277</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Chris Kosieracki</value>
+      <webElementGuid>c90d0a88-eb0c-423c-9b71-45eea39a913b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;wp-admin-bar-my-account&quot;)/a[@class=&quot;ab-item&quot;]/span[@class=&quot;display-name&quot;]</value>
+      <webElementGuid>4cd8bad6-b52e-4a67-b180-80789452205f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//li[@id='wp-admin-bar-my-account']/a/span</value>
+      <webElementGuid>94d6ba60-2238-4d2b-9d4a-7f5c97c56d22</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Extensions'])[1]/following::span[1]</value>
+      <webElementGuid>7b66db3b-5234-41fc-88c3-60511b9018e3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Chris Kosieracki'])[2]/preceding::span[1]</value>
+      <webElementGuid>86113da4-63e6-48c1-9d2e-6e89def66a75</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='chriskosieracki'])[1]/preceding::span[2]</value>
+      <webElementGuid>39944028-4a9a-4552-89f5-d2bafa47ca21</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Chris Kosieracki']/parent::*</value>
+      <webElementGuid>f6ff1912-3d3f-44b0-8d9c-b47ee92e925d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div/div/ul[2]/li/a/span</value>
+      <webElementGuid>606637cb-eb2b-4c49-8a99-6072af07b161</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Chris Kosieracki' or . = 'Chris Kosieracki')]</value>
+      <webElementGuid>c303e80e-a8da-4821-803b-00d977fb64a0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

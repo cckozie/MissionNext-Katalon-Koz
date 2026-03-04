@@ -1,0 +1,49 @@
+{
+    "- COMMUNICATIONS": [
+        "Church Relations",
+        "Community Relations",
+        "Media Relations",
+        "Public Relations",
+        "Social Media",
+        "Web Content",
+        "Writers"
+    ],
+    "Alternate Job Title": [
+        "Chief Communications Officer (Volunteer, Part-time)"
+    ],
+    "World Region": [
+        "North America"
+    ],
+    "Start_Requested": [
+        "Not sure"
+    ],
+    "Time Commitment": [
+        "One year to two years",
+        "Long Term"
+    ],
+    "Time/Hours Available": [
+        "Open"
+    ],
+    "Cross-Cultural Experience": [
+        "Not served in a culture other than my own"
+    ],
+    "Languages": [
+        "English is a native language",
+        "English is a second language"
+    ],
+    "Paid & Volunteer Positions": [
+        "No Preference"
+    ],
+    "Travel Support": [
+        "No travel funding provided"
+    ],
+    "Relocation Question": [
+        "Not a match criteria"
+    ],
+    "Contact Name": [
+        "Vicky Warren"
+    ],
+    "Contact Email": "Vicky.Warren@missionnext.org",
+    "Category": "COMMUNICATIONS",
+    "Title": "Chief Communications Officer (Volunteer, Part-time)"
+}

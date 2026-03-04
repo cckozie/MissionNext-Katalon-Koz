@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get Candidate Subscription Data</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>46a90f94-1e12-43f0-bb16-22c2a10e0974</testCaseGuid>
+</TestCaseEntity>
