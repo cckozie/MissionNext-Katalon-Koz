@@ -290,7 +290,7 @@ for(user in users) {
 		
 		WebUI.switchToWindowIndex(0)
 		
-		WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+		WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 	}
 	
 	WebUI.closeBrowser()

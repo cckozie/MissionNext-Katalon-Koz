@@ -42,7 +42,7 @@ site = 'Journey'
 
 switchToUser = 'office' // office or cktest17jp
 
-switchTo = true
+switchTo = false		// If false, set profile
 
 if(!switchTo) {
 	username = GlobalVariable.username
@@ -236,7 +236,7 @@ WebUI.switchToWindowIndex(0)
 
 // Log out of office
 if(switchTo) {
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
 } else {
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Logout'))
 }

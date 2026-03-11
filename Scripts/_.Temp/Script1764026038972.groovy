@@ -35,10 +35,20 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import java.awt.Desktop as Desktop
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+
+user = 'office'
+
+site = 'Journey'
+
+WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.waitForPageLoad(30)
+
+WebUI.delay(2)
+
+WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+
+System.exit(0)
 
 siteDesignations = ['Journey' : 2,'Education' : 3,'QuickStart' : 6,'Journey Guide' : 7]
 
@@ -66,40 +76,7 @@ WebUI.waitForPageLoad(60)
 
 WebUI.delay(2)
 
-/*
-imageFile = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/manager/log_out?.png'
-
-Screen s = new Screen()
-
-WebDriver driver = DriverFactory.getWebDriver()
-
-WebElement adminUserName = driver.findElement(By.xpath("//li[@id='wp-admin-bar-my-account']/a/span"))
-
-//WebElement adminLogOut = driver.findElement(By.xpath("//li[@id='wp-admin-bar-logout']/a"))
-
-//WebElement adminLogOut = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[1]/div/ul[2]/li/div/ul/li[2]/a"))
-
-WebElement adminLogOut = driver.findElement(By.xpath('//*[@id="wp-admin-bar-logout"]'))
-
-//*[@id="wp-admin-bar-logout"]
-
-Actions actions = new Actions(driver);
-
-actions.moveToElement(adminUserName).perform();
-
-Thread.sleep(1000); // Wait for 1 second (use explicit waits in real projects)
-
-actions.moveToElement(adminUserName).perform();
-
-Thread.sleep(2000); // Wait for 1 second (use explicit waits in real projects)
-*/
 WebUI.navigateToUrl("https://missionnext.org/managerlogin/?action=logout&amp")
-
-//s.click()
-
-//adminUserName.click()
-
-//System.exit(0)
 
 WebUI.waitForPageLoad(15)
 

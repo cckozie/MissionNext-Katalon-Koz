@@ -321,8 +321,8 @@ officeMatches.each {
 	println(it)
 }
 
+outFile.append('\n TEST JOB MATCHES\n')
 // Verify that all matches to office are also in partner
-outFile.append('\n')
 for(job in officeMatches) {
 	if(job in orgMatches) {
 		println('job ' + job + ' matches in both partners')
@@ -335,6 +335,7 @@ for(job in officeMatches) {
 	}
 }
 
+outFile.append('\n TEST JOB MATCHES TO ONLY ACTIVE JOBS\n')
 // Verify that all matches to office are to non-expired jobs
 for(job in officeMatches) {
 	expired = j2Jobs.get(job, null)
@@ -349,8 +350,9 @@ for(job in officeMatches) {
 	}
 }
 
-
 WebUI.closeBrowser()
+
+
 
 def getJobsList() {
 	

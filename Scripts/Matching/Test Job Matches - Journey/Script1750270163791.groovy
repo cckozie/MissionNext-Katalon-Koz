@@ -537,7 +537,7 @@ WebUI.switchToWindowIndex(0)
 
 // Log out of office
 if(switchTo) {
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
 } else {
 	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Logout'))
 }

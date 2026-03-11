@@ -18,8 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 // ** DESIGNATES FINISHED \\
 
-// School matches needs fudge factor
-// Job matches needs to include 'Other Criteria' match to spouse preferences
+// ** School matches needs fudge factor
+// ** (No longer necessary) Job matches needs to include 'Other Criteria' match to spouse preferences
 
 // RETEST #406
 //	SINGLE SELECTION IN OTHER CRITERIA

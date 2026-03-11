@@ -520,7 +520,7 @@ for(all in allCountries) {
 
 if(user != 'cktest16ep') {
 	// Log out of office
-	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 }
 
 if(noErrors) {
