@@ -94,8 +94,6 @@ WebUI.waitForPageLoad(10)
 userFound = WebUI.verifyElementPresent(findTestObject('Object Repository/Admin/Ad User Viewer Utility/a_Top Line Username'), 
 	3, FailureHandling.OPTIONAL)
 
-println('userFound = ' + userFound)
-
 if(userFound) {
 	WebUI.click(findTestObject('Object Repository/Admin/Ad User Viewer Utility/a_Top Line Username'))
 
@@ -133,21 +131,11 @@ if(userFound) {
 	
 	println(data)
 	
-//	newData = data.replace('\t', '^')
-	
-//	newData = data.replace('^', '\t')
-	
-//	println(newData)
-	
-//	System.exit(0)
-	
 	outFile.write(data)
-//	outFile.write(newData)
 	
 	WebUI.delay(2)
 
-//} else {
-//	return null
+} else {
+	return null
 }
-
 return userFound

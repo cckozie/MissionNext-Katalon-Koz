@@ -1,0 +1,245 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2020-04-28
+ Updated	2025-04-28
+ Last Login	2026-01-16
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Teach in North Africa TiNA as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=13908]
+Contact Info
+21	Organization	Teach in North Africa
+20	Abbreviation	TiNA
+6	Key Contact First Name	Lauren
+7	Key Contact Last Name	Wargo
+133	Key Contact Title	Recruiter
+12	Key Contact Email	teachinnorthafrica@gmail.com
+22	Key Contact Phone	858-345-5083
+114	Key Contact WhatsApp Address	858-345-0583
+111	Organization Phone	719-216-4012
+26	Mailing Address	1551 21st Ave Kingsburg, CA 93631
+10	Country	Various
+28	Organization City	Various
+30	Post/Zip Code	93631
+151	World Region	Africa, North
+School Info
+66	Description	Teach in North Africa links Christian educators with educational opportunities in North Africa for the growth of God's Kingdom. Our school currently has about 115 students from preschool through sixth grade and is growing rapidly! We believe that education, respect for nationals, and the commitment of qualified teachers like you will shape the future leaders and influencers of North Africa!
+64	Year Founded	2019
+107	Vision Trip	Yes
+149	School Year Starts	Early September
+150	School Accredited	No
+152	Student Capacity	130
+65	Website Address	https://teachinnorthafrica.com/
+80	Hide Listing?	1
+Vision Trip Description
+67	Vision Trip Description	We offer a program each summer called Launch Intensive that provides potential teachers an opportunity to see the city, school, and culture by participating in a 12 day trip to North Africa. On this trip, prospective teachers live with a local family connected to our school and attend language and culture classes. It gives them a chance to get a glimpse of life overseas, as well as see our school and how it functions in an international context.
+Security
+90	Security Explanation	Our school seeks to engage the unreached through education. Most of our students are North African who come from Muslim backgrounds and have had little to no engagement with Christians. In our classrooms, we use a Christian worldview to inform instruction and form deep relationships with our students and their families. It is through these relationships that the gospel is shared through our example and the conversations we have over coffee and tea. Because of the resistance to foreign ideas (including religion), we have to be mindful when sharing our faith and talking about the purpose of our school.
+Positions Needed
+132	Available Positions	Administrator
+Assistant Principal
+Director
+Principal
+Manager, Business
+School Counselor
+School Librarian
+School Nurse
+School Psychologist
+Teacher's Aide
+Elementary School Teacher
+High School Teacher
+Kindergarten Teacher
+Middle School Teacher
+Preschool Teacher
+Substitute Teacher
+English Second Language (ESL)
+English Teacher
+Foreign Language - French
+Art Teacher
+Arts - Performing
+Computer Teacher (School)
+Geography Teacher
+History Teacher
+Mathematics Teacher
+Music Teacher
+Physical Education Teacher
+Reading Teacher/Specialist
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+Social Studies Teacher
+Special Education Teacher
+139	Experience Preferred	Administrator
+Counseling
+Elementary
+High School
+Kindergarten
+Middle School
+Pre-School
+Substitute Teacher
+Arts - Performing
+Arts - Visual
+Computer Science
+History
+Mathematics
+Music Teacher
+Physical Education
+Reading
+Sciences
+Sciences - Biology
+Sciences - Chemistry
+Sciences - Earth Science
+Sciences - Physical Science/Physics
+Social Subjects
+Special Needs
+Technology
+English
+ESL
+Language Teacher
+140	Other Experience Comment	School director must have at least 5 years of experience in education. A teaching credential is preferred, but not required for teaching positions.
+Service Options
+70	Time Commitments	Short-term
+One year
+One year to two years
+Long Term
+Internships
+Open - Will negotiate
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+144	School Term(s) Available	Full Year
+Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Position requires raising some support
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+121	Missions Experience	None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	No
+143	Formal Teaching Credentials	No
+Yes
+Pending
+51	English Proficiency	Advanced
+100	Affiliated with a Church?	Yes
+59	Travel Options	Some Travel funds available
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+United Kingdom
+France
+Admin Info
+84	Mission Statement	https://teachinnorthafrica.com/
+159	Meet Christian School Qualifications?	Not sure. Contact MissionNext Education
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	50
+162	Profile Years	2024
+2025
+2026
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+United Kingdom
+France
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 13908:
+Table: users
+ID	username	email	created	updated	last login	Active
+13908	hjohnson	teachinnorthafrica@gmail.com	2020-04-28	2025-04-28	2026-01-16	Yes
+Days ago: 	2146  	320  	57  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+13908	2	Organization	148
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+13908	6 EDU	No	2025-04-08	2026-04-08	active	
+
+Table: user_apps
+ID	App ID	Application
+13908	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+13908	2	Short-Term	Yes	109
+13908	11	IT-Technology	Yes	109
+13908	4	JourneyGuide	Yes	147
+13908	6	Education	Yes	146
+13908	3	Journey	Yes	148
+
+
+
+
+
+
+
+
+

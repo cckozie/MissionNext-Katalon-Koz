@@ -1,0 +1,183 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2018-11-27
+ Updated	2025-05-07
+ Last Login	2026-03-02
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for The Modular Study Group MSG as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=12947]
+Contact Info
+21	Organization	The Modular Study Group
+20	Abbreviation	MSG
+6	Key Contact First Name	Jeffrey
+7	Key Contact Last Name	Henney
+133	Key Contact Title	Director
+12	Key Contact Email	director@msgvte.com
+22	Key Contact Phone	+856 20 2826 6491
+114	Key Contact WhatsApp Address	JLHenney
+111	Organization Phone	+856 20 2826 6491
+10	Country	Laos
+28	Organization City	Vientiane
+93	State	Vientiane [prefecture]
+30	Post/Zip Code	00001
+151	World Region	Asia, Southeast
+School Info
+66	Description	The Modular Study Group provides educational support to families serving in SE Asia. MSG serves students in grades 7-12 using a hybrid model. For one week of each month, students meet at a central location for intense instruction in core subjects (math, science, and English), Christian discipleship, and interaction with peers. The rest of each month, students work at home using online lessons prepared by their teachers. By meeting some of the academic and social needs of students, MSG helps families to thrive and continue serving in SE Asia.
+64	Year Founded	2007
+107	Vision Trip	Yes
+149	School Year Starts	Late August
+150	School Accredited	Yes
+152	Student Capacity	28
+65	Website Address	https://www.msgvte.com
+Vision Trip Description
+67	Vision Trip Description	Come observe the Modular Study Group in action, ask questions, meet the staff, interview parents, and interact with the students.
+Security
+Positions Needed
+132	Available Positions	Boarding Home Parent
+High School Teacher
+Middle School Teacher
+Non-Traditional School Teacher
+English Teacher
+Mathematics Teacher
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+139	Experience Preferred	High School
+Middle School
+Non-Traditional
+Housing/Boarding/Childcare
+Mathematics
+Sciences
+140	Other Experience Comment	We look for teachers who are QUALIFIED, but not necessarily certified. For example, an engineer with a gift for teaching may be QUALIFIED to teach math, even if he/she has never received a teaching certificate/diploma.
+Service Options
+70	Time Commitments	One year to two years
+Long Term
+45	Available Start Options	No Preference
+144	School Term(s) Available	Full Year
+Readiness
+103	Process Stage	I am just beginning to look at missions
+58	Cross-cultural Experience	Not served in a culture other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Position requires raising your support
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	No
+142	Classroom Experience	No
+143	Formal Teaching Credentials	No
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	Yes
+59	Travel Options	No travel funding provided
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+United Kingdom
+Australia
+New Zealand
+Admin Info
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	90
+162	Profile Years	2025
+2026
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+United Kingdom
+Australia
+New Zealand
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 12947:
+Table: users
+ID	username	email	created	updated	last login	Active
+12947	msgvte	director@msgvte.com	2018-11-27	2025-05-07	2026-03-02	Yes
+Days ago: 	2664  	311  	12  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+12947	2	Organization	91
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+12947	6 EDU	No	2025-04-28	2026-04-28	active	
+
+Table: user_apps
+ID	App ID	Application
+12947	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+12947	11	IT-Technology	Yes	103
+12947	3	Journey	Yes	91
+12947	4	JourneyGuide	Yes	88
+12947	2	Short-Term	Yes	103
+12947	6	Education	Yes	92
+
+
+
+
+
+
+
+
+

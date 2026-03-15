@@ -1,0 +1,174 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2018-03-27
+ Updated	2026-03-13
+ Last Login	2026-03-14
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Las Palmas Christian School LPCS as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=12223]
+Contact Info
+21	Organization	Las Palmas Christian School
+20	Abbreviation	LPCS
+6	Key Contact First Name	Lynn
+7	Key Contact Last Name	Cunningham
+133	Key Contact Title	Head of School
+12	Key Contact Email	l.cunningham@laspalmas.edu.do
+22	Key Contact Phone	404-213-3966
+111	Organization Phone	809-246-0085
+10	Country	Dominican Republic
+28	Organization City	San Pedro
+29	Province/State/Region	San Pedro de Macoris
+30	Post/Zip Code	21000
+151	World Region	Caribbean
+School Info
+66	Description	Las Palmas Christian School educates and EQUIPS students through a bilingual program taught with excellence from a Biblical worldview, CHALLENGING them to become servant leaders and INSPIRING them to become agents of change in our world.
+64	Year Founded	2009
+107	Vision Trip	No
+149	School Year Starts	January
+150	School Accredited	No
+65	Website Address	www.laspalmas.edu.do
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
+High School Teacher
+English Teacher
+139	Experience Preferred	Elementary
+High School
+Service Options
+70	Time Commitments	One year
+One year to two years
+Long Term
+45	Available Start Options	No Preference
+144	School Term(s) Available	Full Year
+Readiness
+103	Process Stage	I am just beginning to look at missions
+58	Cross-cultural Experience	Not served in a culture other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Position requires raising your support
+Position requires raising some support
+A salary provided; enough to live locally
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	No
+142	Classroom Experience	No
+143	Formal Teaching Credentials	No
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	Yes
+59	Travel Options	No travel funding provided
+Recruiting Countries
+108	Recruit From Countries	United States
+Dominican Republic
+Puerto Rico
+Costa Rica
+El Salvador
+Panama
+Admin Info
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	80
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	United States
+Dominican Republic
+Puerto Rico
+Costa Rica
+El Salvador
+Panama
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 12223:
+Table: users
+ID	username	email	created	updated	last login	Active
+12223	laspalmas2018	l.cunningham@laspalmas.edu.do	2018-03-27	2026-03-13	2026-03-14	Yes
+Days ago: 	2909  	1  	0  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+12223	2	Organization	79
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+12223	6 EDU	No	2026-03-13	2026-03-15	active	
+
+Table: user_apps
+ID	App ID	Application
+12223	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+12223	11	IT-Technology	Yes	84
+12223	2	Short-Term	Yes	84
+12223	4	JourneyGuide	Yes	61
+12223	6	Education	Yes	61
+12223	3	Journey	Yes	61
+
+
+
+
+
+
+
+
+

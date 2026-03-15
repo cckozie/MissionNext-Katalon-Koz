@@ -1,0 +1,233 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2012-02-17
+ Updated	2025-04-21
+ Last Login	2026-01-20
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Puebla Christian School PCS as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=178]
+Contact Info
+21	Organization	Puebla Christian School
+20	Abbreviation	PCS
+6	Key Contact First Name	Daniel
+7	Key Contact Last Name	Burns
+133	Key Contact Title	Administrator
+12	Key Contact Email	pueblachristianschool@gmail.com
+22	Key Contact Phone	214-774-2750
+114	Key Contact WhatsApp Address	dpburns185
+111	Organization Phone	214-774-2750
+26	Mailing Address	Aljojuca #27 Col. La Paz Puebla, PUE 72160
+10	Country	United States
+28	Organization City	Puebla
+93	State	Missouri
+29	Province/State/Region	Puebla
+30	Post/Zip Code	72160
+151	World Region	Central America
+School Info
+66	Description	Puebla Christian School is located in Puebla, Mexico and serves the missionary and Christian community there. We are seeking teachers to fill positions that will come open for the next school year.
+64	Year Founded	1967
+107	Vision Trip	Yes
+149	School Year Starts	Late August
+150	School Accredited	No
+152	Student Capacity	70
+65	Website Address	http://www.pueblachristianschool.org
+Vision Trip Description
+67	Vision Trip Description	We would be happy to host prospective teachers for a visit.
+Security
+Positions Needed
+132	Available Positions	Director
+Principal
+Distance Education Teacher
+High School Teacher
+Middle School Teacher
+English Second Language (ESL)
+English Teacher
+Foreign Language - Spanish
+Bible Teacher
+History Teacher
+Mathematics Teacher
+Physical Education Teacher
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+Social Studies Teacher
+139	Experience Preferred	Elementary
+High School
+Middle School
+Service Options
+70	Time Commitments	One year
+One year to two years
+Long Term
+Open - Will negotiate
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+In two or more years
+No Preference
+144	School Term(s) Available	Fall Semester
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Position requires raising some support
+No Preference
+50	Bible Training	Informal Bible training
+Some Bible school classes
+Bible school degree or equivalent
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	No
+Yes
+Pending
+142	Classroom Experience	No
+Yes
+Pending
+143	Formal Teaching Credentials	No
+Yes
+Pending
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	No
+59	Travel Options	No travel funding provided
+Travel funding negotiated
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+Mexico
+Ireland
+United Kingdom
+Spain
+Admin Info
+84	Mission Statement	http://pueblachristianschool.org/about-pcs/
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+94	Ministry Preferences	Manage ESL Program
+Secondary Education
+TESL (English)
+ESL - Teach, Will Learn How
+ESL - Teach, Trained
+M.K. Education
+Special Education
+Education
+Guidance Counselor
+Elementary Education
+Languages
+IT Positions
+Match Filters
+100	Affiliated with a Church?	No
+161	Match Percent Rate	50
+162	Profile Years	2019
+2020
+2021
+2022
+2023
+2024
+2025
+2026
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+Mexico
+Ireland
+United Kingdom
+Spain
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 178:
+Table: users
+ID	username	email	created	updated	last login	Active
+178	pueblachrist	pueblachristianschool@gmail.com	2012-02-17	2025-04-21	2026-01-20	Yes
+Days ago: 	5139  	327  	53  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+178	2	Organization	151
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+178	6 EDU	No	2025-11-11	2026-11-11	active	
+
+Table: user_apps
+ID	App ID	Application
+178	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+178	3	Journey	No	151
+178	4	JourneyGuide	Yes	151
+178	2	Short-Term	Yes	159
+178	6	Education	Yes	150
+
+
+
+
+
+
+
+
+

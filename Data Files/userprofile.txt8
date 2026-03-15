@@ -1,0 +1,198 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2019-04-02
+ Updated	2025-12-15
+ Last Login	2026-01-16
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Quisqueya Christian School QCS as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=13262]
+Contact Info
+21	Organization	Quisqueya Christian School
+20	Abbreviation	QCS
+6	Key Contact First Name	Angela
+7	Key Contact Last Name	Petit-Frere
+133	Key Contact Title	Head of School
+12	Key Contact Email	contact@quisqueya.org
+22	Key Contact Phone	1 (772) 621-5570
+114	Key Contact WhatsApp Address	+509 4744 1009
+111	Organization Phone	1 (772) 621-5570
+26	Mailing Address	Unit 2029-QCS, 3170 Airmans Dr, Fort Pierce, FL 34946
+10	Country	Haiti
+28	Organization City	Port-Au-Prince
+29	Province/State/Region	Ouest
+30	Post/Zip Code	HT 6120
+151	World Region	Caribbean
+School Info
+66	Description	Quisqueya Christian School (QCS) is a private, K-12 US accredited Christian school located in Port-au-Prince, Haiti. Established over 50 years ago, QCS provides a rigorous, college-preparatory education rooted in biblical values. Our mission is to prepare and equip students to transform the world for Jesus Christ. With a diverse, international staff and student body, we foster a supportive learning environment that encourages intellectual curiosity, character development, and service to others.
+64	Year Founded	1974
+107	Vision Trip	No
+149	School Year Starts	Mid August
+150	School Accredited	Yes
+152	Student Capacity	300
+65	Website Address	www.quisqueyahaiti.com
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Administrative Assistant
+Administrator
+Assistant Principal
+Principal
+School Librarian
+Elementary School Teacher
+High School Teacher
+Kindergarten Teacher
+Middle School Teacher
+English Second Language (ESL)
+English Teacher
+History Teacher
+Mathematics Teacher
+Resource Teacher
+Science Teacher
+Social Studies Teacher
+Special Education Teacher
+139	Experience Preferred	Elementary
+High School
+Kindergarten
+Middle School
+English
+Service Options
+70	Time Commitments	Short-term
+One year
+One year to two years
+Long Term
+Internships
+Open - Will negotiate
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+In two or more years
+No Preference
+144	School Term(s) Available	Spring Semester
+Fall Semester
+Full Year
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	No Preference
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	No
+142	Classroom Experience	No
+143	Formal Teaching Credentials	No
+51	English Proficiency	Advanced
+100	Affiliated with a Church?	No
+59	Travel Options	No travel funding provided
+Some Travel funds available
+Travel funding negotiated
+Recruiting Countries
+108	Recruit From Countries	All
+Admin Info
+84	Mission Statement	https://www.quisqueyahaiti.com/about
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	No
+161	Match Percent Rate	50
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	All
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 13262:
+Table: users
+ID	username	email	created	updated	last login	Active
+13262	qcseagles	contact@quisqueya.org	2019-04-02	2025-12-15	2026-01-16	Yes
+Days ago: 	2538  	89  	57  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+13262	2	Organization	106
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+13262	6 EDU	No	2025-12-04	2026-12-04	active	
+
+Table: user_apps
+ID	App ID	Application
+13262	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+13262	6	Education	Yes	92
+13262	2	Short-Term	Yes	96
+13262	11	IT-Technology	Yes	96
+13262	3	Journey	Yes	106
+13262	4	JourneyGuide	Yes	89
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,252 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2019-03-12
+ Updated	2025-09-03
+ Last Login	2026-02-03
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Sekolah Pelita Harapan, INDONESIA SPH as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=13213]
+Contact Info
+21	Organization	Sekolah Pelita Harapan, INDONESIA
+20	Abbreviation	SPH
+6	Key Contact First Name	Nancy
+7	Key Contact Last Name	Indriyati
+133	Key Contact Title	Recruitment Coordinator
+12	Key Contact Email	nancy.indriyati@sph.ac.id
+22	Key Contact Phone	+62 21 5460234
+114	Key Contact WhatsApp Address	nancy.indriyati@sph.ac.id
+111	Organization Phone	+62 21 5460234
+26	Mailing Address	Bulevar Palem Raya 2500 Lippo Village Tangerang 15810 Indonesia
+10	Country	Indonesia
+28	Organization City	Greater Jakarta
+93	State	Jakarta Raya
+29	Province/State/Region	Jakarta
+30	Post/Zip Code	15810
+151	World Region	Asia, Southeast
+School Info
+66	Description	Sekolah Pelita Harapan (School of Light and Hope) is a system of five international Christian K-12 campuses, located around Jakarta in Indonesia. The schools began in 1993 in response to a need for quality education founded upon Biblical Christian truth. We are committed to the Evangelical Reformed faith and focused on equipping Indonesian young people with a world class, Biblically focused education that gives them entry to further study in English language universities all around the world. Across the five schools we teach over 2400 students using the Cambridge Examination and International Baccalaureate curricular. We currently have 160 expatriate teachers with us, mostly from North America. SPH is an accredited member of the Association of Christian Schools International (ACSI), as well as Western Association of Schools and Colleges (WASC). We are also affiliated with Christian Schools International (CSI), and have strong personal connections with many of the Christian Colleges in North America.
+64	Year Founded	1993
+107	Vision Trip	No
+149	School Year Starts	July
+150	School Accredited	Yes
+152	Student Capacity	2400
+65	Website Address	https://sph.edu/
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Administrator
+Assistant Principal
+Principal
+Superintendent of Schools
+Curriculum Specialist
+School Counselor
+Elementary School Teacher
+High School Teacher
+Kindergarten Teacher
+Middle School Teacher
+Preschool Teacher
+English Second Language (ESL)
+English Teacher
+Art Teacher
+Arts - Performing
+Bible Teacher
+Business Education Teacher
+Computer Teacher (School)
+Drama Teacher
+History Teacher
+Home Economics Teacher
+Mathematics Teacher
+Music Teacher
+Physical Education Teacher
+Reading Teacher/Specialist
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+Social Studies Teacher
+Special Education Teacher
+139	Experience Preferred	Administrator
+Elementary
+High School
+Kindergarten
+Middle School
+Pre-School
+Arts - Performing
+Arts - Visual
+Bible
+Business Education
+Home Economics
+History
+Mathematics
+Music Teacher
+Physical Education
+Reading
+Sciences
+Sciences - Biology
+Sciences - Chemistry
+Sciences - Earth Science
+Sciences - Physical Science/Physics
+Social Subjects
+Special Needs
+Technology
+English
+Language Teacher
+140	Other Experience Comment	Education degree, teaching credential, Christian faith, previous teaching experience, enthusiastic, and relational.
+Service Options
+70	Time Commitments	One year to two years
+Long Term
+45	Available Start Options	Within 12 months
+In one to two years
+144	School Term(s) Available	Summer Session
+Readiness
+103	Process Stage	I am just beginning to look at missions
+58	Cross-cultural Experience	Not served in a culture other than my own
+60	Paid & Volunteer Positions	No Preference
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	No
+Yes
+Pending
+142	Classroom Experience	No
+Yes
+Pending
+143	Formal Teaching Credentials	No
+Yes
+Pending
+51	English Proficiency	Advanced
+100	Affiliated with a Church?	Yes
+59	Travel Options	Travel funds provided
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+China
+Hong Kong
+Japan
+Korea-South
+Taiwan
+Indonesia
+Malaysia
+Philippines
+Singapore
+United Kingdom
+Australia
+New Zealand
+Admin Info
+84	Mission Statement	https://sph.edu/about/vision-mission/
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	70
+162	Profile Years	2025
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+China
+Hong Kong
+Japan
+Korea-South
+Taiwan
+Indonesia
+Malaysia
+Philippines
+Singapore
+United Kingdom
+Australia
+New Zealand
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 13213:
+Table: users
+ID	username	email	created	updated	last login	Active
+13213	lightandhope2500	nancy.indriyati@sph.ac.id	2019-03-12	2025-09-03	2026-02-03	Yes
+Days ago: 	2559  	192  	39  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+13213	2	Organization	153
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+13213	6 EDU	No	2025-08-05	2026-08-05	active	
+
+Table: user_apps
+ID	App ID	Application
+13213	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+13213	4	JourneyGuide	Yes	132
+13213	3	Journey	Yes	153
+13213	2	Short-Term	Yes	126
+13213	11	IT-Technology	Yes	126
+13213	6	Education	Yes	132
+
+
+
+
+
+
+
+
+

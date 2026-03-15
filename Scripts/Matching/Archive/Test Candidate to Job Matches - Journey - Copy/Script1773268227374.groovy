@@ -544,6 +544,7 @@ def formatProfile(def file, def matchFields) {
                     
                     if ((line.length() - colon) > 2) {
                         value = line.substring(colon + 2).trim()
+
                         values.add(value)
                     }
                     
@@ -554,7 +555,6 @@ def formatProfile(def file, def matchFields) {
                     }
                     
                     while (!(line.contains(':')) && (line != null)) {
-						line = line.replace(',', '*')		// added 3/11/26 to compensate for world regions that contain a comma i.e. Europe, West
 						values.add(line)
 
                         line = reader.readLine()

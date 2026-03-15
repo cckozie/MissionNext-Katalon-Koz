@@ -40,9 +40,9 @@ debug = false
 
 site = 'Journey'
 
-switchToUser = 'office' // office or cktest17jp
+switchToUser = 'office' // office
 
-switchTo = false		// If false, set profile
+switchTo = false		// If false, set profile to cktest37jp
 
 if(!switchTo) {
 	username = GlobalVariable.username

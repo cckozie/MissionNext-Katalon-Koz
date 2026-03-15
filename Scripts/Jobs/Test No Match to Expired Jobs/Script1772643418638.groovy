@@ -61,7 +61,7 @@ username = GlobalVariable.username
 
 password = GlobalVariable.password
 
-switchToUser = 'office' // office or cktest17jp
+switchToUser = 'office' // office
 
 today = new Date().format("yyyy-MM-dd")
 
@@ -127,7 +127,7 @@ for(switchTo in state) {
 	WebUI.closeBrowser()
 }
 
-println("Office jobs")
+println(switchToUser + " jobs")
 j1Jobs.each {
 	println(it)
 }
@@ -316,12 +316,12 @@ orgMatches.each {
 	println(it)
 }
 
-println('office matches')
+println(switchToUser + ' matches')
 officeMatches.each {
 	println(it)
 }
 
-outFile.append('\n TEST JOB MATCHES\n')
+outFile.append('\n TEST JOB MATCHES TO BOTH ' + partnerProfile + ' AND "OFFICE".\n')
 // Verify that all matches to office are also in partner
 for(job in officeMatches) {
 	if(job in orgMatches) {
@@ -335,7 +335,7 @@ for(job in officeMatches) {
 	}
 }
 
-outFile.append('\n TEST JOB MATCHES TO ONLY ACTIVE JOBS\n')
+outFile.append('\n TEST JOB MATCHES TO ONLY ACTIVE "' + switchToUser + '" JOBS\n')
 // Verify that all matches to office are to non-expired jobs
 for(job in officeMatches) {
 	expired = j2Jobs.get(job, null)

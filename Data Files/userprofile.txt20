@@ -1,0 +1,189 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.2.30
+
+Date: 2026-03-14
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2016-12-19
+ Updated	2026-01-28
+ Last Login	2026-01-29
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for International Academy of St. Petersburg IASP as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=9834]
+Contact Info
+21	Organization	International Academy of St. Petersburg
+20	Abbreviation	IASP
+6	Key Contact First Name	Joy
+7	Key Contact Last Name	Watson
+133	Key Contact Title	Recruiter
+12	Key Contact Email	recruit@myiasp.com
+22	Key Contact Phone	+1 (804) 819-9205
+111	Organization Phone	+1 (804) 819-9205
+26	Mailing Address	Finskiy Pereulok 4 Liter A St. Petersburg, Russia 195009
+10	Country	Russian Federation
+28	Organization City	St.Petersburg
+30	Post/Zip Code	195009
+151	World Region	Europe, East
+School Info
+66	Description	International Academy (IA) exists to educate the next generation of the world’s leaders, by giving our student’s the tools necessary to succeed in life. Here at IA we believe in educating the whole student, academically, spiritually and culturally. Our students have gone on to attend universities such as Duke, Pepperdine, Baylor, Wheaton and Sungkyunkwan University. This is the legacy that we have been creating for over twenty years.
+64	Year Founded	1993
+107	Vision Trip	Yes
+149	School Year Starts	Mid August
+150	School Accredited	Yes
+152	Student Capacity	140
+65	Website Address	http://www.myiasp.com
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Principal
+IT Coordinator
+School Counselor
+Elementary School Teacher
+Middle School Teacher
+Arts - Performing
+Drama Teacher
+Mathematics Teacher
+Music Teacher
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+Special Education Teacher
+139	Experience Preferred	Counseling
+Elementary
+Kindergarten
+Middle School
+Tutoring
+140	Other Experience Comment	Experience with English as a Second Language Learners & Multi-graded Classrooms helpful
+Service Options
+70	Time Commitments	One year
+One year to two years
+Long Term
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+In two or more years
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	Position requires raising your support
+Position requires raising some support
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+I am planning to take the Perspectives Course
+I have taken or am taking the Perspectives Course
+121	Missions Experience	None of the above
+105	Relocation Option(s)	Not a Match criterion
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	No
+143	Formal Teaching Credentials	No
+Yes
+Pending
+51	English Proficiency	Advanced
+100	Affiliated with a Church?	Yes
+59	Travel Options	No travel funding provided
+Travel funding negotiated
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Admin Info
+84	Mission Statement	http://myiasp.com
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	50
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 9834:
+Table: users
+ID	username	email	created	updated	last login	Active
+9834	iaostp	recruit@myiasp.com	2016-12-19	2026-01-28	2026-01-29	Yes
+Days ago: 	3372  	45  	44  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+9834	2	Organization	104
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+9834	6 EDU	No	2025-11-07	2026-11-07	active	
+
+Table: user_apps
+ID	App ID	Application
+9834	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+9834	4	JourneyGuide	Yes	96
+9834	3	Journey	Yes	104
+9834	2	Short-Term	Yes	104
+9834	6	Education	Yes	96
+
+
+
+
+
+
+
+
+

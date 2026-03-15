@@ -35,13 +35,11 @@ import java.time.Instant as Instant
 import org.openqa.selenium.By as By
 import org.openqa.selenium.interactions.Actions as Actions
 
-startRow = 1 // start to specific row, or else to 1
-
-maxMatches = 50 //overridden if running test suite
+maxMatches = 25 //overridden if running test suite
 
 updateWildcards = false
 
-debug = false
+debug = true
 
 if (varSite != null) {
     site = varSite // Journey or Education
@@ -99,14 +97,14 @@ profileFile = (filePath + 'userprofile.txt')
 
 // Entries in AD organization profile page that need to be ignored
 categoriesOrganization = ['Contact Info', 'School Info', 'Vision Trip Description', 'Security', 'Positions Needed', 'Service Options'
-    , 'Readiness', 'Match Filters', 'Admin Info', 'Recruiting Countries', 'Ministry Prefs', 'IT Positions']
-	
+    , 'Readiness', 'Match Filters', 'Admin Info', 'Recruiting Countries', 'Ministry Prefs', 'IT Positions',
+	'Attended Perspectives?'] //These were added on 3/13/26
 
 // Entries in AD candidate profile page that need to be ignored
 categoriesCandidate = ['Name & Preferences', 'Contact Info', 'Ministry Positions', 'Enter other Ethnicity', 'Enter Family Status'
     , 'Experience', 'Education', 'Additional Language ProficiencyGroup', 'Situation', 'Church', 'Availability', 'Preferences'
-    , 'Options/Comment'] //,
-//	'Attended Perspectives?', 'Missions Experience'] //These were added on 3/13/26
+    , 'Options/Comment',
+	'Attended Perspectives?', 'Missions Experience'] //These were added on 3/13/26
 
 if (!(updateWildcards)) {
     candidateWildcards = evaluate(new File((filePath + site) + ' Candidate Wildcards.txt'))
@@ -334,10 +332,8 @@ println(Rows.size())
 
 int row_count = Rows.size() - 1
 
-lastRow = startRow + maxMatches
-
-if (lastRow < row_count) {
-    row_count = lastRow
+if (maxMatches < row_count) {
+    row_count = maxMatches
 }
 
 found = false
@@ -347,10 +343,7 @@ noErrors = true
 profileFileBase = profileFile
 
 if (row_count > 0) {
-    for (row = startRow; row < row_count; row++) {
-		if(debug) {
-			resultsFile.append('Processing row ' + row + '\n')
-		}
+    for (row = 1; row < row_count; row++) {
         println('row is ' + row)
 		
 		profileFile = profileFileBase + row
@@ -433,15 +426,7 @@ if (row_count > 0) {
 					continue
 				}
 	
-//	            returnValues = formatProfile(profileFile, categoriesOrganization, candidateMatchFields)
-				
-				println('>>>>> categoriesOrganization:')
-				println(categoriesOrganization)
-				
-				println('>>>>> organizationMatchFields:')
-				println(organizationMatchFields)
-				
-				returnValues = formatProfile(profileFile, categoriesOrganization, organizationMatchFields)
+	            returnValues = formatProfile(profileFile, categoriesOrganization, candidateMatchFields)
 				
 	            organizationSelections = (returnValues[0])
 	
@@ -508,7 +493,6 @@ if (row_count > 0) {
 	
 	        Rows = Table.findElements(By.tagName('tr'))
 		}
-
     }
 }
 
@@ -680,13 +664,12 @@ def doMatching(def candidateSelections, def organizationSelections) {
     tablePct = tablePct.toInteger()
 
     code = ''
-	
-	pctDiff = addedPct - tablePct
 
-    if (pctDiff.abs() > 1) {
+    if ((addedPct - tablePct) > 1) {
         error = true
 		
 		noErrors = false
+		
     }
     
     outText = (('\nCalculated match percentage adding is ' + addedPct) + '%.')
@@ -738,7 +721,7 @@ def doMatching(def candidateSelections, def organizationSelections) {
 }
 
 def getNextLine(def reader, def categories) {
-
+	
 	line = reader.readLine()
 	
 	if(line != null) {
@@ -747,7 +730,7 @@ def getNextLine(def reader, def categories) {
 	
 	println(line)
 
-    while ((line != null) && (line.length() <= 2)) {// || (line in categories)) {
+    while (((line != null) && (line.length() <= 2)) || (line in categories)) {
         line = reader.readLine()
 		println(line)
    }
@@ -763,22 +746,6 @@ def getNextLine(def reader, def categories) {
     } else {
         return 'end'
     }
-
-/*
-	line = reader.readLine()
-	
-	println(line)
-
-	while (((line != null) && (line.length() <= 2)) || (line in categories)) {
-		line = reader.readLine()
-	}
-	
-	if (((line != null) && !(line.contains('Logout'))) && !(line.contains('Note: A candidate user'))) {
-		return line
-	} else {
-		return 'end'
-	}
-*/
 }
 
 def formatProfile(def file, def categories, def matchFields) {
@@ -825,10 +792,6 @@ def formatProfile(def file, def categories, def matchFields) {
                     if (lineTab >= 0) {
 						println('if 3')
                         field = line.substring(0, lineTab).trim()
-						
-						println('## Field is '+ field)
-						
-						println('matchFields is ' + matchFields)
 
                         value = line.substring(lineTab + 1).trim()
 
@@ -839,18 +802,18 @@ def formatProfile(def file, def categories, def matchFields) {
                         
                         line = getNextLine(reader, categories)
 
-                        while (!line.contains('\t') && !line.contains('end') && !categories.contains(line)) {
+                        while (!(line.contains('\t') && !(line.contains('end')))) {
 						   println('while 3')
                            line = line.trim()
-					   
-                           values.add(line)
 
-                           line = getNextLine(reader, categories)
+                            values.add(line)
 
-                           if (line == 'end') {
+                            line = getNextLine(reader, categories)
+
+                            if (line == 'end') {
 								println('if 5')
                                 break
-                           }
+                            }
                         }
                         
                         if (field in matchFields) {
