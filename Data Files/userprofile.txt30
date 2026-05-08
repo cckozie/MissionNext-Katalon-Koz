@@ -1,0 +1,318 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.1.34
+
+Date: 2026-04-17
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2016-03-15
+ Updated	2025-11-27
+ Last Login	2025-11-27
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Kathmandu International Study Centre - KISC KISC as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=6059]
+Contact Info
+21	Organization	Kathmandu International Study Centre - KISC
+20	Abbreviation	KISC
+6	Key Contact First Name	Christina
+7	Key Contact Last Name	Meier
+133	Key Contact Title	Human Resource Manager
+12	Key Contact Email	recruit@kisc.edu.np
+22	Key Contact Phone	+977 980 6633160
+114	Key Contact WhatsApp Address	Recruit KISC
+111	Organization Phone	+977 (1) 5570142
+26	Mailing Address	PO Box 2714 Thecho-12 Kathmandu, Nepal
+10	Country	Nepal
+28	Organization City	Lalitpur
+93	State	Three - Bagmati
+29	Province/State/Region	Kathmandu
+30	Post/Zip Code	44600
+151	World Region	Asia, Central
+School Info
+66	Description	For almost 40 years KISC has been a strong community in Kathmandu, developing from just a dozen students in a tutorial group to over 200 students in our Primary and Secondary schools. We have supported many families by providing their children with an excellent international standard of education, which allows them to work, live, and serve here in Nepal. Our teacher training programme, EQUIP, currently works with around 20 schools in Kathmandu and other areas of rural and urban Nepal. It does amazing and incredible work with leaders and teachers to develop and implement quality education in Nepali schools. KISC is one of several organisations under the ownership of HDCS, a Nepali NGO which focuses on education, health, development and disaster relief.
+64	Year Founded	1987
+107	Vision Trip	Yes
+149	School Year Starts	July
+150	School Accredited	Yes
+152	Student Capacity	230
+65	Website Address	http://www.kisc.edu.np
+Vision Trip Description
+67	Vision Trip Description	Interested individuals are welcome to come for up to 2 weeks to experience Nepal and the school.
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
+High School Teacher
+Kindergarten Teacher
+Middle School Teacher
+Special Education Teacher
+139	Experience Preferred	Elementary
+High School
+Kindergarten
+Middle School
+Special Needs
+140	Other Experience Comment	We are open to new teachers as well as experienced teachers. But teachers must have an internationally recognised Bachelor Degree with qualifications in education/teaching.
+Service Options
+70	Time Commitments	Long Term
+Internships
+Open - Will negotiate
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+In two or more years
+144	School Term(s) Available	Summer Session
+Spring Semester
+Fall Semester
+Full Year
+Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+I am actively investigating missions
+I am ready to select a ministry
+58	Cross-cultural Experience	Not served in a culture other than my own
+Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Position requires raising your support
+Position requires raising some support
+A salary provided; enough to live locally
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	None of the above
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	Yes
+142	Classroom Experience	Yes
+Pending
+143	Formal Teaching Credentials	Yes
+Pending
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	No
+59	Travel Options	Some Travel funds available
+Travel funds provided
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+Malaysia
+Philippines
+Singapore
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Aland Islands
+Denmark
+Faroe Islands
+Finland
+Iceland
+Ireland
+Norway
+Sweden
+United Kingdom
+Hungary
+Austria
+Belgium
+France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Spain
+Australia
+New Zealand
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+French Guiana
+Guyana
+Paraguay
+Peru
+Suriname
+Venezuela
+All
+Admin Info
+84	Mission Statement	o provide excellent education, primarily for the international mission community and Nepali school communities, based on KISC values. Through KISC’s international K-12 (R-13) school and EQUIP teacher training programme, students and staff will positively impact their world
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+94	Ministry Preferences	Teacher Training
+Special Education
+Military Kids
+Literacy
+Principal/Administrator
+TV Production
+Middle School/Jr. High
+Graphic Arts Design
+Elementary Education
+Languages
+Job Site Foreman
+Grant Writing
+Accountant
+Fund Development
+Secondary Education
+Art Director
+TESL (English)
+ESL - Teach, Trained
+M.K. Education
+IT Positions
+Match Filters
+100	Affiliated with a Church?	No
+161	Match Percent Rate	70
+162	Profile Years	2020
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+South Africa
+Malaysia
+Philippines
+Singapore
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Aland Islands
+Denmark
+Faroe Islands
+Finland
+Iceland
+Ireland
+Norway
+Sweden
+United Kingdom
+Hungary
+Austria
+Belgium
+France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Spain
+Australia
+New Zealand
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+French Guiana
+Guyana
+Paraguay
+Peru
+Suriname
+Venezuela
+All
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 6059:
+Table: users
+ID	username	email	created	updated	last login	Active
+6059	recruit@kisc.edu.np	recruit@kisc.edu.np	2016-03-15	2025-11-27	2025-11-27	Yes
+Days ago: 	3685  	141  	141  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+6059	2	Organization	187
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+6059	6 EDU	Yes	2025-11-19	2026-11-20	active	
+
+Table: user_apps
+ID	App ID	Application
+6059	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+6059	3	Journey	Yes	180
+6059	4	JourneyGuide	Yes	182
+6059	6	Education	Yes	180
+6059	2	Short-Term	Yes	193
+
+
+
+
+
+
+
+
+

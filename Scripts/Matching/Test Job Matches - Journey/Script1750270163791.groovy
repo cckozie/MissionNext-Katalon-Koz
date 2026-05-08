@@ -45,7 +45,7 @@ No match on [Ministry Preferences]
 // Had to some diddling because of the new column (for the *) on the jobs page.
 // Leaving as is for now because of new issue Paulette has discovered.
 
-maxMatches = 5 //overridden if test suite running
+maxMatches = 50 //overridden if test suite running
 
 fudgeFactor = 2 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
 

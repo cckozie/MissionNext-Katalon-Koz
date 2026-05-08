@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.2.30
+PHP version: 8.1.34
 
-Date: 2026-03-14
+Date: 2026-04-17
 
 
 
@@ -36,9 +36,9 @@ Email Webmaster
 
   mission_next_prod
 
- Created	2013-02-19
- Updated	2025-09-12
- Last Login	2026-02-25
+ Created	2019-01-19
+ Updated	2025-09-17
+ Last Login	2025-11-04
  
 	
 	
@@ -51,60 +51,49 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Hinkson Christian Academy HCA as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=5995]
+Profile for Love Justice International LJI as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=13075]
 Contact Info
-21	Organization	Hinkson Christian Academy
-20	Abbreviation	HCA
-6	Key Contact First Name	Christiana
-7	Key Contact Last Name	Brande
-133	Key Contact Title	Recruiter
-12	Key Contact Email	info@hinksonca.net
-22	Key Contact Phone	+7-916-318-3588
-114	Key Contact WhatsApp Address	+7-916-318-3588
-111	Organization Phone	011-7-495-733-9740
-26	Mailing Address	Novocheryomushkinskaya 39 K3
-10	Country	Russian Federation
-28	Organization City	Moscow
-29	Province/State/Region	Moscow Region
-30	Post/Zip Code	117218
-151	World Region	Europe, East
+21	Organization	Love Justice International
+20	Abbreviation	LJI
+6	Key Contact First Name	Cuc Kim
+7	Key Contact Last Name	Blessitt
+12	Key Contact Email	cblessitt@lovejustice.ngo
+22	Key Contact Phone	402.601.4816 ext 2
+111	Organization Phone	402.601.4816
+10	Country	Nepal
+28	Organization City	N/A
+29	Province/State/Region	N/A
+151	World Region	Asia, West
 School Info
-66	Description	Hinkson Christian Academy (HCA) is an English immersion elementary and secondary school located in Moscow, Russia. For over 30 years, Hinkson has served the needs of expat and local families who desire their children to receive a quality English-language education that is informed by a Christian worldview, and values principles of Christian character. Hinkson is a member of the Association of Christian Schools International, whose accreditation is recognized worldwide.
-64	Year Founded	1991
+66	Description	We believe in the life-changing impact of education for our children. Our school, founded in 2015 as part of Love Justice International, is located in Nepal. It began with the vision to provide excellent education to over 50 children who had been orphaned or abandoned and were living in our Family Homes. Today, we serve approximately 230 students in Pre-School through Grade 10, including children from the community, our Family Homes, and international families. We strive to create a space where children can become who they were created to be by providing a Kingdom-Class education. Our school offers a safe, joyful environment where students can learn, play, wonder, and worship. It is a place to inspire creativity, foster curiosity, and cultivate a greater desire for godliness—a place to dream and grow. We focus on equipping national teachers with strategies that foster a culture of safety and support, breaking away from traditional shame-based education. Students are encouraged to ask questions, explore their world, and engage deeply in learning without fear, empowering them to become lifelong learners and restorers in their communities. Nestled in a region of stunning natural beauty, our school is a place of hope and transformation. The Dream School embodies the core values of Love, Excellence, and Wisdom as we work to make a lasting impact on the lives of our students and their families. Our Mission: To equip and inspire students to be difference-makers through excellent education.
+64	Year Founded	2015
 107	Vision Trip	Yes
-149	School Year Starts	Late August
-150	School Accredited	Yes
-152	Student Capacity	200
-65	Website Address	www.hinkson.ru
+149	School Year Starts	Any Time of Year
+150	School Accredited	No
+152	Student Capacity	315
+65	Website Address	https://www.lovejustice.ngo/our-childrens-homes
+80	Hide Listing?	1
 Vision Trip Description
+67	Vision Trip Description	Once the interview process is complete, applicants who seem like a good fit are welcomed to join us for a 1–2 week exploration trip. This gives them a chance to connect with our team in person and experience the school firsthand.
 Security
+90	Security Explanation	School is in sensitive location
 Positions Needed
-132	Available Positions	Administrative Assistant
-Administrator
-Athletic Director
+132	Available Positions	Administrator
 Director
-Principal
+Recruiting Teachers
 Curriculum Specialist
+Manager, Facilities
 School Counselor
-School Librarian
-School Nurse
-School Psychologist
-School Psychometrist
 Elementary School Teacher
 High School Teacher
 Middle School Teacher
-Substitute Teacher
 English Second Language (ESL)
 English Teacher
-Athletic Coach
-Bible Teacher
-Geography Teacher
 History Teacher
 Mathematics Teacher
-Music Teacher
-Physical Education Teacher
 Reading Teacher/Specialist
+Resource Teacher
 Science, Biology
 Science, Chemistry
 Science, Physics
@@ -112,50 +101,46 @@ Science Teacher
 Social Studies Teacher
 Special Education Teacher
 139	Experience Preferred	Administrator
-Counseling
 Elementary
 High School
+Kindergarten
 Middle School
-Substitute Teacher
-Teacher's Aide
-Arts - Performing
+Non-Traditional
+Maintenance
+History
 Mathematics
+Music Teacher
 Physical Education
 Reading
 Sciences
+Sciences - Biology
 Sciences - Chemistry
 Sciences - Earth Science
 Sciences - Physical Science/Physics
+Social Subjects
 Special Needs
+Technology
 English
+ESL
+Language Teacher
 Service Options
-70	Time Commitments	One year
-One year to two years
+70	Time Commitments	One year to two years
 Long Term
 Internships
 45	Available Start Options	Immediately
 Within 12 months
 In one to two years
-In two or more years
-144	School Term(s) Available	Spring Semester
-Fall Semester
-Full Year
-Open
+144	School Term(s) Available	Open
 Readiness
-103	Process Stage	I am actively investigating missions
-I am ready to select a ministry
+103	Process Stage	I am just beginning to look at missions
 58	Cross-cultural Experience	Not served in a culture other than my own
-Occasionally served in cultures other than my own
-Extensive experience serving in cultures other than my own
 60	Paid & Volunteer Positions	Volunteer/self-supported position
-Position requires raising some support
-No Preference
-50	Bible Training	Minimal Bible training
-Informal Bible training
-Some Bible school classes
-Bible school degree or equivalent
+50	Bible Training	Not Applicable
 104	Attended Perspectives?	I have not taken the Perspectives Course
-121	Missions Experience	None of the above
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
 105	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Match Filters
 141	Formal Education Degree	No
@@ -176,47 +161,25 @@ Travel funding negotiated
 Recruiting Countries
 108	Recruit From Countries	Bermuda
 Canada
+Greenland
 United States
-Ethiopia
-Kenya
-Uganda
-Lesotho
+Botswana
+Namibia
 South Africa
-Korea-South
-Taiwan
+Eswatini (Swaziland)
+Brunei Darussalam
 Malaysia
+Philippines
 Singapore
-Thailand
-Bangladesh
 India
-Kazakhstan
-Kyrgyzstan
-Maldives
-Uzbekistan
-Armenia
 Cyprus
-Georgia
 Israel
-Anguilla
-Antigua and Barbuda
+Qatar
+United Arab Emirates
 Aruba
-Bahamas
-Barbados
-Cayman Islands
-Dominica
-Dominican Republic
-Grenada
-Montserrat
 Netherlands Antilles
 Puerto Rico
-Saint Kitts and Nevis
-Saint Lucia
-Virgin Islands-British
-Virgin Islands-US
-Costa Rica
-El Salvador
-Panama
-Aland Islands
+Belize
 Channel Islands
 Denmark
 Estonia
@@ -225,70 +188,49 @@ Finland
 Iceland
 Ireland
 Latvia
-Lithuania
 Norway
 Sweden
 United Kingdom
-Belarus
 Czech Republic
 Hungary
-Moldova
 Poland
 Slovakia
-Russian Federation
 Ukraine
 Austria
 Belgium
-France
-Germany
 Liechtenstein
 Luxembourg
 Monaco
 Netherlands
 Switzerland
-Andorra
-Bosnia and Herzegovina
 Gibraltar
-Greece
 Italy
 Malta
 Portugal
-San Marino
 Slovenia
 Vatican City
-Albania
-Bulgaria
-Croatia
-Kosovo
-Montenegro
-Romania
-Serbia
-Spain
-Turkey
 American Samoa
 Australia
 Cook Islands
 Fiji
-French Polynesia
 Guam
+Kiribati
 Marshall Islands
+Micronesia
+Nauru
+New Caledonia
 New Zealand
+Niue
+Northern Mariana Islands
+Palau
 Papua New Guinea
 Samoa
 Solomon Islands
-Argentina
-Bolivia
-Brazil
-Chile
-Colombia
-Ecuador
-Falkland Islands
-Paraguay
-Peru
-Suriname
-Uruguay
+Tonga
+Tuvalu
+Vanuatu
 Admin Info
-84	Mission Statement	https://hinkson.ru/fromthepresident.html
+84	Mission Statement	LJI: https://www.lovejustice.ngo/about. Dream School Mission: To equip and inspire students to be difference-makers through excellent education.
 159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
@@ -296,54 +238,33 @@ Ministry Prefs
 IT Positions
 Match Filters
 100	Affiliated with a Church?	No
-161	Match Percent Rate	80
-162	Profile Years	2024
+161	Match Percent Rate	70
+162	Profile Years	2022
+2023
+2024
 2025
-2026
 Recruiting Countries
 108	Recruit From Countries	Bermuda
 Canada
+Greenland
 United States
-Ethiopia
-Kenya
-Uganda
-Lesotho
+Botswana
+Namibia
 South Africa
-Korea-South
-Taiwan
+Eswatini (Swaziland)
+Brunei Darussalam
 Malaysia
+Philippines
 Singapore
-Thailand
-Bangladesh
 India
-Kazakhstan
-Kyrgyzstan
-Maldives
-Uzbekistan
-Armenia
 Cyprus
-Georgia
 Israel
-Anguilla
-Antigua and Barbuda
+Qatar
+United Arab Emirates
 Aruba
-Bahamas
-Barbados
-Cayman Islands
-Dominica
-Dominican Republic
-Grenada
-Montserrat
 Netherlands Antilles
 Puerto Rico
-Saint Kitts and Nevis
-Saint Lucia
-Virgin Islands-British
-Virgin Islands-US
-Costa Rica
-El Salvador
-Panama
-Aland Islands
+Belize
 Channel Islands
 Denmark
 Estonia
@@ -352,96 +273,76 @@ Finland
 Iceland
 Ireland
 Latvia
-Lithuania
 Norway
 Sweden
 United Kingdom
-Belarus
 Czech Republic
 Hungary
-Moldova
 Poland
 Slovakia
-Russian Federation
 Ukraine
 Austria
 Belgium
-France
-Germany
 Liechtenstein
 Luxembourg
 Monaco
 Netherlands
 Switzerland
-Andorra
-Bosnia and Herzegovina
 Gibraltar
-Greece
 Italy
 Malta
 Portugal
-San Marino
 Slovenia
 Vatican City
-Albania
-Bulgaria
-Croatia
-Kosovo
-Montenegro
-Romania
-Serbia
-Spain
-Turkey
 American Samoa
 Australia
 Cook Islands
 Fiji
-French Polynesia
 Guam
+Kiribati
 Marshall Islands
+Micronesia
+Nauru
+New Caledonia
 New Zealand
+Niue
+Northern Mariana Islands
+Palau
 Papua New Guinea
 Samoa
 Solomon Islands
-Argentina
-Bolivia
-Brazil
-Chile
-Colombia
-Ecuador
-Falkland Islands
-Paraguay
-Peru
-Suriname
-Uruguay
+Tonga
+Tuvalu
+Vanuatu
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 5995:
+Show records for this user: user_id = 13075:
 Table: users
 ID	username	email	created	updated	last login	Active
-5995	hcaadministrator	info@hinksonca.net	2013-02-19	2025-09-12	2026-02-25	Yes
-Days ago: 	4771  	183  	17  	 
+13075	nsmithlji	cblessitt@lovejustice.ngo	2019-01-19	2025-09-17	2025-11-04	Yes
+Days ago: 	2645  	212  	164  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-5995	2	Organization	258
+13075	2	Organization	194
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-5995	6 EDU	No	2025-06-25	2026-06-26	active	
+13075	6 EDU	No	2025-09-05	2026-09-05	active	
 
 Table: user_apps
 ID	App ID	Application
-5995	6	Education
+13075	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-5995	6	Education	Yes	250
-5995	2	Short-Term	Yes	93
-5995	4	JourneyGuide	Yes	254
-5995	3	Journey	Yes	258
+13075	4	JourneyGuide	Yes	119
+13075	3	Journey	Yes	194
+13075	2	Short-Term	Yes	100
+13075	11	IT-Technology	Yes	100
+13075	6	Education	Yes	117
 
 
 

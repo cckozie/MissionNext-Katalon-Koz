@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.io.File as File
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
 // Ensure that we are using the correct execution profile
@@ -32,7 +32,7 @@ if(username[-3..-1] != '9ea') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = false	//Need to wait for access to be granted
 }
@@ -292,7 +292,7 @@ object = 'Object Repository/Education Affiliate/Register/button_Sign up'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction') : 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
 
 //Verify that the correct Approval Pending page is displayed
-found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false)
+found = WebUI.verifyTextPresent('If you completed the Affiliate Application ', false, FailureHandling.OPTIONAL)
 
 if(found) {
 	outText = '\nThe appropriate Approval Pending page was displayed'
@@ -300,6 +300,7 @@ if(found) {
 } else {
 	outText = '\n##### The appropriate Approval Pending page was NOT displayed #####'
 	KeywordUtil.markError('\n' + outText)
+	
 }
 
 //================================== Wait for the approval pending email for the new education affiliate =========

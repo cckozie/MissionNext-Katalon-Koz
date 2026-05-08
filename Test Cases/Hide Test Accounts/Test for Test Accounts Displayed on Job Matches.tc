@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Tooltips - Copy (1)</name>
+   <name>Test for Test Accounts Displayed on Job Matches</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>453f7b26-a513-4ddd-a4c0-9a830d9332b7</testCaseGuid>
+   <testCaseGuid>73583366-2f09-4817-81b5-8d4e8c53e3b4</testCaseGuid>
 </TestCaseEntity>

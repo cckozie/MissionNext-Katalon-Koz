@@ -27,7 +27,7 @@ import org.openqa.selenium.By as By
 // 2. RUN WITH FUNCTION SET TO 'get titles', THEN REPLACE THE titleMap LIST WITH THE LIST PRINTED IN THE CONSOLE, REPLACING THE LAST COMMA WITH A ]
 // 3. REPLACE BOTH LISTS IN THE 'Test All Menu Links' TEST CASE WITH THE UPDATED LISTS FROM THIS TEST CASE
 
-//function = 'get links'
+function = 'get links'
 function = 'get titles'
 
 pageLinks = []
@@ -204,7 +204,7 @@ titleMap = [	//Format is HOME PAGE URL | LINKED TO URL : LINKED PAGE TITLE
 "jg.missionnext.org|https://missionworks.global/" : "MissionWorks",
 "journey.missionnext.org|http://missionnext.org/events" : "Events - MissionNext.org",
 "journey.missionnext.org|https://info.missionnext.org/browsers.php?" : "MissionNext: Information Section",
-"journey.missionnext.org|https://journey.missionnext.org/" : "Journey HOME - Journey",
+"journey.missionnext.org|https://journey.missionnext.org/" : "Journey - Journey",
 "journey.missionnext.org|https://journey.missionnext.org/journey-home/im-an-organization-rep/" : "I'm an Organization Affiliate - Journey",
 "journey.missionnext.org|https://journey.missionnext.org/journey-home/im-an-organization/" : "I'm an Organization - Journey",
 "journey.missionnext.org|https://journey.missionnext.org/learn-more/im-an-individual/" : "I'm an Individual - Journey",

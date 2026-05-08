@@ -52,7 +52,7 @@ debug = false
 if(varSite != null) {
 	site = varSite
 } else {
-	site = 'Education' // Journey or Education
+	site = 'Journey' // Journey or Education
 }
 
 matchType = 'Org'	// Org or Job

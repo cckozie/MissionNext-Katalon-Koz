@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test External Links - Copy (1)</name>
+   <name>Test External Links - Copy (2)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>191d32b8-3bec-491c-b51e-7483720110a7</testCaseGuid>
+   <testCaseGuid>5aabf24b-74a9-44b4-ae03-8069e61e82d8</testCaseGuid>
    <variableLinks>
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>27b1b126-bf75-4217-89ca-5729e05aac26</variableId>
+      <variableId>5787e12a-66d2-4bf9-b5a0-d3037a7cc166</variableId>
    </variableLinks>
    <variable>
       <defaultValue>null</defaultValue>
       <description></description>
-      <id>27b1b126-bf75-4217-89ca-5729e05aac26</id>
+      <id>5787e12a-66d2-4bf9-b5a0-d3037a7cc166</id>
       <masked>false</masked>
       <name>varCallingTab</name>
    </variable>

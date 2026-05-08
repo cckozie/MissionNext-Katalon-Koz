@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.2.30
+PHP version: 8.1.34
 
-Date: 2026-03-14
+Date: 2026-04-17
 
 
 
@@ -36,9 +36,9 @@ Email Webmaster
 
   mission_next_prod
 
- Created	2020-04-28
- Updated	2025-04-28
- Last Login	2026-01-16
+ Created	2013-04-18
+ Updated	2025-05-14
+ Last Login	2025-12-03
  
 	
 	
@@ -51,110 +51,89 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Teach in North Africa TiNA as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=13908]
+Profile for Hebron School HS as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=5996]
 Contact Info
-21	Organization	Teach in North Africa
-20	Abbreviation	TiNA
-6	Key Contact First Name	Lauren
-7	Key Contact Last Name	Wargo
-133	Key Contact Title	Recruiter
-12	Key Contact Email	teachinnorthafrica@gmail.com
-22	Key Contact Phone	858-345-5083
-114	Key Contact WhatsApp Address	858-345-0583
-111	Organization Phone	719-216-4012
-26	Mailing Address	1551 21st Ave Kingsburg, CA 93631
-10	Country	Various
-28	Organization City	Various
-30	Post/Zip Code	93631
-151	World Region	Africa, North
+21	Organization	Hebron School
+20	Abbreviation	HS
+6	Key Contact First Name	Esther
+7	Key Contact Last Name	Miller
+133	Key Contact Title	Human Resources Manager
+12	Key Contact Email	hr@hebronooty.org
+22	Key Contact Phone	(+91) 423 2225820 ext 358
+114	Key Contact WhatsApp Address	hebronschoolooty
+111	Organization Phone	(+91) 423 2225850
+26	Mailing Address	Hebron School Lushington Hall Ootacamund Tamil Nadu India 643001
+10	Country	India
+28	Organization City	Ootacamund
+93	State	Tamil Nadu
+29	Province/State/Region	Tamil Nadu
+30	Post/Zip Code	643 001
+151	World Region	Asia, West
 School Info
-66	Description	Teach in North Africa links Christian educators with educational opportunities in North Africa for the growth of God's Kingdom. Our school currently has about 115 students from preschool through sixth grade and is growing rapidly! We believe that education, respect for nationals, and the commitment of qualified teachers like you will shape the future leaders and influencers of North Africa!
-64	Year Founded	2019
+66	Description	Hebron School was founded in 1899 to serve the Christian worker community of India and South-East Asia. More than a century has passed and the School continues to fulfill its original purpose although it has grown in size and is styled an International School recognised as such by the Government of India and the State of Tamil Nadu. It is a co-educational and predominantly boarding school for children aged 10 years to 19 years. About 10% of our students are day students (with staff children and children from the Defence Services Staff Training College in Wellington in addition). Students study the English National Curriculum leading to IGCSE in Standards 10 and 11 and to A levels in Standards 12 and 13.
+64	Year Founded	1899
 107	Vision Trip	Yes
-149	School Year Starts	Early September
+149	School Year Starts	Early August
 150	School Accredited	No
-152	Student Capacity	130
-65	Website Address	https://teachinnorthafrica.com/
-80	Hide Listing?	1
+152	Student Capacity	381
+65	Website Address	www.hebronooty.org
 Vision Trip Description
-67	Vision Trip Description	We offer a program each summer called Launch Intensive that provides potential teachers an opportunity to see the city, school, and culture by participating in a 12 day trip to North Africa. On this trip, prospective teachers live with a local family connected to our school and attend language and culture classes. It gives them a chance to get a glimpse of life overseas, as well as see our school and how it functions in an international context.
 Security
-90	Security Explanation	Our school seeks to engage the unreached through education. Most of our students are North African who come from Muslim backgrounds and have had little to no engagement with Christians. In our classrooms, we use a Christian worldview to inform instruction and form deep relationships with our students and their families. It is through these relationships that the gospel is shared through our example and the conversations we have over coffee and tea. Because of the resistance to foreign ideas (including religion), we have to be mindful when sharing our faith and talking about the purpose of our school.
 Positions Needed
 132	Available Positions	Administrator
-Assistant Principal
-Director
-Principal
-Manager, Business
+Boarding Home Parent
 School Counselor
-School Librarian
 School Nurse
-School Psychologist
-Teacher's Aide
 Elementary School Teacher
 High School Teacher
-Kindergarten Teacher
 Middle School Teacher
-Preschool Teacher
-Substitute Teacher
-English Second Language (ESL)
 English Teacher
 Foreign Language - French
-Art Teacher
-Arts - Performing
+Business Education Teacher
 Computer Teacher (School)
 Geography Teacher
 History Teacher
+Industrial Arts Teacher
 Mathematics Teacher
 Music Teacher
-Physical Education Teacher
-Reading Teacher/Specialist
 Science, Biology
-Science, Chemistry
 Science, Physics
-Science Teacher
-Social Studies Teacher
-Special Education Teacher
+131	Other Available Positions	Design and Technology Teacher, Brass Teacher, Voice Teacher
 139	Experience Preferred	Administrator
-Counseling
 Elementary
 High School
 Kindergarten
 Middle School
 Pre-School
 Substitute Teacher
-Arts - Performing
-Arts - Visual
+Housing/Boarding/Childcare
+Maintenance
+School Nurse
+Business Education
 Computer Science
 History
 Mathematics
 Music Teacher
 Physical Education
-Reading
 Sciences
 Sciences - Biology
-Sciences - Chemistry
-Sciences - Earth Science
 Sciences - Physical Science/Physics
-Social Subjects
 Special Needs
 Technology
 English
-ESL
-Language Teacher
-140	Other Experience Comment	School director must have at least 5 years of experience in education. A teaching credential is preferred, but not required for teaching positions.
 Service Options
-70	Time Commitments	Short-term
-One year
-One year to two years
+70	Time Commitments	One year to two years
 Long Term
 Internships
-Open - Will negotiate
 45	Available Start Options	Immediately
 Within 12 months
 In one to two years
-144	School Term(s) Available	Full Year
+In two or more years
+No Preference
+144	School Term(s) Available	Summer Session
+Spring Semester
+Fall Semester
 Open
 Readiness
 103	Process Stage	I am just beginning to look at missions
@@ -165,75 +144,338 @@ Occasionally served in cultures other than my own
 Extensive experience serving in cultures other than my own
 60	Paid & Volunteer Positions	Volunteer/self-supported position
 Self-supported, need travel and overhead
+Position requires raising your support
 Position requires raising some support
-50	Bible Training	Not Applicable
+A salary provided; enough to live locally
+No Preference
+50	Bible Training	Minimal Bible training
+Informal Bible training
+Some Bible school classes
 104	Attended Perspectives?	I have not taken the Perspectives Course
 I am planning to take the Perspectives Course
 I have taken or am taking the Perspectives Course
-121	Missions Experience	None of the above
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+None of the above
 105	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Match Filters
 141	Formal Education Degree	Yes
-Pending
-142	Classroom Experience	No
-143	Formal Teaching Credentials	No
-Yes
-Pending
+142	Classroom Experience	Yes
+143	Formal Teaching Credentials	Yes
 51	English Proficiency	Advanced
+Proficient
 100	Affiliated with a Church?	Yes
-59	Travel Options	Some Travel funds available
+59	Travel Options	No travel funding provided
+Some Travel funds available
 Recruiting Countries
-108	Recruit From Countries	Canada
-United States
+108	Recruit From Countries	United States
+Cyprus
+Georgia
+Jordan
+Kuwait
+Lebanon
+Oman
+Qatar
+Saudi Arabia
+United Arab Emirates
+Anguilla
+Antigua and Barbuda
+Aruba
+Bahamas
+Barbados
+Cayman Islands
+Cuba
+Dominica
+Dominican Republic
+Grenada
+Guadeloupe
+Haiti
+Jamaica
+Martinique
+Montserrat
+Netherlands Antilles
+Puerto Rico
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+Turks and Caicos Islands
+Virgin Islands-British
+Virgin Islands-US
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Aland Islands
+Channel Islands
+Denmark
+Estonia
+Faroe Islands
+Finland
+Iceland
+Ireland
+Latvia
+Lithuania
+Norway
+Sweden
 United Kingdom
+Belarus
+Czech Republic
+Hungary
+Moldova
+Poland
+Slovakia
+Russian Federation
+Ukraine
+Austria
+Belgium
 France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Algeria
+Bulgaria
+Croatia
+Egypt
+Kosovo
+Libya
+Macedonia, North
+Montenegro
+Morocco
+Romania
+Serbia
+Spain
+Syrian Arab Republic
+Tunisia
+Turkey
+American Samoa
+Australia
+Cook Islands
+Fiji
+French Polynesia
+Guam
+Kiribati
+Marshall Islands
+Micronesia
+Nauru
+New Caledonia
+New Zealand
+Niue
+Northern Mariana Islands
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+French Guiana
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
 Admin Info
-84	Mission Statement	https://teachinnorthafrica.com/
-159	Meet Christian School Qualifications?	Not sure. Contact MissionNext Education
+84	Mission Statement	www.hebronooty.org
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
 Ministry Prefs
 IT Positions
 Match Filters
 100	Affiliated with a Church?	Yes
-161	Match Percent Rate	50
+161	Match Percent Rate	80
 162	Profile Years	2024
 2025
-2026
 Recruiting Countries
-108	Recruit From Countries	Canada
-United States
+108	Recruit From Countries	United States
+Cyprus
+Georgia
+Jordan
+Kuwait
+Lebanon
+Oman
+Qatar
+Saudi Arabia
+United Arab Emirates
+Anguilla
+Antigua and Barbuda
+Aruba
+Bahamas
+Barbados
+Cayman Islands
+Cuba
+Dominica
+Dominican Republic
+Grenada
+Guadeloupe
+Haiti
+Jamaica
+Martinique
+Montserrat
+Netherlands Antilles
+Puerto Rico
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Trinidad and Tobago
+Turks and Caicos Islands
+Virgin Islands-British
+Virgin Islands-US
+Belize
+Costa Rica
+El Salvador
+Guatemala
+Honduras
+Mexico
+Nicaragua
+Panama
+Aland Islands
+Channel Islands
+Denmark
+Estonia
+Faroe Islands
+Finland
+Iceland
+Ireland
+Latvia
+Lithuania
+Norway
+Sweden
 United Kingdom
+Belarus
+Czech Republic
+Hungary
+Moldova
+Poland
+Slovakia
+Russian Federation
+Ukraine
+Austria
+Belgium
 France
+Germany
+Liechtenstein
+Luxembourg
+Monaco
+Netherlands
+Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Algeria
+Bulgaria
+Croatia
+Egypt
+Kosovo
+Libya
+Macedonia, North
+Montenegro
+Morocco
+Romania
+Serbia
+Spain
+Syrian Arab Republic
+Tunisia
+Turkey
+American Samoa
+Australia
+Cook Islands
+Fiji
+French Polynesia
+Guam
+Kiribati
+Marshall Islands
+Micronesia
+Nauru
+New Caledonia
+New Zealand
+Niue
+Northern Mariana Islands
+Palau
+Papua New Guinea
+Samoa
+Solomon Islands
+Tonga
+Tuvalu
+Vanuatu
+Argentina
+Bolivia
+Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+French Guiana
+Guyana
+Paraguay
+Peru
+Suriname
+Uruguay
+Venezuela
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 13908:
+Show records for this user: user_id = 5996:
 Table: users
 ID	username	email	created	updated	last login	Active
-13908	hjohnson	teachinnorthafrica@gmail.com	2020-04-28	2025-04-28	2026-01-16	Yes
-Days ago: 	2146  	320  	57  	 
+5996	ebronh7	hr@hebronooty.org	2013-04-18	2025-05-14	2025-12-03	Yes
+Days ago: 	4747  	338  	135  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-13908	2	Organization	148
+5996	2	Organization	267
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-13908	6 EDU	No	2025-04-08	2026-04-08	active	
+5996	6 EDU	No	2025-04-23	2026-04-23	active	
 
 Table: user_apps
 ID	App ID	Application
-13908	6	Education
+5996	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-13908	2	Short-Term	Yes	109
-13908	11	IT-Technology	Yes	109
-13908	4	JourneyGuide	Yes	147
-13908	6	Education	Yes	146
-13908	3	Journey	Yes	148
+5996	6	Education	Yes	267
+5996	3	Journey	Yes	267
+5996	4	JourneyGuide	Yes	108
+5996	2	Short-Term	Yes	118
 
 
 

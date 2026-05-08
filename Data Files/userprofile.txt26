@@ -1,0 +1,239 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.1.34
+
+Date: 2026-04-17
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2016-01-26
+ Updated	2025-04-17
+ Last Login	2025-06-25
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Kigali International Community School KICS as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=6051]
+Contact Info
+21	Organization	Kigali International Community School
+20	Abbreviation	KICS
+6	Key Contact First Name	Joy
+7	Key Contact Last Name	Haguma
+133	Key Contact Title	People and Culture Lead
+12	Key Contact Email	jhaguma@kicsrw.org
+22	Key Contact Phone	250784741212
+114	Key Contact WhatsApp Address	N/A
+111	Organization Phone	+250784741212
+26	Mailing Address	BP 6558
+10	Country	Rwanda
+28	Organization City	Kigali
+93	State	Gasabo
+29	Province/State/Region	Capital
+30	Post/Zip Code	250
+151	World Region	Africa, East
+Africa, South
+Africa, West
+Africa, Central
+School Info
+66	Description	The vision of KICS is to impact the world for Christ by preparing servant leaders who choose character before career, wisdom beyond scholarship, service above self, and a lifestyle of participation over apathy. KICS is a fully accredited member of the Association of Christian Schools International (ACSI), and Middle States Association of Colleges and Schools (MSA) and is endorsed by the Rwandan Ministry of Education as a sound educational institution.
+64	Year Founded	2006
+107	Vision Trip	No
+149	School Year Starts	Mid August
+150	School Accredited	Yes
+152	Student Capacity	288
+65	Website Address	http://www.kicsrw.org
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
+High School Teacher
+Middle School Teacher
+English Teacher
+Science Teacher
+Special Education Teacher
+139	Experience Preferred	Elementary
+High School
+Kindergarten
+Middle School
+Special Needs
+Service Options
+70	Time Commitments	One year to two years
+Long Term
+45	Available Start Options	Immediately
+Within 12 months
+In one to two years
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+58	Cross-cultural Experience	Occasionally served in cultures other than my own
+Extensive experience serving in cultures other than my own
+60	Paid & Volunteer Positions	Volunteer/self-supported position
+Self-supported, need travel and overhead
+Position requires raising your support
+Position requires raising some support
+A salary provided; enough to live locally
+50	Bible Training	Not Applicable
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	I have attended a missions event
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	Yes
+Pending
+142	Classroom Experience	No
+Yes
+Pending
+143	Formal Teaching Credentials	No
+Yes
+Pending
+51	English Proficiency	Advanced
+100	Affiliated with a Church?	Yes
+59	Travel Options	Travel funds provided
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Ethiopia
+Kenya
+Rwanda
+Uganda
+Zambia
+Zimbabwe
+Ghana
+Liberia
+Botswana
+Lesotho
+Namibia
+South Africa
+Malaysia
+India
+Pakistan
+Israel
+Jordan
+Qatar
+United Arab Emirates
+Dominican Republic
+Jamaica
+Trinidad and Tobago
+United Kingdom
+Poland
+Germany
+Netherlands
+Switzerland
+Admin Info
+84	Mission Statement	http://kicsrw.org
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	70
+162	Profile Years	2023
+2024
+2025
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Ethiopia
+Kenya
+Rwanda
+Uganda
+Zambia
+Zimbabwe
+Ghana
+Liberia
+Botswana
+Lesotho
+Namibia
+South Africa
+Malaysia
+India
+Pakistan
+Israel
+Jordan
+Qatar
+United Arab Emirates
+Dominican Republic
+Jamaica
+Trinidad and Tobago
+United Kingdom
+Poland
+Germany
+Netherlands
+Switzerland
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 6051:
+Table: users
+ID	username	email	created	updated	last login	Active
+6051	kics	jhaguma@kicsrw.org	2016-01-26	2025-04-17	2025-06-25	Yes
+Days ago: 	3734  	365  	296  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+6051	2	Organization	131
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+6051	6 EDU	No	2025-04-08	2026-04-08	active	
+
+Table: user_apps
+ID	App ID	Application
+6051	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+6051	6	Education	Yes	124
+6051	3	Journey	Yes	131
+6051	2	Short-Term	Yes	93
+6051	4	JourneyGuide	Yes	126
+
+
+
+
+
+
+
+
+

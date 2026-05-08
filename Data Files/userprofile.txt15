@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.2.30
+PHP version: 8.1.34
 
-Date: 2026-03-14
+Date: 2026-04-17
 
 
 
@@ -36,9 +36,9 @@ Email Webmaster
 
   mission_next_prod
 
- Created	2018-02-16
- Updated	2026-03-09
- Last Login	2026-03-11
+ Created	2022-01-21
+ Updated	2025-04-15
+ Last Login	2025-12-27
  
 	
 	
@@ -51,46 +51,67 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Mountainview Christian School Mtview as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=12103]
+Profile for Evangelical Christian Academy ECA as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=14583]
 Contact Info
-21	Organization	Mountainview Christian School
-20	Abbreviation	Mtview
-6	Key Contact First Name	Karissa
-7	Key Contact Last Name	Pattison
-133	Key Contact Title	Recruitment Lead
-12	Key Contact Email	employment@mtview.id
-22	Key Contact Phone	+62298311673
-111	Organization Phone	+62298311673
-26	Mailing Address	Kantor Pos 142 Salatiga, Central Java, 50722 Indonesia
-10	Country	Indonesia
-28	Organization City	Salatiga
-93	State	Jawa Tengah
-29	Province/State/Region	Indonesia
-30	Post/Zip Code	50722
-151	World Region	Asia, Southeast
+21	Organization	Evangelical Christian Academy
+20	Abbreviation	ECA
+6	Key Contact First Name	Mick
+7	Key Contact Last Name	Madden
+133	Key Contact Title	Personnel Coordinator
+12	Key Contact Email	personnel@ecaspain.com
+22	Key Contact Phone	+34918865003
+111	Organization Phone	+34918865003
+26	Mailing Address	Calle La Manda 47 28816 Camarma de Esteruelas (Madrid) SPAIN
+10	Country	Spain
+28	Organization City	Camarma de Esteruelas
+93	State	Community of Madrid
+29	Province/State/Region	Madrid
+30	Post/Zip Code	28816
+151	World Region	Europe, West
 School Info
-66	Description	VISION We pursue academic EXCELLENCE in a place of GRACE, so that lives will be TRANSFORMED by Christ to IMPACT the world. MISSION Mountainview Christian School partners with parents, sending agencies, the Christian community and the Church to train up and educate children in a Christ-centered environment at an affordable cost.
-64	Year Founded	1981
+66	Description	Founded in 1973, ECA is an international Christian school offering a quality education from 1st grade through 12th grade to students of Christian workers as well as to international and national students. Evangelical Christian Academy exists to serve families by equipping students in the academic disciplines, challenging them to love God, apply His truth, and care for others. ECA offers a challenging, college-preparatory curriculum in an American-based system. Students at ECA study Bible each year, and a Christian worldview is integrated into every aspect of the curriculum.
+64	Year Founded	1973
 107	Vision Trip	No
-149	School Year Starts	Early August
+149	School Year Starts	Mid August
 150	School Accredited	Yes
-152	Student Capacity	250
-65	Website Address	www.mtview.id
+152	Student Capacity	100
+65	Website Address	www.ecaspain.com
 Vision Trip Description
 Security
 Positions Needed
-132	Available Positions	Principal
+132	Available Positions	Administrator
+Director
+Curriculum Specialist
+IT Coordinator
+Manager, Facilities
+Manager, Finance
+School Librarian
 Elementary School Teacher
-English Teacher
-139	Experience Preferred	Elementary
+High School Teacher
+Middle School Teacher
+English Second Language (ESL)
+Mathematics Teacher
+Science, Biology
+Science, Chemistry
+Science, Physics
+Science Teacher
+Special Education Teacher
+139	Experience Preferred	Administrator
+Elementary
+High School
+Middle School
+Support
 Service Options
-70	Time Commitments	One year to two years
+70	Time Commitments	One year
+One year to two years
 Long Term
-45	Available Start Options	Within 12 months
+45	Available Start Options	Immediately
+Within 12 months
 In one to two years
-144	School Term(s) Available	Fall Semester
-Full Year
+In two or more years
+No Preference
+144	School Term(s) Available	Open
 Readiness
 103	Process Stage	I am just beginning to look at missions
 I am actively investigating missions
@@ -99,16 +120,8 @@ I am ready to select a ministry
 Occasionally served in cultures other than my own
 Extensive experience serving in cultures other than my own
 60	Paid & Volunteer Positions	Volunteer/self-supported position
-Self-supported, need travel and overhead
-Position requires raising your support
-Position requires raising some support
-A salary provided; enough to live locally
-No Preference
 50	Bible Training	Minimal Bible training
 Informal Bible training
-Some Bible school classes
-Bible school degree or equivalent
-Not Applicable
 104	Attended Perspectives?	I have not taken the Perspectives Course
 I am planning to take the Perspectives Course
 I have taken or am taking the Perspectives Course
@@ -127,19 +140,17 @@ Pending
 Yes
 Pending
 51	English Proficiency	Advanced
-Proficient
 100	Affiliated with a Church?	Yes
-59	Travel Options	Travel funds provided
+59	Travel Options	No travel funding provided
+Some Travel funds available
+Travel funding negotiated
+Travel funds provided
 Recruiting Countries
 108	Recruit From Countries	Canada
 United States
-South Africa
-Singapore
 United Kingdom
-Australia
-New Zealand
 Admin Info
-84	Mission Statement	www.mtview.id
+84	Mission Statement	ECA exists to primarily serve missionary families by equipping students in the academic disciplines, challenging them to love God, apply his truth, and care for others.
 159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
@@ -148,44 +159,45 @@ IT Positions
 Match Filters
 100	Affiliated with a Church?	Yes
 161	Match Percent Rate	70
-162	Profile Years	2024
+162	Profile Years	2021
+2022
+2023
+2024
+2025
 Recruiting Countries
 108	Recruit From Countries	Canada
 United States
-South Africa
-Singapore
 United Kingdom
-Australia
-New Zealand
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 12103:
+Show records for this user: user_id = 14583:
 Table: users
 ID	username	email	created	updated	last login	Active
-12103	MCSsuperintedent	employment@mtview.id	2018-02-16	2026-03-09	2026-03-11	Yes
-Days ago: 	2948  	5  	3  	 
+14583	ecaspain	personnel@ecaspain.com	2022-01-21	2025-04-15	2025-12-27	Yes
+Days ago: 	1547  	367  	111  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-12103	2	Organization	107
+14583	2	Organization	125
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-12103	6 EDU	No	2026-01-27	2027-02-20	active	
+14583	6 EDU	No	2025-01-21	2026-02-23	active	Admin Add Start date set to 1-23-23 by Nelson so the subscription is one year.
 
 Table: user_apps
 ID	App ID	Application
-12103	6	Education
+14583	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-12103	2	Short-Term	Yes	112
-12103	11	IT-Technology	Yes	112
-12103	3	Journey	Yes	107
-12103	4	JourneyGuide	Yes	108
-12103	6	Education	Yes	115
+14583	2	Short-Term	Yes	123
+14583	11	IT-Technology	Yes	123
+14583	14	QuickStart	Yes	123
+14583	4	JourneyGuide	Yes	125
+14583	6	Education	Yes	125
+14583	3	Journey	Yes	125
 
 
 

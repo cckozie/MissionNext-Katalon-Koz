@@ -312,10 +312,14 @@ def navigateToUrl(def from, def link) {
 	        pageLinks = []
 	
 	        if (valueClause != 'value') {
+				println('value clause is : ' + valueClause)
+				println('link is : ' + link)
+				
 	            sql.executeInsert('insert into mn_web_pages_temp (url)' + valueClause)
 	
 	            sql.executeInsert("insert into mn_web_page_errors select '" + link + "', url from mn_web_pages_temp where url like '%missionnext.org%'")
-	
+				println("insert into mn_web_page_errors select '" + link + "', url from mn_web_pages_temp where url like '%missionnext.org%'")
+				System.exit(0)
 	//			sql.execute("delete from mn_web_pages_temp where url like '%missionnext.org%' or url not like '%missionnext.org%' or url like '%#%'")
 				sql.execute("delete from mn_web_pages_temp where url not like '%missionnext.org%'")
 				

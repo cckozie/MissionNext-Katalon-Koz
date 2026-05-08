@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Generic Wait for Email - Copy (1)</name>
+   <name>Test Tooltips - Copy (1)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>7a8f53b8-1851-4553-99bf-e0544caeac0d</testCaseGuid>
+   <testCaseGuid>aa68e9b1-b3de-4a93-abd1-9e62c0b7a7f9</testCaseGuid>
 </TestCaseEntity>

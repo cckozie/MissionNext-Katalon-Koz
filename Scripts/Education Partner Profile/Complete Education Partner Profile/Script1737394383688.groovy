@@ -95,13 +95,26 @@ GlobalVariable.outFile = outFile
 granted = WebUI.callTestCase(findTestCase('Admin/Test for Access Granted'), [varUsername : username], FailureHandling.STOP_ON_FAILURE)
 
 if(granted == false || granted == null) {
-	outText = '##### - ' + username + ' has NOT been granted access. Complete profile script is terminated.'
+	outText = '##### - ' + username + ' has NOT been granted access. Attempting to grant access and add subscription.' //Modified 4/16/26
 	
 	outFile.append(outText + '\n')
 	
-	GlobalVariable.testCaseErrorFlag = true
+//	GlobalVariable.testCaseErrorFlag = true
 	
-	System.exit(0)
+//	System.exit(0)
+	
+	//================================== Grant access for the new education partner ==================================
+	WebUI.callTestCase(findTestCase('Admin/Grant Access'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	// Add call to test for app assigned and correct expiration dates function
+	WebUI.callTestCase(findTestCase('_Functions/Test for App Assigned and Correct Expiration Date'), [('varUsername') : username], FailureHandling.STOP_ON_FAILURE)
+	
+	
+	//================================== Create a subscriptioon for the new education partner ========================
+	WebUI.callTestCase(findTestCase('Admin/Create Subscription'), [('varUsername') : username, ('varType') : 'Education'
+			, ('varRole') : 'Organization'], FailureHandling.CONTINUE_ON_FAILURE)
+
+
 }
 
 url = WebUI.getUrl(FailureHandling.OPTIONAL)

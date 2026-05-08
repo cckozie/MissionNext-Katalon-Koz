@@ -128,12 +128,14 @@ if(pages.size() == 0 || 'All' in pages || 'Situation' in pages) {
 	
 	journey_guide = 'Maybe at a later time'
 	
+	conferences_attended = 'Urbana'
+	
 	WebUI.callTestCase(findTestCase('Journey Candidate Profile/Tabs/Set Situation'), [('varProcess_stage') : process_stage
 			, ('varBible_training') : bible_training, ('varDescribe_training') : describe_training
 			, ('varPerspectives') : perspectives, ('varMissions_experience') : missions_experience
 			, ('varInterest_in_missionary_training') : interest_in_missionary_training, ('varChurch_affiliated') : church_affiliated
 			, ('varChurch_name') : church_name, ('varChurch_involvement') : church_involvement
-			, ('varJourney_guide') : journey_guide], FailureHandling.CONTINUE_ON_FAILURE)
+			, ('varJourney_guide') : journey_guide, ('varConferences_attended') : conferences_attended], FailureHandling.CONTINUE_ON_FAILURE)
 }
 	
 /////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\

@@ -1,0 +1,174 @@
+
+
+	
+		
+missionnext site administration
+
+	Welcome Administrator!
+
+PHP version: 8.1.34
+
+Date: 2026-04-17
+
+
+
+	 
+Main Home page
+
+MissionNext, Inc
+Brookfield, CT 06804
+
+Email Webmaster
+
+
+
+
+  Admin Section Home
+
+  Statistics
+
+  Candidate JSON
+
+  Your IP Address
+  46.110.33.110
+
+  Log out
+
+  mission_next_prod
+
+ Created	2016-09-16
+ Updated	2025-05-02
+ Last Login	2025-10-31
+ 
+	
+	
+
+USER PROFILE VIEWER UTILITY
+
+This utility is designed to view a user response all forms by web application
+
+
+
+Edit this profile
+
+Profile for Academia Los Pinares ALP as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=9720]
+Contact Info
+21	Organization	Academia Los Pinares
+20	Abbreviation	ALP
+6	Key Contact First Name	Trent
+7	Key Contact Last Name	Newton
+133	Key Contact Title	Superintendent
+12	Key Contact Email	info@pinares.org
+22	Key Contact Phone	+50433909122
+114	Key Contact WhatsApp Address	+50433909122
+111	Organization Phone	+50433909122
+26	Mailing Address	Apartado 3250
+10	Country	Honduras
+28	Organization City	Tegucigalpa
+29	Province/State/Region	Francisco Morazan
+30	Post/Zip Code	00000
+151	World Region	Central America
+School Info
+66	Description	At Academia Los Pinares, we strive to provide a high-quality Christian bilingual education which will prepare our students for success in college while integrating Biblical principles into their learning. We are blessed to be able to serve many Honduran families as well as families from North America and other countries. If you are a prospective teacher visiting our site, we encourage you to seriously consider joining us in the exciting work here
+64	Year Founded	1964
+107	Vision Trip	No
+149	School Year Starts	Early August
+150	School Accredited	Yes
+152	Student Capacity	576
+65	Website Address	http://www.pinares.org
+Vision Trip Description
+Security
+Positions Needed
+132	Available Positions	Elementary School Teacher
+High School Teacher
+Middle School Teacher
+English Teacher
+History Teacher
+Music Teacher
+Social Studies Teacher
+131	Other Available Positions	Sociology & Anthropology, Philosphy
+139	Experience Preferred	Elementary
+High School
+Middle School
+Service Options
+70	Time Commitments	One year
+One year to two years
+Open - Will negotiate
+45	Available Start Options	Immediately
+Within 12 months
+144	School Term(s) Available	Open
+Readiness
+103	Process Stage	I am just beginning to look at missions
+58	Cross-cultural Experience	Not served in a culture other than my own
+60	Paid & Volunteer Positions	A salary provided; enough to live locally
+50	Bible Training	Some Bible school classes
+Bible school degree or equivalent
+104	Attended Perspectives?	I have not taken the Perspectives Course
+121	Missions Experience	I have attended a missions event
+I have taken a short-term missions trip
+I have served in ministry or missions full-time
+105	Relocation Option(s)	I am willing to relocate outside the US and Canada
+Match Filters
+141	Formal Education Degree	Yes
+142	Classroom Experience	No
+143	Formal Teaching Credentials	Yes
+Pending
+51	English Proficiency	Advanced
+Proficient
+100	Affiliated with a Church?	Yes
+59	Travel Options	Travel funds provided
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Admin Info
+84	Mission Statement	www.pinares.org
+159	Meet Christian School Qualifications?	Yes, my school is a Christian School
+158	Partnership Agreement	1
+156	Terms and Conditions	1
+Ministry Prefs
+IT Positions
+Match Filters
+100	Affiliated with a Church?	Yes
+161	Match Percent Rate	10
+162	Profile Years	All
+Recruiting Countries
+108	Recruit From Countries	Canada
+United States
+Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
+
+Select another profile
+
+Show records for this user: user_id = 9720:
+Table: users
+ID	username	email	created	updated	last login	Active
+9720	alpinares	info@pinares.org	2016-09-16	2025-05-02	2025-10-31	Yes
+Days ago: 	3500  	350  	168  	 
+
+Table: user_roles
+ID	Role ID	Role	Profile Records
+9720	2	Organization	83
+
+Table: subscriptions
+ID	App ID	Recurrent	Start	End	Status	Comment
+9720	6 EDU	No	2025-05-02	2026-05-02	active	
+
+Table: user_apps
+ID	App ID	Application
+9720	6	Education
+
+Table: user_apps_status
+ID	App ID	Application	Active ?	Records
+9720	6	Education	Yes	83
+9720	4	JourneyGuide	Yes	93
+9720	2	Short-Term	Yes	108
+9720	3	Journey	Yes	83
+
+
+
+
+
+
+
+
+

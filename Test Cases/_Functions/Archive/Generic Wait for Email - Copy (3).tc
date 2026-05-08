@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Test Job Matches - Journey - Copy</name>
+   <name>Generic Wait for Email - Copy (3)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>915fd461-27e5-4ff7-9a60-3f2104142e01</testCaseGuid>
+   <testCaseGuid>63f7bb37-8435-4065-96d0-b144662362ba</testCaseGuid>
 </TestCaseEntity>

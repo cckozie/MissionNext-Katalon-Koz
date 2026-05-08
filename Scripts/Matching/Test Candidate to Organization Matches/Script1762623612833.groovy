@@ -46,7 +46,7 @@ debug = false
 if (varSite != null) {
     site = varSite // Journey or Education
 } else {
-    site = 'Education'
+    site = 'Journey'
 }
 
 matchType = 'Org' // Org or Job

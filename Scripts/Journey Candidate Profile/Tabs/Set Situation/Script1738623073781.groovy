@@ -45,7 +45,7 @@ outFile.append('\nTesting ' + testName + ' on ' + domain + '.\n')
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // !!!!!!!!! LOOK HERE! Input variables (parms) are defaulted to null in Variables tab !!!!!!!!!!!
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-parms = [varProcess_stage, varBible_training, varMissions_experience, varInterest_in_missionary_training, varChurch_affiliated, 
+parms = [varProcess_stage, varBible_training, varMissions_experience,varConferences_attended, varInterest_in_missionary_training, varChurch_affiliated, 
 	 varJourney_guide]
 
 // Define the xpath for the radio button groups
@@ -67,6 +67,9 @@ church_affiliated = "//input[@name='profile[group-1445373964.535][affiliated_wit
 //xpath of the Journey Guide group
 journey_guide_option = "//input[@name='profile[group-1445373964.535][journey_guide_option]']"
 
+//xpath of the Conferences Attended group
+conferences_attended = "//input[@id='profile_group-1445373964.535_conferences_attended']"
+
 //Log in as Journey candidate if not on dashboard page
 url = WebUI.getUrl(FailureHandling.OPTIONAL)
 
@@ -74,7 +77,7 @@ if (!(url) == (('https://Journey.' + GlobalVariable.domain) + '/profile?requestU
     WebUI.callTestCase(findTestCase('_Functions/Journey Candidate Login'), [:], FailureHandling.STOP_ON_FAILURE)
 }
 
-xpaths = [process_stage, bible_training, mission_experience, interest_in_mission_training, church_affiliated, journey_guide_option]
+xpaths = [process_stage, bible_training, mission_experience, conferences_attended, interest_in_mission_training, church_affiliated, journey_guide_option]
 ///////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 // Define path to tooltip text images
@@ -97,7 +100,8 @@ tooltipText = [
 
 // Define the required field missing error message test objects
 requiredFieldMsgs = [
-('Mission Experience') : 'The missions experience field is required.']
+('Mission Experience') : 'The missions experience field is required.',
+('Conferences Attended') : 'The conferences attended field is required.']
 //('Affiliated with a Church') : 'The affiliated with church field is required.'] //Message disappears after Submit button clicked
 
 //Go to the Situation tab

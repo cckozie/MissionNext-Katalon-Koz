@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>Get Tooltip Text - Copy (2)</name>
+   <name>Click on Group Elements - Copy (3)</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>20a0acbc-74eb-49f5-ae58-0fb8cc462304</testCaseGuid>
+   <testCaseGuid>a1e4a575-adba-45b5-9024-db6fd3f602c7</testCaseGuid>
 </TestCaseEntity>

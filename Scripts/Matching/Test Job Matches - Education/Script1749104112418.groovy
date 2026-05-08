@@ -195,6 +195,7 @@ if (userMN) {
 driver = DriverFactory.getWebDriver()
 
 allCountries = [false, true]
+allCountries = [true]
 
 for(all in allCountries) {
 		

@@ -30,11 +30,13 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 // 10/30/25 - Modified to force me as the contact and email
 
 // Add option to force all jobs to Volunteer/Self-supporting only
+
+
 volunteerOnly = true
 
 username = GlobalVariable.username
 
-partnerUser = 'office' //'joshua.r@jesusfilm.org' //Partner from whom we captured jobs (Set the Profile to the user to receive the jobs)
+jobsFolder = 'Saved Jobs' //name of folder holding the captured jobs (Set the Profile to the user to receive the jobs)
 
 site = 'Journey'
 
@@ -62,7 +64,7 @@ outFile.write('Testing  ' + myTestCase + ' on ' + domain + '.\n\n')
 
 GlobalVariable.outFile = outFile
 
-newJobsFilePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/'	+ site + '/' + partnerUser // Path to new jobs data files
+newJobsFilePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/'	+ site + '/' + jobsFolder // Path to new jobs data files
 //				  '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Jobs/Journey/joshua.r@jesusfilm.org'
 
 newJobsPath = 'Object Repository/' + site + ' Partner Profile/New Jobs/'	// Test Object base path
@@ -103,7 +105,7 @@ elementXpaths = [
 	'- SUPPORT PROFESSIONAL' : "//input[@id='job_group-1613487316.232_subset_support_professional']",
 	// IT Job Category
 	'- TECHNICAL' : "//input[@id='job_group-1710517746.856_subset_technical']",
-//	'- IT ENGINEERING/ANALYST' : "//input[@id='job_group-1710517803.592_subset_it_engineering']",
+	'- IT ENGINEERING/ANALYST' : "//input[@id='job_group-1710517803.592_subset_it_engineering']",
 	'- IT ENGINEERINGANALYST' : "//input[@id='job_group-1710517803.592_subset_it_engineering']",
 	'- ADMINISTRATOR' : "//input[@id='job_group-1710517809.337_subset_administrator']",
 	'- IT COMMUNICATIONS' : "//*[@id='job_group-1710517813.801_subset_it_communications']",
