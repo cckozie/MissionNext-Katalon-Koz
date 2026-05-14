@@ -61,7 +61,12 @@ GlobalVariable.outFile = outFile
 
 siteUser = ['Journey' : 'Journey Candidate 15', 'Education' : 'Education Candidate 14']
 
-//siteUser.each {
+testAccount = ['temp' : ['TEMP', 'TEST'], 'test' : ['TEST', 'TEMP']]
+
+searchText = 'Test inquires, if any, will show in this list.'
+
+errorsFlag = false
+
 for(it in siteUser) {
 	
 	site = it.key
@@ -75,68 +80,118 @@ for(it in siteUser) {
 	candidatePassword = GlobalVariable.password
 	
 	WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : candidateUsername, ('varPassword') : candidatePassword
-	        , ('varSite') : site], FailureHandling.STOP_ON_FAILURE //***
-	    )
+	        , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 	
-	if (site == 'Journey') {
-	    WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_View Agency Matches'))
-	} else {
-	    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_View School Matches'))
-	}
+	WebUI.waitForPageLoad(30)
+		
+	for(type in testAccount) {
+		
+		if(type.key == 'temp') {
+			typeText = ' non-test '
+		} else {
+			typeText = ' test '
+		}
+		
+		outFile.append('\n*** Testing for test accounts listed on the' + typeText + site + ' candidate job matches page. ***\n')
+		
+		retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):type.value[0]], FailureHandling.STOP_ON_FAILURE)
+		
+		outFile.append('--- Return code is ' + retCode + '\n\n')
+		
+		if (site == 'Journey') {
+		    WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_View Agency Matches'))
+		} else {
+		    WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_View School Matches'))
+		}
+		
+		WebUI.waitForPageLoad(60)
+		
+		testTextFound = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
+		
+		if(type.key == 'test' && !testTextFound) {
+			outFile.append('ERROR: Testing a TEST account, but test account text was not found.\n')
+			errorsFlag = true
+		} else if(type.key == 'temp' && testTextFound){
+			outFile.append('ERROR: Testing a NON-TEST account, but test account text was found.\n')
+			errorsFlag = true
+		}
 	
-	WebUI.waitForPageLoad(60)
-	
-	WebDriver driver = DriverFactory.getWebDriver()
-	
-	tableXpath = '//*[@id="main"]/div/div/div[2]/div[3]/div/div[1]/table/tbody'
-	
-	WebElement Table = driver.findElement(By.xpath(tableXpath))
-	
-	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-	
-	println(Rows.size())
-	
-	int row_count = Rows.size() - 1
-	
-	testFoundCount = 0
-	
-	if (row_count > 0) {
-	    for (row = startRow; row < row_count; row++) {
-			if(debug) {
-				resultsFile.append('Processing row ' + row + '\n')
-			}
-	        println('row is ' + row)
+		WebDriver driver = DriverFactory.getWebDriver()
+		
+		tableXpath = '//*[@id="main"]/div/div/div[2]/div[3]/div/div[1]/table/tbody'
+		
+		WebElement Table = driver.findElement(By.xpath(tableXpath))
+		
+		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+		
+		println(Rows.size())
+		
+		int row_count = Rows.size() - 1
+		
+		testFoundCount = 0
+		
+		if (row_count > 0) {
+		    for (row = startRow; row < row_count; row++) {
+				if(debug) {
+					resultsFile.append('Processing row ' + row + '\n')
+				}
+		        println('row is ' + row)
+				
+				rowClass = Rows.get(row).getAttribute("class")
+				
+				if(rowClass.contains('item')) {
+						
+			        List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 			
-			rowClass = Rows.get(row).getAttribute("class")
+			        line = Columns.get(0).getText()
 			
-			if(rowClass.contains('item')) {
+			        println('line is ' + line)
+			
+			        organization = Columns.get(1).getText()
 					
-		        List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-		
-		        line = Columns.get(0).getText()
-		
-		        println('line is ' + line)
-		
-		        organization = Columns.get(1).getText()
-				
-				orgLower = organization.toLowerCase()
-		
-		        println('organization is ' + organization)
-				
-				if(orgLower.contains('test')) {
-						outText = '##### ' + organization + ' on line ' + line + ' contains the word "test".'
+					orgLower = organization.toLowerCase()
+			
+			        println('organization is ' + organization)
+					
+					if(orgLower.contains('test')) {
+						testFoundCount++
+					}
+					
+					if(type.key == 'temp' && orgLower.contains('test')) {
+						outText = 'ERROR: The organization' + organization + ' on line ' + line + ' contains the word "test".'
 						outFile.append(outText + '\n')
 						testFoundCount++
+						errorsFlag = true
+					}
 				}
+		    }
+		}
+		
+		if(type.key == 'test') {
+			if(testFoundCount == 0) {
+				outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n')
+				errorsFlag = true
+			} else {
+				outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
 			}
-	    }
-	}
-	
-	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
-	} else {
-		outFile.append('\n' + 'No instances of "test" were found on ' + site + '.\n')
+		} else {
+			if(testFoundCount == 0) {
+				outFile.append('\nNo instances of "test" were found on ' + site + '.\n')
+			} else {
+				outFile.append('\nERROR: ' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+				errorsFlag = true
+			}
+		}
+		
+		WebUI.back()
+		
+		WebUI.waitForPageLoad(30)
 	}
 	
 	WebUI.closeBrowser()
 }
+
+if(errorsFlag) {
+	outFile.renameTo('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '-ERRORS FOUND.txt')
+}
+

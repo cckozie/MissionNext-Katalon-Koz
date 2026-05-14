@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test for Test Accounts Displayed on Job Inquiries</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7a849229-0355-42c2-b66a-d0241c3f3bac</testCaseGuid>
+</TestCaseEntity>

@@ -31,16 +31,13 @@ import java.awt.Toolkit as Toolkit
 import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import java.lang.Math as Math
-import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
-import org.openqa.selenium.interactions.Actions
-import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
+import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader as ExecutionProfilesLoader
+import org.openqa.selenium.interactions.Actions;
 
 
-testJobCount = 3
 
-testJobStart = 1
-
-siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
+siteUser = ['Journey' : ['Journey Candidate 15', '//*[@id="result_table"]/div[1]/div/div/table/tbody', 'Search Agency Jobs'],
+	 'Education' : ['Education Candidate 14', '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody', 'Search School Jobs']]
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -50,8 +47,6 @@ if(GlobalVariable.testSuiteRunning) {
 	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
 	
-	maxMatches = 100
-	
 } else {
 
 	myTestCase = myTestCase.substring(0, myTestCase.length() - 3)
@@ -59,116 +54,117 @@ if(GlobalVariable.testSuiteRunning) {
 
 myTestCase += '-' + GlobalVariable.host
 
-outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '.txt')
+outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
 
 GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
-searchText = 'test candidate users are displayed'
+errorsFlag = false
 
+//siteUser.each {
 for(it in siteUser) {
-	
 	site = it.key
 	
-	myProfile = it.value
+	user = it.value[0]
+	
+	jobTableXpath = it.value[1]
+	
+	outFile.append('\nTesting for test accounts found on ' + it.value[2] + ' page.\n')
 
-	new ExecutionProfilesLoader().loadProfile(myProfile)
+	new ExecutionProfilesLoader().loadProfile(user)
 	
 	candidateUsername = GlobalVariable.username
 	
 	candidatePassword = GlobalVariable.password
 	
-	WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : candidateUsername, ('varPassword') : candidatePassword
-	        , ('varSite') : site], FailureHandling.STOP_ON_FAILURE) //***
-	    
-	WebUI.waitForPageLoad(60)
-	
-	WebUI.delay(2)
-	
-	orgTab = WebUI.getWindowIndex()
-	
-//	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Job Matches'))
-	WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
-	
-	WebUI.switchToWindowIndex(1)
+	WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : user, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
 	
 	WebUI.waitForPageLoad(60)
 	
-	WebUI.delay(1)
-		
-	testFoundCount = 0
+	userTab = WebUI.getWindowIndex()
 	
-	for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
+	WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_' + it.value[2]))
 	
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
-		
-		WebUI.delay(1)
-		
-		WebUI.waitForPageLoad(60)
-		
-		testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
-		
-		if(testsShown) {
-			outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n')
-		} else {
-			outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n')
-		}
-		
-		myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
-		
-		WebDriver driver = DriverFactory.getWebDriver()
-		
-		WebElement Table = driver.findElement(By.xpath(myTable))
-		
-		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-		
-		int row_count = Rows.size() - 6
-		
-		found = false
-			
-		noErrors = true
-		
-		if(row_count > 0) {
-			
-			for (row = 3; row < row_count + 3; row++) {
-				
-				println('row is ' + row)
-				
-				List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-			
-				line = Columns.get(0).getText()
-				
-				println('line is ' + line)
-				
-				firstName = Columns.get(2).getText()
-				
-				println('firstName is ' + firstName)
-				
-				lastName = Columns.get(1).getText()
-				
-				println('lastName is ' + lastName)
-				
-				name = (firstName + lastName).toLowerCase()
-				
-				if(name.contains('test')) {
-					outText = 'Candidate ' + firstName + ' ' + lastName + ' on line ' + row - 3 + ' contains the word "test".'
-					outFile.append(outText + '\n')
-					testFoundCount++
-				}
-		    }
-			WebUI.back()
-		}
+	WebUI.waitForPageLoad(30)
+	
+	if(site == 'Education') {
+		WebUI.switchToWindowIndex(1)
 	}
 	
+	object = 'Object Repository/' + site + ' Candidate Profile/' + it.value[2] + '/input_No Preference'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	Robot robot = new Robot();
+	
+	robot.keyPress(KeyEvent.VK_ENTER);
+	
+	robot.keyRelease(KeyEvent.VK_ENTER);
+	
+	WebUI.waitForPageLoad(60)
+	
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	WebElement Table = driver.findElement(By.xpath(jobTableXpath))
+	
+	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+	
+	int row_count = Rows.size() - 1
+	
+	println(Rows.size() + ' rows found.')
+	
+	println(row_count)
+	
+	testFoundCount = 0
+	
+	if (row_count > 0) {
+		for (row = 1; row < row_count; row++) {
+			println('row is ' + row)
+	
+			rowClass = Rows.get(row).getAttribute("class")
+			
+			if(rowClass.contains('item')) {
+					
+				List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+		
+				jobLine = Columns.get(0).getText()
+		
+				println('jobLine is ' + jobLine)
+				
+				categoryElement = Columns.get(1)
+		
+				jobCategory = categoryElement.getText()
+		
+				println('jobCategory is ' + jobCategory)
+				
+				agency = Columns.get(2).getText().toLowerCase()
+				
+				println('agency is ' + agency)
+				
+				if(agency.contains('test')) {
+					outText = '##### The agency ' + agency + ' on line ' + jobLine + ' contains the word "test".'
+					outFile.append(outText + '\n')
+					testFoundCount++
+					errorsFlag = true
+				}
+					
+				jobTitle = Columns.get(3).getText()
+		
+				println('jobTitle is ' + jobTitle)
+	        }
+	    }
+	}
 	
 	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + it.value[2] + ' page.\n')
 	} else {
-		outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
+		outFile.append('\n' + ' No instances of "test" were found on ' + it.value[2] + ' page.\n')
 	}
 	
 	WebUI.closeBrowser()
 }
 
+if(errorsFlag) {
+	outFile.renameTo('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '-ERRORS FOUND.txt')
+}
 

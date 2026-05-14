@@ -36,11 +36,7 @@ import org.openqa.selenium.interactions.Actions
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
 
-testJobCount = 3
-
-testJobStart = 1
-
-siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
+siteUser = ['Journey' : ['Journey Candidate 15', 'Agency'], 'Education' : ['Education Candidate 14', 'School']]
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -49,8 +45,6 @@ if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
 	
 	myTestCase = myTestCase.substring(0,myTestCase.length() - 3) + ' - ' + testCaseName
-	
-	maxMatches = 100
 	
 } else {
 
@@ -65,13 +59,15 @@ GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
-searchText = 'test candidate users are displayed'
+searchText = 'Test inquires, if any, will show in this list.'
+
+errorsFlag = false
 
 for(it in siteUser) {
 	
 	site = it.key
 	
-	myProfile = it.value
+	myProfile = it.value[0]
 
 	new ExecutionProfilesLoader().loadProfile(myProfile)
 	
@@ -88,10 +84,7 @@ for(it in siteUser) {
 	
 	orgTab = WebUI.getWindowIndex()
 	
-//	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Job Matches'))
-	WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
-	
-	WebUI.switchToWindowIndex(1)
+	WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_My Favorites'))
 	
 	WebUI.waitForPageLoad(60)
 	
@@ -99,39 +92,43 @@ for(it in siteUser) {
 		
 	testFoundCount = 0
 	
-	for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
+	testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
 	
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
-		
-		WebUI.delay(1)
-		
-		WebUI.waitForPageLoad(60)
-		
-		testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
-		
-		if(testsShown) {
-			outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n')
-		} else {
-			outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n')
-		}
-		
-		myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
-		
-		WebDriver driver = DriverFactory.getWebDriver()
-		
+	if(testsShown) {
+		outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n\n')
+	} else {
+		outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n\n')
+		errorsFlag = true
+	}
+	
+	myTable = '//*[@id="main"]/div/div/div/div[2]/div[2]/table/tbody'
+	
+	WebDriver driver = DriverFactory.getWebDriver()
+	
+	boolean exists = driver.findElements(By.xpath(myTable)).size() > 0;
+	
+	if(exists) {
+	
 		WebElement Table = driver.findElement(By.xpath(myTable))
 		
 		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 		
-		int row_count = Rows.size() - 6
+		println(Rows.size() + ' rows found.')
 		
+		int row_count = Rows.size()
+		
+		if(row_count < 1) {
+			outFile.append('ERROR: No favorites were found on ' + site + '.\n')
+			errorFlag = true
+		}
+	
 		found = false
 			
 		noErrors = true
 		
 		if(row_count > 0) {
 			
-			for (row = 3; row < row_count + 3; row++) {
+			for (row = 0; row < row_count; row++) {
 				
 				println('row is ' + row)
 				
@@ -141,34 +138,37 @@ for(it in siteUser) {
 				
 				println('line is ' + line)
 				
-				firstName = Columns.get(2).getText()
+				org = Columns.get(3).getText()
 				
-				println('firstName is ' + firstName)
+				println('Organization is ' + org)
 				
-				lastName = Columns.get(1).getText()
-				
-				println('lastName is ' + lastName)
-				
-				name = (firstName + lastName).toLowerCase()
-				
+				name = org.toLowerCase()
+							
 				if(name.contains('test')) {
-					outText = 'Candidate ' + firstName + ' ' + lastName + ' on line ' + row - 3 + ' contains the word "test".'
+					outText = it.value[1] + ' ' + org + ' on line ' + row + ' contains the word "test".'
 					outFile.append(outText + '\n')
 					testFoundCount++
+					errorFlag = true
 				}
-		    }
-			WebUI.back()
+			}
 		}
-	}
-	
-	
-	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		
+		
+		
+		if(testFoundCount > 0) {
+			outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		} else {
+			outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
+			errorsFlag = true
+		}
 	} else {
-		outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
+		outFile.append('ERROR: No favorites were found on ' + site + '\n')
+		errorsFlag = true
 	}
 	
 	WebUI.closeBrowser()
 }
 
-
+if(errorsFlag) {
+	outFile.renameTo('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '-ERRORS FOUND.txt')
+}

@@ -13,37 +13,38 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword as WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.openqa.selenium.By as By
-import org.openqa.selenium.WebDriver as WebDriver
-import org.openqa.selenium.WebElement as WebElement
-import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
-import org.sikuli.script.*
-import org.sikuli.script.SikulixForJython as SikulixForJython
-import org.apache.commons.io.FileUtils as FileUtils
+//import java.io.BufferedReader as BufferedReader
+import java.io.FileReader as FileReader
+import java.io.IOException as IOException
+//import org.apache.commons.lang3.StringUtils as StringUtils
+import javax.swing.*
 import java.awt.Robot as Robot
 import java.awt.event.KeyEvent as KeyEvent
 import java.io.File as File
 import java.awt.Toolkit as Toolkit
 import java.awt.datatransfer.Clipboard as Clipboard
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
-import java.lang.Math as Math
 import org.openqa.selenium.JavascriptExecutor as JavascriptExecutor
-import org.openqa.selenium.interactions.Actions
+import org.apache.commons.io.FileUtils as FileUtils
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-
-
-testJobCount = 3
-
-testJobStart = 1
+import java.time.Instant
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.By as By
+//import org.openqa.selenium.Actions
+import org.openqa.selenium.interactions.Actions
 
 siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
 
+showTestAccounts = [false, true]
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
-        '/') + 1)
+		'/') + 1)
 
 if(GlobalVariable.testSuiteRunning) {
 	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
@@ -65,8 +66,6 @@ GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
-searchText = 'test candidate users are displayed'
-
 for(it in siteUser) {
 	
 	site = it.key
@@ -80,57 +79,59 @@ for(it in siteUser) {
 	candidatePassword = GlobalVariable.password
 	
 	WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : candidateUsername, ('varPassword') : candidatePassword
-	        , ('varSite') : site], FailureHandling.STOP_ON_FAILURE) //***
-	    
+			, ('varSite') : site], FailureHandling.STOP_ON_FAILURE) //***
+		
 	WebUI.waitForPageLoad(60)
 	
 	WebUI.delay(2)
 	
-	orgTab = WebUI.getWindowIndex()
-	
-//	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Job Matches'))
-	WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
+	if(site == 'Journey') {
+		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Candidate Matches'))
+	} else {
+		WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
+	}
 	
 	WebUI.switchToWindowIndex(1)
 	
 	WebUI.waitForPageLoad(60)
 	
-	WebUI.delay(1)
-		
-	testFoundCount = 0
+	testAcctLink = WebUI.verifyElementClickable(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'), FailureHandling.OPTIONAL)
 	
-	for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
+	if(testAcctLink) {
+		outFile.append('The link to show test accounts was found on ' + site + '.\n\n')
+	} else {
+		outFile.append('### ERROR: A link to show test accounts was not found on ' + site + '.\n\n')
+	}
 	
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
+	for(option in showTestAccounts) {
 		
-		WebUI.delay(1)
-		
-		WebUI.waitForPageLoad(60)
-		
-		testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
-		
-		if(testsShown) {
-			outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n')
+		if(option) {
+			outFile.append('Clicking the link to display test accounts on ' + site + '.\n')
+			outFile.append('Verifying test accounts are being displayed on ' + site + '.\n')
 		} else {
-			outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n')
+			outFile.append('Verifying test accounts are NOT being displayed on ' + site + '.\n')
 		}
-		
-		myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
+	
+		if(option && testAcctLink) {
+			WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'))
+		}
 		
 		WebDriver driver = DriverFactory.getWebDriver()
 		
-		WebElement Table = driver.findElement(By.xpath(myTable))
+		WebElement Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
 		
 		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 		
-		int row_count = Rows.size() - 6
+		int row_count = Rows.size() - 5
 		
 		found = false
 			
 		noErrors = true
 		
+		testFoundCount = 0
+		
 		if(row_count > 0) {
-			
+		
 			for (row = 3; row < row_count + 3; row++) {
 				
 				println('row is ' + row)
@@ -141,34 +142,46 @@ for(it in siteUser) {
 				
 				println('line is ' + line)
 				
-				firstName = Columns.get(2).getText()
+				if(line == ' ') {
+					break
+				}
+				
+				firstName = Columns.get(1).getText()
 				
 				println('firstName is ' + firstName)
 				
-				lastName = Columns.get(1).getText()
+				lastName = Columns.get(2).getText()
 				
 				println('lastName is ' + lastName)
 				
 				name = (firstName + lastName).toLowerCase()
 				
 				if(name.contains('test')) {
-					outText = 'Candidate ' + firstName + ' ' + lastName + ' on line ' + row - 3 + ' contains the word "test".'
+					if(option) {
+						outText = ''
+					} else {
+						outText = 'ERROR: '
+					}
+					outText += 'Candidate ' + firstName + ' ' + lastName + ' on line ' + line + ' contains the word "test".'
 					outFile.append(outText + '\n')
 					testFoundCount++
 				}
-		    }
-			WebUI.back()
+			}
+		}
+		
+		if(option && testFoundCount > 0) {
+			outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		} else {
+			outFile.append('No instances of "test" were found on ' + site + '.\n\n')
+		}
+		
+		if(!option && testFoundCount > 0) {
+			outFile.append('\nERROR:' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
 		}
 	}
 	
-	
-	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
-	} else {
-		outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
-	}
-	
 	WebUI.closeBrowser()
+
 }
 
 

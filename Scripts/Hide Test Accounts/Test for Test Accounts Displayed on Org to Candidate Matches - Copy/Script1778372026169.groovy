@@ -41,6 +41,8 @@ import org.openqa.selenium.interactions.Actions
 
 siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
 
+showTestAccounts = [false, true]
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
 		'/') + 1)
 

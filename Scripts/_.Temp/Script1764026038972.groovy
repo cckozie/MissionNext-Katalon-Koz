@@ -34,69 +34,29 @@ import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import java.awt.Desktop as Desktop
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Actions as Actions
 
-user = 'office'
+organization = 'cktest15jc TEST'
+tempOrg = organization[-4..-1].replace('TEST', 'TEMP')
+println(tempOrg)
+System.exit(0)
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/temp.txt')
 
-site = 'Journey'
+GlobalVariable.outFile = outFile
 
-WebUI.callTestCase(findTestCase('Admin/Switch-To Username'), [('varUsername') : user , ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+outFile.write('Calling Change Profile Between Test and Temp\n')
+
+
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : 'Journey Partner 17', ('varUsername') : ''
+        , ('varPassword') : '', ('varSite') : ''], FailureHandling.STOP_ON_FAILURE //***
+    )
 
 WebUI.waitForPageLoad(30)
 
-WebUI.delay(2)
+//WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_My Profile'))
 
-WebUI.callTestCase(findTestCase('Admin/Switch-To Log Out 2'), [varSite:site], FailureHandling.STOP_ON_FAILURE)
+retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):'TEST'], FailureHandling.STOP_ON_FAILURE)
 
-System.exit(0)
+println(retCode)
 
-siteDesignations = ['Journey' : 2,'Education' : 3,'QuickStart' : 6,'Journey Guide' : 7]
-
-index = WebUI.getWindowIndex(FailureHandling.OPTIONAL)
-
-if(index < 0) {
-	WebUI.openBrowser('')
-	
-	WebUI.maximizeWindow()
-}
-
-WebUI.navigateToUrl('https://missionnext.org/managerlogin/')
-
-WebUI.waitForPageLoad(60)
-
-WebUI.delay(2)
-
-WebUI.setText(findTestObject('Object Repository/Manager/input_Username or Email Address'), 'chriskosieracki')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Manager/input_Password'), 'xPc6erizqpZS5RHkbVxVdKyWkQxV4SRKassnbXTAWhQ=')
-
-WebUI.click(findTestObject('Object Repository/Manager/input_Log In'))
-
-WebUI.waitForPageLoad(60)
-
-WebUI.delay(2)
-
-WebUI.navigateToUrl("https://missionnext.org/managerlogin/?action=logout&amp")
-
-WebUI.waitForPageLoad(15)
-
-WebUI.click(findTestObject('Object Repository/Switch To/a_log out (you are attempting to)'))
-
-WebUI.waitForPageLoad(15)
-
-WebUI.click(findTestObject('Object Repository/Switch To/a_Logout in Parenthesis'))
-
-WebUI.waitForPageLoad(15)
-
-while(s.exists(imageFile)) {
-
-	WebUI.delay(2)
-	
-	s.click(imageFile)
-}
-
-//WebUI.click(findTestObject('Object Repository/Switch To/a_log out (you are attempting to)'))
-
-WebUI.waitForPageLoad(15)
-
-
+WebUI.closeBrowser()

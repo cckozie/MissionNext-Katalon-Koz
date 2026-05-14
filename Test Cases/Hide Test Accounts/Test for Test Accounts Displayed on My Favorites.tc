@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test for Test Accounts Displayed on My Favorites</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>8c2ab41b-b1e0-4043-92cd-a3b96bf8850d</testCaseGuid>
+</TestCaseEntity>
