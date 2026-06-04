@@ -35,5 +35,10 @@ class After_Test_Case {
 //		println testCaseContext.getTestCaseStatus()
 //		println('After Test Case Listener')
 		WebUI.callTestCase(findTestCase('_Functions/Write to Test Suite Collection Log'), [:], FailureHandling.STOP_ON_FAILURE)
+		if(GlobalVariable.errorsFlag) {
+			String subject = 'Errors found running ' + GlobalVariable.testCaseName
+			String text = 'Output file is file:///' + GlobalVariable.outFile
+			WebUI.callTestCase(findTestCase('_Functions/Java Send Email'), [('varSubject'):subject, ('varText'):text], FailureHandling.STOP_ON_FAILURE)
+		}
 	}
 }

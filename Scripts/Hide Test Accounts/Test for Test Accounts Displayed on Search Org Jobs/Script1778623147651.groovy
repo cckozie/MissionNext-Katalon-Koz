@@ -39,6 +39,8 @@ import org.openqa.selenium.interactions.Actions;
 siteUser = ['Journey' : ['Journey Candidate 15', '//*[@id="result_table"]/div[1]/div/div/table/tbody', 'Search Agency Jobs'],
 	 'Education' : ['Education Candidate 14', '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody', 'Search School Jobs']]
 
+testAccount = ['temp' : ['TEMP', 'TEST'], 'test' : ['TEST', 'TEMP']]
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
@@ -82,83 +84,118 @@ for(it in siteUser) {
 	
 	WebUI.waitForPageLoad(60)
 	
-	userTab = WebUI.getWindowIndex()
+	for(type in testAccount) {
+		
+		if(type.key == 'temp') {
+			typeText = ' non-test '
+		} else {
+			typeText = ' test '
+		}
+		
+		outFile.append('\n*** Testing for test accounts listed on the' + typeText + site + ' candidate job matches page. ***\n')
+		
+		retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):type.value[0]], FailureHandling.STOP_ON_FAILURE)
+		
+		outFile.append('--- Return code is ' + retCode + '\n\n')
 	
-	WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_' + it.value[2]))
-	
-	WebUI.waitForPageLoad(30)
-	
-	if(site == 'Education') {
-		WebUI.switchToWindowIndex(1)
-	}
-	
-	object = 'Object Repository/' + site + ' Candidate Profile/' + it.value[2] + '/input_No Preference'
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-	
-	Robot robot = new Robot();
-	
-	robot.keyPress(KeyEvent.VK_ENTER);
-	
-	robot.keyRelease(KeyEvent.VK_ENTER);
-	
-	WebUI.waitForPageLoad(60)
-	
-	WebDriver driver = DriverFactory.getWebDriver()
-	
-	WebElement Table = driver.findElement(By.xpath(jobTableXpath))
-	
-	List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-	
-	int row_count = Rows.size() - 1
-	
-	println(Rows.size() + ' rows found.')
-	
-	println(row_count)
-	
-	testFoundCount = 0
-	
-	if (row_count > 0) {
-		for (row = 1; row < row_count; row++) {
-			println('row is ' + row)
-	
-			rowClass = Rows.get(row).getAttribute("class")
+		WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_' + it.value[2]))
+		
+		WebUI.waitForPageLoad(30)
+		
+		if(site == 'Education') {
+			WebUI.switchToWindowIndex(1)
+		}
+		
+		object = 'Object Repository/' + site + ' Candidate Profile/' + it.value[2] + '/input_No Preference'
+		WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+		
+		Robot robot = new Robot();
+		
+		robot.keyPress(KeyEvent.VK_ENTER);
+		
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		
+		WebUI.waitForPageLoad(60)
+		
+		WebDriver driver = DriverFactory.getWebDriver()
+		
+		WebElement Table = driver.findElement(By.xpath(jobTableXpath))
+		
+		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+		
+		int row_count = Rows.size() - 1
+		
+		println(Rows.size() + ' rows found.')
+		
+		println(row_count)
+		
+		testFoundCount = 0
+		
+		if (row_count > 0) {
+			for (row = 1; row < row_count; row++) {
+				println('row is ' + row)
+		
+				rowClass = Rows.get(row).getAttribute("class")
+				
+				if(rowClass.contains('item')) {
+						
+					List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
 			
-			if(rowClass.contains('item')) {
+					jobLine = Columns.get(0).getText()
+			
+					println('jobLine is ' + jobLine)
 					
-				List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+					categoryElement = Columns.get(1)
+			
+					jobCategory = categoryElement.getText()
+			
+					println('jobCategory is ' + jobCategory)
+					
+					agency = Columns.get(2).getText().toLowerCase()
+					
+					println('agency is ' + agency)
+					
+					if(agency.contains('test')) {
+						testFoundCount++
+						if(type.key == 'temp' && name.contains('test')) {
+							outText = 'ERROR: The agency ' + agency + ' on line ' + jobLine + ' contains the word "test".'
+							outFile.append(outText + '\n')
+							errorsFlag = true
+						}
+					}
+	
+		        }
+		    }
 		
-				jobLine = Columns.get(0).getText()
-		
-				println('jobLine is ' + jobLine)
-				
-				categoryElement = Columns.get(1)
-		
-				jobCategory = categoryElement.getText()
-		
-				println('jobCategory is ' + jobCategory)
-				
-				agency = Columns.get(2).getText().toLowerCase()
-				
-				println('agency is ' + agency)
-				
-				if(agency.contains('test')) {
-					outText = '##### The agency ' + agency + ' on line ' + jobLine + ' contains the word "test".'
-					outFile.append(outText + '\n')
-					testFoundCount++
+			if(type.key == 'test') {
+				if(testFoundCount == 0) {
+					outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n')
+					errorsFlag = true
+				} else {
+					outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+				}
+			} else {
+				if(testFoundCount == 0) {
+					outFile.append('\nNo instances of "test" were found on ' + site + '.\n')
+				} else {
+					outFile.append('\nERROR: ' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
 					errorsFlag = true
 				}
-					
-				jobTitle = Columns.get(3).getText()
+			}
+		} else {
+			outFile.append('ERROR: No job matches were found on ' + site + '\n')
+			errorsFlag = true
+		}
 		
-				println('jobTitle is ' + jobTitle)
-	        }
-	    }
-	}
-	
-	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + it.value[2] + ' page.\n')
-	} else {
-		outFile.append('\n' + ' No instances of "test" were found on ' + it.value[2] + ' page.\n')
+		if(site == 'Journey') {
+			WebUI.back()
+			WebUI.waitForPageLoad(30)
+			WebUI.back()
+			WebUI.waitForPageLoad(30)
+		} else {
+			WebUI.closeWindowIndex(1)
+			WebUI.switchToWindowIndex(0)
+		}
 	}
 	
 	WebUI.closeBrowser()

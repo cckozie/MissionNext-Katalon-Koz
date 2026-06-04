@@ -43,14 +43,10 @@ myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfi
 	'/') + 1)
 
 if (GlobalVariable.testSuiteRunning) {
-testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
-
-myTestCase = (((myTestCase.substring(0, myTestCase.length() - 3) + ' - ') + testCaseName) + '-')
-
-maxMatches = 100
-
+	testCaseName = GlobalVariable.testCaseName.substring(GlobalVariable.testCaseName.lastIndexOf('/') + 1)
+	myTestCase = (((myTestCase.substring(0, myTestCase.length() - 3) + ' - ') + testCaseName) + '-')
 } else {
-myTestCase = (myTestCase.substring(0, myTestCase.length() - 3) + '-')
+	myTestCase = (myTestCase.substring(0, myTestCase.length() - 3) + '-')
 }
 
 outFile = new File(('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase) + '.txt')
@@ -155,13 +151,11 @@ for(it in siteUser) {
 					
 					if(orgLower.contains('test')) {
 						testFoundCount++
-					}
-					
-					if(type.key == 'temp' && orgLower.contains('test')) {
-						outText = 'ERROR: The organization' + organization + ' on line ' + line + ' contains the word "test".'
-						outFile.append(outText + '\n')
-						testFoundCount++
-						errorsFlag = true
+						if(type.key == 'temp') {
+							outText = 'ERROR: The organization' + organization + ' on line ' + line + ' contains the word "test".'
+							outFile.append(outText + '\n')
+							errorsFlag = true
+						}
 					}
 				}
 		    }

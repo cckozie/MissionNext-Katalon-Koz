@@ -48,6 +48,8 @@ try {
 	bottom = (top + 600)
 	
 	if (((y - top) < 150) || ((bottom - y) < 10)) {
+		println('Scrolling to ' + '0,' + y - 150)
+		
 	    WebUI.scrollToPosition(0, y - 150)
 	
 	    WebUI.delay(1)

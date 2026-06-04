@@ -38,6 +38,8 @@ import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 
 siteUser = ['Journey' : ['Journey Candidate 15', 'Agency'], 'Education' : ['Education Candidate 14', 'School']]
 
+testAccount = ['temp' : ['TEMP', 'TEST'], 'test' : ['TEST', 'TEMP']]
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
@@ -82,88 +84,111 @@ for(it in siteUser) {
 	
 	WebUI.delay(2)
 	
-	orgTab = WebUI.getWindowIndex()
-	
-	WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_My Favorites'))
-	
-	WebUI.waitForPageLoad(60)
-	
-	WebUI.delay(1)
+	for(type in testAccount) {
 		
-	testFoundCount = 0
-	
-	testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
-	
-	if(testsShown) {
-		outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n\n')
-	} else {
-		outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n\n')
-		errorsFlag = true
-	}
-	
-	myTable = '//*[@id="main"]/div/div/div/div[2]/div[2]/table/tbody'
-	
-	WebDriver driver = DriverFactory.getWebDriver()
-	
-	boolean exists = driver.findElements(By.xpath(myTable)).size() > 0;
-	
-	if(exists) {
-	
-		WebElement Table = driver.findElement(By.xpath(myTable))
-		
-		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-		
-		println(Rows.size() + ' rows found.')
-		
-		int row_count = Rows.size()
-		
-		if(row_count < 1) {
-			outFile.append('ERROR: No favorites were found on ' + site + '.\n')
-			errorFlag = true
-		}
-	
-		found = false
-			
-		noErrors = true
-		
-		if(row_count > 0) {
-			
-			for (row = 0; row < row_count; row++) {
-				
-				println('row is ' + row)
-				
-				List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-			
-				line = Columns.get(0).getText()
-				
-				println('line is ' + line)
-				
-				org = Columns.get(3).getText()
-				
-				println('Organization is ' + org)
-				
-				name = org.toLowerCase()
-							
-				if(name.contains('test')) {
-					outText = it.value[1] + ' ' + org + ' on line ' + row + ' contains the word "test".'
-					outFile.append(outText + '\n')
-					testFoundCount++
-					errorFlag = true
-				}
-			}
-		}
-		
-		
-		
-		if(testFoundCount > 0) {
-			outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		if(type.key == 'temp') {
+			typeText = ' non-test '
 		} else {
-			outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
+			typeText = ' test '
+		}
+		
+		outFile.append('\n*** Testing for test accounts listed on the' + typeText + site + ' candidate job matches page. ***\n')
+		
+		retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):type.value[0]], FailureHandling.STOP_ON_FAILURE)
+		
+		outFile.append('--- Return code is ' + retCode + '\n\n')
+		
+		WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Dashboard/a_My Favorites'))
+		
+		WebUI.waitForPageLoad(60)
+		
+		WebUI.delay(1)
+			
+		testFoundCount = 0
+		
+		testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
+		
+		if(testsShown) {
+			outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n\n')
+		} else {
+			outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n\n')
 			errorsFlag = true
 		}
-	} else {
-		outFile.append('ERROR: No favorites were found on ' + site + '\n')
-		errorsFlag = true
+		
+		myTable = '//*[@id="main"]/div/div/div/div[2]/div[2]/table/tbody'
+		
+		WebDriver driver = DriverFactory.getWebDriver()
+		
+		boolean exists = driver.findElements(By.xpath(myTable)).size() > 0;
+		
+		if(exists) {
+		
+			WebElement Table = driver.findElement(By.xpath(myTable))
+			
+			List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+			
+			println(Rows.size() + ' rows found.')
+			
+			int row_count = Rows.size()
+			
+			if(row_count < 1) {
+				outFile.append('ERROR: No favorites were found on ' + site + '.\n')
+				errorFlag = true
+			}
+		
+			found = false
+				
+			noErrors = true
+			
+			if(row_count > 0) {
+				
+				for (row = 0; row < row_count; row++) {
+					
+					println('row is ' + row)
+					
+					List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+				
+					line = Columns.get(0).getText()
+					
+					println('line is ' + line)
+					
+					org = Columns.get(3).getText()
+					
+					println('Organization is ' + org)
+					
+					name = org.toLowerCase()
+								
+					if(name.contains('test')) {
+						testFoundCount++					
+						if(type.key == 'temp' && name.contains('test')) {
+							outText = 'ERROR: Partner ' + org + ' on line ' + row + ' contains the word "test".'
+							outFile.append(outText + '\n')
+							errorsFlag = true
+						}
+					}
+				}
+			}
+					
+			if(type.key == 'test') {
+				if(testFoundCount == 0) {
+					outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n')
+					errorsFlag = true
+				} else {
+					outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+				}
+			} else {
+				if(testFoundCount == 0) {
+					outFile.append('\nNo instances of "test" were found on ' + site + '.\n')
+				} else {
+					outFile.append('\nERROR: ' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+					errorsFlag = true
+				}
+			}
+			
+		} else {
+			outFile.append('ERROR: No favorites were found on ' + site + '\n')
+			errorsFlag = true
+		}
 	}
 	
 	WebUI.closeBrowser()

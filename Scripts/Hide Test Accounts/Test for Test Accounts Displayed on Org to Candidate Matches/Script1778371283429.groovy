@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions
 
 siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
 
-showTestAccounts = [false, true]
+testAccount = ['temp' : ['TEMP', 'TEST'], 'test' : ['TEST', 'TEMP']]
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
 		'/') + 1)
@@ -66,6 +66,8 @@ GlobalVariable.outFile = outFile
 
 outFile.write(('Running ' + myTestCase) + '\n\n')
 
+errorsFlag = false
+
 for(it in siteUser) {
 	
 	site = it.key
@@ -85,48 +87,52 @@ for(it in siteUser) {
 	
 	WebUI.delay(2)
 	
-	if(site == 'Journey') {
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Candidate Matches'))
-	} else {
-		WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
-	}
-	
-	WebUI.switchToWindowIndex(1)
-	
-	WebUI.waitForPageLoad(60)
-	
-	testAcctLink = WebUI.verifyElementClickable(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'), FailureHandling.OPTIONAL)
-	
-	if(testAcctLink) {
-		outFile.append('The link to show test accounts was found on ' + site + '.\n\n')
-	} else {
-		outFile.append('### ERROR: A link to show test accounts was not found on ' + site + '.\n\n')
-	}
-	
-	for(option in showTestAccounts) {
+	for(type in testAccount) {
 		
-		if(option) {
-			outFile.append('Clicking the link to display test accounts on ' + site + '.\n')
-			outFile.append('Verifying test accounts are being displayed on ' + site + '.\n')
+		if(type.key == 'temp') {
+			typeText = ' non-test '
 		} else {
-			outFile.append('Verifying test accounts are NOT being displayed on ' + site + '.\n')
+			typeText = ' test '
 		}
+		
+		outFile.append('\n*** Testing for test accounts listed on the' + typeText + site + ' candidate job matches page. ***\n')
+		
+		retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):type.value[0]], FailureHandling.STOP_ON_FAILURE)
+		
+		outFile.append('--- Return code is ' + retCode + '\n\n')
 	
-		if(option && testAcctLink) {
+		if(site == 'Journey') {
+			WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Candidate Matches'))
+		} else {
+			WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Educator Matches'))
+		}
+		
+		WebUI.switchToWindowIndex(1)
+		
+		WebUI.waitForPageLoad(60)
+		
+		testAcctLink = WebUI.verifyElementClickable(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'), FailureHandling.OPTIONAL)
+		
+		if(type.key == 'temp' && testAcctLink) {
+			outFile.append('ERROR: The link to show test accounts was found on ' + site + '.\n\n')
+		} else if(type.key == 'test' && !testAcctLink) {
+			outFile.append('ERROR: A link to show test accounts was not found on ' + site + '.\n\n')
+		}
+		
+		if(type.key == 'test' && testAcctLink) {
+			outFile.append('Clicking the link to display test accounts on ' + site + '.\n')
+			
 			WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/a_View TEST candidates'))
 		}
-		
+			
 		WebDriver driver = DriverFactory.getWebDriver()
 		
 		WebElement Table = driver.findElement(By.xpath('/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'))
+//													   '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/p[1]/table/tbody'
 		
 		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
 		
 		int row_count = Rows.size() - 5
-		
-		found = false
-			
-		noErrors = true
 		
 		testFoundCount = 0
 		
@@ -157,31 +163,48 @@ for(it in siteUser) {
 				name = (firstName + lastName).toLowerCase()
 				
 				if(name.contains('test')) {
-					if(option) {
-						outText = ''
-					} else {
-						outText = 'ERROR: '
-					}
-					outText += 'Candidate ' + firstName + ' ' + lastName + ' on line ' + line + ' contains the word "test".'
-					outFile.append(outText + '\n')
 					testFoundCount++
+					if(type.key == 'temp' && name.contains('test')) {
+						outText = 'ERROR: Candidate ' + firstName + ' ' + lastName + ' on line ' + line + ' contains the word "test".'
+						outFile.append(outText + '\n')
+						errorsFlag = true
+					}
+				}				
+			}
+			
+			if(type.key == 'test') {
+				if(testFoundCount == 0) {
+					outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n')
+					errorsFlag = true
+				} else {
+					outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+				}
+			} else {
+				if(testFoundCount == 0) {
+					outFile.append('\nNo instances of "test" were found on ' + site + '.\n')
+				} else {
+					outFile.append('\nERROR: ' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+					errorsFlag = true
 				}
 			}
-		}
-		
-		if(option && testFoundCount > 0) {
-			outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
 		} else {
-			outFile.append('No instances of "test" were found on ' + site + '.\n\n')
+			outFile.append('ERROR: No candidate matches were found on ' + site + '\n')
+			errorsFlag = true
 		}
 		
-		if(!option && testFoundCount > 0) {
-			outFile.append('\nERROR:' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
-		}
+		WebUI.closeWindowIndex(1)
+		
+		WebUI.switchToWindowIndex(0)
+		
+		WebUI.refresh()
+		
+		WebUI.waitForPageLoad(30)
 	}
 	
 	WebUI.closeBrowser()
-
 }
 
+if(errorsFlag) {
+	outFile.renameTo('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '-ERRORS FOUND.txt')
+}
 

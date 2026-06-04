@@ -35,6 +35,57 @@ import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import java.awt.Desktop as Desktop
 import org.openqa.selenium.interactions.Actions as Actions
+import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
+
+text = 'journey'
+
+myText = text.capitalize()
+
+println(myText)
+
+System.exit(0)
+
+siteUser = ['Education' : 'Education Partner 16']
+
+println(siteUser)
+
+site = 'Education'
+
+println(site)
+
+myProfile = 'Education Partner 16'
+
+println(myProfile)
+
+new ExecutionProfilesLoader().loadProfile(myProfile)
+
+candidateUsername = GlobalVariable.username
+
+candidatePassword = GlobalVariable.password
+
+outFile = new File('/Users/cckozie/Documents/MissionNext/Test Reports/temp.txt')
+
+GlobalVariable.outFile = outFile
+
+outFile.write(('Running ') + '\n\n')
+
+
+WebUI.callTestCase(findTestCase('_Functions/Generic Login'), [('varProfile') : '', ('varUsername') : candidateUsername, ('varPassword') : candidatePassword
+		, ('varSite') : site], FailureHandling.STOP_ON_FAILURE) //***
+
+WebUI.waitForPageLoad(60)
+
+retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):'temp'], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.refresh()
+
+WebUI.waitForPageLoad(60)
+
+//WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
+WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_Job Matches'))
+
+System.exit(0)
+
 
 organization = 'cktest15jc TEST'
 tempOrg = organization[-4..-1].replace('TEST', 'TEMP')

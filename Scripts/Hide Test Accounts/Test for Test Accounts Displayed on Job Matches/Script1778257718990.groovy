@@ -42,6 +42,8 @@ testJobStart = 1
 
 siteUser = ['Journey' : 'Journey Partner 17', 'Education' : 'Education Partner 16']
 
+testAccount = ['temp' : ['TEMP', 'TEST'], 'test' : ['TEST', 'TEMP']]
+
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
 
@@ -67,6 +69,8 @@ outFile.write(('Running ' + myTestCase) + '\n\n')
 
 searchText = 'test candidate users are displayed'
 
+errorsFlag = false
+
 for(it in siteUser) {
 	
 	site = it.key
@@ -86,89 +90,138 @@ for(it in siteUser) {
 	
 	WebUI.delay(2)
 	
-	orgTab = WebUI.getWindowIndex()
-	
-//	WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Dashboard/a_Job Matches'))
-	WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
-	
-	WebUI.switchToWindowIndex(1)
-	
-	WebUI.waitForPageLoad(60)
-	
-	WebUI.delay(1)
+	for(type in testAccount) {
 		
-	testFoundCount = 0
-	
-	for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
-	
-		WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
+		if(type.key == 'temp') {
+			typeText = ' non-test '
+		} else {
+			typeText = ' test '
+		}
 		
-		WebUI.delay(1)
+		outFile.append('\n*** Testing for test accounts listed on the' + typeText + site + ' candidate job matches page. ***\n')
+		
+		retCode = WebUI.callTestCase(findTestCase('_Functions/Change Profile Between Test and Temp'), [('varTestOrTemp'):type.value[0]], FailureHandling.STOP_ON_FAILURE)
+		
+		outFile.append('--- Return code is ' + retCode + '\n\n')
+		
+		WebUI.refresh()
+
+		WebUI.waitForPageLoad(60)
+
+		WebUI.click(findTestObject('Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'))
+		
+		WebUI.switchToWindowIndex(1)
 		
 		WebUI.waitForPageLoad(60)
 		
-		testsShown = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
+		WebUI.delay(1)
+			
+		testFoundCount = 0
 		
-		if(testsShown) {
-			outFile.append('The text "' + searchText + '" is displayed on ' + site + '.\n')
+		for(testJob = testJobStart; testJob < testJobStart + testJobCount; testJob++) {
+		
+			WebUI.click(findTestObject('Object Repository/Journey Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob + 2]))
+			
+			WebUI.delay(1)
+			
+			WebUI.waitForPageLoad(60)
+			
+			testTextFound = WebUI.verifyTextPresent(searchText, false, FailureHandling.OPTIONAL)
+			
+			println(testTextFound)
+			
+			if(type.key == 'test' && !testTextFound) {
+				outFile.append('ERROR: Testing a TEST account, but test account text was not found.\n')
+				errorsFlag = true
+			} else if(type.key == 'temp' && testTextFound){
+				outFile.append('ERROR: Testing a NON-TEST account, but test account text was found.\n')
+				errorsFlag = true
+			}
+			
+			myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
+			
+			WebDriver driver = DriverFactory.getWebDriver()
+			
+			WebElement Table = driver.findElement(By.xpath(myTable))
+			
+			List<WebElement> Rows = Table.findElements(By.tagName('tr'))
+			
+			int row_count = Rows.size() - 6
+			
+			found = false
+				
+			noErrors = true
+			
+			if(row_count > 0) {
+				
+				for (row = 3; row < row_count + 3; row++) {
+					
+					println('row is ' + row)
+					
+					List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
+				
+					line = Columns.get(0).getText()
+					
+					println('line is ' + line)
+					
+					firstName = Columns.get(2).getText()
+					
+					println('firstName is ' + firstName)
+					
+					lastName = Columns.get(1).getText()
+					
+					println('lastName is ' + lastName)
+					
+					name = (firstName + lastName).toLowerCase()
+					
+					if(name.contains('test')) {
+						testFoundCount++
+						if(type.key == 'temp') {
+							outText = 'ERROR: Candidate ' + firstName + ' ' + lastName + ' on line ' + row - 3 + ' contains the word "test".'
+							outFile.append(outText + '\n')
+							errorsFlag = true
+						}
+					}
+			    }
+				WebUI.back()
+			}
+		}
+		
+		if(type.key == 'test') {
+			if(testFoundCount == 0) {
+				outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n')
+				errorsFlag = true
+			} else {
+				outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+			}
 		} else {
-			outFile.append('ERROR: The text "' + searchText + '" is NOT displayed on ' + site + '.\n')
+			if(testFoundCount == 0) {
+				outFile.append('\nNo instances of "test" were found on ' + site + '.\n')
+			} else {
+				outFile.append('\nERROR: ' + testFoundCount + ' instances of "test" were found on ' + site + '.\n')
+				errorsFlag = true
+			}
 		}
 		
-		myTable = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/form/table[2]/tbody'
+		WebUI.closeWindowIndex(1)
 		
-		WebDriver driver = DriverFactory.getWebDriver()
+		WebUI.switchToWindowIndex(0)
 		
-		WebElement Table = driver.findElement(By.xpath(myTable))
+//		WebUI.closeWindowIndex(1)
 		
-		List<WebElement> Rows = Table.findElements(By.tagName('tr'))
-		
-		int row_count = Rows.size() - 6
-		
-		found = false
-			
-		noErrors = true
-		
-		if(row_count > 0) {
-			
-			for (row = 3; row < row_count + 3; row++) {
-				
-				println('row is ' + row)
-				
-				List<WebElement> Columns = Rows.get(row).findElements(By.tagName('td'))
-			
-				line = Columns.get(0).getText()
-				
-				println('line is ' + line)
-				
-				firstName = Columns.get(2).getText()
-				
-				println('firstName is ' + firstName)
-				
-				lastName = Columns.get(1).getText()
-				
-				println('lastName is ' + lastName)
-				
-				name = (firstName + lastName).toLowerCase()
-				
-				if(name.contains('test')) {
-					outText = 'Candidate ' + firstName + ' ' + lastName + ' on line ' + row - 3 + ' contains the word "test".'
-					outFile.append(outText + '\n')
-					testFoundCount++
-				}
-		    }
-			WebUI.back()
+		WebUI.delay(1)
+/*
+		if(testFoundCount > 0) {
+			outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
+		} else {
+			outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
 		}
+*/
 	}
-	
-	
-	if(testFoundCount > 0) {
-		outFile.append('\n' + testFoundCount + ' instances of "test" were found on ' + site + '.\n\n')
-	} else {
-		outFile.append('\nERROR: No instances of "test" were found on ' + site + '.\n\n')
-	}
-	
 	WebUI.closeBrowser()
 }
 
+if(errorsFlag) {
+	outFile.renameTo('/Users/cckozie/Documents/MissionNext/Test Reports/' + myTestCase + '-ERRORS FOUND.txt')
+}
 

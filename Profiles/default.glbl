@@ -144,4 +144,9 @@
       <initValue>''</initValue>
       <name>host</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>errorsFlag</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

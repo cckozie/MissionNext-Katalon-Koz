@@ -152,16 +152,14 @@ for(it in siteUser) {
 					println('agency is ' + agency)
 					
 					if(agency.contains('test')) {
-						testFoundCount++
+						testFoundCount++				
+						if(type.key == 'temp') {
+							outText = 'ERROR: The agency ' + agency + ' on line ' + jobLine + ' contains the word "test".'
+							outFile.append(outText + '\n')
+							errorsFlag = true
+						}
 					}
 					
-					if(type.key == 'temp' && agency.contains('test')) {
-						outText = 'ERROR: The agency ' + agency + ' on line ' + jobLine + ' contains the word "test".'
-						outFile.append(outText + '\n')
-						testFoundCount++
-						errorsFlag = true
-					}
-						
 					jobTitle = Columns.get(3).getText()
 			
 					println('jobTitle is ' + jobTitle)
