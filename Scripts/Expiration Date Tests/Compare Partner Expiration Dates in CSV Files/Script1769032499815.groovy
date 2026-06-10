@@ -26,6 +26,10 @@ import com.kms.katalon.core.util.KeywordUtil
 
 type = 'All'  // All or Errors
 
+domain = GlobalVariable.domain
+
+loggedIn = false
+
 varFormat = "YY-MM-dd"
 
 now = new Date()
@@ -107,6 +111,20 @@ if(thenFile == '?') {
 
 println('then file is ' + thenFile)
 
+thenFileName = thenFile.getName()
+
+allIndex = thenFileName.indexOf('All')
+
+thenYY = thenFileName.substring(allIndex + 4, allIndex + 6)
+
+thenMM = thenFileName.substring(allIndex + 7, allIndex + 9)
+
+thenDD = thenFileName.substring(allIndex + 10, allIndex + 12)
+
+thenDate = thenMM + '/' + thenDD + '/' + thenYY
+
+println(thenDate)
+
 files = [nowFile, thenFile]
 
 oldMap = [:]
@@ -160,11 +178,14 @@ commonKeys.sort()
 
 runDate = now.format("MM/dd/YY")
 
-thenDate = then.format("MM/dd/YY")
+println(then)
+
+//thenDate = then.format("MM/dd/YY")
+//thenDate = new Date().parse("MM/dd/YY", then)
 
 outFile = new File(filePath + 'Partner Expiration Date Changes_' + today + '.csv')
 
-outText = 'Run Date,User ID,Username,Email,Organization,Start,Expires,Status,Days Remaining,Grace?'
+outText = 'Run Date,User ID,Username,Email,Organization,Start,Expires,Last Login,Status,Days Remaining,Grace?'
 
 outFile.write(outText + '\n')
 
@@ -177,18 +198,43 @@ if(!logFile.exists()) {
 }
 
 count = 0
-commonKeys.each {
+
+changes = [:]
+
+//commonKeys.each {
+for(it in commonKeys) {
+	
+//	it = commonKey.key
+	
 	oldValues = oldMap.get(it)
 	
 	newValues = newMap.get(it)
 	
 	if(oldValues != newValues) {
-		println(oldValues)
-		println(newValues)
+//		println(oldValues)
+//		println(newValues)
 		
 		if(oldValues[4] != newValues[4]) {
 			
+			println(oldValues)
+			
+			println(newValues)
+						
 			count++
+			
+			lastLogin = getKeyDates(oldValues[0])
+			
+			println('Last login was ' + lastLogin)
+			
+			oldValues.add(5, lastLogin)
+			
+			newValues.add(5, lastLogin)
+			
+			dates = []
+			
+			dates.addAll(thenDate, oldValues[4], newValues[4], oldValues[5])
+			
+			changes.put(oldValues[0], dates)
 			
 			println(runDate + ',' + it + ',' + oldValues.join(','))
 			outFile.append(thenDate + ',' + it + ',' + oldValues.join(',') + '\n')
@@ -202,5 +248,79 @@ commonKeys.each {
 }
 if(count == 0) {
 	outFile.append(">>>>> No Changes")
+} else {
+
+	WebUI.closeBrowser()
+//if(loggedIn) {
+	String subject = count + ' Partner Expiration Dates Have Changed'
+	
+	String text = ''
+	
+	varFormat = "MM/dd/YY"
+	
+	for(change in changes) {
+		
+		username = change.key
+		
+		thenDate = change.value[0]
+		
+		oldDate = new Date().parse("yyyy-MM-dd", change.value[1])
+		
+		oldDate = oldDate.format(varFormat)
+		
+//		oldDate = change.value[1]
+		
+//		newDate = change.value[2]
+		
+		newDate = new Date().parse("yyyy-MM-dd", change.value[2])
+		
+		newDate = newDate.format(varFormat)
+		
+//		loginDate = change.value[3]
+	
+		loginDate = new Date().parse("yyyy-MM-dd", change.value[3])
+		
+		loginDate = loginDate.format(varFormat)
+		
+		text += "On " + thenDate + " " + username + " had expiration date " + oldDate + ". It is now " + newDate + ". Last login was on " + loginDate + ".\n"
+	}
+	
+	text += '\nOutput file is file:///' + outFile
+	
+	WebUI.callTestCase(findTestCase('_Functions/Java Send Email'), [('varSubject'):subject, ('varText'):text], FailureHandling.STOP_ON_FAILURE)
+
 }
 
+def getKeyDates(username) {
+	
+	if(!loggedIn) {
+		
+		loggedIn = true
+		
+		url = ('https://ad.' + domain)
+		
+		WebUI.openBrowser('')
+		
+		WebUI.navigateToUrl(url)
+		
+		WebUI.setText(findTestObject('Admin/Ad Login/input_Username'), 'chriskosieracki')
+		
+		WebUI.setEncryptedText(findTestObject('Admin/Ad Login/input_Password'), 'fAJOXt1JExHva3VUYg96Og==')
+		
+		WebUI.click(findTestObject('Admin/Ad Login/btn_Submit'))
+		
+		WebUI.click(findTestObject('Admin/Ad Main/a_User Information  Administration'))
+	}
+	
+	WebUI.setText(findTestObject('Admin/Ad User Viewer Utility/input_Find account by Username'), username)
+	
+	WebUI.delay(1)
+	
+	WebUI.click(findTestObject('Admin/Ad User Viewer Utility/button_Find account by Username'))
+	
+	WebUI.delay(1)
+	
+	lastLogin = WebUI.getText(findTestObject('Object Repository/Admin/Ad User Viewer Utility/text_Last Login'))
+	
+	return lastLogin
+}

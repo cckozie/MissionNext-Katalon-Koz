@@ -6,12 +6,12 @@
    <elementGuidId>56ce3e65-c6b3-4228-a468-b6cfb634ebdc</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*/text()[normalize-space(.)='MissionConnexion']/parent::*</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[1]/ul/li[1]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>90f19fd4-4bae-49a7-bd01-589ba7ffefe4</webElementGuid>
+      <webElementGuid>be743b84-65e0-4bf9-89c3-c01ff8860568</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionconnexion.global/</value>
-      <webElementGuid>f9bd3157-1d79-43e4-96c3-6df0b8d3d3cf</webElementGuid>
+      <webElementGuid>01605135-7f1c-480a-85af-eb5350e8898b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-sub-item</value>
-      <webElementGuid>e3bb1aa0-a8a1-466b-bca5-8f9e66c7ad01</webElementGuid>
+      <webElementGuid>e1f547c0-f765-49d8-ad58-fe40d0b49fde</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>MissionConnexion</value>
-      <webElementGuid>d43e8ffb-d3df-4a96-b913-fb542f323763</webElementGuid>
+      <webElementGuid>5efbf81f-2864-4661-8e0f-75ae673f4c54</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sm-17799005104324214-2&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77187&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
-      <webElementGuid>3d3fed18-6aed-494b-b2ea-4306787b2f56</webElementGuid>
+      <webElementGuid>ddceb82f-f08d-405b-82bb-416b399b80f1</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='sm-17799005104324214-2']/li/a</value>
-      <webElementGuid>2529b2ec-960e-416c-bbf9-b86a5815b005</webElementGuid>
+      <webElementGuid>ab2ad754-9920-4919-a0e0-89c9159fac93</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'MissionConnexion')]</value>
-      <webElementGuid>9a380d51-4ee5-4805-a3e2-94ab62065b0a</webElementGuid>
+      <webElementGuid>c3b81a64-07e8-49a8-b8fe-35bf337a0c6c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Skip to content'])[1]/following::a[3]</value>
-      <webElementGuid>03ff02b2-8206-4a9a-ba3b-b08f11913cd0</webElementGuid>
+      <webElementGuid>49b6e088-c466-400f-b0a7-d75cb6f44959</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MIssionNext'])[1]/preceding::a[1]</value>
-      <webElementGuid>3bd6680e-d11f-4a23-8544-f7b36ce68e5a</webElementGuid>
+      <webElementGuid>ab97180c-34ba-4369-b6b0-656be39aff22</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionGuide'])[1]/preceding::a[2]</value>
-      <webElementGuid>207d74c6-f5d3-4e9f-b2d0-c6abca799a37</webElementGuid>
+      <webElementGuid>c768f0bf-8e73-4a89-b306-8a4be20e4dd6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='MissionConnexion']/parent::*</value>
-      <webElementGuid>bb4ef3a8-cb75-4631-b311-04b6133ac849</webElementGuid>
+      <webElementGuid>e7b2e6b5-b4d1-48d8-8a27-4a9de8d721d9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionconnexion.global/')]</value>
-      <webElementGuid>4a4cd5a1-a9d4-450d-8be9-476d892c68bb</webElementGuid>
+      <webElementGuid>123325df-d8e5-4a0e-b1f1-c0a8b1b12230</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li/ul/li/a</value>
-      <webElementGuid>21c4db96-5158-4a87-832b-172594501f87</webElementGuid>
+      <webElementGuid>1510b4e7-2145-4d82-ad02-b093eb11d969</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionconnexion.global/' and (text() = 'MissionConnexion' or . = 'MissionConnexion')]</value>
-      <webElementGuid>f9b000d6-04d9-49f1-81ee-404cd08225ab</webElementGuid>
+      <webElementGuid>f5cbc0c1-6d7a-43d1-ace0-fe26a86059bd</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

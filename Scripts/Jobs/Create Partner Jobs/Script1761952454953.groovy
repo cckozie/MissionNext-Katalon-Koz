@@ -36,7 +36,7 @@ volunteerOnly = true
 
 username = GlobalVariable.username
 
-jobsFolder = 'Saved Jobs' //name of folder holding the captured jobs (Set the Profile to the user to receive the jobs)
+jobsFolder = 'one_job' //'Saved Jobs' //name of folder holding the captured jobs (Set the Profile to the user to receive the jobs)
 
 site = 'Journey'
 

@@ -6,12 +6,12 @@
    <elementGuidId>c5cee0a9-f4ef-4f9c-a91b-187610974cd9</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//a[contains(@href, 'https://missionworks.global/careers/')]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77198 > a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[3]/ul/li[4]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>fdf67cad-949e-4d46-bf39-971b776faf2e</webElementGuid>
+      <webElementGuid>31a80d62-9096-478f-9f1d-49fd23322255</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/careers/</value>
-      <webElementGuid>733f7995-5184-4aec-82be-467d34190cfc</webElementGuid>
+      <webElementGuid>f5319e5c-277b-4c49-8242-ffadf6befc52</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-sub-item</value>
-      <webElementGuid>d4483717-75ba-4dfb-ae01-11fdfc36e0e1</webElementGuid>
+      <webElementGuid>ad0184e7-8b23-4df4-8654-dc197fae20d5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Careers</value>
-      <webElementGuid>41c2760b-cd65-4d80-b39c-bf6d02d0d139</webElementGuid>
+      <webElementGuid>6db5b2cc-ea91-49c3-9324-b09001fcf5bb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sm-17799204692768289-6&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77198&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
-      <webElementGuid>2304f636-8833-4470-af7f-4c543f158cd0</webElementGuid>
+      <webElementGuid>80d87634-4474-40e6-a026-7a2771ef52e0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='sm-17799204692768289-6']/li[3]/a</value>
-      <webElementGuid>35577cdc-24ff-43bf-82e1-175bacaa937b</webElementGuid>
+      <webElementGuid>97af3633-b4cf-40c5-b848-b3fb2915e887</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Careers')]</value>
-      <webElementGuid>7ac715c9-7f23-4f78-aa75-5e4d6f427d6f</webElementGuid>
+      <webElementGuid>4adb8849-0d8a-4825-aa08-a87ef5bfa3c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Team and Board'])[1]/following::a[1]</value>
-      <webElementGuid>9ab6b127-3779-48de-a944-fb9caf2786f7</webElementGuid>
+      <webElementGuid>4ab167da-008e-444e-b6b4-716e6ec58501</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[1]/following::a[2]</value>
-      <webElementGuid>5e09af6c-244c-4cd1-b63f-1bf5772756b3</webElementGuid>
+      <webElementGuid>2806859f-adc2-4e47-ba2d-aba79ea0f0d7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[1]/preceding::a[1]</value>
-      <webElementGuid>4823054a-d9f6-4103-bfbc-6bd90d71307f</webElementGuid>
+      <webElementGuid>0e25698a-51cb-4ef7-a005-cc265d24127b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[1]/preceding::a[2]</value>
-      <webElementGuid>af817d1e-93a2-4576-9827-a5a094e36838</webElementGuid>
+      <webElementGuid>95a9028a-3020-492b-8014-ac01b9c54ffa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Careers']/parent::*</value>
-      <webElementGuid>d3b0afb3-1fa8-4d16-a596-fda6dd7f2bd9</webElementGuid>
+      <webElementGuid>9a4b8dcd-e2eb-4c71-a6cb-a3f251a511e3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.global/careers/')]</value>
-      <webElementGuid>0896e18a-b30b-43ad-85a4-65862683b084</webElementGuid>
+      <webElementGuid>9ebb188b-faad-4a5d-96ac-946896b5a8aa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[3]/ul/li[3]/a</value>
-      <webElementGuid>97dc31b0-e453-4d4a-a632-048d9951dd4b</webElementGuid>
+      <webElementGuid>e41812b0-588d-46ea-bb35-e21dc7d121b1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/careers/' and (text() = 'Careers' or . = 'Careers')]</value>
-      <webElementGuid>2601beb0-80a0-42b7-866d-51d69b68f1d7</webElementGuid>
+      <webElementGuid>cb284d23-143e-4c65-9a02-9ac835605d32</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

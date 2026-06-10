@@ -24,7 +24,7 @@ import javax.swing.*;
 import groovy.io.FileType
 import com.kms.katalon.core.util.KeywordUtil
 
-ignore2026 = true //ignore if the last login was in 2026
+ignore2026 = false //ignore if the last login was in 2026
 
 type = 'All'  // All or Errors
 
@@ -154,7 +154,21 @@ commonKeys.sort()
 
 runDate = now.format("MM/dd/YY")
 
-thenDate = then.format("MM/dd/YY")
+thenFileName = thenFile.getName()
+
+allIndex = thenFileName.indexOf('All')
+
+thenYY = thenFileName.substring(allIndex + 4, allIndex + 6)
+
+thenMM = thenFileName.substring(allIndex + 7, allIndex + 9)
+
+thenDD = thenFileName.substring(allIndex + 10, allIndex + 12)
+
+thenDate = thenMM + '/' + thenDD + '/' + thenYY
+
+println(thenDate)
+
+//thenDate = then.format("MM/dd/YY")
 
 outFile = new File(filePath + 'Candidate Expiration Date Changes_' + today + '.csv')
 
@@ -174,7 +188,8 @@ if(!logFile.exists()) {
 	logFile.append('\n')
 }
 
-commonKeys.each {
+//commonKeys.each {
+for(it in commonKeys) {
 	oldValues = oldMap.get(it)
 	
 	newValues = newMap.get(it)
@@ -182,8 +197,11 @@ commonKeys.each {
 	if(oldValues != newValues) {
 		
 		if(oldValues[5] != newValues[5]) {
+			println(newValues)
+			println(newValues[4])
 			
 			if(!ignore2026 || newValues[4].substring(1,5) != '2026') {
+				
 		
 				println(runDate + ',' + it + ',' + oldValues.join(','))
 				outFile.append(thenDate + ',' + it + ',' + oldValues.join(',') + '\n')

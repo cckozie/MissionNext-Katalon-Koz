@@ -93,6 +93,8 @@ for (def site : sites) {
     //    WebUI.delay(1)
     //    WebUI.click(findTestObject('Object Repository/Admin/Ad User Viewer Utility/button_Search'))
     WebUI.waitForPageLoad(60)
+	
+	WebUI.delay(5)
 
     WebDriver driver = DriverFactory.getWebDriver()
 

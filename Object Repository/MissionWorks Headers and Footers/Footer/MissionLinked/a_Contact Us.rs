@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//ul[@id='menu-1-39c70e2']/li[6]/a</value>
+         <value>/html/body/footer/section[2]/div/div/div/div/div/nav[1]/ul/li[6]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>2ec213ac-11a8-45a5-b268-b8488877292c</webElementGuid>
+      <webElementGuid>edc7b261-f160-4976-8df9-1d742db79631</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/contact-us/</value>
-      <webElementGuid>7098ce36-a2e7-45d7-9ffc-7559bb0661e0</webElementGuid>
+      <webElementGuid>35b09de7-5dbf-410f-ada4-eeaaaceef24a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-item</value>
-      <webElementGuid>3e22dc36-c396-47cc-af9a-8d4b019b2f95</webElementGuid>
+      <webElementGuid>211a6187-393c-4c9e-a1a7-9c12339aa858</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Contact-Us</value>
-      <webElementGuid>b15dfd86-aad6-4c6c-a80a-2386fdc2648d</webElementGuid>
+      <webElementGuid>f40bf8de-45e9-4b2e-8e54-646311eee60d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu-1-39c70e2&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-3677&quot;]/a[@class=&quot;elementor-item&quot;]</value>
-      <webElementGuid>ac067833-5580-4222-a379-e73daf109c14</webElementGuid>
+      <webElementGuid>25d91bc8-8225-407b-98a1-2e41949a357e</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='menu-1-39c70e2']/li[6]/a</value>
-      <webElementGuid>929ff6ac-952b-40f7-b189-11e31605030a</webElementGuid>
+      <webElementGuid>204d7d64-e74a-41e0-b022-8098c0bb2285</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Contact-Us')]</value>
-      <webElementGuid>e23ef592-dd1c-45dc-be4f-48ddc5680645</webElementGuid>
+      <webElementGuid>d6819de2-4ad6-40ba-a9e2-e1ddf6e0aae0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[3]/following::a[1]</value>
-      <webElementGuid>ba086072-4922-439f-919e-e3d36252af09</webElementGuid>
+      <webElementGuid>c2f269fb-b140-45ba-a4f8-6cd8c19440ea</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/following::a[2]</value>
-      <webElementGuid>d93e8ac9-5e4b-45d5-92a0-082244b9986e</webElementGuid>
+      <webElementGuid>f2a43ad5-830f-4b14-a563-f231b6d42312</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[4]/preceding::a[1]</value>
-      <webElementGuid>71b70e11-20bf-4640-af32-787b27100ed4</webElementGuid>
+      <webElementGuid>509bb853-0c3b-433b-84ce-9664277880a5</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[2]/preceding::a[2]</value>
-      <webElementGuid>78a60b83-ab0a-4e26-b059-806d69c8a10d</webElementGuid>
+      <webElementGuid>1f00dd4d-c3d3-49bd-9b82-1c78da107f75</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Contact-Us']/parent::*</value>
-      <webElementGuid>f1b6fbf0-72ad-484e-8803-aa98716e42ee</webElementGuid>
+      <webElementGuid>ab9351b7-6166-47d0-ac07-2d53fd1e6264</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>(//a[contains(@href, 'https://missionworks.global/contact-us/')])[3]</value>
-      <webElementGuid>19a7088f-b236-431b-82e8-e4ee2add92b9</webElementGuid>
+      <webElementGuid>f7fdc77b-111f-462b-9d67-5c5c65846f76</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[6]/a</value>
-      <webElementGuid>9bcf40e7-83c1-47d1-8505-2b53664a987a</webElementGuid>
+      <webElementGuid>da0384f4-4f1e-4fd1-911c-c34956305dab</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/contact-us/' and (text() = 'Contact-Us' or . = 'Contact-Us')]</value>
-      <webElementGuid>bebdbaf3-06a7-4f3c-ab1d-b32d4715c546</webElementGuid>
+      <webElementGuid>01b8909a-a53c-4ccf-b01b-d7d2e47dd7ed</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

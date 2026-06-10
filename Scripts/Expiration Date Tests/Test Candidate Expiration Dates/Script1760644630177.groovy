@@ -24,7 +24,7 @@ import java.io.File as File
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-runCompare = true
+runCompare = false
 
 errorsOnly = false
 
@@ -108,13 +108,13 @@ for (def site : sites) {
 
         userID = Columns.get(1).getText()
 
-        lastName = Columns.get(3).getText()
+        lastName = Columns.get(4).getText()
 
-        firstName = Columns.get(4).getText()
+        firstName = Columns.get(5).getText()
 
-        username = Columns.get(11).getText()
+        username = Columns.get(12).getText()
 
-        email = Columns.get(12).getText()
+        email = Columns.get(13).getText()
 
         values = [username, firstName, lastName, email]
 
@@ -168,7 +168,7 @@ for (def site : sites) {
 
             firstName = (values[1])
 
-            lastName = (values[2])
+            lastName = (values[2])	//.replace(',', '-')
 
             email = (values[3])
 

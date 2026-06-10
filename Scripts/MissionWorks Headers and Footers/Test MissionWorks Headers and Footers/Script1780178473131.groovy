@@ -39,20 +39,28 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 	'MissionLinked' : 'https://missionlinked.global/']
 
 //sites = ['MissionNext' : "https://missionnext.org/", 'MissionLinked' : 'https://missionlinked.global/']
-sites = ['MissionLinked' : 'https://missionlinked.global/']
+//sites = ['MissionLinked' : 'https://missionlinked.global/']
+//sites = [ "QuickStart" : "https://quickstart.missionnext.org/quickstart-home/login-here"]
+//sites = ["Education" : "https://education.missionnext.org/education-home/login-here"]
+
+if(sites.size() == 1) {
+	fileNameAdd = '-' + sites.keySet().first()
+} else {
+	fileNameAdd = ''
+}
 
 footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
 	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true], "a_Sign Up" : ["verify", "Email Subscription", true],
 	  "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true], "i_Facebook" : ["link", "MissionWorks | Facebook", false], 
 	  "i_Instagram" : ["link", "MissionWorks (@missionworksglobal) • Instagram photos and videos",false], "img_ECFA" : ["", "", false], "img_Gold Transparency" : ["", "", false],
-	  "p_Copyright  2024-2026 MissionWorks" : ["text", "Copyright © 2024-2026 MissionWorks", false], 
+	  "p_Copyright  2024-2026 MissionWorks" : ["text", "Copyright © 2024-2026 MissionWorks – All rights reserved.", false], 
 	  "span_Address" : ["text", "1400 NE 136th Ave, Vancouver, WA 98684", false], "span_Email" : ["text", "Info@MissionWorks.global", false], "span_Phone" : ["text", "503.360.1865", false]]
 
 //footerElements = ["a_Careers - Copy" : ["link", "Careers – MissionWorks", true]]
 
-outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '.txt')
+outFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + '.txt')
 
-errorFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + '-ERRORS.txt')
+errorFile = new File(GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + '-ERRORS.txt')
 
 GlobalVariable.outFile = outFile
 
@@ -61,15 +69,13 @@ outFile.write(myTestCase + ' on ' + domain + '.\n')
 errorFlag = false
 
 for(site in sites) {
-	
-//	WebUI.openBrowser('https://missionlinked.global/')
-/*
+
 	retValue = WebUI.callTestCase(findTestCase('MissionWorks Headers and Footers/Functions/Connecting Menu'), [('varSite') : site.key, ('varUrl') : site.value], FailureHandling.OPTIONAL)
 	
 	if(retValue) {
 		errorFlag = true
 	}
-*/
+
 	retValue = WebUI.callTestCase(findTestCase('MissionWorks Headers and Footers/Functions/Equipping Menu'), [('varSite') : site.key, ('varUrl') : site.value], FailureHandling.OPTIONAL)
 	
 	if(retValue) {
@@ -81,11 +87,11 @@ for(site in sites) {
 	if(retValue) {
 		errorFlag = true
 	}
-	
+
 	testMWLogo(site.key)
 	
 	testDonate(site.key)
-	
+
 	testFooter(site.key)
 
 }
@@ -138,6 +144,8 @@ def testDonate(site) {
 	WebUI.click(findTestObject('Object Repository/MissionWorks Headers and Footers/a_Donate'))
 	
 	WebUI.waitForPageLoad(20)
+	
+	WebUI.delay(5)
 	
 	title = WebUI.getWindowTitle()
 	

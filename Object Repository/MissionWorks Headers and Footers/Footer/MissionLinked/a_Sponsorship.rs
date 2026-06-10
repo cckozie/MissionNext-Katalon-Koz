@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//ul[@id='menu-1-39c70e2']/li[2]/a</value>
+         <value>/html/body/footer/section[2]/div/div/div/div/div/nav[1]/ul/li[2]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>3ba6ee49-b697-43f6-a3cf-bf7258172f73</webElementGuid>
+      <webElementGuid>06e179ab-4a3b-4feb-aaa4-3ee1b301da64</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/sponsorship/</value>
-      <webElementGuid>695357f8-005a-47e5-84cc-e8988e58623d</webElementGuid>
+      <webElementGuid>b7ccdb26-4d1c-4614-b99e-29ccd747ab81</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-item</value>
-      <webElementGuid>696eae72-33ae-4175-9dbe-481d8c1b7ce5</webElementGuid>
+      <webElementGuid>59fb8998-8c56-4b54-bb48-9bdd914e978f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Sponsorship</value>
-      <webElementGuid>9a35f9a2-2594-4a3b-8034-2b28d2b639b1</webElementGuid>
+      <webElementGuid>73bfd808-2ff8-4065-a803-d501bbfb9cfb</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu-1-39c70e2&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-3673&quot;]/a[@class=&quot;elementor-item&quot;]</value>
-      <webElementGuid>d3628940-6169-4696-9090-0014a62449ca</webElementGuid>
+      <webElementGuid>57dfe1f4-4a42-4e52-a42c-71abc9e6a7da</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='menu-1-39c70e2']/li[2]/a</value>
-      <webElementGuid>78ea71ca-9a2c-45b7-ad61-70c437d05587</webElementGuid>
+      <webElementGuid>7e984007-fed3-408f-afd5-5108b165d488</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Sponsorship')]</value>
-      <webElementGuid>cc7c3a8d-a2a4-45b5-a94c-17a44042b83d</webElementGuid>
+      <webElementGuid>4baed7e0-3fd5-42fc-8d33-7e58deed96f8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[3]/following::a[1]</value>
-      <webElementGuid>7ff5b80c-65d7-4586-8f13-5c0737fc71fa</webElementGuid>
+      <webElementGuid>d6cd047d-b4c2-484b-a3b2-51e6ebdbfbe4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[3]/following::a[2]</value>
-      <webElementGuid>83502d8b-dbb5-4a3e-979e-877527b0c130</webElementGuid>
+      <webElementGuid>df268f58-491a-4418-ace4-62a4d1edfc0e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Up'])[4]/preceding::a[1]</value>
-      <webElementGuid>f4ccdead-686c-4a5b-9b85-19fa2f043a4b</webElementGuid>
+      <webElementGuid>74a827db-b029-40a8-986e-ac7f089707fa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/preceding::a[2]</value>
-      <webElementGuid>8c677323-b4f6-4334-916a-6abac6918cd9</webElementGuid>
+      <webElementGuid>5cd1340c-b8ef-4230-9968-8ce00519a9e4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Sponsorship']/parent::*</value>
-      <webElementGuid>59f4afd1-80f5-4bce-80c4-35f7d2839315</webElementGuid>
+      <webElementGuid>0536afeb-e80b-4350-b6fe-d9fe53f8da04</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.global/sponsorship/')]</value>
-      <webElementGuid>8efd6596-cfbb-402c-9b2a-a306d728a580</webElementGuid>
+      <webElementGuid>bd17404f-e858-41d1-8a2c-f479739bf9a8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//section[2]/div/div/div/div/div/nav/ul/li[2]/a</value>
-      <webElementGuid>e1aaa12b-d121-4663-a029-ae5d723717a4</webElementGuid>
+      <webElementGuid>21816199-11b7-4635-bcbd-65093ccf651d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/sponsorship/' and (text() = 'Sponsorship' or . = 'Sponsorship')]</value>
-      <webElementGuid>51030b2f-1215-4d41-ad08-de70e58c722f</webElementGuid>
+      <webElementGuid>01053c8d-324a-4577-a22c-5dd2513a5ba5</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

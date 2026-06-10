@@ -3,15 +3,15 @@
    <description></description>
    <name>span_About Us sub-arrow</name>
    <tag></tag>
-   <elementGuidId>34528cbe-4776-4adc-b155-174eec739cdd</elementGuidId>
+   <elementGuidId>12bb22ee-b50f-4104-9360-5013056cebee</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionExcellence'])[1]/following::span[1]</value>
+         <key>CSS</key>
+         <value>#sm-17803315017047957-5 > span.sub-arrow</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#sm-17799204692768289-5 > span.sub-arrow</value>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[3]/a/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>3796e0a2-26b7-4b54-a6a7-cbf5319cf462</webElementGuid>
+      <webElementGuid>0dcce379-4f4e-4919-8007-6362d5cd8894</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,23 +31,23 @@
       <name>class</name>
       <type>Main</type>
       <value>sub-arrow</value>
-      <webElementGuid>162bfdd8-5e57-4b39-9e3e-b9bd539d63bf</webElementGuid>
+      <webElementGuid>b13b2a9b-06cd-44e0-9a04-4579945cf73d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;sm-17799204692768289-5&quot;)/span[@class=&quot;sub-arrow&quot;]</value>
-      <webElementGuid>1c8dd470-c548-4be7-a0e1-e2d3241d4c44</webElementGuid>
+      <value>id(&quot;sm-17803315017047957-5&quot;)/span[@class=&quot;sub-arrow&quot;]</value>
+      <webElementGuid>b990e378-61a9-43ec-9f4a-c84eaa60f4c8</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//a[@id='sm-17799204692768289-5']/span</value>
-      <webElementGuid>8c621a6e-8de5-42d5-b1c9-46e8bf397459</webElementGuid>
+      <value>//a[@id='sm-17803315017047957-5']/span</value>
+      <webElementGuid>8742435a-0cfb-4299-b2e8-ddd18852684d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[1]//span[1]</value>
-      <webElementGuid>f056d838-50d5-4296-8d94-1c4eaaeadc4b</webElementGuid>
+      <webElementGuid>1de90111-7aba-4fca-bde8-e657eeae5d6c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionExcellence'])[1]/following::span[1]</value>
-      <webElementGuid>1395fa18-bd3c-4e3e-a05a-f11a10099100</webElementGuid>
+      <webElementGuid>6f2e0d17-eb42-4859-8482-1f128ea6af49</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[2]/preceding::span[1]</value>
+      <webElementGuid>845cad5b-7800-4e18-ae1d-399530b440bd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,15 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[1]/preceding::span[1]</value>
-      <webElementGuid>1f02b3d7-05dd-46a0-a2a6-1b7a3483eb29</webElementGuid>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Team and Board'])[1]/preceding::span[1]</value>
-      <webElementGuid>5329b8de-6ece-4d85-8ffd-476e42731676</webElementGuid>
+      <webElementGuid>fab7a08f-03c5-4876-9b1e-a9256a23246e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,6 +87,6 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[3]/a/span</value>
-      <webElementGuid>0740f5fe-2376-4fa0-a57f-7d7839523eb3</webElementGuid>
+      <webElementGuid>fd272f28-6acb-42d9-8cdc-f8f48fd06e98</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

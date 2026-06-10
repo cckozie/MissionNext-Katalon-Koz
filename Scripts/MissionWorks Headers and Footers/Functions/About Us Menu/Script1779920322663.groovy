@@ -33,7 +33,8 @@ menuOptions = ['About Us', 'About Us', 'Statement of Faith', 'Team and Board','C
 
 pageTitles = ['About Us /Bakery Builder – MissionWorks', 'About Us /Bakery Builder – MissionWorks', 'Statement of Faith – MissionWorks', 'Team and Board – MissionWorks', 'Careers – MissionWorks', 'Contact Us – MissionWorks']
 
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : 'QuickStart/']
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : 'QuickStart/', 'MissionLinked' : 'MissionLinked/']
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'MissionLinked' : 'MissionLinked/']
 
 folderBase = 'MissionWorks Headers and Footers/Functions/About Us/'
 
@@ -65,10 +66,11 @@ index = 0
 for(option in menuOptions) {
 	
 	WebUI.navigateToUrl(url)
-	
-	WebUI.waitForPageLoad(30)
-	
-	WebUI.delay(1)
+		
+	if(site == 'MissionLinked') {
+		WebUI.mouseOver(findTestObject('Object Repository/MissionWorks Headers and Footers/img_MissionWorks logo'))
+		WebUI.delay(2)
+	}
 	
 	if(option == 'About Us' && aboutUsCount == 1) {
 
@@ -117,15 +119,24 @@ for(option in menuOptions) {
 			}
 		}
 		
-		title = WebUI.getWindowTitle()
+		for(attemps = 1; attemps <= 2; attemps++) {
 		
-		println(title)
-		
-		if(title != pageTitles[index]) {
-			outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles[index] + '"\n')
-			errorFlag = true
+			title = WebUI.getWindowTitle()
+			
+			println(title)
+			
+			if(title != pageTitles[index]) {
+				if(attemps == 1) {
+					outFile.append('----- RETRYING option "' + option+ '"\n')
+					WebUI.delay(2)
+					WebUI.click(findTestObject(objectFolder + 'a_' + option))
+					WebUI.delay(2)
+				} else {
+					outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles[index] + '"\n')
+					errorFlag = true
+				}
+			}
 		}
-
 	} else {
 		outFile.append('#### ERROR: Unable to click on menu down arrow.\n')
 		errorFlag = true

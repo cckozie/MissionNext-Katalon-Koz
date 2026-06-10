@@ -6,12 +6,12 @@
    <elementGuidId>00b79658-4c20-4d65-898f-9024719d0c9e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*/text()[normalize-space(.)='Coaching']/parent::*</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77191 > a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[2]/ul/li[1]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>486f5072-ab30-4ffc-befb-5decf3919bfd</webElementGuid>
+      <webElementGuid>efc0f0a1-ed76-43ac-9df1-166ed0c68ad5</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionnext.org/homepage/goer/resources-for-goers/journey-guides/</value>
-      <webElementGuid>adfe67d9-aed4-4e91-a5f8-8a4fbdcb0bec</webElementGuid>
+      <webElementGuid>4e16f951-68f3-4a13-ae18-2d796d14d2f1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-sub-item</value>
-      <webElementGuid>01989afb-6ce9-416b-a12e-6f65e5d6c245</webElementGuid>
+      <webElementGuid>7d760243-e482-4305-abfb-93191ee690b9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Coaching</value>
-      <webElementGuid>f3750789-54e9-45f3-b3d4-1eea62628240</webElementGuid>
+      <webElementGuid>0935effb-2fe8-4d10-a60c-d89334c8e390</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sm-1779905485692575-4&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77191&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
-      <webElementGuid>8f1dd09d-95dd-47f7-9fd0-a6c7c5ba2eff</webElementGuid>
+      <webElementGuid>ae27b2df-ef47-4fae-b3b8-ce4820619578</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='sm-1779905485692575-4']/li/a</value>
-      <webElementGuid>3bbefd4c-3aa6-4f2d-b5cf-a325595edf1f</webElementGuid>
+      <webElementGuid>3f8e3d21-e06e-410f-aed6-23b3b33b4fef</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Coaching')]</value>
-      <webElementGuid>7f82b8c4-251a-488f-aa81-80c6815397f0</webElementGuid>
+      <webElementGuid>6fe02033-af42-4db9-a6d7-a0bba6c87ee7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionGuide'])[1]/following::a[2]</value>
-      <webElementGuid>c045837d-a595-4139-ad78-0057a2600e1c</webElementGuid>
+      <webElementGuid>f6fd682b-5dbb-4a45-abac-95ac34491066</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MIssionNext'])[1]/following::a[3]</value>
-      <webElementGuid>b6d37761-7458-4b40-ba68-893818b6ae2a</webElementGuid>
+      <webElementGuid>b939ef16-232d-4c4d-bf67-21fc414dee10</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionLinked'])[1]/preceding::a[1]</value>
-      <webElementGuid>97631739-5069-44e3-b327-f4671e55a161</webElementGuid>
+      <webElementGuid>df16bf8b-0d78-4a07-83d3-cf76528d70f2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionArmor'])[1]/preceding::a[2]</value>
-      <webElementGuid>71fc45a5-250b-49f0-b07f-37debd98f454</webElementGuid>
+      <webElementGuid>81663eb4-d95b-417d-8a08-4edb7f49dd2f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Coaching']/parent::*</value>
-      <webElementGuid>367b5775-6fda-4762-b7ab-6403e9f88e05</webElementGuid>
+      <webElementGuid>58b7ff21-11f5-405d-99f1-646fa067edfa</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionnext.org/homepage/goer/resources-for-goers/journey-guides/')]</value>
-      <webElementGuid>4a4c3d79-d3f4-44d4-ae75-c7fe96d6d15b</webElementGuid>
+      <webElementGuid>4200b61c-b3fa-49d9-a36b-44957fc8947f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[2]/ul/li/a</value>
-      <webElementGuid>a6582448-5b85-4c21-b19c-addff581130e</webElementGuid>
+      <webElementGuid>7bf007f6-7f5d-4383-8d92-98d3eed023e9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionnext.org/homepage/goer/resources-for-goers/journey-guides/' and (text() = 'Coaching' or . = 'Coaching')]</value>
-      <webElementGuid>0a978cee-6625-497d-9bc0-b607969869ad</webElementGuid>
+      <webElementGuid>bde80c97-6ab9-41f1-bd84-d1f4e6b00ca1</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

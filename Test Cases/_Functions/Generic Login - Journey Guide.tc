@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Generic Login - Journey Guide</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>a020838d-3e43-4eb8-bb80-b57fba572003</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>12514170-2be6-4ba4-85cd-69d3882dad67</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>12514170-2be6-4ba4-85cd-69d3882dad67</id>
+      <masked>false</masked>
+      <name>varProfile</name>
+   </variable>
+</TestCaseEntity>

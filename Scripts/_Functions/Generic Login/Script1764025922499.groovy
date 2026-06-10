@@ -61,11 +61,22 @@ if(GlobalVariable.mobileScreen) {
 	WebUI.delay(1)
 }
 
-WebUI.navigateToUrl('https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/')
+if(site == 'Journey Guide') {
+	url = 'https://jg.'  + GlobalVariable.domain + '/journey-guide-home/login-here/'
+	repository = 'Object Repository/Journey Guide/'
+} else { 
+	url = 'https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/'
+	repository = 'Object Repository/' + site + ' Candidate Profile/Login/'
+}
 
-WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), username)
+//WebUI.navigateToUrl('https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/')
+WebUI.navigateToUrl(url)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Password'), password)
+//WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), username)
+WebUI.setText(findTestObject(repository + 'input_Username'), username)
 
-WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/button_Log In'))
+//WebUI.setEncryptedText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Password'), password)
+WebUI.setEncryptedText(findTestObject(repository + '/input_Password'), password)
+
+WebUI.click(findTestObject(repository + '/button_Log In'))
 

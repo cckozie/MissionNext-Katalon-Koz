@@ -6,12 +6,12 @@
    <elementGuidId>a5c943ef-bc97-43a4-811a-6e9d9ec97cec</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*/text()[normalize-space(.)='MissionGuide']/parent::*</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77189 > a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[1]/ul/li[3]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>1aef810a-1352-4464-96d3-5bd00ede9a52</webElementGuid>
+      <webElementGuid>496d186d-5429-423b-be3a-b80823d84c0f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionguide.global/</value>
-      <webElementGuid>e603189e-4598-41d2-a65f-320262bfc0ea</webElementGuid>
+      <webElementGuid>82856103-530a-4290-adc3-4e1594d79e85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-sub-item</value>
-      <webElementGuid>681dc282-ac6d-4d96-8a7b-100fb8585485</webElementGuid>
+      <webElementGuid>588f9b20-8a88-473a-80e4-3f95276a90f0</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>MissionGuide</value>
-      <webElementGuid>9f7c5c38-3e14-401e-9199-c8438f326d30</webElementGuid>
+      <webElementGuid>b40fc53c-83a4-472e-8c90-0b40d0751a9f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sm-17799005530152898-2&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77189&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
-      <webElementGuid>bd48775f-ef7e-4082-b5cc-2dedf64f2ccf</webElementGuid>
+      <webElementGuid>32795813-ce37-4a19-97fd-6c9dc6987e7d</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='sm-17799005530152898-2']/li[3]/a</value>
-      <webElementGuid>19876720-e4a2-41b1-8505-77ba1b0f10f7</webElementGuid>
+      <webElementGuid>12d4111f-bb31-4b44-97d9-fbfe68b978c7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'MissionGuide')]</value>
-      <webElementGuid>e5c097fd-7a60-4e81-b41a-06b430e45255</webElementGuid>
+      <webElementGuid>29871207-4fb2-44a4-b242-9961baf8cb26</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MIssionNext'])[1]/following::a[1]</value>
-      <webElementGuid>c64aaca1-b2ce-4735-9172-bd254bfb316f</webElementGuid>
+      <webElementGuid>26f2ed72-9c95-4dda-93d4-8818659b3e28</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionConnexion'])[1]/following::a[2]</value>
-      <webElementGuid>c7e7c613-ac75-4a01-a999-86a7469d85fc</webElementGuid>
+      <webElementGuid>c5120d75-e32d-4fdd-b492-bad3e8b566f4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Coaching'])[1]/preceding::a[2]</value>
-      <webElementGuid>97b57a61-de24-4205-accb-5e7bfb977250</webElementGuid>
+      <webElementGuid>657bfef2-b363-4696-8d57-c877e17fa32c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionLinked'])[1]/preceding::a[3]</value>
-      <webElementGuid>c441f62d-6ef5-456f-8c27-9070ecc8d6be</webElementGuid>
+      <webElementGuid>aaeacdde-e439-4748-8787-ddd3d98e8559</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='MissionGuide']/parent::*</value>
-      <webElementGuid>7428fa17-3fcd-4304-a78e-27dbca3e0c2d</webElementGuid>
+      <webElementGuid>7a636422-5c81-4435-a021-85aa0a24f336</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionguide.global/')]</value>
-      <webElementGuid>46242088-7564-47cc-bb28-8e20295de912</webElementGuid>
+      <webElementGuid>55e8b75d-7c2c-4be1-b9fb-e6e8ec6fa1d3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[3]/a</value>
-      <webElementGuid>175ca063-909e-440d-a6b8-92a733dda2ef</webElementGuid>
+      <webElementGuid>4bea2c7a-3bc3-4c49-869d-231fdcfc91c9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionguide.global/' and (text() = 'MissionGuide' or . = 'MissionGuide')]</value>
-      <webElementGuid>78a467b8-a29f-4590-98e2-60b5fc6b6b76</webElementGuid>
+      <webElementGuid>ffadef96-8fde-4443-baf9-c2fc7256dffb</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

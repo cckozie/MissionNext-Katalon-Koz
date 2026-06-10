@@ -6,12 +6,12 @@
    <elementGuidId>57174f49-a394-405c-b42f-da129257f681</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*/text()[normalize-space(.)='MissionArmor']/parent::*</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77193 > a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[1]/ul/li[2]/ul/li[3]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>b784f4a2-67bc-4a47-a952-3edfdd5f2bcf</webElementGuid>
+      <webElementGuid>4f482bb0-893c-4f89-a9d8-ed87124e933f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/missionarmor/</value>
-      <webElementGuid>da6fc888-6067-4036-9fff-20e84a7cad8e</webElementGuid>
+      <webElementGuid>784ebba0-49e0-47e1-ae25-f736c595df9e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-sub-item</value>
-      <webElementGuid>b0306651-df41-40b9-bd4a-35e055c8a696</webElementGuid>
+      <webElementGuid>dacc45f1-d6c8-4c26-a821-f15699b7ebef</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>MissionArmor</value>
-      <webElementGuid>774f1886-ae23-46ad-8e78-9bdbbb4267be</webElementGuid>
+      <webElementGuid>0c9dd4e6-2296-46b6-9191-bf718876f83b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sm-1779905485692575-4&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77193&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
-      <webElementGuid>414524fa-e49e-4de4-ad06-ff20fb511aae</webElementGuid>
+      <webElementGuid>17bb738f-a16e-4769-965b-9f6e25bf7d6c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='sm-1779905485692575-4']/li[3]/a</value>
-      <webElementGuid>ce7e14e7-d175-4667-a908-1739283f710c</webElementGuid>
+      <webElementGuid>e29e4103-3622-4c81-a698-311a146e966c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'MissionArmor')]</value>
-      <webElementGuid>68aa00dc-189b-437e-a10f-113a06aefc6c</webElementGuid>
+      <webElementGuid>61b50f8b-76ec-4d35-afdb-2763f7b1d13a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionLinked'])[1]/following::a[1]</value>
-      <webElementGuid>1b4cf57f-1c67-417e-956c-9bd9ca26c981</webElementGuid>
+      <webElementGuid>1e81bd05-8518-4fa4-a4e7-a1b875b46c43</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Coaching'])[1]/following::a[2]</value>
-      <webElementGuid>20741466-74bf-4bf1-95fb-50ca0f3a7634</webElementGuid>
+      <webElementGuid>1a288843-fa24-4cd4-9c6f-ad6526691361</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionExcellence'])[1]/preceding::a[1]</value>
-      <webElementGuid>70a73754-bc1c-416f-a246-74f4241ef502</webElementGuid>
+      <webElementGuid>e366499a-f76d-4afc-ad24-76be123afd09</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[1]/preceding::a[2]</value>
-      <webElementGuid>5009280f-5e99-4cfb-aa88-7794b6b7fbd1</webElementGuid>
+      <webElementGuid>78618765-22e7-47f1-8e41-5813f33eef48</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='MissionArmor']/parent::*</value>
-      <webElementGuid>bc588511-6216-4105-8658-cafb008e16da</webElementGuid>
+      <webElementGuid>c18ce5e6-6385-456e-92ba-89da44fcafc4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.global/missionarmor/')]</value>
-      <webElementGuid>9742341c-2012-439e-a708-9988ddcccc21</webElementGuid>
+      <webElementGuid>b5c74ee3-a96b-412c-b3c3-8f00f70f2275</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[2]/ul/li[3]/a</value>
-      <webElementGuid>19ac038e-345c-486c-a3d6-6b5adf34a419</webElementGuid>
+      <webElementGuid>25fb7581-92c9-4df7-a9b5-b343958ed2c2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/missionarmor/' and (text() = 'MissionArmor' or . = 'MissionArmor')]</value>
-      <webElementGuid>72e786c9-9fcd-4fcf-8388-1ccfef97cbb8</webElementGuid>
+      <webElementGuid>a34ccaf3-b9e3-46d6-aea7-a8bee9b1082a</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

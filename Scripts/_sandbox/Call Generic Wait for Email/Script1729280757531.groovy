@@ -17,14 +17,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-fromEmails = ['do_not_reply@info.missionnext.org', 'Chris.Kosieracki@missionnext.org']
+delete = false
 
-subjects = ['Candidate Profile for Taiwo Adejinmi from MissionNext','Candidate Profile for Taiwo Adejinmi from MissionNext']
+//delete = true
+
+GlobalVariable.emailWaitTime = 1
+
+if(delete) {
+	WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
+	System.exit(0)
+}
+//fromEmails = ['do_not_reply@info.missionnext.org', 'Chris.Kosieracki@missionnext.org']
+fromEmails = ['chris kosieracki <cktest17@missionnext.org']
+
+//subjects = ['Candidate Profile for Taiwo Adejinmi from MissionNext','Candidate Profile for Taiwo Adejinmi from MissionNext']
+subjects = ['Candidate Profile for PETER ATOYEBI from MissionNext']
 
 searchKeys = ['NA', 'NA', 'NA']
 
-WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : fromEmails,
+emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : fromEmails,
 	('varSubjectKey') : subjects, ('varSearchKey') : searchKeys], FailureHandling.STOP_ON_FAILURE)
+
+println(emailFound)
 
 //WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'do_not_reply@info.missionnext.org',
 //	('varSubjectKey') : 'Candidate Profile for Taiwo Adejinmi from MissionNext'], FailureHandling.STOP_ON_FAILURE)
