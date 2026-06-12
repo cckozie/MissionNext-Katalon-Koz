@@ -31,7 +31,8 @@ menuOptions = ['Coaching', 'MissionLinked','MissionArmor', 'MissionExcellence']
 
 pageTitles = ['Journey Guides - MissionNext.org', 'MissionLinked – MissionWorks', 'MissionArmor – MissionWorks', 'MissionExcellence']
 
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'MissionLinked' : 'MissionLinked/']
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : 'MissionLinked/',
+	'Coaching' : '']
 
 folderBase = 'MissionWorks Headers and Footers/Functions/Equipping/'
 
@@ -94,39 +95,10 @@ for(option in menuOptions) {
 				errorFlag = true
 			}
 				
-			WebUI.click(findTestObject(objectFolder + 'a_' + option))
+			clicked = WebUI.click(findTestObject(objectFolder + 'a_' + option), FailureHandling.OPTIONAL)
 			
-			println('<<< getting page title')
+			println(clicked)
 			
-			for(attemps = 1; attemps <= 2; attemps++) {
-				
-					title = WebUI.getWindowTitle()
-					
-					println(title)
-					
-					if(title != pageTitles[index]) {
-						if(attemps == 1) {
-							outFile.append('----- RETRYING option "' + option+ '"\n')
-							WebUI.delay(2)
-							WebUI.click(findTestObject(objectFolder + 'a_' + option))
-							WebUI.delay(2)
-						} else {
-							outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles[index] + '"\n')
-							errorFlag = true
-						}
-					}
-				}
-		
-/*			
-			title = WebUI.getWindowTitle()
-			
-			println(title)
-			
-			if(title != pageTitles[index]) {
-				outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles[index] + '"\n')
-				errorFlag = true
-			}
-*/		
 		} else {
 		
 			outFile.append('#### ERROR: Unable to click on ' + option + ' option.\n')

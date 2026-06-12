@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sleep for n Minutes</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>22dca267-7954-408f-a261-800cd9d2b9dd</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>10b535b1-c26a-4621-944c-74a009c0a036</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>1</defaultValue>
+      <description></description>
+      <id>10b535b1-c26a-4621-944c-74a009c0a036</id>
+      <masked>false</masked>
+      <name>varSleepMinutes</name>
+   </variable>
+</TestCaseEntity>

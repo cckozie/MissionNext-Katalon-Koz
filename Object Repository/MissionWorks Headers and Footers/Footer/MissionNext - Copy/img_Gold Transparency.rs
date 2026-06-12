@@ -3,7 +3,7 @@
    <description></description>
    <name>img_Gold Transparency</name>
    <tag></tag>
-   <elementGuidId>ea678dac-85d8-47a2-8c6c-0442fb91d62a</elementGuidId>
+   <elementGuidId>bc90d4ef-1673-48de-b6a1-905a6fb881ee</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[1]/img[1]</value>
+         <value>//section[5]/div/div[1]/div/div/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>15f253d5-e54a-4e73-9613-58c508b01fda</webElementGuid>
+      <webElementGuid>50536025-3568-4724-bc4f-075fb12f45c1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>width</name>
       <type>Main</type>
       <value>1024</value>
-      <webElementGuid>6b07a83a-fa51-4cd0-bfbe-cce6598a50da</webElementGuid>
+      <webElementGuid>374afdd8-fca2-4557-a774-c15485b8a1a1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>height</name>
       <type>Main</type>
       <value>1024</value>
-      <webElementGuid>a6edaf9c-31f6-433d-a653-fa53f6e41812</webElementGuid>
+      <webElementGuid>8cf2af13-c59e-4c83-b869-92c34debbf18</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://missionnext.org/wp-content/uploads/2026/05/gold-xPARENCY-1-1-1.svg</value>
-      <webElementGuid>9894d579-939f-43eb-b448-57554199c63c</webElementGuid>
+      <webElementGuid>8970862e-6831-41fb-a1a9-d4e42b794b07</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>class</name>
       <type>Main</type>
       <value>attachment-large size-large wp-image-77219</value>
-      <webElementGuid>4ed5b20a-9f17-41d2-8376-945c5aca6b26</webElementGuid>
+      <webElementGuid>f7b841e5-1a92-4c26-82aa-9f777f3750ca</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-34b18e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-747766a3&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-205f589b elementor-widget elementor-widget-image&quot;]/div[@class=&quot;elementor-widget-container&quot;]/img[@class=&quot;attachment-large size-large wp-image-77219&quot;]</value>
-      <webElementGuid>31d77055-832a-4bf3-a631-b24e5c8b2bea</webElementGuid>
+      <webElementGuid>da436fba-2a2f-42ec-998d-23114666133c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[contains(@src,'https://missionnext.org/wp-content/uploads/2026/05/gold-xPARENCY-1-1-1.svg')]</value>
-      <webElementGuid>cbf50cf1-4d07-433a-aa48-d6654e7185b2</webElementGuid>
+      <webElementGuid>7a183b3c-c33e-4179-8213-14706811b01d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//section[5]/div/div/div/div/div/img</value>
-      <webElementGuid>6510a8c7-17c4-4cbe-8a27-b4602de2e0de</webElementGuid>
+      <webElementGuid>aeecb95e-f6ff-4c2a-9327-8608840a4cd7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,6 +87,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://missionnext.org/wp-content/uploads/2026/05/gold-xPARENCY-1-1-1.svg']</value>
-      <webElementGuid>2c7df4c4-b798-4ffd-8d64-b1004ac57e7b</webElementGuid>
+      <webElementGuid>29b917f4-952d-426d-884c-3845355dbe56</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

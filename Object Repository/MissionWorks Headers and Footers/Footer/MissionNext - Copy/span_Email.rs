@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Phone</name>
+   <name>span_Email</name>
    <tag></tag>
-   <elementGuidId>4f8085da-4eba-4598-9af8-69dc1ecdca2a</elementGuidId>
+   <elementGuidId>fd530ab1-3f2c-4fab-8ed3-14569b889395</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>span.elementor-icon-list-text</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[1]/div[1]/a</value>
+         <value>//li[2]/span[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>97731304-b699-4537-ab24-f4b20e69be61</webElementGuid>
+      <webElementGuid>794b0940-07b5-40c3-9e3e-5e88d90f2b4f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,15 +30,15 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-icon-list-text</value>
-      <webElementGuid>d0b8573d-1ecd-46fa-8889-c5243f403b22</webElementGuid>
+      <webElementGuid>3937aa99-f797-4fb7-af76-e1535d136221</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>503.360.1865</value>
-      <webElementGuid>2645006e-039b-429f-9f53-8c3e76e1e60a</webElementGuid>
+      <value>Info@MissionWorks.global</value>
+      <webElementGuid>ab272d84-1ea4-447a-9b5e-d7a9b8dd16aa</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,62 +46,62 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-41fffe33 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67fe2c46&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-5aea4923 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
-      <webElementGuid>5a49edf4-30cd-44f5-ac04-01f8244b0ccc</webElementGuid>
+      <webElementGuid>70b10581-034e-45f8-b4f5-40bf4e58a8c2</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[4]/following::span[2]</value>
-      <webElementGuid>7fcee173-d980-4ac2-9aa9-1954458fa61a</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[4]/following::span[4]</value>
+      <webElementGuid>51b2e1bf-b1fb-4153-87c8-b75fc0340a26</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[6]/following::span[2]</value>
-      <webElementGuid>d3f3cba1-1a92-4360-9efd-fd07e84882e7</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[6]/following::span[4]</value>
+      <webElementGuid>fe6ff3f9-6756-4dc4-a059-0d70c596ce7a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Info@MissionWorks.global'])[1]/preceding::span[2]</value>
-      <webElementGuid>6889bd9c-5272-4451-8f4e-82a979ac8208</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[2]/preceding::span[3]</value>
+      <webElementGuid>331731bc-36ec-4c2c-9645-4759c23addff</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[2]/preceding::span[5]</value>
-      <webElementGuid>c8bb25c8-5045-412e-80cf-5b7794a49683</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[2]/preceding::span[5]</value>
+      <webElementGuid>1068cb49-d9b5-4a5b-b26b-20950fbc968b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='503.360.1865']/parent::*</value>
-      <webElementGuid>6ef577e6-682e-4dab-8498-7886663ae92f</webElementGuid>
+      <value>//*/text()[normalize-space(.)='Info@MissionWorks.global']/parent::*</value>
+      <webElementGuid>8df6aeee-77d6-43d2-8a33-2c74cf3f3733</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//li/span[2]</value>
-      <webElementGuid>24bfd3eb-20cd-410f-af33-fd678848c33d</webElementGuid>
+      <value>//li[2]/span[2]</value>
+      <webElementGuid>90b208e3-98da-4514-9b87-4ecbb37a5638</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//span[(text() = '503.360.1865' or . = '503.360.1865')]</value>
-      <webElementGuid>954f735c-8aad-4594-9ab5-7a4dce67d2e3</webElementGuid>
+      <value>//span[(text() = 'Info@MissionWorks.global' or . = 'Info@MissionWorks.global')]</value>
+      <webElementGuid>f73300a1-aa39-4a2e-9a1a-f4ef6f715868</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -36,6 +36,8 @@ now = new Date()
 
 today = now.format(varFormat)
 
+todayHHMM = now.format('YY-MM-dd.HH-mm')
+
 then = now - 1
 
 yesterday = then.format(varFormat)
@@ -183,7 +185,7 @@ println(then)
 //thenDate = then.format("MM/dd/YY")
 //thenDate = new Date().parse("MM/dd/YY", then)
 
-outFile = new File(filePath + 'Partner Expiration Date Changes_' + today + '.csv')
+outFile = new File(filePath + 'Partner Expiration Date Changes_' + todayHHMM + '.csv')
 
 outText = 'Run Date,User ID,Username,Email,Organization,Start,Expires,Last Login,Status,Days Remaining,Grace?'
 
@@ -238,11 +240,17 @@ for(it in commonKeys) {
 			
 			println(runDate + ',' + it + ',' + oldValues.join(','))
 			outFile.append(thenDate + ',' + it + ',' + oldValues.join(',') + '\n')
-			logFile.append(thenDate + ',' + it + ',' + oldValues.join(',') + '\n')
+			
+			if(varUpdateLogFile) {
+				logFile.append(thenDate + ',' + it + ',' + oldValues.join(',') + '\n')
+			}
 			
 			println(runDate + ',' + it + ',' + newValues.join(','))
 			outFile.append(runDate + ',' + it + ',' + newValues.join(',') + '\n')
-			logFile.append(runDate + ',' + it + ',' + newValues.join(',') + '\n')
+
+			if(varUpdateLogFile) {
+				logFile.append(runDate + ',' + it + ',' + newValues.join(',') + '\n')
+			}
 		}
 	}
 }
@@ -290,6 +298,8 @@ if(count == 0) {
 	WebUI.callTestCase(findTestCase('_Functions/Java Send Email'), [('varSubject'):subject, ('varText'):text], FailureHandling.STOP_ON_FAILURE)
 
 }
+
+WebUI.closeBrowser()
 
 def getKeyDates(username) {
 	

@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//li[2]/span[2]</value>
+         <value>/html/body/footer/div/div[1]/div[2]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +22,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>a335a2f2-9c0c-4132-9638-2a065d43130b</webElementGuid>
+      <webElementGuid>34672da9-1d39-4492-97c2-bd2cb66822e2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +30,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-icon-list-text</value>
-      <webElementGuid>fe54f2e5-e55e-4d68-bd7a-ab24987a5beb</webElementGuid>
+      <webElementGuid>b9f92aff-1360-485e-a1b0-e35ac22e16f2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +38,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Info@MissionWorks.global</value>
-      <webElementGuid>ab65e634-52cd-4091-a45e-4f0995e55a21</webElementGuid>
+      <webElementGuid>9e5b8a5d-e466-432c-b083-26d0cd76307f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-41fffe33 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67fe2c46&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-5aea4923 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
-      <webElementGuid>3bfaec4e-d264-4c92-9fdb-3ef278ae88ff</webElementGuid>
+      <webElementGuid>22eecdc0-acea-4251-ae35-48b435971477</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +54,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[4]/following::span[4]</value>
-      <webElementGuid>0f0614bb-9c2f-4876-b5f6-023d94e0268b</webElementGuid>
+      <webElementGuid>a9a6f825-304b-479e-b273-1a7dd0e3cfb3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +62,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[6]/following::span[4]</value>
-      <webElementGuid>3e7db0f8-8a51-4821-83ff-53e4a2e95776</webElementGuid>
+      <webElementGuid>3fabca0b-ad8c-4537-825f-ca518fa6a4e4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +70,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[2]/preceding::span[3]</value>
-      <webElementGuid>618e969a-7dd5-4fe8-84f3-c694e317bbd8</webElementGuid>
+      <webElementGuid>98f7a496-82c0-4b79-b8d8-c9bff56c70ac</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +78,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[2]/preceding::span[5]</value>
-      <webElementGuid>feb8729d-35cb-4dba-9c7b-4462e5b76b73</webElementGuid>
+      <webElementGuid>6d0817b7-8c2f-415f-a904-4a41bf636d06</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +86,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Info@MissionWorks.global']/parent::*</value>
-      <webElementGuid>1f91e5e2-040e-4960-a9b3-b04a83b45f58</webElementGuid>
+      <webElementGuid>39866173-27a0-4ba4-8957-a26fc6746527</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +94,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//li[2]/span[2]</value>
-      <webElementGuid>40cd501a-9ac0-4ffa-88b3-29fe22dd9454</webElementGuid>
+      <webElementGuid>f9b11a22-9c55-4674-b8b5-a4d32f977fa7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +102,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = 'Info@MissionWorks.global' or . = 'Info@MissionWorks.global')]</value>
-      <webElementGuid>65c89e4c-fab7-43d0-b7c8-81874c090589</webElementGuid>
+      <webElementGuid>e9ef707d-7573-4c84-bad1-107c98b778bc</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

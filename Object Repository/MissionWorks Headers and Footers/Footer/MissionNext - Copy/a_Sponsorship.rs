@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_Sign Up</name>
+   <name>a_Sponsorship</name>
    <tag></tag>
-   <elementGuidId>9c27f88b-6736-4fe8-b926-b909558cbab1</elementGuidId>
+   <elementGuidId>8d9a5a51-7c53-4032-a577-05031de3f90f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-69900 > a.elementor-item</value>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-69899 > a.elementor-item</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/nav/a[3]</value>
+         <value>//section[3]/div/div/div/div/div/nav[1]/ul/li[2]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,15 +23,15 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>d27227b3-c59d-4e1b-b235-21e218f6a282</webElementGuid>
+      <webElementGuid>7965300c-f5f2-4299-b5db-ba7772b515b7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>
-      <value>https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp</value>
-      <webElementGuid>2bff5708-bdee-4b45-83c4-cff015a2068e</webElementGuid>
+      <value>https://missionworks.global/sponsorship/</value>
+      <webElementGuid>c2bca8cd-5188-449d-bee8-8cfe61a2cc65</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,102 +39,102 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-item</value>
-      <webElementGuid>f1f938cf-f51c-4dfd-99c4-f461ebdacffc</webElementGuid>
+      <webElementGuid>1d586347-8f95-4070-820f-875b13de8156</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Sign Up</value>
-      <webElementGuid>e495ad3d-6533-4bc1-8d57-e691947ebf94</webElementGuid>
+      <value>Sponsorship</value>
+      <webElementGuid>7ac83d31-1a3a-4475-97ef-692c298d3c0c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;menu-1-3b026b09&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-69900&quot;]/a[@class=&quot;elementor-item&quot;]</value>
-      <webElementGuid>f843df94-5c23-4e4e-9bdd-d0b652e2b423</webElementGuid>
+      <value>id(&quot;menu-1-3b026b09&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-69899&quot;]/a[@class=&quot;elementor-item&quot;]</value>
+      <webElementGuid>52a38dfb-06bb-479f-85f2-32e281c39b55</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//ul[@id='menu-1-3b026b09']/li[3]/a</value>
-      <webElementGuid>4bc527f1-df53-46d9-8163-24f442389e15</webElementGuid>
+      <value>//ul[@id='menu-1-3b026b09']/li[2]/a</value>
+      <webElementGuid>c2fb5efc-2d6b-4cfd-9220-ae1d3ab62fc2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:link</name>
       <type>Main</type>
-      <value>//a[contains(text(),'Sign Up')]</value>
-      <webElementGuid>f1982fd4-69fa-4663-bc57-35c86f70fc2c</webElementGuid>
+      <value>//a[contains(text(),'Sponsorship')]</value>
+      <webElementGuid>05b568b5-817e-40c3-b21a-9ff7015baae8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[1]/following::a[1]</value>
-      <webElementGuid>c4dc3120-e225-421e-a21d-3e39ad087ffd</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[3]/following::a[1]</value>
+      <webElementGuid>1df119c0-fa0d-43dd-8db9-29fb4f8e8b58</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[3]/following::a[2]</value>
-      <webElementGuid>5d512cb2-bac1-4963-a3ed-10addbdbd9f9</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Linkedin'])[1]/following::a[3]</value>
+      <webElementGuid>e38b9667-8e09-4964-8244-cadf3ada3c60</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/preceding::a[1]</value>
-      <webElementGuid>905a108e-e149-4de5-9264-ff12fd3c99db</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Up'])[1]/preceding::a[1]</value>
+      <webElementGuid>29db821b-b6f5-4c53-aa6a-03885f350f1a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[5]/preceding::a[2]</value>
-      <webElementGuid>3fc1443b-6136-4b82-b6e8-02f2e7bb1eaf</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/preceding::a[2]</value>
+      <webElementGuid>e88c82a9-ee64-4ab7-a96f-ecadff872ec0</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Sign Up']/parent::*</value>
-      <webElementGuid>d6ae0ba1-5154-4d21-ad97-bbd15ae1da2f</webElementGuid>
+      <value>//*/text()[normalize-space(.)='Sponsorship']/parent::*</value>
+      <webElementGuid>af48f858-f5a4-4a8e-8829-0b7a38272b08</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>//a[contains(@href, 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp')]</value>
-      <webElementGuid>f8095e31-0f8b-4294-b910-d599e6cc9e3a</webElementGuid>
+      <value>//a[contains(@href, 'https://missionworks.global/sponsorship/')]</value>
+      <webElementGuid>9b87727f-9eb8-4a77-8d37-c7dc83cf9f7b</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//section[3]/div/div/div/div/div/nav/ul/li[3]/a</value>
-      <webElementGuid>3aa3a04b-aafa-4647-a6b4-bbd2bb081e62</webElementGuid>
+      <value>//section[3]/div/div/div/div/div/nav/ul/li[2]/a</value>
+      <webElementGuid>30120570-71ad-453b-b7b1-4a5e5fd002d2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:customAttributes</name>
       <type>Main</type>
-      <value>//a[@href = 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp' and (text() = 'Sign Up' or . = 'Sign Up')]</value>
-      <webElementGuid>250b7587-329b-434b-be3e-12a6fd604438</webElementGuid>
+      <value>//a[@href = 'https://missionworks.global/sponsorship/' and (text() = 'Sponsorship' or . = 'Sponsorship')]</value>
+      <webElementGuid>35eb8cd9-43ec-400b-9fbf-44cbee90cfd9</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

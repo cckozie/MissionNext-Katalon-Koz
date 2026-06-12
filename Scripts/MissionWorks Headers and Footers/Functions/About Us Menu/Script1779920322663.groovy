@@ -33,8 +33,8 @@ menuOptions = ['About Us', 'About Us', 'Statement of Faith', 'Team and Board','C
 
 pageTitles = ['About Us /Bakery Builder – MissionWorks', 'About Us /Bakery Builder – MissionWorks', 'Statement of Faith – MissionWorks', 'Team and Board – MissionWorks', 'Careers – MissionWorks', 'Contact Us – MissionWorks']
 
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : 'QuickStart/', 'MissionLinked' : 'MissionLinked/']
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'MissionLinked' : 'MissionLinked/']
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : 'MissionLinked/',
+	'Coaching' : '']
 
 folderBase = 'MissionWorks Headers and Footers/Functions/About Us/'
 

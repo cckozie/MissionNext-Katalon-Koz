@@ -3,7 +3,7 @@
    <description></description>
    <name>img_ECFA</name>
    <tag></tag>
-   <elementGuidId>90ed222b-df35-4dec-9fc3-65eb069325cc</elementGuidId>
+   <elementGuidId>24170ff2-95a2-4d3b-8dfc-1710fbf8c058</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[1]/img[2]</value>
+         <value>//section[5]/div/div[2]/div/div/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>cc7961d5-1253-45fd-9484-eeecfd8c0f42</webElementGuid>
+      <webElementGuid>b394b177-dd3c-43db-87d5-1c8ce2468717</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>width</name>
       <type>Main</type>
       <value>1024</value>
-      <webElementGuid>849a7155-1184-4556-94dd-9af8839266b2</webElementGuid>
+      <webElementGuid>fa302acb-e763-4673-aad9-f9cefe4d0321</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>height</name>
       <type>Main</type>
       <value>1024</value>
-      <webElementGuid>6831e8b4-6374-4b29-87a4-2b94bb050a5f</webElementGuid>
+      <webElementGuid>eb382dcc-6422-4a2d-a490-f69d21af559e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-1024x1024.png</value>
-      <webElementGuid>d06d25f0-6ab6-4944-b941-cf3198c13a30</webElementGuid>
+      <webElementGuid>289ba1db-a5ba-4f60-80b2-345fa2b01b6c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>class</name>
       <type>Main</type>
       <value>attachment-large size-large wp-image-77220</value>
-      <webElementGuid>d4f09ab3-c298-4676-b7cc-ebb67dfad1a4</webElementGuid>
+      <webElementGuid>b01b8050-123a-4b1e-a6a8-c38af5127fb3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>srcset</name>
       <type>Main</type>
       <value>https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-1024x1024.png 1024w, https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-300x300.png 300w, https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-150x150.png 150w, https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-768x767.png 768w, https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1.png 1452w</value>
-      <webElementGuid>98791fd1-a096-4485-8a98-b35743c493bd</webElementGuid>
+      <webElementGuid>d3b115a7-2170-4ed2-a169-b4907e64ee8f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>sizes</name>
       <type>Main</type>
       <value>(max-width: 1024px) 100vw, 1024px</value>
-      <webElementGuid>b669bd7a-0d80-4267-b12b-079b90a817cc</webElementGuid>
+      <webElementGuid>1b346d7c-7b63-4de1-bad4-c089eb01de96</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-34b18e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7977c8cf&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-19fd428b elementor-widget-tablet__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-image&quot;]/div[@class=&quot;elementor-widget-container&quot;]/img[@class=&quot;attachment-large size-large wp-image-77220&quot;]</value>
-      <webElementGuid>f3f26098-379e-433d-aa7f-78c44c7d658e</webElementGuid>
+      <webElementGuid>08d15e03-9c79-4910-a5f1-346ba106c38a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[contains(@src,'https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-1024x1024.png')]</value>
-      <webElementGuid>3f6d7b9f-6795-424b-b662-5d63373c9e16</webElementGuid>
+      <webElementGuid>3c172679-ded1-43dc-8d5e-f06d0725e46e</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//section[5]/div/div[2]/div/div/div/img</value>
-      <webElementGuid>cf200bee-2312-40d9-a8da-df1daaefa072</webElementGuid>
+      <webElementGuid>9a463bad-b989-4459-91a0-735429706176</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://missionnext.org/wp-content/uploads/2026/05/ECFA-v3-1-1024x1024.png']</value>
-      <webElementGuid>b5398706-d2a4-4e6f-bbc0-fe7a21398435</webElementGuid>
+      <webElementGuid>7bea21c1-76bf-41c0-bae9-2b74ebd21fdc</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

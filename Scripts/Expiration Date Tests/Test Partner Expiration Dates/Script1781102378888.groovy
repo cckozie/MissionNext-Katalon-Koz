@@ -28,6 +28,8 @@ runCompare = true
 
 testAccts = true 	//Include test accounts in results
 
+updateLogFile = true
+
 today = new Date().format('yyyy-MM-dd')
 
 todayDate = Date.parse('yyyy-MM-dd', today)
@@ -230,7 +232,7 @@ for (def site : sites) {
 WebUI.closeBrowser()
 
 if (runCompare) {
-	WebUI.callTestCase(findTestCase('Expiration Date Tests/Compare Partner Expiration Dates in CSV Files'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Expiration Date Tests/Compare Partner Expiration Dates in CSV Files'), [('varUpdateLogFile'):updateLogFile], FailureHandling.STOP_ON_FAILURE)
 }
 
 

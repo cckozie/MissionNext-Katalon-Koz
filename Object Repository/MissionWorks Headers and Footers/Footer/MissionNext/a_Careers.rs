@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//section[3]/div/div/div/div/div/nav[1]/ul/li[1]/a</value>
+         <value>/html/body/footer/div/nav/a[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>53d48aab-3085-423c-9f35-059e2b0d00d9</webElementGuid>
+      <webElementGuid>dfa2f056-5c8e-4e17-85b0-b216f648e497</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/careers/</value>
-      <webElementGuid>e7e0ddeb-16f8-497a-8009-94168c034126</webElementGuid>
+      <webElementGuid>23ac838a-16e7-4632-bf53-dc28049192a9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-item</value>
-      <webElementGuid>599782ac-2ee6-4740-b160-1d539904badb</webElementGuid>
+      <webElementGuid>ed571410-2c20-4e33-9690-64c0a212840f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Careers</value>
-      <webElementGuid>36299356-6a5f-4e8c-badf-9622f5436c59</webElementGuid>
+      <webElementGuid>7ce19255-e6a5-4f4e-9de3-bc49fe185a2f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu-1-a814b52&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77201&quot;]/a[@class=&quot;elementor-item&quot;]</value>
-      <webElementGuid>3840952a-ca32-4361-b7c7-ffd23dfcdaea</webElementGuid>
+      <webElementGuid>49709b87-5709-4004-9ed7-1da304158ba7</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='menu-1-a814b52']/li/a</value>
-      <webElementGuid>c4319958-8dd4-476a-bea1-d39233ed56fc</webElementGuid>
+      <webElementGuid>626fc5a4-f7a2-45db-80fe-0db49e57d7f9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>(//a[contains(text(),'Careers')])[3]</value>
-      <webElementGuid>fad4717b-c5d8-499a-8c37-fc6c45138ce4</webElementGuid>
+      <webElementGuid>382450b2-5955-4912-8b13-f39805bf5a99</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Linkedin'])[1]/following::a[2]</value>
-      <webElementGuid>57656e07-3d58-43a2-83e7-612fba550b9a</webElementGuid>
+      <webElementGuid>0afe0213-30a5-4fa7-b2a9-23eb744b97e2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[1]/following::a[3]</value>
-      <webElementGuid>2d4c4420-553c-49e9-9a82-90657d3427f8</webElementGuid>
+      <webElementGuid>253df0d0-109b-4213-b98c-480629d7ed63</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[1]/preceding::a[1]</value>
-      <webElementGuid>05484956-4255-460c-8f78-48ba747564fc</webElementGuid>
+      <webElementGuid>653a6535-b7de-4df8-930e-35d79e699486</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Up'])[1]/preceding::a[2]</value>
-      <webElementGuid>0009d930-c66b-4691-bb9c-dfb210436bda</webElementGuid>
+      <webElementGuid>ab9db210-f519-4596-9a88-7b392168bf01</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>(//a[contains(@href, 'https://missionworks.global/careers/')])[3]</value>
-      <webElementGuid>f5a47a71-cfc8-4039-a412-3561d6ca4d7e</webElementGuid>
+      <webElementGuid>2e6aaeb3-39ef-474d-acc6-49920f232a64</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//section[3]/div/div/div/div/div/nav/ul/li/a</value>
-      <webElementGuid>bcc7a0ca-dc24-4082-a294-770c27cac933</webElementGuid>
+      <webElementGuid>ecd66a60-60c4-4741-b208-c023b7ddb196</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/careers/' and (text() = 'Careers' or . = 'Careers')]</value>
-      <webElementGuid>7958944f-211e-4009-a051-2cca39895c58</webElementGuid>
+      <webElementGuid>c4e4da95-b2d2-4012-a53c-9069c207f391</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

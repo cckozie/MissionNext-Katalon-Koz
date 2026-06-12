@@ -31,7 +31,9 @@ menuOptions = ['MissionConnexion', 'MissionNext','MissionGuide']
 
 pageTitles = ['Homepage - MissionConnexion', 'Serve in Missions - MissionNext.org', 'Short Term Mission Trips | International and Domestic']
 
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : 'Education/', 'QuickStart' : '', 'MissionLinked' : 'MissionLinked/']
+//extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : 'Education/', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : 'MissionLinked/',
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : 'MissionLinked/',
+	'Coaching' : '']
 
 folderBase = 'MissionWorks Headers and Footers/Functions/Connecting/'
 

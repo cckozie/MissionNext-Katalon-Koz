@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Call Single Test Case Every n Minutes</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>96315eec-6554-4951-8cdb-64bb4d8a0d42</testCaseGuid>
+</TestCaseEntity>
