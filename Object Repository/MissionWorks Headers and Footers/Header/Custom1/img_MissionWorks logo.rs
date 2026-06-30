@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>img_MissionWorks logo</name>
+   <tag></tag>
+   <elementGuidId>0322d602-e772-44d8-b8eb-1322427fab15</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>img[alt=&quot;MissionWorks&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/div</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>13fd9e88-8887-4715-b56c-3743b56354bc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://missionworks.global/wordpress/wp-content/uploads/2026/05/MissionWorks.Logo_.Rev_.Horiz_-1.svg</value>
+      <webElementGuid>2c810f9d-8ba1-4765-b910-3c451555ecd7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>alt</name>
+      <type>Main</type>
+      <value>MissionWorks</value>
+      <webElementGuid>0132d886-a238-4a61-b60a-0cab39e3ba21</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js_active vc_desktop vc_transform vc_transform vc_transform js flexbox flexboxlegacy webgl no-touch geolocation rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg smil svgclippaths mobile-false wf-roboto-n4-active skrollr skrollr-desktop wf-roboto-n1-active wf-roboto-n3-active wf-roboto-n5-active wf-roboto-n7-active wf-roboto-n9-active wf-roboto-i1-active wf-roboto-i3-active wf-roboto-i4-active wf-roboto-i5-active wf-roboto-i7-active wf-roboto-i9-active wf-opensans-n3-active wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-n8-active wf-opensans-i3-active wf-opensans-i4-active wf-opensans-i6-active wf-opensans-i7-active wf-opensans-i8-active wf-robotoslab-n1-active wf-robotoslab-n3-active wf-robotoslab-n4-active wf-robotoslab-n7-active wf-active&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-10 wp-theme-levelup animated-anchors group-blog mob-menu-slideout-over wpb-js-composer js-comp-ver-8.7.1 vc_responsive animate-in is-transitioned is-loaded is-discover&quot;]/header[@class=&quot;mc-header&quot;]/div[@class=&quot;mc-container&quot;]/div[@class=&quot;mc-logo&quot;]/a[1]/img[1]</value>
+      <webElementGuid>b41b9375-ddea-40d7-86ec-52055a834e90</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[@alt='MissionWorks']</value>
+      <webElementGuid>4e4d0be6-4c24-4a92-afec-f258d0c3ee10</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//img</value>
+      <webElementGuid>c253f2e9-6675-4d7e-8f92-f61c59d2319e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'https://missionworks.global/wordpress/wp-content/uploads/2026/05/MissionWorks.Logo_.Rev_.Horiz_-1.svg' and @alt = 'MissionWorks']</value>
+      <webElementGuid>c4368596-7552-4bdb-baab-995039f84443</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

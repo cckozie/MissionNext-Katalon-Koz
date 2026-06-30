@@ -27,14 +27,12 @@ site = varSite
 
 url = varUrl
 
-//url = 'missionnext.org'
-
 menuOptions = ['About Us', 'About Us', 'Statement of Faith', 'Team and Board','Careers', 'Contact Us']
 
 pageTitles = ['About Us /Bakery Builder – MissionWorks', 'About Us /Bakery Builder – MissionWorks', 'Statement of Faith – MissionWorks', 'Team and Board – MissionWorks', 'Careers – MissionWorks', 'Contact Us – MissionWorks']
 
-extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : 'MissionLinked/',
-	'Coaching' : '']
+extensions = ['MissionNext' : '', 'Journey' : '', 'Education' : '', 'QuickStart' : '', 'Journey Guide' : '', 'MissionLinked' : '',
+	'Coaching' : '', 'About Us' : '']
 
 folderBase = 'MissionWorks Headers and Footers/Functions/About Us/'
 
@@ -68,7 +66,7 @@ for(option in menuOptions) {
 	WebUI.navigateToUrl(url)
 		
 	if(site == 'MissionLinked') {
-		WebUI.mouseOver(findTestObject('Object Repository/MissionWorks Headers and Footers/img_MissionWorks logo'))
+		WebUI.mouseOver(findTestObject('Object Repository/MissionWorks Headers and Footers/Header/img_MissionWorks logo'))
 		WebUI.delay(2)
 	}
 	

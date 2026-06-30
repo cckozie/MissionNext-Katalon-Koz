@@ -17,7 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.By
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
+driver = DriverFactory.getWebDriver()
 
 object = varObject //'Object Repository/MissionLinked/Page_MissionLinked/a_' + link
 
@@ -38,24 +43,26 @@ height = WebUI.getViewportHeight()
 bottom = top + height
 
 if(y > bottom) {
-	keys = Keys.PAGE_DOWN
+//	keys = Keys.PAGE_DOWN
+	keys = Keys.END
 } else {
 	keys = Keys.PAGE_UP
 }
 
 //println('Viewport bottom is ' + bottom)
 
-while(y > bottom || y < top) {
+inViewport = WebUI.verifyElementInViewport(findTestObject(object), 1, FailureHandling.OPTIONAL)
+
+loop = 1
+while(!inViewport) {
+	
+	println(loop)
+	
 	WebUI.sendKeys(findTestObject(null), Keys.chord(keys))
 	
-	top = WebUI.getViewportTopPosition()
+	WebUI.delay(1)
 	
-//	println('Viewport top is ' + top)
+	inViewport = WebUI.verifyElementInViewport(findTestObject(object), 1, FailureHandling.OPTIONAL)
 	
-	height = WebUI.getViewportHeight()
-	
-	bottom = top + height
-	
-//	println('Viewport bottom is ' + bottom)
-
+	loop++
 }
