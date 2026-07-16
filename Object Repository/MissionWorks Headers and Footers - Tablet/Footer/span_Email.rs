@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Email</name>
+   <tag></tag>
+   <elementGuidId>eaa882ec-9aa5-49ff-9992-fdca8cb715fd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[2]/footer/section[4]/div/div/div/div/div/ul/li[2]/a/span[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>7c0f0f80-c05f-4e6d-a4e4-8752790f8802</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-icon-list-text</value>
+      <webElementGuid>aa1c83d3-d0eb-4b8e-89f0-f9268032991c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Info@MissionWorks.global</value>
+      <webElementGuid>4bf9aab9-6536-4fc6-851c-19d2f9a7cda7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;home wp-singular page-template page-template-elementor_header_footer page page-id-31208 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-float-right one-container header-aligned-center dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-31066 elementor-page elementor-page-31208 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-70156 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-122986e6 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1aa918&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-2c88a75b elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/a[1]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
+      <webElementGuid>709fc64d-1151-4797-a742-6ba6a2e1e652</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[4]/following::span[4]</value>
+      <webElementGuid>5b25ba9a-1989-4035-9ea7-89c70cc054f1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[6]/following::span[4]</value>
+      <webElementGuid>27ea5f0a-8808-44c1-8f8d-11315699f45b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[2]/preceding::span[3]</value>
+      <webElementGuid>26334a28-4cb5-4826-9482-265dfc3fc375</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[2]/preceding::span[5]</value>
+      <webElementGuid>ccb413c0-1fa8-4eef-a32b-7bc390ea2f07</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Info@MissionWorks.global']/parent::*</value>
+      <webElementGuid>16a66b50-47a5-4cb6-89fa-63fa3fbfc0f6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[2]/a/span[2]</value>
+      <webElementGuid>d07743ab-956a-44e0-a196-8a5c70dc589e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Info@MissionWorks.global' or . = 'Info@MissionWorks.global')]</value>
+      <webElementGuid>0cd14d68-66e5-4dbe-b7eb-d6fbfb508be2</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

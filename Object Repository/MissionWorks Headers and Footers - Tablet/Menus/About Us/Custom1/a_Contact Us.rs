@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Contact Us</name>
+   <tag></tag>
+   <elementGuidId>6b58b579-aed9-49d6-aa78-f21dd7145391</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li:nth-of-type(5) > a</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/nav/div[3]/ul/li[5]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>dca60b09-6f2c-4903-9b7c-8f304fa5ce23</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionworks.global/contact-us/</value>
+      <webElementGuid>3b39a4b2-8749-4ce9-bf53-5ac3dc842bca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Contact Us</value>
+      <webElementGuid>b4eef8ca-41e9-4608-a5bd-f3ab5ac135ed</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mc-nav&quot;)/div[@class=&quot;mc-dropdown&quot;]/ul[@class=&quot;mc-dropdown-menu&quot;]/li[5]/a[1]</value>
+      <webElementGuid>17d5353d-8358-4eae-8657-9f47adb36260</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//nav[@id='mc-nav']/div[3]/ul/li[5]/a</value>
+      <webElementGuid>4a097fd4-be14-4f17-9b57-db7426084b7a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Contact Us')]</value>
+      <webElementGuid>32e4b55d-d25c-4448-b47b-f483fa25c431</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[1]/following::a[1]</value>
+      <webElementGuid>7421f23b-f26d-42f6-8a16-e9633eefdbbf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[1]/following::a[2]</value>
+      <webElementGuid>bc163e5a-7640-4df2-bbaf-3ec72106454e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[1]/preceding::a[1]</value>
+      <webElementGuid>2580cdb4-0b00-4df5-a7fb-195a6397cbd8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SPONSORSHIP'])[1]/preceding::a[3]</value>
+      <webElementGuid>2bb981a3-cefb-487f-9933-a44b92f8bea7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Contact Us']/parent::*</value>
+      <webElementGuid>7aec9a76-bce4-4a4c-9474-752532ea5ab4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionworks.global/contact-us/')]</value>
+      <webElementGuid>10194fa3-c287-4ec2-a1df-439dd85fd962</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[5]/a</value>
+      <webElementGuid>ca1eb71d-4378-445e-976b-07b9f3fff5d2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionworks.global/contact-us/' and (text() = 'Contact Us' or . = 'Contact Us')]</value>
+      <webElementGuid>76de22a3-1a29-4fad-a938-956a0189836f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

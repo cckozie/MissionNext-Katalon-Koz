@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Address</name>
+   <tag></tag>
+   <elementGuidId>f60d00fc-03d9-46f4-8f1f-6df96370f337</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.elementor-icon-list-item.elementor-inline-item > span.elementor-icon-list-text</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[3]/span[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>419cab85-8534-45a8-907c-1b59c4602957</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-icon-list-text</value>
+      <webElementGuid>61cf5d04-ee71-4813-8415-a7cc6db425ef</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1400 NE 136th Ave, Vancouver, WA  98684</value>
+      <webElementGuid>a7c4b54c-0f3e-42f3-96c7-911353173cda</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;home wp-singular page-template page-template-elementor_header_footer page page-id-10 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-8 elementor-page elementor-page-10 sticky-menu e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;elementor elementor-41 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-57e220c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2fd96690&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-4809cee0 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget-laptop__width-initial elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
+      <webElementGuid>2de63dc0-eb31-4780-9cc9-516461788846</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Info@MissionWorks.global'])[1]/following::span[2]</value>
+      <webElementGuid>8fd0e492-56c0-4797-bcd4-3167f7e491da</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact-Us'])[2]/following::span[6]</value>
+      <webElementGuid>edb8fdaf-a6b1-4366-b6a0-67c7907d330c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[1]/preceding::span[1]</value>
+      <webElementGuid>be4c9b39-57f7-42ff-9eb7-f52ab27f2097</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Instagram'])[1]/preceding::span[3]</value>
+      <webElementGuid>138ec92b-2495-495d-9b18-a4213bfc356e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[3]/span[2]</value>
+      <webElementGuid>430e12ab-e3c3-4d4a-9ca9-be17061c4303</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = '1400 NE 136th Ave, Vancouver, WA  98684' or . = '1400 NE 136th Ave, Vancouver, WA  98684')]</value>
+      <webElementGuid>5e1af40c-6150-4562-9b4a-cf36f151aa21</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

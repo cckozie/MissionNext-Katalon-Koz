@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Instagram</name>
+   <tag></tag>
+   <elementGuidId>8b5cb75b-4724-4282-9bbb-672eb3a0c021</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[4]/div/div/div/div/span[2]/a/i</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.elementor-icon.elementor-social-icon.elementor-social-icon-instagram.elementor-repeater-item-b8abc19 > i.fab.fa-instagram</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>3793cbca-5bf3-4f48-8315-2c5ce0d1ed60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>6a578261-6a61-4913-8ac8-fce4ee38e3d2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fab fa-instagram</value>
+      <webElementGuid>a8d70a31-cd91-4815-9b04-4d191a64816e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-34b18e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-33629fa9&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-102b4f23 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-social-icons-wrapper elementor-grid&quot;]/span[@class=&quot;elementor-grid-item&quot;]/a[@class=&quot;elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-b8abc19&quot;]/i[@class=&quot;fab fa-instagram&quot;]</value>
+      <webElementGuid>145cf9bc-76c7-4727-8ae8-d174cebefd84</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span[2]/a/i</value>
+      <webElementGuid>f09681c5-4890-4f48-8c19-0a1cd49e779d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

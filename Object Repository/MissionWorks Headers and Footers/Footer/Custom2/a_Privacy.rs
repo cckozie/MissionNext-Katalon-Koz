@@ -6,12 +6,12 @@
    <elementGuidId>caf4b2ca-5f71-41c0-88b2-6a4cf1286669</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//footer/section/div/div/div/div/div/nav/ul/li[4]/a</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77204 > a.elementor-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[2]/footer/section[1]/div/div/div/div/div/nav[1]/ul/li[4]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>8097e195-5a43-4c94-8c31-916f45ec8639</webElementGuid>
+      <webElementGuid>a7a637d8-06c3-424d-b37b-028c0504583e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/privacy-policy/</value>
-      <webElementGuid>b8d22653-71cd-4617-af5a-7ea4ae813035</webElementGuid>
+      <webElementGuid>df761599-efb9-49f4-9f23-bd9c6f9e6a78</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-item</value>
-      <webElementGuid>5a4f76f7-9025-4d34-9953-f2f2c4440b34</webElementGuid>
+      <webElementGuid>7a24bf93-db7d-47e8-86e6-df3150bb761d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Privacy</value>
-      <webElementGuid>60560d5e-3abb-4342-8ff4-ac8609de00c0</webElementGuid>
+      <webElementGuid>a1bb88b1-9f3b-4cff-a6d9-4457cafea84b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;menu-1-5334ffbb&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77204&quot;]/a[@class=&quot;elementor-item&quot;]</value>
-      <webElementGuid>841fb039-75a3-4311-b3de-ce60e2b77cad</webElementGuid>
+      <webElementGuid>d8bc9265-3357-43e1-b698-c053a27ef26f</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//ul[@id='menu-1-5334ffbb']/li[4]/a</value>
-      <webElementGuid>fbe295d0-8621-41a1-8e96-b0b021209830</webElementGuid>
+      <webElementGuid>9418fc54-61a5-49e7-9e19-806fdae56a77</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Privacy')]</value>
-      <webElementGuid>ff4f4582-9453-46c8-ac79-89543fbbb6d4</webElementGuid>
+      <webElementGuid>408947fe-d8fd-4794-a305-216cd30a0b7c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sign Up'])[1]/following::a[1]</value>
-      <webElementGuid>ba85ce05-9a2d-4e8f-b9a3-622e6db5cf3b</webElementGuid>
+      <webElementGuid>4d59f5d6-4e32-469f-92d2-fb09d6bed09c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[1]/following::a[2]</value>
-      <webElementGuid>cdd8402a-1daa-4c6f-9b2a-831435007a37</webElementGuid>
+      <webElementGuid>0f92d8ed-57c3-4d40-9cbd-c493d2cda0b6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[5]/preceding::a[1]</value>
-      <webElementGuid>ff4e0746-7aeb-4c67-8f91-7d02a07683f7</webElementGuid>
+      <webElementGuid>eba48ac2-a9b2-43d1-acde-b6e9e7b4ec20</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[3]/preceding::a[2]</value>
-      <webElementGuid>08f91da2-805c-41df-8e84-471a2fcafdd1</webElementGuid>
+      <webElementGuid>62571fd3-00f0-4c89-af61-bf14da3c3e93</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Privacy']/parent::*</value>
-      <webElementGuid>f9cad342-7870-4abf-a63b-a66dcc7d9d18</webElementGuid>
+      <webElementGuid>5b64b94c-bdb9-4ed0-a8cb-00c71e79bed4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.global/privacy-policy/')]</value>
-      <webElementGuid>0eeb65f6-e316-4c15-805a-d4f63f9c40c0</webElementGuid>
+      <webElementGuid>f8d52f08-8469-46be-88b9-3b19602aa78a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,7 +127,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//footer/section/div/div/div/div/div/nav/ul/li[4]/a</value>
-      <webElementGuid>31404839-9f15-4361-9ba0-b95bc39df468</webElementGuid>
+      <webElementGuid>b4dedc0c-206c-4b9b-805e-4b632f5031c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -135,6 +135,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/privacy-policy/' and (text() = 'Privacy' or . = 'Privacy')]</value>
-      <webElementGuid>b1437151-303d-4956-82fd-d8f1a489cf51</webElementGuid>
+      <webElementGuid>b8ef5343-ca9c-4bcf-85a9-71e151250389</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

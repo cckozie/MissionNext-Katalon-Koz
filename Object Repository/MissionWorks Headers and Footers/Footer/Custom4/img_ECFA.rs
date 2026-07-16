@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[1]/img[2]</value>
+         <value>/html/body/footer/section[4]/div/div[2]/div/div/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>1ed6e525-deb6-4acb-a5a7-2dffaf664589</webElementGuid>
+      <webElementGuid>ac5a846f-40d4-4bda-9b18-47a664646701</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://missionworks.global/wordpress/wp-content/uploads/2023/05/ECFA-100px.png</value>
-      <webElementGuid>28e45aab-8391-41f7-9000-213e4e262895</webElementGuid>
+      <webElementGuid>9315f744-779a-4690-b493-b322fc32dce9</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>ECFA</value>
-      <webElementGuid>0fb17d0d-e818-4f67-afd5-66de0db96af9</webElementGuid>
+      <webElementGuid>7d6c5b6b-1726-451d-b2c2-4e4da83c744f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;js&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-41 wp-custom-logo wp-theme-missiontrip elementor-default elementor-kit-5923 elementor-page elementor-page-41 aa-prefix-missi e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;footer&quot;]/div[@class=&quot;footer-container&quot;]/div[@class=&quot;footer-bottom&quot;]/div[@class=&quot;footer-badges&quot;]/img[2]</value>
-      <webElementGuid>32654af4-0541-4f24-911b-26b0cf8b89b5</webElementGuid>
+      <webElementGuid>d75b8fdf-693b-40ae-bc71-63b1ac80d733</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[@alt='ECFA']</value>
-      <webElementGuid>5a5364fd-a71d-42b0-a14d-4713ad5ec5ab</webElementGuid>
+      <webElementGuid>86022089-b3c1-483d-ba76-7ae3d53fb154</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//img[2]</value>
-      <webElementGuid>507dbe78-c830-437f-948c-ade1978e57f0</webElementGuid>
+      <webElementGuid>4a599623-0062-4606-9b16-19ba62d13eee</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,6 +71,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://missionworks.global/wordpress/wp-content/uploads/2023/05/ECFA-100px.png' and @alt = 'ECFA']</value>
-      <webElementGuid>9a5a8f1a-14c2-4359-86c6-b0e26e715ed1</webElementGuid>
+      <webElementGuid>53d3aab7-dde9-4de2-8f02-345be61cc306</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

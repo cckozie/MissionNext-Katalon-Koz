@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Sign Up</name>
+   <tag></tag>
+   <elementGuidId>85a5f90d-77b9-446e-b636-6cbe6bba681d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77203 > a.elementor-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[2]/footer/section[1]/div/div/div/div/div/nav[1]/ul/li[3]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>9f22dd1e-f1a0-4602-aa23-0c783c1ba674</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp</value>
+      <webElementGuid>ad5312ca-7abd-41b1-9462-7e35b90b5271</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-item</value>
+      <webElementGuid>80baed99-b702-49a7-9e03-da5acaa26aed</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Sign Up</value>
+      <webElementGuid>0838832a-1956-43e4-ad81-3bd0231fad72</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu-1-5334ffbb&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77203&quot;]/a[@class=&quot;elementor-item&quot;]</value>
+      <webElementGuid>e8286e45-3a6a-40fa-81f9-d6e6082423c0</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='menu-1-5334ffbb']/li[3]/a</value>
+      <webElementGuid>ca9d0d2b-2590-4e04-abde-d63735618572</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Sign Up')]</value>
+      <webElementGuid>4ba7477e-11a5-4c2b-a7fb-d64beac651af</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[1]/following::a[1]</value>
+      <webElementGuid>615a744d-00aa-4d6a-9454-f6a0ae42264a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[3]/following::a[2]</value>
+      <webElementGuid>7c91e63f-9888-42e8-90c3-9745230dbec3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/preceding::a[1]</value>
+      <webElementGuid>4b5ab281-0d2b-4c7f-900d-8d81ab55c98a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[5]/preceding::a[2]</value>
+      <webElementGuid>2d52af1b-9e97-4cb8-8345-6bb89b87d904</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Sign Up']/parent::*</value>
+      <webElementGuid>7570a026-db3d-4fe2-8d4e-ceefdfa095e7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp')]</value>
+      <webElementGuid>b377588b-9341-4ae7-8ff6-a40c9c1f71ba</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//footer/section/div/div/div/div/div/nav/ul/li[3]/a</value>
+      <webElementGuid>e689cc2d-ac71-4fc5-9828-a28fcdb43670</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp' and (text() = 'Sign Up' or . = 'Sign Up')]</value>
+      <webElementGuid>396692e3-fbcf-414d-b96e-0217d82cc257</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;footerNav&quot;]/a[3]</value>
+         <value>/html/body/footer/section[2]/div/div/div/div/div/nav[1]/ul/li[3]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>0de19e14-1496-4118-a5d7-07534464e682</webElementGuid>
+      <webElementGuid>1dd12eda-162e-4017-9591-9c8a20ba6f7b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp</value>
-      <webElementGuid>c8b39f23-1de0-4a5a-8221-5b113ad31e34</webElementGuid>
+      <webElementGuid>4b537464-2429-41cc-b1aa-1d31d642b608</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Sign Up</value>
-      <webElementGuid>8b468144-6788-43d3-bb1b-11f405faf50f</webElementGuid>
+      <webElementGuid>dd93816c-2f2d-4e18-9dbd-5f58fa6262c1</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;footerNav&quot;)/a[3]</value>
-      <webElementGuid>063ac8a3-30a0-494f-8ea1-4b3be0fb3504</webElementGuid>
+      <webElementGuid>51c99ff9-1c66-4f1c-a451-d8187474effc</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//nav[@id='footerNav']/a[3]</value>
-      <webElementGuid>27227efa-23f6-4fdf-b965-e36f0e1cc032</webElementGuid>
+      <webElementGuid>1e07850b-ad2d-467e-a4ac-2deaf2156e63</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'Sign Up')]</value>
-      <webElementGuid>12b37f60-9b26-4d62-81b5-9df285080834</webElementGuid>
+      <webElementGuid>81b6095e-9400-4bdb-b5ab-4b7011809ecb</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[1]/following::a[1]</value>
-      <webElementGuid>5f368ebf-e743-4c10-8ca3-f193fbef5785</webElementGuid>
+      <webElementGuid>bb4b009b-ce20-4c8e-b514-0de3949a8e08</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[2]/following::a[2]</value>
-      <webElementGuid>d0247582-707a-48b9-a97c-cabbb2270317</webElementGuid>
+      <webElementGuid>a2869f5a-ac27-4eb2-885a-84896bf4ee97</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Privacy'])[1]/preceding::a[1]</value>
-      <webElementGuid>7065dc4f-e84d-4ebf-b055-421975d47950</webElementGuid>
+      <webElementGuid>123835ee-03b9-401e-b313-effdec3d6af6</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[2]/preceding::a[2]</value>
-      <webElementGuid>db4babbb-d07a-4c1e-857d-e137ecc834e0</webElementGuid>
+      <webElementGuid>efbf257b-170d-400d-91a0-887e932578c4</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Sign Up']/parent::*</value>
-      <webElementGuid>0ab3a428-493c-45ad-a307-15a4ce295851</webElementGuid>
+      <webElementGuid>24e0793f-89f1-493f-a9fc-561af1c8eb82</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp')]</value>
-      <webElementGuid>7d91116b-f77d-473f-ae20-6c99f1ebdd98</webElementGuid>
+      <webElementGuid>56a4c49f-a542-4c3d-bd78-7a48f3e4b137</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,7 +119,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//nav/a[3]</value>
-      <webElementGuid>1965d7c2-e7d6-446c-9e4e-fb25da78c94a</webElementGuid>
+      <webElementGuid>6d151575-d757-4168-80ea-5cbde084a917</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -127,6 +127,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.app.neoncrm.com/np/clients/missionworks/subscribe.jsp' and (text() = 'Sign Up' or . = 'Sign Up')]</value>
-      <webElementGuid>4ec1febf-1c7b-447c-9e65-ac193e15b23e</webElementGuid>
+      <webElementGuid>50a37c38-6de6-4a9e-a7af-552903ffecf4</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

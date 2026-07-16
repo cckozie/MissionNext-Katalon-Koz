@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>span.elementor-icon-list-text</value>
+         <value>div.elementor-element.elementor-element-4809cee0.elementor-icon-list--layout-inline.elementor-list-item-link-inline.elementor-align-center.elementor-widget-laptop__width-initial.elementor-widget.elementor-widget-icon-list > div.elementor-widget-container > ul.elementor-icon-list-items.elementor-inline-items > li.elementor-icon-list-item.elementor-inline-item > a > span.elementor-icon-list-text</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/div[2]/footer/section[4]/div/div/div/div/div/ul/li[1]/a/span[2]</value>
+         <value>//li[1]/a/span[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>37d5df8d-59e9-4fba-9c3c-770183a2a83f</webElementGuid>
+      <webElementGuid>8901d815-fea9-413e-87e0-9b0c1020cbb2</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-icon-list-text</value>
-      <webElementGuid>a42e73f7-223b-4e6d-ae93-047660b2a83c</webElementGuid>
+      <webElementGuid>c1df0335-346a-44d9-97b3-230b221b90f6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,31 +39,31 @@
       <name>text</name>
       <type>Main</type>
       <value>503.360.1865</value>
-      <webElementGuid>de1480e8-c6ca-42bf-a868-867d471486e8</webElementGuid>
+      <webElementGuid>cac8c72b-36fc-40b0-9b9e-3de8e73e1bb4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-77444 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-57fec867 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6fe4b401&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-303a04eb elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/a[1]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
-      <webElementGuid>6a59a673-4614-4299-932f-2b77a80e0893</webElementGuid>
+      <value>/html[1]/body[@class=&quot;home wp-singular page-template page-template-elementor_header_footer page page-id-10 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-8 elementor-page elementor-page-10 sticky-menu e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;elementor elementor-41 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-57e220c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2fd96690&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-4809cee0 elementor-icon-list--layout-inline elementor-list-item-link-inline elementor-align-center elementor-widget-laptop__width-initial elementor-widget elementor-widget-icon-list&quot;]/div[@class=&quot;elementor-widget-container&quot;]/ul[@class=&quot;elementor-icon-list-items elementor-inline-items&quot;]/li[@class=&quot;elementor-icon-list-item elementor-inline-item&quot;]/a[1]/span[@class=&quot;elementor-icon-list-text&quot;]</value>
+      <webElementGuid>24e2f3e5-8adb-4274-89df-f031d29c8a23</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[4]/following::span[2]</value>
-      <webElementGuid>ef3e354d-09c0-4b81-8a4e-2b998774e945</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact-Us'])[2]/following::span[2]</value>
+      <webElementGuid>34da4c83-a8f7-4439-9446-3f4adac5d188</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[6]/following::span[2]</value>
-      <webElementGuid>91fd9f9f-b66e-48cd-9411-aec5f9dc4a43</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[4]/following::span[2]</value>
+      <webElementGuid>3bd496dc-41ed-458a-a660-ed693ce8d4ca</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Info@MissionWorks.global'])[1]/preceding::span[2]</value>
-      <webElementGuid>cd06cce6-e97a-49ed-b4c2-cec3c5b336be</webElementGuid>
+      <webElementGuid>2b718a94-6886-420a-b1f3-f9f2261d9069</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Facebook-f'])[1]/preceding::span[5]</value>
-      <webElementGuid>8df969a9-cec3-4e9a-b9c5-635b07194290</webElementGuid>
+      <webElementGuid>53126cd7-b9ea-4ba8-95b2-02b98471f5b8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,15 +87,15 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='503.360.1865']/parent::*</value>
-      <webElementGuid>8e5374f1-5307-4a75-a3b3-7fa8e2717cb5</webElementGuid>
+      <webElementGuid>cce41a15-7bd0-467b-bc62-e34c1e3b592f</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//span[2]</value>
-      <webElementGuid>7251cc53-297c-4fd3-bb59-61d0bc46b546</webElementGuid>
+      <value>//a/span[2]</value>
+      <webElementGuid>49f58cee-6125-4968-8bda-8959c37f6387</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,6 +103,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = '503.360.1865' or . = '503.360.1865')]</value>
-      <webElementGuid>2b2e98df-9732-4be5-bcad-bbf4aed5e661</webElementGuid>
+      <webElementGuid>57df6fcd-ed57-4074-b762-ea25f6eb1aad</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

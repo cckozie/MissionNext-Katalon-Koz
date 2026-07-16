@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[3]/a[2]</value>
+         <value>/html/body/footer/section[4]/div/div[4]/div/div/div/div/span[2]/a/i</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>5c32f513-e8c6-495e-905b-39723b82c15e</webElementGuid>
+      <webElementGuid>1c8aca27-75ba-49ae-9d6e-5082006120c3</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 24 24</value>
-      <webElementGuid>ded9deb0-061d-476a-a2b0-3719045cd976</webElementGuid>
+      <webElementGuid>9de172b6-6afc-4ab8-ba00-c3eb2602b0be</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>fill</name>
       <type>Main</type>
       <value>none</value>
-      <webElementGuid>f20df9d4-0124-4804-8637-0d4583f6ddce</webElementGuid>
+      <webElementGuid>6acb3ab1-763e-46bc-ae6c-44202f571774</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>stroke</name>
       <type>Main</type>
       <value>currentColor</value>
-      <webElementGuid>640af1d2-de2f-42c5-86f6-a251a4da1598</webElementGuid>
+      <webElementGuid>de64a9cb-3d8d-460d-973a-29f829a62052</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>stroke-width</name>
       <type>Main</type>
       <value>2</value>
-      <webElementGuid>774d2cf7-7fd0-4284-a1ff-dec8b8712866</webElementGuid>
+      <webElementGuid>561e0c42-70c7-4f89-850a-9faef056cc53</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>stroke-linecap</name>
       <type>Main</type>
       <value>round</value>
-      <webElementGuid>f8c2b907-8dd9-41fe-a11a-ed61977d7e76</webElementGuid>
+      <webElementGuid>70e4f22b-f636-45bd-8594-5857facbf761</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>stroke-linejoin</name>
       <type>Main</type>
       <value>round</value>
-      <webElementGuid>b7f79600-2665-4f7f-8548-c2c4f186a4db</webElementGuid>
+      <webElementGuid>c9f7480f-a12e-4d2c-bc63-0ff29b13023a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;js&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-41 wp-custom-logo wp-theme-missiontrip elementor-default elementor-kit-5923 elementor-page elementor-page-41 aa-prefix-missi e--ua-firefox e--ua-mac dialog-body dialog-lightbox-body dialog-container dialog-lightbox-container&quot;]/footer[@class=&quot;footer&quot;]/div[@class=&quot;footer-container&quot;]/div[@class=&quot;footer-bottom&quot;]/div[@class=&quot;footer-social&quot;]/a[2]/span[1]/svg[1]</value>
-      <webElementGuid>7c83f6dd-266a-4b52-b5d9-bed9c35e863b</webElementGuid>
+      <webElementGuid>d034252e-881c-4a8e-9e28-ca18ea98b06b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -87,6 +87,6 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Copyright © 2024-2026 MissionWorks - All rights reserved.'])[1]/following::*[name()='svg'][2]</value>
-      <webElementGuid>155748cc-ec22-4105-9ce0-8f6528766803</webElementGuid>
+      <webElementGuid>38ded87d-59f4-48e7-b00d-d4751f54981c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

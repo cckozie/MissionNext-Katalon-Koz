@@ -149,4 +149,9 @@
       <initValue>false</initValue>
       <name>errorsFlag</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>callingTestCase</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

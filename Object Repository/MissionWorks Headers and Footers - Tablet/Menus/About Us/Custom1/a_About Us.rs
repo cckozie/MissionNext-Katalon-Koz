@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_About Us</name>
+   <tag></tag>
+   <elementGuidId>bbf688e9-60d2-44c7-93ab-d23e33cdd77f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/nav/div[3]/ul/li[1]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>da5e511e-7591-494a-9098-aac2138472ac</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionworks.global/wordpress/about-us/</value>
+      <webElementGuid>da30a8eb-475e-4a89-a7c1-4620b4103cfb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>About Us</value>
+      <webElementGuid>d92897d7-48b0-4620-b927-2fe4393be22b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mc-nav&quot;)/div[@class=&quot;mc-dropdown&quot;]/ul[@class=&quot;mc-dropdown-menu&quot;]/li[1]/a[1]</value>
+      <webElementGuid>ed2838e1-f7c4-4e7b-add1-864e53eb0b70</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//nav[@id='mc-nav']/div[3]/ul/li/a</value>
+      <webElementGuid>f8989e76-e5c9-413e-930c-f5ce9991fb82</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'About Us')]</value>
+      <webElementGuid>17e794ad-26e2-4c4e-8a00-d2b09dd73f05</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='▼'])[3]/following::a[1]</value>
+      <webElementGuid>e5fc649e-acd4-4144-8934-df4837d3f83f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Team and Board'])[1]/preceding::a[1]</value>
+      <webElementGuid>3367169c-5b44-4881-b4d6-09aee2855310</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[1]/preceding::a[2]</value>
+      <webElementGuid>2b6ddf1d-b914-4fb5-826a-5ca5f56540f1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionworks.global/wordpress/about-us/')]</value>
+      <webElementGuid>0d42bd01-dfd8-4595-8251-71962d2c54ac</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/ul/li/a</value>
+      <webElementGuid>7b816a4c-6b28-4a6e-9e53-d1744aaf124a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionworks.global/wordpress/about-us/' and (text() = 'About Us' or . = 'About Us')]</value>
+      <webElementGuid>15febfbc-6937-4d9b-a0f9-ca1d77466498</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

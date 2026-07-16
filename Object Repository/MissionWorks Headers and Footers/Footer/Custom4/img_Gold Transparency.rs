@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[1]/img[1]</value>
+         <value>/html/body/footer/section[4]/div/div[1]/div/div/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>img</value>
-      <webElementGuid>f75215d6-fe07-4759-9d7a-a230dcbb957c</webElementGuid>
+      <webElementGuid>b2246122-f202-40c6-837c-3cefd6e8519b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>src</name>
       <type>Main</type>
       <value>https://missionworks.global/wordpress/wp-content/uploads/2026/04/gold-xPARENCY-.svg</value>
-      <webElementGuid>25179fa5-bfa2-411d-bcb9-5ed7a7b2cc0a</webElementGuid>
+      <webElementGuid>afac6b2f-8aa3-4775-a8af-4b63386af868</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>alt</name>
       <type>Main</type>
       <value>Badge</value>
-      <webElementGuid>1ede11d1-a623-452e-ba46-a1e559c7f829</webElementGuid>
+      <webElementGuid>87893fc9-8732-4622-8397-9dedeec63eab</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;js&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-41 wp-custom-logo wp-theme-missiontrip elementor-default elementor-kit-5923 elementor-page elementor-page-41 aa-prefix-missi e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;footer&quot;]/div[@class=&quot;footer-container&quot;]/div[@class=&quot;footer-bottom&quot;]/div[@class=&quot;footer-badges&quot;]/img[1]</value>
-      <webElementGuid>28a85fca-1099-4caf-950e-15706dd0d4c9</webElementGuid>
+      <webElementGuid>6d0d5024-86a6-446a-9fe7-ff1842278abb</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:img</name>
       <type>Main</type>
       <value>//img[@alt='Badge']</value>
-      <webElementGuid>166b103f-dcdb-48ed-a383-2283e8f55465</webElementGuid>
+      <webElementGuid>45e44ef4-c50c-4f4c-931f-10c94fe0d0d7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/img</value>
-      <webElementGuid>c4a8a285-9047-4500-a3ab-188072e4aa10</webElementGuid>
+      <webElementGuid>1f297585-e9d6-466b-8ff8-90dd21216659</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,6 +71,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//img[@src = 'https://missionworks.global/wordpress/wp-content/uploads/2026/04/gold-xPARENCY-.svg' and @alt = 'Badge']</value>
-      <webElementGuid>426d9d3a-8c1a-4208-aa9a-bec5340367f7</webElementGuid>
+      <webElementGuid>86340aaf-1697-46f7-8791-653f9141ca54</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

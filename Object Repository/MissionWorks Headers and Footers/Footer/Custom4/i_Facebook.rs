@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[3]/a[1]</value>
+         <value>/html/body/footer/section[4]/div/div[4]/div/div/div/div/span[1]/a/i</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>svg</value>
-      <webElementGuid>ef68f7f0-65f7-4b6c-a713-c53e42180d64</webElementGuid>
+      <webElementGuid>6e56cbc6-7351-45e0-8465-d521ccf97313</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>viewBox</name>
       <type>Main</type>
       <value>0 0 24 24</value>
-      <webElementGuid>57e4bcc0-0c00-4bf5-9331-a8b5468a16c2</webElementGuid>
+      <webElementGuid>095c3c13-0294-4665-8636-177fa622ce85</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>fill</name>
       <type>Main</type>
       <value>currentColor</value>
-      <webElementGuid>ba39184d-43f2-4752-9fc0-9fac72bebbbb</webElementGuid>
+      <webElementGuid>48bf2ecb-fc0b-4cd3-917b-53911df23ecc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;js&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-41 wp-custom-logo wp-theme-missiontrip elementor-default elementor-kit-5923 elementor-page elementor-page-41 aa-prefix-missi e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;footer&quot;]/div[@class=&quot;footer-container&quot;]/div[@class=&quot;footer-bottom&quot;]/div[@class=&quot;footer-social&quot;]/a[1]/span[1]/svg[1]</value>
-      <webElementGuid>862d4cb5-fc8b-43ac-a8f0-7bc29aebd5d0</webElementGuid>
+      <webElementGuid>d42fecd6-689b-4bfe-95d6-f4e5958520d0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,6 +55,6 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Copyright © 2024-2026 MissionWorks - All rights reserved.'])[1]/following::*[name()='svg'][1]</value>
-      <webElementGuid>82f1824d-5fb8-4371-83c1-0ed2a21c33c8</webElementGuid>
+      <webElementGuid>f9ca547d-b2a6-4040-a382-eb4491641843</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>/html/body/footer/div/div[2]/div[2]</value>
+         <value>/html/body/footer/section[4]/div/div[3]/div/div/div/p</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-      <webElementGuid>c02018e5-075f-4834-a366-1d16d1a6b301</webElementGuid>
+      <webElementGuid>0210c724-6588-4689-970e-435307b3027a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>footer-copyright</value>
-      <webElementGuid>910a948a-2cd5-4c78-8e15-4207dc36bb5d</webElementGuid>
+      <webElementGuid>7088c453-cf50-47be-be33-05c521278d30</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -41,7 +41,7 @@
       <value>
                 Copyright © 2024-2026 MissionWorks - All rights reserved.
             </value>
-      <webElementGuid>dfbf23a1-5541-4e90-8665-e81d974e16f0</webElementGuid>
+      <webElementGuid>a9e33981-3ae6-43cb-8205-a1e8a4c1fc60</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -49,7 +49,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;js&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-41 wp-custom-logo wp-theme-missiontrip elementor-default elementor-kit-5923 elementor-page elementor-page-41 aa-prefix-missi e--ua-firefox e--ua-mac&quot;]/footer[@class=&quot;footer&quot;]/div[@class=&quot;footer-container&quot;]/div[@class=&quot;footer-bottom&quot;]/div[@class=&quot;footer-copyright&quot;]</value>
-      <webElementGuid>58e11588-e090-4379-82eb-28f14689f295</webElementGuid>
+      <webElementGuid>5a2aee6b-7193-454a-9918-dae755414d2b</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -57,7 +57,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='︎'])[1]/following::div[5]</value>
-      <webElementGuid>d4ced79d-fae3-410b-8468-bf274c5749ab</webElementGuid>
+      <webElementGuid>a693647d-36e3-4c49-9a63-c3d6f0390cb8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -65,7 +65,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='Copyright © 2024-2026 MissionWorks - All rights reserved.']/parent::*</value>
-      <webElementGuid>b126c66e-fbf3-4b8d-9516-3410d8ba71cf</webElementGuid>
+      <webElementGuid>9359bfa1-37ec-4b79-a066-ef8ea49a328c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -73,7 +73,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//footer/div/div[2]/div[2]</value>
-      <webElementGuid>b9b2a6a3-beac-404b-bcf7-d1f1a3d7ba7a</webElementGuid>
+      <webElementGuid>b0b9b2e4-5ce9-4c42-ac28-5603a3896e98</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -85,6 +85,6 @@
             ' or . = '
                 Copyright © 2024-2026 MissionWorks - All rights reserved.
             ')]</value>
-      <webElementGuid>1eab9be4-7a55-4d06-b5ca-58b3db8e9ac1</webElementGuid>
+      <webElementGuid>c10f49ed-2b68-48bc-8038-f6d03007c127</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

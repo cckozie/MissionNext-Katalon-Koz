@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Instagram</name>
+   <tag></tag>
+   <elementGuidId>d3258c74-637f-4acb-b0b0-77891aa3bc4f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/footer/section[4]/div/div[4]/div/div/div/div/span[2]/a/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>DIV</value>
+      <webElementGuid>cb03e166-e039-4883-820f-153c6e3ded26</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>xpath1784052763959</value>
+      <webElementGuid>d8c2a527-9bf2-4357-9251-c1ccd30fefb4</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

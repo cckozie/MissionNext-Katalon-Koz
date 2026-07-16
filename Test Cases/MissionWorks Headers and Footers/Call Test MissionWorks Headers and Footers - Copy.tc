@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Call the test case one site at a time.</description>
+   <name>Call Test MissionWorks Headers and Footers - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>31fb1255-e637-4cfa-8fa6-59fb1bd0d182</testCaseGuid>
+</TestCaseEntity>

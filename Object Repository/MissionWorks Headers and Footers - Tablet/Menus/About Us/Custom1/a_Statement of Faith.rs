@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Statement of Faith</name>
+   <tag></tag>
+   <elementGuidId>01eeed4b-efba-45a7-963c-dcb04f336b9d</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/nav/div[3]/ul/li[2]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>67b89baf-8762-4b81-923a-287f66c4ce12</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionworks.global/statement-of-faith/</value>
+      <webElementGuid>e87850f9-cbdb-4ca0-b866-ec4ecca39a77</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Statement of Faith</value>
+      <webElementGuid>2a660312-c01f-4eee-b48b-ef4159f9bbcc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mc-nav&quot;)/div[@class=&quot;mc-dropdown&quot;]/ul[@class=&quot;mc-dropdown-menu&quot;]/li[3]/a[1]</value>
+      <webElementGuid>03d8bba0-5163-4ee9-b79c-ed67ad31b33e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//nav[@id='mc-nav']/div[3]/ul/li[3]/a</value>
+      <webElementGuid>87470a59-27fb-4df9-8c96-209ff9c9b77e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Statement of Faith')]</value>
+      <webElementGuid>832b88a7-8862-4c34-aa87-9fdabc0b44b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Team and Board'])[1]/following::a[1]</value>
+      <webElementGuid>cba56cac-82a5-449f-8171-43b5dd0f5a9b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[1]/following::a[2]</value>
+      <webElementGuid>3134817b-1dbb-40d7-b334-27624687d085</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[1]/preceding::a[1]</value>
+      <webElementGuid>cc8d7be3-80af-413f-919d-369b5cea9180</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[1]/preceding::a[2]</value>
+      <webElementGuid>b31d7966-1546-4794-91cb-5cae7f91ea47</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Statement of Faith']/parent::*</value>
+      <webElementGuid>478e6a6f-b209-4220-8d5a-d788ecb5a37e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionworks.global/statement-of-faith/')]</value>
+      <webElementGuid>8c43245b-68e7-4eb5-bb88-6d6e498182f4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/ul/li[3]/a</value>
+      <webElementGuid>67b19989-1f1c-4aa6-89c2-bc56994d6325</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionworks.global/statement-of-faith/' and (text() = 'Statement of Faith' or . = 'Statement of Faith')]</value>
+      <webElementGuid>57262b6d-eb5a-47d3-818e-5e2d8654a09e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

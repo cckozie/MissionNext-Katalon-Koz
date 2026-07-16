@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Hamburger</name>
+   <tag></tag>
+   <elementGuidId>1f088e79-f616-493f-adc4-9b879a873420</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>i.mob-icon-menu.mob-menu-icon</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/button</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>dda698b4-d67c-4b42-9176-8baa7eb04bc9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>mob-icon-menu mob-menu-icon</value>
+      <webElementGuid>fa26cc12-9487-483d-b537-1a993514ffd2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;wf-roboto-n4-active js_active vc_desktop vc_transform vc_transform vc_transform js flexbox flexboxlegacy webgl no-touch geolocation rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg smil svgclippaths wf-roboto-n1-active wf-roboto-n3-active wf-roboto-n5-active wf-roboto-n7-active wf-roboto-n9-active wf-roboto-i1-active wf-roboto-i3-active wf-roboto-i4-active wf-roboto-i5-active wf-roboto-i7-active wf-roboto-i9-active wf-opensans-n3-active wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-n8-active wf-opensans-i3-active wf-opensans-i4-active wf-opensans-i6-active wf-opensans-i7-active wf-opensans-i8-active wf-robotoslab-n1-active wf-robotoslab-n3-active wf-robotoslab-n4-active wf-robotoslab-n7-active wf-active mobile-false skrollr skrollr-desktop&quot;]/body[@class=&quot;home wp-singular page-template-default page page-id-10 wp-theme-levelup animated-anchors group-blog mob-menu-slideout-over wpb-js-composer js-comp-ver-8.7.1 vc_responsive animate-in is-transitioned is-loaded is-discover&quot;]/div[@class=&quot;mob-menu-header-holder mobmenu&quot;]/div[@class=&quot;mobmenur-container&quot;]/a[@class=&quot;mobmenu-right-bt mobmenu-trigger-action&quot;]/i[@class=&quot;mob-icon-menu mob-menu-icon&quot;]</value>
+      <webElementGuid>2de66a54-95c3-4189-a140-7ec2b7205a16</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a/i</value>
+      <webElementGuid>d9f5a7d5-1ffd-4d5e-a02f-ef51a32185ce</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

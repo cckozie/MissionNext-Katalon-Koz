@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Connecting sub-arrow</name>
+   <tag></tag>
+   <elementGuidId>f2909663-ef32-46aa-aabb-09c8aa02fc78</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>span.sub-arrow</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[2]/ul/li[1]/a/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>41f6ba13-acfd-4fbe-be11-085b2bc75198</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sub-arrow</value>
+      <webElementGuid>cfd13214-c08a-42dc-8ab0-68d9d221fb18</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-1779905485692575-1&quot;)/span[@class=&quot;sub-arrow&quot;]</value>
+      <webElementGuid>8769397d-221d-42a3-b576-3faf3cf58bb2</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//a[@id='sm-1779905485692575-1']/span</value>
+      <webElementGuid>58a6d18e-d4f7-4e8e-aede-62c73126cc77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Skip to content'])[1]/following::span[1]</value>
+      <webElementGuid>70819c11-e452-442d-aaa4-b04e2a02a705</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionConnexion'])[1]/preceding::span[1]</value>
+      <webElementGuid>56193c26-5609-43ca-95b5-bda785b1f90d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='MIssionNext'])[1]/preceding::span[1]</value>
+      <webElementGuid>9461d5f8-16fe-430f-9b35-6be9d72efa61</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span</value>
+      <webElementGuid>ffd61f58-e8fd-41bf-8d0e-56a85ceb9962</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

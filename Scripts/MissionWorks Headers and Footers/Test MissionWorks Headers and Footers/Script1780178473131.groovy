@@ -17,7 +17,10 @@ import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.io.File as File
+import java.io.File
+
+import javax.lang.model.util.Elements
+
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
@@ -28,6 +31,13 @@ import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
 import com.kms.katalon.core.testobject.SelectorMethod
 import com.kms.katalon.core.testobject.TestObject
 import org.openqa.selenium.interactions.Actions;
+import org.sikuli.script.*
+
+if(GlobalVariable.callingTestCase != '') {
+	calledFlag = true
+} else {
+	calledFlag = false
+}
 
 ////////////////////////////////////////////////////
 // Test for mobile
@@ -35,9 +45,65 @@ import org.openqa.selenium.interactions.Actions;
 // Test for link on the email address
 
 
+
+
+// ######################################################################
+// ######################################################################
 // first letter of tests; menus, logo, donate, footer
 myTests = 'mldf'
-//myTests = 'f'
+//myTests = 'm'
+
+// first letter of menu tests; connecting, equipping, about us
+myMenus = 'cea'
+//myMenus = 'e'
+
+mySites = [
+	'MissionNext',
+	'Journey',
+	'Education',
+	'QuickStart',
+	'Journey Guide',
+	'MissionLinked',
+	'Coaching',
+	'About Us',
+	'MissionConnexion',
+	'MissionGuide',
+	'Statement of Faith',
+	'Team and Board',
+	'Careers',
+	'Contact Us',
+	'MissionExcellence'
+	]
+
+fontTest = false
+
+maxImageTries = 3
+
+imageTestOnly = false
+
+printMatchPercentage = false
+
+imageMatchMinimum = 50
+
+screensize = 'iPadAir'
+
+printFolders = true
+
+printImageSize = false
+
+printTestObject = true
+
+screenshots = false
+// ######################################################################
+// ######################################################################
+
+devices = ['iPhoneSE':[375,667], 'iPadAir':[820,1180]]
+
+if(screensize != 'full') {
+	sSize = devices.get(screensize)
+	sHeight = sSize[0]
+	sWidth = sSize[1]
+}
 
 tests = ['menuTest':false, 'logoTest':false, 'donateTest':false, 'footerTest':false]
 
@@ -47,6 +113,27 @@ for(test in tests) {
 		tests.put(test.key, true)
 	}
 }
+
+menus = []
+if(myMenus.contains('c')) {
+	menus.add('Connecting')
+}
+
+if(myMenus.contains('e')) {
+	menus.add('Equipping')
+}
+
+if(myMenus.contains('a')) {
+	menus.add('About Us')
+}
+
+screenObjectFolders = ['full' : 'MissionWorks Headers and Footers/', 'iPhoneSE' : 'MissionWorks Headers and Footers - Tablet/',
+	 'iPadAir' : 'MissionWorks Headers and Footers - Tablet/' ]
+
+screenFolderBase = screenObjectFolders.get(screensize)
+
+myObjectFolder = ''
+
 fontWeights = []
 
 domain = GlobalVariable.domain
@@ -71,7 +158,10 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 	"Education" : "https://education.missionnext.org/education-home/login-here", "QuickStart" : "https://quickstart.missionnext.org/quickstart-home/login-here",
 	'Journey Guide' : 'https://jg.missionnext.org/', 'MissionLinked' : 'https://missionlinked.global/',
 	'Coaching' : 'https://missionnext.org/homepage/goer/resources-for-goers/journey-guides/', 'About Us' : 'https://missionworks.global/homepage/about-us/',
-	'MissionConnexion' : 'https://missionconnexion.global/', 'MissionGuide' : 'https://missionguide.global/']
+	'MissionConnexion' : 'https://missionconnexion.global/', 'MissionGuide' : 'https://missionguide.global/',
+	'Statement of Faith' : 'https://missionworks.global/statement-of-faith/', 'Team and Board' : 'https://missionworks.global/team-and-board/',
+	'Careers' : 'https://missionworks.global/careers/', 'Contact Us' : 'https://missionworks.global/contact-us/',
+	'MissionExcellence' : 'https://missionexcellence.global/']
 
 //sites = ['MissionNext' : "https://missionnext.org/"]
 //sites = ['MissionLinked' : 'https://missionlinked.global/']
@@ -83,6 +173,11 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 //sites = ['About Us' : 'https://missionworks.global/homepage/about-us/']
 //sites = ['MissionConnexion' : 'https://missionconnexion.global/']
 //sites = ['MissionGuide' : 'https://missionguide.global/']
+//sites = ['Statement of Faith' : 'https://missionworks.global/statement-of-faith/']
+//sites = ['Team and Board' : 'https://missionworks.global/team-and-board/']
+//sites = ['Careers' : 'https://missionworks.global/careers/']
+//sites = ['Contact Us' : 'https://missionworks.global/contact-us/']
+//sites = ['MissionExcellence' : 'https://missionexcellence.global/']
 
 if(sites.size() == 1) { 
 	fileNameAdd = '-' + sites.keySet().first()
@@ -92,38 +187,75 @@ if(sites.size() == 1) {
 	fileNameAdd = '-ALL'
 }
 
-menus = []
-menus.add('Connecting')
-menus.add('Equipping')
-menus.add('About Us')
-//menus = []
+if(screensize != 'full') {
+	fileNameAdd += '-' + screensize
+}
 
-footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
-	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true], "a_Sign Up" : ["verify", "Email Subscription", true],
-	  "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true], "i_Facebook" : ["link", "MissionWorks | Facebook", false], 
-	  "i_Instagram" : ["link", "MissionWorks (@missionworksglobal) • Instagram photos and videos",false], "img_ECFA" : ["image", "", false], "img_Gold Transparency" : ["image", "", false],
-	  "p_Copyright  2024-2026 MissionWorks" : ["text", "Copyright © 2024-2026 MissionWorks - All rights reserved.", false], 
-	  "span_Address" : ["text", "1400 NE 136th Ave, Vancouver, WA 98684", false], "span_Email" : ["text", "Info@MissionWorks.global", false], "span_Phone" : ["text", "503.360.1865", false]]
+////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-//footerElements = ["a_Careers - Copy" : ["link", "Careers – MissionWorks", true]]
+if(calledFlag) { //Because of some issue of testing images on multiple causes some matching to fail, this allows processing one site at a time
+	mySites = varSite
+	
+	imageTestOnly = true
+	
+	printMatchPercentage = true
+	
+	imageMatchMinimum = 50
+}
+
+footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true],
+	 "a_Sign Up" : ["verify", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
+	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
+	 "span_Phone" : ["text", "503.360.1865", false], "span_Email" : ["text", "Info@MissionWorks.global", false],
+	 "span_Address" : ["text", "1400 NE 136th Ave, Vancouver, WA 98684", false],
+	 "img_Gold Transparency" : ["image", "", false], "img_ECFA" : ["image", "", false], 
+	 "p_Copyright  2024-2026 MissionWorks" : ["text", "Copyright © 2024-2026 MissionWorks - All rights reserved.", false],
+	 "i_Facebook" : ["link", "MissionWorks | Facebook", false], 
+	 "i_Instagram" : ["link", "MissionWorks (@missionworksglobal) • Instagram photos and videos",false]]
+
+myImagePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/MW_Footer/'
 
 outFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + now + '.txt')
 
 errorFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + now + '-ERRORS.txt')
 
+errorsOnlyFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + now + '-ERRORS ONLY.txt')
+
 outFile = new File(outFileName)
 
 errorFile = new File(errorFileName)
 
+errorsOutFile = new File(errorsOnlyFileName)
+
 objectsFile = new File('/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Headers and Footers/Used Test Objects.txt')
 
-objectsFile.write('\n')
+if(!calledFlag) {
+	objectsFile.write('\n')
+}
+
+siteList = []
+count = 0
+outText = ''
+for(site in sites) {
+	if(site.key in mySites) {
+		outText += site.key + ', '
+		count++
+		if(count > 10) {
+			outText += '\n           '
+			count = 0
+		}
+	}
+}
 
 GlobalVariable.outFile = outFile
 
 outFile.write(myTestCase + ' on the ' + domain + ' domain.\n')
 
-outFile.append('Testing sites: ' + sites.keySet() + '\n')
+outFile.append('\nTesting sites: ' + outText + '\n')
+
+errorsOutFile.write(myTestCase + ' on the ' + domain + ' domain.\n')
+
+errorsOutFile.append('\nTesting sites: ' + outText + '\n')
 
 errorFlag = false
 
@@ -131,36 +263,95 @@ arrow = ''
 
 myObjectFolder = ''
 
-printFolders = false
+site = ''
+
+noHeaderFlag = false
 
 usedFolders = []
 
 objects = []
 
+lastObjectFolder = ''
+
+// [menu/footer option|site : font size, font weight, font family]
+fontDetails = [:]
+
+// [image|site : width, height]
+imageSizes = [:]
+
+// [image|site : match percentage]
+imageMatches = [:]
+
 for(site in sites) {
 	
-	if(tests.get('menuTest')) {
+	if(site.key in mySites) {
+	
+		errorsOutFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
 		
-		for(menu in menus) {
-			retValue = 	testMenus(site.key, site.value, menu)
+		println(tests.get('menuTest'))
+		
+//		System.exit(0)
+		
+		if(tests.get('menuTest')) {
+		
 			
-			if(retValue) {
-				errorFlag = true
+			for(menu in menus) {
+				retValue = 	testMenus(site.key, site.value, menu)
 				
+				if(retValue == 'no header') {
+					noHeaderFlag = true
+					break
+				}
 			}
 		}
+	
+		if(tests.get('logoTest') && noHeaderFlag == false) {
+			testMWLogo(site.key)
+		}
+		
+		if(tests.get('donateTest') && noHeaderFlag == false) {
+			testDonate(site.key)
+		}
+		
+		if(tests.get('footerTest')) {
+			if(site.key.indexOf('education') > 0) {
+				System.exit(0)
+			}
+	
+			testFooter(site.key)
+		}
 	}
+}
 
-	if(tests.get('logoTest')) {
-		testMWLogo(site.key)
+if(fontTest) {
+	outFile.append('\n<<<<< Font Sizes and Weights >>>>>\n')
+	sortedDetails = fontDetails.sort()
+	sortedDetails.each {
+		outFile.append(it.key + ', ' + it.value[0] + ', ' + it.value[1] + ', ' + it.value[2] + '\n')
 	}
-	
-	if(tests.get('donateTest')) {
-		testDonate(site.key)
+}
+
+if(printImageSize) {
+	outFile.append('\n<<<<< Image Sizes >>>>>\n')
+	sortedImages = imageSizes.sort()
+	sortedImages.each {
+		outFile.append(it.key + ', ' + it.value[0] + ', ' + it.value[1] + '\n')
 	}
-	
-	if(tests.get('footerTest')) {
-		testFooter(site.key)
+}
+
+if(printMatchPercentage) {
+	outFile.append('\n<<<<< Image Match Percentages >>>>>\n')
+	sortedImages = imageMatches.sort()
+	sortedImages.each {
+		outFile.append(it.key + ', ' + it.value +'\n')
+	}
+}
+
+if(printTestObject) {
+	outFile.append('\n<<<<< Test Objects >>>>>\n')
+	sortedObjects = objects.sort()
+	sortedObjects.each {
+		outFile.append(it +'\n')
 	}
 
 }
@@ -172,6 +363,7 @@ if(errorFlag) {
 	
 WebUI.closeBrowser()
 
+println('################# FONT USAGES #################')
 fontWeights.each {
 	println(it)
 }
@@ -186,6 +378,28 @@ objects.each {
 	println(it)
 }
 
+def navigateToUrl(url) {
+	
+	WebUI.navigateToUrl(url)
+	
+	securityPageFalse = WebUI.verifyTextNotPresent('Performing security verification', false, FailureHandling.OPTIONAL)
+	
+	if(!securityPageFalse) {
+		
+		WebUI.closeBrowser()
+		
+		WebUI.openBrowser(url)
+		
+//		WebUI.navigateToUrl(url)
+	}
+		
+	if(screensize == 'full') {
+		WebUI.maximizeWindow()
+	} else {
+		WebUI.setViewPortSize(sHeight, sWidth)
+	}
+}
+
 def testPageTitle(option) {
 	
 	println('<<< getting page title')
@@ -194,6 +408,7 @@ def testPageTitle(option) {
 	
 	if(linkedURL.contains('wordpress')) {
 		outFile.append('#### ERROR: Linked to page is in the sandbox.\n')
+		errorsOutFile.append('#### ERROR: Linked to page is in the sandbox.\n')
 		errorFlag = true
 	}
 	
@@ -203,6 +418,7 @@ def testPageTitle(option) {
 	
 	if(title != pageTitles.get(option)) {
 		outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
+		errorsOutFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
 		errorFlag = true
 	}
 }
@@ -227,23 +443,43 @@ def testForObjectExists(objectFolder, testObject) {
 		println("The element XPath is: " + objectXpath)
 		
 		// By.xpath or By.cssSelector bypassing Katalon's repository tracking
-		exists = !driver.findElements(By.xpath(objectXpath)).isEmpty()
+//		exists = !driver.findElements(By.xpath(objectXpath)).isEmpty()
 		
-		if(exists) {
-			println('Returning true')
-			return true
+		elements = driver.findElements(By.xpath(objectXpath))
+		
+		elementCount = elements.size()
+		
+		if(elementCount == 1) {
+			if(elements[0].isDisplayed()) {
+				println('Returning true')
+				return true
+			} else {
+				println('the element is not visible')
+			}
+		} else {
+			println('the element count is ' + elementCount)
 		}
 	}
 	return false
 }
 
 
-def getObjectFolder(folderBase, testObject) {
+def getObjectFolder(folderBase, testObject, mySite) {
 	
-	testObjectFolders = ['/', '/Custom1/', '/Custom2/', '/Custom3/']
+	testObjectFolders = ['/', '/Custom1/', '/Custom2/', '/Custom3/', '/Custom4/', '/Custom5/']
+	
+	if(lastObjectFolder != '') {
+		testObjectFolders.add(0, lastObjectFolder)
+//		outFile.append(testObjectFolders + '\n')
+	}
 	
 	for(folder in testObjectFolders) {
-		
+/*		
+		if(testObject.contains('p_Copyright')) {
+			println(testObjectFolders)
+			println(folder)
+		}
+*/		
 		objectFolder = folderBase + folder
 		
 		exists = testForObjectExists(objectFolder, testObject)
@@ -251,11 +487,18 @@ def getObjectFolder(folderBase, testObject) {
 		println(exists)
 		
 		if(exists) {
-			
+/*			
+			if(testObject.contains('p_Copyright')) {
+				println(testObjectFolders)
+				println(folder)
+				System.exit(0)
+			}
+*/
 			if(!usedFolders.contains(folder)) {
-				usedFolders.add(objectFolder)
+				usedFolders.add(objectFolder + ' - ' + mySite)
 			}
 			
+			lastObjectFolder = objectFolder
 			return objectFolder
 			
 		}
@@ -270,7 +513,7 @@ def testMenus(site, url, menu) {
 	
 	menusMap = ['Connecting' : ['MissionConnexion', 'MissionNext','MissionGuide'],
 		'Equipping' : ['Coaching', 'MissionLinked','MissionArmor', 'MissionExcellence'],
-		'About Us' : ['About Us', 'About Us', 'Statement of Faith', 'Team and Board','Careers', 'Contact Us']]
+		'About Us' : ['About Us Header', 'About Us', 'Statement of Faith', 'Team and Board','Careers', 'Contact Us']]
 	
 	menuOptions = menusMap.get(menu)
 	
@@ -283,7 +526,7 @@ def testMenus(site, url, menu) {
 		'MissionArmor' : 'MissionArmor – MissionWorks',
 		'MissionExcellence' : 'MissionExcellence',
 	
-		'About Us' : 'About Us /Bakery Builder – MissionWorks',
+		'About Us Header' : 'About Us /Bakery Builder – MissionWorks',
 		'About Us' : 'About Us /Bakery Builder – MissionWorks',
 		'Statement of Faith' : 'Statement of Faith – MissionWorks',
 		'Team and Board' : 'Team and Board – MissionWorks',
@@ -292,7 +535,142 @@ def testMenus(site, url, menu) {
 	
 	WebUI.openBrowser('')
 	
-	WebUI.maximizeWindow()
+	navigateToUrl(url)
+				
+	// Test to see if there is a "Donate" link near the top of the page
+	donateFound = false
+	
+	driver = DriverFactory.getWebDriver()
+	
+	// If not full screen, find the hamburger test object
+	if(screensize != 'full') {
+		WebUI.setViewPortSize(sHeight, sWidth)
+		
+		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.HOME))
+		
+		hamburgerBase = screenFolderBase + 'Header'
+		
+		hamburger = 'i_Hamburger'
+		
+		println(hamburgerBase + ';' + hamburger)
+		
+		folder = getObjectFolder(hamburgerBase, hamburger, site)
+		
+		if(folder == null) {
+			outFile.append('#### ERROR: Unable to find the Hamburger in the header. Bypassing menu, logo, and donate tests on ' + site + '.\n')
+			errorsOutFile.append('#### ERROR: Unable to find the Hamburger in the header. Bypassing menu, logo, and donate tests on ' + site + '.\n')
+			errorFlag = true
+	
+			return('no header')
+		}
+		
+		hamburger = folder + hamburger
+		
+		println('hamburger is ' + hamburger)
+		
+		WebUI.click(findTestObject(hamburger))
+		
+		WebUI.delay(1)
+				
+//		donateXpath = "//*[contains(@class, 'menu-toggle')]"
+		
+	} else {
+		donateXpath = "//a[text()='Donate']"
+		WebUI.maximizeWindow()
+	}
+	
+	donateXpath = "//a[text()='Donate']"
+	
+	println(donateXpath)
+	
+	folderBase = screenFolderBase + 'Menus/' + menu
+	
+	println(folderBase)
+	
+	arrow = 'span_' + menu + ' sub-arrow'
+	
+	println(folderBase + ';' + arrow)
+	
+	myObjectFolder = getObjectFolder(folderBase, arrow, site)
+/*	
+	if(screensize == 'full') {
+		donateXpath = "//a[text()='Donate']"
+		WebUI.maximizeWindow()
+	}
+*/	
+	List<WebElement> donateElements = driver.findElements(By.xpath(donateXpath))
+	
+	if(donateElements.size() > 0) {
+		
+		for(element in donateElements) {
+
+			println(element)
+			
+			elementLink = element.getAttribute("href")
+			
+			println(elementLink)
+			
+			if(elementLink != null) {
+			
+				location = element.getLocation()
+				
+				println(location)
+				
+				yLoc = location.getY()
+				
+				if(screensize == 'full') {
+					if(yLoc < 240) {
+						donateFound = true
+					}
+				} else {
+					if(yLoc < 290) {
+						donateFound = true
+					}
+				}
+			}
+		}
+	} 
+		
+	if(!donateFound) {
+		outFile.append('\n_________________________________________________________________________________________________\n')
+		
+		outFile.append('#### ERROR: Unable to find a Donate link in the header. Bypassing menu, logo, and donate tests on ' + site + '.\n')
+		errorsOutFile.append('#### ERROR: Unable to find a Donate link in the header. Bypassing menu, logo, and donate tests on ' + site + '.\n')
+		errorFlag = true						
+		
+		return('no header')
+	}
+////////////////
+	println('myObjectFolder is ' + myObjectFolder)
+	
+	if(myObjectFolder != null) {
+		
+		println('myObjectFolder is ' + myObjectFolder)
+	
+	} else {
+		println("###NOT ABLE TO FIND OBJECT FOLDER")
+		
+		outFile.append('#### ERROR: Unable to find object folder.\n')
+		errorsOutFile.append('#### ERROR: Unable to find object folder.\n')
+		
+		errorFlag = true
+		
+		return
+	}
+	
+	println('my arrow is ' + myObjectFolder + arrow)
+	
+	arrow = myObjectFolder + arrow
+	
+	objectsFile.append(arrow + '\n')
+	
+	if(!objects.contains(arrow)) {
+		objects.add(arrow + ' - ' + site)
+	}
+//////////////////
+	Screen s = new Screen()
+	
+//	height = WebUI.getViewportHeight()
 	
 	outFile.append('\n_________________________________________________________________________________________________\n')
 	
@@ -313,39 +691,70 @@ def testMenus(site, url, menu) {
 	
 	for(option in menuOptions) {
 		
-		WebUI.navigateToUrl(url)
+		if(screensize != 'full' && !first) {
+			WebUI.click(findTestObject(hamburger))
+			WebUI.delay(1)
+		}
+			
+		first = false
 		
 		// This curson action is needed for the MissionLinked site where the menu drop down arrows do not appear until after a cursor movement
-		if(site == 'MissionLinked') {
+		if(site == 'MissionLinked') { // && screensize == 'full') {
 			
 			driver = DriverFactory.getWebDriver()
 			
-			List<WebElement> donateElements = driver.findElements(By.xpath("//a[contains(text(), 'Donate')]"))
+			if(screensize == 'full') {		
+				hoverXpath = "//a[contains(text(), 'Donate')]"
+			} else {
+				hoverXpath = "//*[contains(@class, 'menu-toggle')]"
+			}
 			
-			if(donateElements.size() > 0) {
+			List<WebElement> hoverElements = driver.findElements(By.xpath(hoverXpath))
+			
+			if(hoverElements.size() > 0) {
 				
 				Actions actions = new Actions(driver);
 				
-				actions.moveToElement(donateElements[0]).perform();
+				actions.moveToElement(hoverElements[0]).perform();
 			}
 		}
-		WebUI.waitForPageLoad(30)
+//		WebUI.waitForPageLoad(30)
+		
+//		WebUI.delay(1)
 		
 		WebDriver driver = DriverFactory.getWebDriver()
 		
-		folderBase = 'MissionWorks Headers and Footers/Menus/' + menu
+//		folderBase = screenFolderBase + 'Menus/' + menu
 		
+		/*
 		if(first) {
 			
 			first = false
-		
+			
 			arrow = 'span_' + menu + ' sub-arrow'
 			
 			println(folderBase + ';' + arrow)
 			
-			myObjectFolder = getObjectFolder(folderBase, arrow)
-			
-			println(myObjectFolder)
+			myObjectFolder = getObjectFolder(folderBase, arrow, site)
+				
+			if(screensize != 'full') {
+
+				hamburgerBase = screenFolderBase + 'Header'
+		
+				hamburger = 'i_Hamburger'
+				
+				println(hamburgerBase + ';' + hamburger)
+				
+				folder = getObjectFolder(hamburgerBase, hamburger, site)
+				
+				hamburger = folder + hamburger
+				
+				println('hamburger is ' + hamburger)
+				
+	//			WebUI.delay(2)
+			}
+
+			println('myObjectFolder is ' + myObjectFolder)
 			
 			if(myObjectFolder != null) {
 				
@@ -355,7 +764,8 @@ def testMenus(site, url, menu) {
 				println("###NOT ABLE TO FIND OBJECT FOLDER")
 				
 				outFile.append('#### ERROR: Unable to find object folder.\n')
-	
+				errorsOutFile.append('#### ERROR: Unable to find object folder.\n')
+				
 				errorFlag = true
 				
 				return
@@ -368,93 +778,114 @@ def testMenus(site, url, menu) {
 			objectsFile.append(arrow + '\n')
 			
 			if(!objects.contains(arrow)) {
-				objects.add(arrow)
+				objects.add(arrow + ' - ' + site)
 			}
 			
 		}
+		*/
 		
 		if(arrow != null) {
+/*			
+			if(screensize != 'full') {
+				WebUI.click(findTestObject(hamburger))
+				WebUI.delay(2)		
+			}
+*/			
+			if(printFolders) {
+				outFile.append('----- Using ' + myObjectFolder + '.\n')
+			}
 		
 			println(myObjectFolder)
 						
 			object = myObjectFolder + 'a_' + option
 			
+			println(object)
+			
 			objectsFile.append(object + '\n')
 			
 			if(!objects.contains(object)) {
-				objects.add(object)
+				objects.add(object + ' - ' + site)
 			}
 			
 			println(object)
 			
-			if(menu == 'About Us' && optionCount == 0) {
-				
-				outFile.append('\nTesting the link on the About Us menu header on ' + site + '.\n')
-		
-			} else {
-					
-				outFile.append('\nTesting ' + option + ' option on the ' + menu + ' menu on ' + site + '.\n')
-				
-			}
+			outFile.append('\nTesting ' + option + ' option on the ' + menu + ' menu on ' + site + '.\n')
 			
 			println(arrow) 
-			
-//			arrowClickable = WebUI.waitForElementClickable(findTestObject(arrow), 1)
-			arrowClickable = WebUI.verifyElementClickable(findTestObject(arrow), FailureHandling.OPTIONAL)			
+	
+			arrowClickable = WebUI.verifyElementClickable(findTestObject(arrow), FailureHandling.OPTIONAL)	
+					
 			if(arrowClickable) {
-				
+			
 				println('>>> clicking menu down arrow')
 				
 				WebUI.click(findTestObject(arrow))
+								
+				WebUI.delay(1)
 				
-				if(menu == 'About Us' && option == 'About Us' && optionCount == 0) { //This tests clicking on the About Us menu text, not the About Us menu option
-					
-					WebUI.click(findTestObject(arrow))
-					
-					optionCount++
-					
-					testPageTitle(option)
-/*					
-					println('<<< getting page title')
-					
-					title = WebUI.getWindowTitle()
-					
-					println(title)
-					
-					if(title != pageTitles.get(option)) {
-						outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
-						errorFlag = true
-					}
-*/					
+				hasLink = WebUI.verifyElementHasAttribute(findTestObject(object), "href", 1, FailureHandling.OPTIONAL)
+				
+				if(!hasLink) {
+					outFile.append('#### ERROR: There is no link on the ' + option + ' menu option.\n')
+					errorsOutFile.append('#### ERROR: There is no link on the ' + option + ' menu option.\n')
+					errorFlag = true
+
 				} else {
 				
-					WebUI.delay(1)
-				
-//					optionclickable = WebUI.waitForElementClickable(findTestObject(object), 1)		
+					WebUI.waitForElementClickable(findTestObject(object), 2, FailureHandling.OPTIONAL)
+							
 					optionclickable = WebUI.verifyElementClickable(findTestObject(object), FailureHandling.OPTIONAL)	
 							
 					if(optionclickable) {
 						
-						println('Testing the option background color')
+						if(fontTest) {
 						
-						bgColor = WebUI.getCSSValue(findTestObject(objectFolder + 'a_' + option), 'background-color')
-						
-						if(bgColor != 'rgba(0, 0, 0, 0)') {
-				
-							outFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of white.\n')
-							errorFlag = true						
+							fontSize = WebUI.getCSSValue(findTestObject(object), 'font-size')
+		
+							fontWeight = WebUI.getCSSValue(findTestObject(object), 'font-weight')
+							
+							fontFamily = WebUI.getCSSValue(findTestObject(object), 'font-family')
+							
+							outFile.append('Font size = ' + fontSize + '. Font weight = ' + fontWeight + '. Font family = ' + fontFamily + '.\n')
+							
+							values = [fontSize,fontWeight,fontFamily]
+							
+							// [menu/footer option|site : font size, font weight]
+							fontDetails.put('Menu option ' + option + ' on ' + site, values)
+							
 						}
 						
-//						WebUI.mouseOver(findTestObject(object), FailureHandling.OPTIONAL)
+						if(screensize == 'full' || option != 'About Us Header') {
+							println('Testing the option background color')
+		
+							bgColor = WebUI.getCSSValue(findTestObject(object), 'background-color')
+							
+							if(bgColor != 'rgba(0, 0, 0, 0)') {
+					
+								outFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of white.\n')
+								errorsOutFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of white.\n')
+								errorFlag = true						
+							}
+						}
+						
+						WebUI.mouseOver(findTestObject(object), FailureHandling.OPTIONAL)
 					
 						println('Testing the option text')
 						
 						linkText = WebUI.getText(findTestObject(object))
 						
-						if(linkText != option) {
-							
-							outFile.append('#### ERROR: The text for the ' + option + ' link is "' + linkText + '", but should be "' + option + '"\n')
-							errorFlag = true
+						if(option != 'About Us Header') {
+							if(linkText != option) {			
+								outFile.append('#### ERROR: The text for the ' + option + ' link is "' + linkText + '", but should be "' + option + '"\n')
+								errorsOutFile.append('#### ERROR: The text for the ' + option + ' link is "' + linkText + '", but should be "' + option + '"\n')
+								errorFlag = true
+							}
+						} else {
+							if(linkText != 'About Us') {
+								outFile.append('#### ERROR: The text for the ' + option + ' link is "' + linkText + '", but should be "About Us"\n')
+								errorsOutFile.append('#### ERROR: The text for the ' + option + ' link is "' + linkText + '", but should be "About Us"\n')
+								errorFlag = true
+							}
 						}
 											
 						println('>>> clicking menu option ' + option)
@@ -462,47 +893,36 @@ def testMenus(site, url, menu) {
 						WebUI.click(findTestObject(object))
 						
 						testPageTitle(option)
-/*						
-						println('<<< getting page title')
 						
-						title = WebUI.getWindowTitle()
-						
-						println(title)
-						
-						if(title != pageTitles.get(option)) {
-							outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
-							errorFlag = true
-						}
-*/						
 					} else {
 						outFile.append('#### ERROR: Unable to click on ' + option + ' option.\n')
+						errorsOutFile.append('#### ERROR: Unable to click on ' + option + ' option.\n')
 						errorFlag = true
 					}
 				}
+			
 			} else {
 				outFile.append('#### ERROR: Unable to click on down arrow.\n')
+				errorsOutFile.append('#### ERROR: Unable to click on down arrow.\n')
 				errorFlag = true
 			}
-			
-			WebUI.delay(1)
-			
-		} else {
-			outFile.append('#### ERROR: Unable to find down arrow.\n')
-			errorFlag = true
-		}
 		
-		if(site == 'MissionGuide') {
-			WebUI.closeBrowser()
-			
-			WebUI.openBrowser('')
-			
-			WebUI.maximizeWindow()
+			if(site == 'MissionGuide') {
+				WebUI.closeBrowser()
+				
+				WebUI.openBrowser('')
+				
+				if(screensize != 'full') {
+					WebUI.setViewPortSize(sHeight, sWidth)
+				} else {
+					WebUI.maximizeWindow()
+				}
+				s = new Screen()
+			}
 		}
-					
+		navigateToUrl(url)
 	}
 	
-//	WebUI.navigateToUrl(url)
-
 	return errorFlag	
 }
 
@@ -511,8 +931,16 @@ def testMWLogo(site) {
 	windowIndex = WebUI.callTestCase(findTestCase('_Functions/Test If Browser Open'), [:], FailureHandling.STOP_ON_FAILURE)
 
 	if(windowIndex == null) {
+		
 		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
+		
+		if(screensize != 'full') {
+			WebUI.setViewPortSize(sHeight, sWidth)
+		} else {
+			WebUI.maximizeWindow()
+		}
+	
+		s = new Screen()
 	}
 	
 	siteURL = sites.get(site)
@@ -523,25 +951,31 @@ def testMWLogo(site) {
 	
 	outFile.append('\n< Testing the MissionWorks logo option on ' + site + '.>\n')
 	
-	WebUI.navigateToUrl(siteURL)
+	navigateToUrl(siteURL)
 	
 	WebUI.delay(1)
 	
 	testObject = 'img_MissionWorks logo'
 	
-	folderBase = 'MissionWorks Headers and Footers/Header'
+//	folderBase = 'MissionWorks Headers and Footers/Header'
+	folderBase = screenFolderBase + 'Header'
 	
-	myObjectFolder = getObjectFolder(folderBase, testObject)
+	myObjectFolder = getObjectFolder(folderBase, testObject, site)
 	
 	println(myObjectFolder)
 	
 	if(myObjectFolder != null) {
 		
 		println('myObjectFolder is ' + myObjectFolder)
-		
+
+		if(printFolders) {
+			outFile.append('----- Using ' + myObjectFolder + '.\n')
+		}
+					
 	} else { 
 	
 		outFile.append('\n#### ERROR: Unable to find the MissionWorks logo in any test object folder.\n')
+		errorsOutFile.append('\n#### ERROR: Unable to find the MissionWorks logo in any test object folder.\n')
 		
 		errorFlag = true
 		
@@ -555,7 +989,7 @@ def testMWLogo(site) {
 		objectsFile.append(myObjectFolder + testObject + '\n')
 	
 		if(!objects.contains(myObjectFolder + testObject)) {
-			objects.add(myObjectFolder + testObject)
+			objects.add(myObjectFolder + testObject + ' - ' + site)
 		}
 			
 		clickable = WebUI.verifyElementClickable(findTestObject(myObjectFolder + 'img_MissionWorks logo'), FailureHandling.OPTIONAL)
@@ -576,7 +1010,9 @@ def testMWLogo(site) {
 				WebUI.switchToWindowIndex(1)
 				WebUI.waitForPageLoad(10)
 				WebUI.delay(2)
-				outFile.append('#### ERROR: Clicking the MissionWorks Logo on ' + site + ' opens a second tab.\n')
+			} else {
+				outFile.append('#### ERROR: Clicking the MissionWorks Logo on ' + site + ' does not open a second tab.\n')
+				errorsOutFile.append('#### ERROR: Clicking the MissionWorks Logo on ' + site + ' does not open a second tab.\n')
 				errorFlag = true
 			}
 			
@@ -589,11 +1025,13 @@ def testMWLogo(site) {
 			
 			if(title != 'MissionWorks') {
 				outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + 'MissionWorks' + '"\n')
+				errorsOutFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + 'MissionWorks' + '"\n')
 				errorFlag = true
 			}
 			
 			if(mwUrl != 'https://missionworks.global/') {
 				outFile.append('#### ERROR: The URL of linked to page is "' + mwUrl + '", but should be "' + 'https://missionworks.global/' + '"\n')
+				errorsOutFile.append('#### ERROR: The URL of linked to page is "' + mwUrl + '", but should be "' + 'https://missionworks.global/' + '"\n')
 				errorFlag = true
 			}
 			
@@ -602,12 +1040,14 @@ def testMWLogo(site) {
 				WebUI.switchToWindowIndex(0)
 			}
 		} else {
-			outFile.append('#### ERROR: Unable to click on MissionWorks logo.\n')
+			outFile.append('#### ERROR: Unable to click on MissionWorks logo on ' + site + '.\n')
+			errorsOutFile.append('#### ERROR: Unable to click on MissionWorks logo on ' + site + '.\n')
 			errorFlag = true
 		}
 
 	} else {
-		outFile.append('#### ERROR: Unable to find the MissionWorks logo.\n')
+		outFile.append('#### ERROR: Unable to find the MissionWorks logo on ' + site + '.\n')
+		errorsOutFile.append('#### ERROR: Unable to find the MissionWorks logo on ' + site + '.\n')
 		errorFlag = true
 	}
 
@@ -623,22 +1063,46 @@ def testDonate(site) {
 	
 	if(windowIndex == null) {
 		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
 	}
 	
 	siteURL = sites.get(site)
 	
 	println(siteURL)
 	
-	WebUI.navigateToUrl(siteURL)
+	navigateToUrl(siteURL)
+
+	if(screensize != 'full') {
+		WebUI.setViewPortSize(sHeight, sWidth)
+		
+		hamburgerBase = screenFolderBase + 'Header'
+		
+		hamburger = 'i_Hamburger'
+		
+		println(hamburgerBase + ';' + hamburger)
+		
+		folder = getObjectFolder(hamburgerBase, hamburger, site)
+		
+		hamburger = folder + hamburger
+		
+		println('hamburger is ' + hamburger)
+		
+		WebUI.click(findTestObject(hamburger))
+		
+		WebUI.delay(1)
+				
+	} else {
+		WebUI.maximizeWindow()
+	}
+
+	s = new Screen()
 	
 	outFile.append('\n< Testing Donate option on ' + site + '.>\n')
 	
 	testObject = 'a_Donate'
 	
-	folderBase = 'MissionWorks Headers and Footers/Header'
+	folderBase = screenFolderBase + 'Header' 
 	
-	myObjectFolder = getObjectFolder(folderBase, testObject)
+	myObjectFolder = getObjectFolder(folderBase, testObject, site)
 	
 	println(myObjectFolder)
 	
@@ -646,9 +1110,14 @@ def testDonate(site) {
 		
 		println('myObjectFolder is ' + myObjectFolder)
 		
+		if(printFolders) {
+			outFile.append('----- Using ' + myObjectFolder + '.\n')
+		}
+					
 	} else {
 	
 		outFile.append('#### ERROR: Unable to find the MissionWorks logo in any test object folder.\n')
+		errorsOutFile.append('#### ERROR: Unable to find the MissionWorks logo in any test object folder on ' + site + '.\n')
 		
 		errorFlag = true
 		
@@ -662,12 +1131,13 @@ def testDonate(site) {
 		objectsFile.append(myObjectFolder + testObject + '\n')
 		
 		if(!objects.contains(myObjectFolder + testObject)) {
-			objects.add(myObjectFolder + testObject)
+			objects.add(myObjectFolder + testObject + ' - ' + site)
 		}
 		
 		clickable = WebUI.verifyElementClickable(findTestObject(myObjectFolder + testObject), FailureHandling.OPTIONAL)
 		
 		if(clickable) {
+			WebUI.mouseOver(findTestObject(myObjectFolder + testObject))
 	
 			WebUI.click(findTestObject(myObjectFolder + testObject))
 			
@@ -683,15 +1153,18 @@ def testDonate(site) {
 			
 			if(title != 'MissionWorks Donation') {
 				outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + 'MissionWorks Donation' + '"\n')
+				errorsOutFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + 'MissionWorks Donation' + '"\n')
 				errorFlag = true
 			}
 
 		} else {
-			outFile.append('#### ERROR: Unable to click on the Donation link.\n')
+			outFile.append('#### ERROR: Unable to click on the Donation link on ' + site + '.\n')
+			errorsOutFile.append('#### ERROR: Unable to click on the Donation link on ' + site + '.\n')
 			errorFlag = true
 		}
 	} else {
-		outFile.append('#### ERROR: Unable to find the Donation link.\n')
+		outFile.append('#### ERROR: Unable to find the Donation link on ' + site + '.\n')
+		errorsOutFile.append('#### ERROR: Unable to find the Donation link on ' + site + '.\n')
 		errorFlag = true
 	}
 	
@@ -700,41 +1173,101 @@ def testDonate(site) {
 
 def testFooter(site) {
 	
-	fontTests = ['Careers': 0, 'Copyright':0, 'Email':0]
+	println('Testing site ' + site)
+	
+	footerHamburger = false
+	
+	images = ['phone', 'envelope', 'goldTransparency', 'ecfa', 'facebook', 'instagram' ]
 	
 	windowIndex = WebUI.callTestCase(findTestCase('_Functions/Test If Browser Open'), [:], FailureHandling.STOP_ON_FAILURE)
 	
 	if(windowIndex == null) {
 		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
+		viewPortHeight = WebUI.getViewportHeight()
+		viewPortWidth = WebUI.getViewportWidth()
+		println(viewPortHeight + 'x' + viewPortWidth)
+	
+		if(screensize != 'full') {
+			println('height x width : ' + sHeight + ' x ' + sWidth)
+			WebUI.setViewPortSize(sHeight, sWidth)
+			WebUI.delay(3)
+			viewPortHeight = WebUI.getViewportHeight()
+			viewPortWidth = WebUI.getViewportWidth()
+			println(viewPortHeight + 'x' + viewPortWidth)
+		} else {
+			WebUI.maximizeWindow()
+		}
 	}
+	
+	s = new Screen()
 	
 	siteURL = sites.get(site)
 	
 	println(siteURL)
 	
-	WebUI.navigateToUrl(siteURL)
+	navigateToUrl(siteURL)
 	
-	if(site == 'MissionLinked') {
-	
+	if(site == 'MissionLinked') { // && screensize == 'full') {
+		
 		driver = DriverFactory.getWebDriver()
 		
-		List<WebElement> donateElements = driver.findElements(By.xpath("//a[contains(text(), 'Donate')]"))
+		if(screensize == 'full') {		
+			hoverXpath = "//a[contains(text(), 'Donate')]"
+		} else {
+			hoverXpath = "//*[contains(@class, 'menu-toggle')]"
+		}
 		
-		if(donateElements.size() > 0) {		
-
-			actions = new Actions(driver);
+		List<WebElement> hoverElements = driver.findElements(By.xpath(hoverXpath))
+		
+		if(hoverElements.size() > 0) {
 			
-			actions.moveToElement(donateElements[0]).perform();
-	
+			Actions actions = new Actions(driver);
+			
+			actions.moveToElement(hoverElements[0]).perform();
 		}
 	}
+
+	WebUI.delay(1)
 	
-	WebUI.waitForPageLoad(30)
+	WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+		
+	WebUI.delay(1)
+	
+	if(screenshots) {
+		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '.png'
+		WebUI.takeScreenshot(fileImage)
+		return
+	}
+	
+	if(screensize != 'full') {
+	
+		folderBase = screenFolderBase + 'Footer'
+		
+		myObjectFolder = getObjectFolder(folderBase, 'i_Hamburger', site)
+		
+		println(myObjectFolder)
+		
+		if(myObjectFolder != null) {
+			
+			footerHamburger = true
+			
+			println('myObjectFolder is ' + myObjectFolder)
+			
+			hamburger = myObjectFolder + 'i_Hamburger'
+			
+			WebUI.click(findTestObject(hamburger))
+			
+			WebUI.delay(1)
+		} 
+	}
+	
+//	WebUI.waitForPageLoad(30)
 	
 	outFile.append('\n_________________________________________________________________________________________________\n')
 
 	outFile.append('\n<<< TESTING THE PAGE FOOTER ON ' + site + ' >>>\n')
+	
+	first = true
 	
 	for(element in footerElements) {
 		
@@ -756,9 +1289,34 @@ def testFooter(site) {
 		
 		mySwitch = values[2]
 		
-		folderBase = 'MissionWorks Headers and Footers/Footer'
+		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
 		
-		myObjectFolder = getObjectFolder(folderBase, myElement)
+		if(footerHamburger && !first && mySwitch) {
+			
+			inViewport = WebUI.verifyElementInViewport(findTestObject(hamburger), 1, FailureHandling.OPTIONAL)
+			
+			if(!inViewport) {		
+				WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+			}
+			
+			WebUI.click(findTestObject(hamburger))
+			
+			WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+			
+			WebUI.delay(1)
+			
+		}
+		
+		first = false
+		
+
+		folderBase = screenFolderBase + 'Footer'
+			
+//		outFile.append('Getting myObjectFolder for ' + myElement + ' when lastObjectFolder is ' + lastObjectFolder + '\n')
+		
+		myObjectFolder = getObjectFolder(folderBase, myElement, site)
+		
+//		outFile.append('For ' + myElement + ' myObjectFolder id ' + myObjectFolder)
 		
 		println(myObjectFolder)
 		
@@ -769,11 +1327,11 @@ def testFooter(site) {
 		} else {
 		
 			outFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder.\n')
+			errorsOutFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder on ' + site + '.\n')
 			
 			errorFlag = true
 		}
 	
-				
 		object = myObjectFolder + myElement
 		
 		println(object)
@@ -786,43 +1344,100 @@ def testFooter(site) {
 			
 			println(clickable)
 			
-			WebUI.callTestCase(findTestCase('_Functions/Page Element into View'), [('varObject') : object], FailureHandling.STOP_ON_FAILURE)
-			
-//			WebUI.delay(5)
-			
-			WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+			if(first && printMatchPercentage) { //Test images
+				
+				first = false
+				
+				imageError = false
+				
+				footerReg = new Region(0, 680, 1500, 240)
+				
+				footerReg.highlight(1)
+				
+				outText = 'Match Percentages: '
+				
+				for(image in images) {
+					
+					myImage = myImagePath + image + '.png'
+					
+					println(myImage)
+					
+					targetImage = new Pattern(myImage).similar(0.1f);
+
+					testCount = 1
+					
+					found = footerReg.exists(targetImage).toString()
+					
+					while(found == 'null' && testCount <= maxImageTries) {
+						
+						WebUI.delay(1)
+									
+						found = footerReg.exists(targetImage).toString()
+						
+						testCount++
+					}
+					
+					if(found == 'null') {
+						found = '%0.00 '
+//						System.exit(0)
+					}
+					
+					println(found)
+					
+					pct = found.indexOf('%')
+					
+					space = found.indexOf('.', pct)
+					
+					match = found.substring(pct + 1, space)
+					
+					if((match as Integer) < imageMatchMinimum) {
+						imageError = true
+						match = '#!' + match
+					}
+					
+					println(match)
+					
+					imageMatches.put(image + ' ' + site, match + '%')
+					
+					outText += image + ' - ' + match + '%    '
+				}
+				
+				if(imageError) {
+					outText = '#### ERROR ' + outText
+					errorsOutText = '#### ERROR ' + outText
+				}
+				outFile.append(outText + '\n')
+				
+				if(imageTestOnly) {
+					break
+				}
+			}
 			
 			linkText = WebUI.getText(findTestObject(object))
 			
-			for(test in fontTests) {
-				
-				if(linkText.contains(test.key)) {
-					
-					fontSize = WebUI.getCSSValue(findTestObject(object), 'font-size')
-					
-					println(fontSize)
-					
-					sizeNum = fontSize.replace('px', '')
-					
-					size = Float.parseFloat(sizeNum)
-					
-					if(size <= 14) {
-						fontTests.put(test.key, size)
-						errorFlag = true
-					}
-					
-					fontWeight = WebUI.getCSSValue(findTestObject(object), 'font-weight')
-					
-					fontWeights.add(site + ':' + linkText + ':' + fontWeight)
-					
-					println(fontWeight)
-					
-
-				}
-			}
+			fontSize = WebUI.getCSSValue(findTestObject(object), 'font-size')
+			
+			fontWeight = WebUI.getCSSValue(findTestObject(object), 'font-weight')
+							
+			fontFamily = WebUI.getCSSValue(findTestObject(object), 'font-family')
+							
+			values = [fontSize,fontWeight,fontFamily]
 							
 			if(myType == "link" || myType == "verify") {
 				
+				if(printImageSize && ele == 'Instagram' || ele == 'Facebook') {
+					element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+					width = element.getSize().getWidth();
+					height = element.getSize().getHeight();
+					imageSizes.put('Image ' + ele + ' on ' + site, [width, height])
+				}
+				
+				inViewport = WebUI.verifyElementInViewport(findTestObject(object), 1, FailureHandling.OPTIONAL)
+				
+				if(!inViewport) {		
+					WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+				}
+			
 				WebUI.click(findTestObject(object))
 				
 				WebUI.waitForPageLoad(20)
@@ -837,17 +1452,31 @@ def testFooter(site) {
 					WebUI.switchToWindowIndex(1)
 						WebUI.waitForPageLoad(10, FailureHandling.OPTIONAL)
 						
-						WebUI.delay(2)
+						WebUI.delay(1)
 				}
 				
 				if(myType == "link") {
 					
-					outFile.append('\nTesting the link from "' + ele + '".\n')
+					outFile.append('\nTesting the link from "' + ele + '" on ' + site + '.\n')
+					
+					if(printImageSize && ele == 'Instagram' || ele == 'Facebook') {
+						outFile.append('Image size is ' + width + ' x ' + height + '\n')
+					}
+					
+					if(fontTest && ele != 'Instagram' && ele != 'Facebook') {
+						
+						outFile.append('Font size = ' + fontSize + '. Font weight = ' + fontWeight + '. Font family = ' + fontFamily + '.\n')
+							
+						values = [fontSize,fontWeight,fontFamily]
+						
+						// [menu/footer option|site : font size, font weight]
+						fontDetails.put('Footer link for ' + ele + ' on ' + site, values)
+					}
 					
 					objectsFile.append(myObjectFolder + ele + '\n')
 					
 					if(!objects.contains(myObjectFolder + ele)) {
-						objects.add(myObjectFolder + ele)
+						objects.add(myObjectFolder + ele + ' - ' + site)
 					}
 					
 					if(printFolders) {
@@ -856,7 +1485,8 @@ def testFooter(site) {
 					
 					if(mySwitch && linkText != ele) {
 					
-						outFile.append('#### ERROR: The text for the ' + ele + ' link is "' + linkText + '", but should be "' + ele + '"\n')
+						outFile.append('#### ERROR: The text for the ' + ele + ' link on ' + site + ' is "' + linkText + '", but should be "' + ele + '"\n')
+						errorsOutFile.append('#### ERROR: The text for the ' + ele + ' link on ' + site + ' is "' + linkText + '", but should be "' + ele + '"\n')
 						errorFlag = true
 					}
 					
@@ -865,26 +1495,28 @@ def testFooter(site) {
 					title = WebUI.getWindowTitle()
 					
 					if(title != myTest) {
-						outFile.append('#### ERROR: The title of the page linked from ' + ele + ' is "' + title + '", but should be "' + myTest + '"\n')
+						outFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
+						errorsOutFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
 						errorFlag = true
-					}
-					
-					fSize = fontTests.get(ele, null)
-					
-					if(fSize != null && fSize > 0) {
-						if(ele == 'Careers') {
-							
-							outFile.append('#### ERROR: The font size for the footer menu is too small (' + fontSize + ')\n')
-						}
 					}
 				} else {
 					
-					outFile.append('\nTesting the text on the page linked from "' + ele + '".\n')
+					outFile.append('\nTesting the text on the page linked from "' + ele + '" on ' + site + '.\n')
 					
+					if(fontTest) {
+						
+						outFile.append('Font size = ' + fontSize + '. Font weight = ' + fontWeight + '. Font family = ' + fontFamily + '.\n')
+						
+						values = [fontSize,fontWeight,fontFamily]
+						
+						// [menu/footer option|site : font size, font weight]
+						fontDetails.put('Footer link for ' + ele + ' on ' + site, values)
+					}
+				
 					objectsFile.append(myObjectFolder + ele + '\n')
 					
 					if(!objects.contains(myObjectFolder + ele)) {
-						objects.add(myObjectFolder + ele)
+						objects.add(myObjectFolder + ele + ' - ' + site)
 					}
 					
 					if(printFolders) {
@@ -894,7 +1526,8 @@ def testFooter(site) {
 					found = WebUI.verifyTextPresent(myTest, false, FailureHandling.OPTIONAL)
 					
 					if(!found) {
-						outFile.append('#### ERROR: Unable to find the text "' + myTest + '" on the page linked from ' + ele + '.\n')
+						outFile.append('#### ERROR: Unable to find the text "' + myTest + '" on the page linked from ' + ele + ' on ' + site + '.\n')
+						errorsOutFile.append('#### ERROR: Unable to find the text "' + myTest + '" on the page linked from ' + ele + ' on ' + site + '.\n')
 						errorFlag = true
 					}
 				}
@@ -906,25 +1539,62 @@ def testFooter(site) {
 					WebUI.switchToWindowIndex(0)
 					
 				} else {
-					if(site == 'MissionGuide') {
+/*					if(site == 'MissionGuide') {
 						WebUI.closeBrowser()
 						
 						WebUI.openBrowser('')
 						
 						WebUI.maximizeWindow()
+						
+						s = new Screen()
 					}
-			
-					WebUI.navigateToUrl(myUrl)
+*/			
+					navigateToUrl(myUrl)
+					
+					if(site == 'MissionLinked') { // && screensize == 'full') {
+						
+						driver = DriverFactory.getWebDriver()
+						
+						if(screensize == 'full') {
+							hoverXpath = "//a[contains(text(), 'Donate')]"
+						} else {
+							hoverXpath = "//*[contains(@class, 'menu-toggle')]"
+						}
+						
+						List<WebElement> hoverElements = driver.findElements(By.xpath(hoverXpath))
+						
+						if(hoverElements.size() > 0) {
+							
+							Actions actions = new Actions(driver);
+							
+							actions.moveToElement(hoverElements[0]).perform();
+						}
+						
+						WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+						
+						WebUI.delay(1)
+					}
 				}
 				
 			} else if(myType == 'text') {
 				
 				outFile.append('\nTesting the text in the "' + ele + '".\n')
+				
+				if(fontTest) {
 					
+					outFile.append('Font size = ' + fontSize + '. Font weight = ' + fontWeight + '. Font family = ' + fontFamily + '.\n')
+					
+						values = [fontSize,fontWeight,fontFamily]
+						
+						// [menu/footer option|site : font size, font weight]
+						fontDetails.put('Footer text for ' + ele + ' on ' + site, values)
+
+				}
+				
 				objectsFile.append(myObjectFolder + ele + '\n')
 				
 				if(!objects.contains(myObjectFolder + ele)) {
-					objects.add(myObjectFolder + ele)
+					objects.add(myObjectFolder + ele + ' - ' + site)
 				}
 					
 				if(printFolders) {
@@ -954,26 +1624,10 @@ def testFooter(site) {
 				text = newText
 
 				if(text != myTest) {
-					outFile.append('#### ERROR: The text in element ' + myElement + ' is "' + text + '", but should be "' + myTest + '"\n')
+					outFile.append('#### ERROR: The text in element ' + myElement + ' on ' + site + ' is "' + text + '", but should be "' + myTest + '"\n')
+					errorsOutFile.append('#### ERROR: The text in element ' + myElement + ' on ' + site + ' is "' + text + '", but should be "' + myTest + '"\n')
 					errorFlag = true
 				}
-				
-				fSize = fontTests.get(ele, null)
-				
-				println('>>>>>>>>>>>> font size is ' + fSize + ' for ' + ele)
-					
-				if(fSize != null && fSize > 0) {
-					if(ele == 'Email') {
-						
-						outFile.append('#### ERROR: The font size for the contact info is too small (' + fontSize + ')\n')
-						
-					} else if(ele == 'Copyright') {
-						
-						outFile.append('#### ERROR: The font size for the copyright is too small (' + fontSize + ')\n')
-			
-					}
-				}
-
 				
 			} else if(myType == 'image') {
 				outFile.append('\nTesting for ' + ele + ' image.\n')
@@ -981,7 +1635,7 @@ def testFooter(site) {
 				objectsFile.append(myObjectFolder + ele + '\n')
 					
 				if(!objects.contains(myObjectFolder + ele)) {
-					objects.add(myObjectFolder + ele)
+					objects.add(myObjectFolder + ele + ' - ' + site)
 				}
 					
 				if(printFolders) {
@@ -991,27 +1645,38 @@ def testFooter(site) {
 				visible = WebUI.verifyElementVisible(findTestObject(object), FailureHandling.OPTIONAL)
 				
 				if(!visible) {
-					outFile.append('#### ERROR: The image ' + myElement + ' was not found on the page.\n')
+					outFile.append('#### ERROR: The image ' + myElement + ' on ' + site + ' was not found on the page.\n')
+					errorsOutFile.append('#### ERROR: The image ' + myElement + ' on ' + site + ' was not found on the page.\n')
 					errorFlag = true
+				} else if(printImageSize) {
+					element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
+					width = element.getSize().getWidth();
+					height = element.getSize().getHeight();
+					outFile.append('Image size is ' + width + ' x ' + height + '\n')
+					imageSizes.put('Image ' + myElement + ' on ' + site, [width, height])
+					
 				}
 			}
 			
 		} else {
-			outFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer.\n')
+			outFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
+			errorsOutFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
 			errorFlag = true
 		}
 	}
 	
 	if(!windowIndex == null) {
-		if(site == 'MissionGuide') {
+/*		if(site == 'MissionGuide') {
 			WebUI.closeBrowser()
 			
 			WebUI.openBrowser('')
 			
 			WebUI.maximizeWindow()
+			
+			s = new Screen()
 		}
-
-		WebUI.navigateToUrl(myUrl)
+*/
+		navigateToUrl(myUrl)
 		
 	} else {
 		WebUI.closeBrowser()

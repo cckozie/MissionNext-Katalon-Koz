@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Facebook</name>
+   <tag></tag>
+   <elementGuidId>5bca3b9d-fbb0-451e-96fb-054dbd1e53e2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[3]/div/footer/div/div[2]/div[3]/a[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.elementor-icon.elementor-social-icon.elementor-social-icon-facebook-f.elementor-repeater-item-171a358 > i.fab.fa-facebook-f</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>460d0cdf-80de-4043-a56b-a006915d4867</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>ce6e1140-3285-4dd7-96d9-b2d6f2888bc7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fab fa-facebook-f</value>
+      <webElementGuid>138ad0ce-c947-4134-9b18-36222de508e8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-75762 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-34b18e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-33629fa9&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-102b4f23 elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-social-icons-wrapper elementor-grid&quot;]/span[@class=&quot;elementor-grid-item&quot;]/a[@class=&quot;elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-171a358&quot;]/i[@class=&quot;fab fa-facebook-f&quot;]</value>
+      <webElementGuid>1b566ac3-04d9-4d17-bbb0-7dde38248dfc</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div/div/div/span/a/i</value>
+      <webElementGuid>09074046-fac6-466e-8416-a039cfd002b7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

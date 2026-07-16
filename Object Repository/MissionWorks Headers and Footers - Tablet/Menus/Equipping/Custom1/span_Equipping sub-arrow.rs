@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Equipping sub-arrow</name>
+   <tag></tag>
+   <elementGuidId>30a45618-b82e-48cd-8d0d-2a61a3b8bdbc</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/div/nav/div[2]/button/span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>0379824a-d312-447c-9dcd-a4adf84978bf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>▼</value>
+      <webElementGuid>c82fffff-66d9-4f22-9764-b749b41f7af7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;mc-nav&quot;)/div[@class=&quot;mc-dropdown&quot;]/button[@class=&quot;mc-drop-btn&quot;]/span[1]</value>
+      <webElementGuid>739e27f2-553f-4896-8069-b263ada6dd75</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//nav[@id='mc-nav']/div[2]/button/span</value>
+      <webElementGuid>f4964008-99e3-4b53-a7bd-0727fe762115</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionGuide'])[1]/following::span[1]</value>
+      <webElementGuid>f29ce5f5-5e95-4946-9741-39cbd130cb96</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Coaching'])[1]/preceding::span[1]</value>
+      <webElementGuid>7cd68c70-5c14-4d7f-aaf0-50c2d31e37d4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='MissionLinked'])[1]/preceding::span[1]</value>
+      <webElementGuid>35756f26-d524-4421-be12-c87ac49b167f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/button/span</value>
+      <webElementGuid>fd2cf4e1-920c-44be-9232-a3563bd1aab2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = '▼' or . = '▼')]</value>
+      <webElementGuid>15a203b2-b515-4235-8598-b78b07300e60</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

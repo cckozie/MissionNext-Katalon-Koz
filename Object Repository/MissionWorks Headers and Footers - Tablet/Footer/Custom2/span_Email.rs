@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Email</name>
+   <tag></tag>
+   <elementGuidId>07d63cba-6960-4778-85c4-39748e75b79f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/footer/section[3]/div/div/div/div/div/ul/li[2]/a/span[2]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>DIV</value>
+      <webElementGuid>f713d5ba-0684-43f7-84d2-1871306dd1ef</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>xpath1784052490635</value>
+      <webElementGuid>4d97a917-18cc-4948-b13f-09f6f984eda0</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

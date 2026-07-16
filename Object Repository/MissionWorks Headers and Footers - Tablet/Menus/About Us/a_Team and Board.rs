@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Team and Board</name>
+   <tag></tag>
+   <elementGuidId>bb60e94f-8f94-4b8c-ace3-a6c33a2fac3b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-77197 > a.elementor-sub-item</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[1]/div/div[2]/div/div/div/nav[2]/ul/li[3]/ul/li[3]/a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>9b553dc7-1aed-42e4-9ac4-f6e54efea606</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionworks.global/team-and-board/</value>
+      <webElementGuid>f55bbd0b-675c-4128-9454-ae4e9f611233</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-sub-item</value>
+      <webElementGuid>26696ecd-1999-415f-87ea-5d6b411f4ef5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Team and Board</value>
+      <webElementGuid>7ce52c19-bf95-4d6a-ba88-d9e5c6c69e54</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-17799204692768289-6&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-77197&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
+      <webElementGuid>4a1c226a-cb9c-4372-9dac-a0581989da8f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='sm-17799204692768289-6']/li[2]/a</value>
+      <webElementGuid>c7094314-17f5-421c-88f7-40fade84e315</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Team and Board')]</value>
+      <webElementGuid>67c2a92e-7ef5-4eaa-af89-7346e2776fa0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Statement of Faith'])[1]/following::a[1]</value>
+      <webElementGuid>2f81e03b-1a23-416c-bcd8-34437152550d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About Us'])[1]/following::a[2]</value>
+      <webElementGuid>40899d34-653c-4ed8-9a0a-736e84456071</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers'])[1]/preceding::a[1]</value>
+      <webElementGuid>313e22da-865a-4757-a953-62470b4923f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[1]/preceding::a[2]</value>
+      <webElementGuid>4673c24e-d72e-45db-a9c1-600a3260d25c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Team and Board']/parent::*</value>
+      <webElementGuid>e2221b28-81a4-493a-8875-4601812e7d1a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionworks.global/team-and-board/')]</value>
+      <webElementGuid>564bd48d-f718-4cf4-8734-9ceee7476c09</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//li[3]/ul/li[2]/a</value>
+      <webElementGuid>837fb433-5cc3-40c0-a738-7b75b7393f39</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionworks.global/team-and-board/' and (text() = 'Team and Board' or . = 'Team and Board')]</value>
+      <webElementGuid>da46a246-b293-4f14-9d8f-f11ac31e7e9d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

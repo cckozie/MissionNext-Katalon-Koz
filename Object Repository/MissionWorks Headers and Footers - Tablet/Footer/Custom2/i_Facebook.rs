@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Facebook</name>
+   <tag></tag>
+   <elementGuidId>58275c95-aeec-4a7c-bc62-7754298c57d8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/footer/section[4]/div/div[4]/div/div/div/div/span[1]/a/i</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>DIV</value>
+      <webElementGuid>b676734f-61a3-4501-8aac-17089b3480eb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>xpath1784052709009</value>
+      <webElementGuid>c05408d5-eca0-4717-be71-f176cd94020c</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
