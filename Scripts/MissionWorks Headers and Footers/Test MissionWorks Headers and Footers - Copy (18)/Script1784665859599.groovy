@@ -46,19 +46,19 @@ calledBySikuli = false
 
 // first letter of tests; menus, logo, donate, footer
 myTests = 'mldf'
-myTests = 'f'
+myTests = 'm'
 
 // first letter of menu tests; connecting, equipping, about us
 myMenus = 'cea'
 //myMenus = 'a'
 
-mySites = [
+mySites = [/*
 	'MissionNext',
 	'Journey',
 	'Education',
 	'QuickStart',
-	'Journey Guide',
-	'MissionLinked',
+	'Journey Guide',*/
+	'MissionLinked'/*,
 	'Coaching',
 	'About Us',
 	'MissionConnexion',
@@ -67,7 +67,7 @@ mySites = [
 	'Team and Board',
 	'Careers',
 	'Contact Us',
-	'MissionExcellence'
+	'MissionExcellence'*/
 	]
 
 fontTest = false
@@ -171,7 +171,7 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 	'Careers' : 'https://missionworks.global/careers/', 'Contact Us' : 'https://missionworks.global/contact-us/',
 	'MissionExcellence' : 'https://missionexcellence.global/']
 
-sites = ['MissionNext' : "https://missionnext.org/"]
+//sites = ['MissionNext' : "https://missionnext.org/"]
 //sites = ["Journey" : "https://journey.missionnext.org/journey-home/login-here-2/"]
 //sites = ["Education" : "https://education.missionnext.org/education-home/login-here"]
 //sites = ["QuickStart" : "https://quickstart.missionnext.org/quickstart-home/login-here"]
@@ -208,7 +208,7 @@ if(screensize != 'full') {
 
 
 footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true],
-	 "a_Sign Up" : ["link", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
+	 "a_Sign Up" : ["verify", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
 	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
 	 "span_Phone" : ["text", "503.360.1865", false], "span_Email" : ["text", "Info@MissionWorks.global", false],
 	 "span_Address" : ["text", "1400 NE 136th Ave, Vancouver, WA 98684", false],
@@ -306,6 +306,8 @@ for(site in sites) {
 		errorsOutFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
 		
 		println(tests.get('menuTest'))
+		
+//		System.exit(0)
 		
 		if(tests.get('menuTest')) {
 		
@@ -424,11 +426,7 @@ def navigateToUrl(url) {
 		
 		WebUI.openBrowser(url)
 		
-		if(screensize == 'full') {
-			WebUI.maximizeWindow()
-		} else {
-			WebUI.setViewPortSize(sWidth, sHeight)
-		}
+//		WebUI.navigateToUrl(url)
 	}
 }
 
@@ -577,7 +575,13 @@ def testMenus(site, url, menu) {
 		'Contact Us' : 'Contact Us – MissionWorks']
 	
 	WebUI.openBrowser('')
-	
+/*	
+	if(screensize == 'full') {
+		WebUI.maximizeWindow()
+	} else {
+		WebUI.setViewPortSize(sWidth, sHeight)		
+	}
+*/
 	navigateToUrl(url)
 				
 	// Test to see if there is a "Donate" link near the top of the page
@@ -611,11 +615,19 @@ def testMenus(site, url, menu) {
 		
 		println('hamburger is ' + hamburger)
 		
+		
+		
 		WebUI.click(findTestObject(hamburger))
 		
 		WebUI.delay(1)
-	}
-					
+				
+//		donateXpath = "//*[contains(@class, 'menu-toggle')]"
+		
+	}/* else {
+		donateXpath = "//a[text()='Donate']"
+//		WebUI.maximizeWindow()
+	}*/
+	
 	donateXpath = "//a[text()='Donate']"
 	
 	println(donateXpath)
@@ -636,10 +648,13 @@ def testMenus(site, url, menu) {
 	println(folderBase + ';' + arrow)
 	
 	myObjectFolder = getObjectFolder(folderBase, arrow, site)
-	
+/*	
+	if(screensize == 'full') {
+		donateXpath = "//a[text()='Donate']"
+		WebUI.maximizeWindow()
+	}
+*/	
 	List<WebElement> donateElements = driver.findElements(By.xpath(donateXpath))
-	
-	println(donateElements.size() + ' donate elements found.')
 	
 	if(donateElements.size() > 0) {
 		
@@ -712,6 +727,8 @@ def testMenus(site, url, menu) {
 //////////////////
 	Screen s = new Screen()
 	
+//	height = WebUI.getViewportHeight()
+	
 	outFile.append('\n_________________________________________________________________________________________________\n')
 	
 	println('My menu is ' + menu)
@@ -739,10 +756,99 @@ def testMenus(site, url, menu) {
 		first = false
 		
 		// This curson action is needed for the MissionLinked site where the menu drop down arrows do not appear until after a cursor movement
+/*		if(site == 'MissionLinked') { // && screensize == 'full') {
+			
+			driver = DriverFactory.getWebDriver()
+			
+			if(screensize == 'full') {		
+				hoverXpath = "//a[contains(text(), 'Donate')]"
+			} else {
+				hoverXpath = "//*[contains(@class, 'menu-toggle')]"
+			}
+			
+			List<WebElement> hoverElements = driver.findElements(By.xpath(hoverXpath))
+			
+			if(hoverElements.size() > 0) {
+				
+				Actions actions = new Actions(driver);
+				
+				actions.moveToElement(hoverElements[0]).perform();
+			}
+	}
+*/
+//		WebUI.waitForPageLoad(30)
+		
+//		WebUI.delay(1)
+		
+//		WebDriver driver = DriverFactory.getWebDriver()
+		
+//		folderBase = screenFolderBase + 'Menus/' + menu
+		
+		/*
+		if(first) {
+			
+			first = false
+			
+			arrow = 'span_' + menu + ' sub-arrow'
+			
+			println(folderBase + ';' + arrow)
+			
+			myObjectFolder = getObjectFolder(folderBase, arrow, site)
+				
+			if(screensize != 'full') {
 
+				hamburgerBase = screenFolderBase + 'Header'
+		
+				hamburger = 'i_Hamburger'
+				
+				println(hamburgerBase + ';' + hamburger)
+				
+				folder = getObjectFolder(hamburgerBase, hamburger, site)
+				
+				hamburger = folder + hamburger
+				
+				println('hamburger is ' + hamburger)
+				
+	//			WebUI.delay(2)
+			}
+
+			println('myObjectFolder is ' + myObjectFolder)
+			
+			if(myObjectFolder != null) {
+				
+				println('myObjectFolder is ' + myObjectFolder)
+			
+			} else {
+				println("###NOT ABLE TO FIND OBJECT FOLDER")
+				
+				outFile.append('#### ERROR: Unable to find object folder.\n')
+				errorsOutFile.append('#### ERROR: Unable to find object folder.\n')
+				
+				errorFlag = true
+				
+				return
+			}
+			
+			println('my arrow is ' + myObjectFolder + arrow)
+			
+			arrow = myObjectFolder + arrow
+			
+			objectsFile.append(arrow + '\n')
+			
+			if(!objects.contains(arrow)) {
+				objects.add(arrow + ' - ' + site)
+			}
+			
+		}
+		*/
 		
 		if(arrow != null) {
-			
+/*			
+			if(screensize != 'full') {
+				WebUI.click(findTestObject(hamburger))
+				WebUI.delay(2)		
+			}
+*/			
 			if(printFolders) {
 				outFile.append('----- Using ' + myObjectFolder + '.\n')
 			}
@@ -1204,7 +1310,7 @@ def testFooter(site) {
 	
 	if(screenshots) {
 		
-		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '-' + screensize + '.png'
+		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '.png'
 		
 		WebUI.takeScreenshot(fileImage)
 		
@@ -1254,6 +1360,7 @@ def testFooter(site) {
 			
 			if(found == 'null') {
 				found = '%0.00 '
+	//						System.exit(0)
 			}
 			
 			println(found)
@@ -1280,6 +1387,7 @@ def testFooter(site) {
 			matchFile.write('<<<<< Image Match Percentages >>>>>\n')
 		}
 		
+//		matchFile.append('\nScreen size - ' + screensize + ' on ' + new Date().format('MM-dd-YY') + '.\n')
 		matchFile.append(site + ' ' + outText + '\n')
 		
 		if(imageError) {
@@ -1377,6 +1485,10 @@ def testFooter(site) {
 			WebUI.delay(1)
 			
 		}
+		
+//		if(mySwitch && bypassFooterMenu) {
+//			continue
+//		}
 		
 		first = false
 		
@@ -1507,22 +1619,10 @@ def testFooter(site) {
 					
 					title = WebUI.getWindowTitle()
 					
-					println(title)
-					
-					if(ele == 'Sign Up') {
-						textPresent = WebUI.verifyTextPresent('Please choose your email subscription:', false, FailureHandling.OPTIONAL)
-						
-						if(!textPresent) {
-							outFile.append('#### ERROR: The text "Please choose your email subscription:" was not found on the page linked from ' + ele + ' on ' + site + '.\n')
-							errorsOutFile.append('#### ERROR: The text "Please choose your email subscription:" was not found on the page linked from ' + ele + ' on ' + site + '.\n')
-							errorFlag = true
-						}
-					} else {
-						if(title != myTest) {
-							outFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
-							errorsOutFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
-							errorFlag = true
-						}
+					if(title != myTest) {
+						outFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
+						errorsOutFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
+						errorFlag = true
 					}
 				} else {
 					

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Hamburger</name>
+   <tag></tag>
+   <elementGuidId>12c728e4-26cd-40c5-8020-e0f34b5b1951</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/footer/div/button</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.elementor-element.elementor-element-a50d2f0.elementor-nav-menu__align-center.elementor-nav-menu--dropdown-mobile.elementor-nav-menu__text-align-aside.elementor-nav-menu--toggle.elementor-nav-menu--burger.elementor-widget.elementor-widget-nav-menu > div.elementor-widget-container > div.elementor-menu-toggle > i.elementor-menu-toggle__icon--open.eicon-menu-bar</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>a97abb66-006a-4c23-a9b2-e79edf32c59e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>121da123-9ba8-4d25-a81d-472fcee20f55</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>presentation</value>
+      <webElementGuid>434763c4-440a-4b0e-a832-c03457938a63</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-menu-toggle__icon--open eicon-menu-bar</value>
+      <webElementGuid>30b2cb59-5462-4cb4-97cb-2ae4416e1ee2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[1]/body[@class=&quot;home wp-singular page-template-default page page-id-55120 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-below-header one-container fluid-header active-footer-widgets-3 header-aligned-left dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-22 elementor-page elementor-page-55120 e--ua-firefox e--ua-mac using-mouse&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-77444 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-6abe9a0f elementor-section-height-min-height elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-items-middle wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3d6b0aad&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-a50d2f0 elementor-nav-menu__align-center elementor-nav-menu--dropdown-mobile elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-menu-toggle&quot;]/i[@class=&quot;elementor-menu-toggle__icon--open eicon-menu-bar&quot;]</value>
+      <webElementGuid>fdf03b2a-5cc1-4d66-b2bf-f70467f1e537</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//footer/section/div/div/div/div/div/div/i</value>
+      <webElementGuid>5efd5db3-fdc0-41ac-84a9-2b3140a6cc26</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

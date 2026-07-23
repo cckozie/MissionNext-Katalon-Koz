@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_MEMBERSHIP</name>
+   <tag></tag>
+   <elementGuidId>fe80713b-ee1c-493c-8eb9-c4bcdb698330</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[3]/div/div/div/a/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.rdy_button.no-radius.medium.dark.flat-dimension.button-4 > span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>2727b1c5-9290-4680-b90a-432b14b9bfd7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>MEMBERSHIP</value>
+      <webElementGuid>8fff953b-100a-45a9-a202-c8a38d5a7aec</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1764721079486 vc_row-has-fill vc_row-6a614b27b0ddb572156331&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a614b27b10e9479915550&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section visible-sm-block visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1741577413449 vc_row-has-fill vc_column-gap-15 vc_row-6a614b27b1de2390989977&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-8 vc_column_container_6a614b27b26f2544517199 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1741557963104&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height rdy_vc_row-flex vc_row-6a614b27b2a16292937660&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-2 vc_column_container_6a614b27b3511844252920&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;rdy_button_align center&quot;]/a[@class=&quot;rdy_button  no-radius medium dark flat-dimension button-4&quot;]/span[1]</value>
+      <webElementGuid>e8eb64dc-6ec8-4029-a59d-2027846bd90f</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div[3]/div/div/div/a/span</value>
+      <webElementGuid>9ec0299a-80d1-49b3-88b2-b03999a5731e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SPONSORSHIP'])[1]/following::span[1]</value>
+      <webElementGuid>e6fe78c8-ad68-4967-91b9-c3fb4f9fdd1d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='CAREERS'])[1]/following::span[2]</value>
+      <webElementGuid>272ea6c7-4797-4404-b02d-eab7de466962</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/preceding::span[1]</value>
+      <webElementGuid>fbe6de45-21d7-4eb3-bd1b-f542b1225edc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SIGN UP'])[1]/preceding::span[2]</value>
+      <webElementGuid>bd5b6957-75fd-4b16-9986-87dee3ca7e69</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='MEMBERSHIP']/parent::*</value>
+      <webElementGuid>35451b4c-da42-47b7-af6a-fff77ab46fcb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div/div/a/span</value>
+      <webElementGuid>09eaec2b-a98b-4631-a414-ed0b07a39f47</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'MEMBERSHIP' or . = 'MEMBERSHIP')]</value>
+      <webElementGuid>047d10ee-7491-4518-be4b-c1ab9eac410c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

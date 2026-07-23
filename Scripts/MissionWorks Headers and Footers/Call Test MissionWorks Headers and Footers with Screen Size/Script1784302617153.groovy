@@ -16,18 +16,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import javax.swing.*;
 
-message = varMessage
+GlobalVariable.callingTestCase = 'me'
 
-frame = new JFrame("");
-JPanel p = new JPanel();
-JLabel l = new JLabel(message, SwingConstants.CENTER);
-frame.add(l);
-frame.setSize(300, 100);
-frame.setLocation(600, 0);
-frame.setAlwaysOnTop (true)
-frame.show();
+screensizes = ['full', 'iPadAir', 'iPhoneSE']
 
-WebUI.delay(5)
-
+	
+for(screen in screensizes) {
+	WebUI.callTestCase(findTestCase('MissionWorks Headers and Footers/Test MissionWorks Headers and Footers'), [('varScreensize') : screen], FailureHandling.STOP_ON_FAILURE)
+}

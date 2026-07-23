@@ -22,7 +22,7 @@ import org.openqa.selenium.Keys as Keys
 //import java.awt.event.*;
 //import java.awt.*;
 import javax.swing.*;
-
+/*
 frame = new JFrame("");       
 JPanel p = new JPanel();
 JLabel l = new JLabel("WAITING...", SwingConstants.CENTER);
@@ -31,12 +31,14 @@ frame.setSize(300, 100);
 frame.setLocation(600, 0);
 frame.setAlwaysOnTop (true)
 frame.show();
-    
-/*
+*/
+
 pane = new JOptionPane("This dialog will close automatically after 5 seconds.", JOptionPane.INFORMATION_MESSAGE);
 JDialog dialog = pane.createDialog("Message");
 dialog.setVisible(true);
-*/
+dialog.setFocusable(true)
+dialog.requestFocus()
+dialog.setAlwaysOnTop (true)
 
 WebUI.delay(10)
 frame.hide();

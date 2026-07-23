@@ -39,24 +39,15 @@ import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader as ExecutionProfi
 
 
 
-str = 'this is my mexsed up string'
+WebUI.openBrowser('https://missionguide.global/')
 
-println(str)
+WebUI.setViewPortSize(992, 800)
+System.exit(0)
 
-txt = ''
-chr = ''
-newStr = ''
 
-for(i = 0; i < str.length(); i++) {
-	chr = str[i]
-	int myAsc = chr
-	txt = txt + myAsc + ' '
-	if(myAsc == 120) {
-		chr = 's'
-	}
-	newStr += chr
+for(w = 1000; w >= 990; w--) {
+	println(w)
+	WebUI.setViewPortSize(w, 800)
+	WebUI.delay(5)
+//	WebUI.refresh()
 }
-println(newStr)
-println(txt)
-
-//result = str.substring(0, index) + newChar + str.substring(index + 1)

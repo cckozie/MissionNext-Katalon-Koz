@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>i_Hamburger</name>
+   <tag></tag>
+   <elementGuidId>e0bd523d-6867-404a-a8fe-693d683d5046</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[3]/div/footer/div/button</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.elementor-element.elementor-element-3fd05bc8.elementor-nav-menu__align-center.elementor-nav-menu--dropdown-tablet.elementor-nav-menu__text-align-aside.elementor-nav-menu--toggle.elementor-nav-menu--burger.elementor-widget.elementor-widget-nav-menu > div.elementor-widget-container > div.elementor-menu-toggle > i.elementor-menu-toggle__icon--open.eicon-menu-bar</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>i</value>
+      <webElementGuid>1a42b51f-d5c4-4fa8-9b27-902eabf19df5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>aria-hidden</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>93a071e2-52a9-451c-a5a7-a375ca45b6eb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>role</name>
+      <type>Main</type>
+      <value>presentation</value>
+      <webElementGuid>c4e8c519-0df5-431b-8c01-a2d030716864</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-menu-toggle__icon--open eicon-menu-bar</value>
+      <webElementGuid>3ef1b604-24bd-47b5-857e-8d041de1352f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths&quot;]/body[@class=&quot;home wp-singular page-template page-template-elementor_header_footer page page-id-31208 page-parent wp-custom-logo wp-embed-responsive wp-theme-generatepress no-sidebar nav-float-right one-container header-aligned-center dropdown-hover full-width-content elementor-default elementor-template-full-width elementor-kit-31066 elementor-page elementor-page-31208 e--ua-firefox e--ua-mac&quot;]/div[@class=&quot;site-footer&quot;]/footer[@class=&quot;elementor elementor-70156 elementor-location-footer&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-50d8c552 elementor-section-height-min-height elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-items-middle wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-51e1837e&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-3fd05bc8 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-menu-toggle&quot;]/i[@class=&quot;elementor-menu-toggle__icon--open eicon-menu-bar&quot;]</value>
+      <webElementGuid>c0474e4c-4e0b-4ed0-82f9-f7c2d737b87d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//section[3]/div/div/div/div/div/div/i</value>
+      <webElementGuid>cbe3276a-2ba4-4a75-bf90-05866e19c301</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

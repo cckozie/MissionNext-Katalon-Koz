@@ -31,22 +31,35 @@ import com.kms.katalon.core.testobject.TestObject
 import org.openqa.selenium.interactions.Actions;
 import org.sikuli.script.*
 import org.openqa.selenium.JavascriptExecutor;
-import javax.swing.*
 
+imageTestOnly = true
+printMatchPercentage = true
 
-calledBySikuli = false
-
-
-//#############################################\\
-//////// FOR TEST BEING CALLED BY SIKULIX \\\\\\\
 // ENTER SITE HERE
+imageTestSite = ["Team and Board":"https://missionworks.global/team-and-board/"]; imageTestOnly = true; printMatchPercentage = true
 
-/////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\
-//#############################################\\
+if(GlobalVariable.callingTestCase != '') {
+	calledFlag = true
+} else {
+	calledFlag = false
+}
+println(imageTestOnly)
 
+////////////////////////////////////////////////////
+// Test for mobile
+// Test size on social media images
+// Test for link on the email address
+
+
+
+
+// ######################################################################
 // first letter of tests; menus, logo, donate, footer
 myTests = 'mldf'
-myTests = 'f'
+//myTests = 'f'
+if(imageTestOnly) {
+	myTests = 'f'
+}
 
 // first letter of menu tests; connecting, equipping, about us
 myMenus = 'cea'
@@ -72,25 +85,17 @@ mySites = [
 
 fontTest = false
 
-screenshots = false
-
 maxImageTries = 3
 
-if(calledBySikuli) {
-	imageTestOnly = true
-	printMatchPercentage = true
-	screenshots = true
-	myTests = 'f'
-} else {
-	imageTestOnly = false
-	printMatchPercentage = false
-}
+//imageTestOnly = false
+
+//printMatchPercentage = false
 
 imageMatchMinimum = 50
 
-screensize = 'full'
-
-if(calledBySikuli){
+if(varScreensize != null && varScreensize != '') {
+	screensize = varScreensize
+} else {
 	screensize = 'full'
 }
 
@@ -98,12 +103,13 @@ printFolders = false
 
 printImageSize = false
 
-printTestObject = false
+printTestObject = true
+
+screenshots = true
 
 sendErrorsEmail = false
-'######################################################################'
-'######################################################################'
-'######################################################################'
+// ######################################################################
+// ######################################################################
 
 devices = ['iPhoneSE':[375,667], 'iPadAir':[820,1180]]
 
@@ -208,7 +214,7 @@ if(screensize != 'full') {
 
 
 footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true],
-	 "a_Sign Up" : ["link", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
+	 "a_Sign Up" : ["verify", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
 	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
 	 "span_Phone" : ["text", "503.360.1865", false], "span_Email" : ["text", "Info@MissionWorks.global", false],
 	 "span_Address" : ["text", "1400 NE 136th Ave, Vancouver, WA 98684", false],
@@ -225,14 +231,12 @@ errorFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + file
 
 errorsOnlyFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + fileNameAdd + now + '-ERRORS ONLY.txt')
 
-
 if(imageTestOnly) {
 	outFileName = outFileName.replace('.txt', '-Match Percentages.txt')
 	errorFileName = errorFileName.replace('.txt', '-Match Percentages.txt')
 	imageMatchFileName = (GlobalVariable.reportPath + myTestCase + ' on ' + domain + ' Image Match ' + now + '.csv')
 	matchFile = new File(imageMatchFileName)
 }
-
 
 outFile = new File(outFileName)
 
@@ -241,6 +245,10 @@ errorFile = new File(errorFileName)
 errorsOutFile = new File(errorsOnlyFileName)
 
 objectsFile = new File('/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/Headers and Footers/Used Test Objects.txt')
+
+if(!calledFlag) {
+	objectsFile.write('\n')
+}
 
 siteList = []
 count = 0
@@ -280,11 +288,9 @@ usedFolders = []
 
 objects = []
 
-lastFolder = ''
+lastObjectFolder = ''
 
-lastObjectFound = false 
-
-currentElement = ''
+lastObjectFound = false
 
 // [menu/footer option|site : font size, font weight, font family]
 fontDetails = [:]
@@ -295,17 +301,15 @@ imageSizes = [:]
 // [image|site : match percentage]
 imageMatches = [:]
 
-firstSite = true
-
 for(site in sites) {
 	
 	if(site.key in mySites) {
 	
-		outFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
-		
 		errorsOutFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
 		
 		println(tests.get('menuTest'))
+		
+//		System.exit(0)
 		
 		if(tests.get('menuTest')) {
 		
@@ -329,29 +333,11 @@ for(site in sites) {
 		}
 		
 		if(tests.get('footerTest')) {
+			if(site.key.indexOf('education') > 0) {
+				System.exit(0)
+			}
+	
 			testFooter(site.key)
-		}
-		
-		allFalse = tests.every { it.value == false }
-		if(allFalse) { //Just load all of the sites (used to watch for header anomolies)
-			if(firstSite) {
-				WebUI.openBrowser('')
-				if(screensize == 'full') {
-					WebUI.maximizeWindow()
-				} else {
-					WebUI.setViewPortSize(sWidth, sHeight)
-				}
-			}
-			navigateToUrl(site.value)
-			if(firstSite) {
-				JFrame frame = new JFrame("User Input Frame")
-				frame.setFocusableWindowState(true)
-				frame.requestFocus()
-				frame.setAlwaysOnTop (true)
-				instructions = "Open developer tools,\nThrottle the network to Slow 4G\n and minimize the tools window width."
-				String entry = JOptionPane.showInputDialog(frame, instructions)
-				firstSite = false
-			}
 		}
 	}
 }
@@ -408,12 +394,6 @@ objects.each {
 
 def navigateToUrl(url) {
 	
-	if(screensize == 'full') {
-		WebUI.maximizeWindow()
-	} else {
-		WebUI.setViewPortSize(sWidth, sHeight)
-	}
-	
 	WebUI.navigateToUrl(url)
 	
 	securityPageFalse = WebUI.verifyTextNotPresent('Performing security verification', false, FailureHandling.OPTIONAL)
@@ -424,11 +404,13 @@ def navigateToUrl(url) {
 		
 		WebUI.openBrowser(url)
 		
-		if(screensize == 'full') {
-			WebUI.maximizeWindow()
-		} else {
-			WebUI.setViewPortSize(sWidth, sHeight)
-		}
+//		WebUI.navigateToUrl(url)
+	}
+		
+	if(screensize == 'full') {
+		WebUI.maximizeWindow()
+	} else {
+		WebUI.setViewPortSize(sWidth, sHeight)
 	}
 }
 
@@ -459,8 +441,6 @@ def testForObjectExists(objectFolder, testObject) {
 	
 	driver = DriverFactory.getWebDriver()
 	
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	
 	object = objectFolder + testObject
 	
 	println(object)
@@ -484,17 +464,9 @@ def testForObjectExists(objectFolder, testObject) {
 		elementCount = elements.size()
 		
 		if(elementCount == 1) {
-			if(elements[0].isDisplayed() && elements[0].isEnabled()) {
-				isClickable = WebUI.verifyElementClickable(findTestObject(object), FailureHandling.OPTIONAL)
-				if(isClickable) {
-					currentElement = elements[0]
-//					js.executeScript("arguments[0].style.border='3px solid red';", currentElement);
-//					WebUI.delay(1)
-					println('Returning true')
-					return true
-				} else {
-					println('the element is not clickable')
-				}
+			if(elements[0].isDisplayed()) {
+				println('Returning true')
+				return true
 			} else {
 				println('the element is not visible')
 			}
@@ -512,9 +484,8 @@ def getObjectFolder(folderBase, testObject, mySite) {
 	
 	lastObjectFound = false
 	
-	if(lastFolder != '') {
-		println(lastFolder)
-		testObjectFolders.add(0, lastFolder)
+	if(lastObjectFolder != '') {
+		testObjectFolders.add(0, lastObjectFolder)
 //		outFile.append(testObjectFolders + '\n')
 	}
 	
@@ -537,7 +508,7 @@ def getObjectFolder(folderBase, testObject, mySite) {
 				usedFolders.add(objectFolder + ' - ' + mySite)
 			}
 			
-			lastFolder = folder
+			lastObjectFolder = objectFolder
 			
 			lastObjectFound = true
 			
@@ -578,6 +549,13 @@ def testMenus(site, url, menu) {
 	
 	WebUI.openBrowser('')
 	
+	if(screensize == 'full') {
+		WebUI.maximizeWindow()
+	} else {
+		WebUI.setViewPortSize(sWidth, sHeight)
+		
+	}
+	
 	navigateToUrl(url)
 				
 	// Test to see if there is a "Donate" link near the top of the page
@@ -587,6 +565,7 @@ def testMenus(site, url, menu) {
 	
 	// If not full screen, find the hamburger test object
 	if(screensize != 'full') {
+//		WebUI.setViewPortSize(sHeight, sWidth)
 		
 		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.HOME))
 		
@@ -611,22 +590,23 @@ def testMenus(site, url, menu) {
 		
 		println('hamburger is ' + hamburger)
 		
+		
+		
 		WebUI.click(findTestObject(hamburger))
 		
 		WebUI.delay(1)
+				
+//		donateXpath = "//*[contains(@class, 'menu-toggle')]"
+		
+	} else {
+		donateXpath = "//a[text()='Donate']"
+		WebUI.maximizeWindow()
 	}
-					
+	
 	donateXpath = "//a[text()='Donate']"
 	
 	println(donateXpath)
 	
-	if(site == 'MissionLinked' && screensize == 'full') { //Hover on Donate element to allow full page load
-		hoverElement = driver.findElement(By.xpath(donateXpath))
-		Actions actions = new Actions(driver);
-		actions.moveToElement(hoverElement).perform();
-		WebUI.delay(1)
-	}
-
 	folderBase = screenFolderBase + 'Menus/' + menu
 	
 	println(folderBase)
@@ -636,10 +616,13 @@ def testMenus(site, url, menu) {
 	println(folderBase + ';' + arrow)
 	
 	myObjectFolder = getObjectFolder(folderBase, arrow, site)
-	
+/*	
+	if(screensize == 'full') {
+		donateXpath = "//a[text()='Donate']"
+		WebUI.maximizeWindow()
+	}
+*/	
 	List<WebElement> donateElements = driver.findElements(By.xpath(donateXpath))
-	
-	println(donateElements.size() + ' donate elements found.')
 	
 	if(donateElements.size() > 0) {
 		
@@ -671,7 +654,7 @@ def testMenus(site, url, menu) {
 			}
 		}
 	} 
-	
+		
 	if(!donateFound) {
 		outFile.append('\n_________________________________________________________________________________________________\n')
 		
@@ -708,9 +691,10 @@ def testMenus(site, url, menu) {
 	if(!objects.contains(arrow)) {
 		objects.add(arrow + ' - ' + site)
 	}
-	
 //////////////////
 	Screen s = new Screen()
+	
+//	height = WebUI.getViewportHeight()
 	
 	outFile.append('\n_________________________________________________________________________________________________\n')
 	
@@ -739,10 +723,98 @@ def testMenus(site, url, menu) {
 		first = false
 		
 		// This curson action is needed for the MissionLinked site where the menu drop down arrows do not appear until after a cursor movement
+		if(site == 'MissionLinked') { // && screensize == 'full') {
+			
+			driver = DriverFactory.getWebDriver()
+			
+			if(screensize == 'full') {		
+				hoverXpath = "//a[contains(text(), 'Donate')]"
+			} else {
+				hoverXpath = "//*[contains(@class, 'menu-toggle')]"
+			}
+			
+			List<WebElement> hoverElements = driver.findElements(By.xpath(hoverXpath))
+			
+			if(hoverElements.size() > 0) {
+				
+				Actions actions = new Actions(driver);
+				
+				actions.moveToElement(hoverElements[0]).perform();
+			}
+		}
+//		WebUI.waitForPageLoad(30)
+		
+//		WebUI.delay(1)
+		
+		WebDriver driver = DriverFactory.getWebDriver()
+		
+//		folderBase = screenFolderBase + 'Menus/' + menu
+		
+		/*
+		if(first) {
+			
+			first = false
+			
+			arrow = 'span_' + menu + ' sub-arrow'
+			
+			println(folderBase + ';' + arrow)
+			
+			myObjectFolder = getObjectFolder(folderBase, arrow, site)
+				
+			if(screensize != 'full') {
 
+				hamburgerBase = screenFolderBase + 'Header'
+		
+				hamburger = 'i_Hamburger'
+				
+				println(hamburgerBase + ';' + hamburger)
+				
+				folder = getObjectFolder(hamburgerBase, hamburger, site)
+				
+				hamburger = folder + hamburger
+				
+				println('hamburger is ' + hamburger)
+				
+	//			WebUI.delay(2)
+			}
+
+			println('myObjectFolder is ' + myObjectFolder)
+			
+			if(myObjectFolder != null) {
+				
+				println('myObjectFolder is ' + myObjectFolder)
+			
+			} else {
+				println("###NOT ABLE TO FIND OBJECT FOLDER")
+				
+				outFile.append('#### ERROR: Unable to find object folder.\n')
+				errorsOutFile.append('#### ERROR: Unable to find object folder.\n')
+				
+				errorFlag = true
+				
+				return
+			}
+			
+			println('my arrow is ' + myObjectFolder + arrow)
+			
+			arrow = myObjectFolder + arrow
+			
+			objectsFile.append(arrow + '\n')
+			
+			if(!objects.contains(arrow)) {
+				objects.add(arrow + ' - ' + site)
+			}
+			
+		}
+		*/
 		
 		if(arrow != null) {
-			
+/*			
+			if(screensize != 'full') {
+				WebUI.click(findTestObject(hamburger))
+				WebUI.delay(2)		
+			}
+*/			
 			if(printFolders) {
 				outFile.append('----- Using ' + myObjectFolder + '.\n')
 			}
@@ -873,13 +945,6 @@ def testMenus(site, url, menu) {
 			}
 		}
 		navigateToUrl(url)
-		
-		if(site == 'MissionLinked' && screensize == 'full') { //Hover on Donate element to allow full page load
-			hoverElement = driver.findElement(By.xpath(donateXpath))
-			Actions actions = new Actions(driver);
-			actions.moveToElement(hoverElement).perform();
-			WebUI.delay(1)
-		}
 	}
 	
 	return errorFlag	
@@ -1204,7 +1269,7 @@ def testFooter(site) {
 	
 	if(screenshots) {
 		
-		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '-' + screensize + '.png'
+		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '.png'
 		
 		WebUI.takeScreenshot(fileImage)
 		
@@ -1254,6 +1319,7 @@ def testFooter(site) {
 			
 			if(found == 'null') {
 				found = '%0.00 '
+	//						System.exit(0)
 			}
 			
 			println(found)
@@ -1280,6 +1346,7 @@ def testFooter(site) {
 			matchFile.write('<<<<< Image Match Percentages >>>>>\n')
 		}
 		
+		matchFile.append('\nScreen size - ' + screensize + ' on ' + new Date().format('MM-dd-YY') + '.\n')
 		matchFile.append(site + ' ' + outText + '\n')
 		
 		if(imageError) {
@@ -1378,6 +1445,10 @@ def testFooter(site) {
 			
 		}
 		
+//		if(mySwitch && bypassFooterMenu) {
+//			continue
+//		}
+		
 		first = false
 		
 
@@ -1437,7 +1508,7 @@ def testFooter(site) {
 				while(!inViewport) {
 					WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
 					WebUI.delay(1)
-					inViewport = WebUI.verifyElementInViewport(findTestObject(object), 1, FailureHandling.OPTIONAL)
+					inViewport = WebUI.verifyElementInViewport(findTestObject(hamburger), 1, FailureHandling.OPTIONAL)
 				}
 			
 				clickable = WebUI.verifyElementClickable(findTestObject(object), FailureHandling.OPTIONAL)
@@ -1507,22 +1578,10 @@ def testFooter(site) {
 					
 					title = WebUI.getWindowTitle()
 					
-					println(title)
-					
-					if(ele == 'Sign Up') {
-						textPresent = WebUI.verifyTextPresent('Please choose your email subscription:', false, FailureHandling.OPTIONAL)
-						
-						if(!textPresent) {
-							outFile.append('#### ERROR: The text "Please choose your email subscription:" was not found on the page linked from ' + ele + ' on ' + site + '.\n')
-							errorsOutFile.append('#### ERROR: The text "Please choose your email subscription:" was not found on the page linked from ' + ele + ' on ' + site + '.\n')
-							errorFlag = true
-						}
-					} else {
-						if(title != myTest) {
-							outFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
-							errorsOutFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
-							errorFlag = true
-						}
+					if(title != myTest) {
+						outFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
+						errorsOutFile.append('#### ERROR: The title of the page linked from ' + ele + ' on ' + site + ' is "' + title + '", but should be "' + myTest + '"\n')
+						errorFlag = true
 					}
 				} else {
 					
@@ -1643,20 +1702,6 @@ def testFooter(site) {
 					outFile.append('#### ERROR: The text in element ' + myElement + ' on ' + site + ' is "' + text + '", but should be "' + myTest + '"\n')
 					errorsOutFile.append('#### ERROR: The text in element ' + myElement + ' on ' + site + ' is "' + text + '", but should be "' + myTest + '"\n')
 					errorFlag = true
-				}
-				
-				if(myElement.contains('Email')) { //Test for a link on the email address
-					emailLink = WebUI.getAttribute(findTestObject(object), "href", FailureHandling.OPTIONAL)
-					if(emailLink == null) {
-						parent = currentElement.findElement(By.xpath("./.."));
-						parentTag = parent.getTagName();
-						println("Email parent's tag is " + parentTag)
-						if(parentTag != 'a') {
-							outFile.append('#### ERROR: The email element on ' + site + ' should have a link but it does not.\n')
-							errorsOutFile.append('#### ERROR: The email element on ' + site + ' should have a link but it does not.\n')
-							errorFlag = true
-						}
-					}
 				}
 				
 			} else if(myType == 'image') {

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_SIGN UP</name>
+   <tag></tag>
+   <elementGuidId>13b75cfa-478f-40f8-9203-7307dc588c09</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/p/span/span/span/span/a[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a:nth-of-type(2)</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>9da1df3b-e449-40f7-8ebb-947a8b87edaf</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionconnexion.global/sign-up/</value>
+      <webElementGuid>4a716e2e-ba00-435e-b8d5-c7b1cc1565fd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> SIGN UP</value>
+      <webElementGuid>734db271-8ae5-4822-b3b0-a8ba07202a4c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1783369104826 vc_row-has-fill vc_column-gap-30 vc_row-6a62376a0559e488738383&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a62376a05ad9014182603&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1784138887756 vc_row-has-fill vc_column-gap-30 vc_row-6a62376a06aab073400983&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-6 vc_column_container_6a62376a0786a037053869 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1783370643365&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;wpb_text_column_10 wpb_text_column wpb_content_element  vc_custom_1783370671260&quot;]/div[@class=&quot;wpb_wrapper&quot;]/p[1]/span[@class=&quot;topbarfont&quot;]/span[1]/span[@class=&quot;topbarfont&quot;]/span[1]/a[2]</value>
+      <webElementGuid>d53ebb7f-9d07-412d-8bdc-ed22ee112e82</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/p/span/span/span/span/a[2]</value>
+      <webElementGuid>d099da8f-9f8b-4565-b4c0-0a40b7116194</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'SIGN UP')]</value>
+      <webElementGuid>f7192699-c166-495c-bacb-aa9efb520a52</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/following::a[1]</value>
+      <webElementGuid>8d19b968-211e-4004-b047-2113b33e7ca3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SPONSORSHIP'])[1]/following::a[2]</value>
+      <webElementGuid>0ebc90f8-e853-4435-9528-a7596ca8c5fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='DONATE NOW'])[1]/preceding::a[1]</value>
+      <webElementGuid>469ca133-6a3a-46a7-8588-857d896a7c05</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Conferences'])[1]/preceding::a[2]</value>
+      <webElementGuid>63188ede-678a-4d57-95a2-9a6dbade0bce</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionconnexion.global/sign-up/')]</value>
+      <webElementGuid>9a5f1b2b-a1b8-4027-a15c-4a7245426443</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[2]</value>
+      <webElementGuid>c04e75b8-3926-4e85-addd-442100dffbc2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionconnexion.global/sign-up/' and (text() = ' SIGN UP' or . = ' SIGN UP')]</value>
+      <webElementGuid>be599e7e-df70-4b0a-85c9-af0303de4fa7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

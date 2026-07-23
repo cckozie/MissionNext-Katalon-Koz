@@ -16,18 +16,40 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import javax.swing.*;
+import groovy.swing.SwingBuilder
+import javax.swing.JOptionPane
+import javax.swing.JFrame
+import javax.swing.*
 
-message = varMessage
 
-frame = new JFrame("");
-JPanel p = new JPanel();
-JLabel l = new JLabel(message, SwingConstants.CENTER);
-frame.add(l);
-frame.setSize(300, 100);
-frame.setLocation(600, 0);
+
+
+
+WebUI.openBrowser("missionnext.org")
+
+JFrame frame = new JFrame("User Input Frame")
+
+frame.setFocusableWindowState(true)
+
+frame.requestFocus()
+
 frame.setAlwaysOnTop (true)
-frame.show();
 
-WebUI.delay(5)
+String entry = JOptionPane.showInputDialog(frame, "Throttle the network to Slow 4G and minimize the tools window width")
 
+
+
+/*
+def swing = new SwingBuilder()
+def response = JOptionPane.showInputDialog(
+	null,
+	"Please enter your message:",
+	"Groovy Input Dialog",
+	JOptionPane.QUESTION_MESSAGE
+)
+
+//JOptionPane.requestFocus()
+if (response != null) {
+	println "You entered: ${response}"
+}
+*/
