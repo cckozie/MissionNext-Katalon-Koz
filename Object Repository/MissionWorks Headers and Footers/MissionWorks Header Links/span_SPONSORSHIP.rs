@@ -3,7 +3,7 @@
    <description></description>
    <name>span_SPONSORSHIP</name>
    <tag></tag>
-   <elementGuidId>4afde8fc-7056-44b3-ae76-e9fb77b4a1ed</elementGuidId>
+   <elementGuidId>52d94c62-fd09-4e3f-92f3-2347eec9905d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>b737d1da-fcf0-44f4-8224-001315444370</webElementGuid>
+      <webElementGuid>638bd428-0ecb-4ca5-8b98-0bbb4f235f2a</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>text</name>
       <type>Main</type>
       <value>SPONSORSHIP</value>
-      <webElementGuid>e3f3c545-fc81-466f-9478-2679072ef2ba</webElementGuid>
+      <webElementGuid>cc1d78f6-e690-434b-af2a-0d66f0760ac4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1764721079486 vc_row-has-fill vc_row-6a614b27b0ddb572156331&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a614b27b10e9479915550&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section visible-sm-block visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1741577413449 vc_row-has-fill vc_column-gap-15 vc_row-6a614b27b1de2390989977&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-8 vc_column_container_6a614b27b26f2544517199 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1741557963104&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height rdy_vc_row-flex vc_row-6a614b27b2a16292937660&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-2 vc_column_container_6a614b27b3196214946512&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;rdy_button_align center&quot;]/a[@class=&quot;rdy_button  no-radius medium dark flat-dimension button-3&quot;]/span[1]</value>
-      <webElementGuid>415bc970-4969-462c-93f1-c315c9f6f53f</webElementGuid>
+      <webElementGuid>475a0695-27e0-4b34-8960-56fdfe937d4c</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div/div/div/a/span</value>
-      <webElementGuid>d63f2caf-f69c-4b1b-b91b-7a7273972759</webElementGuid>
+      <webElementGuid>1bbfc10d-b7cd-47c6-8dbc-3cddd4c9180a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CAREERS'])[1]/following::span[1]</value>
-      <webElementGuid>470c3e72-e97b-47eb-8b25-d0b7a52683b7</webElementGuid>
+      <webElementGuid>3de39f37-981b-4cc6-a083-a5b1b7c0d798</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='MEMBERSHIP'])[1]/preceding::span[1]</value>
-      <webElementGuid>d3cae66f-8b36-42fe-98e7-4dd3c2b20406</webElementGuid>
+      <webElementGuid>aa2d3a9d-5112-42af-b6f3-1eeafaab7f75</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/preceding::span[2]</value>
-      <webElementGuid>3832ffd8-045e-4946-af0a-9187480c7a9d</webElementGuid>
+      <webElementGuid>c49f1a61-9f5d-4c89-97c2-7f3aefd7200d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='SPONSORSHIP']/parent::*</value>
-      <webElementGuid>f9240bcf-0497-4c61-96b6-a541eb420bae</webElementGuid>
+      <webElementGuid>645a65ba-b792-4cc1-b692-0654eae385fe</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/div/a/span</value>
-      <webElementGuid>a5214b9f-d994-44bb-9976-e8c20bd1c15a</webElementGuid>
+      <webElementGuid>337c0828-4d7c-4a12-a359-ffcea943327a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = 'SPONSORSHIP' or . = 'SPONSORSHIP')]</value>
-      <webElementGuid>65459a74-a438-4cc4-871b-47979e017bc2</webElementGuid>
+      <webElementGuid>c3e77280-5cc2-4b96-a6e2-656a0c46c0f8</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

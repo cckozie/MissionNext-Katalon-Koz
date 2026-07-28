@@ -3,7 +3,7 @@
    <description></description>
    <name>span_DONATION</name>
    <tag></tag>
-   <elementGuidId>b694b60e-2535-4152-9f90-defb94c3ced9</elementGuidId>
+   <elementGuidId>e2db3f4e-2970-486d-a512-8e21221727f5</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
-      <webElementGuid>349612e2-73b7-4225-90ea-df5c485b4187</webElementGuid>
+      <webElementGuid>e9d5e9b4-2a1a-471c-8754-bf079d07050b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>text</name>
       <type>Main</type>
       <value>DONATION</value>
-      <webElementGuid>f4d5f01f-7168-4147-aa96-9895783cf23b</webElementGuid>
+      <webElementGuid>a5edd5aa-44e9-43a3-9529-d75e31259c00</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -39,7 +39,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1764721079486 vc_row-has-fill vc_row-6a614b27b0ddb572156331&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a614b27b10e9479915550&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section visible-sm-block visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1741577413449 vc_row-has-fill vc_column-gap-15 vc_row-6a614b27b1de2390989977&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-8 vc_column_container_6a614b27b26f2544517199 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1741557963104&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height rdy_vc_row-flex vc_row-6a614b27b2a16292937660&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-2 vc_column_container_6a614b27b3f7f174190217&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;rdy_button_align center&quot;]/a[@class=&quot;rdy_button  no-radius medium dark flat-dimension button-7&quot;]/span[1]</value>
-      <webElementGuid>3dab3053-cd5c-4803-825d-52f547e96528</webElementGuid>
+      <webElementGuid>56b24f18-4d2b-495e-bbeb-cc3e360d471a</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div[6]/div/div/div/a/span</value>
-      <webElementGuid>c39ae2ad-4571-439e-9b13-17f9dab2b727</webElementGuid>
+      <webElementGuid>6b494308-fdb1-497c-94db-67edeaca9599</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='SIGN UP'])[1]/following::span[1]</value>
-      <webElementGuid>a5e88206-bcdf-4cf6-86c7-4d9234a389b0</webElementGuid>
+      <webElementGuid>fa5e7cdf-e8f3-4a47-b9d3-f9af50d1f9dc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/following::span[2]</value>
-      <webElementGuid>6a073861-abc0-4312-9e46-25e55866eee2</webElementGuid>
+      <webElementGuid>f542499a-3ecf-42cf-b082-60192cd19206</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Works'])[1]/preceding::span[2]</value>
-      <webElementGuid>6d35c96d-f06f-46c8-83fd-74b98a442142</webElementGuid>
+      <webElementGuid>8fcb65cf-dbe9-477c-b2b4-4837abf6de80</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='DONATION']/parent::*</value>
-      <webElementGuid>67582c43-2492-4d9c-85d3-190bac0f97b3</webElementGuid>
+      <webElementGuid>1ba30f24-1d3f-4e06-828f-98b9e2aad341</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[6]/div/div/div/a/span</value>
-      <webElementGuid>5fb7ac91-c004-4ff5-8632-aa103eccc9aa</webElementGuid>
+      <webElementGuid>52c1980b-82cf-43a3-bc98-0e80918e0cdc</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,6 +95,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//span[(text() = 'DONATION' or . = 'DONATION')]</value>
-      <webElementGuid>efd23c54-2518-4ff3-a649-b1e5623e3445</webElementGuid>
+      <webElementGuid>8ad94cde-5617-442d-af28-f2babeeefaf7</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

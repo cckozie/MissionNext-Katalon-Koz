@@ -44,9 +44,9 @@ calledBySikuli = false
 /////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\
 //#############################################\\
 
-// first letter of tests; menus, logo, donate, footer, header links on child (linked to) pages
-myTests = 'mldfh'
-//myTests = 'h'
+// first letter of tests; menus, logo, donate, footer
+myTests = 'mldf'
+myTests = 'f'
 
 // first letter of menu tests; connecting, equipping, about us
 myMenus = 'cea'
@@ -113,7 +113,7 @@ if(screensize != 'full') {
 	sHeight = sSize[1]
 }
 
-tests = ['menuTest':false, 'logoTest':false, 'donateTest':false, 'footerTest':false, 'headerLinksTest':false]
+tests = ['menuTest':false, 'logoTest':false, 'donateTest':false, 'footerTest':false]
 
 for(test in tests) {
 	println(test.key)
@@ -171,7 +171,7 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 	'Careers' : 'https://missionworks.global/careers/', 'Contact Us' : 'https://missionworks.global/contact-us/',
 	'MissionExcellence' : 'https://missionexcellence.global/']
 
-//sites = ['MissionNext' : "https://missionnext.org/"]
+sites = ['MissionNext' : "https://missionnext.org/"]
 //sites = ["Journey" : "https://journey.missionnext.org/journey-home/login-here-2/"]
 //sites = ["Education" : "https://education.missionnext.org/education-home/login-here"]
 //sites = ["QuickStart" : "https://quickstart.missionnext.org/quickstart-home/login-here"]
@@ -185,7 +185,7 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 //sites = ['Team and Board' : 'https://missionworks.global/team-and-board/']
 //sites = ['Careers' : 'https://missionworks.global/careers/']
 //sites = ['Contact Us' : 'https://missionworks.global/contact-us/']
-sites = ['MissionExcellence' : 'https://missionexcellence.global/']
+//sites = ['MissionExcellence' : 'https://missionexcellence.global/']
 
 if(sites.size() > 1 && imageTestOnly) {
 	sites = imageTestSite
@@ -235,8 +235,6 @@ if(imageTestOnly) {
 
 
 outFile = new File(outFileName)
-
-GlobalVariable.outFile = outFile
 
 errorFile = new File(errorFileName)
 
@@ -303,9 +301,9 @@ for(site in sites) {
 	
 	if(site.key in mySites) {
 	
-		outFile.append('\n\n     <<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>')
+		outFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
 		
-		errorsOutFile.append('\n\n    <<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>')
+		errorsOutFile.append('\n<<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>\n')
 		
 		println(tests.get('menuTest'))
 		
@@ -334,34 +332,7 @@ for(site in sites) {
 			testFooter(site.key)
 		}
 		
-		if(tests.get('headerLinksTest')) {
-			
-			siteURL = site.value
-			
-			bypassSites = []
-			
-			if(siteURL.contains('global') && !bypassSites.contains(site.key)) {
-				
-				WebUI.openBrowser('')
-				
-				if(screensize == 'full') {
-					WebUI.maximizeWindow()
-				} else {
-					WebUI.setViewPortSize(sWidth, sHeight)
-				}
-				
-				navigateToUrl(site.value)
-				
-				errors = WebUI.callTestCase(findTestCase('MissionWorks Headers and Footers/Test MissionWorks Header Menu'), [('varSite'):site.key, ('varScreensize'):screensize], FailureHandling.STOP_ON_FAILURE)
-				
-				if(errors) {
-					errorFlag = true
-				}
-			}
-		}
-		
 		allFalse = tests.every { it.value == false }
-		
 		if(allFalse) { //Just load all of the sites (used to watch for header anomolies)
 			if(firstSite) {
 				WebUI.openBrowser('')

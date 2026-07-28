@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_SPONSORSHIP</name>
+   <name>span_Sponsorship</name>
    <tag></tag>
-   <elementGuidId>9ebdf344-0ffb-4f74-93c9-4cc276011421</elementGuidId>
+   <elementGuidId>8211e086-8888-4642-acac-f2ff5dc851f3</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>0632b3ff-f0d3-4e05-be55-ff974412a00a</webElementGuid>
+      <webElementGuid>d7114452-b461-4c00-94ae-d019ef5664b4</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://missionworks.global/sponsorship/</value>
-      <webElementGuid>e448f53c-2cba-438f-8488-2b8dfebcbb5a</webElementGuid>
+      <webElementGuid>5d2bdd0e-7592-4035-883a-0d38245528bc</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>text</name>
       <type>Main</type>
       <value>SPONSORSHIP</value>
-      <webElementGuid>d8fca284-bbb9-48b7-805a-be2e7f4fa9b6</webElementGuid>
+      <webElementGuid>8ba2d294-1481-4486-bfe4-40f1c3e6054e</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1783369104826 vc_row-has-fill vc_column-gap-30 vc_row-6a62376a0559e488738383&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a62376a05ad9014182603&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1784138887756 vc_row-has-fill vc_column-gap-30 vc_row-6a62376a06aab073400983&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-6 vc_column_container_6a62376a0786a037053869 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1783370643365&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;wpb_text_column_10 wpb_text_column wpb_content_element  vc_custom_1783370671260&quot;]/div[@class=&quot;wpb_wrapper&quot;]/p[1]/span[@class=&quot;topbarfont&quot;]/span[1]/a[1]</value>
-      <webElementGuid>27f1d072-e1f6-4cb5-a810-6bc83c3b7cc4</webElementGuid>
+      <webElementGuid>c5fcf19d-d8e6-4dcd-956d-4a744fd12012</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/p/span/span/a</value>
-      <webElementGuid>5de2f7c2-8791-436d-ad9b-14661ee94726</webElementGuid>
+      <webElementGuid>9df8b43b-4e59-4d6b-9b7e-d036942cacf8</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -63,7 +63,7 @@
       <name>xpath:link</name>
       <type>Main</type>
       <value>//a[contains(text(),'SPONSORSHIP')]</value>
-      <webElementGuid>4f6bf652-449e-4c58-ba45-8aa598aacc73</webElementGuid>
+      <webElementGuid>3d2d54cc-7c98-4676-ac8d-6c86c71ec45d</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -71,7 +71,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[1]/following::a[2]</value>
-      <webElementGuid>b126939a-e514-4bab-b40f-85d7a6a605ed</webElementGuid>
+      <webElementGuid>e4c53599-63fd-4def-b7de-f72e48b01c2c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -79,7 +79,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[1]/following::a[3]</value>
-      <webElementGuid>e56ec588-c2cb-4616-941c-91da85722ccc</webElementGuid>
+      <webElementGuid>24d2db39-307b-42b9-a257-76795581cd3a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -87,7 +87,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/preceding::a[1]</value>
-      <webElementGuid>0dc033f8-f5ca-42c8-913c-6b9714b89568</webElementGuid>
+      <webElementGuid>2ecec389-d647-4976-9622-f432ba3888e9</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -95,7 +95,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>//*/text()[normalize-space(.)='SPONSORSHIP']/parent::*</value>
-      <webElementGuid>b9ef1d6e-03c4-4739-a2b5-500d8dbdfa75</webElementGuid>
+      <webElementGuid>eb5c0efc-7a38-413d-ab69-f553a6fcb0f1</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -103,7 +103,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://missionworks.global/sponsorship/')]</value>
-      <webElementGuid>1ce3031f-e36a-4ad6-9ddf-408e74b15dd3</webElementGuid>
+      <webElementGuid>ea37274f-e17f-40a0-b297-08235ae23541</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -111,7 +111,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//span/a</value>
-      <webElementGuid>fff4fe21-19c0-482b-a571-32b61e80aa4b</webElementGuid>
+      <webElementGuid>0adf1845-3ad1-4e38-8e3e-4a6560cc2493</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -119,6 +119,6 @@
       <name>xpath:customAttributes</name>
       <type>Main</type>
       <value>//a[@href = 'https://missionworks.global/sponsorship/' and (text() = 'SPONSORSHIP' or . = 'SPONSORSHIP')]</value>
-      <webElementGuid>2d69ff02-e06a-4f2f-a7cb-c91ededd06cd</webElementGuid>
+      <webElementGuid>a41f91b2-67ab-48d2-b981-0b2e84d9782c</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

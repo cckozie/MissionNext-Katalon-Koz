@@ -47,17 +47,13 @@ if(local) {
 
 site = varSite
 
-screensize = varScreensize
-
-donateXpath = "//a[text()='Donate']"
-
 print('The site is ' + site)
 
 headerLinks = ['MissionWorks' : ['Careers', 'Sponsorship', 'Membership', 'Contact Us', 'Sign Up', 'Donation'],
 	'MissionConnexion' : ['Sponsorship', 'Contact Us', 'Sign Up', 'Donate Now'],
-	'MissionExcellence' : ['About', '7 Standards', 'Sponsorship', 'Membership', 'Resources', 'Contact', 'Join Today' , 'Member Login'],
+	'MissionExcellence' : ['7 Standards' , 'About' , 'Contact' , 'Join Today' , 'Member Login' , 'Membership' , 'Resources' , 'Sponsorship'],
 	'MissionGuide' : ['Quick Search', 'US Trips', 'Trips For Your Group', 'InternshipsGap Year', 'List Trips Today'],
-	'MissionLinked' : ['Inquire', 'Sign Up', 'Contact Us', 'Login']]
+	'MissionLinked' : ['Inquire', 'Sign Up', 'Contact', 'Login']]
 
 
 pageTitles = ["Careers" : "Careers – MissionWorks", "Sponsorship" : "Sponsorship – MissionWorks", "Membership" : "Membership – MissionWorks",
@@ -73,7 +69,7 @@ altPageTitles = ["MissionConnexion" : ["Sign Up" : "Sign Up - MissionConnexion",
 		"US Trips" : "United States Mission Trips : MissionGuide.global", "Trips For Your Group" : "Groups only Mission Trips : MissionGuide.global", 
 		"InternshipsGap Year" : "Internship Mission Trips : MissionGuide.global", "List Trips Today" : "Signup - MissionGuide.global"],
 	"MissionLinked" : ["Inquire" : "href = mailto:info@missionlinked.global", "Sign Up" : "Registration - MissionLinked",
-		 "Contact Us" : "Support – MissionLinked", "Login" : "Sign In - MissionLinked"]]
+		 "Contact" : "Support – MissionLinked", "Login" : "Sign In - MissionLinked"]]
 
 altSignUpSites = ['MissionWorks', 'Contact Us', 'About Us', 'Statement of Faith', 'Team and Board']
 
@@ -83,7 +79,7 @@ missionGuideLinks = ['Quick Search' : 'https://missionguide.global/directory',
 	'InternshipsGap Year' : 'https://missionguide.global/directory/ministry_type/internship_study_abroad', 
 	'List Trips Today' : 'https://missionguide.global/signup']
 
-if(site == 'MissionConnexion' || site == 'MissionExcellence' || site == 'MissionGuide' || site == 'MissionLinked') {
+if(site == 'MissionConnexion' || site == 'MissionExcellence' || site == 'MissionGuide') {
 	objectFolder = 'MissionWorks Headers and Footers/' + site + ' Header Links/span_'
 } else {
 	objectFolder = 'MissionWorks Headers and Footers/MissionWorks Header Links/span_'
@@ -100,17 +96,11 @@ if(local) {
 
 println('site is ' + site)
 
-outFile.append('\n_________________________________________________________________________________________________\n')
-
-outFile.append('\n<<< TESTING THE HEADER LINKS ON ' + site + ' >>>\n')
-
 if(headerLinks.containsKey(site)) {
 	links = headerLinks.get(site)
 } else {
 	links = headerLinks.get('MissionWorks')
 }
-
-println(links.getClass())
 
 outFile.append(' \n')
 
@@ -124,7 +114,7 @@ for(link in links) {
 	
 	outFile.append('Testing the header link ' + link + ' on ' + site + '.\n')
 	
-	object = objectFolder + link
+	object = objectFolder + link.toUpperCase()
 	
 //	driver = DriverFactory.getWebDriver()
 	
@@ -132,38 +122,7 @@ for(link in links) {
 	
 		println(object)
 		
-		if(site == 'MissionLinked' && link == 'Inquire') {
-			
-			pageTitles = altPageTitles.get(site) 
-			
-			println(pageTitles)
-			
-			myTitle = pageTitles.get(link)
-			
-			println(myTitle)
-			
-			myLink = myTitle.takeAfter('= ') 
-			
-			println(myLink)
-			
-			href = WebUI.getAttribute(findTestObject(object), "href")
-			
-			if(myLink != href) {
-				outText = ('#### ERROR: The href "' + href + '" was found on the "Inquire" link, but it should have been "' + myLink + '".\n')
-				println(outText)
-				
-				outFile.append(outText)
-				
-				errorFlag = true
-			}
-			
-			WebUI.delay(2)
-			
-			continue
-			
-		} else {
-			WebUI.click(findTestObject(object))
-		}
+		WebUI.click(findTestObject(object))
 
 	} else {
 		
@@ -190,32 +149,17 @@ for(link in links) {
 		WebUI.navigateToUrl(clipboardData)	
 	}
 	
-//	WebUI.waitForPageLoad(10)
-	WebUI.delay(1)
-	
 	driver = DriverFactory.getWebDriver()
 		
 	handles = driver.getWindowHandles()
 	
 	tabs = handles.size()
 	
-	println(tabs + ' tabs')
-	
 	if(tabs > 1) {
 		
 		WebUI.switchToWindowIndex(1)
 		
-		WebUI.delay(1)
-		
-//		WebUI.waitForPageLoad(10)
-		
-		if(site == 'MissionLinked' && link == 'Contact Us' && screensize == 'full') { //Hover on Donate element to allow full page load
-			try {
-				s.click(missionGuideImages + 'Contact Us Entry.png')	
-			} catch (error) {
-				println(error)
-			}
-		}
+		WebUI.waitForPageLoad(10)
 		
 		WebUI.delay(2)
 	}
@@ -248,8 +192,6 @@ for(link in links) {
 		println('myTitle : ' + myTitle)
 	}
 	
-	println('title is ' + title + 'and myTitle is ' + myTitle)
-	
 	if(title != myTitle) {
 		
 		if(link == 'Sign Up' && altSignUpSites.contains(site)) {
@@ -278,7 +220,7 @@ for(link in links) {
 			
 			outFile.append(outText)
 			
-			errorFlag = true
+				errorFlag = true
 		}
 	
 	} else {
@@ -286,39 +228,26 @@ for(link in links) {
 		println('Title matches')
 	}
 	
-	if(link == links.last()) {
-		WebUI.closeBrowser()
+	if(tabs > 1) {
+		
+		WebUI.closeWindowIndex(1)
+		
+		WebUI.switchToWindowIndex(0)
 		
 	} else {
-		if(tabs > 1) {
+		
+		if(site == 'MissionGuide') {
+			WebUI.closeBrowser()
 			
-			WebUI.closeWindowIndex(1)
+			WebUI.openBrowser('')
 			
-			WebUI.switchToWindowIndex(0)
-			
-		} else {
-			
-			if(site == 'MissionGuide') {
-				WebUI.closeBrowser()
-				
-				WebUI.openBrowser('')
-				
-				WebUI.maximizeWindow()
-			}
-			
-			WebUI.navigateToUrl(url)
-			
-			WebUI.waitForPageLoad(20)
+			WebUI.maximizeWindow()
 		}
+		
+		WebUI.navigateToUrl(url)
+		
+		WebUI.waitForPageLoad(20)
 	}
 }
-/*
-if(site == 'MissionLinked' && screensize == 'full') { //Hover on Donate element to allow full page load
-	try {
-		s.click(missionGuideImages + 'Contact Us Entry.png')
-	} catch (error) {
-		println(error)
-	}
-}
-*/
+
 return errorFlag
