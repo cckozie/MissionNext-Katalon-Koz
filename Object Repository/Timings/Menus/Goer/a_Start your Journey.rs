@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Start your Journey</name>
+   <tag></tag>
+   <elementGuidId>6e356b41-fdd0-4feb-9bde-01b890dd80fb</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[2]/div[2]/div/div/div/div/nav[1]/ul/li[3]/ul/li[3]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-64384 > a.elementor-sub-item</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>96852854-27f0-40ea-bc19-a32b23aa1b4a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://journey.missionnext.org/journey-home/im-an-individual/</value>
+      <webElementGuid>0ffe5fef-9c1d-4701-bd73-18e13e4b6b97</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-sub-item</value>
+      <webElementGuid>12766065-0645-4b89-8d24-373f49c664c6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Start your Journey!</value>
+      <webElementGuid>00a493d2-8a40-4216-97c7-6c233724fb04</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-17860335197013813-6&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-64384&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
+      <webElementGuid>8adde1b5-66f0-4444-9e3d-95b3e242dfed</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='sm-17860335197013813-6']/li[3]/a</value>
+      <webElementGuid>7188639e-2cbd-4458-914e-8fffa512938f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Start your Journey!')]</value>
+      <webElementGuid>b16e11c2-d31b-48c6-afa1-880f493e9a18</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='QuickStart'])[2]/following::a[1]</value>
+      <webElementGuid>81c5d1c8-15ce-4f8d-9395-a1e5ec28c31e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[2]/following::a[2]</value>
+      <webElementGuid>d32cb426-b71a-4582-86af-b94d99756709</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Serve in Education!'])[1]/preceding::a[1]</value>
+      <webElementGuid>31d60abf-9e3c-4bbb-83b6-0689d460bb97</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Jobs'])[1]/preceding::a[2]</value>
+      <webElementGuid>ea176ed8-eb37-45cc-a557-f221d80acdb0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Start your Journey!']/parent::*</value>
+      <webElementGuid>8749964a-fa35-470d-898c-44cb0574f0fd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://journey.missionnext.org/journey-home/im-an-individual/')]</value>
+      <webElementGuid>fe5dc589-9c31-4411-8391-f68ac1642fdb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/nav/ul/li[3]/ul/li[3]/a</value>
+      <webElementGuid>50b878e2-a0e7-44a0-8aaa-26a6d46687fc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://journey.missionnext.org/journey-home/im-an-individual/' and (text() = 'Start your Journey!' or . = 'Start your Journey!')]</value>
+      <webElementGuid>28e5a7f6-c003-4d1e-9327-513b0024d5f6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

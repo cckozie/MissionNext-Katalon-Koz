@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Membership</name>
+   <tag></tag>
+   <elementGuidId>d433ef58-b105-43bc-86aa-317496097794</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[3]/header/div/nav[1]/div/ul/li[4]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#menu-main-menu-1 > li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-3137 > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>a6ea7cc4-8f32-4566-a332-db3c42be4850</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionexcellence.global/membership/</value>
+      <webElementGuid>b7828e7b-bd1a-4973-8332-a92bf7295472</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Membership</value>
+      <webElementGuid>cb0b52af-81cd-4ec9-adc1-2088013c9fb1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu-main-menu-1&quot;)/li[@class=&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-3137&quot;]/a[1]</value>
+      <webElementGuid>aaeb1f50-b0e7-40dc-8301-54d2947a319d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='menu-main-menu-1']/li[4]/a</value>
+      <webElementGuid>c20ceed0-aa36-44c0-92b6-02116d725cbd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>(//a[contains(text(),'Membership')])[2]</value>
+      <webElementGuid>75bc813c-1871-470f-a4f9-d36d31c42859</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Sponsorship'])[2]/following::a[1]</value>
+      <webElementGuid>4436108f-0cd2-48cc-9f5d-37c5ed1772cc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='How it Works'])[2]/following::a[3]</value>
+      <webElementGuid>f3ae8085-361e-49b9-ae6f-25cc2347c46b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Resources'])[2]/preceding::a[1]</value>
+      <webElementGuid>24f0eaa3-82ee-4776-8476-12d6826d129a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[2]/preceding::a[2]</value>
+      <webElementGuid>834c5c29-5bce-4bc7-89ba-7741cd17043a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://missionexcellence.global/membership/')])[2]</value>
+      <webElementGuid>5ff6c497-3d10-487e-868d-1327f93559d9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav[2]/ul/li[4]/a</value>
+      <webElementGuid>0637516f-1eea-4f19-b942-1d92c2da964e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionexcellence.global/membership/' and (text() = 'Membership' or . = 'Membership')]</value>
+      <webElementGuid>8e941d32-c714-4a65-8e13-f9c7da38e153</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

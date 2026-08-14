@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_Goer_sub-arrow</name>
+   <tag></tag>
+   <elementGuidId>f2aee187-a9e9-47ac-ac11-d4df4ad72091</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[2]/div[2]/div/div/div/div/nav[1]/ul/li[3]/a/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#sm-17860305105687039-5 > span.sub-arrow</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>dddf4bc3-f3d9-4907-9c30-17c44f587f28</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>sub-arrow</value>
+      <webElementGuid>37a433d9-826c-4697-8891-1878803dc1f4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-17860305105687039-5&quot;)/span[@class=&quot;sub-arrow&quot;]</value>
+      <webElementGuid>a442bd8a-7d22-4c39-a28f-92dc89917790</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//a[@id='sm-17860305105687039-5']/span</value>
+      <webElementGuid>3ee7b4c4-9434-4092-aaaf-3850b36e3b26</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[1]//span[1]</value>
+      <webElementGuid>c40e8d8f-f6d5-47d5-9b84-c51342e9e54e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Strategic and Mobilization Partners'])[1]/following::span[1]</value>
+      <webElementGuid>05e74794-f8bb-46b3-8eaf-437114ae343d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[2]/preceding::span[1]</value>
+      <webElementGuid>dbc7ed41-ea37-4e05-9fe6-222d3a973827</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='QuickStart'])[2]/preceding::span[1]</value>
+      <webElementGuid>4dff740f-9f0b-4585-b2c3-0ddf98898b30</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/nav/ul/li[3]/a/span</value>
+      <webElementGuid>8ce9df81-a46d-4f61-b12c-5035c67409ce</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

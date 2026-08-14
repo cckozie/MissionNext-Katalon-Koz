@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Serve in Education</name>
+   <tag></tag>
+   <elementGuidId>d869c137-0374-4472-8cd7-6ce96d386459</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[2]/div[2]/div/div/div/div/nav[1]/ul/li[3]/ul/li[4]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-64385 > a.elementor-sub-item</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>39ec8c4e-8d10-47f1-969b-3903fafa14fd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://education.missionnext.org/education-home/im-an-educator/</value>
+      <webElementGuid>9d1b13e7-04fc-4c7a-a7bd-d8605cc79bf9</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-sub-item</value>
+      <webElementGuid>77b808c4-1c81-490b-a100-4010cb491115</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Serve in Education!</value>
+      <webElementGuid>2b375734-b904-446a-9d9d-ee5953293a2e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-17860335197013813-6&quot;)/li[@class=&quot;menu-item menu-item-type-custom menu-item-object-custom menu-item-64385&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
+      <webElementGuid>d2860bb2-e60b-473b-b085-ab44dad9808b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='sm-17860335197013813-6']/li[4]/a</value>
+      <webElementGuid>cedbb2ba-aa82-42d2-8a33-65a6859d5693</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Serve in Education!')]</value>
+      <webElementGuid>2ed644f5-873d-4ed6-b553-aa4456dadda0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Start your Journey!'])[1]/following::a[1]</value>
+      <webElementGuid>1d78d545-e862-4c62-8cce-2284150aeb2d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='QuickStart'])[2]/following::a[2]</value>
+      <webElementGuid>ac7d4bc2-39f8-4a67-b1cd-233e70727548</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Jobs'])[1]/preceding::a[1]</value>
+      <webElementGuid>65fdda8f-262c-44f5-ba44-17d8001d3fa5</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Resources'])[1]/preceding::a[2]</value>
+      <webElementGuid>e28578bc-b7fb-4b48-8a7c-982d96bd8371</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Serve in Education!']/parent::*</value>
+      <webElementGuid>bc25e01e-6698-4081-b9bd-1bb39d4afff0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://education.missionnext.org/education-home/im-an-educator/')]</value>
+      <webElementGuid>7b1b1727-8d81-4b31-b127-09bae417069a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/nav/ul/li[3]/ul/li[4]/a</value>
+      <webElementGuid>dbf85bb7-4dea-4c67-b809-54940f699f56</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://education.missionnext.org/education-home/im-an-educator/' and (text() = 'Serve in Education!' or . = 'Serve in Education!')]</value>
+      <webElementGuid>c2a188f5-e0fd-4267-a4a2-4f0ba8aa5eb8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

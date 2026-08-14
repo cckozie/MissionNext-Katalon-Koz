@@ -154,4 +154,19 @@
       <initValue>''</initValue>
       <name>callingTestCase</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>errorsOutFile</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Users/cckozie/Documents/MissionNext/Test Reports/Test Case Timings.csv'</initValue>
+      <name>timingsFile</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>startTime</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

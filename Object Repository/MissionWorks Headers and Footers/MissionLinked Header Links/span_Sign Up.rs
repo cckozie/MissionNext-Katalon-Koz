@@ -3,15 +3,15 @@
    <description></description>
    <name>span_Sign Up</name>
    <tag></tag>
-   <elementGuidId>248edb92-2772-420b-a84a-43d248233486</elementGuidId>
+   <elementGuidId>af5552ba-d543-4c2a-ac48-f2d76f7ce5fb</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>/html/body/header/section[2]/div/div[2]/div/div[2]/div/div/a</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>#sign_up</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header[2]/section/div/div[2]/div/div[2]/div/div/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -23,7 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
-      <webElementGuid>eadfde69-eb42-4771-b4e3-656c8bcf6058</webElementGuid>
+      <webElementGuid>8becb7f5-22a9-4ca8-bfc2-12d472fd32f6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -31,7 +31,7 @@
       <name>class</name>
       <type>Main</type>
       <value>elementor-button elementor-button-link elementor-size-sm</value>
-      <webElementGuid>cb69f197-d315-4fac-bec1-356f2e046a8d</webElementGuid>
+      <webElementGuid>8ba50dd7-9b7f-4928-9ee5-58e11f3f1008</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,7 +39,7 @@
       <name>href</name>
       <type>Main</type>
       <value>https://portal.missionlinked.global/Organization/Registration/</value>
-      <webElementGuid>66323d46-8050-4fa2-83b8-015b1c0f2c9a</webElementGuid>
+      <webElementGuid>98c7a5f0-50aa-4e62-b272-e918b2a1d4d7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -47,7 +47,7 @@
       <name>target</name>
       <type>Main</type>
       <value>_blank</value>
-      <webElementGuid>84a59151-acb1-44ea-9fc7-5df3ed0e5dd0</webElementGuid>
+      <webElementGuid>449c7568-d95e-4c23-9869-4a4cb8ecb86f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -55,7 +55,7 @@
       <name>id</name>
       <type>Main</type>
       <value>sign_up</value>
-      <webElementGuid>31cc73a2-b93c-4f5c-b735-a81adf86b492</webElementGuid>
+      <webElementGuid>d49c0261-8c94-40db-a1e1-2085b9761557</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -67,7 +67,7 @@
 									Sign Up
 					
 					</value>
-      <webElementGuid>e8a2a83c-2655-465e-b757-c3d763f69c5e</webElementGuid>
+      <webElementGuid>ec53cfdf-30bc-4162-b57b-8a1c9a6e212c</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -75,7 +75,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;sign_up&quot;)</value>
-      <webElementGuid>bb21ab8e-5af6-446f-8f4c-f2f783d24f2b</webElementGuid>
+      <webElementGuid>925c530d-93b9-4b58-9354-4961d086e4e0</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -83,7 +83,7 @@
       <name>xpath:attributes</name>
       <type>Main</type>
       <value>//a[@id='sign_up']</value>
-      <webElementGuid>bf982d95-ebe6-4f69-92c8-d03cba130166</webElementGuid>
+      <webElementGuid>f7fa5ddc-c6a4-4c8b-b351-1d3571a4eabd</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -91,23 +91,23 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Inquire'])[1]/following::a[1]</value>
-      <webElementGuid>70e2ac37-4ce9-4115-a952-6f1ed322ff2a</webElementGuid>
+      <webElementGuid>d5e60f1d-3427-4343-8faa-5a59053eb4c3</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Donate'])[2]/following::a[3]</value>
-      <webElementGuid>9d718e35-21d0-4ee6-b20c-afd3cdf06d25</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Skip to content'])[1]/following::a[3]</value>
+      <webElementGuid>cfec27c6-3a1b-47d9-ae03-ea8f3692338a</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[3]/preceding::a[1]</value>
-      <webElementGuid>29285401-80ca-4948-b907-262a8a52ed32</webElementGuid>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[2]/preceding::a[1]</value>
+      <webElementGuid>8761760b-0475-4ba3-bae6-3d71360ab446</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -115,7 +115,7 @@
       <name>xpath:href</name>
       <type>Main</type>
       <value>//a[contains(@href, 'https://portal.missionlinked.global/Organization/Registration/')]</value>
-      <webElementGuid>82d57cd4-f9ea-4fe6-a394-c6a666f9078a</webElementGuid>
+      <webElementGuid>6db63b01-2ba2-4676-ab19-a2c6debae652</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -123,7 +123,7 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/a</value>
-      <webElementGuid>e8abe06e-0f72-4aaf-a3be-79e4d723da52</webElementGuid>
+      <webElementGuid>2bf991f3-1a5c-468c-a139-128e43474dd2</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -139,6 +139,6 @@
 									Sign Up
 					
 					')]</value>
-      <webElementGuid>c9a1ca20-4bd3-4245-938e-75011a0cb11f</webElementGuid>
+      <webElementGuid>c623e5fd-9aab-4a60-b4f5-85817a5b52b9</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

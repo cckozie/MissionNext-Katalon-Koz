@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_DONATION</name>
+   <tag></tag>
+   <elementGuidId>537f1fdb-4f9a-4c5b-8376-63f71ce76d9e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[6]/div/div/div/a/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.rdy_button.no-radius.medium.dark.flat-dimension.button-7 > span</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>eaa22672-f0c7-4cff-8605-3926b3b6bfc0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>DONATION</value>
+      <webElementGuid>bd0ff318-bdc1-407e-b0ad-c6af1457ca65</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-10&quot;)/div[@class=&quot;entry-content row&quot;]/div[@class=&quot;wpb-content-wrapper&quot;]/div[@class=&quot;container-fluid row_section visible-md-block visible-lg-block vc_row_cp_t_0 vc_row_cp_b_0&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1764721079486 vc_row-has-fill vc_row-6a614b27b0ddb572156331&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-12 vc_column_container_6a614b27b10e9479915550&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;templatera_shortcode&quot;]/div[@class=&quot;container-fluid row_section visible-sm-block visible-md-block visible-lg-block vc_row_p_30&quot;]/div[@class=&quot;vc_row wpb_row vc_row-fluid vc_custom_1741577413449 vc_row-has-fill vc_column-gap-15 vc_row-6a614b27b1de2390989977&quot;]/div[@class=&quot;row-container container-fluid&quot;]/div[@class=&quot;row-inner&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-8 vc_column_container_6a614b27b26f2544517199 column_vertical_align_bottom&quot;]/div[@class=&quot;vc_column-inner vc_custom_1741557963104&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;vc_row wpb_row vc_inner vc_row-fluid vc_row-o-equal-height rdy_vc_row-flex vc_row-6a614b27b2a16292937660&quot;]/div[@class=&quot;wpb_column vc_column_container vc_col-sm-2 vc_column_container_6a614b27b3f7f174190217&quot;]/div[@class=&quot;vc_column-inner&quot;]/div[@class=&quot;wpb_wrapper&quot;]/div[@class=&quot;rdy_button_align center&quot;]/a[@class=&quot;rdy_button  no-radius medium dark flat-dimension button-7&quot;]/span[1]</value>
+      <webElementGuid>a9186811-31be-4f7d-b1d3-32c23d81e96c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-10']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div[6]/div/div/div/a/span</value>
+      <webElementGuid>c19dea24-e5a5-4763-b3cb-00bd365e9f57</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SIGN UP'])[1]/following::span[1]</value>
+      <webElementGuid>d1a600a4-8996-42a9-bdc2-63962ab2c5a0</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='CONTACT US'])[1]/following::span[2]</value>
+      <webElementGuid>56f81926-0fed-4908-9f94-f8760533e0c7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Works'])[1]/preceding::span[2]</value>
+      <webElementGuid>6b7e1378-961d-41c0-88fb-7e1ebe33cf28</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='DONATION']/parent::*</value>
+      <webElementGuid>33ac49ea-97e9-4109-bfdd-a8a31c08bc92</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[6]/div/div/div/a/span</value>
+      <webElementGuid>e209ed95-4e9f-4da2-a742-3dee3548c606</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'DONATION' or . = 'DONATION')]</value>
+      <webElementGuid>867916d5-d514-4b90-8df0-3667a2695c94</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

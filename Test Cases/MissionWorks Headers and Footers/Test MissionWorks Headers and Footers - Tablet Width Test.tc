@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test MissionWorks Headers and Footers - Tablet Width Test</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>00ee682a-6b0c-433c-820f-4dd6f25208a8</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0f960b7b-c23d-4e63-8e6a-46992a672f24</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0f960b7b-c23d-4e63-8e6a-46992a672f24</id>
+      <masked>false</masked>
+      <name>varScreensize</name>
+   </variable>
+</TestCaseEntity>

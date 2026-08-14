@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Really Want to Log Out</name>
+   <tag></tag>
+   <elementGuidId>0d9dfc6d-51ba-4a4b-b30a-d86150a88c59</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'log out' or . = 'log out')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/p[2]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>114b6d72-9609-4ff5-b64e-768a8353a63e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Fjourney.missionnext.org&amp;_wpnonce=2bb0787630</value>
+      <webElementGuid>17c6604b-4685-42a2-bb39-cdb8de3a026a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>log out</value>
+      <webElementGuid>cf52b9f5-20a7-49c1-9f98-599aa874ab29</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;error-page&quot;)/div[@class=&quot;wp-die-message&quot;]/p[2]/a[1]</value>
+      <webElementGuid>b75072de-2e18-4857-9083-c0358155314b</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='error-page']/div/p[2]/a</value>
+      <webElementGuid>9ebfc506-d812-4d11-9f36-5302dcbdea5a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'log out')]</value>
+      <webElementGuid>94119e5d-c52c-4c5f-a9ce-fd0a1a7c5c75</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='log out']/parent::*</value>
+      <webElementGuid>d23c2e8f-98e0-486f-8e22-dfa26f13096a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Fjourney.missionnext.org&amp;_wpnonce=2bb0787630')]</value>
+      <webElementGuid>86d3cb62-9e70-484e-b54f-c0a131352890</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a</value>
+      <webElementGuid>398d1f69-04a9-49f7-ae82-1436e18eb08c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://journey.missionnext.org/managerlogin/?action=logout&amp;redirect_to=https%3A%2F%2Fjourney.missionnext.org&amp;_wpnonce=2bb0787630' and (text() = 'log out' or . = 'log out')]</value>
+      <webElementGuid>f02b61df-e722-4ce2-b9d4-4e595ab406e1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_InternshipsGap Year</name>
+   <tag></tag>
+   <elementGuidId>1a1f53f2-9e70-49ea-ba94-2fa540eed639</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//nav/ul/li[4]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#menu-item-5487 > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>b7b7576c-4c89-4515-9d90-779fca1ff130</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionguide.global/directory/ministry_type/internship_study_abroad</value>
+      <webElementGuid>d992e2d6-b90e-4018-bbcb-a4763844bbfd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Internships/Gap Year</value>
+      <webElementGuid>d1c0618a-e912-490f-8ced-dc98c7404abc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu-item-5487&quot;)/a[1]</value>
+      <webElementGuid>db1d0de3-f719-4160-af92-10f26d851b25</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//li[@id='menu-item-5487']/a</value>
+      <webElementGuid>c1aafceb-bd86-41b4-8af9-1ab044ed6fbe</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Internships/Gap Year')]</value>
+      <webElementGuid>6b9f6bad-e1a7-454e-83e8-3339a5de1f86</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Trips For Your Group'])[1]/following::a[1]</value>
+      <webElementGuid>d0b37310-6d8b-4a39-a790-c86247607d6c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='US Trips'])[2]/following::a[2]</value>
+      <webElementGuid>f04e4ad5-20fe-4a74-921f-5057fc757832</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='List Trips Today!'])[2]/preceding::a[1]</value>
+      <webElementGuid>90ca0bd5-250c-48ef-a892-760871a060bd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Find Your Mission Trip'])[1]/preceding::a[2]</value>
+      <webElementGuid>a5a0652d-723a-49b4-9131-e8eb210094b4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Internships/Gap Year']/parent::*</value>
+      <webElementGuid>695ed956-059d-4c8f-a047-638611b1fb1b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionguide.global/directory/ministry_type/internship_study_abroad')]</value>
+      <webElementGuid>924a8953-a866-44d7-b260-1bd1521b4f27</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/ul/li[4]/a</value>
+      <webElementGuid>b321df42-1acd-459d-bbbe-b3be99c640ba</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionguide.global/directory/ministry_type/internship_study_abroad' and (text() = 'Internships/Gap Year' or . = 'Internships/Gap Year')]</value>
+      <webElementGuid>ea9bd9b5-6840-4160-a0df-1b4b31fbd4d6</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

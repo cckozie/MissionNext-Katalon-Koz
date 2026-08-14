@@ -23,7 +23,7 @@ println(varProfile)
 if(varProfile != '') {
 	new ExecutionProfilesLoader().loadProfile(varProfile)
 	
-	site = varProfile[0..varProfile.indexOf(' ') - 1]
+	site = 'jg'
 	
 	println(site)
 	
@@ -60,12 +60,14 @@ if(GlobalVariable.mobileScreen) {
 	
 	WebUI.delay(1)
 }
-jg.missionnext.org/journey-guide-home/login-here/
+
+//site = 'jg.missionnext.org/journey-guide-home/login-here/'
+
 WebUI.navigateToUrl('https://' + site + '.' + GlobalVariable.domain + '/' + site + '-home/login-here/')
 
-WebUI.setText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Username'), username)
+WebUI.setText(findTestObject('Object Repository/Journey Guide/input_Username'), username)
 
-WebUI.setEncryptedText(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/input_Password'), password)
+WebUI.setEncryptedText(findTestObject('Object Repository/Journey Guide/input_Password'), password)
 
-WebUI.click(findTestObject('Object Repository/' + site + ' Candidate Profile/Login/button_Log In'))
+WebUI.click(findTestObject('Object Repository/Journey Guide/button_Log In'))
 

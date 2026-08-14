@@ -21,7 +21,9 @@ import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
-
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
+import groovy.time.TimeCategory
+import groovy.time.TimeDuration
 import java.io.File as File
 
 class After_Test_Case {
@@ -40,5 +42,20 @@ class After_Test_Case {
 			String text = 'Output file is file:///' + GlobalVariable.outFile
 			WebUI.callTestCase(findTestCase('_Functions/Java Send Email'), [('varSubject'):subject, ('varText'):text], FailureHandling.STOP_ON_FAILURE)
 		}
+		String host = GlobalVariable.host
+		String domain = GlobalVariable.domain
+		File myFile = new File(GlobalVariable.timingsFile)
+		Date endTime = new Date()
+		Date startTime = GlobalVariable.startTime
+		TimeDuration elapsed = TimeCategory.minus(endTime, startTime)
+//		String testCase = RunConfiguration.getExecutionProperties().get("current_testcase").toString().substring(RunConfiguration.getExecutionProperties().get("current_testcase").toString().lastIndexOf('/') + 1)
+		String testCase = GlobalVariable.testCaseName
+		if (!myFile.exists()) {
+			myFile.write('TEST CASE,HOST,DOMAIN,START TIME,STOP TIME,RUN TIME\n')
+		}
+		
+//		myFile.append(testCase, host, domain, GlobalVariable.startTime, endTime, elapsed)
+		myFile.append(testCase + ',' + host + ',' + domain + ',' + GlobalVariable.startTime + ',' + endTime + ',' + elapsed + '\n')
+		
 	}
 }

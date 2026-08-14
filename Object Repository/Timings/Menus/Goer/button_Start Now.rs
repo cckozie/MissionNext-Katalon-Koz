@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Start Now</name>
+   <tag></tag>
+   <elementGuidId>46f1d83d-cbd6-484f-bc51-7238f2aa8775</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/main/article/div/div/div/section[3]/div/div/div/section/div/div[1]/div/div[3]/div/div/a/span/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.elementor-button-text</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>5e1ade28-8263-4985-ac32-73fb1d8323d0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-button-text</value>
+      <webElementGuid>a5b23eba-ceaa-4cc2-9a43-a080ce13e38a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Start Now</value>
+      <webElementGuid>90410922-7e5b-43b3-b738-22e200d4aa55</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-13&quot;)/div[@class=&quot;inside-article&quot;]/div[@class=&quot;entry-content&quot;]/div[@class=&quot;elementor elementor-13&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-2e50913 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-no&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bab9773&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-1092a10 elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9391f67&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-ec8aae7 elementor-align-center elementor-widget elementor-widget-button&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-button-wrapper&quot;]/a[@class=&quot;elementor-button elementor-button-link elementor-size-sm&quot;]/span[@class=&quot;elementor-button-content-wrapper&quot;]/span[@class=&quot;elementor-button-text&quot;]</value>
+      <webElementGuid>e088c0bc-c964-4161-8f08-845629f91db9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-13']/div/div/div/section[3]/div/div/div/section/div/div/div/div[3]/div/div/a/span/span</value>
+      <webElementGuid>3817d223-87d5-4cb2-9d29-c77452a9041f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome To MissionNext Education!'])[1]/following::span[2]</value>
+      <webElementGuid>862677b5-3881-4337-81ba-417271e129b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Find Positions Uniquely suited to you'])[1]/preceding::span[1]</value>
+      <webElementGuid>063b5c91-c2f9-45bb-a4f8-3d0437a297da</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Start Now'])[2]/preceding::span[1]</value>
+      <webElementGuid>7110ec5b-80b9-404b-bc7b-17e5c74027af</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Start Now']/parent::*</value>
+      <webElementGuid>ce282efa-2ff9-4fa6-a7f6-233d823da852</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span/span</value>
+      <webElementGuid>6e0692ca-eff4-4df3-aaa6-eba5e1c8e520</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Start Now' or . = 'Start Now')]</value>
+      <webElementGuid>5981d910-c412-42dc-bd35-de2b2b77f601</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

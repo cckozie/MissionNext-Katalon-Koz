@@ -40,14 +40,23 @@ if(local) {
 	outFileName ='/Users/cckozie/Documents/MissionNext/Test Reports/Test MissionWorks Headers and Footers on missionnext.org-local.txt'
 	outFile = new File(outFileName)
 	outFile.write('Local Test of ' + varSite + '\n')
+	errorsOutFileName ='/Users/cckozie/Documents/MissionNext/Test Reports/Test MissionWorks Headers and Footers on missionnext.org-ERRORS ONLY-local.txt'
+	errorsOutFile = new File(outFileName)
+	errorsOutFile.write('Local Test of ' + varSite + '\n')
 } else {
 	outFile = GlobalVariable.outFile
+	errorsOutFile = GlobalVariable.errorsOutFile
 	url = WebUI.getUrl()
 }
 
 site = varSite
 
-screensize = varScreensize
+
+screensize = varScreensize[0]
+
+sWidth = varScreensize[1]
+
+sHeight = varScreensize[2]
 
 donateXpath = "//a[text()='Donate']"
 
@@ -83,17 +92,28 @@ missionGuideLinks = ['Quick Search' : 'https://missionguide.global/directory',
 	'InternshipsGap Year' : 'https://missionguide.global/directory/ministry_type/internship_study_abroad', 
 	'List Trips Today' : 'https://missionguide.global/signup']
 
+hamburger = WebUI.verifyElementInViewport(findTestObject('MissionWorks Headers and Footers/MissionExcellence Header Links/i_Hamburger'), 1, FailureHandling.OPTIONAL)
+
 if(site == 'MissionConnexion' || site == 'MissionExcellence' || site == 'MissionGuide' || site == 'MissionLinked') {
 	objectFolder = 'MissionWorks Headers and Footers/' + site + ' Header Links/span_'
 } else {
 	objectFolder = 'MissionWorks Headers and Footers/MissionWorks Header Links/span_'
 }
 
+myHamburger = 'MissionWorks Headers and Footers/' + site + ' Header Links/i_Hamburger'
+
+hamburger = WebUI.verifyElementInViewport(findTestObject(myHamburger), 1, FailureHandling.OPTIONAL)
+
+if(hamburger) {
+	objectFolder = objectFolder.replace('MissionWorks Headers and Footers/', 'MissionWorks Headers and Footers' + ' - Hamburger/')
+}
+
 missionGuideImages = '/Users/cckozie/git/MissionNext-Katalon-Koz/images/ContextMenu/'
 
 if(local) {
 	WebUI.openBrowser('')
-	WebUI.maximizeWindow()
+	WebUI.setViewPortSize(sWidth, sHeight)
+//	WebUI.maximizeWindow()
 	WebUI.navigateToUrl(url)
 	WebUI.waitForPageLoad(20)
 }
@@ -162,6 +182,12 @@ for(link in links) {
 			continue
 			
 		} else {
+			
+			if(hamburger) {
+				WebUI.click(findTestObject(myHamburger))
+				WebUI.delay(1)
+			}
+			
 			WebUI.click(findTestObject(object))
 		}
 
@@ -185,8 +211,8 @@ for(link in links) {
 		
 		WebUI.openBrowser('')
 		
-		WebUI.maximizeWindow()
-		
+		WebUI.setViewPortSize(sWidth, sHeight)	
+			
 		WebUI.navigateToUrl(clipboardData)	
 	}
 	
@@ -209,7 +235,8 @@ for(link in links) {
 		
 //		WebUI.waitForPageLoad(10)
 		
-		if(site == 'MissionLinked' && link == 'Contact Us' && screensize == 'full') { //Hover on Donate element to allow full page load
+//		if(site == 'MissionLinked' && link == 'Contact Us' && screensize == 'full') { //Hover on Donate element to allow full page load
+		if(site == 'MissionLinked' && link == 'Contact Us') { //Click on entry element to allow full page load
 			try {
 				s.click(missionGuideImages + 'Contact Us Entry.png')	
 			} catch (error) {
@@ -298,12 +325,12 @@ for(link in links) {
 			
 		} else {
 			
-			if(site == 'MissionGuide') {
+			if(site == 'MissionGuide' || site == 'MissionLinked') {
 				WebUI.closeBrowser()
 				
 				WebUI.openBrowser('')
 				
-				WebUI.maximizeWindow()
+				WebUI.setViewPortSize(sWidth, sHeight)
 			}
 			
 			WebUI.navigateToUrl(url)

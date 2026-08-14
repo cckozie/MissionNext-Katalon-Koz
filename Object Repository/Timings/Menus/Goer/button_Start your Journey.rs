@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_Start your Journey</name>
+   <tag></tag>
+   <elementGuidId>339f347c-0a35-4b79-842f-da22fa6f107f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/div[1]/div/div/main/article/div/div/div/section[3]/div/div/div/section/div/div[1]/div/div[3]/div/div/a/span/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span.elementor-button-text</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>span</value>
+      <webElementGuid>38895c31-c9ff-4958-8c1a-bcacdcd8055d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-button-text</value>
+      <webElementGuid>427e159c-00bb-4a09-8b3d-de9148e0b5ce</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Start your Journey</value>
+      <webElementGuid>3732c953-355d-4cbb-90c6-b106fd2e74f0</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;post-31150&quot;)/div[@class=&quot;inside-article&quot;]/div[@class=&quot;entry-content&quot;]/div[@class=&quot;elementor elementor-31150&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-cb9e217 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-no&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-677e9fd&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/section[@class=&quot;elementor-section elementor-inner-section elementor-element elementor-element-155be21 elementor-section-content-middle elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-default&quot;]/div[@class=&quot;elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-670c641&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-f9f5a20 elementor-align-center elementor-widget elementor-widget-button&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-button-wrapper&quot;]/a[@class=&quot;elementor-button elementor-button-link elementor-size-sm&quot;]/span[@class=&quot;elementor-button-content-wrapper&quot;]/span[@class=&quot;elementor-button-text&quot;]</value>
+      <webElementGuid>dba13eb0-9b32-48e4-95b0-c8fe4c5a7e6a</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//article[@id='post-31150']/div/div/div/section[3]/div/div/div/section/div/div/div/div[3]/div/div/a/span/span</value>
+      <webElementGuid>0a251143-fc4b-46da-afc3-5a0647e4b8b6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Welcome to MissionNext Journey'])[1]/following::span[2]</value>
+      <webElementGuid>851d535c-aec4-4d7b-a094-a84ff2ee1e24</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Find positions taylor-made for you'])[1]/preceding::span[1]</value>
+      <webElementGuid>8e3e7dcf-d9f4-4fb2-89c5-6b2910db9963</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Start your Journey'])[2]/preceding::span[1]</value>
+      <webElementGuid>e6ae6c94-a27a-441a-ab05-b747fbe8492f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Start your Journey']/parent::*</value>
+      <webElementGuid>d7d7264e-68f4-46c6-b713-45f9e5a0c910</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//span/span</value>
+      <webElementGuid>994efb61-c079-4244-96e4-f2e680aae24c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//span[(text() = 'Start your Journey' or . = 'Start your Journey')]</value>
+      <webElementGuid>f2c9942f-4ad9-4dff-96ce-09d6e728b16f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

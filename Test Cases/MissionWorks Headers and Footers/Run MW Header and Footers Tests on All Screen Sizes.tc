@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Run MW Header and Footers Tests on All Screen Sizes</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>51793dd9-0271-4a91-8fa1-3dcb2eea717d</testCaseGuid>
+</TestCaseEntity>

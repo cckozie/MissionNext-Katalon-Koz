@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Appointed</name>
+   <tag></tag>
+   <elementGuidId>83fa99a6-80e8-4813-870c-97ee117609ff</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[4]/div/div[2]/h4/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>article.elementor-post.elementor-grid-item.post-30301.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-careers-missions-2 > div.elementor-post__card > div.elementor-post__text > h4.elementor-post__title > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>4b33df01-fa5a-4a3c-80f4-fb80cdc0ee39</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/appointed-2/</value>
+      <webElementGuid>c5862817-82b9-434e-b598-31debc222184</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>&quot;_blank&quot;</value>
+      <webElementGuid>e72da811-2593-4f75-9ede-8f2fe07ff3e2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+				Appointed			</value>
+      <webElementGuid>166a8cd2-8a9d-4d38-99ad-51e7de469e73</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-36135 elementor-location-archive&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-5a5ea1e1 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-section-content-space-evenly elementor-section-boxed elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-no&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8f2133e&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-126a0bbc elementor-posts--align-left elementor-grid-tablet-3 elementor-grid-3 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-card-shadow-yes elementor-posts__hover-gradient elementor-widget elementor-widget-posts&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid elementor-has-item-ratio&quot;]/article[@class=&quot;elementor-post elementor-grid-item post-30301 post type-post status-publish format-standard has-post-thumbnail hentry category-careers-missions-2&quot;]/div[@class=&quot;elementor-post__card&quot;]/div[@class=&quot;elementor-post__text&quot;]/h4[@class=&quot;elementor-post__title&quot;]/a[1]</value>
+      <webElementGuid>76d3fd67-da80-4ce2-96fb-bfd59eb65d7d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[4]/div/div[2]/h4/a</value>
+      <webElementGuid>3f4f2876-167c-4c92-8888-7e01e53ce789</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Appointed')]</value>
+      <webElementGuid>b674f3c1-9246-4346-a8c5-e75da1ce8a23</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Careers &amp; Missions'])[1]/following::a[1]</value>
+      <webElementGuid>31e09a6d-b268-4ed7-abe0-ab93f405493d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='June 26, 2024'])[1]/following::a[2]</value>
+      <webElementGuid>bf110642-af81-436f-9f74-3a5a98b3867c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Read More'])[4]/preceding::a[1]</value>
+      <webElementGuid>5e1a8e03-3240-4511-84df-16cb06886eea</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='webmaster'])[4]/preceding::a[2]</value>
+      <webElementGuid>e82cf522-5531-4d99-8372-1f268a2b27ea</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Appointed']/parent::*</value>
+      <webElementGuid>4a221b42-fb2c-4088-9672-052e4c212e6d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://missionnext.org/appointed-2/')])[2]</value>
+      <webElementGuid>52665d04-368a-4cb8-a5ea-cc50b0024a61</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//article[4]/div/div[2]/h4/a</value>
+      <webElementGuid>c48b06e2-7348-4bf8-bc1f-c19d7da24cdd</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/appointed-2/' and (text() = '
+				Appointed			' or . = '
+				Appointed			')]</value>
+      <webElementGuid>105081f5-f63a-4c70-9713-54fe21583eee</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

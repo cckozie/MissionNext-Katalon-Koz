@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Seasons</name>
+   <tag></tag>
+   <elementGuidId>d3ee41eb-ead0-4def-bbeb-9016dd2f0b65</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[8]/div/div[2]/h4/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>article.elementor-post.elementor-grid-item.post-76607.post.type-post.status-publish.format-standard.has-post-thumbnail.hentry.category-following-jesus > div.elementor-post__card > div.elementor-post__text > h4.elementor-post__title > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>9b9eea30-abd4-41fe-8700-18686d956cdd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/seasons/</value>
+      <webElementGuid>1975c700-3c39-425e-9653-366d59ecd903</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>&quot;_blank&quot;</value>
+      <webElementGuid>b0bd8207-9ea8-41d4-b3c5-33e68d4fadf1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+				Seasons			</value>
+      <webElementGuid>ff6c02d0-20e2-492d-8752-dcb686d5e064</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;content&quot;)/div[@class=&quot;elementor elementor-55117&quot;]/section[@class=&quot;elementor-section elementor-top-section elementor-element elementor-element-768a31e4 elementor-section-stretched elementor-section-height-min-height elementor-section-items-top elementor-section-content-space-evenly elementor-section-boxed elementor-section-height-default wpr-column-slider-no wpr-equal-height-no&quot;]/div[@class=&quot;elementor-container elementor-column-gap-no&quot;]/div[@class=&quot;elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6c8f337c&quot;]/div[@class=&quot;elementor-widget-wrap elementor-element-populated&quot;]/div[@class=&quot;elementor-element elementor-element-7ceeebea elementor-posts--align-left elementor-grid-tablet-3 elementor-grid-3 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-card-shadow-yes elementor-posts__hover-gradient elementor-widget elementor-widget-posts&quot;]/div[@class=&quot;elementor-widget-container&quot;]/div[@class=&quot;elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid elementor-has-item-ratio&quot;]/article[@class=&quot;elementor-post elementor-grid-item post-76607 post type-post status-publish format-standard has-post-thumbnail hentry category-following-jesus&quot;]/div[@class=&quot;elementor-post__card&quot;]/div[@class=&quot;elementor-post__text&quot;]/h4[@class=&quot;elementor-post__title&quot;]/a[1]</value>
+      <webElementGuid>32499267-3b4f-45cc-a20e-0527f8de7b42</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='content']/div/section[2]/div/div/div/div/div/div/article[8]/div/div[2]/h4/a</value>
+      <webElementGuid>376b7780-9cb2-4daf-bec1-cf1eeb7b38fb</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Seasons')]</value>
+      <webElementGuid>8d667804-5069-43e2-8f5f-dde24010ea0f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Following Jesus'])[7]/following::a[1]</value>
+      <webElementGuid>ad931d9f-8095-4e9a-b58f-6fbab4422dc1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='January 28, 2026'])[1]/following::a[2]</value>
+      <webElementGuid>ec470049-e6ce-4b62-beb3-c31680cca606</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Read More'])[8]/preceding::a[1]</value>
+      <webElementGuid>d169118f-5aa8-4d94-9583-9c33e17c3c18</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='December 27, 2025'])[1]/preceding::a[2]</value>
+      <webElementGuid>7967e8c4-6310-4c41-8c59-49955c5469f6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Seasons']/parent::*</value>
+      <webElementGuid>3531bcb7-e345-44fc-9e8b-c1edebb1c342</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>(//a[contains(@href, 'https://missionnext.org/seasons/')])[2]</value>
+      <webElementGuid>c4dc3201-1398-4829-960d-774eeedf484b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//article[8]/div/div[2]/h4/a</value>
+      <webElementGuid>4a5f3a56-b4fc-4bc7-af3c-99bca8e2b8b1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/seasons/' and (text() = '
+				Seasons			' or . = '
+				Seasons			')]</value>
+      <webElementGuid>5979f249-edb6-493d-8b37-d99fd6e204f8</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

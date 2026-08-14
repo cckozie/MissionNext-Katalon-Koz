@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Strategic and Mobilization Partners</name>
+   <tag></tag>
+   <elementGuidId>4dba4337-bd80-4d8b-9ef1-c9c98a631ee9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html/body/header/section[2]/div[2]/div/div/div/div/nav[1]/ul/li[2]/ul/li[3]/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-55394 > a.elementor-sub-item</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>38d7824c-ed30-4dcf-9389-975cacd6c2d1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionnext.org/homepage/about/missionnext-strategic-partners/</value>
+      <webElementGuid>00d6f5aa-08ed-4304-be12-c1075cf2e8cd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>elementor-sub-item</value>
+      <webElementGuid>6a8a72d0-071d-4ff2-936f-d04794a6fe39</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Strategic and Mobilization Partners</value>
+      <webElementGuid>ccead418-ec90-4785-baba-97626e331a23</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;sm-17860305105687039-4&quot;)/li[@class=&quot;menu-item menu-item-type-post_type menu-item-object-page menu-item-55394&quot;]/a[@class=&quot;elementor-sub-item&quot;]</value>
+      <webElementGuid>04d4a84e-50b4-41eb-884b-8b50047e1981</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//ul[@id='sm-17860305105687039-4']/li[3]/a</value>
+      <webElementGuid>96aaa6ea-2799-4ae8-9d78-95f90e4ee10a</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Strategic and Mobilization Partners')]</value>
+      <webElementGuid>27fc39eb-551e-4662-bb6a-a85d9b3bbfa6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Join Us!'])[1]/following::a[1]</value>
+      <webElementGuid>a1d6818c-7848-41d6-bead-cd8a50dec6cc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='About'])[2]/following::a[2]</value>
+      <webElementGuid>aa77520f-9f21-42b1-83ff-b8b012e4b252</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[1]/preceding::a[2]</value>
+      <webElementGuid>82ab66dd-c894-4932-970c-31693dca5f86</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Goer'])[2]/preceding::a[3]</value>
+      <webElementGuid>25438d06-078a-4891-af4d-e8bbcc5da6a1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Strategic and Mobilization Partners']/parent::*</value>
+      <webElementGuid>1677c3e4-87ad-4fb9-8460-844e169baa44</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionnext.org/homepage/about/missionnext-strategic-partners/')]</value>
+      <webElementGuid>a8ebddd4-92e1-4a84-a3cf-d2bd1e344da4</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/nav/ul/li[2]/ul/li[3]/a</value>
+      <webElementGuid>7f02466a-c571-4a3d-8996-58b2157bf2fa</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionnext.org/homepage/about/missionnext-strategic-partners/' and (text() = 'Strategic and Mobilization Partners' or . = 'Strategic and Mobilization Partners')]</value>
+      <webElementGuid>ae9bebbe-902c-41ca-8912-c357eb1c44dc</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

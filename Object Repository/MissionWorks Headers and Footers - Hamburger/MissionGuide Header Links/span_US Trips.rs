@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>span_US Trips</name>
+   <tag></tag>
+   <elementGuidId>6d5db465-83d7-4be7-a44d-de3062928043</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@id='menu-item-5486']/a</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#menu-item-5486 > a</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>81db1f30-0f25-4a11-981e-0aaf9ca46112</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://missionguide.global/directory/country/united_states</value>
+      <webElementGuid>3a987fe7-bba9-44c8-a83e-63b84eea257f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>US Trips</value>
+      <webElementGuid>d5f8e31a-cad6-4b79-9cff-7b9b04beeef6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;menu-item-5486&quot;)/a[1]</value>
+      <webElementGuid>e27c5fe3-e297-4293-b5f9-9372b3765654</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//li[@id='menu-item-5486']/a</value>
+      <webElementGuid>3bada403-452b-4d7e-8155-d486977fd114</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>(//a[contains(text(),'US Trips')])[2]</value>
+      <webElementGuid>d6d1bf92-1563-48e0-b6e9-ab2aa08c7dfc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Quick Search'])[2]/following::a[1]</value>
+      <webElementGuid>727b9776-1936-4271-b41d-f2d31c298fbc</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Skip to content'])[1]/following::a[4]</value>
+      <webElementGuid>840d0114-69a4-42a1-821c-17af3a8e0182</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Trips For Your Group'])[1]/preceding::a[1]</value>
+      <webElementGuid>3e7e27e7-54a9-46c1-a3ec-76011a41146e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Internships/Gap Year'])[1]/preceding::a[2]</value>
+      <webElementGuid>93c5c8ef-e838-4447-bfdd-f33bcbcb1359</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://missionguide.global/directory/country/united_states')]</value>
+      <webElementGuid>e61e37ac-856a-436c-a0e1-bc8008ed092b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//nav/ul/li[2]/a</value>
+      <webElementGuid>0a21fb93-ed72-4b5d-a8cf-c0ce34395d63</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://missionguide.global/directory/country/united_states' and (text() = 'US Trips' or . = 'US Trips')]</value>
+      <webElementGuid>38ebdb88-0efb-4f0e-99d0-efd744616d0e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

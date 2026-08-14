@@ -42,5 +42,7 @@ class Before_Test_Case {
 		WebUI.callTestCase(findTestCase('Utilities/Update Global Variables from Parameters File'), [:], FailureHandling.OPTIONAL)
 		// Set host server name
 		WebUI.callTestCase(findTestCase('Utilities/Get Host'), [:], FailureHandling.OPTIONAL)
+		Date startTime = new Date()
+		GlobalVariable.startTime = startTime
 	}
 }

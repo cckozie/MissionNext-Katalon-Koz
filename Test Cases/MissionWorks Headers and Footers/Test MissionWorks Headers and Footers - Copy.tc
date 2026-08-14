@@ -5,5 +5,18 @@
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>b35536cf-5d70-4cec-a5cd-b6d9adec7058</testCaseGuid>
+   <testCaseGuid>f1875567-c8aa-47d9-a175-1e82d01ba101</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>833ab1a4-a6f0-4c3e-875c-d730e084431c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>833ab1a4-a6f0-4c3e-875c-d730e084431c</id>
+      <masked>false</masked>
+      <name>varScreensize</name>
+   </variable>
 </TestCaseEntity>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Run Main Menu Baseline Timings n Times</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>822210a5-7ddb-4c9b-b985-261de030f461</testCaseGuid>
+</TestCaseEntity>
