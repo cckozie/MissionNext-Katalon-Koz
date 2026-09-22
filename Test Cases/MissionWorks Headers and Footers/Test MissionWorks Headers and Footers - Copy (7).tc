@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test MissionWorks Headers and Footers - Copy (7)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>60644eb6-2a06-45ab-b0ea-bed60f8f42ef</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>08cc5e2c-93e8-4f5c-8639-8c62c1669b7e</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>08cc5e2c-93e8-4f5c-8639-8c62c1669b7e</id>
+      <masked>false</masked>
+      <name>varScreensize</name>
+   </variable>
+</TestCaseEntity>

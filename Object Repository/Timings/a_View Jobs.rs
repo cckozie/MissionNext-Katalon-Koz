@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_View Jobs</name>
+   <tag></tag>
+   <elementGuidId>97e6045b-66f4-4ea0-b60c-bf8df11d453e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div[2]/center/table/tbody/tr[2]/td[3]/a/img</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a[title=&quot;Jobs List&quot;] > img</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>img</value>
+      <webElementGuid>a161552f-efd0-4c3b-be0e-ab93038968ee</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>src</name>
+      <type>Main</type>
+      <value>https://jg.missionnext.org/wp-content/plugins/MissionNext/resources/images/dash_jobs.png</value>
+      <webElementGuid>0e6debcd-7cc0-4efa-8d0d-1049cbde9a5d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;content&quot;]/center[1]/table[1]/tbody[1]/tr[2]/td[3]/a[1]/img[1]</value>
+      <webElementGuid>689ff19e-d716-4f81-a5b3-2cc513777bbf</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div[2]/center/table/tbody/tr[2]/td[3]/a/img</value>
+      <webElementGuid>1c19f78a-9a62-4233-849c-0afe283ec293</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:img</name>
+      <type>Main</type>
+      <value>//img[contains(@src,'https://jg.missionnext.org/wp-content/plugins/MissionNext/resources/images/dash_jobs.png')]</value>
+      <webElementGuid>8d66d48c-4f38-420d-992c-f87eac4479f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//td[3]/a/img</value>
+      <webElementGuid>8f3fb18a-cc3d-4153-8572-cc0e65353fb8</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//img[@src = 'https://jg.missionnext.org/wp-content/plugins/MissionNext/resources/images/dash_jobs.png']</value>
+      <webElementGuid>68746399-edba-4bd9-9889-c88239bbb1d0</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
