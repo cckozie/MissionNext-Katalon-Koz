@@ -67,122 +67,130 @@ for(it in pageLinks) {
 
 	fromURL = WebUI.getUrl()
 	
-	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
+	clicked = WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
 	
-	toURL = WebUI.getUrl()
+	if(clicked) {
+		toURL = WebUI.getUrl()
+		
+		newTab = false
+		
+		windowHandles = driver.getWindowHandles().toArray()
+		
+		windowCount = windowHandles.size()
+		
+		if(windowCount > startWindowCount) {
+			
+			WebUI.switchToWindowIndex(windowCount - 1)
+			
+			newTab = true
+			
+		}
+		
+		textFound = false
+		
+		if(windowCount == startWindowCount && toURL == fromURL) {
+			
+			outText = '----- Clicking on the ' + it.key + ' link did not open a new page or tab. The link does not work.'
+			
+			println(outText)
 	
-	windowHandles = driver.getWindowHandles().toArray()
-	
-	windowCount = windowHandles.size()
-	
-	if(windowCount > startWindowCount) {
-		
-		WebUI.switchToWindowIndex(windowCount - 1)
-		
-	}
-	
-	textFound = false
-	
-	if(windowCount == startWindowCount && toURL == fromURL) {
-		
-		outText = '----- Clicking on the ' + it.key + ' link did not open a new page or tab. The link does not work.'
-		
-		println(outText)
-
-		outFile.append(outText + '\n')
-		log.logFailed(outText)
-		
-		GlobalVariable.testCaseErrorFlag = true
-		
-//		KeywordUtil.markError('\n' + outText)
-		
-//		textFound = false
-		
-	} else {
-		
-		WebUI.waitForPageLoad(30)
-	
-		WebUI.delay(2)
-		
-		if(testType != 'URL') {
-		
-			textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
+			outFile.append(outText + '\n')
+			log.logFailed(outText)
+			
+			GlobalVariable.testCaseErrorFlag = true
+			
+	//		KeywordUtil.markError('\n' + outText)
+			
+	//		textFound = false
 			
 		} else {
-			url = WebUI.getUrl()
-			[println(url)]
 			
-			if(url.contains(myText)) {
+			WebUI.waitForPageLoad(30)
+		
+			WebUI.delay(2)
+			
+			if(testType != 'URL') {
+			
+				textFound = WebUI.verifyTextPresent(myText, false, FailureHandling.OPTIONAL)
 				
-				textFound = true
+			} else {
+				url = WebUI.getUrl()
+				[println(url)]
+				
+				if(url.contains(myText)) {
+					
+					textFound = true
+				}
 			}
 		}
-	}
-	
-	if (textFound) {
-		outText = (((('+++++ The text "' + myText) + '" was found after clicking on the ') + it.key) + ' link')
-
-		println(outText)
-
-		outFile.append(outText + '\n')
-	} else {
-		outText = (((('----- The text "' + myText) + '" was NOT found after clicking on the ') + it.key) + ' link')
-
-		println(outText)
-
-		outFile.append(outText + '\n')
-		log.logFailed(outText)
-		
-		GlobalVariable.testCaseErrorFlag = true
-		
-//		KeywordUtil.markError('\n' + outText)
-	}
-	
-	if(windowCount > startWindowCount) {
-
-		WebUI.closeWindowIndex(windowCount - 1)
-	
-		WebUI.delay(1)
-	
-		WebUI.switchToWindowIndex(startWindowCount - 1)
-	
-		WebUI.delay(1)
-		
-	} else {
-		
-		outText = '----- Clicking on the ' + it.key + ' link did not open a separate tab.'
-
-		println(outText)
-
-		outFile.append(outText + '\n')
-
-		GlobalVariable.testCaseErrorFlag = true
-		
-//		KeywordUtil.markError('\n' + outText)
-		WebUI.back()
-		
-		WebUI.waitForPageLoad(10)
-		WebUI.delay(1)
-		
-		textFound = WebUI.verifyTextPresent('Resubmission', false, FailureHandling.OPTIONAL)
 		
 		if (textFound) {
-		
-			driver.navigate().refresh();
-		
-			WebUI.waitForPageLoad(10)
-			WebUI.delay(1)
+			outText = (((('+++++ The text "' + myText) + '" was found after clicking on the ') + it.key) + ' link')
+	
+			println(outText)
+	
+			outFile.append(outText + '\n')
+		} else {
+			outText = (((('----- The text "' + myText) + '" was NOT found after clicking on the ') + it.key) + ' link')
+	
+			println(outText)
+	
+			outFile.append(outText + '\n')
+			log.logFailed(outText)
+			
+			GlobalVariable.testCaseErrorFlag = true
+			
+	//		KeywordUtil.markError('\n' + outText)
 		}
+	
+		if(windowCount > startWindowCount) {
+	
+			WebUI.closeWindowIndex(windowCount - 1)
 		
-		if(callingTab != null) {
-			object = callingTab
+			WebUI.delay(1)
+		
+			WebUI.switchToWindowIndex(startWindowCount - 1)
+		
+			WebUI.delay(1)
 			
-			println(object)
+		} else {
 			
-			WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
+			outText = '----- Clicking on the ' + it.key + ' link did not open a separate tab.'
+	
+			println(outText)
+	
+			outFile.append(outText + '\n')
+	
+			GlobalVariable.testCaseErrorFlag = true
+			
+	//		KeywordUtil.markError('\n' + outText)
+			if(!newTab && WebUI.getUrl() != fromURL) {
+				WebUI.back()
+			}
+			
 			WebUI.waitForPageLoad(10)
 			WebUI.delay(1)
 			
+			textFound = WebUI.verifyTextPresent('Resubmission', false, FailureHandling.OPTIONAL)
+			
+			if (textFound) {
+			
+				driver.navigate().refresh();
+			
+				WebUI.waitForPageLoad(10)
+				WebUI.delay(1)
+			}
+			
+			if(callingTab != null) {
+				object = callingTab
+				
+				println(object)
+				
+				WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.OPTIONAL)
+				WebUI.waitForPageLoad(10)
+				WebUI.delay(1)
+				
+			}
 		}
 	}
 }

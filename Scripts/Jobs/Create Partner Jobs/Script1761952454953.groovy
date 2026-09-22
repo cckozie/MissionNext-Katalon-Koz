@@ -36,7 +36,7 @@ volunteerOnly = true
 
 username = GlobalVariable.username
 
-jobsFolder = 'one_job' //'Saved Jobs' //name of folder holding the captured jobs (Set the Profile to the user to receive the jobs)
+jobsFolder = 'Saved Jobs' //'Saved Jobs' //name of folder holding the captured jobs (Set the Profile to the user to receive the jobs)
 
 site = 'Journey'
 
@@ -297,6 +297,8 @@ for(job in capturedJobs) {
 		println(myTab)
 		
 		println(myTab.key)
+		
+		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.HOME))
 		
 		tObj = newJobsPath + 'a_' + myTab.key
 		

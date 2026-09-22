@@ -86,12 +86,16 @@ try {
 		println(outText)
 		outFile.append(outText + '\n')
 	}
+	
+	return true
 } catch (Exception e) {
 	outText = '####### ERROR: Unable to find test object "' + testObject + '"'
 	
 	println(outText)
 	
 	outFile.append(outText + '\n')
+	
+	return false
 }
 
 

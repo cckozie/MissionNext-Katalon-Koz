@@ -37,17 +37,9 @@ import java.awt.Desktop as Desktop
 import org.openqa.selenium.interactions.Actions as Actions
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader as ExecutionProfilesLoader
 
+WebUI.callTestCase(findTestCase('Admin/Admin Login to Visit Site'), [('varSite') : 'Journey'], FailureHandling.STOP_ON_FAILURE)
 
+WebUI.delay(10)
 
-WebUI.openBrowser('https://missionguide.global/')
+WebUI.callTestCase(findTestCase('Admin/Admin Logout'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setViewPortSize(992, 800)
-System.exit(0)
-
-
-for(w = 1000; w >= 990; w--) {
-	println(w)
-	WebUI.setViewPortSize(w, 800)
-	WebUI.delay(5)
-//	WebUI.refresh()
-}

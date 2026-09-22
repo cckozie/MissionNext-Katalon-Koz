@@ -72,7 +72,7 @@ headerLinks = ['MissionWorks' : ['Careers', 'Sponsorship', 'Membership', 'Contac
 pageTitles = ["Careers" : "Careers – MissionWorks", "Sponsorship" : "Sponsorship – MissionWorks", "Membership" : "Membership – MissionWorks",
 	 "Sign Up" : "Sign Up – MissionWorks", "Donation" : "MissionWorks Donation", "Contact Us" : "Contact Us – MissionWorks"]
 
-altPageTitles = ["MissionConnexion" : ["Sign Up" : "Sign Up - MissionConnexion", "Donate Now" : "MissionConnexion Donation", "Contact Us" : "Contact Us - MissionConnexion"],
+altPageTitles = ["MissionConnexion" : ["Sponsorship" : "Sponsorship - MissionConnexion", "Sign Up" : "Sign Up - MissionConnexion", "Donate Now" : "MissionConnexion Donation", "Contact Us" : "Contact Us - MissionConnexion"],
 	"Careers" : ["Donation": "Donation – MissionWorks"],
 	"MissionExcellence" : ["About" : "About - MissionExcellence", "7 Standards" : "7 Standards of Excellence - MissionExcellence",
 		"Sponsorship" : "Sponsorship – MissionWorks", "Membership" : "Your Membership Journey - MissionExcellence", 
@@ -140,6 +140,8 @@ Screen s = new Screen()
 
 for(link in links) {
 	
+	target = ''
+	
 	println('Testing ' + link + ' link.')
 	
 	outFile.append('Testing the header link ' + link + ' on ' + site + '.\n')
@@ -188,6 +190,14 @@ for(link in links) {
 				WebUI.delay(1)
 			}
 			
+			hasTargetAttribute = WebUI.verifyElementHasAttribute(findTestObject(object), 'target', 1, FailureHandling.OPTIONAL)
+			println('hasTargetAttribute is ' + hasTargetAttribute)
+			
+			if(hasTargetAttribute) {
+				target = WebUI.getAttribute(findTestObject(object), 'target')
+				println('target attribute is ' + target)
+			}
+
 			WebUI.click(findTestObject(object))
 		}
 
@@ -222,6 +232,14 @@ for(link in links) {
 	driver = DriverFactory.getWebDriver()
 		
 	handles = driver.getWindowHandles()
+	
+	if(target == '_blank') {
+		
+		while(handles.size() == 1) {
+			WebUI.delay(1)
+			handles = driver.getWindowHandles()
+		}
+	}
 	
 	tabs = handles.size()
 	

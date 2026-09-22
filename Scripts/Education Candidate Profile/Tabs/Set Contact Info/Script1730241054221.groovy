@@ -102,6 +102,8 @@ if(!GlobalVariable.fastPath) {
 		('varTooltips') : tooltips, ('varTooltipText') : tooltipText, ('varTestObjectFolder') : testObjectFolder,
 		('varTooltipTextMap') : tooltipTextMap], FailureHandling.CONTINUE_ON_FAILURE)
 	
+	println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 1 >>>>>>>>>>>>>>>>>>>>>\n\n')
+	
 	// Test for all required field error messages
 	fieldList = []
 	
@@ -116,7 +118,7 @@ if(!GlobalVariable.fastPath) {
 	WebUI.callTestCase(findTestCase('_Functions/Test Field Error Messages'), [('varFieldList') : fieldList,
 		('varRequiredFieldMsgs') : requiredFieldMsgs], FailureHandling.CONTINUE_ON_FAILURE)
 }
-
+println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 2 >>>>>>>>>>>>>>>>>>>>>\n\n')
 // Set the input fields provided
 if (varGender == 'Male') {
     object = 'Object Repository/Education Candidate Profile/Tabs/Contact Info/radio_Male'
@@ -150,14 +152,19 @@ if (varMarital_status != null) {
 		('varObject') : object, ('varParm1') : varMarital_status], FailureHandling.STOP_ON_FAILURE)
 }
 
+println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 3 >>>>>>>>>>>>>>>>>>>>>\n\n')
 if(!GlobalVariable.fastPath) {
 // Test the external page links
-WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
-	('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('_Functions/Test External Links'), [('varPageLinks'):pageLinks,
+		('varObjectPath') : 'Object Repository/Education Candidate Profile/Tabs/Contact Info/'], FailureHandling.CONTINUE_ON_FAILURE)
 }
+
+println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 4 >>>>>>>>>>>>>>>>>>>>>\n\n')
 
 object = 'Education Candidate Profile/Tabs/btn_Submit'
 WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+
+println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 4.5 >>>>>>>>>>>>>>>>>>>>>\n\n')
 
 // Test to see if the tab is complete (not colored red)
 WebUI.waitForPageLoad(10)
@@ -165,4 +172,6 @@ WebUI.waitForPageLoad(10)
 testObject = myTab
 
 WebUI.callTestCase(findTestCase('_Functions/Test for Tab Complete'), [('varTestName') : testName, ('varTestObject') : testObject ], FailureHandling.STOP_ON_FAILURE)
+
+println('\n\n<<<<<<<<<<<<<<<<<<<<< Break Point 5 >>>>>>>>>>>>>>>>>>>>>\n\n')
 

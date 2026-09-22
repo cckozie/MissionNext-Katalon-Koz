@@ -43,7 +43,7 @@ if ((username[(-3..-1)]) != '4ec') {
 }
 
 //######################################################################################################
-registerOnly = false //Set this flag to true if you do not want to complete the tabs
+registerOnly = true //Set this flag to true if you do not want to complete the tabs
 
 if (GlobalVariable.testSuiteRunning) {
     registerOnly = true

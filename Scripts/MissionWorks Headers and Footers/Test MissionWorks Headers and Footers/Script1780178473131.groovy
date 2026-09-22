@@ -36,6 +36,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import javax.swing.*
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+//\\\\\\\\\\\\\\\\\\\\\\
+// Modified to verify Facebook and Instagram icons are NOT displayed in the footer
+
+// Modified for the switch to Membership from Sponsorship
+
 calledBySikuli = false
 
 
@@ -49,7 +54,7 @@ calledBySikuli = false
 
 // first letter of tests; menus, logo, donate, footer, header links on child (linked to) pages, backend
 myTests = 'mldfhb'
-//myTests = 'b'
+myTests = 'mldf'
 
 // first letter of menu tests; connecting, equipping, about us
 myMenus = 'cea'
@@ -67,13 +72,14 @@ mySites = [
 	'MissionConnexion', 
 	'MissionGuide',
 	'Statement of Faith',
-	'Team and Board',
+//	'Team and Board',
 	'Careers',
 	'Contact Us',
 	'MissionExcellence',
 	'Sponsorship',
 	'How It Works',
-	'Privacy'
+	'Privacy',
+	'Membership'
 	]
 
 fontTest = false
@@ -81,6 +87,10 @@ fontTest = false
 fontTestOnly = false
 
 screenshots = false
+
+skipFooterMenu = false
+
+bgColorTest = false
 
 maxImageTries = 3
 
@@ -96,7 +106,7 @@ if(calledBySikuli) {
 
 imageMatchMinimum = 50
 
-screensize = 'full'
+screensize = 'phone'
 
 if(calledBySikuli){
 	screensize = 'full'
@@ -179,15 +189,18 @@ if (GlobalVariable.testSuiteRunning) {
     myTestCase = testName
 }
 
-sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journey.missionnext.org", 
+sites = [
+	'MissionLinked' : 'https://missionlinked.global/', 'MissionNext' : "https://missionnext.org/", "Journey" : "https://journey.missionnext.org", 
 	"Education" : "https://education.missionnext.org", "QuickStart" : "https://quickstart.missionnext.org",
-	'Journey Guide' : 'https://jg.missionnext.org/', 'MissionLinked' : 'https://missionlinked.global/',
+	'Journey Guide' : 'https://jg.missionnext.org/', 
 	'Coaching' : 'https://missionnext.org/homepage/goer/resources-for-goers/journey-guides/', 'About Us' : 'https://missionworks.global/homepage/about-us/',
 	'MissionConnexion' : 'https://missionconnexion.global/', 'MissionGuide' : 'https://missionguide.global/',
-	'Statement of Faith' : 'https://missionworks.global/statement-of-faith/', 'Team and Board' : 'https://missionworks.global/team-and-board/',
+	'Statement of Faith' : 'https://missionworks.global/statement-of-faith/',/* 'Team and Board' : 'https://missionworks.global/team-and-board/',*/
 	'Careers' : 'https://missionworks.global/careers/', 'Contact Us' : 'https://missionworks.global/contact-us/',
 	'MissionExcellence' : 'https://missionexcellence.global/', 'Sponsorship' : 'https://missionworks.global/sponsorship/',
-	'How It Works' : 'https://missionworks.global/how-it-works/', 'Privacy' : 'https://missionworks.global/privacy-policy/']
+	'How It Works' : 'https://missionworks.global/how-it-works/', 'Privacy' : 'https://missionworks.global/privacy-policy/',
+	'Membership' : 'https://missionworks.global/membership/'
+	]
 
 // ********** TO TEST JUST ONE SITE REMOVE THE COMMENT INDICATION ON ONE OF THESE LINES *********
 //sites = ['MissionNext' : "https://missionnext.org/"]
@@ -201,14 +214,15 @@ sites = ['MissionNext' : "https://missionnext.org/", "Journey" : "https://journe
 //sites = ['MissionConnexion' : 'https://missionconnexion.global/']
 //sites = ['MissionGuide' : 'https://missionguide.global/']
 //sites = ['Statement of Faith' : 'https://missionworks.global/statement-of-faith/']
-//sites = ['Team and Board' : 'https://missionworks.global/team-and-board/']
+////sites = ['Team and Board' : 'https://missionworks.global/team-and-board/']
 //sites = ['Careers' : 'https://missionworks.global/careers/']
 //sites = ['Contact Us' : 'https://missionworks.global/contact-us/']
 //sites = ['MissionExcellence' : 'https://missionexcellence.global/']
 //sites = ['Sponsorship' : 'https://missionworks.global/sponsorship/']
 //sites = ['How It Works' : 'https://missionworks.global/how-it-works/']
 //sites = ['Privacy' : 'https://missionworks.global/privacy-policy/']
-
+//sites = ['Membership' : 'https://missionworks.global/membership/']
+	
 if(sites.size() > 1 && imageTestOnly) {
 	sites = imageTestSite
 }
@@ -229,7 +243,7 @@ if(screensize != 'full') {
 ////////////////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
-footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Sponsorship" : ["link", "Sponsorship – MissionWorks", true],
+footerElements = ["a_Careers" : ["link", "Careers – MissionWorks", true], "a_Membership" : ["link", "Membership – MissionWorks", true],
 	 "a_Sign Up" : ["link", "Email Subscription", true],  "a_Privacy" : ["link", "Privacy Policy – MissionWorks", true],
 	 "a_Donate" : ["link", "MissionWorks Donation", true], "a_Contact Us" : ["link", "Contact Us – MissionWorks", true],
 	 "span_Phone" : ["text", "503.360.1865", false], "span_Email" : ["text", "Info@MissionWorks.global", false],
@@ -374,9 +388,9 @@ for(site in sites) {
 			println(siteURL)
 			
 			if(screensize != 'full') {
-				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','MissionConnexion','MissionGuide','MissionLinked','MissionWorks']
+				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','How It Works','Privacy','Membership','MissionConnexion','MissionGuide']
 			} else {
-				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board', 'Careers','MissionWorks', 'Sponsorship', 'How It Works', 'Privacy']
+				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','How It Works','Privacy','Membership']
 			}
 			
 			if(siteURL.contains('global') && !bypassSites.contains(site.key)) {	// || screensize == 'full')) {
@@ -513,6 +527,8 @@ def navigateToUrl(url) {
 		} else {
 			WebUI.setViewPortSize(sWidth, sHeight)
 		}
+		
+		driver = DriverFactory.getWebDriver()
 	}
 }
 
@@ -537,9 +553,13 @@ def testPageTitle(option) {
 	println(title)
 	
 	if(title != pageTitles.get(option)) {
-		outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
-		errorsOutFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
-		errorFlag = true
+		WebUI.delay(2)
+		title = WebUI.getWindowTitle()
+		if(title != pageTitles.get(option)) {
+			outFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
+			errorsOutFile.append('#### ERROR: Linked to page title is "' + title + '", but should be "' + pageTitles.get(option) + '"\n')
+			errorFlag = true
+		}
 	}
 	
 	if(testAnchors.containsKey(option)) {
@@ -605,7 +625,8 @@ def testForObjectExists(objectFolder, testObject) {
 
 def getObjectFolder(folderBase, testObject, mySite) {
 	
-	testObjectFolders = ['/', '/Custom1/', '/Custom2/', '/Custom3/', '/Custom4/', '/Custom5/', '/Custom6/', '/Custom7/']
+//	Had to change the order of these because on Coaching the wrong menus were processed if '/' was the first in the list
+	testObjectFolders = ['/Custom1/', '/', '/Custom2/', '/Custom3/', '/Custom4/', '/Custom5/', '/Custom6/', '/Custom7/']
 	
 	lastObjectFound = false
 	
@@ -885,7 +906,7 @@ def testMenus(site, url, menu) {
 				
 					bgColor = menuHeader.getCssValue("background-color")
 					
-					if(bgColor != 'rgba(0, 0, 0, 0)') {
+					if(bgColorTest && bgColor != 'rgba(0, 0, 0, 0)') {
 						outFile.append('#### ERROR: The background color of the menu header has changed to ' + bgColor + '.\n')
 						errorsOutFile.append('#### ERROR: The background color of the menu header has changed to ' + bgColor + '.\n')
 						errorFlag = true
@@ -934,7 +955,7 @@ def testMenus(site, url, menu) {
 		
 							bgColor = WebUI.getCSSValue(findTestObject(object), 'background-color')
 							
-							if(bgColor != 'rgba(0, 0, 0, 0)') {
+							if(bgColorTest && bgColor != 'rgba(0, 0, 0, 0)') {
 					
 								outFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of white.\n')
 								errorsOutFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of white.\n')
@@ -943,7 +964,16 @@ def testMenus(site, url, menu) {
 						}
 						
 						WebUI.mouseOver(findTestObject(object), FailureHandling.OPTIONAL)
-					
+						
+						bgColor = WebUI.getCSSValue(findTestObject(object), 'background-color')
+						
+						if(bgColorTest && bgColor != 'rgba(0, 0, 0, 0)') {
+				
+							outFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of black.\n')
+							errorsOutFile.append('#### ERROR: The background color for the ' + option + ' link is ' + bgColor + ', instead of black.\n')
+							errorFlag = true
+						}
+									
 						println('Testing the option text')
 						
 						linkText = WebUI.getText(findTestObject(object))
@@ -1298,7 +1328,8 @@ def testFooter(site) {
 	
 	footerHamburger = false
 	
-	images = ['phone', 'envelope', 'goldTransparency', 'ecfa', 'facebook', 'instagram' ]
+//	images = ['phone', 'envelope', 'goldTransparency', 'ecfa', 'facebook', 'instagram' ]
+	images = ['phone', 'envelope', 'goldTransparency', 'ecfa'] // We removed facebook and instagram from the new footer
 	
 	windowIndex = WebUI.callTestCase(findTestCase('_Functions/Test If Browser Open'), [:], FailureHandling.STOP_ON_FAILURE)
 	
@@ -1350,6 +1381,7 @@ def testFooter(site) {
 			Actions actions = new Actions(driver);
 			
 			actions.moveToElement(hoverElements[0]).perform();
+
 		}
 	}
 
@@ -1357,11 +1389,11 @@ def testFooter(site) {
 	
 	WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
 		
-	WebUI.delay(1)
+	WebUI.delay(1) 
 	
 	if(screenshots) {
 		
-		fileImage = '/Users/cckozie/Documents/MissionNext/Test Reports/' + site + '-' + screensize + '.png'
+		fileImage = '/Users/cckozie/Documents/MissionNext/MW Footer Screenshots/' + site + '-' + screensize + '.png'
 		
 		WebUI.takeScreenshot(fileImage)
 		
@@ -1460,7 +1492,11 @@ def testFooter(site) {
 		
 		if(myObjectFolder != null) {
 			
-			bypassFooterMenu = false
+			if(skipFooterMenu) {
+				bypassFooterMenu = true
+			} else {
+				bypassFooterMenu = false
+			}
 			
 			footerHamburger = true
 			
@@ -1497,7 +1533,11 @@ def testFooter(site) {
 	
 	for(element in footerElements) {
 		
-		myUrl = WebUI.getUrl()
+//		myUrl = driver.getCurrentUrl();
+		
+//		myUrl = WebUI.getUrl()
+		
+		myUrl = siteURL	//For some reason getUrl and getCurrentUrl faile
 		
 		myElement = element.key
 		
@@ -1514,9 +1554,18 @@ def testFooter(site) {
 		myTest = values[1]
 		
 		mySwitch = values[2]
+	
+		if(site == 'MissionLinked' && first && screensize != 'phone') {
+			
+			WebUI.delay(2)
+			s.click('/Users/cckozie/git/MissionNext-Katalon-Koz/images/MW_Footer/careers.png')
+		}
 		
 		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
 		
+		println('Keys sent')
+		
+	
 		if(footerHamburger && !first && mySwitch && lastObjectFound && !bypassFooterMenu) { //If last link object was not found, don't try to click hamburger
 			
 			if(!fontTestOnly) {
@@ -1549,15 +1598,27 @@ def testFooter(site) {
 		if(myObjectFolder != null) {
 			
 			println('myObjectFolder is ' + myObjectFolder)
-			
+/*			
+			if(ele == 'Facebook' || ele == 'Instagram') {
+				
+				outFile.append('#### ERROR: ' + ele + ' was found in the footer on ' + site + '.\n')
+				errorsOutFile.append('#### ERROR:  ' + ele + ' was found in the footer on ' + site + '.\n')
+				
+				errorFlag = true
+				lastObjectNotFound = true
+				
+			}			
+*/			
 		} else {
+			
+			if(ele != 'Facebook' && ele != 'Instagram') {
 		
-			outFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder.\n')
-			errorsOutFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder on ' + site + '.\n')
-			
-			errorFlag = true
-			lastObjectNotFound = true
-			
+				outFile.append('#### ERROR: Unable to find ' + ele + ' in any test object folder.\n')
+				errorsOutFile.append('#### ERROR: Unable to find ' + ele + ' in any test object folder on ' + site + '.\n')
+				
+				errorFlag = true
+				lastObjectNotFound = true
+			} 
 		}
 	
 		object = myObjectFolder + myElement
@@ -1599,12 +1660,24 @@ def testFooter(site) {
 			
 			if(myType == "link" || myType == "verify") {
 				
-				if(printImageSize && ele == 'Instagram' || ele == 'Facebook') {
+/*			if(printImageSize && ele == 'Instagram' || ele == 'Facebook') {
 					element = WebUiCommonHelper.findWebElement(findTestObject(object), 1)
 					width = element.getSize().getWidth();
 					height = element.getSize().getHeight();
 					imageSizes.put('Image ' + ele + ' on ' + site, [width, height])
 				}
+*/				
+				if(ele == 'Instagram' || ele == 'Facebook') {
+					clickable = WebUI.verifyElementClickable(findTestObject(object), FailureHandling.OPTIONAL)
+					
+					if(clickable) {
+						outFile.append('\n#### ERROR: The ' + ele + ' element is still in the footer on ' + site + '.\n')
+						errorsOutFile.append('\n#### ERROR: The ' + ele + ' element is still in the footer on ' + site + '.\n')
+						errorFlag = true
+						continue
+					}
+				}
+					
 				
 				inViewport = WebUI.verifyElementInViewport(findTestObject(object), 1, FailureHandling.OPTIONAL)
 				
@@ -1868,9 +1941,12 @@ def testFooter(site) {
 			}
 			
 		} else {
-			outFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
-			errorsOutFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
-			errorFlag = true
+			
+			if(ele != 'Facebook' && ele != 'Instagram') {
+				outFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
+				errorsOutFile.append('#### ERROR: The element ' + myElement + ' was not found in the footer on ' + site + '.\n')
+				errorFlag = true
+			}
 		}
 	}
 	
@@ -1884,8 +1960,10 @@ def testFooter(site) {
 }
 
 def testBackendFooters() {
-	backendSites = ['Journey' : ['https://journey.missionnext.org/signup/candidate', false], 'Education' : ['https://education.missionnext.org/signup/candidate', false],
-			'QuickStart' : ['https://quickstart.missionnext.org/signup/candidate', false], 'Journey Guide' : ['https://jg.missionnext.org/', true, 'Journey Guide 01']]
+	backendSites = ['Journey' : ['https://journey.missionnext.org/signup/candidate', false], 
+		'Education' : ['https://education.missionnext.org/signup/candidate', false],
+		'QuickStart' : ['https://quickstart.missionnext.org/signup/candidate', false]]//,
+//		'Journey Guide' : ['https://jg.missionnext.org/', true, 'Journey Guide 01']] It was decided that we don't care that there is a MW footer on JG
 	
 	outFile.append('\n_________________________________________________________________________________________________\n')	
 
@@ -1932,13 +2010,16 @@ def testBackendFooters() {
 			
 			println('myObjectFolder is ' + myObjectFolder)
 			
-		} else {
-		
-			outFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder.\n')
-			errorsOutFile.append('#### ERROR: Unable to find ' + myElement + ' in any test object folder on ' + site + '.\n')
+			outFile.append('#### ERROR: Footer element' + myElement + ' was found on ' + site + '.\n')
+			errorsOutFile.append('#### ERROR: Footer element' + myElement + ' was found on ' + site + '.\n')
 			
 			errorFlag = true
 			lastObjectNotFound = true
+			
+		} else {
+		
+			outFile.append('A MissionWorks footer was not found on ' + site + '.\n')
+			errorsOutFile.append('A MissionWorks footer was not found on ' + site + '.\n')
 		}
 	
 		object = myObjectFolder + myElement

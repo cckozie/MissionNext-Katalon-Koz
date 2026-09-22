@@ -27,7 +27,7 @@ import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
 testBy = 'date'
 
-dateRange = 90 // How many days in the past to consider as being 'recent'
+dateRange = 30 // How many days in the past to consider as being 'recent'
 
 startDate = '2025-10-09'
 

@@ -17,8 +17,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-n = 10
+n = 3
 
 for(i = 1; i <= n; i++) {
-	WebUI.callTestCase(findTestCase('Page Load Times/Main Menu Baseline Timings'), [:], FailureHandling.STOP_ON_FAILURE)
+	WebUI.callTestCase(findTestCase('Page Load Times/BOW Menu Baseline Timings'), [:], FailureHandling.STOP_ON_FAILURE)
 }

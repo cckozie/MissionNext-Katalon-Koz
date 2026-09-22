@@ -27,6 +27,8 @@ println(fileText)
 
 if(fileText.contains('Barred Owl')) {
 	GlobalVariable.host = 'Barred Owl'
-} else { 
+} else if(fileText.contains('GoDaddy')){ 
 	GlobalVariable.host = 'GoDaddy'
+} else {
+	GlobalVariable.host = 'Default'
 }
