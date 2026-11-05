@@ -133,16 +133,20 @@ if(found) {
 		outText = ('User ' + username + ' was successfully deleted.')
 		
 		println(outText)
-	
-		outFile.append(outText + '\n')
+		
+		if(writeFile) {	
+			outFile.append(outText + '\n')
+		}
 	
 	} else {
 		
 		outText = ('Failed to verify that user ' + username + ' was deleted.')
 		
 		println(outText)
-	
-		outFile.append(outText + '\n')
+		
+		if(writeFile) {
+			outFile.append(outText + '\n')
+		}
 	
 		GlobalVariable.testCaseErrorFlag = true
 	}
@@ -153,11 +157,11 @@ if(found) {
 	
 	println('=====> '+ outText)
 	
-//	if(writeFile) {
+	if(writeFile) {
 		outFile.append(outText + '\n')
 		
 		GlobalVariable.testCaseErrorFlag = true
-//	}
+	}
 
 }
 

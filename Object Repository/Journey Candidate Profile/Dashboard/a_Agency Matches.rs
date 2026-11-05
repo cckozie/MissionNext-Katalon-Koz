@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Agency Matches</name>
+   <tag></tag>
+   <elementGuidId>c4aa2671-85ec-4df6-870f-0177e8dacf09</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@target = '_blank' and (text() = 'Agency Matches' or . = 'Agency Matches')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[6]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a:nth-of-type(6)</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>46a8f932-409d-412a-be42-5859cc419439</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://info.missionnext.org/journey_matching.php?s=3&amp;uid=911490580</value>
+      <webElementGuid>45d42b81-17fa-4034-9cb2-68e65f0b1a25</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>b3497146-71b8-472b-a770-e90b49b01f05</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Agency Matches</value>
+      <webElementGuid>d71b73bd-bd7f-4b04-bf71-24a853d71d17</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[6]</value>
+      <webElementGuid>de070df0-b5eb-4e1c-b079-32f2a56cdbd3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[6]</value>
+      <webElementGuid>056391d5-acf4-4d1b-a3cc-9e9edb6165d6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Agency Matches')]</value>
+      <webElementGuid>328ed23d-0336-4dfb-8548-1fe83a8ab0ee</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Agency Jobs'])[1]/following::a[1]</value>
+      <webElementGuid>d568b1f6-8324-4d41-a0cc-03694d754359</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Matches'])[1]/following::a[2]</value>
+      <webElementGuid>ef75d20b-dcf7-4d48-b813-e4a2d150ef83</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Agencies'])[1]/preceding::a[1]</value>
+      <webElementGuid>ffdee5dc-ac3f-4977-8db5-e11028f58d59</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Job Inquiry List'])[1]/preceding::a[2]</value>
+      <webElementGuid>a7f4a7d6-4bf9-4523-83e4-fd75207d9b69</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Agency Matches']/parent::*</value>
+      <webElementGuid>994ad4ec-cd9a-4268-9715-fd8639f3dca3</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://info.missionnext.org/journey_matching.php?s=3&amp;uid=911490580')]</value>
+      <webElementGuid>7806591b-b22a-4a42-b512-72ad890cc228</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[6]</value>
+      <webElementGuid>1c7142d2-e418-4015-a0a7-61368b77f733</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://info.missionnext.org/journey_matching.php?s=3&amp;uid=911490580' and (text() = 'Agency Matches' or . = 'Agency Matches')]</value>
+      <webElementGuid>21e90546-300a-46d1-a7e8-35f18a0cfe61</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

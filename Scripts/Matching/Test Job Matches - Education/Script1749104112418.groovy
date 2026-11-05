@@ -36,11 +36,13 @@ import java.time.Instant as Instant
 import org.openqa.selenium.interactions.Actions
 
 /*	TO DO:
- * Need to save list of recruiting countries and verify all listed candidates have Country of Residence matching the list
- * 	(Maybe force add 'Your Country of Citizenship   Recruit From Countries	5' to the matching scheme) Why isn't it there?
- * Add education jobs to the education profiles and use my education profile(s) for match testing instead of scmnschool
+ * Need to save list of recruiting countries and verify all listed candidates have Country of Residence matching the list -DONE
+ * 	(Maybe force add 'Your Country of Citizenship   Recruit From Countries	5' to the matching scheme) Why isn't it there?-DONE
+ * Add education jobs to the education profiles and use my education profile(s) for match testing instead of scmnschool	  -DONE
 */
-maxMatches = 50 //overridden if running test suite
+maxMatches = 10 //overridden if running test suite
+
+testJobStart = 2
 
 bypass = false
 
@@ -114,7 +116,7 @@ if (!(updateWildcards)) {
 
     jobWildcards = (wildcards[1])
 }
-
+/*
 //Write the wildcard maps to the output file
 outFile.append('Candidate Wildcards\n')
 
@@ -129,7 +131,7 @@ tab = '\t'
 outText = 'Matching Rules'
 
 outFile.append(('\n ' + outText) + '\n')
-
+*/
 candidateMatchFields = []
 
 jobMatchFields = []
@@ -151,7 +153,7 @@ matchValues.each({
 
         println('\n')
     })
-
+/*
 matchValues.each({ 
         outText = ((((((((it.key + tab) + (it.value[0])) + tab) + (it.value[1])) + tab) + (it.value[2])) + tab) + (it.value[
         3]))
@@ -165,7 +167,7 @@ matchValues.each({
         //        jobMatchFields.add(it.value[0])
         candidateMatchFields.add(it.value[0])
     })
-
+*/
 WebUI.delay(2)
 
 WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : null], FailureHandling.STOP_ON_FAILURE)
@@ -195,9 +197,13 @@ if (userMN) {
 driver = DriverFactory.getWebDriver()
 
 allCountries = [false, true]
-allCountries = [true]
+//allCountries = [true]
 
 for(all in allCountries) {
+	
+	if(all) {
+//		System.exit(0)
+	}
 		
 	// Click (My Profile)
 	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Dashboard/a_My Profile'))
@@ -211,11 +217,45 @@ for(all in allCountries) {
 	
 	if(all) {
 		WebUI.check(findTestObject('Object Repository/Education Partner Profile/Matching/checkbox_All Countries'))
-		matchValues.put('Recruit From Countries', ['Your Country of Citizenship', '0', '', ''])
+//		matchValues.put('Recruit From Countries', ['Your Country of Citizenship', '0', '', ''])
+		values = ['All']
+		jobWildcards.put('Recruit From Countries', values)
+	
 	} else {
 		WebUI.uncheck(findTestObject('Object Repository/Education Partner Profile/Matching/checkbox_All Countries'))
+		values = ['']
+		jobWildcards.put('Recruit From Countries', values)
 	}
+//	System.exit(0)
 	
+	outFile.append('Candidate Wildcards\n')
+	
+	outFile.append(candidateWildcards.toString() + '\n')
+	
+	outFile.append('Job Wildcards\n')
+	
+	outFile.append(jobWildcards.toString() + '\n\n')
+	
+	tab = '\t'
+	
+	outText = 'Matching Rules'
+	
+	outFile.append(('\n ' + outText) + '\n')
+	
+	matchValues.each({
+		outText = ((((((((it.key + tab) + (it.value[0])) + tab) + (it.value[1])) + tab) + (it.value[2])) + tab) + (it.value[
+		3]))
+
+		//println(outText)
+		outFile.append(outText + '\n')
+
+		//        candidateMatchFields.add(it.key)
+		jobMatchFields.add(it.key)
+
+		//        jobMatchFields.add(it.value[0])
+		candidateMatchFields.add(it.value[0])
+	})
+
 	// Call (Get Status of Group Elements)
 	//xpath of the Recruiting Countries group
 	recruiting_countries = "//input[@id='profile_group-1744301635.194_recruit_countries']"
@@ -281,7 +321,9 @@ for(all in allCountries) {
 	
 	WebUI.waitForPageLoad(30)
 	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/a_Matching Category 1'))
+	testJob = testJobStart + 2
+	
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/a_Matching Category Parm', [('testJob') : testJob]))
 	
 	WebUI.switchToWindowIndex(2)
 	
@@ -339,9 +381,23 @@ for(all in allCountries) {
 	
 	WebUI.switchToWindowIndex(1)
 	
+	WebUI.delay(1)
+/*
+	System.exit(0)
+	object = 'Object Repository/' + site + ' Partner Profile/Dashboard/a_Job Matches'
+	WebUI.callTestCase(findTestCase('_Functions/Perform Action'), [('varAction'): 'click', ('varObject') : object], FailureHandling.STOP_ON_FAILURE)
+	
+	WebUI.delay(1)
+	
+	WebUI.switchToWindowIndex(2)
+	
 	WebUI.waitForPageLoad(30)
 	
-	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/button_Matches 1'))
+//	System.exit(0)
+*/
+	
+//	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/button_Matches 1'))
+	WebUI.click(findTestObject('Object Repository/Education Partner Profile/Matching/button_Matches Parm', [('testJob') : testJob]))
 	
 	WebUI.waitForPageLoad(30)
 	
@@ -367,7 +423,7 @@ for(all in allCountries) {
 		
 	noErrors = true
 
-	if(row_count > 0) {
+	if(row_count >= 3) {
 		
 		for (row = 3; row < row_count + 3; row++) {
 			
@@ -511,6 +567,12 @@ for(all in allCountries) {
 			
 			WebUI.waitForPageLoad(10)
 	    }
+	} else {
+		outText = '>>>>> No Matches <<<<<'
+		
+        outFile.append(outText + '\n')
+
+		resultsFile.append(outText + '\n')	
 	}
 	    
 	//Switch to partner dashboard
@@ -780,13 +842,14 @@ def doMatching(def candidateSelections, def jobSelections) {
                         if (jobValues != null) {
                             excluded = true
 
-                            outText = 'This is a must match field. Candidate is excluded.'
-
+ //                           outText = 'This is a must match field. Candidate is excluded.'
+							outText = '----- ' + myKey + ' is a must match field. Candidate is excluded.\n'
+							
                             outFile.append(outText + '\n')
 
                             resultsFile.append(outText)
 
-                            break
+//                            break
                         }
                     }
                     

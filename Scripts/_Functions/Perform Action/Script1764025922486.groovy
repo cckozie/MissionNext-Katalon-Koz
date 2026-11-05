@@ -66,6 +66,10 @@ try {
 	    println('Selecting ' + parm1)
 	    WebUI.selectOptionByValue(findTestObject(testObject), parm1, false)
 		
+	} else if (action == 'selectOptionByIndex') {
+	    println('Selecting ' + parm1)
+	    WebUI.selectOptionByIndex(findTestObject(testObject), parm1, false)
+		
 	} else if (action == 'setText') {
 		println('Setting text ' + parm1)
 	    WebUI.setText(findTestObject(testObject), parm1)

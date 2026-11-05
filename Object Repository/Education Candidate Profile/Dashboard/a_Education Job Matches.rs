@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Education Job Matches</name>
+   <tag></tag>
+   <elementGuidId>5a3e8f78-0631-4aab-9763-eb197ac9fdb5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>a:nth-of-type(4)</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Education Job Matches' or . = 'Education Job Matches')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>d922af2a-6928-4970-adbb-210939aa37f3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://info.missionnext.org/job_user_matches.php?site=6&amp;uid=44765952</value>
+      <webElementGuid>62c2ccc8-eb59-40cf-80ec-cd873b3908d8</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>target</name>
+      <type>Main</type>
+      <value>_blank</value>
+      <webElementGuid>4996c1e0-ad52-42ee-9b74-24393831bd21</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Education Job Matches</value>
+      <webElementGuid>1d387bb3-143d-41c6-8ddd-674a2550f374</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[4]</value>
+      <webElementGuid>599b2e63-c293-4980-82f8-c65dd5bb2b50</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
+      <webElementGuid>0d4ebde5-3360-466d-87b0-fe90046307d1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'Education Job Matches')]</value>
+      <webElementGuid>91105564-7a21-469c-bc3e-90a06a1c4a77</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Change Password'])[1]/following::a[1]</value>
+      <webElementGuid>36f1e242-99a9-418b-8743-8a7c3ae9918d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::a[2]</value>
+      <webElementGuid>cda2f2d7-2337-463f-85a9-00d86acb28f2</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search School Jobs'])[1]/preceding::a[1]</value>
+      <webElementGuid>dc5bc78d-42ab-4f98-9722-1d399362ed63</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='School Matches'])[1]/preceding::a[2]</value>
+      <webElementGuid>5bd091e8-ed34-4350-98d2-01c4c24ac20f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Education Job Matches']/parent::*</value>
+      <webElementGuid>507cc0d3-10b5-438f-bfc8-1818b1e88b9e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://info.missionnext.org/job_user_matches.php?site=6&amp;uid=44765952')]</value>
+      <webElementGuid>3ea1b343-8c7c-4049-b86d-f72409970d11</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[4]</value>
+      <webElementGuid>f6779cc5-f651-4fa5-a3f8-3cdec732d511</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = 'https://info.missionnext.org/job_user_matches.php?site=6&amp;uid=44765952' and (text() = 'Education Job Matches' or . = 'Education Job Matches')]</value>
+      <webElementGuid>eae3c5dd-2c26-4248-b5aa-043d86892b6b</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -37,9 +37,14 @@ import java.awt.Desktop as Desktop
 import org.openqa.selenium.interactions.Actions as Actions
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader as ExecutionProfilesLoader
 
-WebUI.callTestCase(findTestCase('Admin/Admin Login to Visit Site'), [('varSite') : 'Journey'], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('_Functions/Log In to API (varUsername Optional)'), [('varSearchKey') : null], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.delay(10)
+email = 'robertb@arcticbarnabas.org'
+email = 'faitheduph'
 
-WebUI.callTestCase(findTestCase('Admin/Admin Logout'), [:], FailureHandling.STOP_ON_FAILURE)
+site = 'Journey'
 
+orgFieldValues = WebUI.callTestCase(findTestCase('Matching/_Functions/Get User Full Profile'), [('varType') : 'email'
+	, ('varEmail') : email, ('varSite') : site], FailureHandling.STOP_ON_FAILURE)
+
+println(orgFieldValues)

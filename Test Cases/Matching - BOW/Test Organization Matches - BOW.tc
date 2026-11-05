@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Organization Matches - BOW</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>cff88eec-49a9-42e4-8520-1f4091523780</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7b67509e-af98-4551-b28d-ebf30d097f5e</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>98da9752-6f77-4626-8621-5a35371a730a</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7b67509e-af98-4551-b28d-ebf30d097f5e</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>98da9752-6f77-4626-8621-5a35371a730a</id>
+      <masked>false</masked>
+      <name>varSite</name>
+   </variable>
+</TestCaseEntity>

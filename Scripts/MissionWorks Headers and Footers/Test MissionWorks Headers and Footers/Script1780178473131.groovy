@@ -54,7 +54,7 @@ calledBySikuli = false
 
 // first letter of tests; menus, logo, donate, footer, header links on child (linked to) pages, backend
 myTests = 'mldfhb'
-myTests = 'mldf'
+myTests = 'mldfh'
 
 // first letter of menu tests; connecting, equipping, about us
 myMenus = 'cea'
@@ -88,6 +88,8 @@ fontTestOnly = false
 
 screenshots = false
 
+screenshotsOnly = false
+
 skipFooterMenu = false
 
 bgColorTest = false
@@ -106,7 +108,7 @@ if(calledBySikuli) {
 
 imageMatchMinimum = 50
 
-screensize = 'phone'
+screensize = 'full'
 
 if(calledBySikuli){
 	screensize = 'full'
@@ -348,6 +350,50 @@ firstOpen = true
 
 for(site in sites) {
 	
+	if(screenshots) {
+		
+		WebUI.openBrowser('')
+		
+		mySite = site.key
+		
+		println(site)
+		
+		url = site.value
+		
+		println(url)
+		
+		navigateToUrl(url)
+		
+		ssImageBase = '/Users/cckozie/Documents/MissionNext/MW Header-Footer Screenshots/' + mySite + '-' + screensize
+		
+		WebUI.delay(2)
+		
+		WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.HOME))
+		
+		WebUI.delay(1)
+		
+		WebUI.waitForPageLoad(30)
+		
+		fileImage = ssImageBase + '- Header.png'
+		
+		if(screenshotsOnly) {
+			
+			WebUI.takeScreenshot(fileImage)
+			
+			fileImage = ssImageBase + '- Footer.png'
+			
+			WebUI.sendKeys(findTestObject(null), Keys.chord(Keys.END))
+			
+			WebUI.delay(1)
+		
+			WebUI.takeScreenshot(fileImage)
+			
+			continue
+		} else {
+			WebUI.closeBrowser()
+		}
+	}
+	
 	if(site.key in mySites) {
 	
 		outFile.append('\n\n     <<<<<<<<<<<<<<<<<<< Testing ' + site.key + ' >>>>>>>>>>>>>>>>>>>>>>')
@@ -390,7 +436,8 @@ for(site in sites) {
 			if(screensize != 'full') {
 				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','How It Works','Privacy','Membership','MissionConnexion','MissionGuide']
 			} else {
-				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','How It Works','Privacy','Membership']
+//				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','How It Works','Privacy','Membership']
+				bypassSites = ['About Us','Statement of Faith','Contact Us','Team and Board','Careers','MissionWorks','Sponsorship','Privacy','Membership']
 			}
 			
 			if(siteURL.contains('global') && !bypassSites.contains(site.key)) {	// || screensize == 'full')) {

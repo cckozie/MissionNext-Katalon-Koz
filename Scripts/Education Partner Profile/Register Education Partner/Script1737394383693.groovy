@@ -33,6 +33,11 @@ import org.sikuli.script.*
 import org.sikuli.script.SikulixForJython as SikulixForJython
 import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+
+//!!!!!!!!!!!!!!!!!!!!!!!! HAD TO BYPASS GMAIL ACTIONS !!!!!!!!!!!!!
+
+
+
 // Ensure that we are using the correct execution profile
 username = GlobalVariable.username
 
@@ -43,7 +48,7 @@ if(username[-3..-1] != '6ep') {
 }
 
 //######################################################################################################
-registerOnly = true //Set this flag to true if you do not want to complete the tabs
+registerOnly = false //Set this flag to true if you do not want to complete the tabs
 if(GlobalVariable.testSuiteRunning) {
 	registerOnly = true
 }
@@ -119,7 +124,7 @@ if(!GlobalVariable.fastPath) {
 
 //================================== Delete any existing MN emails ====================================
 WebUI.callTestCase(findTestCase('_Functions/Delete Emails'), [:], FailureHandling.STOP_ON_FAILURE)
-
+//System.exit(0)
 //================================== Create the education partner ==================================
 WebUI.openBrowser(url)
 
@@ -421,6 +426,8 @@ outFile.append(outText + '\n\n')
 //================================== Wait for the approval pending email for the new education affiliate =========
 emailFound = WebUI.callTestCase(findTestCase('_Functions/Generic Wait for Email'), [('varFromKey') : 'chris.kosieracki@missionnext.org'
 		, ('varSubjectKey') : 'Approval request', ('varSearchKey') : username], FailureHandling.STOP_ON_FAILURE)
+
+//emailFound = true
 
 if (emailFound) {
 	outText = (('+++++ Approval request email for ' + username) + ' was found')

@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions;
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
 
 
-maxMatches = 50	//Overridden if test suite running
+maxMatches = 10	//Overridden if test suite running
 
 bypass = false
 

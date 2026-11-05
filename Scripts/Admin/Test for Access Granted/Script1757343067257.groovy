@@ -120,7 +120,7 @@ if(granted == null) {
 	
 }
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 
 return granted
 

@@ -114,9 +114,9 @@ host = 'pop.gmail.com'
 
 mailStoreType = 'pop3'
 
-username = 'cktest01mn@gmail.com'
+username = 'cktest02mn@gmail.com'
 
-password = 'sfesezftmpqxbbbd'
+password = 'hlvg bpqd ccdh uonj'
 
 //create properties field
 Properties properties = new Properties()

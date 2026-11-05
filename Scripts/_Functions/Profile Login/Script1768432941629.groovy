@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-varProfile = 'Journey Partner 17'
+
 
 println(varProfile)
 

@@ -47,8 +47,8 @@ if(writeFile) {
 //mail server and credentials (Password is App password)
 host = "pop.gmail.com"
 mailStoreType = "pop3"
-username = "cktest01mn@gmail.com"
-password = "sfesezftmpqxbbbd"
+username = "cktest02mn@gmail.com"
+password = "hlvg bpqd ccdh uonj"
 
 //create properties field
 Properties properties = new Properties();

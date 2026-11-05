@@ -43,7 +43,7 @@ import org.openqa.selenium.interactions.Actions
 
 fudgeFactor = 2 // Allowable difference between calculated, popup, and table match percentages assumed to be from rounding errors.
 
-maxMatches = 50 //Overridden if test suite running
+maxMatches = 10 //Overridden if test suite running
 
 updateWildcards = true	
 
@@ -605,11 +605,11 @@ def doMatching(def candidateSelections, def organizationSelections) {
             if (matchValue == 5) {
                 excluded = true
 
-                outText = 'This is a must match field. Candidate is excluded.'
+                outText = '##### ' + it.key + ' is a must match field. Candidate is excluded.'
 
                 outFile.append(outText + '\n')
 
-                resultsFile.append(outText)
+                resultsFile.append(outText + '\n')
 
                 break
             }

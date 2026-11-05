@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Candidate to School Matches - BOW</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>1f339626-a73c-42eb-8f61-68eab1b7656b</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a35a1134-cbd2-4524-b37e-859c75890407</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>e61be817-2d74-4b27-9a87-f3dcfc7d538f</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a35a1134-cbd2-4524-b37e-859c75890407</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>e61be817-2d74-4b27-9a87-f3dcfc7d538f</id>
+      <masked>false</masked>
+      <name>varSite</name>
+   </variable>
+</TestCaseEntity>

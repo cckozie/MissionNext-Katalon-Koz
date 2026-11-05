@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_Job Matches</name>
+   <tag></tag>
+   <elementGuidId>53b03c6a-549a-4c4e-b0ae-eb75b3522e87</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Job Matches' or . = 'Job Matches')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>a.matches</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>d04f720e-7881-42b2-9ec7-305c6a333d27</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/candidate/matches/job</value>
+      <webElementGuid>62573e5e-eeec-4c6e-bc82-0b0f3a3f05a6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>matches</value>
+      <webElementGuid>d5025497-598f-404c-99d8-22f7914313eb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Job Matches</value>
+      <webElementGuid>46178d0b-dffc-476d-82e3-4f5317ef3642</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;main&quot;)/div[@class=&quot;container clearfix&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;page-content&quot;]/div[@class=&quot;sidebar-container&quot;]/div[@class=&quot;sidebar&quot;]/div[@class=&quot;links mn-sidebar-links&quot;]/a[@class=&quot;matches&quot;]</value>
+      <webElementGuid>88a68b68-adcd-4e93-bf52-34d3c157b1b3</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='main']/div/div/div/div/div/div[2]/a[4]</value>
+      <webElementGuid>382b1d89-e7ba-40f1-b3a7-0d0979efa824</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:link</name>
+      <type>Main</type>
+      <value>//a[contains(text(),'View Job Matches')]</value>
+      <webElementGuid>b428c7c2-1543-4069-be8c-bbce11449603</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Change Password'])[1]/following::a[1]</value>
+      <webElementGuid>b651eb7f-876c-45bc-9b97-f4c7529dd049</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Profile'])[1]/following::a[2]</value>
+      <webElementGuid>5898de62-59c0-4f01-aa0f-023acd3c932b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search Agency Jobs'])[1]/preceding::a[1]</value>
+      <webElementGuid>e1b5cdaa-092e-4db7-a344-cb69ef61a25f</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View Agency Matches'])[1]/preceding::a[2]</value>
+      <webElementGuid>c9a954b6-3cdc-4287-bce8-e602fb8d8564</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='View Job Matches']/parent::*</value>
+      <webElementGuid>e6ed1b2d-5e13-40d9-94bb-fea86254377e</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, '/candidate/matches/job')]</value>
+      <webElementGuid>0e8ca8bf-dbea-41d1-a3ce-15a5ee3b9a7c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//a[4]</value>
+      <webElementGuid>856e9ea5-724a-48ae-a5d1-fa213c2dbbf1</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:customAttributes</name>
+      <type>Main</type>
+      <value>//a[@href = '/candidate/matches/job' and (text() = 'View Job Matches' or . = 'View Job Matches')]</value>
+      <webElementGuid>920eeeb2-48ad-4bcc-8d6f-66ea5e78a928</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

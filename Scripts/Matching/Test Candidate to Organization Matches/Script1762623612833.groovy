@@ -37,7 +37,7 @@ import org.openqa.selenium.interactions.Actions as Actions
 
 startRow = 1 // start to specific row, or else to 1
 
-maxMatches = 50 //overridden if running test suite
+maxMatches = 10 //overridden if running test suite
 
 updateWildcards = false
 

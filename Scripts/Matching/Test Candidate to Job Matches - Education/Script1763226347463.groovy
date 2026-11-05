@@ -41,7 +41,7 @@ import org.openqa.selenium.interactions.Actions;
 //		During matching for job preferences, also compare spouse's preference if married and spouse is serving
 
 
-maxMatches = 50 //overridden if running test suite
+maxMatches = 10 //overridden if running test suite
 
 bypass = false
 
@@ -57,7 +57,7 @@ user = 'Education Candidate 14'
 
 highlight = false
 
-updateWildcards = true //Must leave as true because reading from file causes some keys to not be found ?????
+updateWildcards = false //Must leave as true because reading from file causes some keys to not be found ?????
 
 myTestCase = RunConfiguration.getExecutionSource().toString().substring(RunConfiguration.getExecutionSource().toString().lastIndexOf(
         '/') + 1)
@@ -325,11 +325,17 @@ WebUI.waitForPageLoad(60)
 
 userTab = WebUI.getWindowIndex()
 
-WebUI.click(findTestObject('Object Repository/Journey Candidate Profile/Dashboard/a_View Job Matches'))
+tableTab = userTab + 1
+
+jobTab = tableTab + 1
+
+WebUI.click(findTestObject('Object Repository/Education Candidate Profile/Dashboard/a_View Job Matches'))
+
+WebUI.switchToWindowIndex(tableTab)
 
 WebUI.waitForPageLoad(30)
 
-jobTableXpath = '//*[@id="main"]/div/div/div[2]/div[3]/div/div[1]/table/tbody'
+jobTableXpath = '/html/body/center/table/tbody/tr[4]/td/table/tbody/tr/td[3]/span/table/tbody'
 
 WebDriver driver = DriverFactory.getWebDriver()
 
@@ -392,7 +398,7 @@ if (row_count > 0) {
 
 			jobFound = true
 			
-			WebUI.switchToWindowIndex(1)
+			WebUI.switchToWindowIndex(jobTab)
 			
 			WebUI.waitForPageLoad(30)
 			
@@ -444,9 +450,9 @@ if (row_count > 0) {
 			        outFile.append(((it.key + ':') + it.value) + '\n')
 			    })
 			
-			WebUI.closeWindowIndex(1)
+			WebUI.closeWindowIndex(jobTab)
 			
-			WebUI.switchToWindowIndex(0)
+			WebUI.switchToWindowIndex(tableTab)
 		
             
             if ('Married' in candidateFieldValues.get('Marital status')) {

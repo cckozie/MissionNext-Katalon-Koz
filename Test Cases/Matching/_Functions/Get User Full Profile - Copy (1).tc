@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Get User Full Profile - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>db801d22-ee28-435e-bc3c-353c1d8bc110</testCaseGuid>
+</TestCaseEntity>

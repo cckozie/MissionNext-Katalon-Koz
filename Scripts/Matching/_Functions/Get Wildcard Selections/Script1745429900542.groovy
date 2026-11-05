@@ -32,8 +32,8 @@ filePath = '/Users/cckozie/git/MissionNext-Katalon-Koz/Data Files/'
 //varType = 'Job'
 //varType = 'Org'
 
-varMap = ['Journey_Job' : ['Journey Partner Profile', 'Journey Candidate 15', 'Journey Partner 17', 'a_Job Matches'],
-	'Journey_Org' : ['Journey Candidate Profile', 'Journey Candidate 15', 'Journey Partner 17'],
+varMap = ['Journey_Job' : ['Journey Partner Profile', 'Journey Candidate 15', 'Journey Partner 37', 'a_Job Matches'],
+	'Journey_Org' : ['Journey Candidate Profile', 'Journey Candidate 15', 'Journey Partner 37'],
 	'Education_Job' : ['Education Partner Profile', 'Education Candidate 14', 'Education Partner 16', 'a_My School Jobs'],
 	'Education_Org' : ['Education Candidate Profile', 'Education Candidate 14', 'Education Partner 16']]
 

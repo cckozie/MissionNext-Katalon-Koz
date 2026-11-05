@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Test Organization Matches - BOW - Copy</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>21fa4096-7120-4a5a-9361-acd0dff60b8c</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1d46aad6-d279-4ddc-9af8-4ee96edec397</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>88462f58-70aa-4b4f-a660-8ec9330465eb</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1d46aad6-d279-4ddc-9af8-4ee96edec397</id>
+      <masked>false</masked>
+      <name>varUsername</name>
+   </variable>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>88462f58-70aa-4b4f-a660-8ec9330465eb</id>
+      <masked>false</masked>
+      <name>varSite</name>
+   </variable>
+</TestCaseEntity>

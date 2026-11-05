@@ -299,6 +299,11 @@ if(!error) {
 def getNextLine(reader) {
 	line = reader.readLine()
 	
+	if(line == null) {
+		done = true
+		return line
+	}
+	
 	println(line)
 	
 	if(debug) {println(line)}

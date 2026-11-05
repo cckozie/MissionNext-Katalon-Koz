@@ -311,6 +311,9 @@ if(debug) {
 return fields
 
 def getNextLine(reader) {
+	
+	nullCount = 0
+	
 	line = reader.readLine()
 	
 	println(line)
@@ -319,6 +322,15 @@ def getNextLine(reader) {
 	
 	while(line == null || line in ignoreRows) {
 		line = reader.readLine()
+		if(line == null) {
+			nullCount ++
+			println(nullCount)
+			if(nullCount > 10) {
+				done = true
+				return line
+				break
+			}
+		}
 //		WebUI.delay(1)	// For troubleshooting
 	}
 

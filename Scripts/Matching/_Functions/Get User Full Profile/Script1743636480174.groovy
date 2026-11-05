@@ -199,6 +199,29 @@ if(row_count > 1) {
 			WebUI.waitForElementClickable(findTestObject('Object Repository/Admin/API User Profile/button_Cancel Subscription'),10)
 
 			WebUI.delay(2)
+			
+			subscription = WebUI.verifyElementPresent(findTestObject('Object Repository/Admin/API User Profile/input_End date'), 1, FailureHandling.OPTIONAL)
+			
+			if(subscription) {
+			
+				endDate = WebUI.getAttribute(findTestObject('Object Repository/Admin/API User Profile/input_End date'), 'value')
+			
+				println(endDate)
+			
+				varFormat = "YYYY-MM-dd"
+			
+				now = new Date().format(varFormat)
+			}
+			
+			varFormat = "YYYY-MM-dd"
+		
+			now = new Date().format(varFormat)
+			
+			if(subscription && endDate >= now) {
+				println('Active')
+			} else {
+				println('Expired')
+			}
 					
 			WebUI.click(findTestObject('Object Repository/Admin/API User Profile/btn_Full Profile'))
 			
@@ -298,6 +321,8 @@ if(row_count > 1) {
 //			WebUI.delay(5)
 			
 		} else {
+	
+			fieldValues.put('Subscription', subscription)
 			
 			return fieldValues
 						

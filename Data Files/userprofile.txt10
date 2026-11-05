@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.1.34
+PHP version: 8.2.35
 
-Date: 2026-04-17
+Date: 2026-11-04
 
 
 
@@ -30,15 +30,15 @@ Email Webmaster
   Candidate JSON
 
   Your IP Address
-  46.110.33.110
+  15.181.16.189
 
   Log out
 
   mission_next_prod
 
- Created	2017-10-30
- Updated	2025-11-13
- Last Login	2025-11-13
+ Created	2013-02-19
+ Updated	2026-09-15
+ Last Login	2026-11-04
  
 	
 	
@@ -51,100 +51,181 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Tien Shan International School TSIS as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=11282]
+Profile for Hinkson Christian Academy HCA as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=5995]
 Contact Info
-21	Organization	Tien Shan International School
-20	Abbreviation	TSIS
-6	Key Contact First Name	Jami
-7	Key Contact Last Name	Gustafson
-133	Key Contact Title	Recruitment Coordinator
-12	Key Contact Email	opportunity@tienshanschool.org
-22	Key Contact Phone	+77076738871
-114	Key Contact WhatsApp Address	+77076738871
-111	Organization Phone	+7-727-344-1266
-26	Mailing Address	PO Box 10, Post Office Branch 36, Almaty, 050036, Kazakhstan
-10	Country	Kazakhstan
-28	Organization City	Almaty
-93	State	Almaty
-30	Post/Zip Code	050036
-151	World Region	Asia, Central
+21	Organization	Hinkson Christian Academy
+20	Abbreviation	HCA
+6	Key Contact First Name	Christiana
+7	Key Contact Last Name	Brande
+133	Key Contact Title	Recruiter
+12	Key Contact Email	info@hinksonca.net
+22	Key Contact Phone	+7-916-318-3588
+114	Key Contact WhatsApp Address	+7-916-318-3588
+111	Organization Phone	011-7-495-733-9740
+26	Mailing Address	Novocheryomushkinskaya 39 K3
+10	Country	Russian Federation
+28	Organization City	Moscow
+29	Province/State/Region	Moscow Region
+30	Post/Zip Code	117218
+151	World Region	Europe, East
 School Info
-66	Description	We are a diverse body of 180 students and offer a high-quality, English-medium character and academic education from Kindergarten through Grade 12.
-64	Year Founded	1995
-107	Vision Trip	No
-149	School Year Starts	Mid August
+66	Description	Hinkson Christian Academy (HCA) is an English immersion elementary and secondary school located in Moscow, Russia. For over 35 years, Hinkson has served the needs of expat and local families who desire their children to receive a quality English-language education that is informed by a Christian worldview, and values principles of Christian character. Hinkson is a member of the Association of Christian Schools International, whose accreditation is recognized worldwide. The school is also accredited by Middle States Association (MSA-CESS).
+64	Year Founded	1991
+107	Vision Trip	Yes
+149	School Year Starts	Late August
 150	School Accredited	Yes
-152	Student Capacity	250
-65	Website Address	https://tienshanschool.org
+152	Student Capacity	200
+65	Website Address	www.hinkson.ru
 Vision Trip Description
 Security
 Positions Needed
-132	Available Positions	IT Coordinator
+132	Available Positions	Administrative Assistant
+Administrator
+Assistant Principal
+Athletic Director
+Director
+Principal
+Curriculum Specialist
+School Counselor
+School Librarian
+School Nurse
+School Psychologist
+School Psychometrist
 Elementary School Teacher
+High School Teacher
 Middle School Teacher
+Substitute Teacher
+English Second Language (ESL)
+English Teacher
+Art Teacher
+Athletic Coach
 Bible Teacher
-Health Teacher
+Geography Teacher
+History Teacher
+Mathematics Teacher
+Music Teacher
 Physical Education Teacher
+Reading Teacher/Specialist
+Science, Biology
+Science, Chemistry
+Science, Physics
 Science Teacher
+Social Studies Teacher
 Special Education Teacher
-139	Experience Preferred	Elementary
+139	Experience Preferred	Administrator
+Counseling
+Elementary
 High School
 Middle School
-Pre-School
 Substitute Teacher
-Computer Science
+School Nurse
+Support
+Teacher's Aide
+Arts - Performing
 Mathematics
+Music Teacher
+Physical Education
+Reading
 Sciences
+Sciences - Biology
+Sciences - Chemistry
 Sciences - Earth Science
+Sciences - Physical Science/Physics
+Special Needs
 English
 Service Options
-70	Time Commitments	Short-term
-One year
+70	Time Commitments	One year
 One year to two years
 Long Term
 Internships
-Open - Will negotiate
 45	Available Start Options	Immediately
 Within 12 months
 In one to two years
 In two or more years
-No Preference
 144	School Term(s) Available	Spring Semester
 Fall Semester
 Full Year
-Open
 Readiness
 103	Process Stage	I am just beginning to look at missions
 I am actively investigating missions
 I am ready to select a ministry
 58	Cross-cultural Experience	Not served in a culture other than my own
-Occasionally served in cultures other than my own
-Extensive experience serving in cultures other than my own
 60	Paid & Volunteer Positions	Volunteer/self-supported position
 Self-supported, need travel and overhead
 Position requires raising your support
+Position requires raising some support
 50	Bible Training	Not Applicable
 104	Attended Perspectives?	I have not taken the Perspectives Course
-I am planning to take the Perspectives Course
-I have taken or am taking the Perspectives Course
 121	Missions Experience	None of the above
 105	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Match Filters
 141	Formal Education Degree	No
 Yes
+Pending
 142	Classroom Experience	No
 Yes
+Pending
 143	Formal Teaching Credentials	No
 Yes
+Pending
 51	English Proficiency	Advanced
+Proficient
 100	Affiliated with a Church?	No
 59	Travel Options	No travel funding provided
+Some Travel funds available
+Travel funding negotiated
 Recruiting Countries
-108	Recruit From Countries	Canada
+108	Recruit From Countries	Bermuda
+Canada
 United States
+Ethiopia
+Kenya
+Uganda
+Lesotho
+South Africa
+Hong Kong
+Korea-South
+Macao
+Mongolia
+Taiwan
+Malaysia
+Singapore
+Thailand
+Bangladesh
+India
+Kazakhstan
+Kyrgyzstan
+Maldives
+Uzbekistan
+Armenia
+Cyprus
+Georgia
+Israel
+Anguilla
+Antigua and Barbuda
+Aruba
+Bahamas
+Barbados
+Cayman Islands
+Dominica
+Dominican Republic
+Grenada
+Montserrat
+Netherlands Antilles
+Puerto Rico
+Saint Kitts and Nevis
+Saint Lucia
+Virgin Islands-British
+Virgin Islands-US
+Costa Rica
+El Salvador
+Panama
+Aland Islands
+Channel Islands
 Denmark
 Estonia
+Faroe Islands
 Finland
 Iceland
 Ireland
@@ -158,6 +239,7 @@ Czech Republic
 Hungary
 Moldova
 Poland
+Slovakia
 Russian Federation
 Ukraine
 Austria
@@ -169,9 +251,49 @@ Luxembourg
 Monaco
 Netherlands
 Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Bulgaria
+Croatia
+Kosovo
+Montenegro
+Romania
+Serbia
+Spain
+Turkey
+American Samoa
+Australia
+Cook Islands
+Fiji
+French Polynesia
+Guam
+Marshall Islands
+New Zealand
+Papua New Guinea
+Samoa
+Solomon Islands
+Argentina
+Bolivia
 Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+Paraguay
+Peru
+Suriname
+Uruguay
 Admin Info
-84	Mission Statement	https://www.tienshanschool.org/mission-vision/
+84	Mission Statement	https://hinkson.ru/fromthepresident.html
 159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
@@ -179,15 +301,60 @@ Ministry Prefs
 IT Positions
 Match Filters
 100	Affiliated with a Church?	No
-161	Match Percent Rate	50
-162	Profile Years	2023
-2024
-2025
+161	Match Percent Rate	80
+162	Profile Years	2025
+2026
 Recruiting Countries
-108	Recruit From Countries	Canada
+108	Recruit From Countries	Bermuda
+Canada
 United States
+Ethiopia
+Kenya
+Uganda
+Lesotho
+South Africa
+Hong Kong
+Korea-South
+Macao
+Mongolia
+Taiwan
+Malaysia
+Singapore
+Thailand
+Bangladesh
+India
+Kazakhstan
+Kyrgyzstan
+Maldives
+Uzbekistan
+Armenia
+Cyprus
+Georgia
+Israel
+Anguilla
+Antigua and Barbuda
+Aruba
+Bahamas
+Barbados
+Cayman Islands
+Dominica
+Dominican Republic
+Grenada
+Montserrat
+Netherlands Antilles
+Puerto Rico
+Saint Kitts and Nevis
+Saint Lucia
+Virgin Islands-British
+Virgin Islands-US
+Costa Rica
+El Salvador
+Panama
+Aland Islands
+Channel Islands
 Denmark
 Estonia
+Faroe Islands
 Finland
 Iceland
 Ireland
@@ -201,6 +368,7 @@ Czech Republic
 Hungary
 Moldova
 Poland
+Slovakia
 Russian Federation
 Ukraine
 Austria
@@ -212,35 +380,75 @@ Luxembourg
 Monaco
 Netherlands
 Switzerland
+Andorra
+Bosnia and Herzegovina
+Gibraltar
+Greece
+Italy
+Malta
+Portugal
+San Marino
+Slovenia
+Vatican City
+Albania
+Bulgaria
+Croatia
+Kosovo
+Montenegro
+Romania
+Serbia
+Spain
+Turkey
+American Samoa
+Australia
+Cook Islands
+Fiji
+French Polynesia
+Guam
+Marshall Islands
+New Zealand
+Papua New Guinea
+Samoa
+Solomon Islands
+Argentina
+Bolivia
 Brazil
+Chile
+Colombia
+Ecuador
+Falkland Islands
+Paraguay
+Peru
+Suriname
+Uruguay
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 11282:
+Show records for this user: user_id = 5995:
 Table: users
 ID	username	email	created	updated	last login	Active
-11282	tienshan	opportunity@tienshanschool.org	2017-10-30	2025-11-13	2025-11-13	Yes
-Days ago: 	3091  	155  	155  	 
+5995	hcaadministrator	info@hinksonca.net	2013-02-19	2026-09-15	2026-11-04	Yes
+Days ago: 	5006  	50  	0  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-11282	2	Organization	129
+5995	2	Organization	262
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-11282	6 EDU	No	2025-05-14	2026-05-14	active	
+5995	6 EDU	No	2026-06-25	2027-07-26	active	Partnership expiration extended 1-month from 6/26/27 to 7/26/27
 
 Table: user_apps
 ID	App ID	Application
-11282	6	Education
+5995	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-11282	4	JourneyGuide	Yes	78
-11282	3	Journey	Yes	128
-11282	2	Short-Term	Yes	98
-11282	6	Education	Yes	126
+5995	6	Education	Yes	258
+5995	2	Short-Term	Yes	93
+5995	4	JourneyGuide	Yes	254
+5995	3	Journey	Yes	258
 
 
 

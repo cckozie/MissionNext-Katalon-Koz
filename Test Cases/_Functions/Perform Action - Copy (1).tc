@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Perform Action - Copy (1)</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>434d9b67-f187-4ea9-99c8-857a8460db21</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f02f3993-dc8b-4dc5-85dc-c5daf383bbe6</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>null</defaultValue>
+      <description></description>
+      <id>f02f3993-dc8b-4dc5-85dc-c5daf383bbe6</id>
+      <masked>false</masked>
+      <name>varParm1</name>
+   </variable>
+</TestCaseEntity>

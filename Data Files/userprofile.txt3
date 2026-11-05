@@ -6,9 +6,9 @@ missionnext site administration
 
 	Welcome Administrator!
 
-PHP version: 8.1.34
+PHP version: 8.2.35
 
-Date: 2026-04-17
+Date: 2026-11-04
 
 
 
@@ -30,15 +30,15 @@ Email Webmaster
   Candidate JSON
 
   Your IP Address
-  46.110.33.110
+  15.181.16.189
 
   Log out
 
   mission_next_prod
 
- Created	2014-01-27
- Updated	2025-04-21
- Last Login	2025-05-06
+ Created	2016-12-19
+ Updated	2025-05-23
+ Last Login	2026-09-22
  
 	
 	
@@ -51,74 +51,63 @@ This utility is designed to view a user response all forms by web application
 
 Edit this profile
 
-Profile for Grace International School GIS as Organization on Education
-Field ID	Field Name	  User Value(s) [User ID=6001]
+Profile for Alliance Academy International AAI as Organization on Education
+Field ID	Field Name	  User Value(s) [User ID=9835]
 Contact Info
-21	Organization	Grace International School
-20	Abbreviation	GIS
-6	Key Contact First Name	Phillip
-7	Key Contact Last Name	Shrier
-133	Key Contact Title	Recruitment Director
-12	Key Contact Email	Recruit@gisthailand.org
-22	Key Contact Phone	+66-52-088-777 # 322
-114	Key Contact WhatsApp Address	Recruitment4gis
-111	Organization Phone	+66-52-088-777
-26	Mailing Address	Grace International School PO Box.32 A. Hang Dong, Chiangmai 50230
-10	Country	Thailand
-28	Organization City	Chiang Mai
-93	State	Central Thailand
-29	Province/State/Region	Chiang Mai
-30	Post/Zip Code	50230
-151	World Region	Asia, Southeast
+21	Organization	Alliance Academy International
+20	Abbreviation	AAI
+6	Key Contact First Name	Ellen
+7	Key Contact Last Name	Evans
+133	Key Contact Title	Coordinator of Recruitment
+12	Key Contact Email	recruiter@alliance.k12.ec
+22	Key Contact Phone	561-502-5780
+114	Key Contact WhatsApp Address	+1 561 502 5780
+111	Organization Phone	518-320-8724
+26	Mailing Address	Villalengua 789 y 10 de Agosto
+10	Country	Ecuador
+28	Organization City	Quito
+29	Province/State/Region	Pichincha
+30	Post/Zip Code	170135
+151	World Region	South America
 School Info
-66	Description	Grace International School exists primarily to enable international Christian workers to remain in their field of service by providing for the needs of their children through an integrated education from a Christian worldview. We are a private international school, and serve about 550 students, 90% of which are children of Christian workers, who serve in over 20 countries. There are 26 nationalities represented, 49% American, 23% Korean, 10% Thai, and the rest from other continents. Since 2005 we have been accredited by WASC ( Western Association of Schools and Colleges) and ACSI (Association of Christian Schools International).
-64	Year Founded	1999
+66	Description	AAI’s mission is to develop followers of Jesus Christ who live with a focus on eternity; to provide students with a U.S. style of education based on the highest standards of educational excellence; and to provide a caring community where students are taught to be critical in their thinking, multicultural in their understanding, and compassionate in their dealings with others.
+64	Year Founded	1929
 107	Vision Trip	Yes
-149	School Year Starts	Early August
+149	School Year Starts	Late August
 150	School Accredited	Yes
-152	Student Capacity	600
-65	Website Address	www.gisthailand.org
+152	Student Capacity	450
+65	Website Address	http://www.alliance.k12.ec/
 Vision Trip Description
+67	Vision Trip Description	Let us know if you'd like to come and we will work out the details! Contact Ellen Evans at eevans@alliance.k12.ec
 Security
 Positions Needed
-132	Available Positions	Elementary School Teacher
+132	Available Positions	Curriculum Specialist
+Elementary School Teacher
 High School Teacher
+Kindergarten Teacher
 Middle School Teacher
+Substitute Teacher
+English Second Language (ESL)
 Computer Teacher (School)
-Geography Teacher
 Mathematics Teacher
-Physical Education Teacher
+Music Teacher
 Science, Chemistry
 Science, Physics
 Science Teacher
-Social Studies Teacher
 Special Education Teacher
 139	Experience Preferred	Elementary
 High School
 Middle School
-Computer Science
 Mathematics
-Physical Education
-Sciences - Chemistry
-Sciences - Earth Science
-Sciences - Physical Science/Physics
-Social Subjects
-Speech Pathologist
+Music Teacher
+Sciences
 Special Needs
-Technology
 Service Options
-70	Time Commitments	One year
-One year to two years
+70	Time Commitments	One year to two years
 Long Term
-Open - Will negotiate
-45	Available Start Options	Immediately
-Within 12 months
-In one to two years
-In two or more years
+45	Available Start Options	Within 12 months
 No Preference
-144	School Term(s) Available	Spring Semester
-Fall Semester
-Open
+144	School Term(s) Available	Fall Semester
 Readiness
 103	Process Stage	I am just beginning to look at missions
 I am actively investigating missions
@@ -127,8 +116,8 @@ I am ready to select a ministry
 Occasionally served in cultures other than my own
 Extensive experience serving in cultures other than my own
 60	Paid & Volunteer Positions	Volunteer/self-supported position
-Self-supported, need travel and overhead
-Position requires raising your support
+Position requires raising some support
+A salary provided; enough to live locally
 No Preference
 50	Bible Training	Minimal Bible training
 Informal Bible training
@@ -145,498 +134,68 @@ None of the above
 105	Relocation Option(s)	I am willing to relocate outside the US and Canada
 Match Filters
 141	Formal Education Degree	Yes
+142	Classroom Experience	Yes
 Pending
-142	Classroom Experience	No
-Yes
-Pending
-143	Formal Teaching Credentials	No
-Yes
+143	Formal Teaching Credentials	Yes
 Pending
 51	English Proficiency	Advanced
-Proficient
-100	Affiliated with a Church?	Yes
-59	Travel Options	No travel funding provided
+100	Affiliated with a Church?	No
+59	Travel Options	Some Travel funds available
 Recruiting Countries
-108	Recruit From Countries	Georgia
-Iraq
-Israel
-Jordan
-Kuwait
-Lebanon
-Oman
-Palestinian Territory
-Qatar
-Saudi Arabia
-Bermuda
-Canada
-Greenland
+108	Recruit From Countries	Canada
 United States
-Southern Sudan
-Sudan
-Western Sahara
-Burundi
-Comoros
-Djibouti
-Eritrea
-Ethiopia
-Kenya
-Madagascar
-Malawi
-Mauritius
-Mozambique
-Rwanda
-Reunion
-Seychelles
-Somalia
-Tanzania
-Uganda
-Zambia
-Zimbabwe
-Angola
-Cameroon
-Central African Republic
-Chad
-Congo
-Congo DRC
-Equatorial Guinea
-Gabon
-Sao Tome and Principe
-Benin
-Burkina Faso
-Cape Verde
-Gambia
-Ghana
-Guinea
-Guinea-Bissau
-Ivory Coast
-Liberia
-Mali
-Mauritania
-Niger
-Nigeria
-Saint Helena
-Senegal
-Sierra Leone
-Togo
-Botswana
-Namibia
 South Africa
-China
-Hong Kong
-Japan
-Korea-North
-Korea-South
-Macao
-Mongolia
-Taiwan
-Brunei Darussalam
-Cambodia
-Indonesia
-Laos
-Malaysia
-Myanmar
-Philippines
-Singapore
-Thailand
-Timor-Leste
-Vietnam
-Afghanistan
-Bangladesh
-Bhutan
-India
-Iran
-Kazakhstan
-Kyrgyzstan
-Maldives
-Nepal
-Pakistan
-Sri Lanka
-Tajikistan
-Turkmenistan
-Uzbekistan
-Armenia
-Azerbaijan
-Bahrain
-Cyprus
-United Arab Emirates
-Yemen
-Anguilla
-Antigua and Barbuda
-Aruba
-Bahamas
-Barbados
-Cayman Islands
-Cuba
-Dominica
-Dominican Republic
-Grenada
-Guadeloupe
-Haiti
-Jamaica
-Martinique
-Montserrat
-Netherlands Antilles
-Puerto Rico
-Saint Kitts and Nevis
-Saint Lucia
-Trinidad and Tobago
-Turks and Caicos Islands
-Virgin Islands-British
-Virgin Islands-US
-Belize
-Costa Rica
-El Salvador
-Guatemala
-Honduras
-Mexico
-Nicaragua
-Panama
-Aland Islands
-Channel Islands
-Denmark
-Estonia
-Faroe Islands
-Finland
-Iceland
-Ireland
-Latvia
-Lithuania
-Norway
-Sweden
 United Kingdom
-Belarus
-Czech Republic
-Hungary
-Moldova
-Poland
-Slovakia
-Russian Federation
-Ukraine
-Austria
-Belgium
-France
-Germany
-Liechtenstein
-Luxembourg
-Monaco
-Netherlands
-Switzerland
-Andorra
-Bosnia and Herzegovina
-Gibraltar
-Greece
-Italy
-Malta
-Portugal
-San Marino
-Slovenia
-Vatican City
-Albania
-Algeria
-Bulgaria
-Croatia
-Egypt
-Libya
-Morocco
-Romania
-Spain
-Syrian Arab Republic
-Tunisia
-Turkey
-American Samoa
 Australia
-Cook Islands
-Fiji
-French Polynesia
-Guam
-Kiribati
-Marshall Islands
-Micronesia
-Nauru
-New Caledonia
-New Zealand
-Niue
-Northern Mariana Islands
-Palau
-Papua New Guinea
-Samoa
-Solomon Islands
-Tonga
-Tuvalu
-Vanuatu
-Argentina
-Bolivia
-Brazil
-Chile
-Colombia
 Ecuador
-Falkland Islands
-French Guiana
-Guyana
-Paraguay
-Peru
-Suriname
-Venezuela
 Admin Info
-84	Mission Statement	https://gisthailand.org/about-us/mission-vision-values/
+84	Mission Statement	https://alliance.k12.ec/about/history-mission-vision/
 159	Meet Christian School Qualifications?	Yes, my school is a Christian School
 158	Partnership Agreement	1
 156	Terms and Conditions	1
 Ministry Prefs
 IT Positions
 Match Filters
-100	Affiliated with a Church?	Yes
-161	Match Percent Rate	90
-162	Profile Years	2025
+100	Affiliated with a Church?	No
+161	Match Percent Rate	80
+162	Profile Years	2023
+2024
+2025
 Recruiting Countries
-108	Recruit From Countries	Georgia
-Iraq
-Israel
-Jordan
-Kuwait
-Lebanon
-Oman
-Palestinian Territory
-Qatar
-Saudi Arabia
-Bermuda
-Canada
-Greenland
+108	Recruit From Countries	Canada
 United States
-Southern Sudan
-Sudan
-Western Sahara
-Burundi
-Comoros
-Djibouti
-Eritrea
-Ethiopia
-Kenya
-Madagascar
-Malawi
-Mauritius
-Mozambique
-Rwanda
-Reunion
-Seychelles
-Somalia
-Tanzania
-Uganda
-Zambia
-Zimbabwe
-Angola
-Cameroon
-Central African Republic
-Chad
-Congo
-Congo DRC
-Equatorial Guinea
-Gabon
-Sao Tome and Principe
-Benin
-Burkina Faso
-Cape Verde
-Gambia
-Ghana
-Guinea
-Guinea-Bissau
-Ivory Coast
-Liberia
-Mali
-Mauritania
-Niger
-Nigeria
-Saint Helena
-Senegal
-Sierra Leone
-Togo
-Botswana
-Namibia
 South Africa
-China
-Hong Kong
-Japan
-Korea-North
-Korea-South
-Macao
-Mongolia
-Taiwan
-Brunei Darussalam
-Cambodia
-Indonesia
-Laos
-Malaysia
-Myanmar
-Philippines
-Singapore
-Thailand
-Timor-Leste
-Vietnam
-Afghanistan
-Bangladesh
-Bhutan
-India
-Iran
-Kazakhstan
-Kyrgyzstan
-Maldives
-Nepal
-Pakistan
-Sri Lanka
-Tajikistan
-Turkmenistan
-Uzbekistan
-Armenia
-Azerbaijan
-Bahrain
-Cyprus
-United Arab Emirates
-Yemen
-Anguilla
-Antigua and Barbuda
-Aruba
-Bahamas
-Barbados
-Cayman Islands
-Cuba
-Dominica
-Dominican Republic
-Grenada
-Guadeloupe
-Haiti
-Jamaica
-Martinique
-Montserrat
-Netherlands Antilles
-Puerto Rico
-Saint Kitts and Nevis
-Saint Lucia
-Trinidad and Tobago
-Turks and Caicos Islands
-Virgin Islands-British
-Virgin Islands-US
-Belize
-Costa Rica
-El Salvador
-Guatemala
-Honduras
-Mexico
-Nicaragua
-Panama
-Aland Islands
-Channel Islands
-Denmark
-Estonia
-Faroe Islands
-Finland
-Iceland
-Ireland
-Latvia
-Lithuania
-Norway
-Sweden
 United Kingdom
-Belarus
-Czech Republic
-Hungary
-Moldova
-Poland
-Slovakia
-Russian Federation
-Ukraine
-Austria
-Belgium
-France
-Germany
-Liechtenstein
-Luxembourg
-Monaco
-Netherlands
-Switzerland
-Andorra
-Bosnia and Herzegovina
-Gibraltar
-Greece
-Italy
-Malta
-Portugal
-San Marino
-Slovenia
-Vatican City
-Albania
-Algeria
-Bulgaria
-Croatia
-Egypt
-Libya
-Morocco
-Romania
-Spain
-Syrian Arab Republic
-Tunisia
-Turkey
-American Samoa
 Australia
-Cook Islands
-Fiji
-French Polynesia
-Guam
-Kiribati
-Marshall Islands
-Micronesia
-Nauru
-New Caledonia
-New Zealand
-Niue
-Northern Mariana Islands
-Palau
-Papua New Guinea
-Samoa
-Solomon Islands
-Tonga
-Tuvalu
-Vanuatu
-Argentina
-Bolivia
-Brazil
-Chile
-Colombia
 Ecuador
-Falkland Islands
-French Guiana
-Guyana
-Paraguay
-Peru
-Suriname
-Venezuela
 Note: A candidate user, or organization/agency user subscription, is activated/blocked/removed in the API utility at api.missionnext.org
 
 Select another profile
 
-Show records for this user: user_id = 6001:
+Show records for this user: user_id = 9835:
 Table: users
 ID	username	email	created	updated	last login	Active
-6001	recruit@gisthailand.org	Recruit@gisthailand.org	2014-01-27	2025-04-21	2025-05-06	Yes
-Days ago: 	4463  	361  	346  	 
+9835	loisaai	recruiter@alliance.k12.ec	2016-12-19	2025-05-23	2026-09-22	Yes
+Days ago: 	3607  	530  	43  	 
 
 Table: user_roles
 ID	Role ID	Role	Profile Records
-6001	2	Organization	344
+9835	2	Organization	121
 
 Table: subscriptions
 ID	App ID	Recurrent	Start	End	Status	Comment
-6001	6 EDU	No	2025-04-11	2026-04-11	active	
+9835	6 EDU	No	2025-05-08	2027-06-08	active	Extended by Nelson for testing; Partnership expiration extended 1-month from 5/8/27 to 6/8/27
 
 Table: user_apps
 ID	App ID	Application
-6001	6	Education
+9835	6	Education
 
 Table: user_apps_status
 ID	App ID	Application	Active ?	Records
-6001	4	JourneyGuide	Yes	350
-6001	2	Short-Term	Yes	123
-6001	6	Education	Yes	344
-6001	3	Journey	Yes	344
+9835	3	Journey	Yes	121
+9835	2	Short-Term	Yes	118
+9835	4	JourneyGuide	Yes	121
+9835	6	Education	Yes	121
 
 
 
